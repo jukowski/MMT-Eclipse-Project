@@ -95,17 +95,17 @@ public class MMTProject extends Wizard implements INewWizard {
 		IProgressMonitor monitor)
 		throws CoreException {
 		// create a sample file
+		monitor.beginTask("Creating project " + containerName, 2);
+		MMTProjectUtils.createProject(containerName, monitor);
+
+		containerName+="/source";
 		monitor.beginTask("Creating " + fileName, 2);
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IResource resource = root.findMember(new Path(containerName));
-		if (resource.exists()) {
-			throwCoreException("A project with name \"" + containerName + "\" already exists.");
+		if (!resource.exists()) {
+			throwCoreException("Path "+containerName+" is invalid ");
 		}
-		if (containerName.length()==0) {
-			throwCoreException("Project name cannot be empty");
-		}
-		MMTProjectUtils.createProject(containerName, URI.create(Platform.getLocation().toOSString()));
-		/*IContainer container = (IContainer) resource;
+		IContainer container = (IContainer) resource;
 		final IFile file = container.getFile(new Path(fileName));
 		try {
 			InputStream stream = openContentStream();
@@ -129,7 +129,7 @@ public class MMTProject extends Wizard implements INewWizard {
 				}
 			}
 		});
-		monitor.worked(1); */
+		monitor.worked(1); 
 	}
 	
 	/**
@@ -137,8 +137,14 @@ public class MMTProject extends Wizard implements INewWizard {
 	 */
 
 	private InputStream openContentStream() {
-		String contents =
-			"This is the initial file contents for *.lf file that should be word-sorted in the Preview page of the multi-page editor";
+		String contents = "%namespace = \"http://cds.omdoc.org/logics\"\n" + 
+				"%sig BASE = {\n" + 
+				"o : type. %% Type of propositions\n" + 
+				"}\n" + 
+				"%namespace = \"http://cds.omdoc.org/logics/propositional\"\n" + 
+				"%sig CONJ = {%include BASE . }\n" + 
+				"%sig IMP = {%include BASE . }\n" + 
+				"%sig PROP = {%include CONJ. %include IMP. }\n";
 		return new ByteArrayInputStream(contents.getBytes());
 	}
 
