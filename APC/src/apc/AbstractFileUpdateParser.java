@@ -1,5 +1,7 @@
 package apc;
 
+import java.io.Reader;
+
 import org.eclipse.xtext.parser.IParseResult;
 
 public abstract class AbstractFileUpdateParser extends AbstractFileParser implements UpdateParser {
@@ -14,5 +16,5 @@ public abstract class AbstractFileUpdateParser extends AbstractFileParser implem
 	public void setLastParseResult(IParseResult result) {
 		this.lastResult = result;
 	}
-
+	
 }

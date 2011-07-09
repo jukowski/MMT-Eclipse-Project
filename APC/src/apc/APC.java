@@ -1,23 +1,25 @@
 package apc;
 
-import java.io.InputStream;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.ArrayList;
 
+import org.eclipse.xtext.ParserRule;
+import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.parser.IParseResult;
-import org.eclipse.xtext.parser.antlr.IAntlrParser;
-import org.eclipse.xtext.parsetree.CompositeNode;
+import org.eclipse.xtext.parser.IParser;
+import org.eclipse.xtext.util.ReplaceRegion;
 
 import com.google.inject.Inject;
 
-public abstract class APC implements IAntlrParser, FileBasedParser {
-	ArrayList<IAntlrParser> parsers = new ArrayList<IAntlrParser>();
+public abstract class APC implements IParser, FileBasedParser {
+	ArrayList<IParser> parsers = new ArrayList<IParser>();
 	String filePath;
+	IParser q;
 	
 	public void setFilePath(String filePath) {
 		this.filePath = filePath;
-		for (IAntlrParser parser : parsers) {
+		for (IParser parser : parsers) {
 			if (parser instanceof FileBasedParser) {
 				((FileBasedParser) parser).setFilePath(filePath);
 			}
@@ -34,13 +36,13 @@ public abstract class APC implements IAntlrParser, FileBasedParser {
 	
 	public abstract void init();
 
-	public void addParser(IAntlrParser parser) {
+	public void addParser(IParser parser) {
 		parsers.add(parser);
 	}
 	
 	IParseResult feedToParsers(String feedText) {
 		IParseResult last = null, current = null;
-		for (IAntlrParser parser : parsers) {
+		for (IParser parser : parsers) {
 			if (parser instanceof UpdateParser) {
 				((UpdateParser) parser).setLastParseResult(last);
 			}
@@ -53,38 +55,35 @@ public abstract class APC implements IAntlrParser, FileBasedParser {
 	}
 	
 	@Override
-	public IParseResult parse(InputStream in) {
-		String inputValue = APCUtils.SaveToString(in);
-		return feedToParsers(inputValue);
-	}
-
-	@Override
 	public IParseResult parse(Reader reader) {
 		String inputValue = APCUtils.SaveToString(reader);
 		return feedToParsers(inputValue);
 	}
 
 	@Override
-	public IParseResult reparse(CompositeNode originalRootNode, int offset,
-			int length, String change) {
+	public IParseResult parse(ParserRule rule, Reader reader) {
+		for (IParser parser : parsers) {
+			parser.parse(rule, reader);
+		}
+		return null;
+	}
+
+	@Override
+	public IParseResult parse(RuleCall ruleCall, Reader reader,
+			int initialLookAhead) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IParseResult reparse(IParseResult previousParseResult,
+			ReplaceRegion replaceRegion) {
 		IParseResult last = null;
-		for (IAntlrParser parser : parsers) {
-			last = parser.reparse(originalRootNode, offset, length, change);
-			if (last == null)
+		for (IParser parser : parsers) {
+			last = parser.reparse(previousParseResult, replaceRegion);
+			if (last.hasSyntaxErrors())
 				break;
 		}
 		return last;
-	}
-
-	@Override
-	public IParseResult parse(String ruleName, InputStream in) {
-		String inputValue = APCUtils.SaveToString(in);
-		return feedToParsers(inputValue);
-	}
-
-	@Override
-	public IParseResult parse(String ruleName, Reader reader) {
-		String inputValue = APCUtils.SaveToString(reader);
-		return feedToParsers(inputValue);
 	}	
 }

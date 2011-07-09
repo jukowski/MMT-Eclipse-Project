@@ -23,7 +23,7 @@ public class APCResource extends LazyLinkingResource {
 	
 	@Override
 	public void update(int offset, int replacedTextLength, String newText) {
-		IParser t = this.getParser();
+		IParser t = this.getParser(); 
 		if (t instanceof FileBasedParser) {
 			((FileBasedParser) t).setFilePath(APCUtils.getPath(this.uri));
 		}
