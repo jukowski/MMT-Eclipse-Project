@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="MMTProject"
+            name="MMT">
+      </category>
+      <wizard
+            category="MMTProject"
+            class="info.kwarc.mmt.MMTProject.wizards.MMTProject"
+            icon="icons/sample.gif"
+            id="info.kwarc.mmt.MMTProject.wizards.MMTProject"
+            name="New MMT Project"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         id="lfbuilder"
+         name="LF Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="info.kwarc.mmt.MMTProject.LFBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="mmtnature"
+         name="MMT Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="info.kwarc.mmt.MMTProject.MMTNature">
+         </run>
+      </runtime>
+      <builder
+            id="MMTProject.lfbuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="MMTProject.contribution1"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="info.kwarc.mmt.MMTProject.ToggleNatureAction"
+               enablesFor="+"
+               id="MMTProject.addRemoveNatureAction"
+               label="Add/Remove Sample Nature"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+
+</plugin>
