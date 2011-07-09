@@ -1,0 +1,44 @@
+grammar info.kwarc.mmt.LF hidden(WS, ML_COMMENT, SL_COMMENT) //with org.eclipse.xtext.common.Terminals
+
+generate lF "http://www.kwarc.info/mmt/LF"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Model:
+	declarations+=(namespaceDeclaration | signatureDeclaration | readDeclaration |
+				   viewDeclaration
+	)*;
+
+terminal INT returns ecore::EInt: ('0'..'9')+;
+terminal WS			: (' '|'\t'|'\r'|'\n')+;
+terminal ID  		: ('a'..'z'|'A'..'Z'|'0'..'9')*;
+
+NAMESPACE : ID ("." ID)*;
+URI : (ID "://")? NAMESPACE ("/" ID)*;
+URISTRING : '"' URI '"' ;
+readDeclaration: '%read' file=URISTRING '.';
+
+
+terminal ML_COMMENT	: '%{' -> '}%';
+terminal ML2_COMMENT : '%*' -> '*%';
+
+terminal SL_COMMENT 	: '%' (' ' | '%') !('\n'|'\r')* ('\r'? '\n')?;
+
+
+terminal ANY_OTHER: .;
+
+
+namespaceDeclaration: '%namespace' (name=ID '=')? uri=URISTRING '.';
+
+signatureDeclaration: '%sig' sigName=ID '=' '{' 
+					sigDefinitions += sigDefinitions*  '}' '.';
+
+sigDefinitions : (symbName=ID (':' | ':=') (type=ID '=' )? NAMESPACE '.') |
+				 ('%include' namespace=NAMESPACE '.') |
+				 ('%struct' structName = ID ':' namespace=NAMESPACE '.')
+				 ;
+
+TempType : {namespaceDeclaration} | {signatureDeclaration} | fullURI = ID;
+
+
+viewDeclaration: '%view' viewID=ID ':' from=NAMESPACE '->' to=NAMESPACE '=' '{' viewDefinitions+=sigDefinitions '}' '.';
