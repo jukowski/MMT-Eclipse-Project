@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: info.kwarc.elf.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: info.kwarc.elf.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: info.kwarc.elf;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime,
+ APC;bundle-version="1.0.0"
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: info.kwarc.ui,
+ info.kwarc.ui.contentassist,
+ info.kwarc.ui.contentassist.antlr,
+ info.kwarc.ui.labeling,
+ info.kwarc.ui.outline
+Bundle-Activator: info.kwarc.ui.internal.ElfActivator

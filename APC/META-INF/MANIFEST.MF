@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: APC
+Bundle-SymbolicName: APC
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.xtext;bundle-version="1.0.2",
+ org.eclipse.core.resources;bundle-version="3.6.1",
+ org.eclipse.xtext.ui;bundle-version="1.0.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: apc
+Import-Package: org.eclipse.xtext.ui.editor.model
