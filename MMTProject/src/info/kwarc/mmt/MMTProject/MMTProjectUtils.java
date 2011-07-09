@@ -25,15 +25,15 @@ public class MMTProjectUtils {
      * @param natureId
      * @return
      */
-    public static IProject createProject(String projectName, URI location) {
+    public static IProject createProject(String projectName, IProgressMonitor monitor) {
         Assert.isNotNull(projectName);
         Assert.isTrue(projectName.trim().length() > 0);
 
-        IProject project = createBaseProject(projectName, location);
+        IProject project = createBaseProject(projectName, monitor);
         try {
             addNature(project);
 
-            String[] paths = { "parent/child1-1/child2", "parent/child1-2/child2/child3" }; //$NON-NLS-1$ //$NON-NLS-2$
+            String[] paths = { "source", "content", "presentation", "narration", "relational" }; //$NON-NLS-1$ //$NON-NLS-2$
             addToProjectStructure(project, paths);
         } catch (CoreException e) {
             e.printStackTrace();
@@ -49,23 +49,12 @@ public class MMTProjectUtils {
      * @param location
      * @param projectName
      */
-    private static IProject createBaseProject(String projectName, URI location) {
-    	// it is acceptable to use the ResourcesPlugin class
+    private static IProject createBaseProject(String projectName, IProgressMonitor monitor) {
         IProject newProject = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
-    	Logger l = Logger.getLogger(MMTProjectUtils.class);
-    	l.setLevel(Level.DEBUG);
     	
         if (!newProject.exists()) {
-            URI projectLocation = location;
-            IProjectDescription desc = newProject.getWorkspace().newProjectDescription(newProject.getName());
-            if (location != null && ResourcesPlugin.getWorkspace().getRoot().getLocationURI().equals(location)) {
-                projectLocation = null;
-            }
-            l.info("Location "+projectLocation.toString());
-            
-            desc.setLocationURI(projectLocation);
             try {
-                newProject.create(desc, null);
+                newProject.create(monitor);
                 if (!newProject.isOpen()) {
                     newProject.open(null);
                 }
