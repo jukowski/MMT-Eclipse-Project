@@ -41,8 +41,8 @@ public class NewMMTProjectPage extends WizardPage {
 	 */
 	public NewMMTProjectPage(ISelection selection) {
 		super("wizardPage");
-		setTitle("Multi-page Editor File");
-		setDescription("This wizard creates a new file with *.lf extension that can be opened by a multi-page editor.");
+		setTitle("MMT Project Wizzard");
+		setDescription("This wizard creates a new MMT project with an example .elf file.");
 		this.selection = selection;
 	}
 
@@ -53,10 +53,10 @@ public class NewMMTProjectPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
-		layout.numColumns = 3;
+		layout.numColumns = 2;
 		layout.verticalSpacing = 9;
 		Label label = new Label(container, SWT.NULL);
-		label.setText("&Container:");
+		label.setText("&Project Name:");
 
 		containerText = new Text(container, SWT.BORDER | SWT.SINGLE);
 		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
@@ -67,13 +67,6 @@ public class NewMMTProjectPage extends WizardPage {
 			}
 		});
 
-		Button button = new Button(container, SWT.PUSH);
-		button.setText("Browse...");
-		button.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				handleBrowse();
-			}
-		});
 		label = new Label(container, SWT.NULL);
 		label.setText("&File name:");
 
@@ -110,7 +103,7 @@ public class NewMMTProjectPage extends WizardPage {
 				containerText.setText(container.getFullPath().toString());
 			}
 		}
-		fileText.setText("hello.lf");
+		fileText.setText("hello.elf");
 	}
 
 	/**

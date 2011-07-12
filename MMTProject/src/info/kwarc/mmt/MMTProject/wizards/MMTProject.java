@@ -137,14 +137,26 @@ public class MMTProject extends Wizard implements INewWizard {
 	 */
 
 	private InputStream openContentStream() {
-		String contents = "%namespace = \"http://cds.omdoc.org/logics\"\n" + 
-				"%sig BASE = {\n" + 
-				"o : type. %% Type of propositions\n" + 
-				"}\n" + 
-				"%namespace = \"http://cds.omdoc.org/logics/propositional\"\n" + 
-				"%sig CONJ = {%include BASE . }\n" + 
-				"%sig IMP = {%include BASE . }\n" + 
-				"%sig PROP = {%include CONJ. %include IMP. }\n";
+		String contents = "%namespace \"http://cds.omdoc.org/test\".\n" + 
+				"\n" + 
+				"%sig A = {\n" + 
+				"   a: type.\n" + 
+				"   c: a.\n" + 
+				"}.\n" + 
+				"\n" + 
+				"%sig B = {\n" + 
+				"   %include A.\n" + 
+				"   c: a.\n" + 
+				"}.\n" + 
+				"\n" + 
+				"%sig C = {\n" + 
+				"   %include A.\n" + 
+				"   %include B.\n" + 
+				"   %struct s: A.\n" + 
+				"   c : s.a.\n" + 
+				"   %struct t: A.\n" + 
+				"   d : t.a.\n" + 
+				"}.";
 		return new ByteArrayInputStream(contents.getBytes());
 	}
 
