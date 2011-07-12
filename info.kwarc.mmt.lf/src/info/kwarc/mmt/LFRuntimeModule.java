@@ -12,6 +12,7 @@ import apc.APCResource;
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class LFRuntimeModule extends info.kwarc.mmt.AbstractLFRuntimeModule {
+/*
 	@Override
 	public Class<? extends XtextResource> bindXtextResource() {
 		return APCResource.class;
@@ -21,4 +22,5 @@ public class LFRuntimeModule extends info.kwarc.mmt.AbstractLFRuntimeModule {
 	public Class<? extends IParser> bindIParser() {
 		return MyAPC.class;
 	}
+	*/
 }
