@@ -32,6 +32,10 @@ public class NewMMTProjectPage extends WizardPage {
 
 	private Text fileText;
 
+	private Text sourceBaseText;
+	
+	private Text narrationBaseText;
+
 	private ISelection selection;
 
 	/**
@@ -78,6 +82,30 @@ public class NewMMTProjectPage extends WizardPage {
 				dialogChanged();
 			}
 		});
+		
+		label = new Label(container, SWT.NULL);
+		label.setText("&Source-Base:");
+
+		sourceBaseText = new Text(container, SWT.BORDER | SWT.SINGLE);
+		gd = new GridData(GridData.FILL_HORIZONTAL);
+		sourceBaseText.setLayoutData(gd);
+		sourceBaseText.addModifyListener(new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		});
+		
+		label = new Label(container, SWT.NULL);
+		label.setText("&Narration-Base:");
+		narrationBaseText = new Text(container, SWT.BORDER | SWT.SINGLE);
+		gd = new GridData(GridData.FILL_HORIZONTAL);
+		narrationBaseText.setLayoutData(gd);
+		narrationBaseText.addModifyListener(new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		});			
+		
 		initialize();
 		dialogChanged();
 		setControl(container);
@@ -104,6 +132,8 @@ public class NewMMTProjectPage extends WizardPage {
 			}
 		}
 		fileText.setText("hello.elf");
+		sourceBaseText.setText("http://cds.omdoc.org");
+		narrationBaseText.setText("http://docs.omdoc.org");
 	}
 
 	/**
@@ -153,5 +183,14 @@ public class NewMMTProjectPage extends WizardPage {
 
 	public String getFileName() {
 		return fileText.getText();
+	}	
+	
+	public String getSourceBase() {
+		return sourceBaseText.getText();
 	}
+
+	public String getNarrationBase() {
+		return narrationBaseText.getText();
+	}
+
 }

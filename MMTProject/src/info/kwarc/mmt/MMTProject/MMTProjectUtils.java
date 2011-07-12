@@ -1,10 +1,12 @@
 package info.kwarc.mmt.MMTProject;
 
-import java.net.URI;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.Map;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
@@ -14,18 +16,15 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 
 public class MMTProjectUtils {
-    /**
-     * For this marvelous project we need to:
-     * - create the default Eclipse project
-     * - add the custom project nature
-     * - create the folder structure
-     *
-     * @param projectName
-     * @param location
-     * @param natureId
-     * @return
-     */
-    public static IProject createProject(String projectName, IProgressMonitor monitor) {
+
+/**
+ * 
+ * @param projectName
+ * @param options
+ * @param monitor
+ * @return
+ */
+    public static IProject createProject(String projectName, Map<String, String> options, IProgressMonitor monitor) {
         Assert.isNotNull(projectName);
         Assert.isTrue(projectName.trim().length() > 0);
 
@@ -33,8 +32,10 @@ public class MMTProjectUtils {
         try {
             addNature(project);
 
-            String[] paths = { "source", "content", "presentation", "narration", "relational" }; //$NON-NLS-1$ //$NON-NLS-2$
+            String[] paths = { "source", "content", "compiled", "presentation", "narration", "relational", "META-INF", "mars" }; //$NON-NLS-1$ //$NON-NLS-2$
             addToProjectStructure(project, paths);
+            
+            addManifest(project, options, monitor);
         } catch (CoreException e) {
             e.printStackTrace();
             project = null;
@@ -43,6 +44,32 @@ public class MMTProjectUtils {
         return project;
     }
 
+    /**
+     * Create the MANIFEST.MF file 
+     * @param project
+     */
+    public static void addManifest(IProject project, Map <String, String> options, IProgressMonitor monitor) {
+        IFile manifest = project.getFile("META-INF/MANIFEST.MF");
+        String content = "id: "+project.getName()+"\n" +
+        				 "source: twelf\n";
+        if (options!= null) {
+        	for (String key : options.keySet()) {
+        		content += key+" : "+options.get(key)+"\n";
+        	}
+        }
+        InputStream buff;
+		try {
+			buff = new ByteArrayInputStream(content.getBytes("UTF-8"));
+			manifest.create(buff, true, monitor);
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (CoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
     /**
      * Just do the basics: create a basic project.
      *

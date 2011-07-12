@@ -22,7 +22,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class LFBuilder extends IncrementalProjectBuilder {
 
-	class SampleDeltaVisitor implements IResourceDeltaVisitor {
+	class MMTVisitor implements IResourceDeltaVisitor {
 		/*
 		 * (non-Javadoc)
 		 * 
@@ -125,13 +125,7 @@ public class LFBuilder extends IncrementalProjectBuilder {
 
 	void checkXML(IResource resource) {
 		if (resource instanceof IFile && resource.getName().endsWith(".xml")) {
-			IFile file = (IFile) resource;
-			deleteMarkers(file);
-			XMLErrorHandler reporter = new XMLErrorHandler(file);
-			try {
-				getParser().parse(file.getContents(), reporter);
-			} catch (Exception e1) {
-			}
+			
 		}
 	}
 
@@ -150,17 +144,9 @@ public class LFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
-	private SAXParser getParser() throws ParserConfigurationException,
-			SAXException {
-		if (parserFactory == null) {
-			parserFactory = SAXParserFactory.newInstance();
-		}
-		return parserFactory.newSAXParser();
-	}
-
 	protected void incrementalBuild(IResourceDelta delta,
 			IProgressMonitor monitor) throws CoreException {
 		// the visitor does the work.
-		delta.accept(new SampleDeltaVisitor());
+		delta.accept(new MMTVisitor());
 	}
 }
