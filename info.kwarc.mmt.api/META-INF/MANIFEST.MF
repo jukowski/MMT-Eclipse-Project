@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Api
+Bundle-SymbolicName: info.kwarc.mmt.api
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: info.kwarc.mmt.api.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/mmt-api.jar,
+ lib/sc.jar,
+ lib/scala-library.jar,
+ .,
+ lib/lfcatalog.jar
+Export-Package: info.kwarc.mmt.api,
+ info.kwarc.mmt.api.wrappers
