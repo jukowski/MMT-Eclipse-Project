@@ -43,14 +43,14 @@ import org.eclipse.ui.ide.IDE;
  * be able to open it.
  */
 
-public class MMTProject extends Wizard implements INewWizard {
+public class MMTProjectWizzard extends Wizard implements INewWizard {
 	private NewMMTProjectPage page;
 	private ISelection selection;
 
 	/**
 	 * Constructor for MMTProject.
 	 */
-	public MMTProject() {
+	public MMTProjectWizzard() {
 		super();
 		setNeedsProgressMonitor(true);
 	}

@@ -1,5 +1,10 @@
 package info.kwarc.mmt.MMTProject;
 
+import info.kwarc.mmt.api.wrappers.MMTController;
+import info.kwarc.mmt.api.wrappers.MMTReport;
+
+import java.util.ArrayList;
+
 import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
@@ -15,6 +20,53 @@ public class MMTNature implements IProjectNature {
 
 	private IProject project;
 
+	MMTController controller = null;
+	NatureLogForwarder logForwarder;
+	
+	public MMTNature() {
+		logForwarder = new NatureLogForwarder();
+	}
+	
+	class NatureLogForwarder implements MMTReport {
+		
+		ArrayList<MMTReport> handlers;
+		
+		public NatureLogForwarder() {
+			handlers = new ArrayList<MMTReport>();
+		}
+		
+		public void addHandler(MMTReport report) {
+			handlers.add(report);
+		}
+		
+		@Override
+		public void handle(String arg0, String arg1) {
+			for (MMTReport rep : handlers) {
+				rep.handle(arg0, arg1);
+			}
+		}
+	}
+	
+	public void addErrorHandler(MMTReport report) {
+		logForwarder.addHandler(report);
+	}
+	
+	void initController() {
+		try {
+			controller = new MMTController(logForwarder);
+			controller.setCompiler("/home/costea/kwarc/twelf/twelf-mod/bin/twelf-server");
+			controller.RegisterArchive(project.getLocation().toFile());
+		} catch (Exception E) {
+			controller = null;
+		}
+	}
+	
+	public MMTController getController() {
+		if (project != null && controller == null)
+			initController();
+		return controller;
+	}
+	
 	/*
 	 * (non-Javadoc)
 	 * 

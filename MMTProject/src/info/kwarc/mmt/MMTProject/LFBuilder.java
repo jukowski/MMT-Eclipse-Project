@@ -1,10 +1,12 @@
 package info.kwarc.mmt.MMTProject;
 
-import java.util.Map;
+import info.kwarc.mmt.api.wrappers.MMTArchive;
+import info.kwarc.mmt.api.wrappers.MMTController;
+import info.kwarc.mmt.api.wrappers.MMTReport;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.logging.Logger;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -86,8 +88,6 @@ public class LFBuilder extends IncrementalProjectBuilder {
 
 	private static final String MARKER_TYPE = "MMTProject.xmlProblem";
 
-	private SAXParserFactory parserFactory;
-
 	private void addMarker(IFile file, String message, int lineNumber,
 			int severity) {
 		try {
@@ -113,19 +113,19 @@ public class LFBuilder extends IncrementalProjectBuilder {
 		if (kind == FULL_BUILD) {
 			fullBuild(monitor);
 		} else {
-			IResourceDelta delta = getDelta(getProject());
+			/*IResourceDelta delta = getDelta(getProject());
 			if (delta == null) {
 				fullBuild(monitor);
 			} else {
 				incrementalBuild(delta, monitor);
-			}
+			}*/
+			fullBuild(monitor);			
 		}
 		return null;
 	}
 
 	void checkXML(IResource resource) {
 		if (resource instanceof IFile && resource.getName().endsWith(".xml")) {
-			
 		}
 	}
 
@@ -136,10 +136,37 @@ public class LFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
+	class CompileErrorHandler implements MMTReport {
+
+		String currentFile;
+		
+		@Override
+		public void handle(String arg0, String arg1) {
+			if (arg0.equals("archive")) {
+				Logger.getAnonymousLogger().info(arg1);
+			}
+		}
+	}
+	
+	static boolean initialized = false;
+	
+	protected void initLogger(MMTNature nature) {
+		if (!initialized) {
+			nature.addErrorHandler(new CompileErrorHandler());
+			initialized = true;
+		}
+	}
+	
 	protected void fullBuild(final IProgressMonitor monitor)
 			throws CoreException {
 		try {
-			getProject().accept(new SampleResourceVisitor());
+			MMTNature nature = (MMTNature) getProject().getNature(MMTNature.NATURE_ID);
+			nature.addErrorHandler(new CompileErrorHandler());
+			MMTController controller = nature.getController();
+			ArrayList<String> paths = new ArrayList<String>();
+			paths.add("/");
+			MMTArchive arch = controller.getArchive(getProject().getName()); 
+			arch.compile(paths);
 		} catch (CoreException e) {
 		}
 	}
