@@ -9,9 +9,9 @@
       </category>
       <wizard
             category="MMTProject"
-            class="info.kwarc.mmt.MMTProject.wizards.MMTProject"
+            class="info.kwarc.mmt.MMTProject.wizards.MMTProjectWizzard"
             icon="icons/sample.gif"
-            id="info.kwarc.mmt.MMTProject.wizards.MMTProject"
+            id="info.kwarc.mmt.MMTProject.wizards.MMTProjectWizzard"
             name="New MMT Project"
             project="true">
       </wizard>
@@ -51,14 +51,14 @@
                class="info.kwarc.mmt.MMTProject.ToggleNatureAction"
                enablesFor="+"
                id="MMTProject.addRemoveNatureAction"
-               label="Add/Remove Sample Nature"
+               label="Add/Remove MMT Nature"
                menubarPath="additions">
          </action>
       </objectContribution>
    </extension>
    <extension
-         id="xmlProblem"
-         name="XML Problem"
+         id="TWELFProblem"
+         name="TWELF Problem"
          point="org.eclipse.core.resources.markers">
       <super
             type="org.eclipse.core.resources.problemmarker">
@@ -67,5 +67,68 @@
             value="true">
       </persistent>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+         <category
+         	id="org.eclipse.ui.examples.navigator.category"
+         	name="MMT Navigator" 
+         />
+      <view
+            class="org.eclipse.ui.navigator.CommonNavigator"
+            icon="icons/sample.gif"
+            id="info.kwarc.mmt.marnav"
+            name="MAR file navigator">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerActionBinding
+            viewerId="info.kwarc.mmt.marnav">
+         <includes>
+            <actionExtension
+                  pattern="org.eclipse.ui.navigator.resources.*">
+            </actionExtension>
+         </includes>
+      </viewerActionBinding>
+      <viewerContentBinding
+            viewerId="info.kwarc.mmt.marnav">
+         <includes>
+            <contentExtension
+                  pattern="org.eclipse.ui.navigator.resourceContent">
+            </contentExtension>
+            <contentExtension
+                  pattern="org.eclipse.ui.navigator.resources.filters.*">
+            </contentExtension>
+            <contentExtension
+                  pattern="org.eclipse.ui.navigator.resources.linkHelper">
+            </contentExtension>
+            <contentExtension
+                  pattern="org.eclipse.ui.navigator.resources.workingSets">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               id="info.kwarc.mmt.marnav"
+               ratio="0.5"
+               relationship="stack"
+               relative="org.eclipse.ui.navigator.ProjectExplorer">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+ <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+              category="info.kwarc.mmt.LF"
+              class="info.kwarc.mmt.MMTProject.preferences.TWELF"
+              id="info.kwarc.mmt.lf.ui.TWELF"
+              name="TWELF">
+        </page>
+    </extension>
 
 </plugin>

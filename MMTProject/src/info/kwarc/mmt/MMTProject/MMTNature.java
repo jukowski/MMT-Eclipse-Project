@@ -3,6 +3,7 @@ package info.kwarc.mmt.MMTProject;
 import info.kwarc.mmt.api.wrappers.MMTController;
 import info.kwarc.mmt.api.wrappers.MMTReport;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.ICommand;
@@ -54,8 +55,15 @@ public class MMTNature implements IProjectNature {
 	void initController() {
 		try {
 			controller = new MMTController(logForwarder);
-			controller.setCompiler("/home/costea/kwarc/twelf/twelf-mod/bin/twelf-server");
-			controller.RegisterArchive(project.getLocation().toFile());
+			String twelf_path = Activator.getDefault().getPreferenceStore().getString("TWELF_PATH");
+			File f = new File(twelf_path+"/twelf-server");
+			if (!f.exists()) {
+				logForwarder.handle("error", "TWELF compiler not found! Please change the path by going to Windows->Preferences->LF->TWELF");
+				controller = null;
+			} else {
+				controller.setCompiler(twelf_path+"/twelf-server");
+				controller.RegisterArchive(project.getLocation().toFile());
+			}
 		} catch (Exception E) {
 			controller = null;
 		}

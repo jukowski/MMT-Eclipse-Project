@@ -7,6 +7,8 @@ import info.kwarc.mmt.api.wrappers.MMTReport;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -18,9 +20,6 @@ import org.eclipse.core.resources.IResourceVisitor;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
-import org.xml.sax.helpers.DefaultHandler;
 
 public class LFBuilder extends IncrementalProjectBuilder {
 
@@ -35,14 +34,12 @@ public class LFBuilder extends IncrementalProjectBuilder {
 			switch (delta.getKind()) {
 			case IResourceDelta.ADDED:
 				// handle added resource
-				checkXML(resource);
 				break;
 			case IResourceDelta.REMOVED:
 				// handle removed resource
 				break;
 			case IResourceDelta.CHANGED:
 				// handle changed resource
-				checkXML(resource);
 				break;
 			}
 			//return true to continue visiting children.
@@ -52,52 +49,25 @@ public class LFBuilder extends IncrementalProjectBuilder {
 
 	class SampleResourceVisitor implements IResourceVisitor {
 		public boolean visit(IResource resource) {
-			checkXML(resource);
 			//return true to continue visiting children.
 			return true;
 		}
 	}
 
-	class XMLErrorHandler extends DefaultHandler {
-		
-		private IFile file;
-
-		public XMLErrorHandler(IFile file) {
-			this.file = file;
-		}
-
-		private void addMarker(SAXParseException e, int severity) {
-			LFBuilder.this.addMarker(file, e.getMessage(), e
-					.getLineNumber(), severity);
-		}
-
-		public void error(SAXParseException exception) throws SAXException {
-			addMarker(exception, IMarker.SEVERITY_ERROR);
-		}
-
-		public void fatalError(SAXParseException exception) throws SAXException {
-			addMarker(exception, IMarker.SEVERITY_ERROR);
-		}
-
-		public void warning(SAXParseException exception) throws SAXException {
-			addMarker(exception, IMarker.SEVERITY_WARNING);
-		}
-	}
-
 	public static final String BUILDER_ID = "MMTProject.lfbuilder";
 
-	private static final String MARKER_TYPE = "MMTProject.xmlProblem";
+	private static final String MARKER_TYPE = "MMTProject.TWELFProblem";
 
-	private void addMarker(IFile file, String message, int lineNumber,
+	private void addMarker(IFile file, String message, int lineBegin, int lineEnd, int colBegin, int colEnd,
 			int severity) {
 		try {
 			IMarker marker = file.createMarker(MARKER_TYPE);
 			marker.setAttribute(IMarker.MESSAGE, message);
 			marker.setAttribute(IMarker.SEVERITY, severity);
-			if (lineNumber == -1) {
-				lineNumber = 1;
-			}
-			marker.setAttribute(IMarker.LINE_NUMBER, lineNumber);
+			marker.setAttribute(IMarker.LINE_NUMBER, lineBegin);
+			/*marker.setAttribute(IMarker.CHAR_START, colBegin);
+			if (lineBegin == lineEnd)
+				marker.setAttribute(IMarker.CHAR_END, colEnd);*/
 		} catch (CoreException e) {
 		}
 	}
@@ -124,10 +94,7 @@ public class LFBuilder extends IncrementalProjectBuilder {
 		return null;
 	}
 
-	void checkXML(IResource resource) {
-		if (resource instanceof IFile && resource.getName().endsWith(".xml")) {
-		}
-	}
+
 
 	private void deleteMarkers(IFile file) {
 		try {
@@ -139,16 +106,42 @@ public class LFBuilder extends IncrementalProjectBuilder {
 	class CompileErrorHandler implements MMTReport {
 
 		String currentFile;
+	
+		public String getProjectRelativePath(String fullPath) {
+			String search = getProject().getName()+"/"+"source/";
+			int pos = fullPath.indexOf(search);
+			if (pos == -1) 
+				return "/";
+			return "source/"+fullPath.substring(pos+search.length());
+		}
 		
 		@Override
 		public void handle(String arg0, String arg1) {
+			Matcher m;
 			if (arg0.equals("archive")) {
+				m = compileFilePattern.matcher(arg1);
+				if (m.matches()) {
+					currentFile = getProjectRelativePath(m.group(1));
+					deleteMarkers(getProject().getFile(currentFile));
+					return;
+				}
+				m = errorPattern.matcher(arg1);
+				if (m.find()) {
+					currentFile = getProjectRelativePath(m.group(1));
+					int firstLine = Integer.parseInt(m.group(2));
+					int lastLine = Integer.parseInt(m.group(4));
+					int firstColumn = Integer.parseInt(m.group(3));
+					int lastColumn = Integer.parseInt(m.group(5));
+					LFBuilder.this.addMarker(getProject().getFile(currentFile), arg1.substring(m.end()), firstLine, lastLine, firstColumn, lastColumn, IMarker.SEVERITY_ERROR);
+				} else
 				Logger.getAnonymousLogger().info(arg1);
 			}
 		}
 	}
 	
 	static boolean initialized = false;
+	final Pattern compileFilePattern = Pattern.compile("\\[[A-Za-z\\->]*\\] ([^>]*) -> (.*)");
+	final Pattern errorPattern = Pattern.compile("\\[[A-Za-z\\->]*\\] ([^#]*)#([0-9]+)\\.([0-9]+)-([0-9]+)\\.([0-9]+)(.*)$", Pattern.MULTILINE);
 	
 	protected void initLogger(MMTNature nature) {
 		if (!initialized) {
@@ -161,7 +154,7 @@ public class LFBuilder extends IncrementalProjectBuilder {
 			throws CoreException {
 		try {
 			MMTNature nature = (MMTNature) getProject().getNature(MMTNature.NATURE_ID);
-			nature.addErrorHandler(new CompileErrorHandler());
+			initLogger(nature);
 			MMTController controller = nature.getController();
 			ArrayList<String> paths = new ArrayList<String>();
 			paths.add("/");
