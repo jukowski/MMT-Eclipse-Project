@@ -39,6 +39,8 @@ public class MMTArchive {
 	public void compile(List<String> paths) {
 		ListWrapper<String> wrapper = new ListWrapper<String>(paths);
 		scala.collection.immutable.List<String> res = wrapper.toSeq().toList();
-		controller.handle(new ArchiveBuild("test", "compile", res));		
+		controller.handle(new ArchiveBuild(getID(), "compile", res));
+		controller.handle(new ArchiveBuild(getID(), "content", res));
+		controller.handle(new ArchiveBuild(getID(), "relational", res));
 	}
 }
