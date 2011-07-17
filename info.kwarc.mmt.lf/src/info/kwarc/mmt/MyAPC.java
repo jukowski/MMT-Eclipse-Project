@@ -1,4 +1,4 @@
-package info.kwarc.mmt;
+/*package info.kwarc.mmt;
 
 import info.kwarc.mmt.parser.antlr.LFParser;
 import apc.APC;
@@ -22,3 +22,4 @@ public class MyAPC extends APC {
 		addParser(new TWELFParser());
 	}
 }
+*/

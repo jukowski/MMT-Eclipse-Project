@@ -1,4 +1,5 @@
-package info.kwarc.mmt;
+/*
+ * package info.kwarc.mmt;
 
 import info.kwarc.mmt.lF.signatureDeclaration;
 
@@ -151,3 +152,4 @@ public class TWELFParser extends AbstractFileUpdateParser {
 	}
 
 }
+ */
