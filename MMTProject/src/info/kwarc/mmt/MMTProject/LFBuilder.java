@@ -133,7 +133,7 @@ public class LFBuilder extends IncrementalProjectBuilder {
 				} else
 				Logger.getAnonymousLogger().info(arg1);
 			}
-			if (arg0.equals("error")) {
+			if (arg0.equals("eclipse_error")) {
 				IMarker err;
 				try {
 					err = getProject().getFolder("source").createMarker(MARKER_TYPE);

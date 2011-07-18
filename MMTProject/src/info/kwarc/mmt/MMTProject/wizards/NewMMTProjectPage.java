@@ -11,15 +11,12 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -37,6 +34,8 @@ public class NewMMTProjectPage extends WizardPage {
 	private Text narrationBaseText;
 
 	private ISelection selection;
+	
+	private Button latinInclude;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
@@ -105,7 +104,10 @@ public class NewMMTProjectPage extends WizardPage {
 				dialogChanged();
 			}
 		});			
-		
+
+		latinInclude = new Button(container, SWT.CHECK);
+		latinInclude.setText("Include the &LATIN corpus");
+				
 		initialize();
 		dialogChanged();
 		setControl(container);
@@ -134,23 +136,6 @@ public class NewMMTProjectPage extends WizardPage {
 		fileText.setText("hello.elf");
 		sourceBaseText.setText("http://cds.omdoc.org");
 		narrationBaseText.setText("http://docs.omdoc.org");
-	}
-
-	/**
-	 * Uses the standard container selection dialog to choose the new value for
-	 * the container field.
-	 */
-
-	private void handleBrowse() {
-		ContainerSelectionDialog dialog = new ContainerSelectionDialog(
-				getShell(), ResourcesPlugin.getWorkspace().getRoot(), false,
-				"Select new file container");
-		if (dialog.open() == ContainerSelectionDialog.OK) {
-			Object[] result = dialog.getResult();
-			if (result.length == 1) {
-				containerText.setText(((Path) result[0]).toString());
-			}
-		}
 	}
 
 	/**
@@ -191,6 +176,10 @@ public class NewMMTProjectPage extends WizardPage {
 
 	public String getNarrationBase() {
 		return narrationBaseText.getText();
+	}
+	
+	public Boolean getLatinInclude() {
+		return latinInclude.getSelection();
 	}
 
 }

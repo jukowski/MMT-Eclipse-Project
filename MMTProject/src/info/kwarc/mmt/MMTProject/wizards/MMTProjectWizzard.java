@@ -1,11 +1,13 @@
 package info.kwarc.mmt.MMTProject.wizards;
 
+import info.kwarc.mmt.MMTProject.Activator;
 import info.kwarc.mmt.MMTProject.MMTProjectUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -73,21 +75,22 @@ public class MMTProjectWizzard extends Wizard implements INewWizard {
 		final String containerName = page.getContainerName();
 		final String fileName = page.getFileName();
 		final HashMap<String, String> opts = new HashMap<String, String>();
+		final boolean latinInclude = page.getLatinInclude();
 		opts.put("source-base", page.getSourceBase());
 		opts.put("narration-base", page.getNarrationBase());
-		
-		IRunnableWithProgress op = new IRunnableWithProgress() {
+    		
+ 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
-					doFinish(containerName, fileName, opts, monitor);
+					doFinish(containerName, fileName, opts, latinInclude, monitor);
 				} catch (CoreException e) {
-					throw new InvocationTargetException(e);
+ 					throw new InvocationTargetException(e);
 				} finally {
 					monitor.done();
 				}
 			}
 		};
-		try {
+    		try {
 			getContainer().run(true, false, op);
 		} catch (InterruptedException e) {
 			return false;
@@ -109,14 +112,39 @@ public class MMTProjectWizzard extends Wizard implements INewWizard {
 		String containerName,
 		String fileName,
 		Map<String, String> opts,
+		Boolean includeLatin,
 		IProgressMonitor monitor)
 		throws CoreException {
 		// create a sample file
 		monitor.beginTask("Creating project " + containerName, 2);
 		
 		MMTProjectUtils.createProject(containerName, opts, monitor);
+		monitor.worked(1);
+		
+		if (includeLatin) {
+			monitor.beginTask("Copying Latin" + fileName, 2);
+			IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+			IResource resource = root.findMember(new Path(containerName));
+			if (!resource.exists()) {
+				throwCoreException("Path "+containerName+" is invalid ");
+			}
+			IContainer container = (IContainer) resource;
+			final IFile file = container.getFile(new Path("mars/latin.mar"));
+			try {
+				InputStream stream = openLatinStream();
+				if (file.exists()) {
+					file.setContents(stream, true, true, monitor);
+				} else {
+					file.create(stream, true, monitor);
+				}
+			stream.close();
+		} catch (IOException e) {
+		}
+		monitor.worked(1);
+		}
 
 		containerName+="/source";
+
 		monitor.beginTask("Creating " + fileName, 2);
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IResource resource = root.findMember(new Path(containerName));
@@ -148,6 +176,17 @@ public class MMTProjectWizzard extends Wizard implements INewWizard {
 			}
 		});
 		monitor.worked(1); 
+	}
+	
+	private InputStream openLatinStream() {
+		try {
+			URL url = Activator.getDefault().getBundle().getEntry("resources/latin.mar");
+			return url.openStream();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	/**

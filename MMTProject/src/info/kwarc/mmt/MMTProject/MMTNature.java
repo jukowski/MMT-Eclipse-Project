@@ -61,7 +61,7 @@ public class MMTNature implements IProjectNature {
 			String twelf_compiler = Activator.getDefault().getPreferenceStore().getString("TWELF_BIN");
 			File f = new File(twelf_compiler);
 			if (!f.exists()) {
-				logForwarder.handle("error", "TWELF compiler not found! Please change the path by going to Windows->Preferences->LF->TWELF");
+				logForwarder.handle("eclipse_error", "TWELF compiler not found! Please change the path by going to Windows->Preferences->LF->TWELF");
 				controller = null;
 			} else {
 				controller.setCompiler(twelf_compiler);
@@ -149,7 +149,7 @@ public class MMTNature implements IProjectNature {
 	}
 
 	/*
-	 * (non-Javadoc)
+	 * (non-Javadoc) 
 	 * 
 	 * @see org.eclipse.core.resources.IProjectNature#setProject(org.eclipse.core.resources.IProject)
 	 */
