@@ -7,9 +7,12 @@ import java.io.File;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.ICommand;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IProjectNature;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 
 public class MMTNature implements IProjectNature {
@@ -55,14 +58,30 @@ public class MMTNature implements IProjectNature {
 	void initController() {
 		try {
 			controller = new MMTController(logForwarder);
-			String twelf_path = Activator.getDefault().getPreferenceStore().getString("TWELF_PATH");
-			File f = new File(twelf_path+"/twelf-server");
+			String twelf_compiler = Activator.getDefault().getPreferenceStore().getString("TWELF_BIN");
+			File f = new File(twelf_compiler);
 			if (!f.exists()) {
 				logForwarder.handle("error", "TWELF compiler not found! Please change the path by going to Windows->Preferences->LF->TWELF");
 				controller = null;
 			} else {
-				controller.setCompiler(twelf_path+"/twelf-server");
+				controller.setCompiler(twelf_compiler);
 				controller.RegisterArchive(project.getLocation().toFile());
+			}
+			IFolder folder = getProject().getFolder("mars/");
+			for (IResource res : folder.members()) {
+				String name = res.getName();
+				if (res instanceof IFile) {
+					IFile file = (IFile) res;
+					if (name.endsWith(".mar")) {
+						String marName = name.substring(0, name.length()-4);
+						IFolder marFolder = folder.getFolder(marName);
+						if (!marFolder.exists()) {
+							MMTProjectUtils.createFolder(marFolder);
+							MMTProjectUtils.doUnzip(file.getLocation().toOSString(), marFolder.getLocation().toOSString());
+							controller.RegisterArchive(new File(marFolder.getLocation().toOSString()));
+						}
+					}
+				}
 			}
 		} catch (Exception E) {
 			controller = null;

@@ -65,9 +65,6 @@ public class LFBuilder extends IncrementalProjectBuilder {
 			marker.setAttribute(IMarker.MESSAGE, message);
 			marker.setAttribute(IMarker.SEVERITY, severity);
 			marker.setAttribute(IMarker.LINE_NUMBER, lineBegin);
-			/*marker.setAttribute(IMarker.CHAR_START, colBegin);
-			if (lineBegin == lineEnd)
-				marker.setAttribute(IMarker.CHAR_END, colEnd);*/
 		} catch (CoreException e) {
 		}
 	}
@@ -136,6 +133,16 @@ public class LFBuilder extends IncrementalProjectBuilder {
 				} else
 				Logger.getAnonymousLogger().info(arg1);
 			}
+			if (arg0.equals("error")) {
+				IMarker err;
+				try {
+					err = getProject().getFolder("source").createMarker(MARKER_TYPE);
+					err.setAttribute(IMarker.MESSAGE, arg1);
+					err.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+				} catch (CoreException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 	
@@ -156,10 +163,12 @@ public class LFBuilder extends IncrementalProjectBuilder {
 			MMTNature nature = (MMTNature) getProject().getNature(MMTNature.NATURE_ID);
 			initLogger(nature);
 			MMTController controller = nature.getController();
-			ArrayList<String> paths = new ArrayList<String>();
-			paths.add("/");
-			MMTArchive arch = controller.getArchive(getProject().getName()); 
-			arch.compile(paths);
+			if (controller != null) {
+				ArrayList<String> paths = new ArrayList<String>();
+				paths.add("/");
+				MMTArchive arch = controller.getArchive(getProject().getName()); 
+				arch.compile(paths);
+			}
 		} catch (CoreException e) {
 		}
 	}
