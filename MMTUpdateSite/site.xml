@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/MMTFeature_1.0.0.201107171313.jar" id="MMTFeature" version="1.0.0.201107171313">
+      <category name="MMT"/>
+   </feature>
+   <category-def name="MMT" label="MMT IDE"/>
+</site>
