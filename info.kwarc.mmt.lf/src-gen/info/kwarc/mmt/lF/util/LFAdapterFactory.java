@@ -83,14 +83,19 @@ public class LFAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter casereadDeclaration(readDeclaration object)
+      public Adapter caseJUSTSPACE(JUSTSPACE object)
       {
-        return createreadDeclarationAdapter();
+        return createJUSTSPACEAdapter();
       }
       @Override
       public Adapter casenamespaceDeclaration(namespaceDeclaration object)
       {
         return createnamespaceDeclarationAdapter();
+      }
+      @Override
+      public Adapter casereadDeclaration(readDeclaration object)
+      {
+        return createreadDeclarationAdapter();
       }
       @Override
       public Adapter casesignatureDeclaration(signatureDeclaration object)
@@ -150,16 +155,16 @@ public class LFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.readDeclaration <em>read Declaration</em>}'.
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.JUSTSPACE <em>JUSTSPACE</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see info.kwarc.mmt.lF.readDeclaration
+   * @see info.kwarc.mmt.lF.JUSTSPACE
    * @generated
    */
-  public Adapter createreadDeclarationAdapter()
+  public Adapter createJUSTSPACEAdapter()
   {
     return null;
   }
@@ -175,6 +180,21 @@ public class LFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createnamespaceDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.readDeclaration <em>read Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see info.kwarc.mmt.lF.readDeclaration
+   * @generated
+   */
+  public Adapter createreadDeclarationAdapter()
   {
     return null;
   }

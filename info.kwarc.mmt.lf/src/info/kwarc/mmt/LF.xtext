@@ -1,44 +1,57 @@
-grammar info.kwarc.mmt.LF hidden(WS, ML_COMMENT, SL_COMMENT) //with org.eclipse.xtext.common.Terminals
+grammar info.kwarc.mmt.LF //with org.eclipse.xtext.common.Terminals
 
 generate lF "http://www.kwarc.info/mmt/LF"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+/* 
 Model:
-	declarations+=(namespaceDeclaration | signatureDeclaration | readDeclaration |
-				   viewDeclaration
-	)*;
+	declarations+=(namespaceDeclaration | signatureDeclaration  | viewDeclaration | JUSTSPACE )*; 
+*/
+
+Model:
+	declarations+=(namespaceDeclaration | signatureDeclaration  | JUSTSPACE )*; 
 
 terminal INT returns ecore::EInt: ('0'..'9')+;
-terminal WS			: (' '|'\t'|'\r'|'\n')+;
-terminal ID  		: ('a'..'z'|'A'..'Z'|'0'..'9')*;
-
-NAMESPACE : ID ("." ID)*;
-URI : (ID "://")? NAMESPACE ("/" ID)*;
-URISTRING : '"' URI '"' ;
-readDeclaration: '%read' file=URISTRING '.';
-
-
-terminal ML_COMMENT	: '%{' -> '}%';
+terminal SP			 : ' '|'\t'|'\r'|'\n';
+terminal CID  		 : ('a'..'z'|'A'..'Z'|'0'..'9'|'-'|'_'|'#'|'?')+;
+terminal ML_COMMENT	 : '%{' -> '}%';
 terminal ML2_COMMENT : '%*' -> '*%';
-
-terminal SL_COMMENT 	: '%' (' ' | '%') !('\n'|'\r')* ('\r'? '\n')?;
-
-
+terminal SL_COMMENT  : '%' (' ' | '%') !('\n'|'\r')* ('\r'? '\n')?;
 terminal ANY_OTHER: .;
 
+WS : (SP | ML_COMMENT | ML2_COMMENT | SL_COMMENT);
 
-namespaceDeclaration: '%namespace' (name=ID '=')? uri=URISTRING '.';
+NAMESPACE : ("../")* CID ( ('/'|'.') CID)*;
+URI : (CID "://")? NAMESPACE;
+URISTRING : '"' URI '"' ;
+JUSTSPACE: J=WS;
 
-signatureDeclaration: '%sig' sigName=ID '=' '{' 
-					sigDefinitions += sigDefinitions*  '}' '.';
+namespaceDeclaration: '%namespace' WS+ (name=CID WS* '=' WS*)? uri=URISTRING WS* '.' WS;
 
-sigDefinitions : (symbName=ID (':' | ':=') (type=ID '=' )? NAMESPACE '.') |
-				 ('%include' namespace=NAMESPACE '.') |
-				 ('%struct' structName = ID ':' namespace=NAMESPACE '.')
+readDeclaration: '%read' WS+ file=URISTRING WS* '.' WS;
+
+
+GID : (CID | ANY_OTHER)+;
+
+SOMETHING: ANY_OTHER | CID | INT | '.' CID | ':' | '{' | '}' | '=' | '<' | '->' | '%' | '-' | '\'' | WS;
+
+sigOps : ('%meta' | '%abbrev') SOMETHING* '.' WS;
+
+
+signatureDeclaration: '%sig' WS+ sigName=CID WS* '=' WS* '{' WS*
+					sigDefinitions += sigDefinitions*  '}' WS* '.' WS; 
+
+
+sigDefinitions : (symbName=GID WS* (':' | ':=' | '=') SOMETHING* '.' WS) |
+				 ('%include' WS+ namespace=NAMESPACE (WS+ includeOps)? '.' WS) |
+				 ('%struct' WS+ structName = GID WS* ':' SOMETHING* includeOps? '.' WS) |
+				 (('%infix'|'%prefix') (WS+ type=GID)? WS+ precendece=INT SOMETHING* '.' WS) |
+				 (tmp=('%meta' | '%abbrev') SOMETHING* '.' WS )
 				 ;
 
-TempType : {namespaceDeclaration} | {signatureDeclaration} | fullURI = ID;
+includeOps : ('%open' SOMETHING*);
 
+TempType : {namespaceDeclaration} | {signatureDeclaration} | fullURI = GID;
 
-viewDeclaration: '%view' viewID=ID ':' from=NAMESPACE '->' to=NAMESPACE '=' '{' viewDefinitions+=sigDefinitions '}' '.';
+viewDeclaration: '%view' WS+ viewID=GID WS* ':' WS* from=NAMESPACE WS*'->' WS* to=NAMESPACE WS* '=' WS* '{' WS* viewDefinitions+=sigDefinitions* '}' WS* '.' WS;

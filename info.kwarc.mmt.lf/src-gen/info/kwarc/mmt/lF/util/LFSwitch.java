@@ -82,10 +82,10 @@ public class LFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case LFPackage.READ_DECLARATION:
+      case LFPackage.JUSTSPACE:
       {
-        readDeclaration readDeclaration = (readDeclaration)theEObject;
-        T result = casereadDeclaration(readDeclaration);
+        JUSTSPACE justspace = (JUSTSPACE)theEObject;
+        T result = caseJUSTSPACE(justspace);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -94,6 +94,13 @@ public class LFSwitch<T> extends Switch<T>
         namespaceDeclaration namespaceDeclaration = (namespaceDeclaration)theEObject;
         T result = casenamespaceDeclaration(namespaceDeclaration);
         if (result == null) result = caseTempType(namespaceDeclaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LFPackage.READ_DECLARATION:
+      {
+        readDeclaration readDeclaration = (readDeclaration)theEObject;
+        T result = casereadDeclaration(readDeclaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -147,17 +154,17 @@ public class LFSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>read Declaration</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>JUSTSPACE</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>read Declaration</em>'.
+   * @return the result of interpreting the object as an instance of '<em>JUSTSPACE</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casereadDeclaration(readDeclaration object)
+  public T caseJUSTSPACE(JUSTSPACE object)
   {
     return null;
   }
@@ -174,6 +181,22 @@ public class LFSwitch<T> extends Switch<T>
    * @generated
    */
   public T casenamespaceDeclaration(namespaceDeclaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>read Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>read Declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casereadDeclaration(readDeclaration object)
   {
     return null;
   }

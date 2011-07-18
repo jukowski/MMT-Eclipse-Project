@@ -88,32 +88,32 @@ public interface LFPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.readDeclarationImpl <em>read Declaration</em>}' class.
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.JUSTSPACEImpl <em>JUSTSPACE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see info.kwarc.mmt.lF.impl.readDeclarationImpl
-   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getreadDeclaration()
+   * @see info.kwarc.mmt.lF.impl.JUSTSPACEImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getJUSTSPACE()
    * @generated
    */
-  int READ_DECLARATION = 1;
+  int JUSTSPACE = 1;
 
   /**
-   * The feature id for the '<em><b>File</b></em>' attribute.
+   * The feature id for the '<em><b>J</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int READ_DECLARATION__FILE = 0;
+  int JUSTSPACE__J = 0;
 
   /**
-   * The number of structural features of the '<em>read Declaration</em>' class.
+   * The number of structural features of the '<em>JUSTSPACE</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int READ_DECLARATION_FEATURE_COUNT = 1;
+  int JUSTSPACE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.
@@ -123,7 +123,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getTempType()
    * @generated
    */
-  int TEMP_TYPE = 5;
+  int TEMP_TYPE = 6;
 
   /**
    * The feature id for the '<em><b>Full URI</b></em>' attribute.
@@ -190,6 +190,34 @@ public interface LFPackage extends EPackage
   int NAMESPACE_DECLARATION_FEATURE_COUNT = TEMP_TYPE_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.readDeclarationImpl <em>read Declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.readDeclarationImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getreadDeclaration()
+   * @generated
+   */
+  int READ_DECLARATION = 3;
+
+  /**
+   * The feature id for the '<em><b>File</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_DECLARATION__FILE = 0;
+
+  /**
+   * The number of structural features of the '<em>read Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_DECLARATION_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl <em>signature Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -197,7 +225,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsignatureDeclaration()
    * @generated
    */
-  int SIGNATURE_DECLARATION = 3;
+  int SIGNATURE_DECLARATION = 4;
 
   /**
    * The feature id for the '<em><b>Full URI</b></em>' attribute.
@@ -243,7 +271,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigDefinitions()
    * @generated
    */
-  int SIG_DEFINITIONS = 4;
+  int SIG_DEFINITIONS = 5;
 
   /**
    * The feature id for the '<em><b>Symb Name</b></em>' attribute.
@@ -255,22 +283,13 @@ public interface LFPackage extends EPackage
   int SIG_DEFINITIONS__SYMB_NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__TYPE = 1;
-
-  /**
    * The feature id for the '<em><b>Namespace</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIG_DEFINITIONS__NAMESPACE = 2;
+  int SIG_DEFINITIONS__NAMESPACE = 1;
 
   /**
    * The feature id for the '<em><b>Struct Name</b></em>' attribute.
@@ -279,7 +298,34 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIG_DEFINITIONS__STRUCT_NAME = 3;
+  int SIG_DEFINITIONS__STRUCT_NAME = 2;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__TYPE = 3;
+
+  /**
+   * The feature id for the '<em><b>Precendece</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__PRECENDECE = 4;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__TMP = 5;
 
   /**
    * The number of structural features of the '<em>sig Definitions</em>' class.
@@ -288,7 +334,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIG_DEFINITIONS_FEATURE_COUNT = 4;
+  int SIG_DEFINITIONS_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl <em>view Declaration</em>}' class.
@@ -298,7 +344,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getviewDeclaration()
    * @generated
    */
-  int VIEW_DECLARATION = 6;
+  int VIEW_DECLARATION = 7;
 
   /**
    * The feature id for the '<em><b>View ID</b></em>' attribute.
@@ -368,25 +414,25 @@ public interface LFPackage extends EPackage
   EReference getModel_Declarations();
 
   /**
-   * Returns the meta object for class '{@link info.kwarc.mmt.lF.readDeclaration <em>read Declaration</em>}'.
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.JUSTSPACE <em>JUSTSPACE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>read Declaration</em>'.
-   * @see info.kwarc.mmt.lF.readDeclaration
+   * @return the meta object for class '<em>JUSTSPACE</em>'.
+   * @see info.kwarc.mmt.lF.JUSTSPACE
    * @generated
    */
-  EClass getreadDeclaration();
+  EClass getJUSTSPACE();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.readDeclaration#getFile <em>File</em>}'.
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.JUSTSPACE#getJ <em>J</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>File</em>'.
-   * @see info.kwarc.mmt.lF.readDeclaration#getFile()
-   * @see #getreadDeclaration()
+   * @return the meta object for the attribute '<em>J</em>'.
+   * @see info.kwarc.mmt.lF.JUSTSPACE#getJ()
+   * @see #getJUSTSPACE()
    * @generated
    */
-  EAttribute getreadDeclaration_File();
+  EAttribute getJUSTSPACE_J();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.namespaceDeclaration <em>namespace Declaration</em>}'.
@@ -419,6 +465,27 @@ public interface LFPackage extends EPackage
    * @generated
    */
   EAttribute getnamespaceDeclaration_Uri();
+
+  /**
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.readDeclaration <em>read Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>read Declaration</em>'.
+   * @see info.kwarc.mmt.lF.readDeclaration
+   * @generated
+   */
+  EClass getreadDeclaration();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.readDeclaration#getFile <em>File</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>File</em>'.
+   * @see info.kwarc.mmt.lF.readDeclaration#getFile()
+   * @see #getreadDeclaration()
+   * @generated
+   */
+  EAttribute getreadDeclaration_File();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.signatureDeclaration <em>signature Declaration</em>}'.
@@ -474,17 +541,6 @@ public interface LFPackage extends EPackage
   EAttribute getsigDefinitions_SymbName();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getType()
-   * @see #getsigDefinitions()
-   * @generated
-   */
-  EAttribute getsigDefinitions_Type();
-
-  /**
    * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getNamespace <em>Namespace</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -505,6 +561,39 @@ public interface LFPackage extends EPackage
    * @generated
    */
   EAttribute getsigDefinitions_StructName();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getType()
+   * @see #getsigDefinitions()
+   * @generated
+   */
+  EAttribute getsigDefinitions_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getPrecendece <em>Precendece</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Precendece</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getPrecendece()
+   * @see #getsigDefinitions()
+   * @generated
+   */
+  EAttribute getsigDefinitions_Precendece();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getTmp <em>Tmp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tmp</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getTmp()
+   * @see #getsigDefinitions()
+   * @generated
+   */
+  EAttribute getsigDefinitions_Tmp();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.TempType <em>Temp Type</em>}'.
@@ -623,22 +712,22 @@ public interface LFPackage extends EPackage
     EReference MODEL__DECLARATIONS = eINSTANCE.getModel_Declarations();
 
     /**
-     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.readDeclarationImpl <em>read Declaration</em>}' class.
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.JUSTSPACEImpl <em>JUSTSPACE</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see info.kwarc.mmt.lF.impl.readDeclarationImpl
-     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getreadDeclaration()
+     * @see info.kwarc.mmt.lF.impl.JUSTSPACEImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getJUSTSPACE()
      * @generated
      */
-    EClass READ_DECLARATION = eINSTANCE.getreadDeclaration();
+    EClass JUSTSPACE = eINSTANCE.getJUSTSPACE();
 
     /**
-     * The meta object literal for the '<em><b>File</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>J</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute READ_DECLARATION__FILE = eINSTANCE.getreadDeclaration_File();
+    EAttribute JUSTSPACE__J = eINSTANCE.getJUSTSPACE_J();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.namespaceDeclarationImpl <em>namespace Declaration</em>}' class.
@@ -665,6 +754,24 @@ public interface LFPackage extends EPackage
      * @generated
      */
     EAttribute NAMESPACE_DECLARATION__URI = eINSTANCE.getnamespaceDeclaration_Uri();
+
+    /**
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.readDeclarationImpl <em>read Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see info.kwarc.mmt.lF.impl.readDeclarationImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getreadDeclaration()
+     * @generated
+     */
+    EClass READ_DECLARATION = eINSTANCE.getreadDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>File</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute READ_DECLARATION__FILE = eINSTANCE.getreadDeclaration_File();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl <em>signature Declaration</em>}' class.
@@ -711,14 +818,6 @@ public interface LFPackage extends EPackage
     EAttribute SIG_DEFINITIONS__SYMB_NAME = eINSTANCE.getsigDefinitions_SymbName();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIG_DEFINITIONS__TYPE = eINSTANCE.getsigDefinitions_Type();
-
-    /**
      * The meta object literal for the '<em><b>Namespace</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -733,6 +832,30 @@ public interface LFPackage extends EPackage
      * @generated
      */
     EAttribute SIG_DEFINITIONS__STRUCT_NAME = eINSTANCE.getsigDefinitions_StructName();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIG_DEFINITIONS__TYPE = eINSTANCE.getsigDefinitions_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Precendece</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIG_DEFINITIONS__PRECENDECE = eINSTANCE.getsigDefinitions_Precendece();
+
+    /**
+     * The meta object literal for the '<em><b>Tmp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIG_DEFINITIONS__TMP = eINSTANCE.getsigDefinitions_Tmp();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.

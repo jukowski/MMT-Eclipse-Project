@@ -42,7 +42,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass readDeclarationEClass = null;
+  private EClass justspaceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -50,6 +50,13 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * @generated
    */
   private EClass namespaceDeclarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass readDeclarationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -167,9 +174,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getreadDeclaration()
+  public EClass getJUSTSPACE()
   {
-    return readDeclarationEClass;
+    return justspaceEClass;
   }
 
   /**
@@ -177,9 +184,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getreadDeclaration_File()
+  public EAttribute getJUSTSPACE_J()
   {
-    return (EAttribute)readDeclarationEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)justspaceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -210,6 +217,26 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
   public EAttribute getnamespaceDeclaration_Uri()
   {
     return (EAttribute)namespaceDeclarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getreadDeclaration()
+  {
+    return readDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getreadDeclaration_File()
+  {
+    return (EAttribute)readDeclarationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -267,7 +294,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_Type()
+  public EAttribute getsigDefinitions_Namespace()
   {
     return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(1);
   }
@@ -277,7 +304,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_Namespace()
+  public EAttribute getsigDefinitions_StructName()
   {
     return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(2);
   }
@@ -287,9 +314,29 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_StructName()
+  public EAttribute getsigDefinitions_Type()
   {
     return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigDefinitions_Precendece()
+  {
+    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigDefinitions_Tmp()
+  {
+    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -395,12 +442,15 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__DECLARATIONS);
 
-    readDeclarationEClass = createEClass(READ_DECLARATION);
-    createEAttribute(readDeclarationEClass, READ_DECLARATION__FILE);
+    justspaceEClass = createEClass(JUSTSPACE);
+    createEAttribute(justspaceEClass, JUSTSPACE__J);
 
     namespaceDeclarationEClass = createEClass(NAMESPACE_DECLARATION);
     createEAttribute(namespaceDeclarationEClass, NAMESPACE_DECLARATION__NAME);
     createEAttribute(namespaceDeclarationEClass, NAMESPACE_DECLARATION__URI);
+
+    readDeclarationEClass = createEClass(READ_DECLARATION);
+    createEAttribute(readDeclarationEClass, READ_DECLARATION__FILE);
 
     signatureDeclarationEClass = createEClass(SIGNATURE_DECLARATION);
     createEAttribute(signatureDeclarationEClass, SIGNATURE_DECLARATION__SIG_NAME);
@@ -408,9 +458,11 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
 
     sigDefinitionsEClass = createEClass(SIG_DEFINITIONS);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__SYMB_NAME);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TYPE);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__NAMESPACE);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__STRUCT_NAME);
+    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TYPE);
+    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__PRECENDECE);
+    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TMP);
 
     tempTypeEClass = createEClass(TEMP_TYPE);
     createEAttribute(tempTypeEClass, TEMP_TYPE__FULL_URI);
@@ -458,12 +510,15 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Declarations(), ecorePackage.getEObject(), null, "declarations", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(readDeclarationEClass, readDeclaration.class, "readDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getreadDeclaration_File(), ecorePackage.getEString(), "file", null, 0, 1, readDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(justspaceEClass, info.kwarc.mmt.lF.JUSTSPACE.class, "JUSTSPACE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getJUSTSPACE_J(), ecorePackage.getEString(), "J", null, 0, 1, info.kwarc.mmt.lF.JUSTSPACE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(namespaceDeclarationEClass, namespaceDeclaration.class, "namespaceDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getnamespaceDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, namespaceDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getnamespaceDeclaration_Uri(), ecorePackage.getEString(), "uri", null, 0, 1, namespaceDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(readDeclarationEClass, readDeclaration.class, "readDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getreadDeclaration_File(), ecorePackage.getEString(), "file", null, 0, 1, readDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(signatureDeclarationEClass, signatureDeclaration.class, "signatureDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getsignatureDeclaration_SigName(), ecorePackage.getEString(), "sigName", null, 0, 1, signatureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -471,9 +526,11 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
 
     initEClass(sigDefinitionsEClass, sigDefinitions.class, "sigDefinitions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getsigDefinitions_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_Type(), ecorePackage.getEString(), "type", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigDefinitions_Namespace(), ecorePackage.getEString(), "namespace", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigDefinitions_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigDefinitions_Type(), ecorePackage.getEString(), "type", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigDefinitions_Precendece(), ecorePackage.getEInt(), "precendece", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigDefinitions_Tmp(), ecorePackage.getEString(), "tmp", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tempTypeEClass, TempType.class, "TempType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTempType_FullURI(), ecorePackage.getEString(), "fullURI", null, 0, 1, TempType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

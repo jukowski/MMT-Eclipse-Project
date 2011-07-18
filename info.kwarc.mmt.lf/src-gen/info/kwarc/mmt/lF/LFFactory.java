@@ -35,13 +35,13 @@ public interface LFFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>read Declaration</em>'.
+   * Returns a new object of class '<em>JUSTSPACE</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>read Declaration</em>'.
+   * @return a new object of class '<em>JUSTSPACE</em>'.
    * @generated
    */
-  readDeclaration createreadDeclaration();
+  JUSTSPACE createJUSTSPACE();
 
   /**
    * Returns a new object of class '<em>namespace Declaration</em>'.
@@ -51,6 +51,15 @@ public interface LFFactory extends EFactory
    * @generated
    */
   namespaceDeclaration createnamespaceDeclaration();
+
+  /**
+   * Returns a new object of class '<em>read Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>read Declaration</em>'.
+   * @generated
+   */
+  readDeclaration createreadDeclaration();
 
   /**
    * Returns a new object of class '<em>signature Declaration</em>'.

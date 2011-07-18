@@ -11,12 +11,15 @@
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//Model/declarations"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//readDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//readDeclaration/file"/>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//JUSTSPACE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//JUSTSPACE/J"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//namespaceDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//namespaceDeclaration/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//namespaceDeclaration/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//readDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//readDeclaration/file"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration/sigName"/>
@@ -24,9 +27,11 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/symbName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/namespace"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/structName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/precendece"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/tmp"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType/fullURI"/>

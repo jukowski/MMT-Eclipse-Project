@@ -68,8 +68,9 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
     switch (eClass.getClassifierID())
     {
       case LFPackage.MODEL: return createModel();
-      case LFPackage.READ_DECLARATION: return createreadDeclaration();
+      case LFPackage.JUSTSPACE: return createJUSTSPACE();
       case LFPackage.NAMESPACE_DECLARATION: return createnamespaceDeclaration();
+      case LFPackage.READ_DECLARATION: return createreadDeclaration();
       case LFPackage.SIGNATURE_DECLARATION: return createsignatureDeclaration();
       case LFPackage.SIG_DEFINITIONS: return createsigDefinitions();
       case LFPackage.TEMP_TYPE: return createTempType();
@@ -95,10 +96,10 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public readDeclaration createreadDeclaration()
+  public JUSTSPACE createJUSTSPACE()
   {
-    readDeclarationImpl readDeclaration = new readDeclarationImpl();
-    return readDeclaration;
+    JUSTSPACEImpl justspace = new JUSTSPACEImpl();
+    return justspace;
   }
 
   /**
@@ -110,6 +111,17 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
   {
     namespaceDeclarationImpl namespaceDeclaration = new namespaceDeclarationImpl();
     return namespaceDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public readDeclaration createreadDeclaration()
+  {
+    readDeclarationImpl readDeclaration = new readDeclarationImpl();
+    return readDeclaration;
   }
 
   /**

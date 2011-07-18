@@ -2,6 +2,7 @@ package info.kwarc.mmt.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import info.kwarc.mmt.lF.JUSTSPACE;
 import info.kwarc.mmt.lF.LFPackage;
 import info.kwarc.mmt.lF.Model;
 import info.kwarc.mmt.lF.TempType;
@@ -51,6 +52,12 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == LFPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case LFPackage.JUSTSPACE:
+				if(context == grammarAccess.getJUSTSPACERule()) {
+					sequence_JUSTSPACE_JUSTSPACE(context, (JUSTSPACE) semanticObject); 
+					return; 
+				}
+				else break;
 			case LFPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model_Model(context, (Model) semanticObject); 
@@ -64,12 +71,12 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case LFPackage.NAMESPACE_DECLARATION:
-				if(context == grammarAccess.getNamespaceDeclarationRule()) {
-					sequence_namespaceDeclaration_namespaceDeclaration(context, (namespaceDeclaration) semanticObject); 
+				if(context == grammarAccess.getTempTypeRule()) {
+					sequence_TempType_namespaceDeclaration(context, (namespaceDeclaration) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getTempTypeRule()) {
-					sequence_TempType_namespaceDeclaration(context, (namespaceDeclaration) semanticObject); 
+				else if(context == grammarAccess.getNamespaceDeclarationRule()) {
+					sequence_namespaceDeclaration_namespaceDeclaration(context, (namespaceDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
@@ -107,7 +114,26 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (declarations+=namespaceDeclaration | declarations+=signatureDeclaration | declarations+=readDeclaration | declarations+=viewDeclaration)*
+	 *     J=WS
+	 *
+	 * Features:
+	 *    J[1, 1]
+	 */
+	protected void sequence_JUSTSPACE_JUSTSPACE(EObject context, JUSTSPACE semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.JUSTSPACE__J) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.JUSTSPACE__J));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getJUSTSPACEAccess().getJWSParserRuleCall_0(), semanticObject.getJ());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (declarations+=namespaceDeclaration | declarations+=signatureDeclaration | declarations+=JUSTSPACE)*
 	 *
 	 * Features:
 	 *    declarations[0, *]
@@ -119,7 +145,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     fullURI=ID
+	 *     fullURI=GID
 	 *
 	 * Features:
 	 *    fullURI[1, 1]
@@ -131,7 +157,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTempTypeAccess().getFullURIIDTerminalRuleCall_2_0(), semanticObject.getFullURI());
+		feeder.accept(grammarAccess.getTempTypeAccess().getFullURIGIDParserRuleCall_2_0(), semanticObject.getFullURI());
 		feeder.finish();
 	}
 	
@@ -160,7 +186,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? uri=URISTRING)
+	 *     (name=CID? uri=URISTRING)
 	 *
 	 * Features:
 	 *    name[0, 1]
@@ -185,35 +211,64 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_1_0(), semanticObject.getFile());
+		feeder.accept(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_2_0(), semanticObject.getFile());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((symbName=ID type=ID?) | namespace=NAMESPACE | (structName=ID namespace=NAMESPACE))
+	 *     (
+	 *         symbName=GID | 
+	 *         namespace=NAMESPACE | 
+	 *         structName=GID | 
+	 *         (type=GID? precendece=INT) | 
+	 *         tmp='%meta' | 
+	 *         tmp='%abbrev'
+	 *     )
 	 *
 	 * Features:
-	 *    symbName[1, 1]
-	 *         MANDATORY_IF_SET type
+	 *    symbName[0, 1]
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET type
+	 *         EXCLUDE_IF_SET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    namespace[0, 1]
+	 *         EXCLUDE_IF_SET symbName
+	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET type
+	 *         EXCLUDE_IF_SET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    structName[0, 1]
+	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
+	 *         EXCLUDE_IF_SET type
+	 *         EXCLUDE_IF_SET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
 	 *    type[0, 1]
-	 *         EXCLUDE_IF_UNSET symbName
+	 *         EXCLUDE_IF_UNSET precendece
+	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET namespace
-	 *    namespace[1, 2]
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    precendece[1, 1]
+	 *         MANDATORY_IF_SET type
 	 *         EXCLUDE_IF_SET symbName
-	 *         EXCLUDE_IF_SET type
-	 *    structName[1, 1]
-	 *         EXCLUDE_IF_UNSET namespace
-	 *         MANDATORY_IF_SET namespace
-	 *         EXCLUDE_IF_SET symbName
-	 *         EXCLUDE_IF_SET type
 	 *         EXCLUDE_IF_SET namespace
+	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    tmp[0, 2]
+	 *         EXCLUDE_IF_SET symbName
+	 *         EXCLUDE_IF_SET namespace
+	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET type
+	 *         EXCLUDE_IF_SET precendece
 	 */
 	protected void sequence_sigDefinitions_sigDefinitions(EObject context, sigDefinitions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -222,7 +277,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (sigName=ID sigDefinitions+=sigDefinitions*)
+	 *     (sigName=CID sigDefinitions+=sigDefinitions*)
 	 *
 	 * Features:
 	 *    sigName[1, 1]
@@ -235,13 +290,13 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (viewID=ID from=NAMESPACE to=NAMESPACE viewDefinitions+=sigDefinitions)
+	 *     (viewID=GID from=NAMESPACE to=NAMESPACE viewDefinitions+=sigDefinitions*)
 	 *
 	 * Features:
 	 *    viewID[1, 1]
 	 *    from[1, 1]
 	 *    to[1, 1]
-	 *    viewDefinitions[1, 1]
+	 *    viewDefinitions[0, *]
 	 */
 	protected void sequence_viewDeclaration_viewDeclaration(EObject context, viewDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
