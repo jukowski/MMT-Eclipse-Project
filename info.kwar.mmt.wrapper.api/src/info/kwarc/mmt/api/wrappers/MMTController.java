@@ -60,6 +60,7 @@ public class MMTController {
 
 		controller = new Controller(checker, reportObj);
 		controller.handle(new LoggingOn("archive"));
+		controller.handle(new LoggingOn("error_eclipse"));
 		archiveMap = new HashMap<String, MMTArchive>();
 	}
 
