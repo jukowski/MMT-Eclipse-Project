@@ -38,40 +38,52 @@ public class LFParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getModelAccess().getDeclarationsAlternatives_0(), "rule__Model__DeclarationsAlternatives_0");
+					put(grammarAccess.getWSAccess().getAlternatives(), "rule__WS__Alternatives");
+					put(grammarAccess.getNAMESPACEAccess().getAlternatives_2_0(), "rule__NAMESPACE__Alternatives_2_0");
+					put(grammarAccess.getGIDAccess().getAlternatives(), "rule__GID__Alternatives");
+					put(grammarAccess.getGIDAccess().getAlternatives_0(), "rule__GID__Alternatives_0");
+					put(grammarAccess.getSOMETHINGAccess().getAlternatives(), "rule__SOMETHING__Alternatives");
+					put(grammarAccess.getSigOpsAccess().getAlternatives_0(), "rule__SigOps__Alternatives_0");
 					put(grammarAccess.getSigDefinitionsAccess().getAlternatives(), "rule__SigDefinitions__Alternatives");
-					put(grammarAccess.getSigDefinitionsAccess().getAlternatives_0_1(), "rule__SigDefinitions__Alternatives_0_1");
+					put(grammarAccess.getSigDefinitionsAccess().getAlternatives_0_2(), "rule__SigDefinitions__Alternatives_0_2");
+					put(grammarAccess.getSigDefinitionsAccess().getTmpAlternatives_3_0_0(), "rule__SigDefinitions__TmpAlternatives_3_0_0");
 					put(grammarAccess.getTempTypeAccess().getAlternatives(), "rule__TempType__Alternatives");
 					put(grammarAccess.getNAMESPACEAccess().getGroup(), "rule__NAMESPACE__Group__0");
-					put(grammarAccess.getNAMESPACEAccess().getGroup_1(), "rule__NAMESPACE__Group_1__0");
+					put(grammarAccess.getNAMESPACEAccess().getGroup_2(), "rule__NAMESPACE__Group_2__0");
 					put(grammarAccess.getURIAccess().getGroup(), "rule__URI__Group__0");
 					put(grammarAccess.getURIAccess().getGroup_0(), "rule__URI__Group_0__0");
-					put(grammarAccess.getURIAccess().getGroup_2(), "rule__URI__Group_2__0");
 					put(grammarAccess.getURISTRINGAccess().getGroup(), "rule__URISTRING__Group__0");
-					put(grammarAccess.getReadDeclarationAccess().getGroup(), "rule__ReadDeclaration__Group__0");
 					put(grammarAccess.getNamespaceDeclarationAccess().getGroup(), "rule__NamespaceDeclaration__Group__0");
-					put(grammarAccess.getNamespaceDeclarationAccess().getGroup_1(), "rule__NamespaceDeclaration__Group_1__0");
+					put(grammarAccess.getNamespaceDeclarationAccess().getGroup_2(), "rule__NamespaceDeclaration__Group_2__0");
+					put(grammarAccess.getReadDeclarationAccess().getGroup(), "rule__ReadDeclaration__Group__0");
+					put(grammarAccess.getGIDAccess().getGroup_1(), "rule__GID__Group_1__0");
+					put(grammarAccess.getSOMETHINGAccess().getGroup_3(), "rule__SOMETHING__Group_3__0");
+					put(grammarAccess.getSOMETHINGAccess().getGroup_10(), "rule__SOMETHING__Group_10__0");
+					put(grammarAccess.getSigOpsAccess().getGroup(), "rule__SigOps__Group__0");
 					put(grammarAccess.getSignatureDeclarationAccess().getGroup(), "rule__SignatureDeclaration__Group__0");
 					put(grammarAccess.getSigDefinitionsAccess().getGroup_0(), "rule__SigDefinitions__Group_0__0");
-					put(grammarAccess.getSigDefinitionsAccess().getGroup_0_2(), "rule__SigDefinitions__Group_0_2__0");
 					put(grammarAccess.getSigDefinitionsAccess().getGroup_1(), "rule__SigDefinitions__Group_1__0");
+					put(grammarAccess.getSigDefinitionsAccess().getGroup_1_3(), "rule__SigDefinitions__Group_1_3__0");
 					put(grammarAccess.getSigDefinitionsAccess().getGroup_2(), "rule__SigDefinitions__Group_2__0");
+					put(grammarAccess.getSigDefinitionsAccess().getGroup_3(), "rule__SigDefinitions__Group_3__0");
+					put(grammarAccess.getIncludeOpsAccess().getGroup(), "rule__IncludeOps__Group__0");
 					put(grammarAccess.getViewDeclarationAccess().getGroup(), "rule__ViewDeclaration__Group__0");
 					put(grammarAccess.getModelAccess().getDeclarationsAssignment(), "rule__Model__DeclarationsAssignment");
-					put(grammarAccess.getReadDeclarationAccess().getFileAssignment_1(), "rule__ReadDeclaration__FileAssignment_1");
-					put(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_1_0(), "rule__NamespaceDeclaration__NameAssignment_1_0");
-					put(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_2(), "rule__NamespaceDeclaration__UriAssignment_2");
-					put(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_1(), "rule__SignatureDeclaration__SigNameAssignment_1");
-					put(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsAssignment_4(), "rule__SignatureDeclaration__SigDefinitionsAssignment_4");
+					put(grammarAccess.getJUSTSPACEAccess().getJAssignment(), "rule__JUSTSPACE__JAssignment");
+					put(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_2_0(), "rule__NamespaceDeclaration__NameAssignment_2_0");
+					put(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_3(), "rule__NamespaceDeclaration__UriAssignment_3");
+					put(grammarAccess.getReadDeclarationAccess().getFileAssignment_2(), "rule__ReadDeclaration__FileAssignment_2");
+					put(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_2(), "rule__SignatureDeclaration__SigNameAssignment_2");
+					put(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsAssignment_7(), "rule__SignatureDeclaration__SigDefinitionsAssignment_7");
 					put(grammarAccess.getSigDefinitionsAccess().getSymbNameAssignment_0_0(), "rule__SigDefinitions__SymbNameAssignment_0_0");
-					put(grammarAccess.getSigDefinitionsAccess().getTypeAssignment_0_2_0(), "rule__SigDefinitions__TypeAssignment_0_2_0");
-					put(grammarAccess.getSigDefinitionsAccess().getNamespaceAssignment_1_1(), "rule__SigDefinitions__NamespaceAssignment_1_1");
-					put(grammarAccess.getSigDefinitionsAccess().getStructNameAssignment_2_1(), "rule__SigDefinitions__StructNameAssignment_2_1");
-					put(grammarAccess.getSigDefinitionsAccess().getNamespaceAssignment_2_3(), "rule__SigDefinitions__NamespaceAssignment_2_3");
+					put(grammarAccess.getSigDefinitionsAccess().getNamespaceAssignment_1_2(), "rule__SigDefinitions__NamespaceAssignment_1_2");
+					put(grammarAccess.getSigDefinitionsAccess().getStructNameAssignment_2_2(), "rule__SigDefinitions__StructNameAssignment_2_2");
+					put(grammarAccess.getSigDefinitionsAccess().getTmpAssignment_3_0(), "rule__SigDefinitions__TmpAssignment_3_0");
 					put(grammarAccess.getTempTypeAccess().getFullURIAssignment_2(), "rule__TempType__FullURIAssignment_2");
-					put(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_1(), "rule__ViewDeclaration__ViewIDAssignment_1");
-					put(grammarAccess.getViewDeclarationAccess().getFromAssignment_3(), "rule__ViewDeclaration__FromAssignment_3");
-					put(grammarAccess.getViewDeclarationAccess().getToAssignment_5(), "rule__ViewDeclaration__ToAssignment_5");
-					put(grammarAccess.getViewDeclarationAccess().getViewDefinitionsAssignment_8(), "rule__ViewDeclaration__ViewDefinitionsAssignment_8");
+					put(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_2(), "rule__ViewDeclaration__ViewIDAssignment_2");
+					put(grammarAccess.getViewDeclarationAccess().getFromAssignment_6(), "rule__ViewDeclaration__FromAssignment_6");
+					put(grammarAccess.getViewDeclarationAccess().getToAssignment_10(), "rule__ViewDeclaration__ToAssignment_10");
+					put(grammarAccess.getViewDeclarationAccess().getViewDefinitionsAssignment_15(), "rule__ViewDeclaration__ViewDefinitionsAssignment_15");
 				}
 			};
 		}
@@ -91,7 +103,7 @@ public class LFParser extends AbstractContentAssistParser {
 	
 	@Override
 	protected String[] getInitialHiddenTokens() {
-		return new String[] { "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT" };
+		return new String[] {  };
 	}
 	
 	public LFGrammarAccess getGrammarAccess() {
