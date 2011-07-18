@@ -16,50 +16,48 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected LFGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_1_p;
-	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_2_1_a_EqualsSignKeyword_2_2_WSParserRuleCall_2_3_a;
-	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_4_a;
-	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_1_p;
-	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_3_a;
-	protected AbstractElementAlias match_sigDefinitions_SOMETHINGParserRuleCall_3_1_a;
-	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_1_1_p;
-	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_2_1_p;
-	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_2_3_a_ColonKeyword_2_4_SOMETHINGParserRuleCall_2_5_a_IncludeOpsParserRuleCall_2_6_q;
-	protected AbstractElementAlias match_sigDefinitions___WSParserRuleCall_1_3_0_p_IncludeOpsParserRuleCall_1_3_1__q;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_1_p;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a_LeftCurlyBracketKeyword_6_RightCurlyBracketKeyword_8_WSParserRuleCall_9_a;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_9_a;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a_LeftCurlyBracketKeyword_14_RightCurlyBracketKeyword_16_WSParserRuleCall_17_a;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_17_a;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_1_p;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_3_a_ColonKeyword_4_WSParserRuleCall_5_a;
-	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_7_a_HyphenMinusGreaterThanSignKeyword_8_WSParserRuleCall_9_a;
+	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_2_p;
+	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a;
+	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_5_a;
+	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_2_p;
+	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_4_a;
+	protected AbstractElementAlias match_sigConstruct_SOMETHINGParserRuleCall_3_2_p;
+	protected AbstractElementAlias match_sigConstruct_WSParserRuleCall_1_2_p;
+	protected AbstractElementAlias match_sigConstruct_WSParserRuleCall_2_2_p;
+	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_1_p;
+	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_3_1_p;
+	protected AbstractElementAlias match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_2_p;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_8_a;
+	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_12_a;
+	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_16_a;
+	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_2_p;
+	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_4_a_ColonKeyword_5_WSParserRuleCall_6_a;
+	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_8_a_HyphenMinusGreaterThanSignKeyword_9_WSParserRuleCall_10_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (LFGrammarAccess) access;
-		match_namespaceDeclaration_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_1());
-		match_namespaceDeclaration_WSParserRuleCall_2_1_a_EqualsSignKeyword_2_2_WSParserRuleCall_2_3_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_1()), new TokenAlias(false, false, grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_2_2()), new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_3()));
-		match_namespaceDeclaration_WSParserRuleCall_4_a = new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_4());
-		match_readDeclaration_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_1());
-		match_readDeclaration_WSParserRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_3());
-		match_sigDefinitions_SOMETHINGParserRuleCall_3_1_a = new TokenAlias(true, true, grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_3_1());
-		match_sigDefinitions_WSParserRuleCall_1_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_1());
-		match_sigDefinitions_WSParserRuleCall_2_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_1());
-		match_sigDefinitions_WSParserRuleCall_2_3_a_ColonKeyword_2_4_SOMETHINGParserRuleCall_2_5_a_IncludeOpsParserRuleCall_2_6_q = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_3()), new TokenAlias(false, false, grammarAccess.getSigDefinitionsAccess().getColonKeyword_2_4()), new TokenAlias(true, true, grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_2_5()), new TokenAlias(true, false, grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_2_6()));
-		match_sigDefinitions___WSParserRuleCall_1_3_0_p_IncludeOpsParserRuleCall_1_3_1__q = new GroupAlias(true, false, new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_3_0()), new TokenAlias(false, false, grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_1_3_1()));
-		match_signatureDeclaration_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1());
-		match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_4()), new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()));
-		match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a_LeftCurlyBracketKeyword_6_RightCurlyBracketKeyword_8_WSParserRuleCall_9_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_4()), new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getLeftCurlyBracketKeyword_6()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getRightCurlyBracketKeyword_8()), new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_9()));
-		match_signatureDeclaration_WSParserRuleCall_9_a = new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_9());
-		match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_11()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_12()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_13()));
-		match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a_LeftCurlyBracketKeyword_14_RightCurlyBracketKeyword_16_WSParserRuleCall_17_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_11()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_12()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_13()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getLeftCurlyBracketKeyword_14()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getRightCurlyBracketKeyword_16()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_17()));
-		match_viewDeclaration_WSParserRuleCall_17_a = new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_17());
-		match_viewDeclaration_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_1());
-		match_viewDeclaration_WSParserRuleCall_3_a_ColonKeyword_4_WSParserRuleCall_5_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_3()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getColonKeyword_4()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_5()));
-		match_viewDeclaration_WSParserRuleCall_7_a_HyphenMinusGreaterThanSignKeyword_8_WSParserRuleCall_9_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_7()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_8()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_9()));
+		match_namespaceDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2());
+		match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_1()), new TokenAlias(false, false, grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_3_2()), new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_3()));
+		match_namespaceDeclaration_WSParserRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_5());
+		match_readDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2());
+		match_readDeclaration_WSParserRuleCall_4_a = new TokenAlias(true, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_4());
+		match_sigConstruct_SOMETHINGParserRuleCall_3_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_3_2());
+		match_sigConstruct_WSParserRuleCall_1_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2());
+		match_sigConstruct_WSParserRuleCall_2_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2());
+		match_sigDefinitions_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1());
+		match_sigDefinitions_WSParserRuleCall_3_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1());
+		match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_4_0()), new TokenAlias(true, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_4_1()));
+		match_signatureDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2());
+		match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5()), new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()));
+		match_signatureDeclaration_WSParserRuleCall_8_a = new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8());
+		match_viewDeclaration_WSParserRuleCall_12_a = new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12());
+		match_viewDeclaration_WSParserRuleCall_16_a = new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_16());
+		match_viewDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2());
+		match_viewDeclaration_WSParserRuleCall_4_a_ColonKeyword_5_WSParserRuleCall_6_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_4()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getColonKeyword_5()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_6()));
+		match_viewDeclaration_WSParserRuleCall_8_a_HyphenMinusGreaterThanSignKeyword_9_WSParserRuleCall_10_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_8()), new TokenAlias(false, false, grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_9()), new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_10()));
 	}
 	
 	@Override
@@ -93,46 +91,44 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (!transition.isSyntacticallyAmbiguous())
 			return;
-		if(match_namespaceDeclaration_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_namespaceDeclaration_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_namespaceDeclaration_WSParserRuleCall_2_1_a_EqualsSignKeyword_2_2_WSParserRuleCall_2_3_a.equals(transition.getAmbiguousSyntax()))
-			emit_namespaceDeclaration_WSParserRuleCall_2_1_a_EqualsSignKeyword_2_2_WSParserRuleCall_2_3_a(semanticObject, transition, fromNode, toNode);
-		else if(match_namespaceDeclaration_WSParserRuleCall_4_a.equals(transition.getAmbiguousSyntax()))
-			emit_namespaceDeclaration_WSParserRuleCall_4_a(semanticObject, transition, fromNode, toNode);
-		else if(match_readDeclaration_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_readDeclaration_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_readDeclaration_WSParserRuleCall_3_a.equals(transition.getAmbiguousSyntax()))
-			emit_readDeclaration_WSParserRuleCall_3_a(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions_SOMETHINGParserRuleCall_3_1_a.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions_SOMETHINGParserRuleCall_3_1_a(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions_WSParserRuleCall_1_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions_WSParserRuleCall_1_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions_WSParserRuleCall_2_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions_WSParserRuleCall_2_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions_WSParserRuleCall_2_3_a_ColonKeyword_2_4_SOMETHINGParserRuleCall_2_5_a_IncludeOpsParserRuleCall_2_6_q.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions_WSParserRuleCall_2_3_a_ColonKeyword_2_4_SOMETHINGParserRuleCall_2_5_a_IncludeOpsParserRuleCall_2_6_q(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions___WSParserRuleCall_1_3_0_p_IncludeOpsParserRuleCall_1_3_1__q.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions___WSParserRuleCall_1_3_0_p_IncludeOpsParserRuleCall_1_3_1__q(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a_LeftCurlyBracketKeyword_6_RightCurlyBracketKeyword_8_WSParserRuleCall_9_a.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a_LeftCurlyBracketKeyword_6_RightCurlyBracketKeyword_8_WSParserRuleCall_9_a(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_9_a.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_9_a(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a_LeftCurlyBracketKeyword_14_RightCurlyBracketKeyword_16_WSParserRuleCall_17_a.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a_LeftCurlyBracketKeyword_14_RightCurlyBracketKeyword_16_WSParserRuleCall_17_a(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_17_a.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_17_a(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_3_a_ColonKeyword_4_WSParserRuleCall_5_a.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_3_a_ColonKeyword_4_WSParserRuleCall_5_a(semanticObject, transition, fromNode, toNode);
-		else if(match_viewDeclaration_WSParserRuleCall_7_a_HyphenMinusGreaterThanSignKeyword_8_WSParserRuleCall_9_a.equals(transition.getAmbiguousSyntax()))
-			emit_viewDeclaration_WSParserRuleCall_7_a_HyphenMinusGreaterThanSignKeyword_8_WSParserRuleCall_9_a(semanticObject, transition, fromNode, toNode);
+		if(match_namespaceDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_namespaceDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a.equals(transition.getAmbiguousSyntax()))
+			emit_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a(semanticObject, transition, fromNode, toNode);
+		else if(match_namespaceDeclaration_WSParserRuleCall_5_a.equals(transition.getAmbiguousSyntax()))
+			emit_namespaceDeclaration_WSParserRuleCall_5_a(semanticObject, transition, fromNode, toNode);
+		else if(match_readDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_readDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_readDeclaration_WSParserRuleCall_4_a.equals(transition.getAmbiguousSyntax()))
+			emit_readDeclaration_WSParserRuleCall_4_a(semanticObject, transition, fromNode, toNode);
+		else if(match_sigConstruct_SOMETHINGParserRuleCall_3_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_sigConstruct_SOMETHINGParserRuleCall_3_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_sigConstruct_WSParserRuleCall_1_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_sigConstruct_WSParserRuleCall_1_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_sigConstruct_WSParserRuleCall_2_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_sigConstruct_WSParserRuleCall_2_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_sigDefinitions_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
+			emit_sigDefinitions_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
+		else if(match_sigDefinitions_WSParserRuleCall_3_1_p.equals(transition.getAmbiguousSyntax()))
+			emit_sigDefinitions_WSParserRuleCall_3_1_p(semanticObject, transition, fromNode, toNode);
+		else if(match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q.equals(transition.getAmbiguousSyntax()))
+			emit_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_8_a.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_8_a(semanticObject, transition, fromNode, toNode);
+		else if(match_viewDeclaration_WSParserRuleCall_12_a.equals(transition.getAmbiguousSyntax()))
+			emit_viewDeclaration_WSParserRuleCall_12_a(semanticObject, transition, fromNode, toNode);
+		else if(match_viewDeclaration_WSParserRuleCall_16_a.equals(transition.getAmbiguousSyntax()))
+			emit_viewDeclaration_WSParserRuleCall_16_a(semanticObject, transition, fromNode, toNode);
+		else if(match_viewDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_viewDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_viewDeclaration_WSParserRuleCall_4_a_ColonKeyword_5_WSParserRuleCall_6_a.equals(transition.getAmbiguousSyntax()))
+			emit_viewDeclaration_WSParserRuleCall_4_a_ColonKeyword_5_WSParserRuleCall_6_a(semanticObject, transition, fromNode, toNode);
+		else if(match_viewDeclaration_WSParserRuleCall_8_a_HyphenMinusGreaterThanSignKeyword_9_WSParserRuleCall_10_a.equals(transition.getAmbiguousSyntax()))
+			emit_viewDeclaration_WSParserRuleCall_8_a_HyphenMinusGreaterThanSignKeyword_9_WSParserRuleCall_10_a(semanticObject, transition, fromNode, toNode);
 		else acceptNodes(transition, fromNode, toNode);
 	}
 
@@ -140,7 +136,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_namespaceDeclaration_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_namespaceDeclaration_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -148,7 +144,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS* '=' WS*
 	 */
-	protected void emit_namespaceDeclaration_WSParserRuleCall_2_1_a_EqualsSignKeyword_2_2_WSParserRuleCall_2_3_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -156,7 +152,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS*
 	 */
-	protected void emit_namespaceDeclaration_WSParserRuleCall_4_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_namespaceDeclaration_WSParserRuleCall_5_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -164,7 +160,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_readDeclaration_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_readDeclaration_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -172,23 +168,15 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS*
 	 */
-	protected void emit_readDeclaration_WSParserRuleCall_3_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_readDeclaration_WSParserRuleCall_4_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
 	/**
 	 * Syntax:
-	 *     SOMETHING*
+	 *     SOMETHING+
 	 */
-	protected void emit_sigDefinitions_SOMETHINGParserRuleCall_3_1_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS+
-	 */
-	protected void emit_sigDefinitions_WSParserRuleCall_1_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_sigConstruct_SOMETHINGParserRuleCall_3_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -196,23 +184,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_sigDefinitions_WSParserRuleCall_2_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS* ':' SOMETHING* includeOps?
-	 */
-	protected void emit_sigDefinitions_WSParserRuleCall_2_3_a_ColonKeyword_2_4_SOMETHINGParserRuleCall_2_5_a_IncludeOpsParserRuleCall_2_6_q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     (WS+ includeOps)?
-	 */
-	protected void emit_sigDefinitions___WSParserRuleCall_1_3_0_p_IncludeOpsParserRuleCall_1_3_1__q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_sigConstruct_WSParserRuleCall_1_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -220,30 +192,47 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_sigConstruct_WSParserRuleCall_2_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
 	/**
 	 * Syntax:
-	 *     WS* '=' WS*
+	 *     WS+
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_sigDefinitions_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
 	/**
 	 * Syntax:
-	 *     (
-	     WS* 
-	     '=' 
-	     WS* 
-	     '{' 
-	     '}' 
-	     WS*
-	 )
+	 *     WS+
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_3_a_EqualsSignKeyword_4_WSParserRuleCall_5_a_LeftCurlyBracketKeyword_6_RightCurlyBracketKeyword_8_WSParserRuleCall_9_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_sigDefinitions_WSParserRuleCall_3_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('.' WS*)?
+	 */
+	protected void emit_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     WS+
+	 */
+	protected void emit_signatureDeclaration_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     WS* '=' WS+
+	 */
+	protected void emit_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -251,30 +240,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS*
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_9_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS* '=' WS*
-	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     (
-	     WS* 
-	     '=' 
-	     WS* 
-	     '{' 
-	     '}' 
-	     WS*
-	 )
-	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_11_a_EqualsSignKeyword_12_WSParserRuleCall_13_a_LeftCurlyBracketKeyword_14_RightCurlyBracketKeyword_16_WSParserRuleCall_17_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_signatureDeclaration_WSParserRuleCall_8_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -282,7 +248,15 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS*
 	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_17_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_viewDeclaration_WSParserRuleCall_12_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     WS*
+	 */
+	protected void emit_viewDeclaration_WSParserRuleCall_16_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -290,7 +264,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_viewDeclaration_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -298,7 +272,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS* ':' WS*
 	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_3_a_ColonKeyword_4_WSParserRuleCall_5_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_viewDeclaration_WSParserRuleCall_4_a_ColonKeyword_5_WSParserRuleCall_6_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -306,7 +280,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS* '->' WS*
 	 */
-	protected void emit_viewDeclaration_WSParserRuleCall_7_a_HyphenMinusGreaterThanSignKeyword_8_WSParserRuleCall_9_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_viewDeclaration_WSParserRuleCall_8_a_HyphenMinusGreaterThanSignKeyword_9_WSParserRuleCall_10_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	

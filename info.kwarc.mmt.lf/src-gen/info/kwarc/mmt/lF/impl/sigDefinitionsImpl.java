@@ -6,14 +6,24 @@
 package info.kwarc.mmt.lF.impl;
 
 import info.kwarc.mmt.lF.LFPackage;
+import info.kwarc.mmt.lF.sigConstruct;
 import info.kwarc.mmt.lF.sigDefinitions;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +32,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getSymbName <em>Symb Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getNamespace <em>Namespace</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getStructName <em>Struct Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getTmp <em>Tmp</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getCons <em>Cons</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getFcons <em>Fcons</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,84 +42,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements sigDefinitions
 {
   /**
-   * The default value of the '{@link #getSymbName() <em>Symb Name</em>}' attribute.
+   * The cached value of the '{@link #getCons() <em>Cons</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSymbName()
+   * @see #getCons()
    * @generated
    * @ordered
    */
-  protected static final String SYMB_NAME_EDEFAULT = null;
+  protected sigConstruct cons;
 
   /**
-   * The cached value of the '{@link #getSymbName() <em>Symb Name</em>}' attribute.
+   * The cached value of the '{@link #getFcons() <em>Fcons</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSymbName()
+   * @see #getFcons()
    * @generated
    * @ordered
    */
-  protected String symbName = SYMB_NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getNamespace() <em>Namespace</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNamespace()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAMESPACE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNamespace() <em>Namespace</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNamespace()
-   * @generated
-   * @ordered
-   */
-  protected String namespace = NAMESPACE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getStructName() <em>Struct Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStructName()
-   * @generated
-   * @ordered
-   */
-  protected static final String STRUCT_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getStructName() <em>Struct Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStructName()
-   * @generated
-   * @ordered
-   */
-  protected String structName = STRUCT_NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTmp() <em>Tmp</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTmp()
-   * @generated
-   * @ordered
-   */
-  protected static final String TMP_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTmp() <em>Tmp</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTmp()
-   * @generated
-   * @ordered
-   */
-  protected String tmp = TMP_EDEFAULT;
+  protected EList<sigConstruct> fcons;
 
   /**
    * <!-- begin-user-doc -->
@@ -139,9 +87,9 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSymbName()
+  public sigConstruct getCons()
   {
-    return symbName;
+    return cons;
   }
 
   /**
@@ -149,12 +97,16 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSymbName(String newSymbName)
+  public NotificationChain basicSetCons(sigConstruct newCons, NotificationChain msgs)
   {
-    String oldSymbName = symbName;
-    symbName = newSymbName;
+    sigConstruct oldCons = cons;
+    cons = newCons;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__SYMB_NAME, oldSymbName, symbName));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__CONS, oldCons, newCons);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -162,9 +114,20 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNamespace()
+  public void setCons(sigConstruct newCons)
   {
-    return namespace;
+    if (newCons != cons)
+    {
+      NotificationChain msgs = null;
+      if (cons != null)
+        msgs = ((InternalEObject)cons).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIG_DEFINITIONS__CONS, null, msgs);
+      if (newCons != null)
+        msgs = ((InternalEObject)newCons).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIG_DEFINITIONS__CONS, null, msgs);
+      msgs = basicSetCons(newCons, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__CONS, newCons, newCons));
   }
 
   /**
@@ -172,12 +135,13 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNamespace(String newNamespace)
+  public EList<sigConstruct> getFcons()
   {
-    String oldNamespace = namespace;
-    namespace = newNamespace;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__NAMESPACE, oldNamespace, namespace));
+    if (fcons == null)
+    {
+      fcons = new EObjectContainmentEList<sigConstruct>(sigConstruct.class, this, LFPackage.SIG_DEFINITIONS__FCONS);
+    }
+    return fcons;
   }
 
   /**
@@ -185,45 +149,17 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getStructName()
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    return structName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStructName(String newStructName)
-  {
-    String oldStructName = structName;
-    structName = newStructName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__STRUCT_NAME, oldStructName, structName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getTmp()
-  {
-    return tmp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTmp(String newTmp)
-  {
-    String oldTmp = tmp;
-    tmp = newTmp;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__TMP, oldTmp, tmp));
+    switch (featureID)
+    {
+      case LFPackage.SIG_DEFINITIONS__CONS:
+        return basicSetCons(null, msgs);
+      case LFPackage.SIG_DEFINITIONS__FCONS:
+        return ((InternalEList<?>)getFcons()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -236,14 +172,10 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__SYMB_NAME:
-        return getSymbName();
-      case LFPackage.SIG_DEFINITIONS__NAMESPACE:
-        return getNamespace();
-      case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
-        return getStructName();
-      case LFPackage.SIG_DEFINITIONS__TMP:
-        return getTmp();
+      case LFPackage.SIG_DEFINITIONS__CONS:
+        return getCons();
+      case LFPackage.SIG_DEFINITIONS__FCONS:
+        return getFcons();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -253,22 +185,18 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__SYMB_NAME:
-        setSymbName((String)newValue);
+      case LFPackage.SIG_DEFINITIONS__CONS:
+        setCons((sigConstruct)newValue);
         return;
-      case LFPackage.SIG_DEFINITIONS__NAMESPACE:
-        setNamespace((String)newValue);
-        return;
-      case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
-        setStructName((String)newValue);
-        return;
-      case LFPackage.SIG_DEFINITIONS__TMP:
-        setTmp((String)newValue);
+      case LFPackage.SIG_DEFINITIONS__FCONS:
+        getFcons().clear();
+        getFcons().addAll((Collection<? extends sigConstruct>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -284,17 +212,11 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__SYMB_NAME:
-        setSymbName(SYMB_NAME_EDEFAULT);
+      case LFPackage.SIG_DEFINITIONS__CONS:
+        setCons((sigConstruct)null);
         return;
-      case LFPackage.SIG_DEFINITIONS__NAMESPACE:
-        setNamespace(NAMESPACE_EDEFAULT);
-        return;
-      case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
-        setStructName(STRUCT_NAME_EDEFAULT);
-        return;
-      case LFPackage.SIG_DEFINITIONS__TMP:
-        setTmp(TMP_EDEFAULT);
+      case LFPackage.SIG_DEFINITIONS__FCONS:
+        getFcons().clear();
         return;
     }
     super.eUnset(featureID);
@@ -310,39 +232,12 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__SYMB_NAME:
-        return SYMB_NAME_EDEFAULT == null ? symbName != null : !SYMB_NAME_EDEFAULT.equals(symbName);
-      case LFPackage.SIG_DEFINITIONS__NAMESPACE:
-        return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
-      case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
-        return STRUCT_NAME_EDEFAULT == null ? structName != null : !STRUCT_NAME_EDEFAULT.equals(structName);
-      case LFPackage.SIG_DEFINITIONS__TMP:
-        return TMP_EDEFAULT == null ? tmp != null : !TMP_EDEFAULT.equals(tmp);
+      case LFPackage.SIG_DEFINITIONS__CONS:
+        return cons != null;
+      case LFPackage.SIG_DEFINITIONS__FCONS:
+        return fcons != null && !fcons.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (symbName: ");
-    result.append(symbName);
-    result.append(", namespace: ");
-    result.append(namespace);
-    result.append(", structName: ");
-    result.append(structName);
-    result.append(", tmp: ");
-    result.append(tmp);
-    result.append(')');
-    return result.toString();
   }
 
 } //sigDefinitionsImpl

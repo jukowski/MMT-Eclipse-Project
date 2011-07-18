@@ -9,20 +9,13 @@ import info.kwarc.mmt.lF.LFPackage;
 import info.kwarc.mmt.lF.sigDefinitions;
 import info.kwarc.mmt.lF.signatureDeclaration;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl#getSigName <em>Sig Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl#getSigDefinitions <em>Sig Definitions</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl#getDefs <em>Defs</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,14 +54,14 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   protected String sigName = SIG_NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSigDefinitions() <em>Sig Definitions</em>}' containment reference list.
+   * The cached value of the '{@link #getDefs() <em>Defs</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSigDefinitions()
+   * @see #getDefs()
    * @generated
    * @ordered
    */
-  protected EList<sigDefinitions> sigDefinitions;
+  protected sigDefinitions defs;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,13 +112,47 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<sigDefinitions> getSigDefinitions()
+  public sigDefinitions getDefs()
   {
-    if (sigDefinitions == null)
+    return defs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDefs(sigDefinitions newDefs, NotificationChain msgs)
+  {
+    sigDefinitions oldDefs = defs;
+    defs = newDefs;
+    if (eNotificationRequired())
     {
-      sigDefinitions = new EObjectContainmentEList<sigDefinitions>(sigDefinitions.class, this, LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.SIGNATURE_DECLARATION__DEFS, oldDefs, newDefs);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return sigDefinitions;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDefs(sigDefinitions newDefs)
+  {
+    if (newDefs != defs)
+    {
+      NotificationChain msgs = null;
+      if (defs != null)
+        msgs = ((InternalEObject)defs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIGNATURE_DECLARATION__DEFS, null, msgs);
+      if (newDefs != null)
+        msgs = ((InternalEObject)newDefs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIGNATURE_DECLARATION__DEFS, null, msgs);
+      msgs = basicSetDefs(newDefs, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIGNATURE_DECLARATION__DEFS, newDefs, newDefs));
   }
 
   /**
@@ -138,8 +165,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS:
-        return ((InternalEList<?>)getSigDefinitions()).basicRemove(otherEnd, msgs);
+      case LFPackage.SIGNATURE_DECLARATION__DEFS:
+        return basicSetDefs(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -156,8 +183,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
     {
       case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
         return getSigName();
-      case LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS:
-        return getSigDefinitions();
+      case LFPackage.SIGNATURE_DECLARATION__DEFS:
+        return getDefs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,7 +194,6 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -176,9 +202,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
       case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
         setSigName((String)newValue);
         return;
-      case LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS:
-        getSigDefinitions().clear();
-        getSigDefinitions().addAll((Collection<? extends sigDefinitions>)newValue);
+      case LFPackage.SIGNATURE_DECLARATION__DEFS:
+        setDefs((sigDefinitions)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -197,8 +222,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
       case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
         setSigName(SIG_NAME_EDEFAULT);
         return;
-      case LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS:
-        getSigDefinitions().clear();
+      case LFPackage.SIGNATURE_DECLARATION__DEFS:
+        setDefs((sigDefinitions)null);
         return;
     }
     super.eUnset(featureID);
@@ -216,8 +241,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
     {
       case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
         return SIG_NAME_EDEFAULT == null ? sigName != null : !SIG_NAME_EDEFAULT.equals(sigName);
-      case LFPackage.SIGNATURE_DECLARATION__SIG_DEFINITIONS:
-        return sigDefinitions != null && !sigDefinitions.isEmpty();
+      case LFPackage.SIGNATURE_DECLARATION__DEFS:
+        return defs != null;
     }
     return super.eIsSet(featureID);
   }

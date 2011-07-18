@@ -10,6 +10,8 @@ Model:
 
 terminal INT returns ecore::EInt: ('0'..'9')+;
 terminal SP			 : ' '|'\t'|'\r'|'\n';
+terminal doubleDot   : '..';
+terminal multipleDot : doubleDot '.'+;
 terminal CID  		 : ('a'..'z'|'A'..'Z'|'0'..'9'|'-'|'_'|'#'|'?')+;
 terminal ML_COMMENT	 : '%{' -> '}%';
 terminal ML2_COMMENT : '%*' -> '*%';
@@ -18,36 +20,40 @@ terminal ANY_OTHER: .;
 
 WS : (SP | ML_COMMENT | ML2_COMMENT | SL_COMMENT);
 
-NAMESPACE : ("../")* CID ( ('/'|'.') CID)*;
-URI : (CID "://")? NAMESPACE;
+NAMESPACE : (doubleDot '/')* CID ( ('/'|'.') CID)*;
+URI : (CID ':' '/' '/')? NAMESPACE;
 URISTRING : '"' URI '"' ;
 JUSTSPACE: J=WS;
 
-namespaceDeclaration: '%namespace' WS+ (name=CID WS* '=' WS*)? uri=URISTRING WS* '.' WS;
+namespaceDeclaration: '%' 'namespace' WS+ (name=CID WS* '=' WS*)? uri=URISTRING WS* '.' WS;
 
-readDeclaration: '%read' WS+ file=URISTRING WS* '.' WS;
+readDeclaration: '%' 'read' WS+ file=URISTRING WS* '.' WS;
 
-
-GID : (CID | ANY_OTHER | INT)+ | '..' '.'*;
-
-SOMETHING: ANY_OTHER | CID | INT | '.' CID | ':' | '=' | '<' | '->' | '%' | '-' | '..' '.'* WS | WS ;
-
-sigOps : ('%meta' | '%abbrev') SOMETHING* '.' WS;
+GID : (CID | ANY_OTHER | INT)+ ('='+ WS)? | '=' '='+ WS| multipleDot | doubleDot;
 
 
-signatureDeclaration: '%sig' WS+ sigName=GID WS* '=' WS* '{' 
-					sigDefinitions += sigDefinitions*  '}' WS* '.' WS; 
+SOMETHING: ANY_OTHER | CID | INT | '.' (CID  | ANY_OTHER) | ':' | '=' | '->' | '%' | '{' SOMETHING2* '}'|  multipleDot | doubleDot | WS;
+SOMETHING2: ANY_OTHER | CID | INT | '.' | ':' | '=' | '->' | '%' | '{' SOMETHING2* '}'|  multipleDot | doubleDot | WS;
+
+sigOps : ('%' 'meta' | '%' 'abbrev') SOMETHING* '.' WS;
 
 
-sigDefinitions : (symbName=GID WS* (':' | ':=' | '=') SOMETHING* '.' WS) |
-				 ('%include' WS+ namespace=NAMESPACE (WS+ includeOps)? '.' WS) |
-				 ('%struct' WS+ structName = GID WS* ':' SOMETHING* includeOps? '.' WS) |
-				 (tmp=('%meta' | '%abbrev' | '%name' | '%pattern' | '%infix' | 'prefix') SOMETHING* '.' WS ) |
-				 JUSTSPACE
+signatureDeclaration: '%' 'sig' WS+ sigName=GID WS* '=' WS*  
+					defs=sigDefinitions   WS* '.'; 
+
+
+sigDefinitions : '{' WS* cons=sigConstruct ('.' WS+ fcons+=sigConstruct)* ('.' WS*)? '}';
+
+sigConstruct : (symbName=GID WS* (':' | ':=' | '=') SOMETHING*) |
+				 ('%' 'include' WS+ namespace=NAMESPACE (WS+ includeOps)?) |
+				 ('%' 'struct' WS+ structName = GID WS* (':' | ':=') SOMETHING* incOpt=includeOps? ) |
+				 ('%' tmp=('meta' | 'abbrev' | 'name' | 'pattern' | 'infix' | 'prefix' | 'postfix' )  SOMETHING*) 
 				 ;
+				 
+				 
 
-includeOps : ('%open' SOMETHING*);
+includeOps : ('%' 'open' SOMETHING*);
 
 TempType : {namespaceDeclaration} | {signatureDeclaration} | fullURI = GID;
 
-viewDeclaration: '%view' WS+ viewID=GID WS* ':' WS* from=NAMESPACE WS*'->' WS* to=NAMESPACE WS* '=' WS* '{' viewDefinitions+=sigDefinitions* '}' WS* '.' WS;
+viewDeclaration: '%' 'view' WS+ viewID=GID WS* ':' WS* from=NAMESPACE WS*'->' WS* to=NAMESPACE WS* '=' WS* viewDefs=sigDefinitions WS* '.' WS;

@@ -5,6 +5,8 @@
  */
 package info.kwarc.mmt.lF;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,10 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getSymbName <em>Symb Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getNamespace <em>Namespace</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getStructName <em>Struct Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getTmp <em>Tmp</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getCons <em>Cons</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.sigDefinitions#getFcons <em>Fcons</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,107 +29,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface sigDefinitions extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Symb Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Cons</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Symb Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Cons</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Symb Name</em>' attribute.
-   * @see #setSymbName(String)
-   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_SymbName()
-   * @model
+   * @return the value of the '<em>Cons</em>' containment reference.
+   * @see #setCons(sigConstruct)
+   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_Cons()
+   * @model containment="true"
    * @generated
    */
-  String getSymbName();
+  sigConstruct getCons();
 
   /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.sigDefinitions#getSymbName <em>Symb Name</em>}' attribute.
+   * Sets the value of the '{@link info.kwarc.mmt.lF.sigDefinitions#getCons <em>Cons</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Symb Name</em>' attribute.
-   * @see #getSymbName()
+   * @param value the new value of the '<em>Cons</em>' containment reference.
+   * @see #getCons()
    * @generated
    */
-  void setSymbName(String value);
+  void setCons(sigConstruct value);
 
   /**
-   * Returns the value of the '<em><b>Namespace</b></em>' attribute.
+   * Returns the value of the '<em><b>Fcons</b></em>' containment reference list.
+   * The list contents are of type {@link info.kwarc.mmt.lF.sigConstruct}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Namespace</em>' attribute isn't clear,
+   * If the meaning of the '<em>Fcons</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Namespace</em>' attribute.
-   * @see #setNamespace(String)
-   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_Namespace()
-   * @model
+   * @return the value of the '<em>Fcons</em>' containment reference list.
+   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_Fcons()
+   * @model containment="true"
    * @generated
    */
-  String getNamespace();
-
-  /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.sigDefinitions#getNamespace <em>Namespace</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Namespace</em>' attribute.
-   * @see #getNamespace()
-   * @generated
-   */
-  void setNamespace(String value);
-
-  /**
-   * Returns the value of the '<em><b>Struct Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Struct Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Struct Name</em>' attribute.
-   * @see #setStructName(String)
-   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_StructName()
-   * @model
-   * @generated
-   */
-  String getStructName();
-
-  /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.sigDefinitions#getStructName <em>Struct Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Struct Name</em>' attribute.
-   * @see #getStructName()
-   * @generated
-   */
-  void setStructName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Tmp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tmp</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tmp</em>' attribute.
-   * @see #setTmp(String)
-   * @see info.kwarc.mmt.lF.LFPackage#getsigDefinitions_Tmp()
-   * @model
-   * @generated
-   */
-  String getTmp();
-
-  /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.sigDefinitions#getTmp <em>Tmp</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tmp</em>' attribute.
-   * @see #getTmp()
-   * @generated
-   */
-  void setTmp(String value);
+  EList<sigConstruct> getFcons();
 
 } // sigDefinitions

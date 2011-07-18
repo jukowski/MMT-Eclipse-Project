@@ -108,6 +108,11 @@ public class LFAdapterFactory extends AdapterFactoryImpl
         return createsigDefinitionsAdapter();
       }
       @Override
+      public Adapter casesigConstruct(sigConstruct object)
+      {
+        return createsigConstructAdapter();
+      }
+      @Override
       public Adapter caseTempType(TempType object)
       {
         return createTempTypeAdapter();
@@ -225,6 +230,21 @@ public class LFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createsigDefinitionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.sigConstruct <em>sig Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see info.kwarc.mmt.lF.sigConstruct
+   * @generated
+   */
+  public Adapter createsigConstructAdapter()
   {
     return null;
   }

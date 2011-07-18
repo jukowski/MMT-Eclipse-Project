@@ -80,6 +80,15 @@ public interface LFFactory extends EFactory
   sigDefinitions createsigDefinitions();
 
   /**
+   * Returns a new object of class '<em>sig Construct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>sig Construct</em>'.
+   * @generated
+   */
+  sigConstruct createsigConstruct();
+
+  /**
    * Returns a new object of class '<em>Temp Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

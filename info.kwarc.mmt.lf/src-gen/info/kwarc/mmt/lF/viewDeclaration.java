@@ -5,8 +5,6 @@
  */
 package info.kwarc.mmt.lF;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -20,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getViewID <em>View ID</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getFrom <em>From</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getTo <em>To</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefinitions <em>View Definitions</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefs <em>View Defs</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,19 +107,29 @@ public interface viewDeclaration extends EObject
   void setTo(String value);
 
   /**
-   * Returns the value of the '<em><b>View Definitions</b></em>' containment reference list.
-   * The list contents are of type {@link info.kwarc.mmt.lF.sigDefinitions}.
+   * Returns the value of the '<em><b>View Defs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>View Definitions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>View Defs</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>View Definitions</em>' containment reference list.
-   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_ViewDefinitions()
+   * @return the value of the '<em>View Defs</em>' containment reference.
+   * @see #setViewDefs(sigDefinitions)
+   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_ViewDefs()
    * @model containment="true"
    * @generated
    */
-  EList<sigDefinitions> getViewDefinitions();
+  sigDefinitions getViewDefs();
+
+  /**
+   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefs <em>View Defs</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>View Defs</em>' containment reference.
+   * @see #getViewDefs()
+   * @generated
+   */
+  void setViewDefs(sigDefinitions value);
 
 } // viewDeclaration

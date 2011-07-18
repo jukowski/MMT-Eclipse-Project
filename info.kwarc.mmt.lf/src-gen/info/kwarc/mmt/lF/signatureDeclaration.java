@@ -5,7 +5,6 @@
  */
 package info.kwarc.mmt.lF;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link info.kwarc.mmt.lF.signatureDeclaration#getSigName <em>Sig Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.signatureDeclaration#getSigDefinitions <em>Sig Definitions</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.signatureDeclaration#getDefs <em>Defs</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,19 +52,29 @@ public interface signatureDeclaration extends TempType
   void setSigName(String value);
 
   /**
-   * Returns the value of the '<em><b>Sig Definitions</b></em>' containment reference list.
-   * The list contents are of type {@link info.kwarc.mmt.lF.sigDefinitions}.
+   * Returns the value of the '<em><b>Defs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sig Definitions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Defs</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sig Definitions</em>' containment reference list.
-   * @see info.kwarc.mmt.lF.LFPackage#getsignatureDeclaration_SigDefinitions()
+   * @return the value of the '<em>Defs</em>' containment reference.
+   * @see #setDefs(sigDefinitions)
+   * @see info.kwarc.mmt.lF.LFPackage#getsignatureDeclaration_Defs()
    * @model containment="true"
    * @generated
    */
-  EList<sigDefinitions> getSigDefinitions();
+  sigDefinitions getDefs();
+
+  /**
+   * Sets the value of the '{@link info.kwarc.mmt.lF.signatureDeclaration#getDefs <em>Defs</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Defs</em>' containment reference.
+   * @see #getDefs()
+   * @generated
+   */
+  void setDefs(sigDefinitions value);
 
 } // signatureDeclaration

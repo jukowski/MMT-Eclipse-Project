@@ -73,6 +73,7 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
       case LFPackage.READ_DECLARATION: return createreadDeclaration();
       case LFPackage.SIGNATURE_DECLARATION: return createsignatureDeclaration();
       case LFPackage.SIG_DEFINITIONS: return createsigDefinitions();
+      case LFPackage.SIG_CONSTRUCT: return createsigConstruct();
       case LFPackage.TEMP_TYPE: return createTempType();
       case LFPackage.VIEW_DECLARATION: return createviewDeclaration();
       default:
@@ -144,6 +145,17 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
   {
     sigDefinitionsImpl sigDefinitions = new sigDefinitionsImpl();
     return sigDefinitions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public sigConstruct createsigConstruct()
+  {
+    sigConstructImpl sigConstruct = new sigConstructImpl();
+    return sigConstruct;
   }
 
   /**

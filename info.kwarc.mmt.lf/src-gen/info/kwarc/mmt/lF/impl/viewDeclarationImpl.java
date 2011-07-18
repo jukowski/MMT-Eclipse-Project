@@ -9,21 +9,14 @@ import info.kwarc.mmt.lF.LFPackage;
 import info.kwarc.mmt.lF.sigDefinitions;
 import info.kwarc.mmt.lF.viewDeclaration;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl#getViewID <em>View ID</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl#getFrom <em>From</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl#getTo <em>To</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl#getViewDefinitions <em>View Definitions</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl#getViewDefs <em>View Defs</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,14 +97,14 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
   protected String to = TO_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getViewDefinitions() <em>View Definitions</em>}' containment reference list.
+   * The cached value of the '{@link #getViewDefs() <em>View Defs</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getViewDefinitions()
+   * @see #getViewDefs()
    * @generated
    * @ordered
    */
-  protected EList<sigDefinitions> viewDefinitions;
+  protected sigDefinitions viewDefs;
 
   /**
    * <!-- begin-user-doc -->
@@ -208,13 +201,47 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<sigDefinitions> getViewDefinitions()
+  public sigDefinitions getViewDefs()
   {
-    if (viewDefinitions == null)
+    return viewDefs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetViewDefs(sigDefinitions newViewDefs, NotificationChain msgs)
+  {
+    sigDefinitions oldViewDefs = viewDefs;
+    viewDefs = newViewDefs;
+    if (eNotificationRequired())
     {
-      viewDefinitions = new EObjectContainmentEList<sigDefinitions>(sigDefinitions.class, this, LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.VIEW_DECLARATION__VIEW_DEFS, oldViewDefs, newViewDefs);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return viewDefinitions;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setViewDefs(sigDefinitions newViewDefs)
+  {
+    if (newViewDefs != viewDefs)
+    {
+      NotificationChain msgs = null;
+      if (viewDefs != null)
+        msgs = ((InternalEObject)viewDefs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.VIEW_DECLARATION__VIEW_DEFS, null, msgs);
+      if (newViewDefs != null)
+        msgs = ((InternalEObject)newViewDefs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.VIEW_DECLARATION__VIEW_DEFS, null, msgs);
+      msgs = basicSetViewDefs(newViewDefs, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.VIEW_DECLARATION__VIEW_DEFS, newViewDefs, newViewDefs));
   }
 
   /**
@@ -227,8 +254,8 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS:
-        return ((InternalEList<?>)getViewDefinitions()).basicRemove(otherEnd, msgs);
+      case LFPackage.VIEW_DECLARATION__VIEW_DEFS:
+        return basicSetViewDefs(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -249,8 +276,8 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
         return getFrom();
       case LFPackage.VIEW_DECLARATION__TO:
         return getTo();
-      case LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS:
-        return getViewDefinitions();
+      case LFPackage.VIEW_DECLARATION__VIEW_DEFS:
+        return getViewDefs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -260,7 +287,6 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -275,9 +301,8 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
       case LFPackage.VIEW_DECLARATION__TO:
         setTo((String)newValue);
         return;
-      case LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS:
-        getViewDefinitions().clear();
-        getViewDefinitions().addAll((Collection<? extends sigDefinitions>)newValue);
+      case LFPackage.VIEW_DECLARATION__VIEW_DEFS:
+        setViewDefs((sigDefinitions)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -302,8 +327,8 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
       case LFPackage.VIEW_DECLARATION__TO:
         setTo(TO_EDEFAULT);
         return;
-      case LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS:
-        getViewDefinitions().clear();
+      case LFPackage.VIEW_DECLARATION__VIEW_DEFS:
+        setViewDefs((sigDefinitions)null);
         return;
     }
     super.eUnset(featureID);
@@ -325,8 +350,8 @@ public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements
         return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
       case LFPackage.VIEW_DECLARATION__TO:
         return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
-      case LFPackage.VIEW_DECLARATION__VIEW_DEFINITIONS:
-        return viewDefinitions != null && !viewDefinitions.isEmpty();
+      case LFPackage.VIEW_DECLARATION__VIEW_DEFS:
+        return viewDefs != null;
     }
     return super.eIsSet(featureID);
   }

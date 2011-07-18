@@ -83,7 +83,9 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	public class NAMESPACEElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NAMESPACE");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cFullStopFullStopSolidusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final RuleCall cDoubleDotTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
+		private final Keyword cSolidusKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final RuleCall cCIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Alternatives cAlternatives_2_0 = (Alternatives)cGroup_2.eContents().get(0);
@@ -92,14 +94,20 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCIDTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
 		
 		//NAMESPACE:
-		//	"../"* CID (("/" | ".") CID)*;
+		//	(doubleDot "/")* CID (("/" | ".") CID)*;
 		public ParserRule getRule() { return rule; }
 
-		//"../"* CID (("/" | ".") CID)*
+		//(doubleDot "/")* CID (("/" | ".") CID)*
 		public Group getGroup() { return cGroup; }
 
-		//"../"*
-		public Keyword getFullStopFullStopSolidusKeyword_0() { return cFullStopFullStopSolidusKeyword_0; }
+		//(doubleDot "/")*
+		public Group getGroup_0() { return cGroup_0; }
+
+		//doubleDot
+		public RuleCall getDoubleDotTerminalRuleCall_0_0() { return cDoubleDotTerminalRuleCall_0_0; }
+
+		//"/"
+		public Keyword getSolidusKeyword_0_1() { return cSolidusKeyword_0_1; }
 
 		//CID
 		public RuleCall getCIDTerminalRuleCall_1() { return cCIDTerminalRuleCall_1; }
@@ -125,24 +133,32 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final RuleCall cCIDTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
-		private final Keyword cColonSolidusSolidusKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Keyword cSolidusKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Keyword cSolidusKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
 		private final RuleCall cNAMESPACEParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//URI:
-		//	(CID "://")? NAMESPACE;
+		//	(CID ":" "/" "/")? NAMESPACE;
 		public ParserRule getRule() { return rule; }
 
-		//(CID "://")? NAMESPACE
+		//(CID ":" "/" "/")? NAMESPACE
 		public Group getGroup() { return cGroup; }
 
-		//(CID "://")?
+		//(CID ":" "/" "/")?
 		public Group getGroup_0() { return cGroup_0; }
 
 		//CID
 		public RuleCall getCIDTerminalRuleCall_0_0() { return cCIDTerminalRuleCall_0_0; }
 
-		//"://"
-		public Keyword getColonSolidusSolidusKeyword_0_1() { return cColonSolidusSolidusKeyword_0_1; }
+		//":"
+		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
+
+		//"/"
+		public Keyword getSolidusKeyword_0_2() { return cSolidusKeyword_0_2; }
+
+		//"/"
+		public Keyword getSolidusKeyword_0_3() { return cSolidusKeyword_0_3; }
 
 		//NAMESPACE
 		public RuleCall getNAMESPACEParserRuleCall_1() { return cNAMESPACEParserRuleCall_1; }
@@ -191,56 +207,104 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	public class NamespaceDeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "namespaceDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNamespaceKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cNameCIDTerminalRuleCall_2_0_0 = (RuleCall)cNameAssignment_2_0.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Keyword cEqualsSignKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final RuleCall cWSParserRuleCall_2_3 = (RuleCall)cGroup_2.eContents().get(3);
-		private final Assignment cUriAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cUriURISTRINGParserRuleCall_3_0 = (RuleCall)cUriAssignment_3.eContents().get(0);
+		private final Keyword cPercentSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNamespaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cNameCIDTerminalRuleCall_3_0_0 = (RuleCall)cNameAssignment_3_0.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final RuleCall cWSParserRuleCall_3_3 = (RuleCall)cGroup_3.eContents().get(3);
+		private final Assignment cUriAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cUriURISTRINGParserRuleCall_4_0 = (RuleCall)cUriAssignment_4.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Keyword cFullStopKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final RuleCall cWSParserRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
+		
+		//namespaceDeclaration:
+		//	"%" "namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS;
+		public ParserRule getRule() { return rule; }
+
+		//"%" "namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS
+		public Group getGroup() { return cGroup; }
+
+		//"%"
+		public Keyword getPercentSignKeyword_0() { return cPercentSignKeyword_0; }
+
+		//"namespace"
+		public Keyword getNamespaceKeyword_1() { return cNamespaceKeyword_1; }
+
+		//WS+
+		public RuleCall getWSParserRuleCall_2() { return cWSParserRuleCall_2; }
+
+		//(name=CID WS* "=" WS*)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//name=CID
+		public Assignment getNameAssignment_3_0() { return cNameAssignment_3_0; }
+
+		//CID
+		public RuleCall getNameCIDTerminalRuleCall_3_0_0() { return cNameCIDTerminalRuleCall_3_0_0; }
+
+		//WS*
+		public RuleCall getWSParserRuleCall_3_1() { return cWSParserRuleCall_3_1; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_3_2() { return cEqualsSignKeyword_3_2; }
+
+		//WS*
+		public RuleCall getWSParserRuleCall_3_3() { return cWSParserRuleCall_3_3; }
+
+		//uri=URISTRING
+		public Assignment getUriAssignment_4() { return cUriAssignment_4; }
+
+		//URISTRING
+		public RuleCall getUriURISTRINGParserRuleCall_4_0() { return cUriURISTRINGParserRuleCall_4_0; }
+
+		//WS*
+		public RuleCall getWSParserRuleCall_5() { return cWSParserRuleCall_5; }
+
+		//"."
+		public Keyword getFullStopKeyword_6() { return cFullStopKeyword_6; }
+
+		//WS
+		public RuleCall getWSParserRuleCall_7() { return cWSParserRuleCall_7; }
+	}
+
+	public class ReadDeclarationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "readDeclaration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPercentSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cReadKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cFileAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFileURISTRINGParserRuleCall_3_0 = (RuleCall)cFileAssignment_3.eContents().get(0);
 		private final RuleCall cWSParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		private final Keyword cFullStopKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final RuleCall cWSParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		
-		//namespaceDeclaration:
-		//	"%namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS;
+		//readDeclaration:
+		//	"%" "read" WS+ file=URISTRING WS* "." WS;
 		public ParserRule getRule() { return rule; }
 
-		//"%namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS
+		//"%" "read" WS+ file=URISTRING WS* "." WS
 		public Group getGroup() { return cGroup; }
 
-		//"%namespace"
-		public Keyword getNamespaceKeyword_0() { return cNamespaceKeyword_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_0() { return cPercentSignKeyword_0; }
+
+		//"read"
+		public Keyword getReadKeyword_1() { return cReadKeyword_1; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_1() { return cWSParserRuleCall_1; }
+		public RuleCall getWSParserRuleCall_2() { return cWSParserRuleCall_2; }
 
-		//(name=CID WS* "=" WS*)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//name=CID
-		public Assignment getNameAssignment_2_0() { return cNameAssignment_2_0; }
-
-		//CID
-		public RuleCall getNameCIDTerminalRuleCall_2_0_0() { return cNameCIDTerminalRuleCall_2_0_0; }
-
-		//WS*
-		public RuleCall getWSParserRuleCall_2_1() { return cWSParserRuleCall_2_1; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_2_2() { return cEqualsSignKeyword_2_2; }
-
-		//WS*
-		public RuleCall getWSParserRuleCall_2_3() { return cWSParserRuleCall_2_3; }
-
-		//uri=URISTRING
-		public Assignment getUriAssignment_3() { return cUriAssignment_3; }
+		//file=URISTRING
+		public Assignment getFileAssignment_3() { return cFileAssignment_3; }
 
 		//URISTRING
-		public RuleCall getUriURISTRINGParserRuleCall_3_0() { return cUriURISTRINGParserRuleCall_3_0; }
+		public RuleCall getFileURISTRINGParserRuleCall_3_0() { return cFileURISTRINGParserRuleCall_3_0; }
 
 		//WS*
 		public RuleCall getWSParserRuleCall_4() { return cWSParserRuleCall_4; }
@@ -252,84 +316,72 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getWSParserRuleCall_6() { return cWSParserRuleCall_6; }
 	}
 
-	public class ReadDeclarationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "readDeclaration");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cReadKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cFileAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFileURISTRINGParserRuleCall_2_0 = (RuleCall)cFileAssignment_2.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Keyword cFullStopKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cWSParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		
-		//readDeclaration:
-		//	"%read" WS+ file=URISTRING WS* "." WS;
-		public ParserRule getRule() { return rule; }
-
-		//"%read" WS+ file=URISTRING WS* "." WS
-		public Group getGroup() { return cGroup; }
-
-		//"%read"
-		public Keyword getReadKeyword_0() { return cReadKeyword_0; }
-
-		//WS+
-		public RuleCall getWSParserRuleCall_1() { return cWSParserRuleCall_1; }
-
-		//file=URISTRING
-		public Assignment getFileAssignment_2() { return cFileAssignment_2; }
-
-		//URISTRING
-		public RuleCall getFileURISTRINGParserRuleCall_2_0() { return cFileURISTRINGParserRuleCall_2_0; }
-
-		//WS*
-		public RuleCall getWSParserRuleCall_3() { return cWSParserRuleCall_3; }
-
-		//"."
-		public Keyword getFullStopKeyword_4() { return cFullStopKeyword_4; }
-
-		//WS
-		public RuleCall getWSParserRuleCall_5() { return cWSParserRuleCall_5; }
-	}
-
 	public class GIDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GID");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
-		private final RuleCall cCIDTerminalRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
-		private final RuleCall cANY_OTHERTerminalRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Alternatives cAlternatives_0_0 = (Alternatives)cGroup_0.eContents().get(0);
+		private final RuleCall cCIDTerminalRuleCall_0_0_0 = (RuleCall)cAlternatives_0_0.eContents().get(0);
+		private final RuleCall cANY_OTHERTerminalRuleCall_0_0_1 = (RuleCall)cAlternatives_0_0.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0_0_2 = (RuleCall)cAlternatives_0_0.eContents().get(2);
+		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cFullStopFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cFullStopKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final RuleCall cMultipleDotTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDoubleDotTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//GID:
-		//	(CID | ANY_OTHER | INT)+ | ".." "."*;
+		//	(CID | ANY_OTHER | INT)+ ("="+ WS)? | "=" "="+ WS | multipleDot | doubleDot;
 		public ParserRule getRule() { return rule; }
 
-		//(CID | ANY_OTHER | INT)+ | ".." "."*
+		//(CID | ANY_OTHER | INT)+ ("="+ WS)? | "=" "="+ WS | multipleDot | doubleDot
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//(CID | ANY_OTHER | INT)+ ("="+ WS)?
+		public Group getGroup_0() { return cGroup_0; }
+
 		//(CID | ANY_OTHER | INT)+
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		public Alternatives getAlternatives_0_0() { return cAlternatives_0_0; }
 
 		//CID
-		public RuleCall getCIDTerminalRuleCall_0_0() { return cCIDTerminalRuleCall_0_0; }
+		public RuleCall getCIDTerminalRuleCall_0_0_0() { return cCIDTerminalRuleCall_0_0_0; }
 
 		//ANY_OTHER
-		public RuleCall getANY_OTHERTerminalRuleCall_0_1() { return cANY_OTHERTerminalRuleCall_0_1; }
+		public RuleCall getANY_OTHERTerminalRuleCall_0_0_1() { return cANY_OTHERTerminalRuleCall_0_0_1; }
 
 		//INT
-		public RuleCall getINTTerminalRuleCall_0_2() { return cINTTerminalRuleCall_0_2; }
+		public RuleCall getINTTerminalRuleCall_0_0_2() { return cINTTerminalRuleCall_0_0_2; }
 
-		//".." "."*
+		//("="+ WS)?
+		public Group getGroup_0_1() { return cGroup_0_1; }
+
+		//"="+
+		public Keyword getEqualsSignKeyword_0_1_0() { return cEqualsSignKeyword_0_1_0; }
+
+		//WS
+		public RuleCall getWSParserRuleCall_0_1_1() { return cWSParserRuleCall_0_1_1; }
+
+		//"=" "="+ WS
 		public Group getGroup_1() { return cGroup_1; }
 
-		//".."
-		public Keyword getFullStopFullStopKeyword_1_0() { return cFullStopFullStopKeyword_1_0; }
+		//"="
+		public Keyword getEqualsSignKeyword_1_0() { return cEqualsSignKeyword_1_0; }
 
-		//"."*
-		public Keyword getFullStopKeyword_1_1() { return cFullStopKeyword_1_1; }
+		//"="+
+		public Keyword getEqualsSignKeyword_1_1() { return cEqualsSignKeyword_1_1; }
+
+		//WS
+		public RuleCall getWSParserRuleCall_1_2() { return cWSParserRuleCall_1_2; }
+
+		//multipleDot
+		public RuleCall getMultipleDotTerminalRuleCall_2() { return cMultipleDotTerminalRuleCall_2; }
+
+		//doubleDot
+		public RuleCall getDoubleDotTerminalRuleCall_3() { return cDoubleDotTerminalRuleCall_3; }
 	}
 
 	public class SOMETHINGElements extends AbstractParserRuleElementFinder {
@@ -340,24 +392,28 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Keyword cFullStopKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final RuleCall cCIDTerminalRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
+		private final RuleCall cCIDTerminalRuleCall_3_1_0 = (RuleCall)cAlternatives_3_1.eContents().get(0);
+		private final RuleCall cANY_OTHERTerminalRuleCall_3_1_1 = (RuleCall)cAlternatives_3_1.eContents().get(1);
 		private final Keyword cColonKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		private final Keyword cEqualsSignKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
-		private final Keyword cLessThanSignKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
-		private final Keyword cPercentSignKeyword_8 = (Keyword)cAlternatives.eContents().get(8);
-		private final Keyword cHyphenMinusKeyword_9 = (Keyword)cAlternatives.eContents().get(9);
-		private final Group cGroup_10 = (Group)cAlternatives.eContents().get(10);
-		private final Keyword cFullStopFullStopKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cFullStopKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final RuleCall cWSParserRuleCall_10_2 = (RuleCall)cGroup_10.eContents().get(2);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		private final Keyword cPercentSignKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
+		private final Keyword cLeftCurlyBracketKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final RuleCall cSOMETHING2ParserRuleCall_8_1 = (RuleCall)cGroup_8.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
+		private final RuleCall cMultipleDotTerminalRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cDoubleDotTerminalRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		private final RuleCall cWSParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
 		
 		//SOMETHING:
-		//	ANY_OTHER | CID | INT | "." CID | ":" | "=" | "<" | "->" | "%" | "-" | ".." "."* WS | WS;
+		//	ANY_OTHER | CID | INT | "." (CID | ANY_OTHER) | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot
+		//	| WS;
 		public ParserRule getRule() { return rule; }
 
-		//ANY_OTHER | CID | INT | "." CID | ":" | "=" | "<" | "->" | "%" | "-" | ".." "."* WS | WS
+		//ANY_OTHER | CID | INT | "." (CID | ANY_OTHER) | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot |
+		//WS
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ANY_OTHER
@@ -369,14 +425,20 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
 
-		//"." CID
+		//"." (CID | ANY_OTHER)
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"."
 		public Keyword getFullStopKeyword_3_0() { return cFullStopKeyword_3_0; }
 
+		//CID | ANY_OTHER
+		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
+
 		//CID
-		public RuleCall getCIDTerminalRuleCall_3_1() { return cCIDTerminalRuleCall_3_1; }
+		public RuleCall getCIDTerminalRuleCall_3_1_0() { return cCIDTerminalRuleCall_3_1_0; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_3_1_1() { return cANY_OTHERTerminalRuleCall_3_1_1; }
 
 		//":"
 		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
@@ -384,29 +446,101 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
 
-		//"<"
-		public Keyword getLessThanSignKeyword_6() { return cLessThanSignKeyword_6; }
-
 		//"->"
-		public Keyword getHyphenMinusGreaterThanSignKeyword_7() { return cHyphenMinusGreaterThanSignKeyword_7; }
+		public Keyword getHyphenMinusGreaterThanSignKeyword_6() { return cHyphenMinusGreaterThanSignKeyword_6; }
 
 		//"%"
-		public Keyword getPercentSignKeyword_8() { return cPercentSignKeyword_8; }
+		public Keyword getPercentSignKeyword_7() { return cPercentSignKeyword_7; }
 
-		//"-"
-		public Keyword getHyphenMinusKeyword_9() { return cHyphenMinusKeyword_9; }
+		//"{" SOMETHING2* "}"
+		public Group getGroup_8() { return cGroup_8; }
 
-		//".." "."* WS
-		public Group getGroup_10() { return cGroup_10; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_8_0() { return cLeftCurlyBracketKeyword_8_0; }
 
-		//".."
-		public Keyword getFullStopFullStopKeyword_10_0() { return cFullStopFullStopKeyword_10_0; }
+		//SOMETHING2*
+		public RuleCall getSOMETHING2ParserRuleCall_8_1() { return cSOMETHING2ParserRuleCall_8_1; }
 
-		//"."*
-		public Keyword getFullStopKeyword_10_1() { return cFullStopKeyword_10_1; }
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8_2() { return cRightCurlyBracketKeyword_8_2; }
+
+		//multipleDot
+		public RuleCall getMultipleDotTerminalRuleCall_9() { return cMultipleDotTerminalRuleCall_9; }
+
+		//doubleDot
+		public RuleCall getDoubleDotTerminalRuleCall_10() { return cDoubleDotTerminalRuleCall_10; }
 
 		//WS
-		public RuleCall getWSParserRuleCall_10_2() { return cWSParserRuleCall_10_2; }
+		public RuleCall getWSParserRuleCall_11() { return cWSParserRuleCall_11; }
+	}
+
+	public class SOMETHING2Elements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SOMETHING2");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cANY_OTHERTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Keyword cFullStopKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cColonKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		private final Keyword cPercentSignKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
+		private final Keyword cLeftCurlyBracketKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final RuleCall cSOMETHING2ParserRuleCall_8_1 = (RuleCall)cGroup_8.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
+		private final RuleCall cMultipleDotTerminalRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cDoubleDotTerminalRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cWSParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		
+		//SOMETHING2:
+		//	ANY_OTHER | CID | INT | "." | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot | WS;
+		public ParserRule getRule() { return rule; }
+
+		//ANY_OTHER | CID | INT | "." | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot | WS
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_0() { return cANY_OTHERTerminalRuleCall_0; }
+
+		//CID
+		public RuleCall getCIDTerminalRuleCall_1() { return cCIDTerminalRuleCall_1; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
+
+		//"."
+		public Keyword getFullStopKeyword_3() { return cFullStopKeyword_3; }
+
+		//":"
+		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_6() { return cHyphenMinusGreaterThanSignKeyword_6; }
+
+		//"%"
+		public Keyword getPercentSignKeyword_7() { return cPercentSignKeyword_7; }
+
+		//"{" SOMETHING2* "}"
+		public Group getGroup_8() { return cGroup_8; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_8_0() { return cLeftCurlyBracketKeyword_8_0; }
+
+		//SOMETHING2*
+		public RuleCall getSOMETHING2ParserRuleCall_8_1() { return cSOMETHING2ParserRuleCall_8_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8_2() { return cRightCurlyBracketKeyword_8_2; }
+
+		//multipleDot
+		public RuleCall getMultipleDotTerminalRuleCall_9() { return cMultipleDotTerminalRuleCall_9; }
+
+		//doubleDot
+		public RuleCall getDoubleDotTerminalRuleCall_10() { return cDoubleDotTerminalRuleCall_10; }
 
 		//WS
 		public RuleCall getWSParserRuleCall_11() { return cWSParserRuleCall_11; }
@@ -416,27 +550,43 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "sigOps");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cMetaKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cAbbrevKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
+		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
+		private final Keyword cPercentSignKeyword_0_0_0 = (Keyword)cGroup_0_0.eContents().get(0);
+		private final Keyword cMetaKeyword_0_0_1 = (Keyword)cGroup_0_0.eContents().get(1);
+		private final Group cGroup_0_1 = (Group)cAlternatives_0.eContents().get(1);
+		private final Keyword cPercentSignKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
+		private final Keyword cAbbrevKeyword_0_1_1 = (Keyword)cGroup_0_1.eContents().get(1);
 		private final RuleCall cSOMETHINGParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final RuleCall cWSParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//sigOps:
-		//	("%meta" | "%abbrev") SOMETHING* "." WS;
+		//	("%" "meta" | "%" "abbrev") SOMETHING* "." WS;
 		public ParserRule getRule() { return rule; }
 
-		//("%meta" | "%abbrev") SOMETHING* "." WS
+		//("%" "meta" | "%" "abbrev") SOMETHING* "." WS
 		public Group getGroup() { return cGroup; }
 
-		//"%meta" | "%abbrev"
+		//"%" "meta" | "%" "abbrev"
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//"%meta"
-		public Keyword getMetaKeyword_0_0() { return cMetaKeyword_0_0; }
+		//"%" "meta"
+		public Group getGroup_0_0() { return cGroup_0_0; }
 
-		//"%abbrev"
-		public Keyword getAbbrevKeyword_0_1() { return cAbbrevKeyword_0_1; }
+		//"%"
+		public Keyword getPercentSignKeyword_0_0_0() { return cPercentSignKeyword_0_0_0; }
+
+		//"meta"
+		public Keyword getMetaKeyword_0_0_1() { return cMetaKeyword_0_0_1; }
+
+		//"%" "abbrev"
+		public Group getGroup_0_1() { return cGroup_0_1; }
+
+		//"%"
+		public Keyword getPercentSignKeyword_0_1_0() { return cPercentSignKeyword_0_1_0; }
+
+		//"abbrev"
+		public Keyword getAbbrevKeyword_0_1_1() { return cAbbrevKeyword_0_1_1; }
 
 		//SOMETHING*
 		public RuleCall getSOMETHINGParserRuleCall_1() { return cSOMETHINGParserRuleCall_1; }
@@ -451,73 +601,129 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	public class SignatureDeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "signatureDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSigKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cSigNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSigNameGIDParserRuleCall_2_0 = (RuleCall)cSigNameAssignment_2.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cWSParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cSigDefinitionsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSigDefinitionsSigDefinitionsParserRuleCall_7_0 = (RuleCall)cSigDefinitionsAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final RuleCall cWSParserRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Keyword cFullStopKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final RuleCall cWSParserRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
+		private final Keyword cPercentSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cSigKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cSigNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSigNameGIDParserRuleCall_3_0 = (RuleCall)cSigNameAssignment_3.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final RuleCall cWSParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Assignment cDefsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cDefsSigDefinitionsParserRuleCall_7_0 = (RuleCall)cDefsAssignment_7.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
+		private final Keyword cFullStopKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//signatureDeclaration:
-		//	"%sig" WS+ sigName=GID WS* "=" WS* "{" sigDefinitions+=sigDefinitions* "}" WS* "." WS;
+		//	"%" "sig" WS+ sigName=GID WS* "=" WS* defs=sigDefinitions WS* ".";
 		public ParserRule getRule() { return rule; }
 
-		//"%sig" WS+ sigName=GID WS* "=" WS* "{" sigDefinitions+=sigDefinitions* "}" WS* "." WS
+		//"%" "sig" WS+ sigName=GID WS* "=" WS* defs=sigDefinitions WS* "."
 		public Group getGroup() { return cGroup; }
 
-		//"%sig"
-		public Keyword getSigKeyword_0() { return cSigKeyword_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_0() { return cPercentSignKeyword_0; }
+
+		//"sig"
+		public Keyword getSigKeyword_1() { return cSigKeyword_1; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_1() { return cWSParserRuleCall_1; }
+		public RuleCall getWSParserRuleCall_2() { return cWSParserRuleCall_2; }
 
 		//sigName=GID
-		public Assignment getSigNameAssignment_2() { return cSigNameAssignment_2; }
+		public Assignment getSigNameAssignment_3() { return cSigNameAssignment_3; }
 
 		//GID
-		public RuleCall getSigNameGIDParserRuleCall_2_0() { return cSigNameGIDParserRuleCall_2_0; }
+		public RuleCall getSigNameGIDParserRuleCall_3_0() { return cSigNameGIDParserRuleCall_3_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_3() { return cWSParserRuleCall_3; }
+		public RuleCall getWSParserRuleCall_4() { return cWSParserRuleCall_4; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+		public Keyword getEqualsSignKeyword_5() { return cEqualsSignKeyword_5; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_5() { return cWSParserRuleCall_5; }
+		public RuleCall getWSParserRuleCall_6() { return cWSParserRuleCall_6; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
-
-		//sigDefinitions+=sigDefinitions*
-		public Assignment getSigDefinitionsAssignment_7() { return cSigDefinitionsAssignment_7; }
+		//defs=sigDefinitions
+		public Assignment getDefsAssignment_7() { return cDefsAssignment_7; }
 
 		//sigDefinitions
-		public RuleCall getSigDefinitionsSigDefinitionsParserRuleCall_7_0() { return cSigDefinitionsSigDefinitionsParserRuleCall_7_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public RuleCall getDefsSigDefinitionsParserRuleCall_7_0() { return cDefsSigDefinitionsParserRuleCall_7_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_9() { return cWSParserRuleCall_9; }
+		public RuleCall getWSParserRuleCall_8() { return cWSParserRuleCall_8; }
 
 		//"."
-		public Keyword getFullStopKeyword_10() { return cFullStopKeyword_10; }
-
-		//WS
-		public RuleCall getWSParserRuleCall_11() { return cWSParserRuleCall_11; }
+		public Keyword getFullStopKeyword_9() { return cFullStopKeyword_9; }
 	}
 
 	public class SigDefinitionsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "sigDefinitions");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cConsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConsSigConstructParserRuleCall_2_0 = (RuleCall)cConsAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cFullStopKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Assignment cFconsAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cFconsSigConstructParserRuleCall_3_2_0 = (RuleCall)cFconsAssignment_3_2.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cFullStopKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_4_1 = (RuleCall)cGroup_4.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//sigDefinitions:
+		//	"{" WS* cons=sigConstruct ("." WS+ fcons+=sigConstruct)* ("." WS*)? "}";
+		public ParserRule getRule() { return rule; }
+
+		//"{" WS* cons=sigConstruct ("." WS+ fcons+=sigConstruct)* ("." WS*)? "}"
+		public Group getGroup() { return cGroup; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+
+		//WS*
+		public RuleCall getWSParserRuleCall_1() { return cWSParserRuleCall_1; }
+
+		//cons=sigConstruct
+		public Assignment getConsAssignment_2() { return cConsAssignment_2; }
+
+		//sigConstruct
+		public RuleCall getConsSigConstructParserRuleCall_2_0() { return cConsSigConstructParserRuleCall_2_0; }
+
+		//("." WS+ fcons+=sigConstruct)*
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"."
+		public Keyword getFullStopKeyword_3_0() { return cFullStopKeyword_3_0; }
+
+		//WS+
+		public RuleCall getWSParserRuleCall_3_1() { return cWSParserRuleCall_3_1; }
+
+		//fcons+=sigConstruct
+		public Assignment getFconsAssignment_3_2() { return cFconsAssignment_3_2; }
+
+		//sigConstruct
+		public RuleCall getFconsSigConstructParserRuleCall_3_2_0() { return cFconsSigConstructParserRuleCall_3_2_0; }
+
+		//("." WS*)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"."
+		public Keyword getFullStopKeyword_4_0() { return cFullStopKeyword_4_0; }
+
+		//WS*
+		public RuleCall getWSParserRuleCall_4_1() { return cWSParserRuleCall_4_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class SigConstructElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "sigConstruct");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cSymbNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
@@ -528,55 +734,53 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonEqualsSignKeyword_0_2_1 = (Keyword)cAlternatives_0_2.eContents().get(1);
 		private final Keyword cEqualsSignKeyword_0_2_2 = (Keyword)cAlternatives_0_2.eContents().get(2);
 		private final RuleCall cSOMETHINGParserRuleCall_0_3 = (RuleCall)cGroup_0.eContents().get(3);
-		private final Keyword cFullStopKeyword_0_4 = (Keyword)cGroup_0.eContents().get(4);
-		private final RuleCall cWSParserRuleCall_0_5 = (RuleCall)cGroup_0.eContents().get(5);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cIncludeKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Assignment cNamespaceAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cNamespaceNAMESPACEParserRuleCall_1_2_0 = (RuleCall)cNamespaceAssignment_1_2.eContents().get(0);
-		private final Group cGroup_1_3 = (Group)cGroup_1.eContents().get(3);
-		private final RuleCall cWSParserRuleCall_1_3_0 = (RuleCall)cGroup_1_3.eContents().get(0);
-		private final RuleCall cIncludeOpsParserRuleCall_1_3_1 = (RuleCall)cGroup_1_3.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
-		private final RuleCall cWSParserRuleCall_1_5 = (RuleCall)cGroup_1.eContents().get(5);
+		private final Keyword cPercentSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cIncludeKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final Assignment cNamespaceAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cNamespaceNAMESPACEParserRuleCall_1_3_0 = (RuleCall)cNamespaceAssignment_1_3.eContents().get(0);
+		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
+		private final RuleCall cWSParserRuleCall_1_4_0 = (RuleCall)cGroup_1_4.eContents().get(0);
+		private final RuleCall cIncludeOpsParserRuleCall_1_4_1 = (RuleCall)cGroup_1_4.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cStructKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Assignment cStructNameAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cStructNameGIDParserRuleCall_2_2_0 = (RuleCall)cStructNameAssignment_2_2.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_2_3 = (RuleCall)cGroup_2.eContents().get(3);
-		private final Keyword cColonKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
-		private final RuleCall cSOMETHINGParserRuleCall_2_5 = (RuleCall)cGroup_2.eContents().get(5);
-		private final RuleCall cIncludeOpsParserRuleCall_2_6 = (RuleCall)cGroup_2.eContents().get(6);
-		private final Keyword cFullStopKeyword_2_7 = (Keyword)cGroup_2.eContents().get(7);
-		private final RuleCall cWSParserRuleCall_2_8 = (RuleCall)cGroup_2.eContents().get(8);
+		private final Keyword cPercentSignKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cStructKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_2_2 = (RuleCall)cGroup_2.eContents().get(2);
+		private final Assignment cStructNameAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cStructNameGIDParserRuleCall_2_3_0 = (RuleCall)cStructNameAssignment_2_3.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_2_4 = (RuleCall)cGroup_2.eContents().get(4);
+		private final Alternatives cAlternatives_2_5 = (Alternatives)cGroup_2.eContents().get(5);
+		private final Keyword cColonKeyword_2_5_0 = (Keyword)cAlternatives_2_5.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_2_5_1 = (Keyword)cAlternatives_2_5.eContents().get(1);
+		private final RuleCall cSOMETHINGParserRuleCall_2_6 = (RuleCall)cGroup_2.eContents().get(6);
+		private final Assignment cIncOptAssignment_2_7 = (Assignment)cGroup_2.eContents().get(7);
+		private final RuleCall cIncOptIncludeOpsParserRuleCall_2_7_0 = (RuleCall)cIncOptAssignment_2_7.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Assignment cTmpAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final Alternatives cTmpAlternatives_3_0_0 = (Alternatives)cTmpAssignment_3_0.eContents().get(0);
-		private final Keyword cTmpMetaKeyword_3_0_0_0 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(0);
-		private final Keyword cTmpAbbrevKeyword_3_0_0_1 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(1);
-		private final Keyword cTmpNameKeyword_3_0_0_2 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(2);
-		private final Keyword cTmpPatternKeyword_3_0_0_3 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(3);
-		private final Keyword cTmpInfixKeyword_3_0_0_4 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(4);
-		private final Keyword cTmpPrefixKeyword_3_0_0_5 = (Keyword)cTmpAlternatives_3_0_0.eContents().get(5);
-		private final RuleCall cSOMETHINGParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
-		private final Keyword cFullStopKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final RuleCall cWSParserRuleCall_3_3 = (RuleCall)cGroup_3.eContents().get(3);
-		private final RuleCall cJUSTSPACEParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final Keyword cPercentSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cTmpAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final Alternatives cTmpAlternatives_3_1_0 = (Alternatives)cTmpAssignment_3_1.eContents().get(0);
+		private final Keyword cTmpMetaKeyword_3_1_0_0 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(0);
+		private final Keyword cTmpAbbrevKeyword_3_1_0_1 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(1);
+		private final Keyword cTmpNameKeyword_3_1_0_2 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(2);
+		private final Keyword cTmpPatternKeyword_3_1_0_3 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(3);
+		private final Keyword cTmpInfixKeyword_3_1_0_4 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(4);
+		private final Keyword cTmpPrefixKeyword_3_1_0_5 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(5);
+		private final Keyword cTmpPostfixKeyword_3_1_0_6 = (Keyword)cTmpAlternatives_3_1_0.eContents().get(6);
+		private final RuleCall cSOMETHINGParserRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
 		
-		//sigDefinitions:
-		//	symbName=GID WS* (":" | ":=" | "=") SOMETHING* "." WS | "%include" WS+ namespace=NAMESPACE (WS+ includeOps)? "." WS |
-		//	"%struct" WS+ structName=GID WS* ":" SOMETHING* includeOps? "." WS | tmp=("%meta" | "%abbrev" | "%name" | "%pattern" |
-		//	"%infix" | "prefix") SOMETHING* "." WS | JUSTSPACE;
+		//sigConstruct:
+		//	symbName=GID WS* (":" | ":=" | "=") SOMETHING* | "%" "include" WS+ namespace=NAMESPACE (WS+ includeOps)? | "%"
+		//	"struct" WS+ structName=GID WS* (":" | ":=") SOMETHING* incOpt=includeOps? | "%" tmp=("meta" | "abbrev" | "name" |
+		//	"pattern" | "infix" | "prefix" | "postfix") SOMETHING*;
 		public ParserRule getRule() { return rule; }
 
-		//symbName=GID WS* (":" | ":=" | "=") SOMETHING* "." WS | "%include" WS+ namespace=NAMESPACE (WS+ includeOps)? "." WS |
-		//"%struct" WS+ structName=GID WS* ":" SOMETHING* includeOps? "." WS | tmp=("%meta" | "%abbrev" | "%name" | "%pattern" |
-		//"%infix" | "prefix") SOMETHING* "." WS | JUSTSPACE
+		//symbName=GID WS* (":" | ":=" | "=") SOMETHING* | "%" "include" WS+ namespace=NAMESPACE (WS+ includeOps)? | "%" "struct"
+		//WS+ structName=GID WS* (":" | ":=") SOMETHING* incOpt=includeOps? | "%" tmp=("meta" | "abbrev" | "name" | "pattern" |
+		//"infix" | "prefix" | "postfix") SOMETHING*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//symbName=GID WS* (":" | ":=" | "=") SOMETHING* "." WS
+		//symbName=GID WS* (":" | ":=" | "=") SOMETHING*
 		public Group getGroup_0() { return cGroup_0; }
 
 		//symbName=GID
@@ -603,133 +807,131 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		//SOMETHING*
 		public RuleCall getSOMETHINGParserRuleCall_0_3() { return cSOMETHINGParserRuleCall_0_3; }
 
-		//"."
-		public Keyword getFullStopKeyword_0_4() { return cFullStopKeyword_0_4; }
-
-		//WS
-		public RuleCall getWSParserRuleCall_0_5() { return cWSParserRuleCall_0_5; }
-
-		//"%include" WS+ namespace=NAMESPACE (WS+ includeOps)? "." WS
+		//"%" "include" WS+ namespace=NAMESPACE (WS+ includeOps)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"%include"
-		public Keyword getIncludeKeyword_1_0() { return cIncludeKeyword_1_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_1_0() { return cPercentSignKeyword_1_0; }
+
+		//"include"
+		public Keyword getIncludeKeyword_1_1() { return cIncludeKeyword_1_1; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_1_1() { return cWSParserRuleCall_1_1; }
+		public RuleCall getWSParserRuleCall_1_2() { return cWSParserRuleCall_1_2; }
 
 		//namespace=NAMESPACE
-		public Assignment getNamespaceAssignment_1_2() { return cNamespaceAssignment_1_2; }
+		public Assignment getNamespaceAssignment_1_3() { return cNamespaceAssignment_1_3; }
 
 		//NAMESPACE
-		public RuleCall getNamespaceNAMESPACEParserRuleCall_1_2_0() { return cNamespaceNAMESPACEParserRuleCall_1_2_0; }
+		public RuleCall getNamespaceNAMESPACEParserRuleCall_1_3_0() { return cNamespaceNAMESPACEParserRuleCall_1_3_0; }
 
 		//(WS+ includeOps)?
-		public Group getGroup_1_3() { return cGroup_1_3; }
+		public Group getGroup_1_4() { return cGroup_1_4; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_1_3_0() { return cWSParserRuleCall_1_3_0; }
+		public RuleCall getWSParserRuleCall_1_4_0() { return cWSParserRuleCall_1_4_0; }
 
 		//includeOps
-		public RuleCall getIncludeOpsParserRuleCall_1_3_1() { return cIncludeOpsParserRuleCall_1_3_1; }
+		public RuleCall getIncludeOpsParserRuleCall_1_4_1() { return cIncludeOpsParserRuleCall_1_4_1; }
 
-		//"."
-		public Keyword getFullStopKeyword_1_4() { return cFullStopKeyword_1_4; }
-
-		//WS
-		public RuleCall getWSParserRuleCall_1_5() { return cWSParserRuleCall_1_5; }
-
-		//"%struct" WS+ structName=GID WS* ":" SOMETHING* includeOps? "." WS
+		//"%" "struct" WS+ structName=GID WS* (":" | ":=") SOMETHING* incOpt=includeOps?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"%struct"
-		public Keyword getStructKeyword_2_0() { return cStructKeyword_2_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_2_0() { return cPercentSignKeyword_2_0; }
+
+		//"struct"
+		public Keyword getStructKeyword_2_1() { return cStructKeyword_2_1; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_2_1() { return cWSParserRuleCall_2_1; }
+		public RuleCall getWSParserRuleCall_2_2() { return cWSParserRuleCall_2_2; }
 
 		//structName=GID
-		public Assignment getStructNameAssignment_2_2() { return cStructNameAssignment_2_2; }
+		public Assignment getStructNameAssignment_2_3() { return cStructNameAssignment_2_3; }
 
 		//GID
-		public RuleCall getStructNameGIDParserRuleCall_2_2_0() { return cStructNameGIDParserRuleCall_2_2_0; }
+		public RuleCall getStructNameGIDParserRuleCall_2_3_0() { return cStructNameGIDParserRuleCall_2_3_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_2_3() { return cWSParserRuleCall_2_3; }
+		public RuleCall getWSParserRuleCall_2_4() { return cWSParserRuleCall_2_4; }
+
+		//":" | ":="
+		public Alternatives getAlternatives_2_5() { return cAlternatives_2_5; }
 
 		//":"
-		public Keyword getColonKeyword_2_4() { return cColonKeyword_2_4; }
+		public Keyword getColonKeyword_2_5_0() { return cColonKeyword_2_5_0; }
+
+		//":="
+		public Keyword getColonEqualsSignKeyword_2_5_1() { return cColonEqualsSignKeyword_2_5_1; }
 
 		//SOMETHING*
-		public RuleCall getSOMETHINGParserRuleCall_2_5() { return cSOMETHINGParserRuleCall_2_5; }
+		public RuleCall getSOMETHINGParserRuleCall_2_6() { return cSOMETHINGParserRuleCall_2_6; }
 
-		//includeOps?
-		public RuleCall getIncludeOpsParserRuleCall_2_6() { return cIncludeOpsParserRuleCall_2_6; }
+		//incOpt=includeOps?
+		public Assignment getIncOptAssignment_2_7() { return cIncOptAssignment_2_7; }
 
-		//"."
-		public Keyword getFullStopKeyword_2_7() { return cFullStopKeyword_2_7; }
+		//includeOps
+		public RuleCall getIncOptIncludeOpsParserRuleCall_2_7_0() { return cIncOptIncludeOpsParserRuleCall_2_7_0; }
 
-		//WS
-		public RuleCall getWSParserRuleCall_2_8() { return cWSParserRuleCall_2_8; }
-
-		//tmp=("%meta" | "%abbrev" | "%name" | "%pattern" | "%infix" | "prefix") SOMETHING* "." WS
+		//"%" tmp=("meta" | "abbrev" | "name" | "pattern" | "infix" | "prefix" | "postfix") SOMETHING*
 		public Group getGroup_3() { return cGroup_3; }
 
-		//tmp=("%meta" | "%abbrev" | "%name" | "%pattern" | "%infix" | "prefix")
-		public Assignment getTmpAssignment_3_0() { return cTmpAssignment_3_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_3_0() { return cPercentSignKeyword_3_0; }
 
-		//"%meta" | "%abbrev" | "%name" | "%pattern" | "%infix" | "prefix"
-		public Alternatives getTmpAlternatives_3_0_0() { return cTmpAlternatives_3_0_0; }
+		//tmp=("meta" | "abbrev" | "name" | "pattern" | "infix" | "prefix" | "postfix")
+		public Assignment getTmpAssignment_3_1() { return cTmpAssignment_3_1; }
 
-		//"%meta"
-		public Keyword getTmpMetaKeyword_3_0_0_0() { return cTmpMetaKeyword_3_0_0_0; }
+		//"meta" | "abbrev" | "name" | "pattern" | "infix" | "prefix" | "postfix"
+		public Alternatives getTmpAlternatives_3_1_0() { return cTmpAlternatives_3_1_0; }
 
-		//"%abbrev"
-		public Keyword getTmpAbbrevKeyword_3_0_0_1() { return cTmpAbbrevKeyword_3_0_0_1; }
+		//"meta"
+		public Keyword getTmpMetaKeyword_3_1_0_0() { return cTmpMetaKeyword_3_1_0_0; }
 
-		//"%name"
-		public Keyword getTmpNameKeyword_3_0_0_2() { return cTmpNameKeyword_3_0_0_2; }
+		//"abbrev"
+		public Keyword getTmpAbbrevKeyword_3_1_0_1() { return cTmpAbbrevKeyword_3_1_0_1; }
 
-		//"%pattern"
-		public Keyword getTmpPatternKeyword_3_0_0_3() { return cTmpPatternKeyword_3_0_0_3; }
+		//"name"
+		public Keyword getTmpNameKeyword_3_1_0_2() { return cTmpNameKeyword_3_1_0_2; }
 
-		//"%infix"
-		public Keyword getTmpInfixKeyword_3_0_0_4() { return cTmpInfixKeyword_3_0_0_4; }
+		//"pattern"
+		public Keyword getTmpPatternKeyword_3_1_0_3() { return cTmpPatternKeyword_3_1_0_3; }
+
+		//"infix"
+		public Keyword getTmpInfixKeyword_3_1_0_4() { return cTmpInfixKeyword_3_1_0_4; }
 
 		//"prefix"
-		public Keyword getTmpPrefixKeyword_3_0_0_5() { return cTmpPrefixKeyword_3_0_0_5; }
+		public Keyword getTmpPrefixKeyword_3_1_0_5() { return cTmpPrefixKeyword_3_1_0_5; }
+
+		//"postfix"
+		public Keyword getTmpPostfixKeyword_3_1_0_6() { return cTmpPostfixKeyword_3_1_0_6; }
 
 		//SOMETHING*
-		public RuleCall getSOMETHINGParserRuleCall_3_1() { return cSOMETHINGParserRuleCall_3_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_3_2() { return cFullStopKeyword_3_2; }
-
-		//WS
-		public RuleCall getWSParserRuleCall_3_3() { return cWSParserRuleCall_3_3; }
-
-		//JUSTSPACE
-		public RuleCall getJUSTSPACEParserRuleCall_4() { return cJUSTSPACEParserRuleCall_4; }
+		public RuleCall getSOMETHINGParserRuleCall_3_2() { return cSOMETHINGParserRuleCall_3_2; }
 	}
 
 	public class IncludeOpsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "includeOps");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOpenKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cSOMETHINGParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cPercentSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cOpenKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cSOMETHINGParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//includeOps:
-		//	"%open" SOMETHING*;
+		//	"%" "open" SOMETHING*;
 		public ParserRule getRule() { return rule; }
 
-		//"%open" SOMETHING*
+		//"%" "open" SOMETHING*
 		public Group getGroup() { return cGroup; }
 
-		//"%open"
-		public Keyword getOpenKeyword_0() { return cOpenKeyword_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_0() { return cPercentSignKeyword_0; }
+
+		//"open"
+		public Keyword getOpenKeyword_1() { return cOpenKeyword_1; }
 
 		//SOMETHING*
-		public RuleCall getSOMETHINGParserRuleCall_1() { return cSOMETHINGParserRuleCall_1; }
+		public RuleCall getSOMETHINGParserRuleCall_2() { return cSOMETHINGParserRuleCall_2; }
 	}
 
 	public class TempTypeElements extends AbstractParserRuleElementFinder {
@@ -763,117 +965,115 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	public class ViewDeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "viewDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cViewKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cViewIDAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cViewIDGIDParserRuleCall_2_0 = (RuleCall)cViewIDAssignment_2.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cWSParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Assignment cFromAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFromNAMESPACEParserRuleCall_6_0 = (RuleCall)cFromAssignment_6.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final RuleCall cWSParserRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Assignment cToAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cToNAMESPACEParserRuleCall_10_0 = (RuleCall)cToAssignment_10.eContents().get(0);
-		private final RuleCall cWSParserRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
-		private final Keyword cEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final RuleCall cWSParserRuleCall_13 = (RuleCall)cGroup.eContents().get(13);
-		private final Keyword cLeftCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Assignment cViewDefinitionsAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cViewDefinitionsSigDefinitionsParserRuleCall_15_0 = (RuleCall)cViewDefinitionsAssignment_15.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final RuleCall cWSParserRuleCall_17 = (RuleCall)cGroup.eContents().get(17);
-		private final Keyword cFullStopKeyword_18 = (Keyword)cGroup.eContents().get(18);
-		private final RuleCall cWSParserRuleCall_19 = (RuleCall)cGroup.eContents().get(19);
+		private final Keyword cPercentSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cViewKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cWSParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cViewIDAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cViewIDGIDParserRuleCall_3_0 = (RuleCall)cViewIDAssignment_3.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final RuleCall cWSParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Assignment cFromAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cFromNAMESPACEParserRuleCall_7_0 = (RuleCall)cFromAssignment_7.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final RuleCall cWSParserRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final Assignment cToAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cToNAMESPACEParserRuleCall_11_0 = (RuleCall)cToAssignment_11.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
+		private final Keyword cEqualsSignKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final RuleCall cWSParserRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
+		private final Assignment cViewDefsAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cViewDefsSigDefinitionsParserRuleCall_15_0 = (RuleCall)cViewDefsAssignment_15.eContents().get(0);
+		private final RuleCall cWSParserRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
+		private final Keyword cFullStopKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final RuleCall cWSParserRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
 		
 		//viewDeclaration:
-		//	"%view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* "{"
-		//	viewDefinitions+=sigDefinitions* "}" WS* "." WS;
+		//	"%" "view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* viewDefs=sigDefinitions WS*
+		//	"." WS;
 		public ParserRule getRule() { return rule; }
 
-		//"%view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* "{"
-		//viewDefinitions+=sigDefinitions* "}" WS* "." WS
+		//"%" "view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* viewDefs=sigDefinitions WS*
+		//"." WS
 		public Group getGroup() { return cGroup; }
 
-		//"%view"
-		public Keyword getViewKeyword_0() { return cViewKeyword_0; }
+		//"%"
+		public Keyword getPercentSignKeyword_0() { return cPercentSignKeyword_0; }
+
+		//"view"
+		public Keyword getViewKeyword_1() { return cViewKeyword_1; }
 
 		//WS+
-		public RuleCall getWSParserRuleCall_1() { return cWSParserRuleCall_1; }
+		public RuleCall getWSParserRuleCall_2() { return cWSParserRuleCall_2; }
 
 		//viewID=GID
-		public Assignment getViewIDAssignment_2() { return cViewIDAssignment_2; }
+		public Assignment getViewIDAssignment_3() { return cViewIDAssignment_3; }
 
 		//GID
-		public RuleCall getViewIDGIDParserRuleCall_2_0() { return cViewIDGIDParserRuleCall_2_0; }
+		public RuleCall getViewIDGIDParserRuleCall_3_0() { return cViewIDGIDParserRuleCall_3_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_3() { return cWSParserRuleCall_3; }
+		public RuleCall getWSParserRuleCall_4() { return cWSParserRuleCall_4; }
 
 		//":"
-		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_5() { return cWSParserRuleCall_5; }
+		public RuleCall getWSParserRuleCall_6() { return cWSParserRuleCall_6; }
 
 		//from=NAMESPACE
-		public Assignment getFromAssignment_6() { return cFromAssignment_6; }
+		public Assignment getFromAssignment_7() { return cFromAssignment_7; }
 
 		//NAMESPACE
-		public RuleCall getFromNAMESPACEParserRuleCall_6_0() { return cFromNAMESPACEParserRuleCall_6_0; }
+		public RuleCall getFromNAMESPACEParserRuleCall_7_0() { return cFromNAMESPACEParserRuleCall_7_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_7() { return cWSParserRuleCall_7; }
+		public RuleCall getWSParserRuleCall_8() { return cWSParserRuleCall_8; }
 
 		//"->"
-		public Keyword getHyphenMinusGreaterThanSignKeyword_8() { return cHyphenMinusGreaterThanSignKeyword_8; }
+		public Keyword getHyphenMinusGreaterThanSignKeyword_9() { return cHyphenMinusGreaterThanSignKeyword_9; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_9() { return cWSParserRuleCall_9; }
+		public RuleCall getWSParserRuleCall_10() { return cWSParserRuleCall_10; }
 
 		//to=NAMESPACE
-		public Assignment getToAssignment_10() { return cToAssignment_10; }
+		public Assignment getToAssignment_11() { return cToAssignment_11; }
 
 		//NAMESPACE
-		public RuleCall getToNAMESPACEParserRuleCall_10_0() { return cToNAMESPACEParserRuleCall_10_0; }
+		public RuleCall getToNAMESPACEParserRuleCall_11_0() { return cToNAMESPACEParserRuleCall_11_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_11() { return cWSParserRuleCall_11; }
+		public RuleCall getWSParserRuleCall_12() { return cWSParserRuleCall_12; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_12() { return cEqualsSignKeyword_12; }
+		public Keyword getEqualsSignKeyword_13() { return cEqualsSignKeyword_13; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_13() { return cWSParserRuleCall_13; }
+		public RuleCall getWSParserRuleCall_14() { return cWSParserRuleCall_14; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_14() { return cLeftCurlyBracketKeyword_14; }
-
-		//viewDefinitions+=sigDefinitions*
-		public Assignment getViewDefinitionsAssignment_15() { return cViewDefinitionsAssignment_15; }
+		//viewDefs=sigDefinitions
+		public Assignment getViewDefsAssignment_15() { return cViewDefsAssignment_15; }
 
 		//sigDefinitions
-		public RuleCall getViewDefinitionsSigDefinitionsParserRuleCall_15_0() { return cViewDefinitionsSigDefinitionsParserRuleCall_15_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
+		public RuleCall getViewDefsSigDefinitionsParserRuleCall_15_0() { return cViewDefsSigDefinitionsParserRuleCall_15_0; }
 
 		//WS*
-		public RuleCall getWSParserRuleCall_17() { return cWSParserRuleCall_17; }
+		public RuleCall getWSParserRuleCall_16() { return cWSParserRuleCall_16; }
 
 		//"."
-		public Keyword getFullStopKeyword_18() { return cFullStopKeyword_18; }
+		public Keyword getFullStopKeyword_17() { return cFullStopKeyword_17; }
 
 		//WS
-		public RuleCall getWSParserRuleCall_19() { return cWSParserRuleCall_19; }
+		public RuleCall getWSParserRuleCall_18() { return cWSParserRuleCall_18; }
 	}
 	
 	
 	private ModelElements pModel;
 	private TerminalRule tINT;
 	private TerminalRule tSP;
+	private TerminalRule tDoubleDot;
+	private TerminalRule tMultipleDot;
 	private TerminalRule tCID;
 	private TerminalRule tML_COMMENT;
 	private TerminalRule tML2_COMMENT;
@@ -888,9 +1088,11 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	private ReadDeclarationElements pReadDeclaration;
 	private GIDElements pGID;
 	private SOMETHINGElements pSOMETHING;
+	private SOMETHING2Elements pSOMETHING2;
 	private SigOpsElements pSigOps;
 	private SignatureDeclarationElements pSignatureDeclaration;
 	private SigDefinitionsElements pSigDefinitions;
+	private SigConstructElements pSigConstruct;
 	private IncludeOpsElements pIncludeOps;
 	private TempTypeElements pTempType;
 	private ViewDeclarationElements pViewDeclaration;
@@ -928,6 +1130,18 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	//	" " | "\t" | "\r" | "\n";
 	public TerminalRule getSPRule() {
 		return (tSP != null) ? tSP : (tSP = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SP"));
+	} 
+
+	//terminal doubleDot:
+	//	"..";
+	public TerminalRule getDoubleDotRule() {
+		return (tDoubleDot != null) ? tDoubleDot : (tDoubleDot = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "doubleDot"));
+	} 
+
+	//terminal multipleDot:
+	//	doubleDot "."+;
+	public TerminalRule getMultipleDotRule() {
+		return (tMultipleDot != null) ? tMultipleDot : (tMultipleDot = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "multipleDot"));
 	} 
 
 	//terminal CID:
@@ -971,7 +1185,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NAMESPACE:
-	//	"../"* CID (("/" | ".") CID)*;
+	//	(doubleDot "/")* CID (("/" | ".") CID)*;
 	public NAMESPACEElements getNAMESPACEAccess() {
 		return (pNAMESPACE != null) ? pNAMESPACE : (pNAMESPACE = new NAMESPACEElements());
 	}
@@ -981,7 +1195,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//URI:
-	//	(CID "://")? NAMESPACE;
+	//	(CID ":" "/" "/")? NAMESPACE;
 	public URIElements getURIAccess() {
 		return (pURI != null) ? pURI : (pURI = new URIElements());
 	}
@@ -1011,7 +1225,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//namespaceDeclaration:
-	//	"%namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS;
+	//	"%" "namespace" WS+ (name=CID WS* "=" WS*)? uri=URISTRING WS* "." WS;
 	public NamespaceDeclarationElements getNamespaceDeclarationAccess() {
 		return (pNamespaceDeclaration != null) ? pNamespaceDeclaration : (pNamespaceDeclaration = new NamespaceDeclarationElements());
 	}
@@ -1021,7 +1235,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//readDeclaration:
-	//	"%read" WS+ file=URISTRING WS* "." WS;
+	//	"%" "read" WS+ file=URISTRING WS* "." WS;
 	public ReadDeclarationElements getReadDeclarationAccess() {
 		return (pReadDeclaration != null) ? pReadDeclaration : (pReadDeclaration = new ReadDeclarationElements());
 	}
@@ -1031,7 +1245,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GID:
-	//	(CID | ANY_OTHER | INT)+ | ".." "."*;
+	//	(CID | ANY_OTHER | INT)+ ("="+ WS)? | "=" "="+ WS | multipleDot | doubleDot;
 	public GIDElements getGIDAccess() {
 		return (pGID != null) ? pGID : (pGID = new GIDElements());
 	}
@@ -1041,7 +1255,8 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SOMETHING:
-	//	ANY_OTHER | CID | INT | "." CID | ":" | "=" | "<" | "->" | "%" | "-" | ".." "."* WS | WS;
+	//	ANY_OTHER | CID | INT | "." (CID | ANY_OTHER) | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot
+	//	| WS;
 	public SOMETHINGElements getSOMETHINGAccess() {
 		return (pSOMETHING != null) ? pSOMETHING : (pSOMETHING = new SOMETHINGElements());
 	}
@@ -1050,8 +1265,18 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		return getSOMETHINGAccess().getRule();
 	}
 
+	//SOMETHING2:
+	//	ANY_OTHER | CID | INT | "." | ":" | "=" | "->" | "%" | "{" SOMETHING2* "}" | multipleDot | doubleDot | WS;
+	public SOMETHING2Elements getSOMETHING2Access() {
+		return (pSOMETHING2 != null) ? pSOMETHING2 : (pSOMETHING2 = new SOMETHING2Elements());
+	}
+	
+	public ParserRule getSOMETHING2Rule() {
+		return getSOMETHING2Access().getRule();
+	}
+
 	//sigOps:
-	//	("%meta" | "%abbrev") SOMETHING* "." WS;
+	//	("%" "meta" | "%" "abbrev") SOMETHING* "." WS;
 	public SigOpsElements getSigOpsAccess() {
 		return (pSigOps != null) ? pSigOps : (pSigOps = new SigOpsElements());
 	}
@@ -1061,7 +1286,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//signatureDeclaration:
-	//	"%sig" WS+ sigName=GID WS* "=" WS* "{" sigDefinitions+=sigDefinitions* "}" WS* "." WS;
+	//	"%" "sig" WS+ sigName=GID WS* "=" WS* defs=sigDefinitions WS* ".";
 	public SignatureDeclarationElements getSignatureDeclarationAccess() {
 		return (pSignatureDeclaration != null) ? pSignatureDeclaration : (pSignatureDeclaration = new SignatureDeclarationElements());
 	}
@@ -1071,9 +1296,7 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//sigDefinitions:
-	//	symbName=GID WS* (":" | ":=" | "=") SOMETHING* "." WS | "%include" WS+ namespace=NAMESPACE (WS+ includeOps)? "." WS |
-	//	"%struct" WS+ structName=GID WS* ":" SOMETHING* includeOps? "." WS | tmp=("%meta" | "%abbrev" | "%name" | "%pattern" |
-	//	"%infix" | "prefix") SOMETHING* "." WS | JUSTSPACE;
+	//	"{" WS* cons=sigConstruct ("." WS+ fcons+=sigConstruct)* ("." WS*)? "}";
 	public SigDefinitionsElements getSigDefinitionsAccess() {
 		return (pSigDefinitions != null) ? pSigDefinitions : (pSigDefinitions = new SigDefinitionsElements());
 	}
@@ -1082,8 +1305,20 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 		return getSigDefinitionsAccess().getRule();
 	}
 
+	//sigConstruct:
+	//	symbName=GID WS* (":" | ":=" | "=") SOMETHING* | "%" "include" WS+ namespace=NAMESPACE (WS+ includeOps)? | "%"
+	//	"struct" WS+ structName=GID WS* (":" | ":=") SOMETHING* incOpt=includeOps? | "%" tmp=("meta" | "abbrev" | "name" |
+	//	"pattern" | "infix" | "prefix" | "postfix") SOMETHING*;
+	public SigConstructElements getSigConstructAccess() {
+		return (pSigConstruct != null) ? pSigConstruct : (pSigConstruct = new SigConstructElements());
+	}
+	
+	public ParserRule getSigConstructRule() {
+		return getSigConstructAccess().getRule();
+	}
+
 	//includeOps:
-	//	"%open" SOMETHING*;
+	//	"%" "open" SOMETHING*;
 	public IncludeOpsElements getIncludeOpsAccess() {
 		return (pIncludeOps != null) ? pIncludeOps : (pIncludeOps = new IncludeOpsElements());
 	}
@@ -1103,8 +1338,8 @@ public class LFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//viewDeclaration:
-	//	"%view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* "{"
-	//	viewDefinitions+=sigDefinitions* "}" WS* "." WS;
+	//	"%" "view" WS+ viewID=GID WS* ":" WS* from=NAMESPACE WS* "->" WS* to=NAMESPACE WS* "=" WS* viewDefs=sigDefinitions WS*
+	//	"." WS;
 	public ViewDeclarationElements getViewDeclarationAccess() {
 		return (pViewDeclaration != null) ? pViewDeclaration : (pViewDeclaration = new ViewDeclarationElements());
 	}

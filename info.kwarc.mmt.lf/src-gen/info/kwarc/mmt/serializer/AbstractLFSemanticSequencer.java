@@ -8,6 +8,7 @@ import info.kwarc.mmt.lF.Model;
 import info.kwarc.mmt.lF.TempType;
 import info.kwarc.mmt.lF.namespaceDeclaration;
 import info.kwarc.mmt.lF.readDeclaration;
+import info.kwarc.mmt.lF.sigConstruct;
 import info.kwarc.mmt.lF.sigDefinitions;
 import info.kwarc.mmt.lF.signatureDeclaration;
 import info.kwarc.mmt.lF.viewDeclaration;
@@ -53,8 +54,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == LFPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case LFPackage.JUSTSPACE:
-				if(context == grammarAccess.getJUSTSPACERule() ||
-				   context == grammarAccess.getSigDefinitionsRule()) {
+				if(context == grammarAccess.getJUSTSPACERule()) {
 					sequence_JUSTSPACE_JUSTSPACE(context, (JUSTSPACE) semanticObject); 
 					return; 
 				}
@@ -87,6 +87,12 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LFPackage.SIG_CONSTRUCT:
+				if(context == grammarAccess.getSigConstructRule()) {
+					sequence_sigConstruct_sigConstruct(context, (sigConstruct) semanticObject); 
+					return; 
+				}
+				else break;
 			case LFPackage.SIG_DEFINITIONS:
 				if(context == grammarAccess.getSigDefinitionsRule()) {
 					sequence_sigDefinitions_sigDefinitions(context, (sigDefinitions) semanticObject); 
@@ -94,12 +100,12 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case LFPackage.SIGNATURE_DECLARATION:
-				if(context == grammarAccess.getSignatureDeclarationRule()) {
-					sequence_signatureDeclaration_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
+				if(context == grammarAccess.getTempTypeRule()) {
+					sequence_TempType_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getTempTypeRule()) {
-					sequence_TempType_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
+				else if(context == grammarAccess.getSignatureDeclarationRule()) {
+					sequence_signatureDeclaration_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
@@ -121,7 +127,14 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    J[1, 1]
 	 */
 	protected void sequence_JUSTSPACE_JUSTSPACE(EObject context, JUSTSPACE semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.JUSTSPACE__J) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.JUSTSPACE__J));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getJUSTSPACEAccess().getJWSParserRuleCall_0(), semanticObject.getJ());
+		feeder.finish();
 	}
 	
 	
@@ -211,7 +224,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_2_0(), semanticObject.getFile());
+		feeder.accept(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_3_0(), semanticObject.getFile());
 		feeder.finish();
 	}
 	
@@ -221,19 +234,22 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *     (
 	 *         symbName=GID | 
 	 *         namespace=NAMESPACE | 
-	 *         structName=GID | 
-	 *         tmp='%meta' | 
-	 *         tmp='%abbrev' | 
-	 *         tmp='%name' | 
-	 *         tmp='%pattern' | 
-	 *         tmp='%infix' | 
-	 *         tmp='prefix'
+	 *         (structName=GID incOpt=includeOps?) | 
+	 *         tmp='meta' | 
+	 *         tmp='abbrev' | 
+	 *         tmp='name' | 
+	 *         tmp='pattern' | 
+	 *         tmp='infix' | 
+	 *         tmp='prefix' | 
+	 *         tmp='postfix'
 	 *     )
 	 *
 	 * Features:
 	 *    symbName[0, 1]
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET incOpt
+	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
@@ -243,13 +259,16 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    namespace[0, 1]
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET incOpt
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
-	 *    structName[0, 1]
+	 *         EXCLUDE_IF_SET tmp
+	 *    structName[1, 1]
+	 *         MANDATORY_IF_SET incOpt
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET tmp
@@ -258,10 +277,36 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
-	 *    tmp[0, 6]
+	 *         EXCLUDE_IF_SET tmp
+	 *    incOpt[0, 1]
+	 *         EXCLUDE_IF_UNSET structName
+	 *         EXCLUDE_IF_SET symbName
+	 *         EXCLUDE_IF_SET namespace
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    tmp[0, 7]
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
+	 *         EXCLUDE_IF_SET incOpt
+	 */
+	protected void sequence_sigConstruct_sigConstruct(EObject context, sigConstruct semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (cons=sigConstruct fcons+=sigConstruct*)
+	 *
+	 * Features:
+	 *    cons[1, 1]
+	 *    fcons[0, *]
 	 */
 	protected void sequence_sigDefinitions_sigDefinitions(EObject context, sigDefinitions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -270,11 +315,11 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (sigName=GID sigDefinitions+=sigDefinitions*)
+	 *     (sigName=GID defs=sigDefinitions)
 	 *
 	 * Features:
 	 *    sigName[1, 1]
-	 *    sigDefinitions[0, *]
+	 *    defs[1, 1]
 	 */
 	protected void sequence_signatureDeclaration_signatureDeclaration(EObject context, signatureDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -283,15 +328,31 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (viewID=GID from=NAMESPACE to=NAMESPACE viewDefinitions+=sigDefinitions*)
+	 *     (viewID=GID from=NAMESPACE to=NAMESPACE viewDefs=sigDefinitions)
 	 *
 	 * Features:
 	 *    viewID[1, 1]
 	 *    from[1, 1]
 	 *    to[1, 1]
-	 *    viewDefinitions[0, *]
+	 *    viewDefs[1, 1]
 	 */
 	protected void sequence_viewDeclaration_viewDeclaration(EObject context, viewDeclaration semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.VIEW_DECLARATION__VIEW_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.VIEW_DECLARATION__VIEW_ID));
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.VIEW_DECLARATION__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.VIEW_DECLARATION__FROM));
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.VIEW_DECLARATION__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.VIEW_DECLARATION__TO));
+			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.VIEW_DECLARATION__VIEW_DEFS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.VIEW_DECLARATION__VIEW_DEFS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_3_0(), semanticObject.getViewID());
+		feeder.accept(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_7_0(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_11_0(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getViewDeclarationAccess().getViewDefsSigDefinitionsParserRuleCall_15_0(), semanticObject.getViewDefs());
+		feeder.finish();
 	}
 }

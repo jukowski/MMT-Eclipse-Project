@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class JUSTSPACEImpl extends sigDefinitionsImpl implements JUSTSPACE
+public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTSPACE
 {
   /**
    * The default value of the '{@link #getJ() <em>J</em>}' attribute.

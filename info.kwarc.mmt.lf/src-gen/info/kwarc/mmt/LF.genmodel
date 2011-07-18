@@ -23,13 +23,18 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration/sigName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration/sigDefinitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration/defs"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/symbName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/namespace"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/structName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/tmp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/cons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/fcons"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/symbName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/structName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/incOpt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/tmp"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType/fullURI"/>
@@ -38,7 +43,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//viewDeclaration/viewID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//viewDeclaration/from"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//viewDeclaration/to"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//viewDeclaration/viewDefinitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//viewDeclaration/viewDefs"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

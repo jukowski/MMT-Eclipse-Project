@@ -11,6 +11,7 @@ import info.kwarc.mmt.lF.Model;
 import info.kwarc.mmt.lF.TempType;
 import info.kwarc.mmt.lF.namespaceDeclaration;
 import info.kwarc.mmt.lF.readDeclaration;
+import info.kwarc.mmt.lF.sigConstruct;
 import info.kwarc.mmt.lF.sigDefinitions;
 import info.kwarc.mmt.lF.signatureDeclaration;
 import info.kwarc.mmt.lF.viewDeclaration;
@@ -71,6 +72,13 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * @generated
    */
   private EClass sigDefinitionsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sigConstructEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -264,7 +272,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getsignatureDeclaration_SigDefinitions()
+  public EReference getsignatureDeclaration_Defs()
   {
     return (EReference)signatureDeclarationEClass.getEStructuralFeatures().get(1);
   }
@@ -284,9 +292,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_SymbName()
+  public EReference getsigDefinitions_Cons()
   {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(0);
+    return (EReference)sigDefinitionsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -294,9 +302,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_Namespace()
+  public EReference getsigDefinitions_Fcons()
   {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(1);
+    return (EReference)sigDefinitionsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -304,9 +312,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_StructName()
+  public EClass getsigConstruct()
   {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(2);
+    return sigConstructEClass;
   }
 
   /**
@@ -314,9 +322,49 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_Tmp()
+  public EAttribute getsigConstruct_SymbName()
   {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigConstruct_Namespace()
+  {
+    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigConstruct_StructName()
+  {
+    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigConstruct_IncOpt()
+  {
+    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getsigConstruct_Tmp()
+  {
+    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -384,7 +432,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getviewDeclaration_ViewDefinitions()
+  public EReference getviewDeclaration_ViewDefs()
   {
     return (EReference)viewDeclarationEClass.getEStructuralFeatures().get(3);
   }
@@ -434,13 +482,18 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
 
     signatureDeclarationEClass = createEClass(SIGNATURE_DECLARATION);
     createEAttribute(signatureDeclarationEClass, SIGNATURE_DECLARATION__SIG_NAME);
-    createEReference(signatureDeclarationEClass, SIGNATURE_DECLARATION__SIG_DEFINITIONS);
+    createEReference(signatureDeclarationEClass, SIGNATURE_DECLARATION__DEFS);
 
     sigDefinitionsEClass = createEClass(SIG_DEFINITIONS);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__SYMB_NAME);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__NAMESPACE);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__STRUCT_NAME);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TMP);
+    createEReference(sigDefinitionsEClass, SIG_DEFINITIONS__CONS);
+    createEReference(sigDefinitionsEClass, SIG_DEFINITIONS__FCONS);
+
+    sigConstructEClass = createEClass(SIG_CONSTRUCT);
+    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__SYMB_NAME);
+    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__NAMESPACE);
+    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__STRUCT_NAME);
+    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__INC_OPT);
+    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__TMP);
 
     tempTypeEClass = createEClass(TEMP_TYPE);
     createEAttribute(tempTypeEClass, TEMP_TYPE__FULL_URI);
@@ -449,7 +502,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     createEAttribute(viewDeclarationEClass, VIEW_DECLARATION__VIEW_ID);
     createEAttribute(viewDeclarationEClass, VIEW_DECLARATION__FROM);
     createEAttribute(viewDeclarationEClass, VIEW_DECLARATION__TO);
-    createEReference(viewDeclarationEClass, VIEW_DECLARATION__VIEW_DEFINITIONS);
+    createEReference(viewDeclarationEClass, VIEW_DECLARATION__VIEW_DEFS);
   }
 
   /**
@@ -481,7 +534,6 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    justspaceEClass.getESuperTypes().add(this.getsigDefinitions());
     namespaceDeclarationEClass.getESuperTypes().add(this.getTempType());
     signatureDeclarationEClass.getESuperTypes().add(this.getTempType());
 
@@ -501,13 +553,18 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
 
     initEClass(signatureDeclarationEClass, signatureDeclaration.class, "signatureDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getsignatureDeclaration_SigName(), ecorePackage.getEString(), "sigName", null, 0, 1, signatureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getsignatureDeclaration_SigDefinitions(), this.getsigDefinitions(), null, "sigDefinitions", null, 0, -1, signatureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getsignatureDeclaration_Defs(), this.getsigDefinitions(), null, "defs", null, 0, 1, signatureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sigDefinitionsEClass, sigDefinitions.class, "sigDefinitions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getsigDefinitions_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_Namespace(), ecorePackage.getEString(), "namespace", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_Tmp(), ecorePackage.getEString(), "tmp", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getsigDefinitions_Cons(), this.getsigConstruct(), null, "cons", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getsigDefinitions_Fcons(), this.getsigConstruct(), null, "fcons", null, 0, -1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sigConstructEClass, sigConstruct.class, "sigConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getsigConstruct_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigConstruct_Namespace(), ecorePackage.getEString(), "namespace", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigConstruct_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigConstruct_IncOpt(), ecorePackage.getEString(), "incOpt", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getsigConstruct_Tmp(), ecorePackage.getEString(), "tmp", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tempTypeEClass, TempType.class, "TempType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTempType_FullURI(), ecorePackage.getEString(), "fullURI", null, 0, 1, TempType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -516,7 +573,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     initEAttribute(getviewDeclaration_ViewID(), ecorePackage.getEString(), "viewID", null, 0, 1, viewDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getviewDeclaration_From(), ecorePackage.getEString(), "from", null, 0, 1, viewDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getviewDeclaration_To(), ecorePackage.getEString(), "to", null, 0, 1, viewDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getviewDeclaration_ViewDefinitions(), this.getsigDefinitions(), null, "viewDefinitions", null, 0, -1, viewDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getviewDeclaration_ViewDefs(), this.getsigDefinitions(), null, "viewDefs", null, 0, 1, viewDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

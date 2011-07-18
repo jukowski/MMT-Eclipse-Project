@@ -88,61 +88,6 @@ public interface LFPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl <em>sig Definitions</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see info.kwarc.mmt.lF.impl.sigDefinitionsImpl
-   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigDefinitions()
-   * @generated
-   */
-  int SIG_DEFINITIONS = 5;
-
-  /**
-   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__SYMB_NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Namespace</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__NAMESPACE = 1;
-
-  /**
-   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__STRUCT_NAME = 2;
-
-  /**
-   * The feature id for the '<em><b>Tmp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__TMP = 3;
-
-  /**
-   * The number of structural features of the '<em>sig Definitions</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS_FEATURE_COUNT = 4;
-
-  /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.JUSTSPACEImpl <em>JUSTSPACE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -153,49 +98,13 @@ public interface LFPackage extends EPackage
   int JUSTSPACE = 1;
 
   /**
-   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int JUSTSPACE__SYMB_NAME = SIG_DEFINITIONS__SYMB_NAME;
-
-  /**
-   * The feature id for the '<em><b>Namespace</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int JUSTSPACE__NAMESPACE = SIG_DEFINITIONS__NAMESPACE;
-
-  /**
-   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int JUSTSPACE__STRUCT_NAME = SIG_DEFINITIONS__STRUCT_NAME;
-
-  /**
-   * The feature id for the '<em><b>Tmp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int JUSTSPACE__TMP = SIG_DEFINITIONS__TMP;
-
-  /**
    * The feature id for the '<em><b>J</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JUSTSPACE__J = SIG_DEFINITIONS_FEATURE_COUNT + 0;
+  int JUSTSPACE__J = 0;
 
   /**
    * The number of structural features of the '<em>JUSTSPACE</em>' class.
@@ -204,7 +113,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUSTSPACE_FEATURE_COUNT = SIG_DEFINITIONS_FEATURE_COUNT + 1;
+  int JUSTSPACE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.
@@ -214,7 +123,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getTempType()
    * @generated
    */
-  int TEMP_TYPE = 6;
+  int TEMP_TYPE = 7;
 
   /**
    * The feature id for the '<em><b>Full URI</b></em>' attribute.
@@ -337,13 +246,13 @@ public interface LFPackage extends EPackage
   int SIGNATURE_DECLARATION__SIG_NAME = TEMP_TYPE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Sig Definitions</b></em>' containment reference list.
+   * The feature id for the '<em><b>Defs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIGNATURE_DECLARATION__SIG_DEFINITIONS = TEMP_TYPE_FEATURE_COUNT + 1;
+  int SIGNATURE_DECLARATION__DEFS = TEMP_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>signature Declaration</em>' class.
@@ -355,6 +264,107 @@ public interface LFPackage extends EPackage
   int SIGNATURE_DECLARATION_FEATURE_COUNT = TEMP_TYPE_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl <em>sig Definitions</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.sigDefinitionsImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigDefinitions()
+   * @generated
+   */
+  int SIG_DEFINITIONS = 5;
+
+  /**
+   * The feature id for the '<em><b>Cons</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__CONS = 0;
+
+  /**
+   * The feature id for the '<em><b>Fcons</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__FCONS = 1;
+
+  /**
+   * The number of structural features of the '<em>sig Definitions</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigConstructImpl <em>sig Construct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.sigConstructImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigConstruct()
+   * @generated
+   */
+  int SIG_CONSTRUCT = 6;
+
+  /**
+   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT__SYMB_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Namespace</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT__NAMESPACE = 1;
+
+  /**
+   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT__STRUCT_NAME = 2;
+
+  /**
+   * The feature id for the '<em><b>Inc Opt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT__INC_OPT = 3;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT__TMP = 4;
+
+  /**
+   * The number of structural features of the '<em>sig Construct</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_CONSTRUCT_FEATURE_COUNT = 5;
+
+  /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl <em>view Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -362,7 +372,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getviewDeclaration()
    * @generated
    */
-  int VIEW_DECLARATION = 7;
+  int VIEW_DECLARATION = 8;
 
   /**
    * The feature id for the '<em><b>View ID</b></em>' attribute.
@@ -392,13 +402,13 @@ public interface LFPackage extends EPackage
   int VIEW_DECLARATION__TO = 2;
 
   /**
-   * The feature id for the '<em><b>View Definitions</b></em>' containment reference list.
+   * The feature id for the '<em><b>View Defs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION__VIEW_DEFINITIONS = 3;
+  int VIEW_DECLARATION__VIEW_DEFS = 3;
 
   /**
    * The number of structural features of the '<em>view Declaration</em>' class.
@@ -527,15 +537,15 @@ public interface LFPackage extends EPackage
   EAttribute getsignatureDeclaration_SigName();
 
   /**
-   * Returns the meta object for the containment reference list '{@link info.kwarc.mmt.lF.signatureDeclaration#getSigDefinitions <em>Sig Definitions</em>}'.
+   * Returns the meta object for the containment reference '{@link info.kwarc.mmt.lF.signatureDeclaration#getDefs <em>Defs</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Sig Definitions</em>'.
-   * @see info.kwarc.mmt.lF.signatureDeclaration#getSigDefinitions()
+   * @return the meta object for the containment reference '<em>Defs</em>'.
+   * @see info.kwarc.mmt.lF.signatureDeclaration#getDefs()
    * @see #getsignatureDeclaration()
    * @generated
    */
-  EReference getsignatureDeclaration_SigDefinitions();
+  EReference getsignatureDeclaration_Defs();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.sigDefinitions <em>sig Definitions</em>}'.
@@ -548,48 +558,91 @@ public interface LFPackage extends EPackage
   EClass getsigDefinitions();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getSymbName <em>Symb Name</em>}'.
+   * Returns the meta object for the containment reference '{@link info.kwarc.mmt.lF.sigDefinitions#getCons <em>Cons</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cons</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getCons()
+   * @see #getsigDefinitions()
+   * @generated
+   */
+  EReference getsigDefinitions_Cons();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link info.kwarc.mmt.lF.sigDefinitions#getFcons <em>Fcons</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Fcons</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getFcons()
+   * @see #getsigDefinitions()
+   * @generated
+   */
+  EReference getsigDefinitions_Fcons();
+
+  /**
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.sigConstruct <em>sig Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>sig Construct</em>'.
+   * @see info.kwarc.mmt.lF.sigConstruct
+   * @generated
+   */
+  EClass getsigConstruct();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getSymbName <em>Symb Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Symb Name</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getSymbName()
-   * @see #getsigDefinitions()
+   * @see info.kwarc.mmt.lF.sigConstruct#getSymbName()
+   * @see #getsigConstruct()
    * @generated
    */
-  EAttribute getsigDefinitions_SymbName();
+  EAttribute getsigConstruct_SymbName();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getNamespace <em>Namespace</em>}'.
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getNamespace <em>Namespace</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Namespace</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getNamespace()
-   * @see #getsigDefinitions()
+   * @see info.kwarc.mmt.lF.sigConstruct#getNamespace()
+   * @see #getsigConstruct()
    * @generated
    */
-  EAttribute getsigDefinitions_Namespace();
+  EAttribute getsigConstruct_Namespace();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getStructName <em>Struct Name</em>}'.
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getStructName <em>Struct Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Struct Name</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getStructName()
-   * @see #getsigDefinitions()
+   * @see info.kwarc.mmt.lF.sigConstruct#getStructName()
+   * @see #getsigConstruct()
    * @generated
    */
-  EAttribute getsigDefinitions_StructName();
+  EAttribute getsigConstruct_StructName();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getTmp <em>Tmp</em>}'.
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getIncOpt <em>Inc Opt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Inc Opt</em>'.
+   * @see info.kwarc.mmt.lF.sigConstruct#getIncOpt()
+   * @see #getsigConstruct()
+   * @generated
+   */
+  EAttribute getsigConstruct_IncOpt();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getTmp <em>Tmp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Tmp</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getTmp()
-   * @see #getsigDefinitions()
+   * @see info.kwarc.mmt.lF.sigConstruct#getTmp()
+   * @see #getsigConstruct()
    * @generated
    */
-  EAttribute getsigDefinitions_Tmp();
+  EAttribute getsigConstruct_Tmp();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.TempType <em>Temp Type</em>}'.
@@ -656,15 +709,15 @@ public interface LFPackage extends EPackage
   EAttribute getviewDeclaration_To();
 
   /**
-   * Returns the meta object for the containment reference list '{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefinitions <em>View Definitions</em>}'.
+   * Returns the meta object for the containment reference '{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefs <em>View Defs</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>View Definitions</em>'.
-   * @see info.kwarc.mmt.lF.viewDeclaration#getViewDefinitions()
+   * @return the meta object for the containment reference '<em>View Defs</em>'.
+   * @see info.kwarc.mmt.lF.viewDeclaration#getViewDefs()
    * @see #getviewDeclaration()
    * @generated
    */
-  EReference getviewDeclaration_ViewDefinitions();
+  EReference getviewDeclaration_ViewDefs();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -788,12 +841,12 @@ public interface LFPackage extends EPackage
     EAttribute SIGNATURE_DECLARATION__SIG_NAME = eINSTANCE.getsignatureDeclaration_SigName();
 
     /**
-     * The meta object literal for the '<em><b>Sig Definitions</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Defs</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SIGNATURE_DECLARATION__SIG_DEFINITIONS = eINSTANCE.getsignatureDeclaration_SigDefinitions();
+    EReference SIGNATURE_DECLARATION__DEFS = eINSTANCE.getsignatureDeclaration_Defs();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl <em>sig Definitions</em>}' class.
@@ -806,12 +859,38 @@ public interface LFPackage extends EPackage
     EClass SIG_DEFINITIONS = eINSTANCE.getsigDefinitions();
 
     /**
+     * The meta object literal for the '<em><b>Cons</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SIG_DEFINITIONS__CONS = eINSTANCE.getsigDefinitions_Cons();
+
+    /**
+     * The meta object literal for the '<em><b>Fcons</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SIG_DEFINITIONS__FCONS = eINSTANCE.getsigDefinitions_Fcons();
+
+    /**
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.sigConstructImpl <em>sig Construct</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see info.kwarc.mmt.lF.impl.sigConstructImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigConstruct()
+     * @generated
+     */
+    EClass SIG_CONSTRUCT = eINSTANCE.getsigConstruct();
+
+    /**
      * The meta object literal for the '<em><b>Symb Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_DEFINITIONS__SYMB_NAME = eINSTANCE.getsigDefinitions_SymbName();
+    EAttribute SIG_CONSTRUCT__SYMB_NAME = eINSTANCE.getsigConstruct_SymbName();
 
     /**
      * The meta object literal for the '<em><b>Namespace</b></em>' attribute feature.
@@ -819,7 +898,7 @@ public interface LFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_DEFINITIONS__NAMESPACE = eINSTANCE.getsigDefinitions_Namespace();
+    EAttribute SIG_CONSTRUCT__NAMESPACE = eINSTANCE.getsigConstruct_Namespace();
 
     /**
      * The meta object literal for the '<em><b>Struct Name</b></em>' attribute feature.
@@ -827,7 +906,15 @@ public interface LFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_DEFINITIONS__STRUCT_NAME = eINSTANCE.getsigDefinitions_StructName();
+    EAttribute SIG_CONSTRUCT__STRUCT_NAME = eINSTANCE.getsigConstruct_StructName();
+
+    /**
+     * The meta object literal for the '<em><b>Inc Opt</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIG_CONSTRUCT__INC_OPT = eINSTANCE.getsigConstruct_IncOpt();
 
     /**
      * The meta object literal for the '<em><b>Tmp</b></em>' attribute feature.
@@ -835,7 +922,7 @@ public interface LFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_DEFINITIONS__TMP = eINSTANCE.getsigDefinitions_Tmp();
+    EAttribute SIG_CONSTRUCT__TMP = eINSTANCE.getsigConstruct_Tmp();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.
@@ -890,12 +977,12 @@ public interface LFPackage extends EPackage
     EAttribute VIEW_DECLARATION__TO = eINSTANCE.getviewDeclaration_To();
 
     /**
-     * The meta object literal for the '<em><b>View Definitions</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>View Defs</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VIEW_DECLARATION__VIEW_DEFINITIONS = eINSTANCE.getviewDeclaration_ViewDefinitions();
+    EReference VIEW_DECLARATION__VIEW_DEFS = eINSTANCE.getviewDeclaration_ViewDefs();
 
   }
 

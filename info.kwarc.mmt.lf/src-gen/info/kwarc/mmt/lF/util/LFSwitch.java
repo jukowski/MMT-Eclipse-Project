@@ -86,7 +86,6 @@ public class LFSwitch<T> extends Switch<T>
       {
         JUSTSPACE justspace = (JUSTSPACE)theEObject;
         T result = caseJUSTSPACE(justspace);
-        if (result == null) result = casesigDefinitions(justspace);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -117,6 +116,13 @@ public class LFSwitch<T> extends Switch<T>
       {
         sigDefinitions sigDefinitions = (sigDefinitions)theEObject;
         T result = casesigDefinitions(sigDefinitions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LFPackage.SIG_CONSTRUCT:
+      {
+        sigConstruct sigConstruct = (sigConstruct)theEObject;
+        T result = casesigConstruct(sigConstruct);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -230,6 +236,22 @@ public class LFSwitch<T> extends Switch<T>
    * @generated
    */
   public T casesigDefinitions(sigDefinitions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>sig Construct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>sig Construct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casesigConstruct(sigConstruct object)
   {
     return null;
   }
