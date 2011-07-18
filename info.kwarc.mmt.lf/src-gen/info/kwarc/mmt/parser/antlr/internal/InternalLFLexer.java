@@ -37,9 +37,13 @@ public class InternalLFLexer extends Lexer {
     public static final int T__15=15;
     public static final int T__34=34;
     public static final int T__18=18;
+    public static final int T__35=35;
     public static final int T__17=17;
+    public static final int T__36=36;
     public static final int T__12=12;
+    public static final int T__37=37;
     public static final int T__11=11;
+    public static final int T__38=38;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_ML2_COMMENT=6;
@@ -206,10 +210,11 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:7: ( ':' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:9: ':'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:7: ( '%read' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:9: '%read'
             {
-            match(':'); 
+            match("%read"); 
+
 
             }
 
@@ -226,10 +231,11 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:7: ( '{' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:9: '{'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:7: ( '..' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:9: '..'
             {
-            match('{'); 
+            match(".."); 
+
 
             }
 
@@ -246,10 +252,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:7: ( '}' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:9: '}'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:7: ( ':' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:9: ':'
             {
-            match('}'); 
+            match(':'); 
 
             }
 
@@ -347,10 +353,11 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:7: ( '\\'' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:9: '\\''
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:7: ( '%sig' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:9: '%sig'
             {
-            match('\''); 
+            match("%sig"); 
+
 
             }
 
@@ -367,11 +374,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:7: ( '%sig' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:9: '%sig'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:7: ( '{' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:9: '{'
             {
-            match("%sig"); 
-
+            match('{'); 
 
             }
 
@@ -388,11 +394,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:7: ( ':=' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:9: ':='
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:7: ( '}' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:9: '}'
             {
-            match(":="); 
-
+            match('}'); 
 
             }
 
@@ -409,10 +414,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:7: ( '%include' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:9: '%include'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:7: ( ':=' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:9: ':='
             {
-            match("%include"); 
+            match(":="); 
 
 
             }
@@ -430,10 +435,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:7: ( '%struct' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:9: '%struct'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:7: ( '%include' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:9: '%include'
             {
-            match("%struct"); 
+            match("%include"); 
 
 
             }
@@ -451,10 +456,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:7: ( '%infix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:9: '%infix'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:7: ( '%struct' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:9: '%struct'
             {
-            match("%infix"); 
+            match("%struct"); 
 
 
             }
@@ -472,10 +477,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:7: ( '%prefix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:9: '%prefix'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:7: ( '%meta' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:9: '%meta'
             {
-            match("%prefix"); 
+            match("%meta"); 
 
 
             }
@@ -493,10 +498,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:7: ( '%meta' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:9: '%meta'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:7: ( '%abbrev' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:9: '%abbrev'
             {
-            match("%meta"); 
+            match("%abbrev"); 
 
 
             }
@@ -514,10 +519,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:7: ( '%abbrev' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:9: '%abbrev'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:7: ( '%name' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:9: '%name'
             {
-            match("%abbrev"); 
+            match("%name"); 
 
 
             }
@@ -535,10 +540,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:7: ( '%open' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:9: '%open'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:7: ( '%pattern' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:9: '%pattern'
             {
-            match("%open"); 
+            match("%pattern"); 
 
 
             }
@@ -551,15 +556,99 @@ public class InternalLFLexer extends Lexer {
     }
     // $ANTLR end "T__34"
 
+    // $ANTLR start "T__35"
+    public final void mT__35() throws RecognitionException {
+        try {
+            int _type = T__35;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:35:7: ( '%infix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:35:9: '%infix'
+            {
+            match("%infix"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__35"
+
+    // $ANTLR start "T__36"
+    public final void mT__36() throws RecognitionException {
+        try {
+            int _type = T__36;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:36:7: ( 'prefix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:36:9: 'prefix'
+            {
+            match("prefix"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__36"
+
+    // $ANTLR start "T__37"
+    public final void mT__37() throws RecognitionException {
+        try {
+            int _type = T__37;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:37:7: ( '%open' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:37:9: '%open'
+            {
+            match("%open"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__37"
+
+    // $ANTLR start "T__38"
+    public final void mT__38() throws RecognitionException {
+        try {
+            int _type = T__38;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:38:7: ( '%view' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:38:9: '%view'
+            {
+            match("%view"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__38"
+
     // $ANTLR start "RULE_INT"
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1165:10: ( ( '0' .. '9' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1165:12: ( '0' .. '9' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1447:10: ( ( '0' .. '9' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1447:12: ( '0' .. '9' )+
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1165:12: ( '0' .. '9' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1447:12: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -573,7 +662,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1165:13: '0' .. '9'
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1447:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -605,8 +694,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_SP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1167:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1167:11: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1449:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1449:11: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -633,10 +722,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_CID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1169:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1169:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1451:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1451:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1169:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1451:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
             int cnt2=0;
             loop2:
             do {
@@ -690,12 +779,12 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1171:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1171:19: '%{' ( options {greedy=false; } : . )* '}%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1453:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1453:19: '%{' ( options {greedy=false; } : . )* '}%'
             {
             match("%{"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1171:24: ( options {greedy=false; } : . )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1453:24: ( options {greedy=false; } : . )*
             loop3:
             do {
                 int alt3=2;
@@ -720,7 +809,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1171:52: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1453:52: .
             	    {
             	    matchAny(); 
 
@@ -750,12 +839,12 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ML2_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1173:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1173:20: '%*' ( options {greedy=false; } : . )* '*%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1455:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1455:20: '%*' ( options {greedy=false; } : . )* '*%'
             {
             match("%*"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1173:25: ( options {greedy=false; } : . )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1455:25: ( options {greedy=false; } : . )*
             loop4:
             do {
                 int alt4=2;
@@ -780,7 +869,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1173:53: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1455:53: .
             	    {
             	    matchAny(); 
 
@@ -810,8 +899,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:17: ( '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:19: '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:17: ( '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:19: '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('%'); 
             if ( input.LA(1)==' '||input.LA(1)=='%' ) {
@@ -823,7 +912,7 @@ public class InternalLFLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:33: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:33: (~ ( ( '\\n' | '\\r' ) ) )*
             loop5:
             do {
                 int alt5=2;
@@ -836,7 +925,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:33: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:33: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -856,7 +945,7 @@ public class InternalLFLexer extends Lexer {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:49: ( ( '\\r' )? '\\n' )?
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:49: ( ( '\\r' )? '\\n' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -865,9 +954,9 @@ public class InternalLFLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:50: ( '\\r' )? '\\n'
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:50: ( '\\r' )? '\\n'
                     {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:50: ( '\\r' )?
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:50: ( '\\r' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -876,7 +965,7 @@ public class InternalLFLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1175:50: '\\r'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1457:50: '\\r'
                             {
                             match('\r'); 
 
@@ -908,8 +997,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1177:16: ( . )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1177:18: .
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1459:16: ( . )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1459:18: .
             {
             matchAny(); 
 
@@ -924,8 +1013,8 @@ public class InternalLFLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | RULE_INT | RULE_SP | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt8=31;
+        // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | RULE_INT | RULE_SP | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
+        int alt8=35;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
@@ -1097,49 +1186,77 @@ public class InternalLFLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:154: RULE_INT
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:154: T__35
+                {
+                mT__35(); 
+
+                }
+                break;
+            case 26 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:160: T__36
+                {
+                mT__36(); 
+
+                }
+                break;
+            case 27 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:166: T__37
+                {
+                mT__37(); 
+
+                }
+                break;
+            case 28 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:172: T__38
+                {
+                mT__38(); 
+
+                }
+                break;
+            case 29 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:178: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 26 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:163: RULE_SP
+            case 30 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:187: RULE_SP
                 {
                 mRULE_SP(); 
 
                 }
                 break;
-            case 27 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:171: RULE_CID
+            case 31 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:195: RULE_CID
                 {
                 mRULE_CID(); 
 
                 }
                 break;
-            case 28 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:180: RULE_ML_COMMENT
+            case 32 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:204: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 29 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:196: RULE_ML2_COMMENT
+            case 33 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:220: RULE_ML2_COMMENT
                 {
                 mRULE_ML2_COMMENT(); 
 
                 }
                 break;
-            case 30 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:213: RULE_SL_COMMENT
+            case 34 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:237: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 31 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:229: RULE_ANY_OTHER
+            case 35 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:253: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1153,54 +1270,52 @@ public class InternalLFLexer extends Lexer {
 
     protected DFA8 dfa8 = new DFA8(this);
     static final String DFA8_eotS =
-        "\1\uffff\1\21\1\uffff\1\25\1\uffff\1\41\4\uffff\1\47\1\uffff\1\52"+
-        "\36\uffff\1\52\6\uffff";
+        "\1\uffff\1\21\1\uffff\1\25\1\uffff\1\43\2\uffff\1\47\2\uffff\1\50"+
+        "\1\54\3\uffff\1\60\32\uffff\1\50\1\uffff\1\54\7\uffff\1\50\3\uffff"+
+        "\1\50\1\75\1\50\2\uffff\1\77\1\uffff";
     static final String DFA8_eofS =
-        "\62\uffff";
+        "\100\uffff";
     static final String DFA8_minS =
-        "\1\0\1\56\1\uffff\1\57\1\uffff\1\40\4\uffff\1\43\1\uffff\1\43\13"+
-        "\uffff\1\151\1\156\21\uffff\1\43\3\uffff\1\143\2\uffff";
+        "\1\0\1\56\1\uffff\1\57\1\uffff\1\40\2\uffff\1\43\2\uffff\1\162\1"+
+        "\43\3\uffff\1\57\6\uffff\1\141\1\uffff\1\151\1\156\20\uffff\1\145"+
+        "\1\uffff\1\43\3\uffff\1\155\2\uffff\1\143\1\146\1\145\2\uffff\1"+
+        "\151\1\163\1\170\2\uffff\1\43\1\uffff";
     static final String DFA8_maxS =
-        "\1\uffff\1\56\1\uffff\1\75\1\uffff\1\173\4\uffff\1\172\1\uffff\1"+
-        "\172\13\uffff\1\164\1\156\21\uffff\1\172\3\uffff\1\146\2\uffff";
+        "\1\uffff\1\56\1\uffff\1\75\1\uffff\1\173\2\uffff\1\172\2\uffff\1"+
+        "\162\1\172\3\uffff\1\57\6\uffff\1\141\1\uffff\1\164\1\156\20\uffff"+
+        "\1\145\1\uffff\1\172\3\uffff\1\155\2\uffff\2\146\1\145\2\uffff\1"+
+        "\151\1\163\1\170\2\uffff\1\172\1\uffff";
     static final String DFA8_acceptS =
-        "\2\uffff\1\2\1\uffff\1\5\1\uffff\1\7\1\11\1\12\1\13\1\uffff\1\17"+
-        "\1\uffff\1\32\1\33\1\37\1\1\1\3\1\2\1\4\1\21\1\10\1\5\1\6\2\uffff"+
-        "\1\25\1\26\1\27\1\30\1\34\1\35\1\36\1\15\1\7\1\11\1\12\1\13\1\14"+
-        "\1\16\1\33\1\17\1\31\1\uffff\1\32\1\20\1\23\1\uffff\1\22\1\24";
+        "\2\uffff\1\2\1\uffff\1\5\1\uffff\1\7\1\13\1\uffff\1\20\1\21\2\uffff"+
+        "\1\36\1\37\1\43\1\uffff\1\3\1\2\1\4\1\22\1\12\1\5\1\uffff\1\10\2"+
+        "\uffff\1\25\1\26\1\30\1\33\1\34\1\40\1\41\1\42\1\15\1\7\1\13\1\14"+
+        "\1\16\1\37\1\20\1\21\1\uffff\1\35\1\uffff\1\36\1\1\1\11\1\uffff"+
+        "\1\17\1\24\3\uffff\1\23\1\31\3\uffff\1\6\1\27\1\uffff\1\32";
     static final String DFA8_specialS =
-        "\1\0\61\uffff}>";
+        "\1\0\77\uffff}>";
     static final String[] DFA8_transitionS = {
-            "\11\17\2\15\2\17\1\15\22\17\1\15\1\17\1\4\1\16\1\17\1\5\1\17"+
-            "\1\13\5\17\1\12\1\1\1\2\12\14\1\3\1\17\1\11\1\6\1\17\1\16\1"+
-            "\17\32\16\4\17\1\16\1\17\32\16\1\7\1\17\1\10\uff82\17",
+            "\11\17\2\15\2\17\1\15\22\17\1\15\1\17\1\4\1\16\1\17\1\5\7\17"+
+            "\1\10\1\1\1\2\12\14\1\3\1\17\1\7\1\6\1\17\1\16\1\17\32\16\4"+
+            "\17\1\16\1\17\17\16\1\13\12\16\1\11\1\17\1\12\uff82\17",
             "\1\20",
             "",
             "\1\23\15\uffff\1\24",
             "",
-            "\1\40\4\uffff\1\40\4\uffff\1\37\66\uffff\1\34\7\uffff\1\31"+
-            "\3\uffff\1\33\1\27\1\35\1\32\2\uffff\1\30\7\uffff\1\36",
-            "",
-            "",
+            "\1\42\4\uffff\1\42\4\uffff\1\41\66\uffff\1\34\7\uffff\1\32"+
+            "\3\uffff\1\33\1\27\1\36\1\35\1\uffff\1\30\1\31\2\uffff\1\37"+
+            "\4\uffff\1\40",
             "",
             "",
             "\1\50\11\uffff\1\50\2\uffff\12\50\4\uffff\1\46\1\50\1\uffff"+
             "\32\50\4\uffff\1\50\1\uffff\32\50",
             "",
-            "\1\50\11\uffff\1\50\2\uffff\12\53\5\uffff\1\50\1\uffff\32\50"+
+            "",
+            "\1\53",
+            "\1\50\11\uffff\1\50\2\uffff\12\55\5\uffff\1\50\1\uffff\32\50"+
             "\4\uffff\1\50\1\uffff\32\50",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\55\12\uffff\1\56",
             "\1\57",
             "",
             "",
@@ -1208,6 +1323,10 @@ public class InternalLFLexer extends Lexer {
             "",
             "",
             "",
+            "\1\61",
+            "",
+            "\1\62\12\uffff\1\63",
+            "\1\64",
             "",
             "",
             "",
@@ -1219,13 +1338,33 @@ public class InternalLFLexer extends Lexer {
             "",
             "",
             "",
-            "\1\50\11\uffff\1\50\2\uffff\12\53\5\uffff\1\50\1\uffff\32\50"+
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\65",
+            "",
+            "\1\50\11\uffff\1\50\2\uffff\12\55\5\uffff\1\50\1\uffff\32\50"+
             "\4\uffff\1\50\1\uffff\32\50",
             "",
             "",
             "",
-            "\1\60\2\uffff\1\61",
+            "\1\66",
             "",
+            "",
+            "\1\67\2\uffff\1\70",
+            "\1\71",
+            "\1\72",
+            "",
+            "",
+            "\1\73",
+            "\1\74",
+            "\1\76",
+            "",
+            "",
+            "\1\50\11\uffff\1\50\2\uffff\12\50\5\uffff\1\50\1\uffff\32\50"+
+            "\4\uffff\1\50\1\uffff\32\50",
             ""
     };
 
@@ -1259,7 +1398,7 @@ public class InternalLFLexer extends Lexer {
             this.transition = DFA8_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | RULE_INT | RULE_SP | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | RULE_INT | RULE_SP | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1281,23 +1420,23 @@ public class InternalLFLexer extends Lexer {
 
                         else if ( (LA8_0=='=') ) {s = 6;}
 
-                        else if ( (LA8_0=='{') ) {s = 7;}
+                        else if ( (LA8_0=='<') ) {s = 7;}
 
-                        else if ( (LA8_0=='}') ) {s = 8;}
+                        else if ( (LA8_0=='-') ) {s = 8;}
 
-                        else if ( (LA8_0=='<') ) {s = 9;}
+                        else if ( (LA8_0=='{') ) {s = 9;}
 
-                        else if ( (LA8_0=='-') ) {s = 10;}
+                        else if ( (LA8_0=='}') ) {s = 10;}
 
-                        else if ( (LA8_0=='\'') ) {s = 11;}
+                        else if ( (LA8_0=='p') ) {s = 11;}
 
                         else if ( ((LA8_0>='0' && LA8_0<='9')) ) {s = 12;}
 
                         else if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0=='\r'||LA8_0==' ') ) {s = 13;}
 
-                        else if ( (LA8_0=='#'||LA8_0=='?'||(LA8_0>='A' && LA8_0<='Z')||LA8_0=='_'||(LA8_0>='a' && LA8_0<='z')) ) {s = 14;}
+                        else if ( (LA8_0=='#'||LA8_0=='?'||(LA8_0>='A' && LA8_0<='Z')||LA8_0=='_'||(LA8_0>='a' && LA8_0<='o')||(LA8_0>='q' && LA8_0<='z')) ) {s = 14;}
 
-                        else if ( ((LA8_0>='\u0000' && LA8_0<='\b')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\u001F')||LA8_0=='!'||LA8_0=='$'||LA8_0=='&'||(LA8_0>='(' && LA8_0<=',')||LA8_0==';'||LA8_0=='>'||LA8_0=='@'||(LA8_0>='[' && LA8_0<='^')||LA8_0=='`'||LA8_0=='|'||(LA8_0>='~' && LA8_0<='\uFFFF')) ) {s = 15;}
+                        else if ( ((LA8_0>='\u0000' && LA8_0<='\b')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\u001F')||LA8_0=='!'||LA8_0=='$'||(LA8_0>='&' && LA8_0<=',')||LA8_0==';'||LA8_0=='>'||LA8_0=='@'||(LA8_0>='[' && LA8_0<='^')||LA8_0=='`'||LA8_0=='|'||(LA8_0>='~' && LA8_0<='\uFFFF')) ) {s = 15;}
 
                         if ( s>=0 ) return s;
                         break;

@@ -86,6 +86,7 @@ public class LFSwitch<T> extends Switch<T>
       {
         JUSTSPACE justspace = (JUSTSPACE)theEObject;
         T result = caseJUSTSPACE(justspace);
+        if (result == null) result = casesigDefinitions(justspace);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

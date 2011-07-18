@@ -53,7 +53,8 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == LFPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case LFPackage.JUSTSPACE:
-				if(context == grammarAccess.getJUSTSPACERule()) {
+				if(context == grammarAccess.getJUSTSPACERule() ||
+				   context == grammarAccess.getSigDefinitionsRule()) {
 					sequence_JUSTSPACE_JUSTSPACE(context, (JUSTSPACE) semanticObject); 
 					return; 
 				}
@@ -93,12 +94,12 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case LFPackage.SIGNATURE_DECLARATION:
-				if(context == grammarAccess.getTempTypeRule()) {
-					sequence_TempType_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
+				if(context == grammarAccess.getSignatureDeclarationRule()) {
+					sequence_signatureDeclaration_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getSignatureDeclarationRule()) {
-					sequence_signatureDeclaration_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
+				else if(context == grammarAccess.getTempTypeRule()) {
+					sequence_TempType_signatureDeclaration(context, (signatureDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
@@ -120,20 +121,19 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    J[1, 1]
 	 */
 	protected void sequence_JUSTSPACE_JUSTSPACE(EObject context, JUSTSPACE semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LFPackage.Literals.JUSTSPACE__J) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LFPackage.Literals.JUSTSPACE__J));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getJUSTSPACEAccess().getJWSParserRuleCall_0(), semanticObject.getJ());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (declarations+=namespaceDeclaration | declarations+=signatureDeclaration | declarations+=JUSTSPACE)*
+	 *     (
+	 *         declarations+=namespaceDeclaration | 
+	 *         declarations+=signatureDeclaration | 
+	 *         declarations+=viewDeclaration | 
+	 *         declarations+=readDeclaration | 
+	 *         declarations+=JUSTSPACE
+	 *     )*
 	 *
 	 * Features:
 	 *    declarations[0, *]
@@ -222,53 +222,46 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         symbName=GID | 
 	 *         namespace=NAMESPACE | 
 	 *         structName=GID | 
-	 *         (type=GID? precendece=INT) | 
 	 *         tmp='%meta' | 
-	 *         tmp='%abbrev'
+	 *         tmp='%abbrev' | 
+	 *         tmp='%name' | 
+	 *         tmp='%pattern' | 
+	 *         tmp='%infix' | 
+	 *         tmp='prefix'
 	 *     )
 	 *
 	 * Features:
 	 *    symbName[0, 1]
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET type
-	 *         EXCLUDE_IF_SET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *    namespace[0, 1]
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET type
-	 *         EXCLUDE_IF_SET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
 	 *    structName[0, 1]
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
-	 *         EXCLUDE_IF_SET type
-	 *         EXCLUDE_IF_SET precendece
 	 *         EXCLUDE_IF_SET tmp
 	 *         EXCLUDE_IF_SET tmp
-	 *    type[0, 1]
-	 *         EXCLUDE_IF_UNSET precendece
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *         EXCLUDE_IF_SET tmp
+	 *    tmp[0, 6]
 	 *         EXCLUDE_IF_SET symbName
 	 *         EXCLUDE_IF_SET namespace
 	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET tmp
-	 *         EXCLUDE_IF_SET tmp
-	 *    precendece[1, 1]
-	 *         MANDATORY_IF_SET type
-	 *         EXCLUDE_IF_SET symbName
-	 *         EXCLUDE_IF_SET namespace
-	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET tmp
-	 *         EXCLUDE_IF_SET tmp
-	 *    tmp[0, 2]
-	 *         EXCLUDE_IF_SET symbName
-	 *         EXCLUDE_IF_SET namespace
-	 *         EXCLUDE_IF_SET structName
-	 *         EXCLUDE_IF_SET type
-	 *         EXCLUDE_IF_SET precendece
 	 */
 	protected void sequence_sigDefinitions_sigDefinitions(EObject context, sigDefinitions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -277,7 +270,7 @@ public class AbstractLFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (sigName=CID sigDefinitions+=sigDefinitions*)
+	 *     (sigName=GID sigDefinitions+=sigDefinitions*)
 	 *
 	 * Features:
 	 *    sigName[1, 1]

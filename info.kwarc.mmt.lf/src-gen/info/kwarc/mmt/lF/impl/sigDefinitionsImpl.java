@@ -25,8 +25,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getSymbName <em>Symb Name</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getStructName <em>Struct Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getType <em>Type</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getPrecendece <em>Precendece</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getTmp <em>Tmp</em>}</li>
  * </ul>
  * </p>
@@ -94,46 +92,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected String structName = STRUCT_NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected static final String TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected String type = TYPE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getPrecendece() <em>Precendece</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPrecendece()
-   * @generated
-   * @ordered
-   */
-  protected static final int PRECENDECE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getPrecendece() <em>Precendece</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPrecendece()
-   * @generated
-   * @ordered
-   */
-  protected int precendece = PRECENDECE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getTmp() <em>Tmp</em>}' attribute.
@@ -250,52 +208,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
-  {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(String newType)
-  {
-    String oldType = type;
-    type = newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__TYPE, oldType, type));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getPrecendece()
-  {
-    return precendece;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPrecendece(int newPrecendece)
-  {
-    int oldPrecendece = precendece;
-    precendece = newPrecendece;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__PRECENDECE, oldPrecendece, precendece));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getTmp()
   {
     return tmp;
@@ -330,10 +242,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
         return getNamespace();
       case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
         return getStructName();
-      case LFPackage.SIG_DEFINITIONS__TYPE:
-        return getType();
-      case LFPackage.SIG_DEFINITIONS__PRECENDECE:
-        return getPrecendece();
       case LFPackage.SIG_DEFINITIONS__TMP:
         return getTmp();
     }
@@ -358,12 +266,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
         return;
       case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
         setStructName((String)newValue);
-        return;
-      case LFPackage.SIG_DEFINITIONS__TYPE:
-        setType((String)newValue);
-        return;
-      case LFPackage.SIG_DEFINITIONS__PRECENDECE:
-        setPrecendece((Integer)newValue);
         return;
       case LFPackage.SIG_DEFINITIONS__TMP:
         setTmp((String)newValue);
@@ -391,12 +293,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
       case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
         setStructName(STRUCT_NAME_EDEFAULT);
         return;
-      case LFPackage.SIG_DEFINITIONS__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case LFPackage.SIG_DEFINITIONS__PRECENDECE:
-        setPrecendece(PRECENDECE_EDEFAULT);
-        return;
       case LFPackage.SIG_DEFINITIONS__TMP:
         setTmp(TMP_EDEFAULT);
         return;
@@ -420,10 +316,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
         return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
       case LFPackage.SIG_DEFINITIONS__STRUCT_NAME:
         return STRUCT_NAME_EDEFAULT == null ? structName != null : !STRUCT_NAME_EDEFAULT.equals(structName);
-      case LFPackage.SIG_DEFINITIONS__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case LFPackage.SIG_DEFINITIONS__PRECENDECE:
-        return precendece != PRECENDECE_EDEFAULT;
       case LFPackage.SIG_DEFINITIONS__TMP:
         return TMP_EDEFAULT == null ? tmp != null : !TMP_EDEFAULT.equals(tmp);
     }
@@ -447,10 +339,6 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
     result.append(namespace);
     result.append(", structName: ");
     result.append(structName);
-    result.append(", type: ");
-    result.append(type);
-    result.append(", precendece: ");
-    result.append(precendece);
     result.append(", tmp: ");
     result.append(tmp);
     result.append(')');

@@ -29,8 +29,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/symbName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/namespace"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/structName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/precendece"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/tmp"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">

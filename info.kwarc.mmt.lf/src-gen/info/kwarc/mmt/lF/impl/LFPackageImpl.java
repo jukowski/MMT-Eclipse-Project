@@ -314,29 +314,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigDefinitions_Type()
-  {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getsigDefinitions_Precendece()
-  {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getsigDefinitions_Tmp()
   {
-    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)sigDefinitionsEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -460,8 +440,6 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__SYMB_NAME);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__NAMESPACE);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__STRUCT_NAME);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TYPE);
-    createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__PRECENDECE);
     createEAttribute(sigDefinitionsEClass, SIG_DEFINITIONS__TMP);
 
     tempTypeEClass = createEClass(TEMP_TYPE);
@@ -503,6 +481,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    justspaceEClass.getESuperTypes().add(this.getsigDefinitions());
     namespaceDeclarationEClass.getESuperTypes().add(this.getTempType());
     signatureDeclarationEClass.getESuperTypes().add(this.getTempType());
 
@@ -528,8 +507,6 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     initEAttribute(getsigDefinitions_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigDefinitions_Namespace(), ecorePackage.getEString(), "namespace", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigDefinitions_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_Type(), ecorePackage.getEString(), "type", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigDefinitions_Precendece(), ecorePackage.getEInt(), "precendece", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigDefinitions_Tmp(), ecorePackage.getEString(), "tmp", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tempTypeEClass, TempType.class, "TempType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

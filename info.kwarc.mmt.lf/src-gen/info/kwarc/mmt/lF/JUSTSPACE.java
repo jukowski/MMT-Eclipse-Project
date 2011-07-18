@@ -5,7 +5,6 @@
  */
 package info.kwarc.mmt.lF;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface JUSTSPACE extends EObject
+public interface JUSTSPACE extends sigDefinitions
 {
   /**
    * Returns the value of the '<em><b>J</b></em>' attribute.

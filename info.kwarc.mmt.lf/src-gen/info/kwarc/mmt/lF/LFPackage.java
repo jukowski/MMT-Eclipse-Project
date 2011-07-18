@@ -88,6 +88,61 @@ public interface LFPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl <em>sig Definitions</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.sigDefinitionsImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigDefinitions()
+   * @generated
+   */
+  int SIG_DEFINITIONS = 5;
+
+  /**
+   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__SYMB_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Namespace</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__NAMESPACE = 1;
+
+  /**
+   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__STRUCT_NAME = 2;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS__TMP = 3;
+
+  /**
+   * The number of structural features of the '<em>sig Definitions</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIG_DEFINITIONS_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.JUSTSPACEImpl <em>JUSTSPACE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -98,13 +153,49 @@ public interface LFPackage extends EPackage
   int JUSTSPACE = 1;
 
   /**
+   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUSTSPACE__SYMB_NAME = SIG_DEFINITIONS__SYMB_NAME;
+
+  /**
+   * The feature id for the '<em><b>Namespace</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUSTSPACE__NAMESPACE = SIG_DEFINITIONS__NAMESPACE;
+
+  /**
+   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUSTSPACE__STRUCT_NAME = SIG_DEFINITIONS__STRUCT_NAME;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUSTSPACE__TMP = SIG_DEFINITIONS__TMP;
+
+  /**
    * The feature id for the '<em><b>J</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JUSTSPACE__J = 0;
+  int JUSTSPACE__J = SIG_DEFINITIONS_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>JUSTSPACE</em>' class.
@@ -113,7 +204,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUSTSPACE_FEATURE_COUNT = 1;
+  int JUSTSPACE_FEATURE_COUNT = SIG_DEFINITIONS_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.
@@ -262,79 +353,6 @@ public interface LFPackage extends EPackage
    * @ordered
    */
   int SIGNATURE_DECLARATION_FEATURE_COUNT = TEMP_TYPE_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl <em>sig Definitions</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see info.kwarc.mmt.lF.impl.sigDefinitionsImpl
-   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getsigDefinitions()
-   * @generated
-   */
-  int SIG_DEFINITIONS = 5;
-
-  /**
-   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__SYMB_NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Namespace</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__NAMESPACE = 1;
-
-  /**
-   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__STRUCT_NAME = 2;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__TYPE = 3;
-
-  /**
-   * The feature id for the '<em><b>Precendece</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__PRECENDECE = 4;
-
-  /**
-   * The feature id for the '<em><b>Tmp</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__TMP = 5;
-
-  /**
-   * The number of structural features of the '<em>sig Definitions</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl <em>view Declaration</em>}' class.
@@ -561,28 +579,6 @@ public interface LFPackage extends EPackage
    * @generated
    */
   EAttribute getsigDefinitions_StructName();
-
-  /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getType()
-   * @see #getsigDefinitions()
-   * @generated
-   */
-  EAttribute getsigDefinitions_Type();
-
-  /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getPrecendece <em>Precendece</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Precendece</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getPrecendece()
-   * @see #getsigDefinitions()
-   * @generated
-   */
-  EAttribute getsigDefinitions_Precendece();
 
   /**
    * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigDefinitions#getTmp <em>Tmp</em>}'.
@@ -832,22 +828,6 @@ public interface LFPackage extends EPackage
      * @generated
      */
     EAttribute SIG_DEFINITIONS__STRUCT_NAME = eINSTANCE.getsigDefinitions_StructName();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIG_DEFINITIONS__TYPE = eINSTANCE.getsigDefinitions_Type();
-
-    /**
-     * The meta object literal for the '<em><b>Precendece</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIG_DEFINITIONS__PRECENDECE = eINSTANCE.getsigDefinitions_Precendece();
 
     /**
      * The meta object literal for the '<em><b>Tmp</b></em>' attribute feature.
