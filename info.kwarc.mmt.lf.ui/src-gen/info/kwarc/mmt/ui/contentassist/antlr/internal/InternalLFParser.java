@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLFParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SP", "RULE_ML_COMMENT", "RULE_ML2_COMMENT", "RULE_SL_COMMENT", "RULE_CID", "RULE_ANY_OTHER", "RULE_INT", "'/'", "'.'", "':'", "'='", "'<'", "'->'", "'%'", "'-'", "':='", "'%meta'", "'%abbrev'", "'%name'", "'%pattern'", "'%infix'", "'prefix'", "'../'", "'://'", "'\"'", "'%namespace'", "'%read'", "'..'", "'%sig'", "'{'", "'}'", "'%include'", "'%struct'", "'%open'", "'%view'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SP", "RULE_ML_COMMENT", "RULE_ML2_COMMENT", "RULE_SL_COMMENT", "RULE_MULTIPLEDOT", "RULE_DOUBLEDOT", "RULE_CID", "RULE_ANY_OTHER", "RULE_INT", "'/'", "'.'", "':'", "'='", "'->'", "'%'", "':='", "'meta'", "'abbrev'", "'name'", "'pattern'", "'infix'", "'prefix'", "'postfix'", "'\"'", "'namespace'", "'read'", "'{'", "'}'", "'sig'", "'include'", "'struct'", "'open'", "'view'"
     };
     public static final int RULE_SP=4;
     public static final int T__29=29;
@@ -34,15 +34,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=9;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_CID=8;
+    public static final int RULE_CID=10;
     public static final int RULE_SL_COMMENT=7;
     public static final int EOF=-1;
     public static final int RULE_ML_COMMENT=5;
     public static final int T__30=30;
     public static final int T__19=19;
+    public static final int RULE_MULTIPLEDOT=8;
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int T__33=33;
@@ -53,14 +54,11 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     public static final int T__18=18;
     public static final int T__36=36;
     public static final int T__17=17;
-    public static final int T__37=37;
-    public static final int T__12=12;
-    public static final int T__38=38;
-    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_ML2_COMMENT=6;
-    public static final int RULE_INT=10;
+    public static final int RULE_INT=12;
+    public static final int RULE_DOUBLEDOT=9;
 
     // delegates
     // delegators
@@ -149,7 +147,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=RULE_SP && LA1_0<=RULE_SL_COMMENT)||(LA1_0>=29 && LA1_0<=30)||LA1_0==32||LA1_0==38) ) {
+                if ( ((LA1_0>=RULE_SP && LA1_0<=RULE_SL_COMMENT)||LA1_0==18) ) {
                     alt1=1;
                 }
 
@@ -887,21 +885,98 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleSOMETHING"
 
 
+    // $ANTLR start "entryRuleSOMETHING2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:341:1: entryRuleSOMETHING2 : ruleSOMETHING2 EOF ;
+    public final void entryRuleSOMETHING2() throws RecognitionException {
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:342:1: ( ruleSOMETHING2 EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:343:1: ruleSOMETHING2 EOF
+            {
+             before(grammarAccess.getSOMETHING2Rule()); 
+            pushFollow(FOLLOW_ruleSOMETHING2_in_entryRuleSOMETHING2662);
+            ruleSOMETHING2();
+
+            state._fsp--;
+
+             after(grammarAccess.getSOMETHING2Rule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSOMETHING2669); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleSOMETHING2"
+
+
+    // $ANTLR start "ruleSOMETHING2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:350:1: ruleSOMETHING2 : ( ( rule__SOMETHING2__Alternatives ) ) ;
+    public final void ruleSOMETHING2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:354:2: ( ( ( rule__SOMETHING2__Alternatives ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:355:1: ( ( rule__SOMETHING2__Alternatives ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:355:1: ( ( rule__SOMETHING2__Alternatives ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:356:1: ( rule__SOMETHING2__Alternatives )
+            {
+             before(grammarAccess.getSOMETHING2Access().getAlternatives()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:357:1: ( rule__SOMETHING2__Alternatives )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:357:2: rule__SOMETHING2__Alternatives
+            {
+            pushFollow(FOLLOW_rule__SOMETHING2__Alternatives_in_ruleSOMETHING2695);
+            rule__SOMETHING2__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSOMETHING2Access().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleSOMETHING2"
+
+
     // $ANTLR start "entryRulesignatureDeclaration"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:343:1: entryRulesignatureDeclaration : rulesignatureDeclaration EOF ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:371:1: entryRulesignatureDeclaration : rulesignatureDeclaration EOF ;
     public final void entryRulesignatureDeclaration() throws RecognitionException {
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:344:1: ( rulesignatureDeclaration EOF )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:345:1: rulesignatureDeclaration EOF
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:372:1: ( rulesignatureDeclaration EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:373:1: rulesignatureDeclaration EOF
             {
              before(grammarAccess.getSignatureDeclarationRule()); 
-            pushFollow(FOLLOW_rulesignatureDeclaration_in_entryRulesignatureDeclaration664);
+            pushFollow(FOLLOW_rulesignatureDeclaration_in_entryRulesignatureDeclaration724);
             rulesignatureDeclaration();
 
             state._fsp--;
 
              after(grammarAccess.getSignatureDeclarationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulesignatureDeclaration671); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesignatureDeclaration731); 
 
             }
 
@@ -918,23 +993,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rulesignatureDeclaration"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:352:1: rulesignatureDeclaration : ( ( rule__SignatureDeclaration__Group__0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:380:1: rulesignatureDeclaration : ( ( rule__SignatureDeclaration__Group__0 ) ) ;
     public final void rulesignatureDeclaration() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:356:2: ( ( ( rule__SignatureDeclaration__Group__0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:357:1: ( ( rule__SignatureDeclaration__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:384:2: ( ( ( rule__SignatureDeclaration__Group__0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:385:1: ( ( rule__SignatureDeclaration__Group__0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:357:1: ( ( rule__SignatureDeclaration__Group__0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:358:1: ( rule__SignatureDeclaration__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:385:1: ( ( rule__SignatureDeclaration__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:386:1: ( rule__SignatureDeclaration__Group__0 )
             {
              before(grammarAccess.getSignatureDeclarationAccess().getGroup()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:359:1: ( rule__SignatureDeclaration__Group__0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:359:2: rule__SignatureDeclaration__Group__0
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:387:1: ( rule__SignatureDeclaration__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:387:2: rule__SignatureDeclaration__Group__0
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__0_in_rulesignatureDeclaration697);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__0_in_rulesignatureDeclaration757);
             rule__SignatureDeclaration__Group__0();
 
             state._fsp--;
@@ -965,20 +1040,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRulesigDefinitions"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:371:1: entryRulesigDefinitions : rulesigDefinitions EOF ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:399:1: entryRulesigDefinitions : rulesigDefinitions EOF ;
     public final void entryRulesigDefinitions() throws RecognitionException {
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:372:1: ( rulesigDefinitions EOF )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:373:1: rulesigDefinitions EOF
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:400:1: ( rulesigDefinitions EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:401:1: rulesigDefinitions EOF
             {
              before(grammarAccess.getSigDefinitionsRule()); 
-            pushFollow(FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions724);
+            pushFollow(FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions784);
             rulesigDefinitions();
 
             state._fsp--;
 
              after(grammarAccess.getSigDefinitionsRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulesigDefinitions731); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesigDefinitions791); 
 
             }
 
@@ -995,31 +1070,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rulesigDefinitions"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:380:1: rulesigDefinitions : ( ( rule__SigDefinitions__Alternatives ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:408:1: rulesigDefinitions : ( ( rule__SigDefinitions__Group__0 ) ) ;
     public final void rulesigDefinitions() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:384:2: ( ( ( rule__SigDefinitions__Alternatives ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:385:1: ( ( rule__SigDefinitions__Alternatives ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:412:2: ( ( ( rule__SigDefinitions__Group__0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:413:1: ( ( rule__SigDefinitions__Group__0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:385:1: ( ( rule__SigDefinitions__Alternatives ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:386:1: ( rule__SigDefinitions__Alternatives )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:413:1: ( ( rule__SigDefinitions__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:414:1: ( rule__SigDefinitions__Group__0 )
             {
-             before(grammarAccess.getSigDefinitionsAccess().getAlternatives()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:387:1: ( rule__SigDefinitions__Alternatives )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:387:2: rule__SigDefinitions__Alternatives
+             before(grammarAccess.getSigDefinitionsAccess().getGroup()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:415:1: ( rule__SigDefinitions__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:415:2: rule__SigDefinitions__Group__0
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Alternatives_in_rulesigDefinitions757);
-            rule__SigDefinitions__Alternatives();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__0_in_rulesigDefinitions817);
+            rule__SigDefinitions__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSigDefinitionsAccess().getAlternatives()); 
+             after(grammarAccess.getSigDefinitionsAccess().getGroup()); 
 
             }
 
@@ -1041,21 +1116,98 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rulesigDefinitions"
 
 
+    // $ANTLR start "entryRulesigConstruct"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:427:1: entryRulesigConstruct : rulesigConstruct EOF ;
+    public final void entryRulesigConstruct() throws RecognitionException {
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:428:1: ( rulesigConstruct EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:429:1: rulesigConstruct EOF
+            {
+             before(grammarAccess.getSigConstructRule()); 
+            pushFollow(FOLLOW_rulesigConstruct_in_entryRulesigConstruct844);
+            rulesigConstruct();
+
+            state._fsp--;
+
+             after(grammarAccess.getSigConstructRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesigConstruct851); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRulesigConstruct"
+
+
+    // $ANTLR start "rulesigConstruct"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:436:1: rulesigConstruct : ( ( rule__SigConstruct__Alternatives ) ) ;
+    public final void rulesigConstruct() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:440:2: ( ( ( rule__SigConstruct__Alternatives ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:441:1: ( ( rule__SigConstruct__Alternatives ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:441:1: ( ( rule__SigConstruct__Alternatives ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:442:1: ( rule__SigConstruct__Alternatives )
+            {
+             before(grammarAccess.getSigConstructAccess().getAlternatives()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:443:1: ( rule__SigConstruct__Alternatives )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:443:2: rule__SigConstruct__Alternatives
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Alternatives_in_rulesigConstruct877);
+            rule__SigConstruct__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rulesigConstruct"
+
+
     // $ANTLR start "entryRuleincludeOps"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:399:1: entryRuleincludeOps : ruleincludeOps EOF ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:455:1: entryRuleincludeOps : ruleincludeOps EOF ;
     public final void entryRuleincludeOps() throws RecognitionException {
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:400:1: ( ruleincludeOps EOF )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:401:1: ruleincludeOps EOF
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:456:1: ( ruleincludeOps EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:457:1: ruleincludeOps EOF
             {
              before(grammarAccess.getIncludeOpsRule()); 
-            pushFollow(FOLLOW_ruleincludeOps_in_entryRuleincludeOps784);
+            pushFollow(FOLLOW_ruleincludeOps_in_entryRuleincludeOps904);
             ruleincludeOps();
 
             state._fsp--;
 
              after(grammarAccess.getIncludeOpsRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleincludeOps791); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleincludeOps911); 
 
             }
 
@@ -1072,23 +1224,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleincludeOps"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:408:1: ruleincludeOps : ( ( rule__IncludeOps__Group__0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:464:1: ruleincludeOps : ( ( rule__IncludeOps__Group__0 ) ) ;
     public final void ruleincludeOps() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:412:2: ( ( ( rule__IncludeOps__Group__0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:413:1: ( ( rule__IncludeOps__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:468:2: ( ( ( rule__IncludeOps__Group__0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:469:1: ( ( rule__IncludeOps__Group__0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:413:1: ( ( rule__IncludeOps__Group__0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:414:1: ( rule__IncludeOps__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:469:1: ( ( rule__IncludeOps__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:470:1: ( rule__IncludeOps__Group__0 )
             {
              before(grammarAccess.getIncludeOpsAccess().getGroup()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:415:1: ( rule__IncludeOps__Group__0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:415:2: rule__IncludeOps__Group__0
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:471:1: ( rule__IncludeOps__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:471:2: rule__IncludeOps__Group__0
             {
-            pushFollow(FOLLOW_rule__IncludeOps__Group__0_in_ruleincludeOps817);
+            pushFollow(FOLLOW_rule__IncludeOps__Group__0_in_ruleincludeOps937);
             rule__IncludeOps__Group__0();
 
             state._fsp--;
@@ -1119,20 +1271,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleviewDeclaration"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:429:1: entryRuleviewDeclaration : ruleviewDeclaration EOF ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:485:1: entryRuleviewDeclaration : ruleviewDeclaration EOF ;
     public final void entryRuleviewDeclaration() throws RecognitionException {
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:430:1: ( ruleviewDeclaration EOF )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:431:1: ruleviewDeclaration EOF
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:486:1: ( ruleviewDeclaration EOF )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:487:1: ruleviewDeclaration EOF
             {
              before(grammarAccess.getViewDeclarationRule()); 
-            pushFollow(FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration846);
+            pushFollow(FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration966);
             ruleviewDeclaration();
 
             state._fsp--;
 
              after(grammarAccess.getViewDeclarationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleviewDeclaration853); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleviewDeclaration973); 
 
             }
 
@@ -1149,23 +1301,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleviewDeclaration"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:438:1: ruleviewDeclaration : ( ( rule__ViewDeclaration__Group__0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:494:1: ruleviewDeclaration : ( ( rule__ViewDeclaration__Group__0 ) ) ;
     public final void ruleviewDeclaration() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:442:2: ( ( ( rule__ViewDeclaration__Group__0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:443:1: ( ( rule__ViewDeclaration__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:498:2: ( ( ( rule__ViewDeclaration__Group__0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:499:1: ( ( rule__ViewDeclaration__Group__0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:443:1: ( ( rule__ViewDeclaration__Group__0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:444:1: ( rule__ViewDeclaration__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:499:1: ( ( rule__ViewDeclaration__Group__0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:500:1: ( rule__ViewDeclaration__Group__0 )
             {
              before(grammarAccess.getViewDeclarationAccess().getGroup()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:445:1: ( rule__ViewDeclaration__Group__0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:445:2: rule__ViewDeclaration__Group__0
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:501:1: ( rule__ViewDeclaration__Group__0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:501:2: rule__ViewDeclaration__Group__0
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__0_in_ruleviewDeclaration879);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__0_in_ruleviewDeclaration999);
             rule__ViewDeclaration__Group__0();
 
             state._fsp--;
@@ -1196,59 +1348,64 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__DeclarationsAlternatives_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:457:1: rule__Model__DeclarationsAlternatives_0 : ( ( rulenamespaceDeclaration ) | ( rulesignatureDeclaration ) | ( ruleviewDeclaration ) | ( rulereadDeclaration ) | ( ruleJUSTSPACE ) );
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:513:1: rule__Model__DeclarationsAlternatives_0 : ( ( rulenamespaceDeclaration ) | ( rulesignatureDeclaration ) | ( ruleviewDeclaration ) | ( rulereadDeclaration ) | ( ruleJUSTSPACE ) );
     public final void rule__Model__DeclarationsAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:461:1: ( ( rulenamespaceDeclaration ) | ( rulesignatureDeclaration ) | ( ruleviewDeclaration ) | ( rulereadDeclaration ) | ( ruleJUSTSPACE ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:517:1: ( ( rulenamespaceDeclaration ) | ( rulesignatureDeclaration ) | ( ruleviewDeclaration ) | ( rulereadDeclaration ) | ( ruleJUSTSPACE ) )
             int alt2=5;
-            switch ( input.LA(1) ) {
-            case 29:
-                {
-                alt2=1;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==18) ) {
+                switch ( input.LA(2) ) {
+                case 29:
+                    {
+                    alt2=4;
+                    }
+                    break;
+                case 32:
+                    {
+                    alt2=2;
+                    }
+                    break;
+                case 28:
+                    {
+                    alt2=1;
+                    }
+                    break;
+                case 36:
+                    {
+                    alt2=3;
+                    }
+                    break;
+                default:
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 2, 1, input);
+
+                    throw nvae;
                 }
-                break;
-            case 32:
-                {
-                alt2=2;
-                }
-                break;
-            case 38:
-                {
-                alt2=3;
-                }
-                break;
-            case 30:
-                {
-                alt2=4;
-                }
-                break;
-            case RULE_SP:
-            case RULE_ML_COMMENT:
-            case RULE_ML2_COMMENT:
-            case RULE_SL_COMMENT:
-                {
+
+            }
+            else if ( ((LA2_0>=RULE_SP && LA2_0<=RULE_SL_COMMENT)) ) {
                 alt2=5;
-                }
-                break;
-            default:
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
-
             switch (alt2) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:462:1: ( rulenamespaceDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:518:1: ( rulenamespaceDeclaration )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:462:1: ( rulenamespaceDeclaration )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:463:1: rulenamespaceDeclaration
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:518:1: ( rulenamespaceDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:519:1: rulenamespaceDeclaration
                     {
                      before(grammarAccess.getModelAccess().getDeclarationsNamespaceDeclarationParserRuleCall_0_0()); 
-                    pushFollow(FOLLOW_rulenamespaceDeclaration_in_rule__Model__DeclarationsAlternatives_0915);
+                    pushFollow(FOLLOW_rulenamespaceDeclaration_in_rule__Model__DeclarationsAlternatives_01035);
                     rulenamespaceDeclaration();
 
                     state._fsp--;
@@ -1261,13 +1418,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:468:6: ( rulesignatureDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:524:6: ( rulesignatureDeclaration )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:468:6: ( rulesignatureDeclaration )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:469:1: rulesignatureDeclaration
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:524:6: ( rulesignatureDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:525:1: rulesignatureDeclaration
                     {
                      before(grammarAccess.getModelAccess().getDeclarationsSignatureDeclarationParserRuleCall_0_1()); 
-                    pushFollow(FOLLOW_rulesignatureDeclaration_in_rule__Model__DeclarationsAlternatives_0932);
+                    pushFollow(FOLLOW_rulesignatureDeclaration_in_rule__Model__DeclarationsAlternatives_01052);
                     rulesignatureDeclaration();
 
                     state._fsp--;
@@ -1280,13 +1437,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:474:6: ( ruleviewDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:530:6: ( ruleviewDeclaration )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:474:6: ( ruleviewDeclaration )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:475:1: ruleviewDeclaration
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:530:6: ( ruleviewDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:531:1: ruleviewDeclaration
                     {
                      before(grammarAccess.getModelAccess().getDeclarationsViewDeclarationParserRuleCall_0_2()); 
-                    pushFollow(FOLLOW_ruleviewDeclaration_in_rule__Model__DeclarationsAlternatives_0949);
+                    pushFollow(FOLLOW_ruleviewDeclaration_in_rule__Model__DeclarationsAlternatives_01069);
                     ruleviewDeclaration();
 
                     state._fsp--;
@@ -1299,13 +1456,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:480:6: ( rulereadDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:536:6: ( rulereadDeclaration )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:480:6: ( rulereadDeclaration )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:481:1: rulereadDeclaration
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:536:6: ( rulereadDeclaration )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:537:1: rulereadDeclaration
                     {
                      before(grammarAccess.getModelAccess().getDeclarationsReadDeclarationParserRuleCall_0_3()); 
-                    pushFollow(FOLLOW_rulereadDeclaration_in_rule__Model__DeclarationsAlternatives_0966);
+                    pushFollow(FOLLOW_rulereadDeclaration_in_rule__Model__DeclarationsAlternatives_01086);
                     rulereadDeclaration();
 
                     state._fsp--;
@@ -1318,13 +1475,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:486:6: ( ruleJUSTSPACE )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:542:6: ( ruleJUSTSPACE )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:486:6: ( ruleJUSTSPACE )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:487:1: ruleJUSTSPACE
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:542:6: ( ruleJUSTSPACE )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:543:1: ruleJUSTSPACE
                     {
                      before(grammarAccess.getModelAccess().getDeclarationsJUSTSPACEParserRuleCall_0_4()); 
-                    pushFollow(FOLLOW_ruleJUSTSPACE_in_rule__Model__DeclarationsAlternatives_0983);
+                    pushFollow(FOLLOW_ruleJUSTSPACE_in_rule__Model__DeclarationsAlternatives_01103);
                     ruleJUSTSPACE();
 
                     state._fsp--;
@@ -1354,13 +1511,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WS__Alternatives"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:497:1: rule__WS__Alternatives : ( ( RULE_SP ) | ( RULE_ML_COMMENT ) | ( RULE_ML2_COMMENT ) | ( RULE_SL_COMMENT ) );
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:553:1: rule__WS__Alternatives : ( ( RULE_SP ) | ( RULE_ML_COMMENT ) | ( RULE_ML2_COMMENT ) | ( RULE_SL_COMMENT ) );
     public final void rule__WS__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:501:1: ( ( RULE_SP ) | ( RULE_ML_COMMENT ) | ( RULE_ML2_COMMENT ) | ( RULE_SL_COMMENT ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:557:1: ( ( RULE_SP ) | ( RULE_ML_COMMENT ) | ( RULE_ML2_COMMENT ) | ( RULE_SL_COMMENT ) )
             int alt3=4;
             switch ( input.LA(1) ) {
             case RULE_SP:
@@ -1392,13 +1549,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:502:1: ( RULE_SP )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:558:1: ( RULE_SP )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:502:1: ( RULE_SP )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:503:1: RULE_SP
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:558:1: ( RULE_SP )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:559:1: RULE_SP
                     {
                      before(grammarAccess.getWSAccess().getSPTerminalRuleCall_0()); 
-                    match(input,RULE_SP,FOLLOW_RULE_SP_in_rule__WS__Alternatives1015); 
+                    match(input,RULE_SP,FOLLOW_RULE_SP_in_rule__WS__Alternatives1135); 
                      after(grammarAccess.getWSAccess().getSPTerminalRuleCall_0()); 
 
                     }
@@ -1407,13 +1564,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:508:6: ( RULE_ML_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:564:6: ( RULE_ML_COMMENT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:508:6: ( RULE_ML_COMMENT )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:509:1: RULE_ML_COMMENT
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:564:6: ( RULE_ML_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:565:1: RULE_ML_COMMENT
                     {
                      before(grammarAccess.getWSAccess().getML_COMMENTTerminalRuleCall_1()); 
-                    match(input,RULE_ML_COMMENT,FOLLOW_RULE_ML_COMMENT_in_rule__WS__Alternatives1032); 
+                    match(input,RULE_ML_COMMENT,FOLLOW_RULE_ML_COMMENT_in_rule__WS__Alternatives1152); 
                      after(grammarAccess.getWSAccess().getML_COMMENTTerminalRuleCall_1()); 
 
                     }
@@ -1422,13 +1579,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:514:6: ( RULE_ML2_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:570:6: ( RULE_ML2_COMMENT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:514:6: ( RULE_ML2_COMMENT )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:515:1: RULE_ML2_COMMENT
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:570:6: ( RULE_ML2_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:571:1: RULE_ML2_COMMENT
                     {
                      before(grammarAccess.getWSAccess().getML2_COMMENTTerminalRuleCall_2()); 
-                    match(input,RULE_ML2_COMMENT,FOLLOW_RULE_ML2_COMMENT_in_rule__WS__Alternatives1049); 
+                    match(input,RULE_ML2_COMMENT,FOLLOW_RULE_ML2_COMMENT_in_rule__WS__Alternatives1169); 
                      after(grammarAccess.getWSAccess().getML2_COMMENTTerminalRuleCall_2()); 
 
                     }
@@ -1437,13 +1594,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:520:6: ( RULE_SL_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:576:6: ( RULE_SL_COMMENT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:520:6: ( RULE_SL_COMMENT )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:521:1: RULE_SL_COMMENT
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:576:6: ( RULE_SL_COMMENT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:577:1: RULE_SL_COMMENT
                     {
                      before(grammarAccess.getWSAccess().getSL_COMMENTTerminalRuleCall_3()); 
-                    match(input,RULE_SL_COMMENT,FOLLOW_RULE_SL_COMMENT_in_rule__WS__Alternatives1066); 
+                    match(input,RULE_SL_COMMENT,FOLLOW_RULE_SL_COMMENT_in_rule__WS__Alternatives1186); 
                      after(grammarAccess.getWSAccess().getSL_COMMENTTerminalRuleCall_3()); 
 
                     }
@@ -1469,20 +1626,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Alternatives_2_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:531:1: rule__NAMESPACE__Alternatives_2_0 : ( ( '/' ) | ( '.' ) );
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:587:1: rule__NAMESPACE__Alternatives_2_0 : ( ( '/' ) | ( '.' ) );
     public final void rule__NAMESPACE__Alternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:535:1: ( ( '/' ) | ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:591:1: ( ( '/' ) | ( '.' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==11) ) {
+            if ( (LA4_0==13) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==12) ) {
+            else if ( (LA4_0==14) ) {
                 alt4=2;
             }
             else {
@@ -1493,13 +1650,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:536:1: ( '/' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:592:1: ( '/' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:536:1: ( '/' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:537:1: '/'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:592:1: ( '/' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:593:1: '/'
                     {
                      before(grammarAccess.getNAMESPACEAccess().getSolidusKeyword_2_0_0()); 
-                    match(input,11,FOLLOW_11_in_rule__NAMESPACE__Alternatives_2_01099); 
+                    match(input,13,FOLLOW_13_in_rule__NAMESPACE__Alternatives_2_01219); 
                      after(grammarAccess.getNAMESPACEAccess().getSolidusKeyword_2_0_0()); 
 
                     }
@@ -1508,13 +1665,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:544:6: ( '.' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:600:6: ( '.' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:544:6: ( '.' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:545:1: '.'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:600:6: ( '.' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:601:1: '.'
                     {
                      before(grammarAccess.getNAMESPACEAccess().getFullStopKeyword_2_0_1()); 
-                    match(input,12,FOLLOW_12_in_rule__NAMESPACE__Alternatives_2_01119); 
+                    match(input,14,FOLLOW_14_in_rule__NAMESPACE__Alternatives_2_01239); 
                      after(grammarAccess.getNAMESPACEAccess().getFullStopKeyword_2_0_1()); 
 
                     }
@@ -1540,91 +1697,64 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GID__Alternatives"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:557:1: rule__GID__Alternatives : ( ( ( ( rule__GID__Alternatives_0 ) ) ( ( rule__GID__Alternatives_0 )* ) ) | ( ( rule__GID__Group_1__0 ) ) );
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:613:1: rule__GID__Alternatives : ( ( ( rule__GID__Group_0__0 ) ) | ( ( rule__GID__Group_1__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) );
     public final void rule__GID__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:561:1: ( ( ( ( rule__GID__Alternatives_0 ) ) ( ( rule__GID__Alternatives_0 )* ) ) | ( ( rule__GID__Group_1__0 ) ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( ((LA6_0>=RULE_CID && LA6_0<=RULE_INT)) ) {
-                alt6=1;
-            }
-            else if ( (LA6_0==31) ) {
-                alt6=2;
-            }
-            else {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:617:1: ( ( ( rule__GID__Group_0__0 ) ) | ( ( rule__GID__Group_1__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) )
+            int alt5=4;
+            switch ( input.LA(1) ) {
+            case RULE_CID:
+            case RULE_ANY_OTHER:
+            case RULE_INT:
+                {
+                alt5=1;
+                }
+                break;
+            case 16:
+                {
+                alt5=2;
+                }
+                break;
+            case RULE_MULTIPLEDOT:
+                {
+                alt5=3;
+                }
+                break;
+            case RULE_DOUBLEDOT:
+                {
+                alt5=4;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+
+            switch (alt5) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:562:1: ( ( ( rule__GID__Alternatives_0 ) ) ( ( rule__GID__Alternatives_0 )* ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:618:1: ( ( rule__GID__Group_0__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:562:1: ( ( ( rule__GID__Alternatives_0 ) ) ( ( rule__GID__Alternatives_0 )* ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:563:1: ( ( rule__GID__Alternatives_0 ) ) ( ( rule__GID__Alternatives_0 )* )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:618:1: ( ( rule__GID__Group_0__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:619:1: ( rule__GID__Group_0__0 )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:563:1: ( ( rule__GID__Alternatives_0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:564:1: ( rule__GID__Alternatives_0 )
+                     before(grammarAccess.getGIDAccess().getGroup_0()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:620:1: ( rule__GID__Group_0__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:620:2: rule__GID__Group_0__0
                     {
-                     before(grammarAccess.getGIDAccess().getAlternatives_0()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:565:1: ( rule__GID__Alternatives_0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:565:2: rule__GID__Alternatives_0
-                    {
-                    pushFollow(FOLLOW_rule__GID__Alternatives_0_in_rule__GID__Alternatives1155);
-                    rule__GID__Alternatives_0();
+                    pushFollow(FOLLOW_rule__GID__Group_0__0_in_rule__GID__Alternatives1273);
+                    rule__GID__Group_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getGIDAccess().getAlternatives_0()); 
-
-                    }
-
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:568:1: ( ( rule__GID__Alternatives_0 )* )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:569:1: ( rule__GID__Alternatives_0 )*
-                    {
-                     before(grammarAccess.getGIDAccess().getAlternatives_0()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:570:1: ( rule__GID__Alternatives_0 )*
-                    loop5:
-                    do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
-
-                        if ( ((LA5_0>=RULE_CID && LA5_0<=RULE_INT)) ) {
-                            alt5=1;
-                        }
-
-
-                        switch (alt5) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:570:2: rule__GID__Alternatives_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__GID__Alternatives_0_in_rule__GID__Alternatives1167);
-                    	    rule__GID__Alternatives_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop5;
-                        }
-                    } while (true);
-
-                     after(grammarAccess.getGIDAccess().getAlternatives_0()); 
-
-                    }
-
+                     after(grammarAccess.getGIDAccess().getGroup_0()); 
 
                     }
 
@@ -1632,16 +1762,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:575:6: ( ( rule__GID__Group_1__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:624:6: ( ( rule__GID__Group_1__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:575:6: ( ( rule__GID__Group_1__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:576:1: ( rule__GID__Group_1__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:624:6: ( ( rule__GID__Group_1__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:625:1: ( rule__GID__Group_1__0 )
                     {
                      before(grammarAccess.getGIDAccess().getGroup_1()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:577:1: ( rule__GID__Group_1__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:577:2: rule__GID__Group_1__0
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:626:1: ( rule__GID__Group_1__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:626:2: rule__GID__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__GID__Group_1__0_in_rule__GID__Alternatives1188);
+                    pushFollow(FOLLOW_rule__GID__Group_1__0_in_rule__GID__Alternatives1291);
                     rule__GID__Group_1__0();
 
                     state._fsp--;
@@ -1650,6 +1780,36 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
 
                      after(grammarAccess.getGIDAccess().getGroup_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:630:6: ( RULE_MULTIPLEDOT )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:630:6: ( RULE_MULTIPLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:631:1: RULE_MULTIPLEDOT
+                    {
+                     before(grammarAccess.getGIDAccess().getMultipleDotTerminalRuleCall_2()); 
+                    match(input,RULE_MULTIPLEDOT,FOLLOW_RULE_MULTIPLEDOT_in_rule__GID__Alternatives1309); 
+                     after(grammarAccess.getGIDAccess().getMultipleDotTerminalRuleCall_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:636:6: ( RULE_DOUBLEDOT )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:636:6: ( RULE_DOUBLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:637:1: RULE_DOUBLEDOT
+                    {
+                     before(grammarAccess.getGIDAccess().getDoubleDotTerminalRuleCall_3()); 
+                    match(input,RULE_DOUBLEDOT,FOLLOW_RULE_DOUBLEDOT_in_rule__GID__Alternatives1326); 
+                     after(grammarAccess.getGIDAccess().getDoubleDotTerminalRuleCall_3()); 
 
                     }
 
@@ -1673,48 +1833,48 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GID__Alternatives"
 
 
-    // $ANTLR start "rule__GID__Alternatives_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:586:1: rule__GID__Alternatives_0 : ( ( RULE_CID ) | ( RULE_ANY_OTHER ) | ( RULE_INT ) );
-    public final void rule__GID__Alternatives_0() throws RecognitionException {
+    // $ANTLR start "rule__GID__Alternatives_0_0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:647:1: rule__GID__Alternatives_0_0 : ( ( RULE_CID ) | ( RULE_ANY_OTHER ) | ( RULE_INT ) );
+    public final void rule__GID__Alternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:590:1: ( ( RULE_CID ) | ( RULE_ANY_OTHER ) | ( RULE_INT ) )
-            int alt7=3;
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:651:1: ( ( RULE_CID ) | ( RULE_ANY_OTHER ) | ( RULE_INT ) )
+            int alt6=3;
             switch ( input.LA(1) ) {
             case RULE_CID:
                 {
-                alt7=1;
+                alt6=1;
                 }
                 break;
             case RULE_ANY_OTHER:
                 {
-                alt7=2;
+                alt6=2;
                 }
                 break;
             case RULE_INT:
                 {
-                alt7=3;
+                alt6=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt6) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:591:1: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:652:1: ( RULE_CID )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:591:1: ( RULE_CID )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:592:1: RULE_CID
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:652:1: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:653:1: RULE_CID
                     {
-                     before(grammarAccess.getGIDAccess().getCIDTerminalRuleCall_0_0()); 
-                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__GID__Alternatives_01221); 
-                     after(grammarAccess.getGIDAccess().getCIDTerminalRuleCall_0_0()); 
+                     before(grammarAccess.getGIDAccess().getCIDTerminalRuleCall_0_0_0()); 
+                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__GID__Alternatives_0_01358); 
+                     after(grammarAccess.getGIDAccess().getCIDTerminalRuleCall_0_0_0()); 
 
                     }
 
@@ -1722,14 +1882,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:597:6: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:658:6: ( RULE_ANY_OTHER )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:597:6: ( RULE_ANY_OTHER )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:598:1: RULE_ANY_OTHER
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:658:6: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:659:1: RULE_ANY_OTHER
                     {
-                     before(grammarAccess.getGIDAccess().getANY_OTHERTerminalRuleCall_0_1()); 
-                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__GID__Alternatives_01238); 
-                     after(grammarAccess.getGIDAccess().getANY_OTHERTerminalRuleCall_0_1()); 
+                     before(grammarAccess.getGIDAccess().getANY_OTHERTerminalRuleCall_0_0_1()); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__GID__Alternatives_0_01375); 
+                     after(grammarAccess.getGIDAccess().getANY_OTHERTerminalRuleCall_0_0_1()); 
 
                     }
 
@@ -1737,14 +1897,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:603:6: ( RULE_INT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:664:6: ( RULE_INT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:603:6: ( RULE_INT )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:604:1: RULE_INT
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:664:6: ( RULE_INT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:665:1: RULE_INT
                     {
-                     before(grammarAccess.getGIDAccess().getINTTerminalRuleCall_0_2()); 
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__GID__Alternatives_01255); 
-                     after(grammarAccess.getGIDAccess().getINTTerminalRuleCall_0_2()); 
+                     before(grammarAccess.getGIDAccess().getINTTerminalRuleCall_0_0_2()); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__GID__Alternatives_0_01392); 
+                     after(grammarAccess.getGIDAccess().getINTTerminalRuleCall_0_0_2()); 
 
                     }
 
@@ -1765,72 +1925,72 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GID__Alternatives_0"
+    // $ANTLR end "rule__GID__Alternatives_0_0"
 
 
     // $ANTLR start "rule__SOMETHING__Alternatives"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:614:1: rule__SOMETHING__Alternatives : ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( ( rule__SOMETHING__Group_3__0 ) ) | ( ':' ) | ( '=' ) | ( '<' ) | ( '->' ) | ( '%' ) | ( '-' ) | ( ( rule__SOMETHING__Group_10__0 ) ) | ( ruleWS ) );
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:675:1: rule__SOMETHING__Alternatives : ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( ( rule__SOMETHING__Group_3__0 ) ) | ( ':' ) | ( '=' ) | ( '->' ) | ( '%' ) | ( ( rule__SOMETHING__Group_8__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) | ( ruleWS ) );
     public final void rule__SOMETHING__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:618:1: ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( ( rule__SOMETHING__Group_3__0 ) ) | ( ':' ) | ( '=' ) | ( '<' ) | ( '->' ) | ( '%' ) | ( '-' ) | ( ( rule__SOMETHING__Group_10__0 ) ) | ( ruleWS ) )
-            int alt8=12;
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:679:1: ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( ( rule__SOMETHING__Group_3__0 ) ) | ( ':' ) | ( '=' ) | ( '->' ) | ( '%' ) | ( ( rule__SOMETHING__Group_8__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) | ( ruleWS ) )
+            int alt7=12;
             switch ( input.LA(1) ) {
             case RULE_ANY_OTHER:
                 {
-                alt8=1;
+                alt7=1;
                 }
                 break;
             case RULE_CID:
                 {
-                alt8=2;
+                alt7=2;
                 }
                 break;
             case RULE_INT:
                 {
-                alt8=3;
-                }
-                break;
-            case 12:
-                {
-                alt8=4;
-                }
-                break;
-            case 13:
-                {
-                alt8=5;
+                alt7=3;
                 }
                 break;
             case 14:
                 {
-                alt8=6;
+                alt7=4;
                 }
                 break;
             case 15:
                 {
-                alt8=7;
+                alt7=5;
                 }
                 break;
             case 16:
                 {
-                alt8=8;
+                alt7=6;
                 }
                 break;
             case 17:
                 {
-                alt8=9;
+                alt7=7;
                 }
                 break;
             case 18:
                 {
-                alt8=10;
+                alt7=8;
                 }
                 break;
-            case 31:
+            case 30:
                 {
-                alt8=11;
+                alt7=9;
+                }
+                break;
+            case RULE_MULTIPLEDOT:
+                {
+                alt7=10;
+                }
+                break;
+            case RULE_DOUBLEDOT:
+                {
+                alt7=11;
                 }
                 break;
             case RULE_SP:
@@ -1838,25 +1998,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             case RULE_ML2_COMMENT:
             case RULE_SL_COMMENT:
                 {
-                alt8=12;
+                alt7=12;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:619:1: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:680:1: ( RULE_ANY_OTHER )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:619:1: ( RULE_ANY_OTHER )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:620:1: RULE_ANY_OTHER
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:680:1: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:681:1: RULE_ANY_OTHER
                     {
                      before(grammarAccess.getSOMETHINGAccess().getANY_OTHERTerminalRuleCall_0()); 
-                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives1287); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives1424); 
                      after(grammarAccess.getSOMETHINGAccess().getANY_OTHERTerminalRuleCall_0()); 
 
                     }
@@ -1865,13 +2025,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:625:6: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:686:6: ( RULE_CID )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:625:6: ( RULE_CID )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:626:1: RULE_CID
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:686:6: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:687:1: RULE_CID
                     {
                      before(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_1()); 
-                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives1304); 
+                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives1441); 
                      after(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_1()); 
 
                     }
@@ -1880,13 +2040,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:631:6: ( RULE_INT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:692:6: ( RULE_INT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:631:6: ( RULE_INT )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:632:1: RULE_INT
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:692:6: ( RULE_INT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:693:1: RULE_INT
                     {
                      before(grammarAccess.getSOMETHINGAccess().getINTTerminalRuleCall_2()); 
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SOMETHING__Alternatives1321); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SOMETHING__Alternatives1458); 
                      after(grammarAccess.getSOMETHINGAccess().getINTTerminalRuleCall_2()); 
 
                     }
@@ -1895,16 +2055,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:637:6: ( ( rule__SOMETHING__Group_3__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:698:6: ( ( rule__SOMETHING__Group_3__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:637:6: ( ( rule__SOMETHING__Group_3__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:638:1: ( rule__SOMETHING__Group_3__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:698:6: ( ( rule__SOMETHING__Group_3__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:699:1: ( rule__SOMETHING__Group_3__0 )
                     {
                      before(grammarAccess.getSOMETHINGAccess().getGroup_3()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:639:1: ( rule__SOMETHING__Group_3__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:639:2: rule__SOMETHING__Group_3__0
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:700:1: ( rule__SOMETHING__Group_3__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:700:2: rule__SOMETHING__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__SOMETHING__Group_3__0_in_rule__SOMETHING__Alternatives1338);
+                    pushFollow(FOLLOW_rule__SOMETHING__Group_3__0_in_rule__SOMETHING__Alternatives1475);
                     rule__SOMETHING__Group_3__0();
 
                     state._fsp--;
@@ -1920,13 +2080,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:643:6: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:704:6: ( ':' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:643:6: ( ':' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:644:1: ':'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:704:6: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:705:1: ':'
                     {
                      before(grammarAccess.getSOMETHINGAccess().getColonKeyword_4()); 
-                    match(input,13,FOLLOW_13_in_rule__SOMETHING__Alternatives1357); 
+                    match(input,15,FOLLOW_15_in_rule__SOMETHING__Alternatives1494); 
                      after(grammarAccess.getSOMETHINGAccess().getColonKeyword_4()); 
 
                     }
@@ -1935,13 +2095,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:651:6: ( '=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:712:6: ( '=' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:651:6: ( '=' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:652:1: '='
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:712:6: ( '=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:713:1: '='
                     {
                      before(grammarAccess.getSOMETHINGAccess().getEqualsSignKeyword_5()); 
-                    match(input,14,FOLLOW_14_in_rule__SOMETHING__Alternatives1377); 
+                    match(input,16,FOLLOW_16_in_rule__SOMETHING__Alternatives1514); 
                      after(grammarAccess.getSOMETHINGAccess().getEqualsSignKeyword_5()); 
 
                     }
@@ -1950,14 +2110,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:659:6: ( '<' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:720:6: ( '->' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:659:6: ( '<' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:660:1: '<'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:720:6: ( '->' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:721:1: '->'
                     {
-                     before(grammarAccess.getSOMETHINGAccess().getLessThanSignKeyword_6()); 
-                    match(input,15,FOLLOW_15_in_rule__SOMETHING__Alternatives1397); 
-                     after(grammarAccess.getSOMETHINGAccess().getLessThanSignKeyword_6()); 
+                     before(grammarAccess.getSOMETHINGAccess().getHyphenMinusGreaterThanSignKeyword_6()); 
+                    match(input,17,FOLLOW_17_in_rule__SOMETHING__Alternatives1534); 
+                     after(grammarAccess.getSOMETHINGAccess().getHyphenMinusGreaterThanSignKeyword_6()); 
 
                     }
 
@@ -1965,14 +2125,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:667:6: ( '->' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:728:6: ( '%' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:667:6: ( '->' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:668:1: '->'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:728:6: ( '%' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:729:1: '%'
                     {
-                     before(grammarAccess.getSOMETHINGAccess().getHyphenMinusGreaterThanSignKeyword_7()); 
-                    match(input,16,FOLLOW_16_in_rule__SOMETHING__Alternatives1417); 
-                     after(grammarAccess.getSOMETHINGAccess().getHyphenMinusGreaterThanSignKeyword_7()); 
+                     before(grammarAccess.getSOMETHINGAccess().getPercentSignKeyword_7()); 
+                    match(input,18,FOLLOW_18_in_rule__SOMETHING__Alternatives1554); 
+                     after(grammarAccess.getSOMETHINGAccess().getPercentSignKeyword_7()); 
 
                     }
 
@@ -1980,14 +2140,24 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:675:6: ( '%' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:736:6: ( ( rule__SOMETHING__Group_8__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:675:6: ( '%' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:676:1: '%'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:736:6: ( ( rule__SOMETHING__Group_8__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:737:1: ( rule__SOMETHING__Group_8__0 )
                     {
-                     before(grammarAccess.getSOMETHINGAccess().getPercentSignKeyword_8()); 
-                    match(input,17,FOLLOW_17_in_rule__SOMETHING__Alternatives1437); 
-                     after(grammarAccess.getSOMETHINGAccess().getPercentSignKeyword_8()); 
+                     before(grammarAccess.getSOMETHINGAccess().getGroup_8()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:738:1: ( rule__SOMETHING__Group_8__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:738:2: rule__SOMETHING__Group_8__0
+                    {
+                    pushFollow(FOLLOW_rule__SOMETHING__Group_8__0_in_rule__SOMETHING__Alternatives1573);
+                    rule__SOMETHING__Group_8__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getSOMETHINGAccess().getGroup_8()); 
 
                     }
 
@@ -1995,14 +2165,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:683:6: ( '-' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:742:6: ( RULE_MULTIPLEDOT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:683:6: ( '-' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:684:1: '-'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:742:6: ( RULE_MULTIPLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:743:1: RULE_MULTIPLEDOT
                     {
-                     before(grammarAccess.getSOMETHINGAccess().getHyphenMinusKeyword_9()); 
-                    match(input,18,FOLLOW_18_in_rule__SOMETHING__Alternatives1457); 
-                     after(grammarAccess.getSOMETHINGAccess().getHyphenMinusKeyword_9()); 
+                     before(grammarAccess.getSOMETHINGAccess().getMultipleDotTerminalRuleCall_9()); 
+                    match(input,RULE_MULTIPLEDOT,FOLLOW_RULE_MULTIPLEDOT_in_rule__SOMETHING__Alternatives1591); 
+                     after(grammarAccess.getSOMETHINGAccess().getMultipleDotTerminalRuleCall_9()); 
 
                     }
 
@@ -2010,24 +2180,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:691:6: ( ( rule__SOMETHING__Group_10__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:748:6: ( RULE_DOUBLEDOT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:691:6: ( ( rule__SOMETHING__Group_10__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:692:1: ( rule__SOMETHING__Group_10__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:748:6: ( RULE_DOUBLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:749:1: RULE_DOUBLEDOT
                     {
-                     before(grammarAccess.getSOMETHINGAccess().getGroup_10()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:693:1: ( rule__SOMETHING__Group_10__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:693:2: rule__SOMETHING__Group_10__0
-                    {
-                    pushFollow(FOLLOW_rule__SOMETHING__Group_10__0_in_rule__SOMETHING__Alternatives1476);
-                    rule__SOMETHING__Group_10__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSOMETHINGAccess().getGroup_10()); 
+                     before(grammarAccess.getSOMETHINGAccess().getDoubleDotTerminalRuleCall_10()); 
+                    match(input,RULE_DOUBLEDOT,FOLLOW_RULE_DOUBLEDOT_in_rule__SOMETHING__Alternatives1608); 
+                     after(grammarAccess.getSOMETHINGAccess().getDoubleDotTerminalRuleCall_10()); 
 
                     }
 
@@ -2035,13 +2195,13 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 12 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:697:6: ( ruleWS )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:754:6: ( ruleWS )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:697:6: ( ruleWS )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:698:1: ruleWS
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:754:6: ( ruleWS )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:755:1: ruleWS
                     {
                      before(grammarAccess.getSOMETHINGAccess().getWSParserRuleCall_11()); 
-                    pushFollow(FOLLOW_ruleWS_in_rule__SOMETHING__Alternatives1494);
+                    pushFollow(FOLLOW_ruleWS_in_rule__SOMETHING__Alternatives1625);
                     ruleWS();
 
                     state._fsp--;
@@ -2070,42 +2230,140 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SOMETHING__Alternatives"
 
 
-    // $ANTLR start "rule__SigDefinitions__Alternatives"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:709:1: rule__SigDefinitions__Alternatives : ( ( ( rule__SigDefinitions__Group_0__0 ) ) | ( ( rule__SigDefinitions__Group_1__0 ) ) | ( ( rule__SigDefinitions__Group_2__0 ) ) | ( ( rule__SigDefinitions__Group_3__0 ) ) | ( ruleJUSTSPACE ) );
-    public final void rule__SigDefinitions__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__SOMETHING__Alternatives_3_1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:765:1: rule__SOMETHING__Alternatives_3_1 : ( ( RULE_CID ) | ( RULE_ANY_OTHER ) );
+    public final void rule__SOMETHING__Alternatives_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:713:1: ( ( ( rule__SigDefinitions__Group_0__0 ) ) | ( ( rule__SigDefinitions__Group_1__0 ) ) | ( ( rule__SigDefinitions__Group_2__0 ) ) | ( ( rule__SigDefinitions__Group_3__0 ) ) | ( ruleJUSTSPACE ) )
-            int alt9=5;
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:769:1: ( ( RULE_CID ) | ( RULE_ANY_OTHER ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==RULE_CID) ) {
+                alt8=1;
+            }
+            else if ( (LA8_0==RULE_ANY_OTHER) ) {
+                alt8=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 8, 0, input);
+
+                throw nvae;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:770:1: ( RULE_CID )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:770:1: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:771:1: RULE_CID
+                    {
+                     before(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_3_1_0()); 
+                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives_3_11657); 
+                     after(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_3_1_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:776:6: ( RULE_ANY_OTHER )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:776:6: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:777:1: RULE_ANY_OTHER
+                    {
+                     before(grammarAccess.getSOMETHINGAccess().getANY_OTHERTerminalRuleCall_3_1_1()); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives_3_11674); 
+                     after(grammarAccess.getSOMETHINGAccess().getANY_OTHERTerminalRuleCall_3_1_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING__Alternatives_3_1"
+
+
+    // $ANTLR start "rule__SOMETHING2__Alternatives"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:787:1: rule__SOMETHING2__Alternatives : ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( '.' ) | ( ':' ) | ( '=' ) | ( '->' ) | ( '%' ) | ( ( rule__SOMETHING2__Group_8__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) | ( ruleWS ) );
+    public final void rule__SOMETHING2__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:791:1: ( ( RULE_ANY_OTHER ) | ( RULE_CID ) | ( RULE_INT ) | ( '.' ) | ( ':' ) | ( '=' ) | ( '->' ) | ( '%' ) | ( ( rule__SOMETHING2__Group_8__0 ) ) | ( RULE_MULTIPLEDOT ) | ( RULE_DOUBLEDOT ) | ( ruleWS ) )
+            int alt9=12;
             switch ( input.LA(1) ) {
-            case RULE_CID:
             case RULE_ANY_OTHER:
-            case RULE_INT:
-            case 31:
                 {
                 alt9=1;
                 }
                 break;
-            case 35:
+            case RULE_CID:
                 {
                 alt9=2;
                 }
                 break;
-            case 36:
+            case RULE_INT:
                 {
                 alt9=3;
                 }
                 break;
-            case 20:
-            case 21:
-            case 22:
-            case 23:
-            case 24:
-            case 25:
+            case 14:
                 {
                 alt9=4;
+                }
+                break;
+            case 15:
+                {
+                alt9=5;
+                }
+                break;
+            case 16:
+                {
+                alt9=6;
+                }
+                break;
+            case 17:
+                {
+                alt9=7;
+                }
+                break;
+            case 18:
+                {
+                alt9=8;
+                }
+                break;
+            case 30:
+                {
+                alt9=9;
+                }
+                break;
+            case RULE_MULTIPLEDOT:
+                {
+                alt9=10;
+                }
+                break;
+            case RULE_DOUBLEDOT:
+                {
+                alt9=11;
                 }
                 break;
             case RULE_SP:
@@ -2113,7 +2371,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             case RULE_ML2_COMMENT:
             case RULE_SL_COMMENT:
                 {
-                alt9=5;
+                alt9=12;
                 }
                 break;
             default:
@@ -2125,24 +2383,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
             switch (alt9) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:714:1: ( ( rule__SigDefinitions__Group_0__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:792:1: ( RULE_ANY_OTHER )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:714:1: ( ( rule__SigDefinitions__Group_0__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:715:1: ( rule__SigDefinitions__Group_0__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:792:1: ( RULE_ANY_OTHER )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:793:1: RULE_ANY_OTHER
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getGroup_0()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:716:1: ( rule__SigDefinitions__Group_0__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:716:2: rule__SigDefinitions__Group_0__0
-                    {
-                    pushFollow(FOLLOW_rule__SigDefinitions__Group_0__0_in_rule__SigDefinitions__Alternatives1527);
-                    rule__SigDefinitions__Group_0__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSigDefinitionsAccess().getGroup_0()); 
+                     before(grammarAccess.getSOMETHING2Access().getANY_OTHERTerminalRuleCall_0()); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING2__Alternatives1706); 
+                     after(grammarAccess.getSOMETHING2Access().getANY_OTHERTerminalRuleCall_0()); 
 
                     }
 
@@ -2150,24 +2398,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:720:6: ( ( rule__SigDefinitions__Group_1__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:798:6: ( RULE_CID )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:720:6: ( ( rule__SigDefinitions__Group_1__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:721:1: ( rule__SigDefinitions__Group_1__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:798:6: ( RULE_CID )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:799:1: RULE_CID
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getGroup_1()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:722:1: ( rule__SigDefinitions__Group_1__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:722:2: rule__SigDefinitions__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__SigDefinitions__Group_1__0_in_rule__SigDefinitions__Alternatives1545);
-                    rule__SigDefinitions__Group_1__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSigDefinitionsAccess().getGroup_1()); 
+                     before(grammarAccess.getSOMETHING2Access().getCIDTerminalRuleCall_1()); 
+                    match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__SOMETHING2__Alternatives1723); 
+                     after(grammarAccess.getSOMETHING2Access().getCIDTerminalRuleCall_1()); 
 
                     }
 
@@ -2175,24 +2413,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:726:6: ( ( rule__SigDefinitions__Group_2__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:804:6: ( RULE_INT )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:726:6: ( ( rule__SigDefinitions__Group_2__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:727:1: ( rule__SigDefinitions__Group_2__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:804:6: ( RULE_INT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:805:1: RULE_INT
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getGroup_2()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:728:1: ( rule__SigDefinitions__Group_2__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:728:2: rule__SigDefinitions__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__SigDefinitions__Group_2__0_in_rule__SigDefinitions__Alternatives1563);
-                    rule__SigDefinitions__Group_2__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSigDefinitionsAccess().getGroup_2()); 
+                     before(grammarAccess.getSOMETHING2Access().getINTTerminalRuleCall_2()); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SOMETHING2__Alternatives1740); 
+                     after(grammarAccess.getSOMETHING2Access().getINTTerminalRuleCall_2()); 
 
                     }
 
@@ -2200,24 +2428,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:732:6: ( ( rule__SigDefinitions__Group_3__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:810:6: ( '.' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:732:6: ( ( rule__SigDefinitions__Group_3__0 ) )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:733:1: ( rule__SigDefinitions__Group_3__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:810:6: ( '.' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:811:1: '.'
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getGroup_3()); 
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:734:1: ( rule__SigDefinitions__Group_3__0 )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:734:2: rule__SigDefinitions__Group_3__0
-                    {
-                    pushFollow(FOLLOW_rule__SigDefinitions__Group_3__0_in_rule__SigDefinitions__Alternatives1581);
-                    rule__SigDefinitions__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSigDefinitionsAccess().getGroup_3()); 
+                     before(grammarAccess.getSOMETHING2Access().getFullStopKeyword_3()); 
+                    match(input,14,FOLLOW_14_in_rule__SOMETHING2__Alternatives1758); 
+                     after(grammarAccess.getSOMETHING2Access().getFullStopKeyword_3()); 
 
                     }
 
@@ -2225,18 +2443,133 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:738:6: ( ruleJUSTSPACE )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:818:6: ( ':' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:738:6: ( ruleJUSTSPACE )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:739:1: ruleJUSTSPACE
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:818:6: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:819:1: ':'
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getJUSTSPACEParserRuleCall_4()); 
-                    pushFollow(FOLLOW_ruleJUSTSPACE_in_rule__SigDefinitions__Alternatives1599);
-                    ruleJUSTSPACE();
+                     before(grammarAccess.getSOMETHING2Access().getColonKeyword_4()); 
+                    match(input,15,FOLLOW_15_in_rule__SOMETHING2__Alternatives1778); 
+                     after(grammarAccess.getSOMETHING2Access().getColonKeyword_4()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:826:6: ( '=' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:826:6: ( '=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:827:1: '='
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getEqualsSignKeyword_5()); 
+                    match(input,16,FOLLOW_16_in_rule__SOMETHING2__Alternatives1798); 
+                     after(grammarAccess.getSOMETHING2Access().getEqualsSignKeyword_5()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:834:6: ( '->' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:834:6: ( '->' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:835:1: '->'
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getHyphenMinusGreaterThanSignKeyword_6()); 
+                    match(input,17,FOLLOW_17_in_rule__SOMETHING2__Alternatives1818); 
+                     after(grammarAccess.getSOMETHING2Access().getHyphenMinusGreaterThanSignKeyword_6()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:842:6: ( '%' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:842:6: ( '%' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:843:1: '%'
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getPercentSignKeyword_7()); 
+                    match(input,18,FOLLOW_18_in_rule__SOMETHING2__Alternatives1838); 
+                     after(grammarAccess.getSOMETHING2Access().getPercentSignKeyword_7()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 9 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:850:6: ( ( rule__SOMETHING2__Group_8__0 ) )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:850:6: ( ( rule__SOMETHING2__Group_8__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:851:1: ( rule__SOMETHING2__Group_8__0 )
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getGroup_8()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:852:1: ( rule__SOMETHING2__Group_8__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:852:2: rule__SOMETHING2__Group_8__0
+                    {
+                    pushFollow(FOLLOW_rule__SOMETHING2__Group_8__0_in_rule__SOMETHING2__Alternatives1857);
+                    rule__SOMETHING2__Group_8__0();
 
                     state._fsp--;
 
-                     after(grammarAccess.getSigDefinitionsAccess().getJUSTSPACEParserRuleCall_4()); 
+
+                    }
+
+                     after(grammarAccess.getSOMETHING2Access().getGroup_8()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 10 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:856:6: ( RULE_MULTIPLEDOT )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:856:6: ( RULE_MULTIPLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:857:1: RULE_MULTIPLEDOT
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getMultipleDotTerminalRuleCall_9()); 
+                    match(input,RULE_MULTIPLEDOT,FOLLOW_RULE_MULTIPLEDOT_in_rule__SOMETHING2__Alternatives1875); 
+                     after(grammarAccess.getSOMETHING2Access().getMultipleDotTerminalRuleCall_9()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:862:6: ( RULE_DOUBLEDOT )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:862:6: ( RULE_DOUBLEDOT )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:863:1: RULE_DOUBLEDOT
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getDoubleDotTerminalRuleCall_10()); 
+                    match(input,RULE_DOUBLEDOT,FOLLOW_RULE_DOUBLEDOT_in_rule__SOMETHING2__Alternatives1892); 
+                     after(grammarAccess.getSOMETHING2Access().getDoubleDotTerminalRuleCall_10()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:868:6: ( ruleWS )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:868:6: ( ruleWS )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:869:1: ruleWS
+                    {
+                     before(grammarAccess.getSOMETHING2Access().getWSParserRuleCall_11()); 
+                    pushFollow(FOLLOW_ruleWS_in_rule__SOMETHING2__Alternatives1909);
+                    ruleWS();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getSOMETHING2Access().getWSParserRuleCall_11()); 
 
                     }
 
@@ -2257,51 +2590,80 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Alternatives"
+    // $ANTLR end "rule__SOMETHING2__Alternatives"
 
 
-    // $ANTLR start "rule__SigDefinitions__Alternatives_0_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:749:1: rule__SigDefinitions__Alternatives_0_2 : ( ( ':' ) | ( ':=' ) | ( '=' ) );
-    public final void rule__SigDefinitions__Alternatives_0_2() throws RecognitionException {
+    // $ANTLR start "rule__SigConstruct__Alternatives"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:880:1: rule__SigConstruct__Alternatives : ( ( ( rule__SigConstruct__Group_0__0 ) ) | ( ( rule__SigConstruct__Group_1__0 ) ) | ( ( rule__SigConstruct__Group_2__0 ) ) | ( ( rule__SigConstruct__Group_3__0 ) ) );
+    public final void rule__SigConstruct__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:753:1: ( ( ':' ) | ( ':=' ) | ( '=' ) )
-            int alt10=3;
-            switch ( input.LA(1) ) {
-            case 13:
-                {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:884:1: ( ( ( rule__SigConstruct__Group_0__0 ) ) | ( ( rule__SigConstruct__Group_1__0 ) ) | ( ( rule__SigConstruct__Group_2__0 ) ) | ( ( rule__SigConstruct__Group_3__0 ) ) )
+            int alt10=4;
+            int LA10_0 = input.LA(1);
+
+            if ( ((LA10_0>=RULE_MULTIPLEDOT && LA10_0<=RULE_INT)||LA10_0==16) ) {
                 alt10=1;
+            }
+            else if ( (LA10_0==18) ) {
+                switch ( input.LA(2) ) {
+                case 33:
+                    {
+                    alt10=2;
+                    }
+                    break;
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                case 24:
+                case 25:
+                case 26:
+                    {
+                    alt10=4;
+                    }
+                    break;
+                case 34:
+                    {
+                    alt10=3;
+                    }
+                    break;
+                default:
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 10, 2, input);
+
+                    throw nvae;
                 }
-                break;
-            case 19:
-                {
-                alt10=2;
-                }
-                break;
-            case 14:
-                {
-                alt10=3;
-                }
-                break;
-            default:
+
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
-
             switch (alt10) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:754:1: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:885:1: ( ( rule__SigConstruct__Group_0__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:754:1: ( ':' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:755:1: ':'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:885:1: ( ( rule__SigConstruct__Group_0__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:886:1: ( rule__SigConstruct__Group_0__0 )
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getColonKeyword_0_2_0()); 
-                    match(input,13,FOLLOW_13_in_rule__SigDefinitions__Alternatives_0_21632); 
-                     after(grammarAccess.getSigDefinitionsAccess().getColonKeyword_0_2_0()); 
+                     before(grammarAccess.getSigConstructAccess().getGroup_0()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:887:1: ( rule__SigConstruct__Group_0__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:887:2: rule__SigConstruct__Group_0__0
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__Group_0__0_in_rule__SigConstruct__Alternatives1942);
+                    rule__SigConstruct__Group_0__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getSigConstructAccess().getGroup_0()); 
 
                     }
 
@@ -2309,14 +2671,24 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:762:6: ( ':=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:891:6: ( ( rule__SigConstruct__Group_1__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:762:6: ( ':=' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:763:1: ':='
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:891:6: ( ( rule__SigConstruct__Group_1__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:892:1: ( rule__SigConstruct__Group_1__0 )
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getColonEqualsSignKeyword_0_2_1()); 
-                    match(input,19,FOLLOW_19_in_rule__SigDefinitions__Alternatives_0_21652); 
-                     after(grammarAccess.getSigDefinitionsAccess().getColonEqualsSignKeyword_0_2_1()); 
+                     before(grammarAccess.getSigConstructAccess().getGroup_1()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:893:1: ( rule__SigConstruct__Group_1__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:893:2: rule__SigConstruct__Group_1__0
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__Group_1__0_in_rule__SigConstruct__Alternatives1960);
+                    rule__SigConstruct__Group_1__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getSigConstructAccess().getGroup_1()); 
 
                     }
 
@@ -2324,14 +2696,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:770:6: ( '=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:897:6: ( ( rule__SigConstruct__Group_2__0 ) )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:770:6: ( '=' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:771:1: '='
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:897:6: ( ( rule__SigConstruct__Group_2__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:898:1: ( rule__SigConstruct__Group_2__0 )
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getEqualsSignKeyword_0_2_2()); 
-                    match(input,14,FOLLOW_14_in_rule__SigDefinitions__Alternatives_0_21672); 
-                     after(grammarAccess.getSigDefinitionsAccess().getEqualsSignKeyword_0_2_2()); 
+                     before(grammarAccess.getSigConstructAccess().getGroup_2()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:899:1: ( rule__SigConstruct__Group_2__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:899:2: rule__SigConstruct__Group_2__0
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__Group_2__0_in_rule__SigConstruct__Alternatives1978);
+                    rule__SigConstruct__Group_2__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getSigConstructAccess().getGroup_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:903:6: ( ( rule__SigConstruct__Group_3__0 ) )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:903:6: ( ( rule__SigConstruct__Group_3__0 ) )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:904:1: ( rule__SigConstruct__Group_3__0 )
+                    {
+                     before(grammarAccess.getSigConstructAccess().getGroup_3()); 
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:905:1: ( rule__SigConstruct__Group_3__0 )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:905:2: rule__SigConstruct__Group_3__0
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__Group_3__0_in_rule__SigConstruct__Alternatives1996);
+                    rule__SigConstruct__Group_3__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getSigConstructAccess().getGroup_3()); 
 
                     }
 
@@ -2352,47 +2759,32 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Alternatives_0_2"
+    // $ANTLR end "rule__SigConstruct__Alternatives"
 
 
-    // $ANTLR start "rule__SigDefinitions__TmpAlternatives_3_0_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:783:1: rule__SigDefinitions__TmpAlternatives_3_0_0 : ( ( '%meta' ) | ( '%abbrev' ) | ( '%name' ) | ( '%pattern' ) | ( '%infix' ) | ( 'prefix' ) );
-    public final void rule__SigDefinitions__TmpAlternatives_3_0_0() throws RecognitionException {
+    // $ANTLR start "rule__SigConstruct__Alternatives_0_2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:914:1: rule__SigConstruct__Alternatives_0_2 : ( ( ':' ) | ( ':=' ) | ( '=' ) );
+    public final void rule__SigConstruct__Alternatives_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:787:1: ( ( '%meta' ) | ( '%abbrev' ) | ( '%name' ) | ( '%pattern' ) | ( '%infix' ) | ( 'prefix' ) )
-            int alt11=6;
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:918:1: ( ( ':' ) | ( ':=' ) | ( '=' ) )
+            int alt11=3;
             switch ( input.LA(1) ) {
-            case 20:
+            case 15:
                 {
                 alt11=1;
                 }
                 break;
-            case 21:
+            case 19:
                 {
                 alt11=2;
                 }
                 break;
-            case 22:
+            case 16:
                 {
                 alt11=3;
-                }
-                break;
-            case 23:
-                {
-                alt11=4;
-                }
-                break;
-            case 24:
-                {
-                alt11=5;
-                }
-                break;
-            case 25:
-                {
-                alt11=6;
                 }
                 break;
             default:
@@ -2404,14 +2796,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
             switch (alt11) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:788:1: ( '%meta' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:919:1: ( ':' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:788:1: ( '%meta' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:789:1: '%meta'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:919:1: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:920:1: ':'
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpMetaKeyword_3_0_0_0()); 
-                    match(input,20,FOLLOW_20_in_rule__SigDefinitions__TmpAlternatives_3_0_01707); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpMetaKeyword_3_0_0_0()); 
+                     before(grammarAccess.getSigConstructAccess().getColonKeyword_0_2_0()); 
+                    match(input,15,FOLLOW_15_in_rule__SigConstruct__Alternatives_0_22030); 
+                     after(grammarAccess.getSigConstructAccess().getColonKeyword_0_2_0()); 
 
                     }
 
@@ -2419,14 +2811,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:796:6: ( '%abbrev' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:927:6: ( ':=' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:796:6: ( '%abbrev' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:797:1: '%abbrev'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:927:6: ( ':=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:928:1: ':='
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpAbbrevKeyword_3_0_0_1()); 
-                    match(input,21,FOLLOW_21_in_rule__SigDefinitions__TmpAlternatives_3_0_01727); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpAbbrevKeyword_3_0_0_1()); 
+                     before(grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_0_2_1()); 
+                    match(input,19,FOLLOW_19_in_rule__SigConstruct__Alternatives_0_22050); 
+                     after(grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_0_2_1()); 
 
                     }
 
@@ -2434,59 +2826,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:804:6: ( '%name' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:935:6: ( '=' )
                     {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:804:6: ( '%name' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:805:1: '%name'
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:935:6: ( '=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:936:1: '='
                     {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpNameKeyword_3_0_0_2()); 
-                    match(input,22,FOLLOW_22_in_rule__SigDefinitions__TmpAlternatives_3_0_01747); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpNameKeyword_3_0_0_2()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:812:6: ( '%pattern' )
-                    {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:812:6: ( '%pattern' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:813:1: '%pattern'
-                    {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpPatternKeyword_3_0_0_3()); 
-                    match(input,23,FOLLOW_23_in_rule__SigDefinitions__TmpAlternatives_3_0_01767); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpPatternKeyword_3_0_0_3()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 5 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:820:6: ( '%infix' )
-                    {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:820:6: ( '%infix' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:821:1: '%infix'
-                    {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpInfixKeyword_3_0_0_4()); 
-                    match(input,24,FOLLOW_24_in_rule__SigDefinitions__TmpAlternatives_3_0_01787); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpInfixKeyword_3_0_0_4()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 6 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:828:6: ( 'prefix' )
-                    {
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:828:6: ( 'prefix' )
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:829:1: 'prefix'
-                    {
-                     before(grammarAccess.getSigDefinitionsAccess().getTmpPrefixKeyword_3_0_0_5()); 
-                    match(input,25,FOLLOW_25_in_rule__SigDefinitions__TmpAlternatives_3_0_01807); 
-                     after(grammarAccess.getSigDefinitionsAccess().getTmpPrefixKeyword_3_0_0_5()); 
+                     before(grammarAccess.getSigConstructAccess().getEqualsSignKeyword_0_2_2()); 
+                    match(input,16,FOLLOW_16_in_rule__SigConstruct__Alternatives_0_22070); 
+                     after(grammarAccess.getSigConstructAccess().getEqualsSignKeyword_0_2_2()); 
 
                     }
 
@@ -2507,25 +2854,271 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__TmpAlternatives_3_0_0"
+    // $ANTLR end "rule__SigConstruct__Alternatives_0_2"
+
+
+    // $ANTLR start "rule__SigConstruct__Alternatives_2_5"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:948:1: rule__SigConstruct__Alternatives_2_5 : ( ( ':' ) | ( ':=' ) );
+    public final void rule__SigConstruct__Alternatives_2_5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:952:1: ( ( ':' ) | ( ':=' ) )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==15) ) {
+                alt12=1;
+            }
+            else if ( (LA12_0==19) ) {
+                alt12=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 12, 0, input);
+
+                throw nvae;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:953:1: ( ':' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:953:1: ( ':' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:954:1: ':'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getColonKeyword_2_5_0()); 
+                    match(input,15,FOLLOW_15_in_rule__SigConstruct__Alternatives_2_52105); 
+                     after(grammarAccess.getSigConstructAccess().getColonKeyword_2_5_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:961:6: ( ':=' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:961:6: ( ':=' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:962:1: ':='
+                    {
+                     before(grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_2_5_1()); 
+                    match(input,19,FOLLOW_19_in_rule__SigConstruct__Alternatives_2_52125); 
+                     after(grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_2_5_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Alternatives_2_5"
+
+
+    // $ANTLR start "rule__SigConstruct__TmpAlternatives_3_1_0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:974:1: rule__SigConstruct__TmpAlternatives_3_1_0 : ( ( 'meta' ) | ( 'abbrev' ) | ( 'name' ) | ( 'pattern' ) | ( 'infix' ) | ( 'prefix' ) | ( 'postfix' ) );
+    public final void rule__SigConstruct__TmpAlternatives_3_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:978:1: ( ( 'meta' ) | ( 'abbrev' ) | ( 'name' ) | ( 'pattern' ) | ( 'infix' ) | ( 'prefix' ) | ( 'postfix' ) )
+            int alt13=7;
+            switch ( input.LA(1) ) {
+            case 20:
+                {
+                alt13=1;
+                }
+                break;
+            case 21:
+                {
+                alt13=2;
+                }
+                break;
+            case 22:
+                {
+                alt13=3;
+                }
+                break;
+            case 23:
+                {
+                alt13=4;
+                }
+                break;
+            case 24:
+                {
+                alt13=5;
+                }
+                break;
+            case 25:
+                {
+                alt13=6;
+                }
+                break;
+            case 26:
+                {
+                alt13=7;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 13, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt13) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:979:1: ( 'meta' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:979:1: ( 'meta' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:980:1: 'meta'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0()); 
+                    match(input,20,FOLLOW_20_in_rule__SigConstruct__TmpAlternatives_3_1_02160); 
+                     after(grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:987:6: ( 'abbrev' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:987:6: ( 'abbrev' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:988:1: 'abbrev'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1()); 
+                    match(input,21,FOLLOW_21_in_rule__SigConstruct__TmpAlternatives_3_1_02180); 
+                     after(grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:995:6: ( 'name' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:995:6: ( 'name' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:996:1: 'name'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2()); 
+                    match(input,22,FOLLOW_22_in_rule__SigConstruct__TmpAlternatives_3_1_02200); 
+                     after(grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1003:6: ( 'pattern' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1003:6: ( 'pattern' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1004:1: 'pattern'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3()); 
+                    match(input,23,FOLLOW_23_in_rule__SigConstruct__TmpAlternatives_3_1_02220); 
+                     after(grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1011:6: ( 'infix' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1011:6: ( 'infix' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1012:1: 'infix'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4()); 
+                    match(input,24,FOLLOW_24_in_rule__SigConstruct__TmpAlternatives_3_1_02240); 
+                     after(grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1019:6: ( 'prefix' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1019:6: ( 'prefix' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1020:1: 'prefix'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5()); 
+                    match(input,25,FOLLOW_25_in_rule__SigConstruct__TmpAlternatives_3_1_02260); 
+                     after(grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1027:6: ( 'postfix' )
+                    {
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1027:6: ( 'postfix' )
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1028:1: 'postfix'
+                    {
+                     before(grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6()); 
+                    match(input,26,FOLLOW_26_in_rule__SigConstruct__TmpAlternatives_3_1_02280); 
+                     after(grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__TmpAlternatives_3_1_0"
 
 
     // $ANTLR start "rule__NAMESPACE__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:844:1: rule__NAMESPACE__Group__0 : rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1043:1: rule__NAMESPACE__Group__0 : rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1 ;
     public final void rule__NAMESPACE__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:848:1: ( rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:849:2: rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1047:1: ( rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1048:2: rule__NAMESPACE__Group__0__Impl rule__NAMESPACE__Group__1
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Group__0__Impl_in_rule__NAMESPACE__Group__01840);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group__0__Impl_in_rule__NAMESPACE__Group__02313);
             rule__NAMESPACE__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NAMESPACE__Group__1_in_rule__NAMESPACE__Group__01843);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group__1_in_rule__NAMESPACE__Group__02316);
             rule__NAMESPACE__Group__1();
 
             state._fsp--;
@@ -2549,45 +3142,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:856:1: rule__NAMESPACE__Group__0__Impl : ( ( '../' )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1055:1: rule__NAMESPACE__Group__0__Impl : ( ( rule__NAMESPACE__Group_0__0 )* ) ;
     public final void rule__NAMESPACE__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:860:1: ( ( ( '../' )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:861:1: ( ( '../' )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1059:1: ( ( ( rule__NAMESPACE__Group_0__0 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1060:1: ( ( rule__NAMESPACE__Group_0__0 )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:861:1: ( ( '../' )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:862:1: ( '../' )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1060:1: ( ( rule__NAMESPACE__Group_0__0 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1061:1: ( rule__NAMESPACE__Group_0__0 )*
             {
-             before(grammarAccess.getNAMESPACEAccess().getFullStopFullStopSolidusKeyword_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:863:1: ( '../' )*
-            loop12:
+             before(grammarAccess.getNAMESPACEAccess().getGroup_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1062:1: ( rule__NAMESPACE__Group_0__0 )*
+            loop14:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA12_0==26) ) {
-                    alt12=1;
+                if ( (LA14_0==RULE_DOUBLEDOT) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt14) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:864:2: '../'
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1062:2: rule__NAMESPACE__Group_0__0
             	    {
-            	    match(input,26,FOLLOW_26_in_rule__NAMESPACE__Group__0__Impl1872); 
+            	    pushFollow(FOLLOW_rule__NAMESPACE__Group_0__0_in_rule__NAMESPACE__Group__0__Impl2343);
+            	    rule__NAMESPACE__Group_0__0();
+
+            	    state._fsp--;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop14;
                 }
             } while (true);
 
-             after(grammarAccess.getNAMESPACEAccess().getFullStopFullStopSolidusKeyword_0()); 
+             after(grammarAccess.getNAMESPACEAccess().getGroup_0()); 
 
             }
 
@@ -2610,21 +3207,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:875:1: rule__NAMESPACE__Group__1 : rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1072:1: rule__NAMESPACE__Group__1 : rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2 ;
     public final void rule__NAMESPACE__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:879:1: ( rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:880:2: rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1076:1: ( rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1077:2: rule__NAMESPACE__Group__1__Impl rule__NAMESPACE__Group__2
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Group__1__Impl_in_rule__NAMESPACE__Group__11905);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group__1__Impl_in_rule__NAMESPACE__Group__12374);
             rule__NAMESPACE__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NAMESPACE__Group__2_in_rule__NAMESPACE__Group__11908);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group__2_in_rule__NAMESPACE__Group__12377);
             rule__NAMESPACE__Group__2();
 
             state._fsp--;
@@ -2648,20 +3245,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:887:1: rule__NAMESPACE__Group__1__Impl : ( RULE_CID ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1084:1: rule__NAMESPACE__Group__1__Impl : ( RULE_CID ) ;
     public final void rule__NAMESPACE__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:891:1: ( ( RULE_CID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:892:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1088:1: ( ( RULE_CID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1089:1: ( RULE_CID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:892:1: ( RULE_CID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:893:1: RULE_CID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1089:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1090:1: RULE_CID
             {
              before(grammarAccess.getNAMESPACEAccess().getCIDTerminalRuleCall_1()); 
-            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NAMESPACE__Group__1__Impl1935); 
+            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NAMESPACE__Group__1__Impl2404); 
              after(grammarAccess.getNAMESPACEAccess().getCIDTerminalRuleCall_1()); 
 
             }
@@ -2685,16 +3282,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:904:1: rule__NAMESPACE__Group__2 : rule__NAMESPACE__Group__2__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1101:1: rule__NAMESPACE__Group__2 : rule__NAMESPACE__Group__2__Impl ;
     public final void rule__NAMESPACE__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:908:1: ( rule__NAMESPACE__Group__2__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:909:2: rule__NAMESPACE__Group__2__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1105:1: ( rule__NAMESPACE__Group__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1106:2: rule__NAMESPACE__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Group__2__Impl_in_rule__NAMESPACE__Group__21964);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group__2__Impl_in_rule__NAMESPACE__Group__22433);
             rule__NAMESPACE__Group__2__Impl();
 
             state._fsp--;
@@ -2718,44 +3315,44 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:915:1: rule__NAMESPACE__Group__2__Impl : ( ( rule__NAMESPACE__Group_2__0 )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1112:1: rule__NAMESPACE__Group__2__Impl : ( ( rule__NAMESPACE__Group_2__0 )* ) ;
     public final void rule__NAMESPACE__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:919:1: ( ( ( rule__NAMESPACE__Group_2__0 )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:920:1: ( ( rule__NAMESPACE__Group_2__0 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1116:1: ( ( ( rule__NAMESPACE__Group_2__0 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1117:1: ( ( rule__NAMESPACE__Group_2__0 )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:920:1: ( ( rule__NAMESPACE__Group_2__0 )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:921:1: ( rule__NAMESPACE__Group_2__0 )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1117:1: ( ( rule__NAMESPACE__Group_2__0 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1118:1: ( rule__NAMESPACE__Group_2__0 )*
             {
              before(grammarAccess.getNAMESPACEAccess().getGroup_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:922:1: ( rule__NAMESPACE__Group_2__0 )*
-            loop13:
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1119:1: ( rule__NAMESPACE__Group_2__0 )*
+            loop15:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA13_0==12) ) {
-                    int LA13_2 = input.LA(2);
+                if ( (LA15_0==14) ) {
+                    int LA15_2 = input.LA(2);
 
-                    if ( (LA13_2==RULE_CID) ) {
-                        alt13=1;
+                    if ( (LA15_2==RULE_CID) ) {
+                        alt15=1;
                     }
 
 
                 }
-                else if ( (LA13_0==11) ) {
-                    alt13=1;
+                else if ( (LA15_0==13) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt15) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:922:2: rule__NAMESPACE__Group_2__0
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1119:2: rule__NAMESPACE__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__NAMESPACE__Group_2__0_in_rule__NAMESPACE__Group__2__Impl1991);
+            	    pushFollow(FOLLOW_rule__NAMESPACE__Group_2__0_in_rule__NAMESPACE__Group__2__Impl2460);
             	    rule__NAMESPACE__Group_2__0();
 
             	    state._fsp--;
@@ -2765,7 +3362,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop15;
                 }
             } while (true);
 
@@ -2791,22 +3388,167 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NAMESPACE__Group__2__Impl"
 
 
+    // $ANTLR start "rule__NAMESPACE__Group_0__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1135:1: rule__NAMESPACE__Group_0__0 : rule__NAMESPACE__Group_0__0__Impl rule__NAMESPACE__Group_0__1 ;
+    public final void rule__NAMESPACE__Group_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1139:1: ( rule__NAMESPACE__Group_0__0__Impl rule__NAMESPACE__Group_0__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1140:2: rule__NAMESPACE__Group_0__0__Impl rule__NAMESPACE__Group_0__1
+            {
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_0__0__Impl_in_rule__NAMESPACE__Group_0__02497);
+            rule__NAMESPACE__Group_0__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_0__1_in_rule__NAMESPACE__Group_0__02500);
+            rule__NAMESPACE__Group_0__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NAMESPACE__Group_0__0"
+
+
+    // $ANTLR start "rule__NAMESPACE__Group_0__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1147:1: rule__NAMESPACE__Group_0__0__Impl : ( RULE_DOUBLEDOT ) ;
+    public final void rule__NAMESPACE__Group_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1151:1: ( ( RULE_DOUBLEDOT ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1152:1: ( RULE_DOUBLEDOT )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1152:1: ( RULE_DOUBLEDOT )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1153:1: RULE_DOUBLEDOT
+            {
+             before(grammarAccess.getNAMESPACEAccess().getDoubleDotTerminalRuleCall_0_0()); 
+            match(input,RULE_DOUBLEDOT,FOLLOW_RULE_DOUBLEDOT_in_rule__NAMESPACE__Group_0__0__Impl2527); 
+             after(grammarAccess.getNAMESPACEAccess().getDoubleDotTerminalRuleCall_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NAMESPACE__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__NAMESPACE__Group_0__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1164:1: rule__NAMESPACE__Group_0__1 : rule__NAMESPACE__Group_0__1__Impl ;
+    public final void rule__NAMESPACE__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1168:1: ( rule__NAMESPACE__Group_0__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1169:2: rule__NAMESPACE__Group_0__1__Impl
+            {
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_0__1__Impl_in_rule__NAMESPACE__Group_0__12556);
+            rule__NAMESPACE__Group_0__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NAMESPACE__Group_0__1"
+
+
+    // $ANTLR start "rule__NAMESPACE__Group_0__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1175:1: rule__NAMESPACE__Group_0__1__Impl : ( '/' ) ;
+    public final void rule__NAMESPACE__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1179:1: ( ( '/' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1180:1: ( '/' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1180:1: ( '/' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1181:1: '/'
+            {
+             before(grammarAccess.getNAMESPACEAccess().getSolidusKeyword_0_1()); 
+            match(input,13,FOLLOW_13_in_rule__NAMESPACE__Group_0__1__Impl2584); 
+             after(grammarAccess.getNAMESPACEAccess().getSolidusKeyword_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NAMESPACE__Group_0__1__Impl"
+
+
     // $ANTLR start "rule__NAMESPACE__Group_2__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:938:1: rule__NAMESPACE__Group_2__0 : rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1198:1: rule__NAMESPACE__Group_2__0 : rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1 ;
     public final void rule__NAMESPACE__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:942:1: ( rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:943:2: rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1202:1: ( rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1203:2: rule__NAMESPACE__Group_2__0__Impl rule__NAMESPACE__Group_2__1
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__0__Impl_in_rule__NAMESPACE__Group_2__02028);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__0__Impl_in_rule__NAMESPACE__Group_2__02619);
             rule__NAMESPACE__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__1_in_rule__NAMESPACE__Group_2__02031);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__1_in_rule__NAMESPACE__Group_2__02622);
             rule__NAMESPACE__Group_2__1();
 
             state._fsp--;
@@ -2830,23 +3572,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group_2__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:950:1: rule__NAMESPACE__Group_2__0__Impl : ( ( rule__NAMESPACE__Alternatives_2_0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1210:1: rule__NAMESPACE__Group_2__0__Impl : ( ( rule__NAMESPACE__Alternatives_2_0 ) ) ;
     public final void rule__NAMESPACE__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:954:1: ( ( ( rule__NAMESPACE__Alternatives_2_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:955:1: ( ( rule__NAMESPACE__Alternatives_2_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1214:1: ( ( ( rule__NAMESPACE__Alternatives_2_0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1215:1: ( ( rule__NAMESPACE__Alternatives_2_0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:955:1: ( ( rule__NAMESPACE__Alternatives_2_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:956:1: ( rule__NAMESPACE__Alternatives_2_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1215:1: ( ( rule__NAMESPACE__Alternatives_2_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1216:1: ( rule__NAMESPACE__Alternatives_2_0 )
             {
              before(grammarAccess.getNAMESPACEAccess().getAlternatives_2_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:957:1: ( rule__NAMESPACE__Alternatives_2_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:957:2: rule__NAMESPACE__Alternatives_2_0
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1217:1: ( rule__NAMESPACE__Alternatives_2_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1217:2: rule__NAMESPACE__Alternatives_2_0
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Alternatives_2_0_in_rule__NAMESPACE__Group_2__0__Impl2058);
+            pushFollow(FOLLOW_rule__NAMESPACE__Alternatives_2_0_in_rule__NAMESPACE__Group_2__0__Impl2649);
             rule__NAMESPACE__Alternatives_2_0();
 
             state._fsp--;
@@ -2877,16 +3619,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group_2__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:967:1: rule__NAMESPACE__Group_2__1 : rule__NAMESPACE__Group_2__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1227:1: rule__NAMESPACE__Group_2__1 : rule__NAMESPACE__Group_2__1__Impl ;
     public final void rule__NAMESPACE__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:971:1: ( rule__NAMESPACE__Group_2__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:972:2: rule__NAMESPACE__Group_2__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1231:1: ( rule__NAMESPACE__Group_2__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1232:2: rule__NAMESPACE__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__1__Impl_in_rule__NAMESPACE__Group_2__12088);
+            pushFollow(FOLLOW_rule__NAMESPACE__Group_2__1__Impl_in_rule__NAMESPACE__Group_2__12679);
             rule__NAMESPACE__Group_2__1__Impl();
 
             state._fsp--;
@@ -2910,20 +3652,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NAMESPACE__Group_2__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:978:1: rule__NAMESPACE__Group_2__1__Impl : ( RULE_CID ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1238:1: rule__NAMESPACE__Group_2__1__Impl : ( RULE_CID ) ;
     public final void rule__NAMESPACE__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:982:1: ( ( RULE_CID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:983:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1242:1: ( ( RULE_CID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1243:1: ( RULE_CID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:983:1: ( RULE_CID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:984:1: RULE_CID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1243:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1244:1: RULE_CID
             {
              before(grammarAccess.getNAMESPACEAccess().getCIDTerminalRuleCall_2_1()); 
-            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NAMESPACE__Group_2__1__Impl2115); 
+            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NAMESPACE__Group_2__1__Impl2706); 
              after(grammarAccess.getNAMESPACEAccess().getCIDTerminalRuleCall_2_1()); 
 
             }
@@ -2947,21 +3689,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:999:1: rule__URI__Group__0 : rule__URI__Group__0__Impl rule__URI__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1259:1: rule__URI__Group__0 : rule__URI__Group__0__Impl rule__URI__Group__1 ;
     public final void rule__URI__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1003:1: ( rule__URI__Group__0__Impl rule__URI__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1004:2: rule__URI__Group__0__Impl rule__URI__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1263:1: ( rule__URI__Group__0__Impl rule__URI__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1264:2: rule__URI__Group__0__Impl rule__URI__Group__1
             {
-            pushFollow(FOLLOW_rule__URI__Group__0__Impl_in_rule__URI__Group__02148);
+            pushFollow(FOLLOW_rule__URI__Group__0__Impl_in_rule__URI__Group__02739);
             rule__URI__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__URI__Group__1_in_rule__URI__Group__02151);
+            pushFollow(FOLLOW_rule__URI__Group__1_in_rule__URI__Group__02742);
             rule__URI__Group__1();
 
             state._fsp--;
@@ -2985,35 +3727,35 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1011:1: rule__URI__Group__0__Impl : ( ( rule__URI__Group_0__0 )? ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1271:1: rule__URI__Group__0__Impl : ( ( rule__URI__Group_0__0 )? ) ;
     public final void rule__URI__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1015:1: ( ( ( rule__URI__Group_0__0 )? ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1016:1: ( ( rule__URI__Group_0__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1275:1: ( ( ( rule__URI__Group_0__0 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1276:1: ( ( rule__URI__Group_0__0 )? )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1016:1: ( ( rule__URI__Group_0__0 )? )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1017:1: ( rule__URI__Group_0__0 )?
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1276:1: ( ( rule__URI__Group_0__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1277:1: ( rule__URI__Group_0__0 )?
             {
              before(grammarAccess.getURIAccess().getGroup_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1018:1: ( rule__URI__Group_0__0 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1278:1: ( rule__URI__Group_0__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_CID) ) {
-                int LA14_1 = input.LA(2);
+            if ( (LA16_0==RULE_CID) ) {
+                int LA16_1 = input.LA(2);
 
-                if ( (LA14_1==27) ) {
-                    alt14=1;
+                if ( (LA16_1==15) ) {
+                    alt16=1;
                 }
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1018:2: rule__URI__Group_0__0
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1278:2: rule__URI__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__URI__Group_0__0_in_rule__URI__Group__0__Impl2178);
+                    pushFollow(FOLLOW_rule__URI__Group_0__0_in_rule__URI__Group__0__Impl2769);
                     rule__URI__Group_0__0();
 
                     state._fsp--;
@@ -3047,16 +3789,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1028:1: rule__URI__Group__1 : rule__URI__Group__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1288:1: rule__URI__Group__1 : rule__URI__Group__1__Impl ;
     public final void rule__URI__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1032:1: ( rule__URI__Group__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1033:2: rule__URI__Group__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1292:1: ( rule__URI__Group__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1293:2: rule__URI__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__URI__Group__1__Impl_in_rule__URI__Group__12209);
+            pushFollow(FOLLOW_rule__URI__Group__1__Impl_in_rule__URI__Group__12800);
             rule__URI__Group__1__Impl();
 
             state._fsp--;
@@ -3080,20 +3822,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1039:1: rule__URI__Group__1__Impl : ( ruleNAMESPACE ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1299:1: rule__URI__Group__1__Impl : ( ruleNAMESPACE ) ;
     public final void rule__URI__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1043:1: ( ( ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1044:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1303:1: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1304:1: ( ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1044:1: ( ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1045:1: ruleNAMESPACE
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1304:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1305:1: ruleNAMESPACE
             {
              before(grammarAccess.getURIAccess().getNAMESPACEParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__URI__Group__1__Impl2236);
+            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__URI__Group__1__Impl2827);
             ruleNAMESPACE();
 
             state._fsp--;
@@ -3121,21 +3863,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group_0__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1060:1: rule__URI__Group_0__0 : rule__URI__Group_0__0__Impl rule__URI__Group_0__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1320:1: rule__URI__Group_0__0 : rule__URI__Group_0__0__Impl rule__URI__Group_0__1 ;
     public final void rule__URI__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1064:1: ( rule__URI__Group_0__0__Impl rule__URI__Group_0__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1065:2: rule__URI__Group_0__0__Impl rule__URI__Group_0__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1324:1: ( rule__URI__Group_0__0__Impl rule__URI__Group_0__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1325:2: rule__URI__Group_0__0__Impl rule__URI__Group_0__1
             {
-            pushFollow(FOLLOW_rule__URI__Group_0__0__Impl_in_rule__URI__Group_0__02269);
+            pushFollow(FOLLOW_rule__URI__Group_0__0__Impl_in_rule__URI__Group_0__02860);
             rule__URI__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__URI__Group_0__1_in_rule__URI__Group_0__02272);
+            pushFollow(FOLLOW_rule__URI__Group_0__1_in_rule__URI__Group_0__02863);
             rule__URI__Group_0__1();
 
             state._fsp--;
@@ -3159,20 +3901,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group_0__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1072:1: rule__URI__Group_0__0__Impl : ( RULE_CID ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1332:1: rule__URI__Group_0__0__Impl : ( RULE_CID ) ;
     public final void rule__URI__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1076:1: ( ( RULE_CID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1077:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1336:1: ( ( RULE_CID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1337:1: ( RULE_CID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1077:1: ( RULE_CID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1078:1: RULE_CID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1337:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1338:1: RULE_CID
             {
              before(grammarAccess.getURIAccess().getCIDTerminalRuleCall_0_0()); 
-            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__URI__Group_0__0__Impl2299); 
+            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__URI__Group_0__0__Impl2890); 
              after(grammarAccess.getURIAccess().getCIDTerminalRuleCall_0_0()); 
 
             }
@@ -3196,17 +3938,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group_0__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1089:1: rule__URI__Group_0__1 : rule__URI__Group_0__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1349:1: rule__URI__Group_0__1 : rule__URI__Group_0__1__Impl rule__URI__Group_0__2 ;
     public final void rule__URI__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1093:1: ( rule__URI__Group_0__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1094:2: rule__URI__Group_0__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1353:1: ( rule__URI__Group_0__1__Impl rule__URI__Group_0__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1354:2: rule__URI__Group_0__1__Impl rule__URI__Group_0__2
             {
-            pushFollow(FOLLOW_rule__URI__Group_0__1__Impl_in_rule__URI__Group_0__12328);
+            pushFollow(FOLLOW_rule__URI__Group_0__1__Impl_in_rule__URI__Group_0__12919);
             rule__URI__Group_0__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__URI__Group_0__2_in_rule__URI__Group_0__12922);
+            rule__URI__Group_0__2();
 
             state._fsp--;
 
@@ -3229,21 +3976,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URI__Group_0__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1100:1: rule__URI__Group_0__1__Impl : ( '://' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1361:1: rule__URI__Group_0__1__Impl : ( ':' ) ;
     public final void rule__URI__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1104:1: ( ( '://' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1105:1: ( '://' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1365:1: ( ( ':' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1366:1: ( ':' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1105:1: ( '://' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1106:1: '://'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1366:1: ( ':' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1367:1: ':'
             {
-             before(grammarAccess.getURIAccess().getColonSolidusSolidusKeyword_0_1()); 
-            match(input,27,FOLLOW_27_in_rule__URI__Group_0__1__Impl2356); 
-             after(grammarAccess.getURIAccess().getColonSolidusSolidusKeyword_0_1()); 
+             before(grammarAccess.getURIAccess().getColonKeyword_0_1()); 
+            match(input,15,FOLLOW_15_in_rule__URI__Group_0__1__Impl2950); 
+             after(grammarAccess.getURIAccess().getColonKeyword_0_1()); 
 
             }
 
@@ -3265,22 +4012,167 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__URI__Group_0__1__Impl"
 
 
+    // $ANTLR start "rule__URI__Group_0__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1380:1: rule__URI__Group_0__2 : rule__URI__Group_0__2__Impl rule__URI__Group_0__3 ;
+    public final void rule__URI__Group_0__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1384:1: ( rule__URI__Group_0__2__Impl rule__URI__Group_0__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1385:2: rule__URI__Group_0__2__Impl rule__URI__Group_0__3
+            {
+            pushFollow(FOLLOW_rule__URI__Group_0__2__Impl_in_rule__URI__Group_0__22981);
+            rule__URI__Group_0__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__URI__Group_0__3_in_rule__URI__Group_0__22984);
+            rule__URI__Group_0__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__URI__Group_0__2"
+
+
+    // $ANTLR start "rule__URI__Group_0__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1392:1: rule__URI__Group_0__2__Impl : ( '/' ) ;
+    public final void rule__URI__Group_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1396:1: ( ( '/' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1397:1: ( '/' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1397:1: ( '/' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1398:1: '/'
+            {
+             before(grammarAccess.getURIAccess().getSolidusKeyword_0_2()); 
+            match(input,13,FOLLOW_13_in_rule__URI__Group_0__2__Impl3012); 
+             after(grammarAccess.getURIAccess().getSolidusKeyword_0_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__URI__Group_0__2__Impl"
+
+
+    // $ANTLR start "rule__URI__Group_0__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1411:1: rule__URI__Group_0__3 : rule__URI__Group_0__3__Impl ;
+    public final void rule__URI__Group_0__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1415:1: ( rule__URI__Group_0__3__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1416:2: rule__URI__Group_0__3__Impl
+            {
+            pushFollow(FOLLOW_rule__URI__Group_0__3__Impl_in_rule__URI__Group_0__33043);
+            rule__URI__Group_0__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__URI__Group_0__3"
+
+
+    // $ANTLR start "rule__URI__Group_0__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1422:1: rule__URI__Group_0__3__Impl : ( '/' ) ;
+    public final void rule__URI__Group_0__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1426:1: ( ( '/' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1427:1: ( '/' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1427:1: ( '/' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1428:1: '/'
+            {
+             before(grammarAccess.getURIAccess().getSolidusKeyword_0_3()); 
+            match(input,13,FOLLOW_13_in_rule__URI__Group_0__3__Impl3071); 
+             after(grammarAccess.getURIAccess().getSolidusKeyword_0_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__URI__Group_0__3__Impl"
+
+
     // $ANTLR start "rule__URISTRING__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1123:1: rule__URISTRING__Group__0 : rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1449:1: rule__URISTRING__Group__0 : rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1 ;
     public final void rule__URISTRING__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1127:1: ( rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1128:2: rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1453:1: ( rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1454:2: rule__URISTRING__Group__0__Impl rule__URISTRING__Group__1
             {
-            pushFollow(FOLLOW_rule__URISTRING__Group__0__Impl_in_rule__URISTRING__Group__02391);
+            pushFollow(FOLLOW_rule__URISTRING__Group__0__Impl_in_rule__URISTRING__Group__03110);
             rule__URISTRING__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__URISTRING__Group__1_in_rule__URISTRING__Group__02394);
+            pushFollow(FOLLOW_rule__URISTRING__Group__1_in_rule__URISTRING__Group__03113);
             rule__URISTRING__Group__1();
 
             state._fsp--;
@@ -3304,20 +4196,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URISTRING__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1135:1: rule__URISTRING__Group__0__Impl : ( '\"' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1461:1: rule__URISTRING__Group__0__Impl : ( '\"' ) ;
     public final void rule__URISTRING__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1139:1: ( ( '\"' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1140:1: ( '\"' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1465:1: ( ( '\"' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1466:1: ( '\"' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1140:1: ( '\"' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1141:1: '\"'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1466:1: ( '\"' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1467:1: '\"'
             {
              before(grammarAccess.getURISTRINGAccess().getQuotationMarkKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__URISTRING__Group__0__Impl2422); 
+            match(input,27,FOLLOW_27_in_rule__URISTRING__Group__0__Impl3141); 
              after(grammarAccess.getURISTRINGAccess().getQuotationMarkKeyword_0()); 
 
             }
@@ -3341,21 +4233,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URISTRING__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1154:1: rule__URISTRING__Group__1 : rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1480:1: rule__URISTRING__Group__1 : rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2 ;
     public final void rule__URISTRING__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1158:1: ( rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1159:2: rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1484:1: ( rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1485:2: rule__URISTRING__Group__1__Impl rule__URISTRING__Group__2
             {
-            pushFollow(FOLLOW_rule__URISTRING__Group__1__Impl_in_rule__URISTRING__Group__12453);
+            pushFollow(FOLLOW_rule__URISTRING__Group__1__Impl_in_rule__URISTRING__Group__13172);
             rule__URISTRING__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__URISTRING__Group__2_in_rule__URISTRING__Group__12456);
+            pushFollow(FOLLOW_rule__URISTRING__Group__2_in_rule__URISTRING__Group__13175);
             rule__URISTRING__Group__2();
 
             state._fsp--;
@@ -3379,20 +4271,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URISTRING__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1166:1: rule__URISTRING__Group__1__Impl : ( ruleURI ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1492:1: rule__URISTRING__Group__1__Impl : ( ruleURI ) ;
     public final void rule__URISTRING__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1170:1: ( ( ruleURI ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1171:1: ( ruleURI )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1496:1: ( ( ruleURI ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1497:1: ( ruleURI )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1171:1: ( ruleURI )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1172:1: ruleURI
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1497:1: ( ruleURI )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1498:1: ruleURI
             {
              before(grammarAccess.getURISTRINGAccess().getURIParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleURI_in_rule__URISTRING__Group__1__Impl2483);
+            pushFollow(FOLLOW_ruleURI_in_rule__URISTRING__Group__1__Impl3202);
             ruleURI();
 
             state._fsp--;
@@ -3420,16 +4312,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URISTRING__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1183:1: rule__URISTRING__Group__2 : rule__URISTRING__Group__2__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1509:1: rule__URISTRING__Group__2 : rule__URISTRING__Group__2__Impl ;
     public final void rule__URISTRING__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1187:1: ( rule__URISTRING__Group__2__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1188:2: rule__URISTRING__Group__2__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1513:1: ( rule__URISTRING__Group__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1514:2: rule__URISTRING__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__URISTRING__Group__2__Impl_in_rule__URISTRING__Group__22512);
+            pushFollow(FOLLOW_rule__URISTRING__Group__2__Impl_in_rule__URISTRING__Group__23231);
             rule__URISTRING__Group__2__Impl();
 
             state._fsp--;
@@ -3453,20 +4345,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__URISTRING__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1194:1: rule__URISTRING__Group__2__Impl : ( '\"' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1520:1: rule__URISTRING__Group__2__Impl : ( '\"' ) ;
     public final void rule__URISTRING__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1198:1: ( ( '\"' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1199:1: ( '\"' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1524:1: ( ( '\"' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1525:1: ( '\"' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1199:1: ( '\"' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1200:1: '\"'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1525:1: ( '\"' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1526:1: '\"'
             {
              before(grammarAccess.getURISTRINGAccess().getQuotationMarkKeyword_2()); 
-            match(input,28,FOLLOW_28_in_rule__URISTRING__Group__2__Impl2540); 
+            match(input,27,FOLLOW_27_in_rule__URISTRING__Group__2__Impl3259); 
              after(grammarAccess.getURISTRINGAccess().getQuotationMarkKeyword_2()); 
 
             }
@@ -3490,21 +4382,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1219:1: rule__NamespaceDeclaration__Group__0 : rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1545:1: rule__NamespaceDeclaration__Group__0 : rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1 ;
     public final void rule__NamespaceDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1223:1: ( rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1224:2: rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1549:1: ( rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1550:2: rule__NamespaceDeclaration__Group__0__Impl rule__NamespaceDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__0__Impl_in_rule__NamespaceDeclaration__Group__02577);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__0__Impl_in_rule__NamespaceDeclaration__Group__03296);
             rule__NamespaceDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__1_in_rule__NamespaceDeclaration__Group__02580);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__1_in_rule__NamespaceDeclaration__Group__03299);
             rule__NamespaceDeclaration__Group__1();
 
             state._fsp--;
@@ -3528,21 +4420,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1231:1: rule__NamespaceDeclaration__Group__0__Impl : ( '%namespace' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1557:1: rule__NamespaceDeclaration__Group__0__Impl : ( '%' ) ;
     public final void rule__NamespaceDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1235:1: ( ( '%namespace' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1236:1: ( '%namespace' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1561:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1562:1: ( '%' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1236:1: ( '%namespace' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1237:1: '%namespace'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1562:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1563:1: '%'
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getNamespaceKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__NamespaceDeclaration__Group__0__Impl2608); 
-             after(grammarAccess.getNamespaceDeclarationAccess().getNamespaceKeyword_0()); 
+             before(grammarAccess.getNamespaceDeclarationAccess().getPercentSignKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__NamespaceDeclaration__Group__0__Impl3327); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getPercentSignKeyword_0()); 
 
             }
 
@@ -3565,21 +4457,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1250:1: rule__NamespaceDeclaration__Group__1 : rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1576:1: rule__NamespaceDeclaration__Group__1 : rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2 ;
     public final void rule__NamespaceDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1254:1: ( rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1255:2: rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1580:1: ( rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1581:2: rule__NamespaceDeclaration__Group__1__Impl rule__NamespaceDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__1__Impl_in_rule__NamespaceDeclaration__Group__12639);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__1__Impl_in_rule__NamespaceDeclaration__Group__13358);
             rule__NamespaceDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__2_in_rule__NamespaceDeclaration__Group__12642);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__2_in_rule__NamespaceDeclaration__Group__13361);
             rule__NamespaceDeclaration__Group__2();
 
             state._fsp--;
@@ -3603,74 +4495,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1262:1: rule__NamespaceDeclaration__Group__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1588:1: rule__NamespaceDeclaration__Group__1__Impl : ( 'namespace' ) ;
     public final void rule__NamespaceDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1266:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1267:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1592:1: ( ( 'namespace' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1593:1: ( 'namespace' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1267:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1268:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1593:1: ( 'namespace' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1594:1: 'namespace'
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1268:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1269:1: ( ruleWS )
-            {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1270:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1270:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__1__Impl2672);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1273:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1274:1: ( ruleWS )*
-            {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1275:1: ( ruleWS )*
-            loop15:
-            do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
-
-                if ( ((LA15_0>=RULE_SP && LA15_0<=RULE_SL_COMMENT)) ) {
-                    alt15=1;
-                }
-
-
-                switch (alt15) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1275:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__1__Impl2685);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop15;
-                }
-            } while (true);
-
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
+             before(grammarAccess.getNamespaceDeclarationAccess().getNamespaceKeyword_1()); 
+            match(input,28,FOLLOW_28_in_rule__NamespaceDeclaration__Group__1__Impl3389); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getNamespaceKeyword_1()); 
 
             }
 
@@ -3693,21 +4532,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1286:1: rule__NamespaceDeclaration__Group__2 : rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1607:1: rule__NamespaceDeclaration__Group__2 : rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3 ;
     public final void rule__NamespaceDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1290:1: ( rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1291:2: rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1611:1: ( rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1612:2: rule__NamespaceDeclaration__Group__2__Impl rule__NamespaceDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__2__Impl_in_rule__NamespaceDeclaration__Group__22718);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__2__Impl_in_rule__NamespaceDeclaration__Group__23420);
             rule__NamespaceDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__3_in_rule__NamespaceDeclaration__Group__22721);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__3_in_rule__NamespaceDeclaration__Group__23423);
             rule__NamespaceDeclaration__Group__3();
 
             state._fsp--;
@@ -3731,42 +4570,74 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1298:1: rule__NamespaceDeclaration__Group__2__Impl : ( ( rule__NamespaceDeclaration__Group_2__0 )? ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1619:1: rule__NamespaceDeclaration__Group__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
     public final void rule__NamespaceDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1302:1: ( ( ( rule__NamespaceDeclaration__Group_2__0 )? ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1303:1: ( ( rule__NamespaceDeclaration__Group_2__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1623:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1624:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1303:1: ( ( rule__NamespaceDeclaration__Group_2__0 )? )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1304:1: ( rule__NamespaceDeclaration__Group_2__0 )?
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1624:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1625:1: ( ( ruleWS ) ) ( ( ruleWS )* )
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getGroup_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1305:1: ( rule__NamespaceDeclaration__Group_2__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1625:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1626:1: ( ruleWS )
+            {
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1627:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1627:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__2__Impl3453);
+            ruleWS();
 
-            if ( (LA16_0==RULE_CID) ) {
-                alt16=1;
-            }
-            switch (alt16) {
-                case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1305:2: rule__NamespaceDeclaration__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__0_in_rule__NamespaceDeclaration__Group__2__Impl2748);
-                    rule__NamespaceDeclaration__Group_2__0();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getNamespaceDeclarationAccess().getGroup_2()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1630:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1631:1: ( ruleWS )*
+            {
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1632:1: ( ruleWS )*
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( ((LA17_0>=RULE_SP && LA17_0<=RULE_SL_COMMENT)) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1632:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__2__Impl3466);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop17;
+                }
+            } while (true);
+
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
 
             }
 
@@ -3789,21 +4660,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1315:1: rule__NamespaceDeclaration__Group__3 : rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1643:1: rule__NamespaceDeclaration__Group__3 : rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4 ;
     public final void rule__NamespaceDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1319:1: ( rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1320:2: rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1647:1: ( rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1648:2: rule__NamespaceDeclaration__Group__3__Impl rule__NamespaceDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__3__Impl_in_rule__NamespaceDeclaration__Group__32779);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__3__Impl_in_rule__NamespaceDeclaration__Group__33499);
             rule__NamespaceDeclaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__4_in_rule__NamespaceDeclaration__Group__32782);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__4_in_rule__NamespaceDeclaration__Group__33502);
             rule__NamespaceDeclaration__Group__4();
 
             state._fsp--;
@@ -3827,31 +4698,42 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1327:1: rule__NamespaceDeclaration__Group__3__Impl : ( ( rule__NamespaceDeclaration__UriAssignment_3 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1655:1: rule__NamespaceDeclaration__Group__3__Impl : ( ( rule__NamespaceDeclaration__Group_3__0 )? ) ;
     public final void rule__NamespaceDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1331:1: ( ( ( rule__NamespaceDeclaration__UriAssignment_3 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1332:1: ( ( rule__NamespaceDeclaration__UriAssignment_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1659:1: ( ( ( rule__NamespaceDeclaration__Group_3__0 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1660:1: ( ( rule__NamespaceDeclaration__Group_3__0 )? )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1332:1: ( ( rule__NamespaceDeclaration__UriAssignment_3 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1333:1: ( rule__NamespaceDeclaration__UriAssignment_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1660:1: ( ( rule__NamespaceDeclaration__Group_3__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1661:1: ( rule__NamespaceDeclaration__Group_3__0 )?
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1334:1: ( rule__NamespaceDeclaration__UriAssignment_3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1334:2: rule__NamespaceDeclaration__UriAssignment_3
-            {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__UriAssignment_3_in_rule__NamespaceDeclaration__Group__3__Impl2809);
-            rule__NamespaceDeclaration__UriAssignment_3();
+             before(grammarAccess.getNamespaceDeclarationAccess().getGroup_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1662:1: ( rule__NamespaceDeclaration__Group_3__0 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA18_0==RULE_CID) ) {
+                alt18=1;
+            }
+            switch (alt18) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1662:2: rule__NamespaceDeclaration__Group_3__0
+                    {
+                    pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__0_in_rule__NamespaceDeclaration__Group__3__Impl3529);
+                    rule__NamespaceDeclaration__Group_3__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_3()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getGroup_3()); 
 
             }
 
@@ -3874,21 +4756,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1344:1: rule__NamespaceDeclaration__Group__4 : rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1672:1: rule__NamespaceDeclaration__Group__4 : rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5 ;
     public final void rule__NamespaceDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1348:1: ( rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1349:2: rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1676:1: ( rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1677:2: rule__NamespaceDeclaration__Group__4__Impl rule__NamespaceDeclaration__Group__5
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__4__Impl_in_rule__NamespaceDeclaration__Group__42839);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__4__Impl_in_rule__NamespaceDeclaration__Group__43560);
             rule__NamespaceDeclaration__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__5_in_rule__NamespaceDeclaration__Group__42842);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__5_in_rule__NamespaceDeclaration__Group__43563);
             rule__NamespaceDeclaration__Group__5();
 
             state._fsp--;
@@ -3912,49 +4794,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1356:1: rule__NamespaceDeclaration__Group__4__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1684:1: rule__NamespaceDeclaration__Group__4__Impl : ( ( rule__NamespaceDeclaration__UriAssignment_4 ) ) ;
     public final void rule__NamespaceDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1360:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1361:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1688:1: ( ( ( rule__NamespaceDeclaration__UriAssignment_4 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1689:1: ( ( rule__NamespaceDeclaration__UriAssignment_4 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1361:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1362:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1689:1: ( ( rule__NamespaceDeclaration__UriAssignment_4 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1690:1: ( rule__NamespaceDeclaration__UriAssignment_4 )
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_4()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1363:1: ( ruleWS )*
-            loop17:
-            do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+             before(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1691:1: ( rule__NamespaceDeclaration__UriAssignment_4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1691:2: rule__NamespaceDeclaration__UriAssignment_4
+            {
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__UriAssignment_4_in_rule__NamespaceDeclaration__Group__4__Impl3590);
+            rule__NamespaceDeclaration__UriAssignment_4();
 
-                if ( ((LA17_0>=RULE_SP && LA17_0<=RULE_SL_COMMENT)) ) {
-                    alt17=1;
-                }
+            state._fsp--;
 
 
-                switch (alt17) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1363:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__4__Impl2870);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_4()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getUriAssignment_4()); 
 
             }
 
@@ -3977,21 +4841,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1373:1: rule__NamespaceDeclaration__Group__5 : rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1701:1: rule__NamespaceDeclaration__Group__5 : rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6 ;
     public final void rule__NamespaceDeclaration__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1377:1: ( rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1378:2: rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1705:1: ( rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1706:2: rule__NamespaceDeclaration__Group__5__Impl rule__NamespaceDeclaration__Group__6
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__5__Impl_in_rule__NamespaceDeclaration__Group__52901);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__5__Impl_in_rule__NamespaceDeclaration__Group__53620);
             rule__NamespaceDeclaration__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__6_in_rule__NamespaceDeclaration__Group__52904);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__6_in_rule__NamespaceDeclaration__Group__53623);
             rule__NamespaceDeclaration__Group__6();
 
             state._fsp--;
@@ -4015,21 +4879,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1385:1: rule__NamespaceDeclaration__Group__5__Impl : ( '.' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1713:1: rule__NamespaceDeclaration__Group__5__Impl : ( ( ruleWS )* ) ;
     public final void rule__NamespaceDeclaration__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1389:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1390:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1717:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1718:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1390:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1391:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1718:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1719:1: ( ruleWS )*
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getFullStopKeyword_5()); 
-            match(input,12,FOLLOW_12_in_rule__NamespaceDeclaration__Group__5__Impl2932); 
-             after(grammarAccess.getNamespaceDeclarationAccess().getFullStopKeyword_5()); 
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_5()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1720:1: ( ruleWS )*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
+
+                if ( ((LA19_0>=RULE_SP && LA19_0<=RULE_SL_COMMENT)) ) {
+                    alt19=1;
+                }
+
+
+                switch (alt19) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1720:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__5__Impl3651);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
+
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_5()); 
 
             }
 
@@ -4052,17 +4944,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__6"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1404:1: rule__NamespaceDeclaration__Group__6 : rule__NamespaceDeclaration__Group__6__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1730:1: rule__NamespaceDeclaration__Group__6 : rule__NamespaceDeclaration__Group__6__Impl rule__NamespaceDeclaration__Group__7 ;
     public final void rule__NamespaceDeclaration__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1408:1: ( rule__NamespaceDeclaration__Group__6__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1409:2: rule__NamespaceDeclaration__Group__6__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1734:1: ( rule__NamespaceDeclaration__Group__6__Impl rule__NamespaceDeclaration__Group__7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1735:2: rule__NamespaceDeclaration__Group__6__Impl rule__NamespaceDeclaration__Group__7
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__6__Impl_in_rule__NamespaceDeclaration__Group__62963);
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__6__Impl_in_rule__NamespaceDeclaration__Group__63682);
             rule__NamespaceDeclaration__Group__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__7_in_rule__NamespaceDeclaration__Group__63685);
+            rule__NamespaceDeclaration__Group__7();
 
             state._fsp--;
 
@@ -4085,25 +4982,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespaceDeclaration__Group__6__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1415:1: rule__NamespaceDeclaration__Group__6__Impl : ( ruleWS ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1742:1: rule__NamespaceDeclaration__Group__6__Impl : ( '.' ) ;
     public final void rule__NamespaceDeclaration__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1419:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1420:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1746:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1747:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1420:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1421:1: ruleWS
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1747:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1748:1: '.'
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_6()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__6__Impl2990);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_6()); 
+             before(grammarAccess.getNamespaceDeclarationAccess().getFullStopKeyword_6()); 
+            match(input,14,FOLLOW_14_in_rule__NamespaceDeclaration__Group__6__Impl3713); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getFullStopKeyword_6()); 
 
             }
 
@@ -4125,23 +5018,18 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NamespaceDeclaration__Group__6__Impl"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1446:1: rule__NamespaceDeclaration__Group_2__0 : rule__NamespaceDeclaration__Group_2__0__Impl rule__NamespaceDeclaration__Group_2__1 ;
-    public final void rule__NamespaceDeclaration__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group__7"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1761:1: rule__NamespaceDeclaration__Group__7 : rule__NamespaceDeclaration__Group__7__Impl ;
+    public final void rule__NamespaceDeclaration__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1450:1: ( rule__NamespaceDeclaration__Group_2__0__Impl rule__NamespaceDeclaration__Group_2__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1451:2: rule__NamespaceDeclaration__Group_2__0__Impl rule__NamespaceDeclaration__Group_2__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1765:1: ( rule__NamespaceDeclaration__Group__7__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1766:2: rule__NamespaceDeclaration__Group__7__Impl
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__0__Impl_in_rule__NamespaceDeclaration__Group_2__03033);
-            rule__NamespaceDeclaration__Group_2__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__1_in_rule__NamespaceDeclaration__Group_2__03036);
-            rule__NamespaceDeclaration__Group_2__1();
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group__7__Impl_in_rule__NamespaceDeclaration__Group__73744);
+            rule__NamespaceDeclaration__Group__7__Impl();
 
             state._fsp--;
 
@@ -4160,35 +5048,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__0"
+    // $ANTLR end "rule__NamespaceDeclaration__Group__7"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1458:1: rule__NamespaceDeclaration__Group_2__0__Impl : ( ( rule__NamespaceDeclaration__NameAssignment_2_0 ) ) ;
-    public final void rule__NamespaceDeclaration__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group__7__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1772:1: rule__NamespaceDeclaration__Group__7__Impl : ( ruleWS ) ;
+    public final void rule__NamespaceDeclaration__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1462:1: ( ( ( rule__NamespaceDeclaration__NameAssignment_2_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1463:1: ( ( rule__NamespaceDeclaration__NameAssignment_2_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1776:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1777:1: ( ruleWS )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1463:1: ( ( rule__NamespaceDeclaration__NameAssignment_2_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1464:1: ( rule__NamespaceDeclaration__NameAssignment_2_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1777:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1778:1: ruleWS
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_2_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1465:1: ( rule__NamespaceDeclaration__NameAssignment_2_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1465:2: rule__NamespaceDeclaration__NameAssignment_2_0
-            {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__NameAssignment_2_0_in_rule__NamespaceDeclaration__Group_2__0__Impl3063);
-            rule__NamespaceDeclaration__NameAssignment_2_0();
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_7()); 
+            pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__7__Impl3771);
+            ruleWS();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_2_0()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_7()); 
 
             }
 
@@ -4207,26 +5089,26 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__0__Impl"
+    // $ANTLR end "rule__NamespaceDeclaration__Group__7__Impl"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1475:1: rule__NamespaceDeclaration__Group_2__1 : rule__NamespaceDeclaration__Group_2__1__Impl rule__NamespaceDeclaration__Group_2__2 ;
-    public final void rule__NamespaceDeclaration__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1805:1: rule__NamespaceDeclaration__Group_3__0 : rule__NamespaceDeclaration__Group_3__0__Impl rule__NamespaceDeclaration__Group_3__1 ;
+    public final void rule__NamespaceDeclaration__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1479:1: ( rule__NamespaceDeclaration__Group_2__1__Impl rule__NamespaceDeclaration__Group_2__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1480:2: rule__NamespaceDeclaration__Group_2__1__Impl rule__NamespaceDeclaration__Group_2__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1809:1: ( rule__NamespaceDeclaration__Group_3__0__Impl rule__NamespaceDeclaration__Group_3__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1810:2: rule__NamespaceDeclaration__Group_3__0__Impl rule__NamespaceDeclaration__Group_3__1
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__1__Impl_in_rule__NamespaceDeclaration__Group_2__13093);
-            rule__NamespaceDeclaration__Group_2__1__Impl();
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__0__Impl_in_rule__NamespaceDeclaration__Group_3__03816);
+            rule__NamespaceDeclaration__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__2_in_rule__NamespaceDeclaration__Group_2__13096);
-            rule__NamespaceDeclaration__Group_2__2();
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__1_in_rule__NamespaceDeclaration__Group_3__03819);
+            rule__NamespaceDeclaration__Group_3__1();
 
             state._fsp--;
 
@@ -4245,39 +5127,124 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__1"
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__0"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1487:1: rule__NamespaceDeclaration__Group_2__1__Impl : ( ( ruleWS )* ) ;
-    public final void rule__NamespaceDeclaration__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1817:1: rule__NamespaceDeclaration__Group_3__0__Impl : ( ( rule__NamespaceDeclaration__NameAssignment_3_0 ) ) ;
+    public final void rule__NamespaceDeclaration__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1491:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1492:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1821:1: ( ( ( rule__NamespaceDeclaration__NameAssignment_3_0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1822:1: ( ( rule__NamespaceDeclaration__NameAssignment_3_0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1492:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1493:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1822:1: ( ( rule__NamespaceDeclaration__NameAssignment_3_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1823:1: ( rule__NamespaceDeclaration__NameAssignment_3_0 )
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1494:1: ( ruleWS )*
-            loop18:
+             before(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_3_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1824:1: ( rule__NamespaceDeclaration__NameAssignment_3_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1824:2: rule__NamespaceDeclaration__NameAssignment_3_0
+            {
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__NameAssignment_3_0_in_rule__NamespaceDeclaration__Group_3__0__Impl3846);
+            rule__NamespaceDeclaration__NameAssignment_3_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getNamespaceDeclarationAccess().getNameAssignment_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1834:1: rule__NamespaceDeclaration__Group_3__1 : rule__NamespaceDeclaration__Group_3__1__Impl rule__NamespaceDeclaration__Group_3__2 ;
+    public final void rule__NamespaceDeclaration__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1838:1: ( rule__NamespaceDeclaration__Group_3__1__Impl rule__NamespaceDeclaration__Group_3__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1839:2: rule__NamespaceDeclaration__Group_3__1__Impl rule__NamespaceDeclaration__Group_3__2
+            {
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__1__Impl_in_rule__NamespaceDeclaration__Group_3__13876);
+            rule__NamespaceDeclaration__Group_3__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__2_in_rule__NamespaceDeclaration__Group_3__13879);
+            rule__NamespaceDeclaration__Group_3__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__1"
+
+
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1846:1: rule__NamespaceDeclaration__Group_3__1__Impl : ( ( ruleWS )* ) ;
+    public final void rule__NamespaceDeclaration__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1850:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1851:1: ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1851:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1852:1: ( ruleWS )*
+            {
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1853:1: ( ruleWS )*
+            loop20:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( ((LA18_0>=RULE_SP && LA18_0<=RULE_SL_COMMENT)) ) {
-                    alt18=1;
+                if ( ((LA20_0>=RULE_SP && LA20_0<=RULE_SL_COMMENT)) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt20) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1494:3: ruleWS
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1853:3: ruleWS
             	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_2__1__Impl3124);
+            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_3__1__Impl3907);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4287,11 +5254,11 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop20;
                 }
             } while (true);
 
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_1()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_1()); 
 
             }
 
@@ -4310,96 +5277,26 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__1__Impl"
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1504:1: rule__NamespaceDeclaration__Group_2__2 : rule__NamespaceDeclaration__Group_2__2__Impl rule__NamespaceDeclaration__Group_2__3 ;
-    public final void rule__NamespaceDeclaration__Group_2__2() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1863:1: rule__NamespaceDeclaration__Group_3__2 : rule__NamespaceDeclaration__Group_3__2__Impl rule__NamespaceDeclaration__Group_3__3 ;
+    public final void rule__NamespaceDeclaration__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1508:1: ( rule__NamespaceDeclaration__Group_2__2__Impl rule__NamespaceDeclaration__Group_2__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1509:2: rule__NamespaceDeclaration__Group_2__2__Impl rule__NamespaceDeclaration__Group_2__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1867:1: ( rule__NamespaceDeclaration__Group_3__2__Impl rule__NamespaceDeclaration__Group_3__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1868:2: rule__NamespaceDeclaration__Group_3__2__Impl rule__NamespaceDeclaration__Group_3__3
             {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__2__Impl_in_rule__NamespaceDeclaration__Group_2__23155);
-            rule__NamespaceDeclaration__Group_2__2__Impl();
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__2__Impl_in_rule__NamespaceDeclaration__Group_3__23938);
+            rule__NamespaceDeclaration__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__3_in_rule__NamespaceDeclaration__Group_2__23158);
-            rule__NamespaceDeclaration__Group_2__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__2"
-
-
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1516:1: rule__NamespaceDeclaration__Group_2__2__Impl : ( '=' ) ;
-    public final void rule__NamespaceDeclaration__Group_2__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1520:1: ( ( '=' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1521:1: ( '=' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1521:1: ( '=' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1522:1: '='
-            {
-             before(grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_2_2()); 
-            match(input,14,FOLLOW_14_in_rule__NamespaceDeclaration__Group_2__2__Impl3186); 
-             after(grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_2_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__2__Impl"
-
-
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1535:1: rule__NamespaceDeclaration__Group_2__3 : rule__NamespaceDeclaration__Group_2__3__Impl ;
-    public final void rule__NamespaceDeclaration__Group_2__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1539:1: ( rule__NamespaceDeclaration__Group_2__3__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1540:2: rule__NamespaceDeclaration__Group_2__3__Impl
-            {
-            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_2__3__Impl_in_rule__NamespaceDeclaration__Group_2__33217);
-            rule__NamespaceDeclaration__Group_2__3__Impl();
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__3_in_rule__NamespaceDeclaration__Group_3__23941);
+            rule__NamespaceDeclaration__Group_3__3();
 
             state._fsp--;
 
@@ -4418,39 +5315,109 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__3"
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__2"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__Group_2__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1546:1: rule__NamespaceDeclaration__Group_2__3__Impl : ( ( ruleWS )* ) ;
-    public final void rule__NamespaceDeclaration__Group_2__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1875:1: rule__NamespaceDeclaration__Group_3__2__Impl : ( '=' ) ;
+    public final void rule__NamespaceDeclaration__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1550:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1551:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1879:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1880:1: ( '=' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1551:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1552:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1880:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1881:1: '='
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1553:1: ( ruleWS )*
-            loop19:
+             before(grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_3_2()); 
+            match(input,16,FOLLOW_16_in_rule__NamespaceDeclaration__Group_3__2__Impl3969); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_3_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__2__Impl"
+
+
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1894:1: rule__NamespaceDeclaration__Group_3__3 : rule__NamespaceDeclaration__Group_3__3__Impl ;
+    public final void rule__NamespaceDeclaration__Group_3__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1898:1: ( rule__NamespaceDeclaration__Group_3__3__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1899:2: rule__NamespaceDeclaration__Group_3__3__Impl
+            {
+            pushFollow(FOLLOW_rule__NamespaceDeclaration__Group_3__3__Impl_in_rule__NamespaceDeclaration__Group_3__34000);
+            rule__NamespaceDeclaration__Group_3__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__3"
+
+
+    // $ANTLR start "rule__NamespaceDeclaration__Group_3__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1905:1: rule__NamespaceDeclaration__Group_3__3__Impl : ( ( ruleWS )* ) ;
+    public final void rule__NamespaceDeclaration__Group_3__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1909:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1910:1: ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1910:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1911:1: ( ruleWS )*
+            {
+             before(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1912:1: ( ruleWS )*
+            loop21:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( ((LA19_0>=RULE_SP && LA19_0<=RULE_SL_COMMENT)) ) {
-                    alt19=1;
+                if ( ((LA21_0>=RULE_SP && LA21_0<=RULE_SL_COMMENT)) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1553:3: ruleWS
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1912:3: ruleWS
             	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_2__3__Impl3245);
+            	    pushFollow(FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_3__3__Impl4028);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4460,11 +5427,11 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
 
-             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2_3()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_3()); 
 
             }
 
@@ -4483,25 +5450,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__Group_2__3__Impl"
+    // $ANTLR end "rule__NamespaceDeclaration__Group_3__3__Impl"
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1571:1: rule__ReadDeclaration__Group__0 : rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1930:1: rule__ReadDeclaration__Group__0 : rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1 ;
     public final void rule__ReadDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1575:1: ( rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1576:2: rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1934:1: ( rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1935:2: rule__ReadDeclaration__Group__0__Impl rule__ReadDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__0__Impl_in_rule__ReadDeclaration__Group__03284);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__0__Impl_in_rule__ReadDeclaration__Group__04067);
             rule__ReadDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__1_in_rule__ReadDeclaration__Group__03287);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__1_in_rule__ReadDeclaration__Group__04070);
             rule__ReadDeclaration__Group__1();
 
             state._fsp--;
@@ -4525,21 +5492,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1583:1: rule__ReadDeclaration__Group__0__Impl : ( '%read' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1942:1: rule__ReadDeclaration__Group__0__Impl : ( '%' ) ;
     public final void rule__ReadDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1587:1: ( ( '%read' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1588:1: ( '%read' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1946:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1947:1: ( '%' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1588:1: ( '%read' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1589:1: '%read'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1947:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1948:1: '%'
             {
-             before(grammarAccess.getReadDeclarationAccess().getReadKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__ReadDeclaration__Group__0__Impl3315); 
-             after(grammarAccess.getReadDeclarationAccess().getReadKeyword_0()); 
+             before(grammarAccess.getReadDeclarationAccess().getPercentSignKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__ReadDeclaration__Group__0__Impl4098); 
+             after(grammarAccess.getReadDeclarationAccess().getPercentSignKeyword_0()); 
 
             }
 
@@ -4562,21 +5529,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1602:1: rule__ReadDeclaration__Group__1 : rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1961:1: rule__ReadDeclaration__Group__1 : rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2 ;
     public final void rule__ReadDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1606:1: ( rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1607:2: rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1965:1: ( rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1966:2: rule__ReadDeclaration__Group__1__Impl rule__ReadDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__1__Impl_in_rule__ReadDeclaration__Group__13346);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__1__Impl_in_rule__ReadDeclaration__Group__14129);
             rule__ReadDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__2_in_rule__ReadDeclaration__Group__13349);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__2_in_rule__ReadDeclaration__Group__14132);
             rule__ReadDeclaration__Group__2();
 
             state._fsp--;
@@ -4600,74 +5567,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1614:1: rule__ReadDeclaration__Group__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1973:1: rule__ReadDeclaration__Group__1__Impl : ( 'read' ) ;
     public final void rule__ReadDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1618:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1619:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1977:1: ( ( 'read' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1978:1: ( 'read' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1619:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1620:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1978:1: ( 'read' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1979:1: 'read'
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1620:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1621:1: ( ruleWS )
-            {
-             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1622:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1622:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__1__Impl3379);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1625:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1626:1: ( ruleWS )*
-            {
-             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1627:1: ( ruleWS )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
-
-                if ( ((LA20_0>=RULE_SP && LA20_0<=RULE_SL_COMMENT)) ) {
-                    alt20=1;
-                }
-
-
-                switch (alt20) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1627:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__1__Impl3392);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
-
-             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
+             before(grammarAccess.getReadDeclarationAccess().getReadKeyword_1()); 
+            match(input,29,FOLLOW_29_in_rule__ReadDeclaration__Group__1__Impl4160); 
+             after(grammarAccess.getReadDeclarationAccess().getReadKeyword_1()); 
 
             }
 
@@ -4690,21 +5604,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1638:1: rule__ReadDeclaration__Group__2 : rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1992:1: rule__ReadDeclaration__Group__2 : rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3 ;
     public final void rule__ReadDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1642:1: ( rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1643:2: rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1996:1: ( rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1997:2: rule__ReadDeclaration__Group__2__Impl rule__ReadDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__2__Impl_in_rule__ReadDeclaration__Group__23425);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__2__Impl_in_rule__ReadDeclaration__Group__24191);
             rule__ReadDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__3_in_rule__ReadDeclaration__Group__23428);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__3_in_rule__ReadDeclaration__Group__24194);
             rule__ReadDeclaration__Group__3();
 
             state._fsp--;
@@ -4728,31 +5642,74 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1650:1: rule__ReadDeclaration__Group__2__Impl : ( ( rule__ReadDeclaration__FileAssignment_2 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2004:1: rule__ReadDeclaration__Group__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
     public final void rule__ReadDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1654:1: ( ( ( rule__ReadDeclaration__FileAssignment_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1655:1: ( ( rule__ReadDeclaration__FileAssignment_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2008:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2009:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1655:1: ( ( rule__ReadDeclaration__FileAssignment_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1656:1: ( rule__ReadDeclaration__FileAssignment_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2009:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2010:1: ( ( ruleWS ) ) ( ( ruleWS )* )
             {
-             before(grammarAccess.getReadDeclarationAccess().getFileAssignment_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1657:1: ( rule__ReadDeclaration__FileAssignment_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1657:2: rule__ReadDeclaration__FileAssignment_2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2010:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2011:1: ( ruleWS )
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__FileAssignment_2_in_rule__ReadDeclaration__Group__2__Impl3455);
-            rule__ReadDeclaration__FileAssignment_2();
+             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2012:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2012:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__2__Impl4224);
+            ruleWS();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadDeclarationAccess().getFileAssignment_2()); 
+             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2015:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2016:1: ( ruleWS )*
+            {
+             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2017:1: ( ruleWS )*
+            loop22:
+            do {
+                int alt22=2;
+                int LA22_0 = input.LA(1);
+
+                if ( ((LA22_0>=RULE_SP && LA22_0<=RULE_SL_COMMENT)) ) {
+                    alt22=1;
+                }
+
+
+                switch (alt22) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2017:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__2__Impl4237);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop22;
+                }
+            } while (true);
+
+             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
 
             }
 
@@ -4775,21 +5732,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1667:1: rule__ReadDeclaration__Group__3 : rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2028:1: rule__ReadDeclaration__Group__3 : rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4 ;
     public final void rule__ReadDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1671:1: ( rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1672:2: rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2032:1: ( rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2033:2: rule__ReadDeclaration__Group__3__Impl rule__ReadDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__3__Impl_in_rule__ReadDeclaration__Group__33485);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__3__Impl_in_rule__ReadDeclaration__Group__34270);
             rule__ReadDeclaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__4_in_rule__ReadDeclaration__Group__33488);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__4_in_rule__ReadDeclaration__Group__34273);
             rule__ReadDeclaration__Group__4();
 
             state._fsp--;
@@ -4813,49 +5770,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1679:1: rule__ReadDeclaration__Group__3__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2040:1: rule__ReadDeclaration__Group__3__Impl : ( ( rule__ReadDeclaration__FileAssignment_3 ) ) ;
     public final void rule__ReadDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1683:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1684:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2044:1: ( ( ( rule__ReadDeclaration__FileAssignment_3 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2045:1: ( ( rule__ReadDeclaration__FileAssignment_3 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1684:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1685:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2045:1: ( ( rule__ReadDeclaration__FileAssignment_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2046:1: ( rule__ReadDeclaration__FileAssignment_3 )
             {
-             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1686:1: ( ruleWS )*
-            loop21:
-            do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+             before(grammarAccess.getReadDeclarationAccess().getFileAssignment_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2047:1: ( rule__ReadDeclaration__FileAssignment_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2047:2: rule__ReadDeclaration__FileAssignment_3
+            {
+            pushFollow(FOLLOW_rule__ReadDeclaration__FileAssignment_3_in_rule__ReadDeclaration__Group__3__Impl4300);
+            rule__ReadDeclaration__FileAssignment_3();
 
-                if ( ((LA21_0>=RULE_SP && LA21_0<=RULE_SL_COMMENT)) ) {
-                    alt21=1;
-                }
+            state._fsp--;
 
 
-                switch (alt21) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1686:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__3__Impl3516);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop21;
-                }
-            } while (true);
-
-             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_3()); 
+             after(grammarAccess.getReadDeclarationAccess().getFileAssignment_3()); 
 
             }
 
@@ -4878,21 +5817,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1696:1: rule__ReadDeclaration__Group__4 : rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2057:1: rule__ReadDeclaration__Group__4 : rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5 ;
     public final void rule__ReadDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1700:1: ( rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1701:2: rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2061:1: ( rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2062:2: rule__ReadDeclaration__Group__4__Impl rule__ReadDeclaration__Group__5
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__4__Impl_in_rule__ReadDeclaration__Group__43547);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__4__Impl_in_rule__ReadDeclaration__Group__44330);
             rule__ReadDeclaration__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__5_in_rule__ReadDeclaration__Group__43550);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__5_in_rule__ReadDeclaration__Group__44333);
             rule__ReadDeclaration__Group__5();
 
             state._fsp--;
@@ -4916,21 +5855,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1708:1: rule__ReadDeclaration__Group__4__Impl : ( '.' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2069:1: rule__ReadDeclaration__Group__4__Impl : ( ( ruleWS )* ) ;
     public final void rule__ReadDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1712:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1713:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2073:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2074:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1713:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1714:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2074:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2075:1: ( ruleWS )*
             {
-             before(grammarAccess.getReadDeclarationAccess().getFullStopKeyword_4()); 
-            match(input,12,FOLLOW_12_in_rule__ReadDeclaration__Group__4__Impl3578); 
-             after(grammarAccess.getReadDeclarationAccess().getFullStopKeyword_4()); 
+             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2076:1: ( ruleWS )*
+            loop23:
+            do {
+                int alt23=2;
+                int LA23_0 = input.LA(1);
+
+                if ( ((LA23_0>=RULE_SP && LA23_0<=RULE_SL_COMMENT)) ) {
+                    alt23=1;
+                }
+
+
+                switch (alt23) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2076:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__4__Impl4361);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop23;
+                }
+            } while (true);
+
+             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_4()); 
 
             }
 
@@ -4953,17 +5920,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1727:1: rule__ReadDeclaration__Group__5 : rule__ReadDeclaration__Group__5__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2086:1: rule__ReadDeclaration__Group__5 : rule__ReadDeclaration__Group__5__Impl rule__ReadDeclaration__Group__6 ;
     public final void rule__ReadDeclaration__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1731:1: ( rule__ReadDeclaration__Group__5__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1732:2: rule__ReadDeclaration__Group__5__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2090:1: ( rule__ReadDeclaration__Group__5__Impl rule__ReadDeclaration__Group__6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2091:2: rule__ReadDeclaration__Group__5__Impl rule__ReadDeclaration__Group__6
             {
-            pushFollow(FOLLOW_rule__ReadDeclaration__Group__5__Impl_in_rule__ReadDeclaration__Group__53609);
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__5__Impl_in_rule__ReadDeclaration__Group__54392);
             rule__ReadDeclaration__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__6_in_rule__ReadDeclaration__Group__54395);
+            rule__ReadDeclaration__Group__6();
 
             state._fsp--;
 
@@ -4986,25 +5958,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReadDeclaration__Group__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1738:1: rule__ReadDeclaration__Group__5__Impl : ( ruleWS ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2098:1: rule__ReadDeclaration__Group__5__Impl : ( '.' ) ;
     public final void rule__ReadDeclaration__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1742:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1743:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2102:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2103:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1743:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1744:1: ruleWS
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2103:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2104:1: '.'
             {
-             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_5()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__5__Impl3636);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_5()); 
+             before(grammarAccess.getReadDeclarationAccess().getFullStopKeyword_5()); 
+            match(input,14,FOLLOW_14_in_rule__ReadDeclaration__Group__5__Impl4423); 
+             after(grammarAccess.getReadDeclarationAccess().getFullStopKeyword_5()); 
 
             }
 
@@ -5026,22 +5994,505 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ReadDeclaration__Group__5__Impl"
 
 
+    // $ANTLR start "rule__ReadDeclaration__Group__6"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2117:1: rule__ReadDeclaration__Group__6 : rule__ReadDeclaration__Group__6__Impl ;
+    public final void rule__ReadDeclaration__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2121:1: ( rule__ReadDeclaration__Group__6__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2122:2: rule__ReadDeclaration__Group__6__Impl
+            {
+            pushFollow(FOLLOW_rule__ReadDeclaration__Group__6__Impl_in_rule__ReadDeclaration__Group__64454);
+            rule__ReadDeclaration__Group__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ReadDeclaration__Group__6"
+
+
+    // $ANTLR start "rule__ReadDeclaration__Group__6__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2128:1: rule__ReadDeclaration__Group__6__Impl : ( ruleWS ) ;
+    public final void rule__ReadDeclaration__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2132:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2133:1: ( ruleWS )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2133:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2134:1: ruleWS
+            {
+             before(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_6()); 
+            pushFollow(FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__6__Impl4481);
+            ruleWS();
+
+            state._fsp--;
+
+             after(grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ReadDeclaration__Group__6__Impl"
+
+
+    // $ANTLR start "rule__GID__Group_0__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2159:1: rule__GID__Group_0__0 : rule__GID__Group_0__0__Impl rule__GID__Group_0__1 ;
+    public final void rule__GID__Group_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2163:1: ( rule__GID__Group_0__0__Impl rule__GID__Group_0__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2164:2: rule__GID__Group_0__0__Impl rule__GID__Group_0__1
+            {
+            pushFollow(FOLLOW_rule__GID__Group_0__0__Impl_in_rule__GID__Group_0__04524);
+            rule__GID__Group_0__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__GID__Group_0__1_in_rule__GID__Group_0__04527);
+            rule__GID__Group_0__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0__0"
+
+
+    // $ANTLR start "rule__GID__Group_0__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2171:1: rule__GID__Group_0__0__Impl : ( ( ( rule__GID__Alternatives_0_0 ) ) ( ( rule__GID__Alternatives_0_0 )* ) ) ;
+    public final void rule__GID__Group_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2175:1: ( ( ( ( rule__GID__Alternatives_0_0 ) ) ( ( rule__GID__Alternatives_0_0 )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2176:1: ( ( ( rule__GID__Alternatives_0_0 ) ) ( ( rule__GID__Alternatives_0_0 )* ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2176:1: ( ( ( rule__GID__Alternatives_0_0 ) ) ( ( rule__GID__Alternatives_0_0 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2177:1: ( ( rule__GID__Alternatives_0_0 ) ) ( ( rule__GID__Alternatives_0_0 )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2177:1: ( ( rule__GID__Alternatives_0_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2178:1: ( rule__GID__Alternatives_0_0 )
+            {
+             before(grammarAccess.getGIDAccess().getAlternatives_0_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2179:1: ( rule__GID__Alternatives_0_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2179:2: rule__GID__Alternatives_0_0
+            {
+            pushFollow(FOLLOW_rule__GID__Alternatives_0_0_in_rule__GID__Group_0__0__Impl4556);
+            rule__GID__Alternatives_0_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getGIDAccess().getAlternatives_0_0()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2182:1: ( ( rule__GID__Alternatives_0_0 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2183:1: ( rule__GID__Alternatives_0_0 )*
+            {
+             before(grammarAccess.getGIDAccess().getAlternatives_0_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2184:1: ( rule__GID__Alternatives_0_0 )*
+            loop24:
+            do {
+                int alt24=2;
+                int LA24_0 = input.LA(1);
+
+                if ( ((LA24_0>=RULE_CID && LA24_0<=RULE_INT)) ) {
+                    alt24=1;
+                }
+
+
+                switch (alt24) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2184:2: rule__GID__Alternatives_0_0
+            	    {
+            	    pushFollow(FOLLOW_rule__GID__Alternatives_0_0_in_rule__GID__Group_0__0__Impl4568);
+            	    rule__GID__Alternatives_0_0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop24;
+                }
+            } while (true);
+
+             after(grammarAccess.getGIDAccess().getAlternatives_0_0()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__GID__Group_0__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2195:1: rule__GID__Group_0__1 : rule__GID__Group_0__1__Impl ;
+    public final void rule__GID__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2199:1: ( rule__GID__Group_0__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2200:2: rule__GID__Group_0__1__Impl
+            {
+            pushFollow(FOLLOW_rule__GID__Group_0__1__Impl_in_rule__GID__Group_0__14601);
+            rule__GID__Group_0__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0__1"
+
+
+    // $ANTLR start "rule__GID__Group_0__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2206:1: rule__GID__Group_0__1__Impl : ( ( rule__GID__Group_0_1__0 )? ) ;
+    public final void rule__GID__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2210:1: ( ( ( rule__GID__Group_0_1__0 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2211:1: ( ( rule__GID__Group_0_1__0 )? )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2211:1: ( ( rule__GID__Group_0_1__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2212:1: ( rule__GID__Group_0_1__0 )?
+            {
+             before(grammarAccess.getGIDAccess().getGroup_0_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2213:1: ( rule__GID__Group_0_1__0 )?
+            int alt25=2;
+            alt25 = dfa25.predict(input);
+            switch (alt25) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2213:2: rule__GID__Group_0_1__0
+                    {
+                    pushFollow(FOLLOW_rule__GID__Group_0_1__0_in_rule__GID__Group_0__1__Impl4628);
+                    rule__GID__Group_0_1__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getGIDAccess().getGroup_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0__1__Impl"
+
+
+    // $ANTLR start "rule__GID__Group_0_1__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2227:1: rule__GID__Group_0_1__0 : rule__GID__Group_0_1__0__Impl rule__GID__Group_0_1__1 ;
+    public final void rule__GID__Group_0_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2231:1: ( rule__GID__Group_0_1__0__Impl rule__GID__Group_0_1__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2232:2: rule__GID__Group_0_1__0__Impl rule__GID__Group_0_1__1
+            {
+            pushFollow(FOLLOW_rule__GID__Group_0_1__0__Impl_in_rule__GID__Group_0_1__04663);
+            rule__GID__Group_0_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__GID__Group_0_1__1_in_rule__GID__Group_0_1__04666);
+            rule__GID__Group_0_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0_1__0"
+
+
+    // $ANTLR start "rule__GID__Group_0_1__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2239:1: rule__GID__Group_0_1__0__Impl : ( ( ( '=' ) ) ( ( '=' )* ) ) ;
+    public final void rule__GID__Group_0_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2243:1: ( ( ( ( '=' ) ) ( ( '=' )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2244:1: ( ( ( '=' ) ) ( ( '=' )* ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2244:1: ( ( ( '=' ) ) ( ( '=' )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2245:1: ( ( '=' ) ) ( ( '=' )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2245:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2246:1: ( '=' )
+            {
+             before(grammarAccess.getGIDAccess().getEqualsSignKeyword_0_1_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2247:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2248:2: '='
+            {
+            match(input,16,FOLLOW_16_in_rule__GID__Group_0_1__0__Impl4697); 
+
+            }
+
+             after(grammarAccess.getGIDAccess().getEqualsSignKeyword_0_1_0()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2252:1: ( ( '=' )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2253:1: ( '=' )*
+            {
+             before(grammarAccess.getGIDAccess().getEqualsSignKeyword_0_1_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2254:1: ( '=' )*
+            loop26:
+            do {
+                int alt26=2;
+                int LA26_0 = input.LA(1);
+
+                if ( (LA26_0==16) ) {
+                    alt26=1;
+                }
+
+
+                switch (alt26) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2255:2: '='
+            	    {
+            	    match(input,16,FOLLOW_16_in_rule__GID__Group_0_1__0__Impl4713); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop26;
+                }
+            } while (true);
+
+             after(grammarAccess.getGIDAccess().getEqualsSignKeyword_0_1_0()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0_1__0__Impl"
+
+
+    // $ANTLR start "rule__GID__Group_0_1__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2267:1: rule__GID__Group_0_1__1 : rule__GID__Group_0_1__1__Impl ;
+    public final void rule__GID__Group_0_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2271:1: ( rule__GID__Group_0_1__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2272:2: rule__GID__Group_0_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__GID__Group_0_1__1__Impl_in_rule__GID__Group_0_1__14748);
+            rule__GID__Group_0_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0_1__1"
+
+
+    // $ANTLR start "rule__GID__Group_0_1__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2278:1: rule__GID__Group_0_1__1__Impl : ( ruleWS ) ;
+    public final void rule__GID__Group_0_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2282:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2283:1: ( ruleWS )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2283:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2284:1: ruleWS
+            {
+             before(grammarAccess.getGIDAccess().getWSParserRuleCall_0_1_1()); 
+            pushFollow(FOLLOW_ruleWS_in_rule__GID__Group_0_1__1__Impl4775);
+            ruleWS();
+
+            state._fsp--;
+
+             after(grammarAccess.getGIDAccess().getWSParserRuleCall_0_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_0_1__1__Impl"
+
+
     // $ANTLR start "rule__GID__Group_1__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1767:1: rule__GID__Group_1__0 : rule__GID__Group_1__0__Impl rule__GID__Group_1__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2299:1: rule__GID__Group_1__0 : rule__GID__Group_1__0__Impl rule__GID__Group_1__1 ;
     public final void rule__GID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1771:1: ( rule__GID__Group_1__0__Impl rule__GID__Group_1__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1772:2: rule__GID__Group_1__0__Impl rule__GID__Group_1__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2303:1: ( rule__GID__Group_1__0__Impl rule__GID__Group_1__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2304:2: rule__GID__Group_1__0__Impl rule__GID__Group_1__1
             {
-            pushFollow(FOLLOW_rule__GID__Group_1__0__Impl_in_rule__GID__Group_1__03677);
+            pushFollow(FOLLOW_rule__GID__Group_1__0__Impl_in_rule__GID__Group_1__04808);
             rule__GID__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GID__Group_1__1_in_rule__GID__Group_1__03680);
+            pushFollow(FOLLOW_rule__GID__Group_1__1_in_rule__GID__Group_1__04811);
             rule__GID__Group_1__1();
 
             state._fsp--;
@@ -5065,21 +6516,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GID__Group_1__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1779:1: rule__GID__Group_1__0__Impl : ( '..' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2311:1: rule__GID__Group_1__0__Impl : ( '=' ) ;
     public final void rule__GID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1783:1: ( ( '..' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1784:1: ( '..' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2315:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2316:1: ( '=' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1784:1: ( '..' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1785:1: '..'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2316:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2317:1: '='
             {
-             before(grammarAccess.getGIDAccess().getFullStopFullStopKeyword_1_0()); 
-            match(input,31,FOLLOW_31_in_rule__GID__Group_1__0__Impl3708); 
-             after(grammarAccess.getGIDAccess().getFullStopFullStopKeyword_1_0()); 
+             before(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_0()); 
+            match(input,16,FOLLOW_16_in_rule__GID__Group_1__0__Impl4839); 
+             after(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_0()); 
 
             }
 
@@ -5102,17 +6553,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GID__Group_1__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1798:1: rule__GID__Group_1__1 : rule__GID__Group_1__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2330:1: rule__GID__Group_1__1 : rule__GID__Group_1__1__Impl rule__GID__Group_1__2 ;
     public final void rule__GID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1802:1: ( rule__GID__Group_1__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1803:2: rule__GID__Group_1__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2334:1: ( rule__GID__Group_1__1__Impl rule__GID__Group_1__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2335:2: rule__GID__Group_1__1__Impl rule__GID__Group_1__2
             {
-            pushFollow(FOLLOW_rule__GID__Group_1__1__Impl_in_rule__GID__Group_1__13739);
+            pushFollow(FOLLOW_rule__GID__Group_1__1__Impl_in_rule__GID__Group_1__14870);
             rule__GID__Group_1__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__GID__Group_1__2_in_rule__GID__Group_1__14873);
+            rule__GID__Group_1__2();
 
             state._fsp--;
 
@@ -5135,45 +6591,66 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GID__Group_1__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1809:1: rule__GID__Group_1__1__Impl : ( ( '.' )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2342:1: rule__GID__Group_1__1__Impl : ( ( ( '=' ) ) ( ( '=' )* ) ) ;
     public final void rule__GID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1813:1: ( ( ( '.' )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1814:1: ( ( '.' )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2346:1: ( ( ( ( '=' ) ) ( ( '=' )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2347:1: ( ( ( '=' ) ) ( ( '=' )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1814:1: ( ( '.' )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1815:1: ( '.' )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2347:1: ( ( ( '=' ) ) ( ( '=' )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2348:1: ( ( '=' ) ) ( ( '=' )* )
             {
-             before(grammarAccess.getGIDAccess().getFullStopKeyword_1_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1816:1: ( '.' )*
-            loop22:
-            do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2348:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2349:1: ( '=' )
+            {
+             before(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2350:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2351:2: '='
+            {
+            match(input,16,FOLLOW_16_in_rule__GID__Group_1__1__Impl4904); 
 
-                if ( (LA22_0==12) ) {
-                    alt22=1;
+            }
+
+             after(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_1()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2355:1: ( ( '=' )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2356:1: ( '=' )*
+            {
+             before(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2357:1: ( '=' )*
+            loop27:
+            do {
+                int alt27=2;
+                int LA27_0 = input.LA(1);
+
+                if ( (LA27_0==16) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt27) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1817:2: '.'
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2358:2: '='
             	    {
-            	    match(input,12,FOLLOW_12_in_rule__GID__Group_1__1__Impl3768); 
+            	    match(input,16,FOLLOW_16_in_rule__GID__Group_1__1__Impl4920); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop27;
                 }
             } while (true);
 
-             after(grammarAccess.getGIDAccess().getFullStopKeyword_1_1()); 
+             after(grammarAccess.getGIDAccess().getEqualsSignKeyword_1_1()); 
+
+            }
+
 
             }
 
@@ -5195,22 +6672,96 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GID__Group_1__1__Impl"
 
 
+    // $ANTLR start "rule__GID__Group_1__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2370:1: rule__GID__Group_1__2 : rule__GID__Group_1__2__Impl ;
+    public final void rule__GID__Group_1__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2374:1: ( rule__GID__Group_1__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2375:2: rule__GID__Group_1__2__Impl
+            {
+            pushFollow(FOLLOW_rule__GID__Group_1__2__Impl_in_rule__GID__Group_1__24955);
+            rule__GID__Group_1__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_1__2"
+
+
+    // $ANTLR start "rule__GID__Group_1__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2381:1: rule__GID__Group_1__2__Impl : ( ruleWS ) ;
+    public final void rule__GID__Group_1__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2385:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2386:1: ( ruleWS )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2386:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2387:1: ruleWS
+            {
+             before(grammarAccess.getGIDAccess().getWSParserRuleCall_1_2()); 
+            pushFollow(FOLLOW_ruleWS_in_rule__GID__Group_1__2__Impl4982);
+            ruleWS();
+
+            state._fsp--;
+
+             after(grammarAccess.getGIDAccess().getWSParserRuleCall_1_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GID__Group_1__2__Impl"
+
+
     // $ANTLR start "rule__SOMETHING__Group_3__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1832:1: rule__SOMETHING__Group_3__0 : rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2404:1: rule__SOMETHING__Group_3__0 : rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1 ;
     public final void rule__SOMETHING__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1836:1: ( rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1837:2: rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2408:1: ( rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2409:2: rule__SOMETHING__Group_3__0__Impl rule__SOMETHING__Group_3__1
             {
-            pushFollow(FOLLOW_rule__SOMETHING__Group_3__0__Impl_in_rule__SOMETHING__Group_3__03805);
+            pushFollow(FOLLOW_rule__SOMETHING__Group_3__0__Impl_in_rule__SOMETHING__Group_3__05017);
             rule__SOMETHING__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SOMETHING__Group_3__1_in_rule__SOMETHING__Group_3__03808);
+            pushFollow(FOLLOW_rule__SOMETHING__Group_3__1_in_rule__SOMETHING__Group_3__05020);
             rule__SOMETHING__Group_3__1();
 
             state._fsp--;
@@ -5234,20 +6785,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SOMETHING__Group_3__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1844:1: rule__SOMETHING__Group_3__0__Impl : ( '.' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2416:1: rule__SOMETHING__Group_3__0__Impl : ( '.' ) ;
     public final void rule__SOMETHING__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1848:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1849:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2420:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2421:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1849:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1850:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2421:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2422:1: '.'
             {
              before(grammarAccess.getSOMETHINGAccess().getFullStopKeyword_3_0()); 
-            match(input,12,FOLLOW_12_in_rule__SOMETHING__Group_3__0__Impl3836); 
+            match(input,14,FOLLOW_14_in_rule__SOMETHING__Group_3__0__Impl5048); 
              after(grammarAccess.getSOMETHINGAccess().getFullStopKeyword_3_0()); 
 
             }
@@ -5271,16 +6822,16 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SOMETHING__Group_3__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1863:1: rule__SOMETHING__Group_3__1 : rule__SOMETHING__Group_3__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2435:1: rule__SOMETHING__Group_3__1 : rule__SOMETHING__Group_3__1__Impl ;
     public final void rule__SOMETHING__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1867:1: ( rule__SOMETHING__Group_3__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1868:2: rule__SOMETHING__Group_3__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2439:1: ( rule__SOMETHING__Group_3__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2440:2: rule__SOMETHING__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__SOMETHING__Group_3__1__Impl_in_rule__SOMETHING__Group_3__13867);
+            pushFollow(FOLLOW_rule__SOMETHING__Group_3__1__Impl_in_rule__SOMETHING__Group_3__15079);
             rule__SOMETHING__Group_3__1__Impl();
 
             state._fsp--;
@@ -5304,21 +6855,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SOMETHING__Group_3__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1874:1: rule__SOMETHING__Group_3__1__Impl : ( RULE_CID ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2446:1: rule__SOMETHING__Group_3__1__Impl : ( ( rule__SOMETHING__Alternatives_3_1 ) ) ;
     public final void rule__SOMETHING__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1878:1: ( ( RULE_CID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1879:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2450:1: ( ( ( rule__SOMETHING__Alternatives_3_1 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2451:1: ( ( rule__SOMETHING__Alternatives_3_1 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1879:1: ( RULE_CID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1880:1: RULE_CID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2451:1: ( ( rule__SOMETHING__Alternatives_3_1 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2452:1: ( rule__SOMETHING__Alternatives_3_1 )
             {
-             before(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_3_1()); 
-            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__SOMETHING__Group_3__1__Impl3894); 
-             after(grammarAccess.getSOMETHINGAccess().getCIDTerminalRuleCall_3_1()); 
+             before(grammarAccess.getSOMETHINGAccess().getAlternatives_3_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2453:1: ( rule__SOMETHING__Alternatives_3_1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2453:2: rule__SOMETHING__Alternatives_3_1
+            {
+            pushFollow(FOLLOW_rule__SOMETHING__Alternatives_3_1_in_rule__SOMETHING__Group_3__1__Impl5106);
+            rule__SOMETHING__Alternatives_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSOMETHINGAccess().getAlternatives_3_1()); 
 
             }
 
@@ -5340,98 +6901,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SOMETHING__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__SOMETHING__Group_10__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1895:1: rule__SOMETHING__Group_10__0 : rule__SOMETHING__Group_10__0__Impl rule__SOMETHING__Group_10__1 ;
-    public final void rule__SOMETHING__Group_10__0() throws RecognitionException {
+    // $ANTLR start "rule__SOMETHING__Group_8__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2467:1: rule__SOMETHING__Group_8__0 : rule__SOMETHING__Group_8__0__Impl rule__SOMETHING__Group_8__1 ;
+    public final void rule__SOMETHING__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1899:1: ( rule__SOMETHING__Group_10__0__Impl rule__SOMETHING__Group_10__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1900:2: rule__SOMETHING__Group_10__0__Impl rule__SOMETHING__Group_10__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2471:1: ( rule__SOMETHING__Group_8__0__Impl rule__SOMETHING__Group_8__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2472:2: rule__SOMETHING__Group_8__0__Impl rule__SOMETHING__Group_8__1
             {
-            pushFollow(FOLLOW_rule__SOMETHING__Group_10__0__Impl_in_rule__SOMETHING__Group_10__03927);
-            rule__SOMETHING__Group_10__0__Impl();
+            pushFollow(FOLLOW_rule__SOMETHING__Group_8__0__Impl_in_rule__SOMETHING__Group_8__05140);
+            rule__SOMETHING__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SOMETHING__Group_10__1_in_rule__SOMETHING__Group_10__03930);
-            rule__SOMETHING__Group_10__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SOMETHING__Group_10__0"
-
-
-    // $ANTLR start "rule__SOMETHING__Group_10__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1907:1: rule__SOMETHING__Group_10__0__Impl : ( '..' ) ;
-    public final void rule__SOMETHING__Group_10__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1911:1: ( ( '..' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1912:1: ( '..' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1912:1: ( '..' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1913:1: '..'
-            {
-             before(grammarAccess.getSOMETHINGAccess().getFullStopFullStopKeyword_10_0()); 
-            match(input,31,FOLLOW_31_in_rule__SOMETHING__Group_10__0__Impl3958); 
-             after(grammarAccess.getSOMETHINGAccess().getFullStopFullStopKeyword_10_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SOMETHING__Group_10__0__Impl"
-
-
-    // $ANTLR start "rule__SOMETHING__Group_10__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1926:1: rule__SOMETHING__Group_10__1 : rule__SOMETHING__Group_10__1__Impl rule__SOMETHING__Group_10__2 ;
-    public final void rule__SOMETHING__Group_10__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1930:1: ( rule__SOMETHING__Group_10__1__Impl rule__SOMETHING__Group_10__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1931:2: rule__SOMETHING__Group_10__1__Impl rule__SOMETHING__Group_10__2
-            {
-            pushFollow(FOLLOW_rule__SOMETHING__Group_10__1__Impl_in_rule__SOMETHING__Group_10__13989);
-            rule__SOMETHING__Group_10__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SOMETHING__Group_10__2_in_rule__SOMETHING__Group_10__13992);
-            rule__SOMETHING__Group_10__2();
+            pushFollow(FOLLOW_rule__SOMETHING__Group_8__1_in_rule__SOMETHING__Group_8__05143);
+            rule__SOMETHING__Group_8__1();
 
             state._fsp--;
 
@@ -5450,49 +6936,128 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SOMETHING__Group_10__1"
+    // $ANTLR end "rule__SOMETHING__Group_8__0"
 
 
-    // $ANTLR start "rule__SOMETHING__Group_10__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1938:1: rule__SOMETHING__Group_10__1__Impl : ( ( '.' )* ) ;
-    public final void rule__SOMETHING__Group_10__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SOMETHING__Group_8__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2479:1: rule__SOMETHING__Group_8__0__Impl : ( '{' ) ;
+    public final void rule__SOMETHING__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1942:1: ( ( ( '.' )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1943:1: ( ( '.' )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2483:1: ( ( '{' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2484:1: ( '{' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1943:1: ( ( '.' )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1944:1: ( '.' )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2484:1: ( '{' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2485:1: '{'
             {
-             before(grammarAccess.getSOMETHINGAccess().getFullStopKeyword_10_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1945:1: ( '.' )*
-            loop23:
+             before(grammarAccess.getSOMETHINGAccess().getLeftCurlyBracketKeyword_8_0()); 
+            match(input,30,FOLLOW_30_in_rule__SOMETHING__Group_8__0__Impl5171); 
+             after(grammarAccess.getSOMETHINGAccess().getLeftCurlyBracketKeyword_8_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING__Group_8__0__Impl"
+
+
+    // $ANTLR start "rule__SOMETHING__Group_8__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2498:1: rule__SOMETHING__Group_8__1 : rule__SOMETHING__Group_8__1__Impl rule__SOMETHING__Group_8__2 ;
+    public final void rule__SOMETHING__Group_8__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2502:1: ( rule__SOMETHING__Group_8__1__Impl rule__SOMETHING__Group_8__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2503:2: rule__SOMETHING__Group_8__1__Impl rule__SOMETHING__Group_8__2
+            {
+            pushFollow(FOLLOW_rule__SOMETHING__Group_8__1__Impl_in_rule__SOMETHING__Group_8__15202);
+            rule__SOMETHING__Group_8__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SOMETHING__Group_8__2_in_rule__SOMETHING__Group_8__15205);
+            rule__SOMETHING__Group_8__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING__Group_8__1"
+
+
+    // $ANTLR start "rule__SOMETHING__Group_8__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2510:1: rule__SOMETHING__Group_8__1__Impl : ( ( ruleSOMETHING2 )* ) ;
+    public final void rule__SOMETHING__Group_8__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2514:1: ( ( ( ruleSOMETHING2 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2515:1: ( ( ruleSOMETHING2 )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2515:1: ( ( ruleSOMETHING2 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2516:1: ( ruleSOMETHING2 )*
+            {
+             before(grammarAccess.getSOMETHINGAccess().getSOMETHING2ParserRuleCall_8_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2517:1: ( ruleSOMETHING2 )*
+            loop28:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA23_0==12) ) {
-                    alt23=1;
+                if ( ((LA28_0>=RULE_SP && LA28_0<=RULE_INT)||(LA28_0>=14 && LA28_0<=18)||LA28_0==30) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt28) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1946:2: '.'
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2517:3: ruleSOMETHING2
             	    {
-            	    match(input,12,FOLLOW_12_in_rule__SOMETHING__Group_10__1__Impl4021); 
+            	    pushFollow(FOLLOW_ruleSOMETHING2_in_rule__SOMETHING__Group_8__1__Impl5233);
+            	    ruleSOMETHING2();
+
+            	    state._fsp--;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop28;
                 }
             } while (true);
 
-             after(grammarAccess.getSOMETHINGAccess().getFullStopKeyword_10_1()); 
+             after(grammarAccess.getSOMETHINGAccess().getSOMETHING2ParserRuleCall_8_1()); 
 
             }
 
@@ -5511,21 +7076,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SOMETHING__Group_10__1__Impl"
+    // $ANTLR end "rule__SOMETHING__Group_8__1__Impl"
 
 
-    // $ANTLR start "rule__SOMETHING__Group_10__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1957:1: rule__SOMETHING__Group_10__2 : rule__SOMETHING__Group_10__2__Impl ;
-    public final void rule__SOMETHING__Group_10__2() throws RecognitionException {
+    // $ANTLR start "rule__SOMETHING__Group_8__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2527:1: rule__SOMETHING__Group_8__2 : rule__SOMETHING__Group_8__2__Impl ;
+    public final void rule__SOMETHING__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1961:1: ( rule__SOMETHING__Group_10__2__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1962:2: rule__SOMETHING__Group_10__2__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2531:1: ( rule__SOMETHING__Group_8__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2532:2: rule__SOMETHING__Group_8__2__Impl
             {
-            pushFollow(FOLLOW_rule__SOMETHING__Group_10__2__Impl_in_rule__SOMETHING__Group_10__24054);
-            rule__SOMETHING__Group_10__2__Impl();
+            pushFollow(FOLLOW_rule__SOMETHING__Group_8__2__Impl_in_rule__SOMETHING__Group_8__25264);
+            rule__SOMETHING__Group_8__2__Impl();
 
             state._fsp--;
 
@@ -5544,29 +7109,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SOMETHING__Group_10__2"
+    // $ANTLR end "rule__SOMETHING__Group_8__2"
 
 
-    // $ANTLR start "rule__SOMETHING__Group_10__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1968:1: rule__SOMETHING__Group_10__2__Impl : ( ruleWS ) ;
-    public final void rule__SOMETHING__Group_10__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SOMETHING__Group_8__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2538:1: rule__SOMETHING__Group_8__2__Impl : ( '}' ) ;
+    public final void rule__SOMETHING__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1972:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1973:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2542:1: ( ( '}' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2543:1: ( '}' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1973:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1974:1: ruleWS
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2543:1: ( '}' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2544:1: '}'
             {
-             before(grammarAccess.getSOMETHINGAccess().getWSParserRuleCall_10_2()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SOMETHING__Group_10__2__Impl4081);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getSOMETHINGAccess().getWSParserRuleCall_10_2()); 
+             before(grammarAccess.getSOMETHINGAccess().getRightCurlyBracketKeyword_8_2()); 
+            match(input,31,FOLLOW_31_in_rule__SOMETHING__Group_8__2__Impl5292); 
+             after(grammarAccess.getSOMETHINGAccess().getRightCurlyBracketKeyword_8_2()); 
 
             }
 
@@ -5585,25 +7146,273 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SOMETHING__Group_10__2__Impl"
+    // $ANTLR end "rule__SOMETHING__Group_8__2__Impl"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2563:1: rule__SOMETHING2__Group_8__0 : rule__SOMETHING2__Group_8__0__Impl rule__SOMETHING2__Group_8__1 ;
+    public final void rule__SOMETHING2__Group_8__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2567:1: ( rule__SOMETHING2__Group_8__0__Impl rule__SOMETHING2__Group_8__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2568:2: rule__SOMETHING2__Group_8__0__Impl rule__SOMETHING2__Group_8__1
+            {
+            pushFollow(FOLLOW_rule__SOMETHING2__Group_8__0__Impl_in_rule__SOMETHING2__Group_8__05329);
+            rule__SOMETHING2__Group_8__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SOMETHING2__Group_8__1_in_rule__SOMETHING2__Group_8__05332);
+            rule__SOMETHING2__Group_8__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__0"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2575:1: rule__SOMETHING2__Group_8__0__Impl : ( '{' ) ;
+    public final void rule__SOMETHING2__Group_8__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2579:1: ( ( '{' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2580:1: ( '{' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2580:1: ( '{' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2581:1: '{'
+            {
+             before(grammarAccess.getSOMETHING2Access().getLeftCurlyBracketKeyword_8_0()); 
+            match(input,30,FOLLOW_30_in_rule__SOMETHING2__Group_8__0__Impl5360); 
+             after(grammarAccess.getSOMETHING2Access().getLeftCurlyBracketKeyword_8_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__0__Impl"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2594:1: rule__SOMETHING2__Group_8__1 : rule__SOMETHING2__Group_8__1__Impl rule__SOMETHING2__Group_8__2 ;
+    public final void rule__SOMETHING2__Group_8__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2598:1: ( rule__SOMETHING2__Group_8__1__Impl rule__SOMETHING2__Group_8__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2599:2: rule__SOMETHING2__Group_8__1__Impl rule__SOMETHING2__Group_8__2
+            {
+            pushFollow(FOLLOW_rule__SOMETHING2__Group_8__1__Impl_in_rule__SOMETHING2__Group_8__15391);
+            rule__SOMETHING2__Group_8__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SOMETHING2__Group_8__2_in_rule__SOMETHING2__Group_8__15394);
+            rule__SOMETHING2__Group_8__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__1"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2606:1: rule__SOMETHING2__Group_8__1__Impl : ( ( ruleSOMETHING2 )* ) ;
+    public final void rule__SOMETHING2__Group_8__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2610:1: ( ( ( ruleSOMETHING2 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2611:1: ( ( ruleSOMETHING2 )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2611:1: ( ( ruleSOMETHING2 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2612:1: ( ruleSOMETHING2 )*
+            {
+             before(grammarAccess.getSOMETHING2Access().getSOMETHING2ParserRuleCall_8_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2613:1: ( ruleSOMETHING2 )*
+            loop29:
+            do {
+                int alt29=2;
+                int LA29_0 = input.LA(1);
+
+                if ( ((LA29_0>=RULE_SP && LA29_0<=RULE_INT)||(LA29_0>=14 && LA29_0<=18)||LA29_0==30) ) {
+                    alt29=1;
+                }
+
+
+                switch (alt29) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2613:3: ruleSOMETHING2
+            	    {
+            	    pushFollow(FOLLOW_ruleSOMETHING2_in_rule__SOMETHING2__Group_8__1__Impl5422);
+            	    ruleSOMETHING2();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop29;
+                }
+            } while (true);
+
+             after(grammarAccess.getSOMETHING2Access().getSOMETHING2ParserRuleCall_8_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__1__Impl"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2623:1: rule__SOMETHING2__Group_8__2 : rule__SOMETHING2__Group_8__2__Impl ;
+    public final void rule__SOMETHING2__Group_8__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2627:1: ( rule__SOMETHING2__Group_8__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2628:2: rule__SOMETHING2__Group_8__2__Impl
+            {
+            pushFollow(FOLLOW_rule__SOMETHING2__Group_8__2__Impl_in_rule__SOMETHING2__Group_8__25453);
+            rule__SOMETHING2__Group_8__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__2"
+
+
+    // $ANTLR start "rule__SOMETHING2__Group_8__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2634:1: rule__SOMETHING2__Group_8__2__Impl : ( '}' ) ;
+    public final void rule__SOMETHING2__Group_8__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2638:1: ( ( '}' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2639:1: ( '}' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2639:1: ( '}' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2640:1: '}'
+            {
+             before(grammarAccess.getSOMETHING2Access().getRightCurlyBracketKeyword_8_2()); 
+            match(input,31,FOLLOW_31_in_rule__SOMETHING2__Group_8__2__Impl5481); 
+             after(grammarAccess.getSOMETHING2Access().getRightCurlyBracketKeyword_8_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SOMETHING2__Group_8__2__Impl"
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1992:1: rule__SignatureDeclaration__Group__0 : rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2662:1: rule__SignatureDeclaration__Group__0 : rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1 ;
     public final void rule__SignatureDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1996:1: ( rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:1997:2: rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2666:1: ( rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2667:2: rule__SignatureDeclaration__Group__0__Impl rule__SignatureDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__0__Impl_in_rule__SignatureDeclaration__Group__04117);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__0__Impl_in_rule__SignatureDeclaration__Group__05521);
             rule__SignatureDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__1_in_rule__SignatureDeclaration__Group__04120);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__1_in_rule__SignatureDeclaration__Group__05524);
             rule__SignatureDeclaration__Group__1();
 
             state._fsp--;
@@ -5627,21 +7436,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2004:1: rule__SignatureDeclaration__Group__0__Impl : ( '%sig' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2674:1: rule__SignatureDeclaration__Group__0__Impl : ( '%' ) ;
     public final void rule__SignatureDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2008:1: ( ( '%sig' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2009:1: ( '%sig' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2678:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2679:1: ( '%' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2009:1: ( '%sig' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2010:1: '%sig'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2679:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2680:1: '%'
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getSigKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__SignatureDeclaration__Group__0__Impl4148); 
-             after(grammarAccess.getSignatureDeclarationAccess().getSigKeyword_0()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__SignatureDeclaration__Group__0__Impl5552); 
+             after(grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0()); 
 
             }
 
@@ -5664,21 +7473,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2023:1: rule__SignatureDeclaration__Group__1 : rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2693:1: rule__SignatureDeclaration__Group__1 : rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2 ;
     public final void rule__SignatureDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2027:1: ( rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2028:2: rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2697:1: ( rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2698:2: rule__SignatureDeclaration__Group__1__Impl rule__SignatureDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__1__Impl_in_rule__SignatureDeclaration__Group__14179);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__1__Impl_in_rule__SignatureDeclaration__Group__15583);
             rule__SignatureDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__2_in_rule__SignatureDeclaration__Group__14182);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__2_in_rule__SignatureDeclaration__Group__15586);
             rule__SignatureDeclaration__Group__2();
 
             state._fsp--;
@@ -5702,74 +7511,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2035:1: rule__SignatureDeclaration__Group__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2705:1: rule__SignatureDeclaration__Group__1__Impl : ( 'sig' ) ;
     public final void rule__SignatureDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2039:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2040:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2709:1: ( ( 'sig' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2710:1: ( 'sig' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2040:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2041:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2710:1: ( 'sig' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2711:1: 'sig'
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2041:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2042:1: ( ruleWS )
-            {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2043:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2043:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__1__Impl4212);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2046:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2047:1: ( ruleWS )*
-            {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2048:1: ( ruleWS )*
-            loop24:
-            do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
-
-                if ( ((LA24_0>=RULE_SP && LA24_0<=RULE_SL_COMMENT)) ) {
-                    alt24=1;
-                }
-
-
-                switch (alt24) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2048:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__1__Impl4225);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop24;
-                }
-            } while (true);
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
+             before(grammarAccess.getSignatureDeclarationAccess().getSigKeyword_1()); 
+            match(input,32,FOLLOW_32_in_rule__SignatureDeclaration__Group__1__Impl5614); 
+             after(grammarAccess.getSignatureDeclarationAccess().getSigKeyword_1()); 
 
             }
 
@@ -5792,21 +7548,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2059:1: rule__SignatureDeclaration__Group__2 : rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2724:1: rule__SignatureDeclaration__Group__2 : rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3 ;
     public final void rule__SignatureDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2063:1: ( rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2064:2: rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2728:1: ( rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2729:2: rule__SignatureDeclaration__Group__2__Impl rule__SignatureDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__2__Impl_in_rule__SignatureDeclaration__Group__24258);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__2__Impl_in_rule__SignatureDeclaration__Group__25645);
             rule__SignatureDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__3_in_rule__SignatureDeclaration__Group__24261);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__3_in_rule__SignatureDeclaration__Group__25648);
             rule__SignatureDeclaration__Group__3();
 
             state._fsp--;
@@ -5830,31 +7586,74 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2071:1: rule__SignatureDeclaration__Group__2__Impl : ( ( rule__SignatureDeclaration__SigNameAssignment_2 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2736:1: rule__SignatureDeclaration__Group__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
     public final void rule__SignatureDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2075:1: ( ( ( rule__SignatureDeclaration__SigNameAssignment_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2076:1: ( ( rule__SignatureDeclaration__SigNameAssignment_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2740:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2741:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2076:1: ( ( rule__SignatureDeclaration__SigNameAssignment_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2077:1: ( rule__SignatureDeclaration__SigNameAssignment_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2741:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2742:1: ( ( ruleWS ) ) ( ( ruleWS )* )
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2078:1: ( rule__SignatureDeclaration__SigNameAssignment_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2078:2: rule__SignatureDeclaration__SigNameAssignment_2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2742:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2743:1: ( ruleWS )
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__SigNameAssignment_2_in_rule__SignatureDeclaration__Group__2__Impl4288);
-            rule__SignatureDeclaration__SigNameAssignment_2();
+             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2744:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2744:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__2__Impl5678);
+            ruleWS();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_2()); 
+             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2747:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2748:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2749:1: ( ruleWS )*
+            loop30:
+            do {
+                int alt30=2;
+                int LA30_0 = input.LA(1);
+
+                if ( ((LA30_0>=RULE_SP && LA30_0<=RULE_SL_COMMENT)) ) {
+                    alt30=1;
+                }
+
+
+                switch (alt30) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2749:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__2__Impl5691);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop30;
+                }
+            } while (true);
+
+             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
 
             }
 
@@ -5877,21 +7676,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2088:1: rule__SignatureDeclaration__Group__3 : rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2760:1: rule__SignatureDeclaration__Group__3 : rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4 ;
     public final void rule__SignatureDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2092:1: ( rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2093:2: rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2764:1: ( rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2765:2: rule__SignatureDeclaration__Group__3__Impl rule__SignatureDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__3__Impl_in_rule__SignatureDeclaration__Group__34318);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__3__Impl_in_rule__SignatureDeclaration__Group__35724);
             rule__SignatureDeclaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__4_in_rule__SignatureDeclaration__Group__34321);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__4_in_rule__SignatureDeclaration__Group__35727);
             rule__SignatureDeclaration__Group__4();
 
             state._fsp--;
@@ -5915,49 +7714,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2100:1: rule__SignatureDeclaration__Group__3__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2772:1: rule__SignatureDeclaration__Group__3__Impl : ( ( rule__SignatureDeclaration__SigNameAssignment_3 ) ) ;
     public final void rule__SignatureDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2104:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2105:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2776:1: ( ( ( rule__SignatureDeclaration__SigNameAssignment_3 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2777:1: ( ( rule__SignatureDeclaration__SigNameAssignment_3 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2105:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2106:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2777:1: ( ( rule__SignatureDeclaration__SigNameAssignment_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2778:1: ( rule__SignatureDeclaration__SigNameAssignment_3 )
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2107:1: ( ruleWS )*
-            loop25:
-            do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+             before(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2779:1: ( rule__SignatureDeclaration__SigNameAssignment_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2779:2: rule__SignatureDeclaration__SigNameAssignment_3
+            {
+            pushFollow(FOLLOW_rule__SignatureDeclaration__SigNameAssignment_3_in_rule__SignatureDeclaration__Group__3__Impl5754);
+            rule__SignatureDeclaration__SigNameAssignment_3();
 
-                if ( ((LA25_0>=RULE_SP && LA25_0<=RULE_SL_COMMENT)) ) {
-                    alt25=1;
-                }
+            state._fsp--;
 
 
-                switch (alt25) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2107:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__3__Impl4349);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop25;
-                }
-            } while (true);
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()); 
+             after(grammarAccess.getSignatureDeclarationAccess().getSigNameAssignment_3()); 
 
             }
 
@@ -5980,21 +7761,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2117:1: rule__SignatureDeclaration__Group__4 : rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2789:1: rule__SignatureDeclaration__Group__4 : rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5 ;
     public final void rule__SignatureDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2121:1: ( rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2122:2: rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2793:1: ( rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2794:2: rule__SignatureDeclaration__Group__4__Impl rule__SignatureDeclaration__Group__5
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__4__Impl_in_rule__SignatureDeclaration__Group__44380);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__4__Impl_in_rule__SignatureDeclaration__Group__45784);
             rule__SignatureDeclaration__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__5_in_rule__SignatureDeclaration__Group__44383);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__5_in_rule__SignatureDeclaration__Group__45787);
             rule__SignatureDeclaration__Group__5();
 
             state._fsp--;
@@ -6018,21 +7799,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2129:1: rule__SignatureDeclaration__Group__4__Impl : ( '=' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2801:1: rule__SignatureDeclaration__Group__4__Impl : ( ( ruleWS )* ) ;
     public final void rule__SignatureDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2133:1: ( ( '=' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2134:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2805:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2806:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2134:1: ( '=' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2135:1: '='
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2806:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2807:1: ( ruleWS )*
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_4()); 
-            match(input,14,FOLLOW_14_in_rule__SignatureDeclaration__Group__4__Impl4411); 
-             after(grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_4()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2808:1: ( ruleWS )*
+            loop31:
+            do {
+                int alt31=2;
+                int LA31_0 = input.LA(1);
+
+                if ( ((LA31_0>=RULE_SP && LA31_0<=RULE_SL_COMMENT)) ) {
+                    alt31=1;
+                }
+
+
+                switch (alt31) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2808:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__4__Impl5815);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop31;
+                }
+            } while (true);
+
+             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()); 
 
             }
 
@@ -6055,21 +7864,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2148:1: rule__SignatureDeclaration__Group__5 : rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2818:1: rule__SignatureDeclaration__Group__5 : rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6 ;
     public final void rule__SignatureDeclaration__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2152:1: ( rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2153:2: rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2822:1: ( rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2823:2: rule__SignatureDeclaration__Group__5__Impl rule__SignatureDeclaration__Group__6
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__5__Impl_in_rule__SignatureDeclaration__Group__54442);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__5__Impl_in_rule__SignatureDeclaration__Group__55846);
             rule__SignatureDeclaration__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__6_in_rule__SignatureDeclaration__Group__54445);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__6_in_rule__SignatureDeclaration__Group__55849);
             rule__SignatureDeclaration__Group__6();
 
             state._fsp--;
@@ -6093,49 +7902,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2160:1: rule__SignatureDeclaration__Group__5__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2830:1: rule__SignatureDeclaration__Group__5__Impl : ( '=' ) ;
     public final void rule__SignatureDeclaration__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2164:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2165:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2834:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2835:1: ( '=' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2165:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2166:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2835:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2836:1: '='
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2167:1: ( ruleWS )*
-            loop26:
-            do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
-
-                if ( ((LA26_0>=RULE_SP && LA26_0<=RULE_SL_COMMENT)) ) {
-                    alt26=1;
-                }
-
-
-                switch (alt26) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2167:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__5__Impl4473);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop26;
-                }
-            } while (true);
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5()); 
+            match(input,16,FOLLOW_16_in_rule__SignatureDeclaration__Group__5__Impl5877); 
+             after(grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5()); 
 
             }
 
@@ -6158,21 +7939,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__6"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2177:1: rule__SignatureDeclaration__Group__6 : rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2849:1: rule__SignatureDeclaration__Group__6 : rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7 ;
     public final void rule__SignatureDeclaration__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2181:1: ( rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2182:2: rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2853:1: ( rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2854:2: rule__SignatureDeclaration__Group__6__Impl rule__SignatureDeclaration__Group__7
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__6__Impl_in_rule__SignatureDeclaration__Group__64504);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__6__Impl_in_rule__SignatureDeclaration__Group__65908);
             rule__SignatureDeclaration__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__7_in_rule__SignatureDeclaration__Group__64507);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__7_in_rule__SignatureDeclaration__Group__65911);
             rule__SignatureDeclaration__Group__7();
 
             state._fsp--;
@@ -6196,21 +7977,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__6__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2189:1: rule__SignatureDeclaration__Group__6__Impl : ( '{' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2861:1: rule__SignatureDeclaration__Group__6__Impl : ( ( ruleWS )* ) ;
     public final void rule__SignatureDeclaration__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2193:1: ( ( '{' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2194:1: ( '{' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2865:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2866:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2194:1: ( '{' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2195:1: '{'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2866:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2867:1: ( ruleWS )*
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getLeftCurlyBracketKeyword_6()); 
-            match(input,33,FOLLOW_33_in_rule__SignatureDeclaration__Group__6__Impl4535); 
-             after(grammarAccess.getSignatureDeclarationAccess().getLeftCurlyBracketKeyword_6()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2868:1: ( ruleWS )*
+            loop32:
+            do {
+                int alt32=2;
+                int LA32_0 = input.LA(1);
+
+                if ( ((LA32_0>=RULE_SP && LA32_0<=RULE_SL_COMMENT)) ) {
+                    alt32=1;
+                }
+
+
+                switch (alt32) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2868:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__6__Impl5939);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop32;
+                }
+            } while (true);
+
+             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()); 
 
             }
 
@@ -6233,21 +8042,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__7"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2208:1: rule__SignatureDeclaration__Group__7 : rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2878:1: rule__SignatureDeclaration__Group__7 : rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8 ;
     public final void rule__SignatureDeclaration__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2212:1: ( rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2213:2: rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2882:1: ( rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2883:2: rule__SignatureDeclaration__Group__7__Impl rule__SignatureDeclaration__Group__8
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__7__Impl_in_rule__SignatureDeclaration__Group__74566);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__7__Impl_in_rule__SignatureDeclaration__Group__75970);
             rule__SignatureDeclaration__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__8_in_rule__SignatureDeclaration__Group__74569);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__8_in_rule__SignatureDeclaration__Group__75973);
             rule__SignatureDeclaration__Group__8();
 
             state._fsp--;
@@ -6271,49 +8080,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__7__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2220:1: rule__SignatureDeclaration__Group__7__Impl : ( ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2890:1: rule__SignatureDeclaration__Group__7__Impl : ( ( rule__SignatureDeclaration__DefsAssignment_7 ) ) ;
     public final void rule__SignatureDeclaration__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2224:1: ( ( ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2225:1: ( ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2894:1: ( ( ( rule__SignatureDeclaration__DefsAssignment_7 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2895:1: ( ( rule__SignatureDeclaration__DefsAssignment_7 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2225:1: ( ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2226:1: ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2895:1: ( ( rule__SignatureDeclaration__DefsAssignment_7 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2896:1: ( rule__SignatureDeclaration__DefsAssignment_7 )
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsAssignment_7()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2227:1: ( rule__SignatureDeclaration__SigDefinitionsAssignment_7 )*
-            loop27:
-            do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+             before(grammarAccess.getSignatureDeclarationAccess().getDefsAssignment_7()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2897:1: ( rule__SignatureDeclaration__DefsAssignment_7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2897:2: rule__SignatureDeclaration__DefsAssignment_7
+            {
+            pushFollow(FOLLOW_rule__SignatureDeclaration__DefsAssignment_7_in_rule__SignatureDeclaration__Group__7__Impl6000);
+            rule__SignatureDeclaration__DefsAssignment_7();
 
-                if ( ((LA27_0>=RULE_SP && LA27_0<=RULE_INT)||(LA27_0>=20 && LA27_0<=25)||LA27_0==31||(LA27_0>=35 && LA27_0<=36)) ) {
-                    alt27=1;
-                }
+            state._fsp--;
 
 
-                switch (alt27) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2227:2: rule__SignatureDeclaration__SigDefinitionsAssignment_7
-            	    {
-            	    pushFollow(FOLLOW_rule__SignatureDeclaration__SigDefinitionsAssignment_7_in_rule__SignatureDeclaration__Group__7__Impl4596);
-            	    rule__SignatureDeclaration__SigDefinitionsAssignment_7();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop27;
-                }
-            } while (true);
-
-             after(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsAssignment_7()); 
+             after(grammarAccess.getSignatureDeclarationAccess().getDefsAssignment_7()); 
 
             }
 
@@ -6336,21 +8127,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__8"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2237:1: rule__SignatureDeclaration__Group__8 : rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2907:1: rule__SignatureDeclaration__Group__8 : rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9 ;
     public final void rule__SignatureDeclaration__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2241:1: ( rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2242:2: rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2911:1: ( rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2912:2: rule__SignatureDeclaration__Group__8__Impl rule__SignatureDeclaration__Group__9
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__8__Impl_in_rule__SignatureDeclaration__Group__84627);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__8__Impl_in_rule__SignatureDeclaration__Group__86030);
             rule__SignatureDeclaration__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__9_in_rule__SignatureDeclaration__Group__84630);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__9_in_rule__SignatureDeclaration__Group__86033);
             rule__SignatureDeclaration__Group__9();
 
             state._fsp--;
@@ -6374,21 +8165,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__8__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2249:1: rule__SignatureDeclaration__Group__8__Impl : ( '}' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2919:1: rule__SignatureDeclaration__Group__8__Impl : ( ( ruleWS )* ) ;
     public final void rule__SignatureDeclaration__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2253:1: ( ( '}' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2254:1: ( '}' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2923:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2924:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2254:1: ( '}' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2255:1: '}'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2924:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2925:1: ( ruleWS )*
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,34,FOLLOW_34_in_rule__SignatureDeclaration__Group__8__Impl4658); 
-             after(grammarAccess.getSignatureDeclarationAccess().getRightCurlyBracketKeyword_8()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2926:1: ( ruleWS )*
+            loop33:
+            do {
+                int alt33=2;
+                int LA33_0 = input.LA(1);
+
+                if ( ((LA33_0>=RULE_SP && LA33_0<=RULE_SL_COMMENT)) ) {
+                    alt33=1;
+                }
+
+
+                switch (alt33) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2926:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__8__Impl6061);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop33;
+                }
+            } while (true);
+
+             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8()); 
 
             }
 
@@ -6411,22 +8230,17 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__9"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2268:1: rule__SignatureDeclaration__Group__9 : rule__SignatureDeclaration__Group__9__Impl rule__SignatureDeclaration__Group__10 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2936:1: rule__SignatureDeclaration__Group__9 : rule__SignatureDeclaration__Group__9__Impl ;
     public final void rule__SignatureDeclaration__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2272:1: ( rule__SignatureDeclaration__Group__9__Impl rule__SignatureDeclaration__Group__10 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2273:2: rule__SignatureDeclaration__Group__9__Impl rule__SignatureDeclaration__Group__10
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2940:1: ( rule__SignatureDeclaration__Group__9__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2941:2: rule__SignatureDeclaration__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__9__Impl_in_rule__SignatureDeclaration__Group__94689);
+            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__9__Impl_in_rule__SignatureDeclaration__Group__96092);
             rule__SignatureDeclaration__Group__9__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__10_in_rule__SignatureDeclaration__Group__94692);
-            rule__SignatureDeclaration__Group__10();
 
             state._fsp--;
 
@@ -6449,49 +8263,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SignatureDeclaration__Group__9__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2280:1: rule__SignatureDeclaration__Group__9__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2947:1: rule__SignatureDeclaration__Group__9__Impl : ( '.' ) ;
     public final void rule__SignatureDeclaration__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2284:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2285:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2951:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2952:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2285:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2286:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2952:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2953:1: '.'
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_9()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2287:1: ( ruleWS )*
-            loop28:
-            do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
-
-                if ( ((LA28_0>=RULE_SP && LA28_0<=RULE_SL_COMMENT)) ) {
-                    alt28=1;
-                }
-
-
-                switch (alt28) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2287:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__9__Impl4720);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop28;
-                }
-            } while (true);
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_9()); 
+             before(grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_9()); 
+            match(input,14,FOLLOW_14_in_rule__SignatureDeclaration__Group__9__Impl6120); 
+             after(grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_9()); 
 
             }
 
@@ -6513,23 +8299,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SignatureDeclaration__Group__9__Impl"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__Group__10"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2297:1: rule__SignatureDeclaration__Group__10 : rule__SignatureDeclaration__Group__10__Impl rule__SignatureDeclaration__Group__11 ;
-    public final void rule__SignatureDeclaration__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2986:1: rule__SigDefinitions__Group__0 : rule__SigDefinitions__Group__0__Impl rule__SigDefinitions__Group__1 ;
+    public final void rule__SigDefinitions__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2301:1: ( rule__SignatureDeclaration__Group__10__Impl rule__SignatureDeclaration__Group__11 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2302:2: rule__SignatureDeclaration__Group__10__Impl rule__SignatureDeclaration__Group__11
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2990:1: ( rule__SigDefinitions__Group__0__Impl rule__SigDefinitions__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2991:2: rule__SigDefinitions__Group__0__Impl rule__SigDefinitions__Group__1
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__10__Impl_in_rule__SignatureDeclaration__Group__104751);
-            rule__SignatureDeclaration__Group__10__Impl();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__0__Impl_in_rule__SigDefinitions__Group__06171);
+            rule__SigDefinitions__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__11_in_rule__SignatureDeclaration__Group__104754);
-            rule__SignatureDeclaration__Group__11();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__1_in_rule__SigDefinitions__Group__06174);
+            rule__SigDefinitions__Group__1();
 
             state._fsp--;
 
@@ -6548,25 +8334,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SignatureDeclaration__Group__10"
+    // $ANTLR end "rule__SigDefinitions__Group__0"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__Group__10__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2309:1: rule__SignatureDeclaration__Group__10__Impl : ( '.' ) ;
-    public final void rule__SignatureDeclaration__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2998:1: rule__SigDefinitions__Group__0__Impl : ( '{' ) ;
+    public final void rule__SigDefinitions__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2313:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2314:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3002:1: ( ( '{' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3003:1: ( '{' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2314:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2315:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3003:1: ( '{' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3004:1: '{'
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_10()); 
-            match(input,12,FOLLOW_12_in_rule__SignatureDeclaration__Group__10__Impl4782); 
-             after(grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_10()); 
+             before(grammarAccess.getSigDefinitionsAccess().getLeftCurlyBracketKeyword_0()); 
+            match(input,30,FOLLOW_30_in_rule__SigDefinitions__Group__0__Impl6202); 
+             after(grammarAccess.getSigDefinitionsAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
 
@@ -6585,21 +8371,26 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SignatureDeclaration__Group__10__Impl"
+    // $ANTLR end "rule__SigDefinitions__Group__0__Impl"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__Group__11"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2328:1: rule__SignatureDeclaration__Group__11 : rule__SignatureDeclaration__Group__11__Impl ;
-    public final void rule__SignatureDeclaration__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3017:1: rule__SigDefinitions__Group__1 : rule__SigDefinitions__Group__1__Impl rule__SigDefinitions__Group__2 ;
+    public final void rule__SigDefinitions__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2332:1: ( rule__SignatureDeclaration__Group__11__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2333:2: rule__SignatureDeclaration__Group__11__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3021:1: ( rule__SigDefinitions__Group__1__Impl rule__SigDefinitions__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3022:2: rule__SigDefinitions__Group__1__Impl rule__SigDefinitions__Group__2
             {
-            pushFollow(FOLLOW_rule__SignatureDeclaration__Group__11__Impl_in_rule__SignatureDeclaration__Group__114813);
-            rule__SignatureDeclaration__Group__11__Impl();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__1__Impl_in_rule__SigDefinitions__Group__16233);
+            rule__SigDefinitions__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__2_in_rule__SigDefinitions__Group__16236);
+            rule__SigDefinitions__Group__2();
 
             state._fsp--;
 
@@ -6618,1469 +8409,24 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SignatureDeclaration__Group__11"
+    // $ANTLR end "rule__SigDefinitions__Group__1"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__Group__11__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2339:1: rule__SignatureDeclaration__Group__11__Impl : ( ruleWS ) ;
-    public final void rule__SignatureDeclaration__Group__11__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2343:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2344:1: ( ruleWS )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2344:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2345:1: ruleWS
-            {
-             before(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_11()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__11__Impl4840);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_11()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SignatureDeclaration__Group__11__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2380:1: rule__SigDefinitions__Group_0__0 : rule__SigDefinitions__Group_0__0__Impl rule__SigDefinitions__Group_0__1 ;
-    public final void rule__SigDefinitions__Group_0__0() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3029:1: rule__SigDefinitions__Group__1__Impl : ( ( ruleWS )* ) ;
+    public final void rule__SigDefinitions__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2384:1: ( rule__SigDefinitions__Group_0__0__Impl rule__SigDefinitions__Group_0__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2385:2: rule__SigDefinitions__Group_0__0__Impl rule__SigDefinitions__Group_0__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3033:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3034:1: ( ( ruleWS )* )
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__0__Impl_in_rule__SigDefinitions__Group_0__04893);
-            rule__SigDefinitions__Group_0__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__1_in_rule__SigDefinitions__Group_0__04896);
-            rule__SigDefinitions__Group_0__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__0"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2392:1: rule__SigDefinitions__Group_0__0__Impl : ( ( rule__SigDefinitions__SymbNameAssignment_0_0 ) ) ;
-    public final void rule__SigDefinitions__Group_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2396:1: ( ( ( rule__SigDefinitions__SymbNameAssignment_0_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2397:1: ( ( rule__SigDefinitions__SymbNameAssignment_0_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3034:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3035:1: ( ruleWS )*
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2397:1: ( ( rule__SigDefinitions__SymbNameAssignment_0_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2398:1: ( rule__SigDefinitions__SymbNameAssignment_0_0 )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getSymbNameAssignment_0_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2399:1: ( rule__SigDefinitions__SymbNameAssignment_0_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2399:2: rule__SigDefinitions__SymbNameAssignment_0_0
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__SymbNameAssignment_0_0_in_rule__SigDefinitions__Group_0__0__Impl4923);
-            rule__SigDefinitions__SymbNameAssignment_0_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getSymbNameAssignment_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__0__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2409:1: rule__SigDefinitions__Group_0__1 : rule__SigDefinitions__Group_0__1__Impl rule__SigDefinitions__Group_0__2 ;
-    public final void rule__SigDefinitions__Group_0__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2413:1: ( rule__SigDefinitions__Group_0__1__Impl rule__SigDefinitions__Group_0__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2414:2: rule__SigDefinitions__Group_0__1__Impl rule__SigDefinitions__Group_0__2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__1__Impl_in_rule__SigDefinitions__Group_0__14953);
-            rule__SigDefinitions__Group_0__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__2_in_rule__SigDefinitions__Group_0__14956);
-            rule__SigDefinitions__Group_0__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__1"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2421:1: rule__SigDefinitions__Group_0__1__Impl : ( ( ruleWS )* ) ;
-    public final void rule__SigDefinitions__Group_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2425:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2426:1: ( ( ruleWS )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2426:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2427:1: ( ruleWS )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_0_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2428:1: ( ruleWS )*
-            loop29:
-            do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
-
-                if ( ((LA29_0>=RULE_SP && LA29_0<=RULE_SL_COMMENT)) ) {
-                    alt29=1;
-                }
-
-
-                switch (alt29) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2428:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_0__1__Impl4984);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop29;
-                }
-            } while (true);
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_0_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__1__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2438:1: rule__SigDefinitions__Group_0__2 : rule__SigDefinitions__Group_0__2__Impl rule__SigDefinitions__Group_0__3 ;
-    public final void rule__SigDefinitions__Group_0__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2442:1: ( rule__SigDefinitions__Group_0__2__Impl rule__SigDefinitions__Group_0__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2443:2: rule__SigDefinitions__Group_0__2__Impl rule__SigDefinitions__Group_0__3
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__2__Impl_in_rule__SigDefinitions__Group_0__25015);
-            rule__SigDefinitions__Group_0__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__3_in_rule__SigDefinitions__Group_0__25018);
-            rule__SigDefinitions__Group_0__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__2"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2450:1: rule__SigDefinitions__Group_0__2__Impl : ( ( rule__SigDefinitions__Alternatives_0_2 ) ) ;
-    public final void rule__SigDefinitions__Group_0__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2454:1: ( ( ( rule__SigDefinitions__Alternatives_0_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2455:1: ( ( rule__SigDefinitions__Alternatives_0_2 ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2455:1: ( ( rule__SigDefinitions__Alternatives_0_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2456:1: ( rule__SigDefinitions__Alternatives_0_2 )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getAlternatives_0_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2457:1: ( rule__SigDefinitions__Alternatives_0_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2457:2: rule__SigDefinitions__Alternatives_0_2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Alternatives_0_2_in_rule__SigDefinitions__Group_0__2__Impl5045);
-            rule__SigDefinitions__Alternatives_0_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getAlternatives_0_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__2__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2467:1: rule__SigDefinitions__Group_0__3 : rule__SigDefinitions__Group_0__3__Impl rule__SigDefinitions__Group_0__4 ;
-    public final void rule__SigDefinitions__Group_0__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2471:1: ( rule__SigDefinitions__Group_0__3__Impl rule__SigDefinitions__Group_0__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2472:2: rule__SigDefinitions__Group_0__3__Impl rule__SigDefinitions__Group_0__4
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__3__Impl_in_rule__SigDefinitions__Group_0__35075);
-            rule__SigDefinitions__Group_0__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__4_in_rule__SigDefinitions__Group_0__35078);
-            rule__SigDefinitions__Group_0__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__3"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2479:1: rule__SigDefinitions__Group_0__3__Impl : ( ( ruleSOMETHING )* ) ;
-    public final void rule__SigDefinitions__Group_0__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2483:1: ( ( ( ruleSOMETHING )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2484:1: ( ( ruleSOMETHING )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2484:1: ( ( ruleSOMETHING )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2485:1: ( ruleSOMETHING )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_0_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2486:1: ( ruleSOMETHING )*
-            loop30:
-            do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
-
-                if ( (LA30_0==12) ) {
-                    int LA30_1 = input.LA(2);
-
-                    if ( (LA30_1==RULE_CID) ) {
-                        alt30=1;
-                    }
-
-
-                }
-                else if ( ((LA30_0>=RULE_SP && LA30_0<=RULE_INT)||(LA30_0>=13 && LA30_0<=18)||LA30_0==31) ) {
-                    alt30=1;
-                }
-
-
-                switch (alt30) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2486:3: ruleSOMETHING
-            	    {
-            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_0__3__Impl5106);
-            	    ruleSOMETHING();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop30;
-                }
-            } while (true);
-
-             after(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_0_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__3__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2496:1: rule__SigDefinitions__Group_0__4 : rule__SigDefinitions__Group_0__4__Impl rule__SigDefinitions__Group_0__5 ;
-    public final void rule__SigDefinitions__Group_0__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2500:1: ( rule__SigDefinitions__Group_0__4__Impl rule__SigDefinitions__Group_0__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2501:2: rule__SigDefinitions__Group_0__4__Impl rule__SigDefinitions__Group_0__5
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__4__Impl_in_rule__SigDefinitions__Group_0__45137);
-            rule__SigDefinitions__Group_0__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__5_in_rule__SigDefinitions__Group_0__45140);
-            rule__SigDefinitions__Group_0__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__4"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2508:1: rule__SigDefinitions__Group_0__4__Impl : ( '.' ) ;
-    public final void rule__SigDefinitions__Group_0__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2512:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2513:1: ( '.' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2513:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2514:1: '.'
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_0_4()); 
-            match(input,12,FOLLOW_12_in_rule__SigDefinitions__Group_0__4__Impl5168); 
-             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_0_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__4__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2527:1: rule__SigDefinitions__Group_0__5 : rule__SigDefinitions__Group_0__5__Impl ;
-    public final void rule__SigDefinitions__Group_0__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2531:1: ( rule__SigDefinitions__Group_0__5__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2532:2: rule__SigDefinitions__Group_0__5__Impl
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_0__5__Impl_in_rule__SigDefinitions__Group_0__55199);
-            rule__SigDefinitions__Group_0__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__5"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_0__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2538:1: rule__SigDefinitions__Group_0__5__Impl : ( ruleWS ) ;
-    public final void rule__SigDefinitions__Group_0__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2542:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2543:1: ( ruleWS )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2543:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2544:1: ruleWS
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_0_5()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_0__5__Impl5226);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_0_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_0__5__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2567:1: rule__SigDefinitions__Group_1__0 : rule__SigDefinitions__Group_1__0__Impl rule__SigDefinitions__Group_1__1 ;
-    public final void rule__SigDefinitions__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2571:1: ( rule__SigDefinitions__Group_1__0__Impl rule__SigDefinitions__Group_1__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2572:2: rule__SigDefinitions__Group_1__0__Impl rule__SigDefinitions__Group_1__1
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__0__Impl_in_rule__SigDefinitions__Group_1__05267);
-            rule__SigDefinitions__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__1_in_rule__SigDefinitions__Group_1__05270);
-            rule__SigDefinitions__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__0"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2579:1: rule__SigDefinitions__Group_1__0__Impl : ( '%include' ) ;
-    public final void rule__SigDefinitions__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2583:1: ( ( '%include' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2584:1: ( '%include' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2584:1: ( '%include' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2585:1: '%include'
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getIncludeKeyword_1_0()); 
-            match(input,35,FOLLOW_35_in_rule__SigDefinitions__Group_1__0__Impl5298); 
-             after(grammarAccess.getSigDefinitionsAccess().getIncludeKeyword_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2598:1: rule__SigDefinitions__Group_1__1 : rule__SigDefinitions__Group_1__1__Impl rule__SigDefinitions__Group_1__2 ;
-    public final void rule__SigDefinitions__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2602:1: ( rule__SigDefinitions__Group_1__1__Impl rule__SigDefinitions__Group_1__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2603:2: rule__SigDefinitions__Group_1__1__Impl rule__SigDefinitions__Group_1__2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__1__Impl_in_rule__SigDefinitions__Group_1__15329);
-            rule__SigDefinitions__Group_1__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__2_in_rule__SigDefinitions__Group_1__15332);
-            rule__SigDefinitions__Group_1__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__1"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2610:1: rule__SigDefinitions__Group_1__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
-    public final void rule__SigDefinitions__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2614:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2615:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2615:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2616:1: ( ( ruleWS ) ) ( ( ruleWS )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2616:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2617:1: ( ruleWS )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2618:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2618:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__1__Impl5362);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2621:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2622:1: ( ruleWS )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2623:1: ( ruleWS )*
-            loop31:
-            do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
-
-                if ( ((LA31_0>=RULE_SP && LA31_0<=RULE_SL_COMMENT)) ) {
-                    alt31=1;
-                }
-
-
-                switch (alt31) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2623:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__1__Impl5375);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop31;
-                }
-            } while (true);
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_1()); 
-
-            }
-
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__1__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2634:1: rule__SigDefinitions__Group_1__2 : rule__SigDefinitions__Group_1__2__Impl rule__SigDefinitions__Group_1__3 ;
-    public final void rule__SigDefinitions__Group_1__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2638:1: ( rule__SigDefinitions__Group_1__2__Impl rule__SigDefinitions__Group_1__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2639:2: rule__SigDefinitions__Group_1__2__Impl rule__SigDefinitions__Group_1__3
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__2__Impl_in_rule__SigDefinitions__Group_1__25408);
-            rule__SigDefinitions__Group_1__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__3_in_rule__SigDefinitions__Group_1__25411);
-            rule__SigDefinitions__Group_1__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__2"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2646:1: rule__SigDefinitions__Group_1__2__Impl : ( ( rule__SigDefinitions__NamespaceAssignment_1_2 ) ) ;
-    public final void rule__SigDefinitions__Group_1__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2650:1: ( ( ( rule__SigDefinitions__NamespaceAssignment_1_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2651:1: ( ( rule__SigDefinitions__NamespaceAssignment_1_2 ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2651:1: ( ( rule__SigDefinitions__NamespaceAssignment_1_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2652:1: ( rule__SigDefinitions__NamespaceAssignment_1_2 )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getNamespaceAssignment_1_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2653:1: ( rule__SigDefinitions__NamespaceAssignment_1_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2653:2: rule__SigDefinitions__NamespaceAssignment_1_2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__NamespaceAssignment_1_2_in_rule__SigDefinitions__Group_1__2__Impl5438);
-            rule__SigDefinitions__NamespaceAssignment_1_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getNamespaceAssignment_1_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__2__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2663:1: rule__SigDefinitions__Group_1__3 : rule__SigDefinitions__Group_1__3__Impl rule__SigDefinitions__Group_1__4 ;
-    public final void rule__SigDefinitions__Group_1__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2667:1: ( rule__SigDefinitions__Group_1__3__Impl rule__SigDefinitions__Group_1__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2668:2: rule__SigDefinitions__Group_1__3__Impl rule__SigDefinitions__Group_1__4
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__3__Impl_in_rule__SigDefinitions__Group_1__35468);
-            rule__SigDefinitions__Group_1__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__4_in_rule__SigDefinitions__Group_1__35471);
-            rule__SigDefinitions__Group_1__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__3"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2675:1: rule__SigDefinitions__Group_1__3__Impl : ( ( rule__SigDefinitions__Group_1_3__0 )? ) ;
-    public final void rule__SigDefinitions__Group_1__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2679:1: ( ( ( rule__SigDefinitions__Group_1_3__0 )? ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2680:1: ( ( rule__SigDefinitions__Group_1_3__0 )? )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2680:1: ( ( rule__SigDefinitions__Group_1_3__0 )? )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2681:1: ( rule__SigDefinitions__Group_1_3__0 )?
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getGroup_1_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2682:1: ( rule__SigDefinitions__Group_1_3__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
-
-            if ( ((LA32_0>=RULE_SP && LA32_0<=RULE_SL_COMMENT)) ) {
-                alt32=1;
-            }
-            switch (alt32) {
-                case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2682:2: rule__SigDefinitions__Group_1_3__0
-                    {
-                    pushFollow(FOLLOW_rule__SigDefinitions__Group_1_3__0_in_rule__SigDefinitions__Group_1__3__Impl5498);
-                    rule__SigDefinitions__Group_1_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getGroup_1_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__3__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2692:1: rule__SigDefinitions__Group_1__4 : rule__SigDefinitions__Group_1__4__Impl rule__SigDefinitions__Group_1__5 ;
-    public final void rule__SigDefinitions__Group_1__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2696:1: ( rule__SigDefinitions__Group_1__4__Impl rule__SigDefinitions__Group_1__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2697:2: rule__SigDefinitions__Group_1__4__Impl rule__SigDefinitions__Group_1__5
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__4__Impl_in_rule__SigDefinitions__Group_1__45529);
-            rule__SigDefinitions__Group_1__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__5_in_rule__SigDefinitions__Group_1__45532);
-            rule__SigDefinitions__Group_1__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__4"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2704:1: rule__SigDefinitions__Group_1__4__Impl : ( '.' ) ;
-    public final void rule__SigDefinitions__Group_1__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2708:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2709:1: ( '.' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2709:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2710:1: '.'
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_1_4()); 
-            match(input,12,FOLLOW_12_in_rule__SigDefinitions__Group_1__4__Impl5560); 
-             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_1_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__4__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2723:1: rule__SigDefinitions__Group_1__5 : rule__SigDefinitions__Group_1__5__Impl ;
-    public final void rule__SigDefinitions__Group_1__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2727:1: ( rule__SigDefinitions__Group_1__5__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2728:2: rule__SigDefinitions__Group_1__5__Impl
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1__5__Impl_in_rule__SigDefinitions__Group_1__55591);
-            rule__SigDefinitions__Group_1__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__5"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2734:1: rule__SigDefinitions__Group_1__5__Impl : ( ruleWS ) ;
-    public final void rule__SigDefinitions__Group_1__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2738:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2739:1: ( ruleWS )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2739:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2740:1: ruleWS
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_5()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__5__Impl5618);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1__5__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1_3__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2763:1: rule__SigDefinitions__Group_1_3__0 : rule__SigDefinitions__Group_1_3__0__Impl rule__SigDefinitions__Group_1_3__1 ;
-    public final void rule__SigDefinitions__Group_1_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2767:1: ( rule__SigDefinitions__Group_1_3__0__Impl rule__SigDefinitions__Group_1_3__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2768:2: rule__SigDefinitions__Group_1_3__0__Impl rule__SigDefinitions__Group_1_3__1
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1_3__0__Impl_in_rule__SigDefinitions__Group_1_3__05659);
-            rule__SigDefinitions__Group_1_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1_3__1_in_rule__SigDefinitions__Group_1_3__05662);
-            rule__SigDefinitions__Group_1_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1_3__0"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1_3__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2775:1: rule__SigDefinitions__Group_1_3__0__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
-    public final void rule__SigDefinitions__Group_1_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2779:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2780:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2780:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2781:1: ( ( ruleWS ) ) ( ( ruleWS )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2781:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2782:1: ( ruleWS )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_3_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2783:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2783:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1_3__0__Impl5692);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_3_0()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2786:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2787:1: ( ruleWS )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_3_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2788:1: ( ruleWS )*
-            loop33:
-            do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
-
-                if ( ((LA33_0>=RULE_SP && LA33_0<=RULE_SL_COMMENT)) ) {
-                    alt33=1;
-                }
-
-
-                switch (alt33) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2788:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1_3__0__Impl5705);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop33;
-                }
-            } while (true);
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1_3_0()); 
-
-            }
-
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1_3__0__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1_3__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2799:1: rule__SigDefinitions__Group_1_3__1 : rule__SigDefinitions__Group_1_3__1__Impl ;
-    public final void rule__SigDefinitions__Group_1_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2803:1: ( rule__SigDefinitions__Group_1_3__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2804:2: rule__SigDefinitions__Group_1_3__1__Impl
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_1_3__1__Impl_in_rule__SigDefinitions__Group_1_3__15738);
-            rule__SigDefinitions__Group_1_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1_3__1"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_1_3__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2810:1: rule__SigDefinitions__Group_1_3__1__Impl : ( ruleincludeOps ) ;
-    public final void rule__SigDefinitions__Group_1_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2814:1: ( ( ruleincludeOps ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2815:1: ( ruleincludeOps )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2815:1: ( ruleincludeOps )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2816:1: ruleincludeOps
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_1_3_1()); 
-            pushFollow(FOLLOW_ruleincludeOps_in_rule__SigDefinitions__Group_1_3__1__Impl5765);
-            ruleincludeOps();
-
-            state._fsp--;
-
-             after(grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_1_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_1_3__1__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2831:1: rule__SigDefinitions__Group_2__0 : rule__SigDefinitions__Group_2__0__Impl rule__SigDefinitions__Group_2__1 ;
-    public final void rule__SigDefinitions__Group_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2835:1: ( rule__SigDefinitions__Group_2__0__Impl rule__SigDefinitions__Group_2__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2836:2: rule__SigDefinitions__Group_2__0__Impl rule__SigDefinitions__Group_2__1
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__0__Impl_in_rule__SigDefinitions__Group_2__05798);
-            rule__SigDefinitions__Group_2__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__1_in_rule__SigDefinitions__Group_2__05801);
-            rule__SigDefinitions__Group_2__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__0"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2843:1: rule__SigDefinitions__Group_2__0__Impl : ( '%struct' ) ;
-    public final void rule__SigDefinitions__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2847:1: ( ( '%struct' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2848:1: ( '%struct' )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2848:1: ( '%struct' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2849:1: '%struct'
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getStructKeyword_2_0()); 
-            match(input,36,FOLLOW_36_in_rule__SigDefinitions__Group_2__0__Impl5829); 
-             after(grammarAccess.getSigDefinitionsAccess().getStructKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2862:1: rule__SigDefinitions__Group_2__1 : rule__SigDefinitions__Group_2__1__Impl rule__SigDefinitions__Group_2__2 ;
-    public final void rule__SigDefinitions__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2866:1: ( rule__SigDefinitions__Group_2__1__Impl rule__SigDefinitions__Group_2__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2867:2: rule__SigDefinitions__Group_2__1__Impl rule__SigDefinitions__Group_2__2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__1__Impl_in_rule__SigDefinitions__Group_2__15860);
-            rule__SigDefinitions__Group_2__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__2_in_rule__SigDefinitions__Group_2__15863);
-            rule__SigDefinitions__Group_2__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__1"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2874:1: rule__SigDefinitions__Group_2__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
-    public final void rule__SigDefinitions__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2878:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2879:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2879:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2880:1: ( ( ruleWS ) ) ( ( ruleWS )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2880:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2881:1: ( ruleWS )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2882:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2882:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__1__Impl5893);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2885:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2886:1: ( ruleWS )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2887:1: ( ruleWS )*
+             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3036:1: ( ruleWS )*
             loop34:
             do {
                 int alt34=2;
@@ -8093,9 +8439,9 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2887:3: ruleWS
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3036:3: ruleWS
             	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__1__Impl5906);
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group__1__Impl6264);
             	    ruleWS();
 
             	    state._fsp--;
@@ -8109,95 +8455,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_1()); 
-
-            }
-
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__1__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2898:1: rule__SigDefinitions__Group_2__2 : rule__SigDefinitions__Group_2__2__Impl rule__SigDefinitions__Group_2__3 ;
-    public final void rule__SigDefinitions__Group_2__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2902:1: ( rule__SigDefinitions__Group_2__2__Impl rule__SigDefinitions__Group_2__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2903:2: rule__SigDefinitions__Group_2__2__Impl rule__SigDefinitions__Group_2__3
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__2__Impl_in_rule__SigDefinitions__Group_2__25939);
-            rule__SigDefinitions__Group_2__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__3_in_rule__SigDefinitions__Group_2__25942);
-            rule__SigDefinitions__Group_2__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__2"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2910:1: rule__SigDefinitions__Group_2__2__Impl : ( ( rule__SigDefinitions__StructNameAssignment_2_2 ) ) ;
-    public final void rule__SigDefinitions__Group_2__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2914:1: ( ( ( rule__SigDefinitions__StructNameAssignment_2_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2915:1: ( ( rule__SigDefinitions__StructNameAssignment_2_2 ) )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2915:1: ( ( rule__SigDefinitions__StructNameAssignment_2_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2916:1: ( rule__SigDefinitions__StructNameAssignment_2_2 )
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getStructNameAssignment_2_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2917:1: ( rule__SigDefinitions__StructNameAssignment_2_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2917:2: rule__SigDefinitions__StructNameAssignment_2_2
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__StructNameAssignment_2_2_in_rule__SigDefinitions__Group_2__2__Impl5969);
-            rule__SigDefinitions__StructNameAssignment_2_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getStructNameAssignment_2_2()); 
+             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1()); 
 
             }
 
@@ -8216,26 +8474,26 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__2__Impl"
+    // $ANTLR end "rule__SigDefinitions__Group__1__Impl"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2927:1: rule__SigDefinitions__Group_2__3 : rule__SigDefinitions__Group_2__3__Impl rule__SigDefinitions__Group_2__4 ;
-    public final void rule__SigDefinitions__Group_2__3() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3046:1: rule__SigDefinitions__Group__2 : rule__SigDefinitions__Group__2__Impl rule__SigDefinitions__Group__3 ;
+    public final void rule__SigDefinitions__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2931:1: ( rule__SigDefinitions__Group_2__3__Impl rule__SigDefinitions__Group_2__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2932:2: rule__SigDefinitions__Group_2__3__Impl rule__SigDefinitions__Group_2__4
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3050:1: ( rule__SigDefinitions__Group__2__Impl rule__SigDefinitions__Group__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3051:2: rule__SigDefinitions__Group__2__Impl rule__SigDefinitions__Group__3
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__3__Impl_in_rule__SigDefinitions__Group_2__35999);
-            rule__SigDefinitions__Group_2__3__Impl();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__2__Impl_in_rule__SigDefinitions__Group__26295);
+            rule__SigDefinitions__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__4_in_rule__SigDefinitions__Group_2__36002);
-            rule__SigDefinitions__Group_2__4();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__3_in_rule__SigDefinitions__Group__26298);
+            rule__SigDefinitions__Group__3();
 
             state._fsp--;
 
@@ -8254,40 +8512,119 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__3"
+    // $ANTLR end "rule__SigDefinitions__Group__2"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2939:1: rule__SigDefinitions__Group_2__3__Impl : ( ( ruleWS )* ) ;
-    public final void rule__SigDefinitions__Group_2__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3058:1: rule__SigDefinitions__Group__2__Impl : ( ( rule__SigDefinitions__ConsAssignment_2 ) ) ;
+    public final void rule__SigDefinitions__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2943:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2944:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3062:1: ( ( ( rule__SigDefinitions__ConsAssignment_2 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3063:1: ( ( rule__SigDefinitions__ConsAssignment_2 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2944:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2945:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3063:1: ( ( rule__SigDefinitions__ConsAssignment_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3064:1: ( rule__SigDefinitions__ConsAssignment_2 )
             {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2946:1: ( ruleWS )*
+             before(grammarAccess.getSigDefinitionsAccess().getConsAssignment_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3065:1: ( rule__SigDefinitions__ConsAssignment_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3065:2: rule__SigDefinitions__ConsAssignment_2
+            {
+            pushFollow(FOLLOW_rule__SigDefinitions__ConsAssignment_2_in_rule__SigDefinitions__Group__2__Impl6325);
+            rule__SigDefinitions__ConsAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigDefinitionsAccess().getConsAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__Group__2__Impl"
+
+
+    // $ANTLR start "rule__SigDefinitions__Group__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3075:1: rule__SigDefinitions__Group__3 : rule__SigDefinitions__Group__3__Impl rule__SigDefinitions__Group__4 ;
+    public final void rule__SigDefinitions__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3079:1: ( rule__SigDefinitions__Group__3__Impl rule__SigDefinitions__Group__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3080:2: rule__SigDefinitions__Group__3__Impl rule__SigDefinitions__Group__4
+            {
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__3__Impl_in_rule__SigDefinitions__Group__36355);
+            rule__SigDefinitions__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__4_in_rule__SigDefinitions__Group__36358);
+            rule__SigDefinitions__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__Group__3"
+
+
+    // $ANTLR start "rule__SigDefinitions__Group__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3087:1: rule__SigDefinitions__Group__3__Impl : ( ( rule__SigDefinitions__Group_3__0 )* ) ;
+    public final void rule__SigDefinitions__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3091:1: ( ( ( rule__SigDefinitions__Group_3__0 )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3092:1: ( ( rule__SigDefinitions__Group_3__0 )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3092:1: ( ( rule__SigDefinitions__Group_3__0 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3093:1: ( rule__SigDefinitions__Group_3__0 )*
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getGroup_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3094:1: ( rule__SigDefinitions__Group_3__0 )*
             loop35:
             do {
                 int alt35=2;
-                int LA35_0 = input.LA(1);
-
-                if ( ((LA35_0>=RULE_SP && LA35_0<=RULE_SL_COMMENT)) ) {
-                    alt35=1;
-                }
-
-
+                alt35 = dfa35.predict(input);
                 switch (alt35) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2946:3: ruleWS
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3094:2: rule__SigDefinitions__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__3__Impl6030);
-            	    ruleWS();
+            	    pushFollow(FOLLOW_rule__SigDefinitions__Group_3__0_in_rule__SigDefinitions__Group__3__Impl6385);
+            	    rule__SigDefinitions__Group_3__0();
 
             	    state._fsp--;
 
@@ -8300,7 +8637,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_3()); 
+             after(grammarAccess.getSigDefinitionsAccess().getGroup_3()); 
 
             }
 
@@ -8319,101 +8656,26 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__3__Impl"
+    // $ANTLR end "rule__SigDefinitions__Group__3__Impl"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2956:1: rule__SigDefinitions__Group_2__4 : rule__SigDefinitions__Group_2__4__Impl rule__SigDefinitions__Group_2__5 ;
-    public final void rule__SigDefinitions__Group_2__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2960:1: ( rule__SigDefinitions__Group_2__4__Impl rule__SigDefinitions__Group_2__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2961:2: rule__SigDefinitions__Group_2__4__Impl rule__SigDefinitions__Group_2__5
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__4__Impl_in_rule__SigDefinitions__Group_2__46061);
-            rule__SigDefinitions__Group_2__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__5_in_rule__SigDefinitions__Group_2__46064);
-            rule__SigDefinitions__Group_2__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__4"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2968:1: rule__SigDefinitions__Group_2__4__Impl : ( ':' ) ;
-    public final void rule__SigDefinitions__Group_2__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__4"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3104:1: rule__SigDefinitions__Group__4 : rule__SigDefinitions__Group__4__Impl rule__SigDefinitions__Group__5 ;
+    public final void rule__SigDefinitions__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2972:1: ( ( ':' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2973:1: ( ':' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3108:1: ( rule__SigDefinitions__Group__4__Impl rule__SigDefinitions__Group__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3109:2: rule__SigDefinitions__Group__4__Impl rule__SigDefinitions__Group__5
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2973:1: ( ':' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2974:1: ':'
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getColonKeyword_2_4()); 
-            match(input,13,FOLLOW_13_in_rule__SigDefinitions__Group_2__4__Impl6092); 
-             after(grammarAccess.getSigDefinitionsAccess().getColonKeyword_2_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__4__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2987:1: rule__SigDefinitions__Group_2__5 : rule__SigDefinitions__Group_2__5__Impl rule__SigDefinitions__Group_2__6 ;
-    public final void rule__SigDefinitions__Group_2__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2991:1: ( rule__SigDefinitions__Group_2__5__Impl rule__SigDefinitions__Group_2__6 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2992:2: rule__SigDefinitions__Group_2__5__Impl rule__SigDefinitions__Group_2__6
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__5__Impl_in_rule__SigDefinitions__Group_2__56123);
-            rule__SigDefinitions__Group_2__5__Impl();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__4__Impl_in_rule__SigDefinitions__Group__46416);
+            rule__SigDefinitions__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__6_in_rule__SigDefinitions__Group_2__56126);
-            rule__SigDefinitions__Group_2__6();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__5_in_rule__SigDefinitions__Group__46419);
+            rule__SigDefinitions__Group__5();
 
             state._fsp--;
 
@@ -8432,148 +8694,36 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__5"
+    // $ANTLR end "rule__SigDefinitions__Group__4"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:2999:1: rule__SigDefinitions__Group_2__5__Impl : ( ( ruleSOMETHING )* ) ;
-    public final void rule__SigDefinitions__Group_2__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3003:1: ( ( ( ruleSOMETHING )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3004:1: ( ( ruleSOMETHING )* )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3004:1: ( ( ruleSOMETHING )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3005:1: ( ruleSOMETHING )*
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_2_5()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3006:1: ( ruleSOMETHING )*
-            loop36:
-            do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
-
-                if ( (LA36_0==12) ) {
-                    int LA36_2 = input.LA(2);
-
-                    if ( (LA36_2==RULE_CID) ) {
-                        alt36=1;
-                    }
-
-
-                }
-                else if ( ((LA36_0>=RULE_SP && LA36_0<=RULE_INT)||(LA36_0>=13 && LA36_0<=18)||LA36_0==31) ) {
-                    alt36=1;
-                }
-
-
-                switch (alt36) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3006:3: ruleSOMETHING
-            	    {
-            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_2__5__Impl6154);
-            	    ruleSOMETHING();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop36;
-                }
-            } while (true);
-
-             after(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_2_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__5__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__6"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3016:1: rule__SigDefinitions__Group_2__6 : rule__SigDefinitions__Group_2__6__Impl rule__SigDefinitions__Group_2__7 ;
-    public final void rule__SigDefinitions__Group_2__6() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__4__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3116:1: rule__SigDefinitions__Group__4__Impl : ( ( rule__SigDefinitions__Group_4__0 )? ) ;
+    public final void rule__SigDefinitions__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3020:1: ( rule__SigDefinitions__Group_2__6__Impl rule__SigDefinitions__Group_2__7 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3021:2: rule__SigDefinitions__Group_2__6__Impl rule__SigDefinitions__Group_2__7
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3120:1: ( ( ( rule__SigDefinitions__Group_4__0 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3121:1: ( ( rule__SigDefinitions__Group_4__0 )? )
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__6__Impl_in_rule__SigDefinitions__Group_2__66185);
-            rule__SigDefinitions__Group_2__6__Impl();
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3121:1: ( ( rule__SigDefinitions__Group_4__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3122:1: ( rule__SigDefinitions__Group_4__0 )?
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getGroup_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3123:1: ( rule__SigDefinitions__Group_4__0 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__7_in_rule__SigDefinitions__Group_2__66188);
-            rule__SigDefinitions__Group_2__7();
-
-            state._fsp--;
-
-
+            if ( (LA36_0==14) ) {
+                alt36=1;
             }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__6"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__6__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3028:1: rule__SigDefinitions__Group_2__6__Impl : ( ( ruleincludeOps )? ) ;
-    public final void rule__SigDefinitions__Group_2__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3032:1: ( ( ( ruleincludeOps )? ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3033:1: ( ( ruleincludeOps )? )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3033:1: ( ( ruleincludeOps )? )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3034:1: ( ruleincludeOps )?
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_2_6()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3035:1: ( ruleincludeOps )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
-
-            if ( (LA37_0==37) ) {
-                alt37=1;
-            }
-            switch (alt37) {
+            switch (alt36) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3035:3: ruleincludeOps
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3123:2: rule__SigDefinitions__Group_4__0
                     {
-                    pushFollow(FOLLOW_ruleincludeOps_in_rule__SigDefinitions__Group_2__6__Impl6216);
-                    ruleincludeOps();
+                    pushFollow(FOLLOW_rule__SigDefinitions__Group_4__0_in_rule__SigDefinitions__Group__4__Impl6446);
+                    rule__SigDefinitions__Group_4__0();
 
                     state._fsp--;
 
@@ -8583,7 +8733,7 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getSigDefinitionsAccess().getIncludeOpsParserRuleCall_2_6()); 
+             after(grammarAccess.getSigDefinitionsAccess().getGroup_4()); 
 
             }
 
@@ -8602,26 +8752,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__6__Impl"
+    // $ANTLR end "rule__SigDefinitions__Group__4__Impl"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__7"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3045:1: rule__SigDefinitions__Group_2__7 : rule__SigDefinitions__Group_2__7__Impl rule__SigDefinitions__Group_2__8 ;
-    public final void rule__SigDefinitions__Group_2__7() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__5"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3133:1: rule__SigDefinitions__Group__5 : rule__SigDefinitions__Group__5__Impl ;
+    public final void rule__SigDefinitions__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3049:1: ( rule__SigDefinitions__Group_2__7__Impl rule__SigDefinitions__Group_2__8 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3050:2: rule__SigDefinitions__Group_2__7__Impl rule__SigDefinitions__Group_2__8
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3137:1: ( rule__SigDefinitions__Group__5__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3138:2: rule__SigDefinitions__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__7__Impl_in_rule__SigDefinitions__Group_2__76247);
-            rule__SigDefinitions__Group_2__7__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__8_in_rule__SigDefinitions__Group_2__76250);
-            rule__SigDefinitions__Group_2__8();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group__5__Impl_in_rule__SigDefinitions__Group__56477);
+            rule__SigDefinitions__Group__5__Impl();
 
             state._fsp--;
 
@@ -8640,25 +8785,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__7"
+    // $ANTLR end "rule__SigDefinitions__Group__5"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_2__7__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3057:1: rule__SigDefinitions__Group_2__7__Impl : ( '.' ) ;
-    public final void rule__SigDefinitions__Group_2__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group__5__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3144:1: rule__SigDefinitions__Group__5__Impl : ( '}' ) ;
+    public final void rule__SigDefinitions__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3061:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3062:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3148:1: ( ( '}' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3149:1: ( '}' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3062:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3063:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3149:1: ( '}' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3150:1: '}'
             {
-             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_2_7()); 
-            match(input,12,FOLLOW_12_in_rule__SigDefinitions__Group_2__7__Impl6278); 
-             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_2_7()); 
+             before(grammarAccess.getSigDefinitionsAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,31,FOLLOW_31_in_rule__SigDefinitions__Group__5__Impl6505); 
+             after(grammarAccess.getSigDefinitionsAccess().getRightCurlyBracketKeyword_5()); 
 
             }
 
@@ -8677,99 +8822,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_2__7__Impl"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__8"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3076:1: rule__SigDefinitions__Group_2__8 : rule__SigDefinitions__Group_2__8__Impl ;
-    public final void rule__SigDefinitions__Group_2__8() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3080:1: ( rule__SigDefinitions__Group_2__8__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3081:2: rule__SigDefinitions__Group_2__8__Impl
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_2__8__Impl_in_rule__SigDefinitions__Group_2__86309);
-            rule__SigDefinitions__Group_2__8__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__8"
-
-
-    // $ANTLR start "rule__SigDefinitions__Group_2__8__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3087:1: rule__SigDefinitions__Group_2__8__Impl : ( ruleWS ) ;
-    public final void rule__SigDefinitions__Group_2__8__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3091:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3092:1: ( ruleWS )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3092:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3093:1: ruleWS
-            {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_8()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__8__Impl6336);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_2_8()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SigDefinitions__Group_2__8__Impl"
+    // $ANTLR end "rule__SigDefinitions__Group__5__Impl"
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3122:1: rule__SigDefinitions__Group_3__0 : rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3175:1: rule__SigDefinitions__Group_3__0 : rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1 ;
     public final void rule__SigDefinitions__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3126:1: ( rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3127:2: rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3179:1: ( rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3180:2: rule__SigDefinitions__Group_3__0__Impl rule__SigDefinitions__Group_3__1
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__0__Impl_in_rule__SigDefinitions__Group_3__06383);
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__0__Impl_in_rule__SigDefinitions__Group_3__06548);
             rule__SigDefinitions__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__1_in_rule__SigDefinitions__Group_3__06386);
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__1_in_rule__SigDefinitions__Group_3__06551);
             rule__SigDefinitions__Group_3__1();
 
             state._fsp--;
@@ -8793,31 +8864,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3134:1: rule__SigDefinitions__Group_3__0__Impl : ( ( rule__SigDefinitions__TmpAssignment_3_0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3187:1: rule__SigDefinitions__Group_3__0__Impl : ( '.' ) ;
     public final void rule__SigDefinitions__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3138:1: ( ( ( rule__SigDefinitions__TmpAssignment_3_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3139:1: ( ( rule__SigDefinitions__TmpAssignment_3_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3191:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3192:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3139:1: ( ( rule__SigDefinitions__TmpAssignment_3_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3140:1: ( rule__SigDefinitions__TmpAssignment_3_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3192:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3193:1: '.'
             {
-             before(grammarAccess.getSigDefinitionsAccess().getTmpAssignment_3_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3141:1: ( rule__SigDefinitions__TmpAssignment_3_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3141:2: rule__SigDefinitions__TmpAssignment_3_0
-            {
-            pushFollow(FOLLOW_rule__SigDefinitions__TmpAssignment_3_0_in_rule__SigDefinitions__Group_3__0__Impl6413);
-            rule__SigDefinitions__TmpAssignment_3_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSigDefinitionsAccess().getTmpAssignment_3_0()); 
+             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_3_0()); 
+            match(input,14,FOLLOW_14_in_rule__SigDefinitions__Group_3__0__Impl6579); 
+             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_3_0()); 
 
             }
 
@@ -8840,21 +8901,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3151:1: rule__SigDefinitions__Group_3__1 : rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3206:1: rule__SigDefinitions__Group_3__1 : rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2 ;
     public final void rule__SigDefinitions__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3155:1: ( rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3156:2: rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3210:1: ( rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3211:2: rule__SigDefinitions__Group_3__1__Impl rule__SigDefinitions__Group_3__2
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__1__Impl_in_rule__SigDefinitions__Group_3__16443);
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__1__Impl_in_rule__SigDefinitions__Group_3__16610);
             rule__SigDefinitions__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__2_in_rule__SigDefinitions__Group_3__16446);
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__2_in_rule__SigDefinitions__Group_3__16613);
             rule__SigDefinitions__Group_3__2();
 
             state._fsp--;
@@ -8878,45 +8939,58 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3163:1: rule__SigDefinitions__Group_3__1__Impl : ( ( ruleSOMETHING )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3218:1: rule__SigDefinitions__Group_3__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
     public final void rule__SigDefinitions__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3167:1: ( ( ( ruleSOMETHING )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3168:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3222:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3223:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3168:1: ( ( ruleSOMETHING )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3169:1: ( ruleSOMETHING )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3223:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3224:1: ( ( ruleWS ) ) ( ( ruleWS )* )
             {
-             before(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_3_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3170:1: ( ruleSOMETHING )*
-            loop38:
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3224:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3225:1: ( ruleWS )
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3226:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3226:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__1__Impl6643);
+            ruleWS();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3229:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3230:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3231:1: ( ruleWS )*
+            loop37:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA38_0==12) ) {
-                    int LA38_1 = input.LA(2);
-
-                    if ( (LA38_1==RULE_CID) ) {
-                        alt38=1;
-                    }
-
-
-                }
-                else if ( ((LA38_0>=RULE_SP && LA38_0<=RULE_INT)||(LA38_0>=13 && LA38_0<=18)||LA38_0==31) ) {
-                    alt38=1;
+                if ( ((LA37_0>=RULE_SP && LA37_0<=RULE_SL_COMMENT)) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt37) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3170:3: ruleSOMETHING
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3231:3: ruleWS
             	    {
-            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_3__1__Impl6474);
-            	    ruleSOMETHING();
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__1__Impl6656);
+            	    ruleWS();
 
             	    state._fsp--;
 
@@ -8925,11 +8999,14 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop37;
                 }
             } while (true);
 
-             after(grammarAccess.getSigDefinitionsAccess().getSOMETHINGParserRuleCall_3_1()); 
+             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1()); 
+
+            }
+
 
             }
 
@@ -8952,22 +9029,17 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3180:1: rule__SigDefinitions__Group_3__2 : rule__SigDefinitions__Group_3__2__Impl rule__SigDefinitions__Group_3__3 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3242:1: rule__SigDefinitions__Group_3__2 : rule__SigDefinitions__Group_3__2__Impl ;
     public final void rule__SigDefinitions__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3184:1: ( rule__SigDefinitions__Group_3__2__Impl rule__SigDefinitions__Group_3__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3185:2: rule__SigDefinitions__Group_3__2__Impl rule__SigDefinitions__Group_3__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3246:1: ( rule__SigDefinitions__Group_3__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3247:2: rule__SigDefinitions__Group_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__2__Impl_in_rule__SigDefinitions__Group_3__26505);
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__2__Impl_in_rule__SigDefinitions__Group_3__26689);
             rule__SigDefinitions__Group_3__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__3_in_rule__SigDefinitions__Group_3__26508);
-            rule__SigDefinitions__Group_3__3();
 
             state._fsp--;
 
@@ -8990,21 +9062,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigDefinitions__Group_3__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3192:1: rule__SigDefinitions__Group_3__2__Impl : ( '.' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3253:1: rule__SigDefinitions__Group_3__2__Impl : ( ( rule__SigDefinitions__FconsAssignment_3_2 ) ) ;
     public final void rule__SigDefinitions__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3196:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3197:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3257:1: ( ( ( rule__SigDefinitions__FconsAssignment_3_2 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3258:1: ( ( rule__SigDefinitions__FconsAssignment_3_2 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3197:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3198:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3258:1: ( ( rule__SigDefinitions__FconsAssignment_3_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3259:1: ( rule__SigDefinitions__FconsAssignment_3_2 )
             {
-             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_3_2()); 
-            match(input,12,FOLLOW_12_in_rule__SigDefinitions__Group_3__2__Impl6536); 
-             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_3_2()); 
+             before(grammarAccess.getSigDefinitionsAccess().getFconsAssignment_3_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3260:1: ( rule__SigDefinitions__FconsAssignment_3_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3260:2: rule__SigDefinitions__FconsAssignment_3_2
+            {
+            pushFollow(FOLLOW_rule__SigDefinitions__FconsAssignment_3_2_in_rule__SigDefinitions__Group_3__2__Impl6716);
+            rule__SigDefinitions__FconsAssignment_3_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigDefinitionsAccess().getFconsAssignment_3_2()); 
 
             }
 
@@ -9026,18 +9108,23 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SigDefinitions__Group_3__2__Impl"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_3__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3211:1: rule__SigDefinitions__Group_3__3 : rule__SigDefinitions__Group_3__3__Impl ;
-    public final void rule__SigDefinitions__Group_3__3() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group_4__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3276:1: rule__SigDefinitions__Group_4__0 : rule__SigDefinitions__Group_4__0__Impl rule__SigDefinitions__Group_4__1 ;
+    public final void rule__SigDefinitions__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3215:1: ( rule__SigDefinitions__Group_3__3__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3216:2: rule__SigDefinitions__Group_3__3__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3280:1: ( rule__SigDefinitions__Group_4__0__Impl rule__SigDefinitions__Group_4__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3281:2: rule__SigDefinitions__Group_4__0__Impl rule__SigDefinitions__Group_4__1
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__Group_3__3__Impl_in_rule__SigDefinitions__Group_3__36567);
-            rule__SigDefinitions__Group_3__3__Impl();
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_4__0__Impl_in_rule__SigDefinitions__Group_4__06752);
+            rule__SigDefinitions__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_4__1_in_rule__SigDefinitions__Group_4__06755);
+            rule__SigDefinitions__Group_4__1();
 
             state._fsp--;
 
@@ -9056,29 +9143,781 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_3__3"
+    // $ANTLR end "rule__SigDefinitions__Group_4__0"
 
 
-    // $ANTLR start "rule__SigDefinitions__Group_3__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3222:1: rule__SigDefinitions__Group_3__3__Impl : ( ruleWS ) ;
-    public final void rule__SigDefinitions__Group_3__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__Group_4__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3288:1: rule__SigDefinitions__Group_4__0__Impl : ( '.' ) ;
+    public final void rule__SigDefinitions__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3226:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3227:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3292:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3293:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3227:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3228:1: ruleWS
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3293:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3294:1: '.'
             {
-             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_3()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__3__Impl6594);
+             before(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_4_0()); 
+            match(input,14,FOLLOW_14_in_rule__SigDefinitions__Group_4__0__Impl6783); 
+             after(grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__SigDefinitions__Group_4__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3307:1: rule__SigDefinitions__Group_4__1 : rule__SigDefinitions__Group_4__1__Impl ;
+    public final void rule__SigDefinitions__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3311:1: ( rule__SigDefinitions__Group_4__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3312:2: rule__SigDefinitions__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__SigDefinitions__Group_4__1__Impl_in_rule__SigDefinitions__Group_4__16814);
+            rule__SigDefinitions__Group_4__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__Group_4__1"
+
+
+    // $ANTLR start "rule__SigDefinitions__Group_4__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3318:1: rule__SigDefinitions__Group_4__1__Impl : ( ( ruleWS )* ) ;
+    public final void rule__SigDefinitions__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3322:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3323:1: ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3323:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3324:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_4_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3325:1: ( ruleWS )*
+            loop38:
+            do {
+                int alt38=2;
+                int LA38_0 = input.LA(1);
+
+                if ( ((LA38_0>=RULE_SP && LA38_0<=RULE_SL_COMMENT)) ) {
+                    alt38=1;
+                }
+
+
+                switch (alt38) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3325:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigDefinitions__Group_4__1__Impl6842);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop38;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3339:1: rule__SigConstruct__Group_0__0 : rule__SigConstruct__Group_0__0__Impl rule__SigConstruct__Group_0__1 ;
+    public final void rule__SigConstruct__Group_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3343:1: ( rule__SigConstruct__Group_0__0__Impl rule__SigConstruct__Group_0__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3344:2: rule__SigConstruct__Group_0__0__Impl rule__SigConstruct__Group_0__1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__0__Impl_in_rule__SigConstruct__Group_0__06877);
+            rule__SigConstruct__Group_0__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__1_in_rule__SigConstruct__Group_0__06880);
+            rule__SigConstruct__Group_0__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__0"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3351:1: rule__SigConstruct__Group_0__0__Impl : ( ( rule__SigConstruct__SymbNameAssignment_0_0 ) ) ;
+    public final void rule__SigConstruct__Group_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3355:1: ( ( ( rule__SigConstruct__SymbNameAssignment_0_0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3356:1: ( ( rule__SigConstruct__SymbNameAssignment_0_0 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3356:1: ( ( rule__SigConstruct__SymbNameAssignment_0_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3357:1: ( rule__SigConstruct__SymbNameAssignment_0_0 )
+            {
+             before(grammarAccess.getSigConstructAccess().getSymbNameAssignment_0_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3358:1: ( rule__SigConstruct__SymbNameAssignment_0_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3358:2: rule__SigConstruct__SymbNameAssignment_0_0
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__SymbNameAssignment_0_0_in_rule__SigConstruct__Group_0__0__Impl6907);
+            rule__SigConstruct__SymbNameAssignment_0_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getSymbNameAssignment_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3368:1: rule__SigConstruct__Group_0__1 : rule__SigConstruct__Group_0__1__Impl rule__SigConstruct__Group_0__2 ;
+    public final void rule__SigConstruct__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3372:1: ( rule__SigConstruct__Group_0__1__Impl rule__SigConstruct__Group_0__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3373:2: rule__SigConstruct__Group_0__1__Impl rule__SigConstruct__Group_0__2
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__1__Impl_in_rule__SigConstruct__Group_0__16937);
+            rule__SigConstruct__Group_0__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__2_in_rule__SigConstruct__Group_0__16940);
+            rule__SigConstruct__Group_0__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__1"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3380:1: rule__SigConstruct__Group_0__1__Impl : ( ( ruleWS )* ) ;
+    public final void rule__SigConstruct__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3384:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3385:1: ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3385:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3386:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_0_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3387:1: ( ruleWS )*
+            loop39:
+            do {
+                int alt39=2;
+                int LA39_0 = input.LA(1);
+
+                if ( ((LA39_0>=RULE_SP && LA39_0<=RULE_SL_COMMENT)) ) {
+                    alt39=1;
+                }
+
+
+                switch (alt39) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3387:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_0__1__Impl6968);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop39;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3397:1: rule__SigConstruct__Group_0__2 : rule__SigConstruct__Group_0__2__Impl rule__SigConstruct__Group_0__3 ;
+    public final void rule__SigConstruct__Group_0__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3401:1: ( rule__SigConstruct__Group_0__2__Impl rule__SigConstruct__Group_0__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3402:2: rule__SigConstruct__Group_0__2__Impl rule__SigConstruct__Group_0__3
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__2__Impl_in_rule__SigConstruct__Group_0__26999);
+            rule__SigConstruct__Group_0__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__3_in_rule__SigConstruct__Group_0__27002);
+            rule__SigConstruct__Group_0__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__2"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3409:1: rule__SigConstruct__Group_0__2__Impl : ( ( rule__SigConstruct__Alternatives_0_2 ) ) ;
+    public final void rule__SigConstruct__Group_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3413:1: ( ( ( rule__SigConstruct__Alternatives_0_2 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3414:1: ( ( rule__SigConstruct__Alternatives_0_2 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3414:1: ( ( rule__SigConstruct__Alternatives_0_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3415:1: ( rule__SigConstruct__Alternatives_0_2 )
+            {
+             before(grammarAccess.getSigConstructAccess().getAlternatives_0_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3416:1: ( rule__SigConstruct__Alternatives_0_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3416:2: rule__SigConstruct__Alternatives_0_2
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Alternatives_0_2_in_rule__SigConstruct__Group_0__2__Impl7029);
+            rule__SigConstruct__Alternatives_0_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getAlternatives_0_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__2__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3426:1: rule__SigConstruct__Group_0__3 : rule__SigConstruct__Group_0__3__Impl ;
+    public final void rule__SigConstruct__Group_0__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3430:1: ( rule__SigConstruct__Group_0__3__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3431:2: rule__SigConstruct__Group_0__3__Impl
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_0__3__Impl_in_rule__SigConstruct__Group_0__37059);
+            rule__SigConstruct__Group_0__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__3"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_0__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3437:1: rule__SigConstruct__Group_0__3__Impl : ( ( ruleSOMETHING )* ) ;
+    public final void rule__SigConstruct__Group_0__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3441:1: ( ( ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3442:1: ( ( ruleSOMETHING )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3442:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3443:1: ( ruleSOMETHING )*
+            {
+             before(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_0_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3444:1: ( ruleSOMETHING )*
+            loop40:
+            do {
+                int alt40=2;
+                int LA40_0 = input.LA(1);
+
+                if ( (LA40_0==14) ) {
+                    int LA40_2 = input.LA(2);
+
+                    if ( ((LA40_2>=RULE_CID && LA40_2<=RULE_ANY_OTHER)) ) {
+                        alt40=1;
+                    }
+
+
+                }
+                else if ( ((LA40_0>=RULE_SP && LA40_0<=RULE_INT)||(LA40_0>=15 && LA40_0<=18)||LA40_0==30) ) {
+                    alt40=1;
+                }
+
+
+                switch (alt40) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3444:3: ruleSOMETHING
+            	    {
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_0__3__Impl7087);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop40;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_0_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_0__3__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3462:1: rule__SigConstruct__Group_1__0 : rule__SigConstruct__Group_1__0__Impl rule__SigConstruct__Group_1__1 ;
+    public final void rule__SigConstruct__Group_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3466:1: ( rule__SigConstruct__Group_1__0__Impl rule__SigConstruct__Group_1__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3467:2: rule__SigConstruct__Group_1__0__Impl rule__SigConstruct__Group_1__1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__0__Impl_in_rule__SigConstruct__Group_1__07126);
+            rule__SigConstruct__Group_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__1_in_rule__SigConstruct__Group_1__07129);
+            rule__SigConstruct__Group_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__0"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3474:1: rule__SigConstruct__Group_1__0__Impl : ( '%' ) ;
+    public final void rule__SigConstruct__Group_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3478:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3479:1: ( '%' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3479:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3480:1: '%'
+            {
+             before(grammarAccess.getSigConstructAccess().getPercentSignKeyword_1_0()); 
+            match(input,18,FOLLOW_18_in_rule__SigConstruct__Group_1__0__Impl7157); 
+             after(grammarAccess.getSigConstructAccess().getPercentSignKeyword_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3493:1: rule__SigConstruct__Group_1__1 : rule__SigConstruct__Group_1__1__Impl rule__SigConstruct__Group_1__2 ;
+    public final void rule__SigConstruct__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3497:1: ( rule__SigConstruct__Group_1__1__Impl rule__SigConstruct__Group_1__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3498:2: rule__SigConstruct__Group_1__1__Impl rule__SigConstruct__Group_1__2
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__1__Impl_in_rule__SigConstruct__Group_1__17188);
+            rule__SigConstruct__Group_1__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__2_in_rule__SigConstruct__Group_1__17191);
+            rule__SigConstruct__Group_1__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__1"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3505:1: rule__SigConstruct__Group_1__1__Impl : ( 'include' ) ;
+    public final void rule__SigConstruct__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3509:1: ( ( 'include' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3510:1: ( 'include' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3510:1: ( 'include' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3511:1: 'include'
+            {
+             before(grammarAccess.getSigConstructAccess().getIncludeKeyword_1_1()); 
+            match(input,33,FOLLOW_33_in_rule__SigConstruct__Group_1__1__Impl7219); 
+             after(grammarAccess.getSigConstructAccess().getIncludeKeyword_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3524:1: rule__SigConstruct__Group_1__2 : rule__SigConstruct__Group_1__2__Impl rule__SigConstruct__Group_1__3 ;
+    public final void rule__SigConstruct__Group_1__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3528:1: ( rule__SigConstruct__Group_1__2__Impl rule__SigConstruct__Group_1__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3529:2: rule__SigConstruct__Group_1__2__Impl rule__SigConstruct__Group_1__3
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__2__Impl_in_rule__SigConstruct__Group_1__27250);
+            rule__SigConstruct__Group_1__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__3_in_rule__SigConstruct__Group_1__27253);
+            rule__SigConstruct__Group_1__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__2"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3536:1: rule__SigConstruct__Group_1__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    public final void rule__SigConstruct__Group_1__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3540:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3541:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3541:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3542:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3542:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3543:1: ( ruleWS )
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3544:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3544:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_1__2__Impl7283);
             ruleWS();
 
             state._fsp--;
 
-             after(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_3()); 
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3547:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3548:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3549:1: ( ruleWS )*
+            loop41:
+            do {
+                int alt41=2;
+                int LA41_0 = input.LA(1);
+
+                if ( ((LA41_0>=RULE_SP && LA41_0<=RULE_SL_COMMENT)) ) {
+                    alt41=1;
+                }
+
+
+                switch (alt41) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3549:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_1__2__Impl7296);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop41;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
+
+            }
+
 
             }
 
@@ -9097,25 +9936,1451 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__Group_3__3__Impl"
+    // $ANTLR end "rule__SigConstruct__Group_1__2__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3560:1: rule__SigConstruct__Group_1__3 : rule__SigConstruct__Group_1__3__Impl rule__SigConstruct__Group_1__4 ;
+    public final void rule__SigConstruct__Group_1__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3564:1: ( rule__SigConstruct__Group_1__3__Impl rule__SigConstruct__Group_1__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3565:2: rule__SigConstruct__Group_1__3__Impl rule__SigConstruct__Group_1__4
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__3__Impl_in_rule__SigConstruct__Group_1__37329);
+            rule__SigConstruct__Group_1__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__4_in_rule__SigConstruct__Group_1__37332);
+            rule__SigConstruct__Group_1__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__3"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3572:1: rule__SigConstruct__Group_1__3__Impl : ( ( rule__SigConstruct__NamespaceAssignment_1_3 ) ) ;
+    public final void rule__SigConstruct__Group_1__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3576:1: ( ( ( rule__SigConstruct__NamespaceAssignment_1_3 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3577:1: ( ( rule__SigConstruct__NamespaceAssignment_1_3 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3577:1: ( ( rule__SigConstruct__NamespaceAssignment_1_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3578:1: ( rule__SigConstruct__NamespaceAssignment_1_3 )
+            {
+             before(grammarAccess.getSigConstructAccess().getNamespaceAssignment_1_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3579:1: ( rule__SigConstruct__NamespaceAssignment_1_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3579:2: rule__SigConstruct__NamespaceAssignment_1_3
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__NamespaceAssignment_1_3_in_rule__SigConstruct__Group_1__3__Impl7359);
+            rule__SigConstruct__NamespaceAssignment_1_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getNamespaceAssignment_1_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__3__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__4"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3589:1: rule__SigConstruct__Group_1__4 : rule__SigConstruct__Group_1__4__Impl ;
+    public final void rule__SigConstruct__Group_1__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3593:1: ( rule__SigConstruct__Group_1__4__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3594:2: rule__SigConstruct__Group_1__4__Impl
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1__4__Impl_in_rule__SigConstruct__Group_1__47389);
+            rule__SigConstruct__Group_1__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__4"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1__4__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3600:1: rule__SigConstruct__Group_1__4__Impl : ( ( rule__SigConstruct__Group_1_4__0 )? ) ;
+    public final void rule__SigConstruct__Group_1__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3604:1: ( ( ( rule__SigConstruct__Group_1_4__0 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3605:1: ( ( rule__SigConstruct__Group_1_4__0 )? )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3605:1: ( ( rule__SigConstruct__Group_1_4__0 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3606:1: ( rule__SigConstruct__Group_1_4__0 )?
+            {
+             before(grammarAccess.getSigConstructAccess().getGroup_1_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3607:1: ( rule__SigConstruct__Group_1_4__0 )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
+
+            if ( ((LA42_0>=RULE_SP && LA42_0<=RULE_SL_COMMENT)) ) {
+                alt42=1;
+            }
+            switch (alt42) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3607:2: rule__SigConstruct__Group_1_4__0
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__Group_1_4__0_in_rule__SigConstruct__Group_1__4__Impl7416);
+                    rule__SigConstruct__Group_1_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getGroup_1_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1__4__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1_4__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3627:1: rule__SigConstruct__Group_1_4__0 : rule__SigConstruct__Group_1_4__0__Impl rule__SigConstruct__Group_1_4__1 ;
+    public final void rule__SigConstruct__Group_1_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3631:1: ( rule__SigConstruct__Group_1_4__0__Impl rule__SigConstruct__Group_1_4__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3632:2: rule__SigConstruct__Group_1_4__0__Impl rule__SigConstruct__Group_1_4__1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1_4__0__Impl_in_rule__SigConstruct__Group_1_4__07457);
+            rule__SigConstruct__Group_1_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1_4__1_in_rule__SigConstruct__Group_1_4__07460);
+            rule__SigConstruct__Group_1_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1_4__0"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1_4__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3639:1: rule__SigConstruct__Group_1_4__0__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    public final void rule__SigConstruct__Group_1_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3643:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3644:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3644:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3645:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3645:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3646:1: ( ruleWS )
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3647:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3647:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_1_4__0__Impl7490);
+            ruleWS();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3650:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3651:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3652:1: ( ruleWS )*
+            loop43:
+            do {
+                int alt43=2;
+                int LA43_0 = input.LA(1);
+
+                if ( ((LA43_0>=RULE_SP && LA43_0<=RULE_SL_COMMENT)) ) {
+                    alt43=1;
+                }
+
+
+                switch (alt43) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3652:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_1_4__0__Impl7503);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop43;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1_4__0__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1_4__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3663:1: rule__SigConstruct__Group_1_4__1 : rule__SigConstruct__Group_1_4__1__Impl ;
+    public final void rule__SigConstruct__Group_1_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3667:1: ( rule__SigConstruct__Group_1_4__1__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3668:2: rule__SigConstruct__Group_1_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_1_4__1__Impl_in_rule__SigConstruct__Group_1_4__17536);
+            rule__SigConstruct__Group_1_4__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1_4__1"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_1_4__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3674:1: rule__SigConstruct__Group_1_4__1__Impl : ( ruleincludeOps ) ;
+    public final void rule__SigConstruct__Group_1_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3678:1: ( ( ruleincludeOps ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3679:1: ( ruleincludeOps )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3679:1: ( ruleincludeOps )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3680:1: ruleincludeOps
+            {
+             before(grammarAccess.getSigConstructAccess().getIncludeOpsParserRuleCall_1_4_1()); 
+            pushFollow(FOLLOW_ruleincludeOps_in_rule__SigConstruct__Group_1_4__1__Impl7563);
+            ruleincludeOps();
+
+            state._fsp--;
+
+             after(grammarAccess.getSigConstructAccess().getIncludeOpsParserRuleCall_1_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_1_4__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3695:1: rule__SigConstruct__Group_2__0 : rule__SigConstruct__Group_2__0__Impl rule__SigConstruct__Group_2__1 ;
+    public final void rule__SigConstruct__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3699:1: ( rule__SigConstruct__Group_2__0__Impl rule__SigConstruct__Group_2__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3700:2: rule__SigConstruct__Group_2__0__Impl rule__SigConstruct__Group_2__1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__0__Impl_in_rule__SigConstruct__Group_2__07596);
+            rule__SigConstruct__Group_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__1_in_rule__SigConstruct__Group_2__07599);
+            rule__SigConstruct__Group_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__0"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3707:1: rule__SigConstruct__Group_2__0__Impl : ( '%' ) ;
+    public final void rule__SigConstruct__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3711:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3712:1: ( '%' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3712:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3713:1: '%'
+            {
+             before(grammarAccess.getSigConstructAccess().getPercentSignKeyword_2_0()); 
+            match(input,18,FOLLOW_18_in_rule__SigConstruct__Group_2__0__Impl7627); 
+             after(grammarAccess.getSigConstructAccess().getPercentSignKeyword_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3726:1: rule__SigConstruct__Group_2__1 : rule__SigConstruct__Group_2__1__Impl rule__SigConstruct__Group_2__2 ;
+    public final void rule__SigConstruct__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3730:1: ( rule__SigConstruct__Group_2__1__Impl rule__SigConstruct__Group_2__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3731:2: rule__SigConstruct__Group_2__1__Impl rule__SigConstruct__Group_2__2
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__1__Impl_in_rule__SigConstruct__Group_2__17658);
+            rule__SigConstruct__Group_2__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__2_in_rule__SigConstruct__Group_2__17661);
+            rule__SigConstruct__Group_2__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__1"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3738:1: rule__SigConstruct__Group_2__1__Impl : ( 'struct' ) ;
+    public final void rule__SigConstruct__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3742:1: ( ( 'struct' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3743:1: ( 'struct' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3743:1: ( 'struct' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3744:1: 'struct'
+            {
+             before(grammarAccess.getSigConstructAccess().getStructKeyword_2_1()); 
+            match(input,34,FOLLOW_34_in_rule__SigConstruct__Group_2__1__Impl7689); 
+             after(grammarAccess.getSigConstructAccess().getStructKeyword_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3757:1: rule__SigConstruct__Group_2__2 : rule__SigConstruct__Group_2__2__Impl rule__SigConstruct__Group_2__3 ;
+    public final void rule__SigConstruct__Group_2__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3761:1: ( rule__SigConstruct__Group_2__2__Impl rule__SigConstruct__Group_2__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3762:2: rule__SigConstruct__Group_2__2__Impl rule__SigConstruct__Group_2__3
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__2__Impl_in_rule__SigConstruct__Group_2__27720);
+            rule__SigConstruct__Group_2__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__3_in_rule__SigConstruct__Group_2__27723);
+            rule__SigConstruct__Group_2__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__2"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3769:1: rule__SigConstruct__Group_2__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    public final void rule__SigConstruct__Group_2__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3773:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3774:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3774:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3775:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3775:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3776:1: ( ruleWS )
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3777:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3777:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__2__Impl7753);
+            ruleWS();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3780:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3781:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3782:1: ( ruleWS )*
+            loop44:
+            do {
+                int alt44=2;
+                int LA44_0 = input.LA(1);
+
+                if ( ((LA44_0>=RULE_SP && LA44_0<=RULE_SL_COMMENT)) ) {
+                    alt44=1;
+                }
+
+
+                switch (alt44) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3782:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__2__Impl7766);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop44;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__2__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3793:1: rule__SigConstruct__Group_2__3 : rule__SigConstruct__Group_2__3__Impl rule__SigConstruct__Group_2__4 ;
+    public final void rule__SigConstruct__Group_2__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3797:1: ( rule__SigConstruct__Group_2__3__Impl rule__SigConstruct__Group_2__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3798:2: rule__SigConstruct__Group_2__3__Impl rule__SigConstruct__Group_2__4
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__3__Impl_in_rule__SigConstruct__Group_2__37799);
+            rule__SigConstruct__Group_2__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__4_in_rule__SigConstruct__Group_2__37802);
+            rule__SigConstruct__Group_2__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__3"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__3__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3805:1: rule__SigConstruct__Group_2__3__Impl : ( ( rule__SigConstruct__StructNameAssignment_2_3 ) ) ;
+    public final void rule__SigConstruct__Group_2__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3809:1: ( ( ( rule__SigConstruct__StructNameAssignment_2_3 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3810:1: ( ( rule__SigConstruct__StructNameAssignment_2_3 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3810:1: ( ( rule__SigConstruct__StructNameAssignment_2_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3811:1: ( rule__SigConstruct__StructNameAssignment_2_3 )
+            {
+             before(grammarAccess.getSigConstructAccess().getStructNameAssignment_2_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3812:1: ( rule__SigConstruct__StructNameAssignment_2_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3812:2: rule__SigConstruct__StructNameAssignment_2_3
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__StructNameAssignment_2_3_in_rule__SigConstruct__Group_2__3__Impl7829);
+            rule__SigConstruct__StructNameAssignment_2_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getStructNameAssignment_2_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__3__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__4"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3822:1: rule__SigConstruct__Group_2__4 : rule__SigConstruct__Group_2__4__Impl rule__SigConstruct__Group_2__5 ;
+    public final void rule__SigConstruct__Group_2__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3826:1: ( rule__SigConstruct__Group_2__4__Impl rule__SigConstruct__Group_2__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3827:2: rule__SigConstruct__Group_2__4__Impl rule__SigConstruct__Group_2__5
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__4__Impl_in_rule__SigConstruct__Group_2__47859);
+            rule__SigConstruct__Group_2__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__5_in_rule__SigConstruct__Group_2__47862);
+            rule__SigConstruct__Group_2__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__4"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__4__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3834:1: rule__SigConstruct__Group_2__4__Impl : ( ( ruleWS )* ) ;
+    public final void rule__SigConstruct__Group_2__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3838:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3839:1: ( ( ruleWS )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3839:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3840:1: ( ruleWS )*
+            {
+             before(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3841:1: ( ruleWS )*
+            loop45:
+            do {
+                int alt45=2;
+                int LA45_0 = input.LA(1);
+
+                if ( ((LA45_0>=RULE_SP && LA45_0<=RULE_SL_COMMENT)) ) {
+                    alt45=1;
+                }
+
+
+                switch (alt45) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3841:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__4__Impl7890);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop45;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__4__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__5"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3851:1: rule__SigConstruct__Group_2__5 : rule__SigConstruct__Group_2__5__Impl rule__SigConstruct__Group_2__6 ;
+    public final void rule__SigConstruct__Group_2__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3855:1: ( rule__SigConstruct__Group_2__5__Impl rule__SigConstruct__Group_2__6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3856:2: rule__SigConstruct__Group_2__5__Impl rule__SigConstruct__Group_2__6
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__5__Impl_in_rule__SigConstruct__Group_2__57921);
+            rule__SigConstruct__Group_2__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__6_in_rule__SigConstruct__Group_2__57924);
+            rule__SigConstruct__Group_2__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__5"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__5__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3863:1: rule__SigConstruct__Group_2__5__Impl : ( ( rule__SigConstruct__Alternatives_2_5 ) ) ;
+    public final void rule__SigConstruct__Group_2__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3867:1: ( ( ( rule__SigConstruct__Alternatives_2_5 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3868:1: ( ( rule__SigConstruct__Alternatives_2_5 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3868:1: ( ( rule__SigConstruct__Alternatives_2_5 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3869:1: ( rule__SigConstruct__Alternatives_2_5 )
+            {
+             before(grammarAccess.getSigConstructAccess().getAlternatives_2_5()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3870:1: ( rule__SigConstruct__Alternatives_2_5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3870:2: rule__SigConstruct__Alternatives_2_5
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Alternatives_2_5_in_rule__SigConstruct__Group_2__5__Impl7951);
+            rule__SigConstruct__Alternatives_2_5();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getAlternatives_2_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__5__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__6"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3880:1: rule__SigConstruct__Group_2__6 : rule__SigConstruct__Group_2__6__Impl rule__SigConstruct__Group_2__7 ;
+    public final void rule__SigConstruct__Group_2__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3884:1: ( rule__SigConstruct__Group_2__6__Impl rule__SigConstruct__Group_2__7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3885:2: rule__SigConstruct__Group_2__6__Impl rule__SigConstruct__Group_2__7
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__6__Impl_in_rule__SigConstruct__Group_2__67981);
+            rule__SigConstruct__Group_2__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__7_in_rule__SigConstruct__Group_2__67984);
+            rule__SigConstruct__Group_2__7();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__6"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__6__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3892:1: rule__SigConstruct__Group_2__6__Impl : ( ( ruleSOMETHING )* ) ;
+    public final void rule__SigConstruct__Group_2__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3896:1: ( ( ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3897:1: ( ( ruleSOMETHING )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3897:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3898:1: ( ruleSOMETHING )*
+            {
+             before(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_2_6()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3899:1: ( ruleSOMETHING )*
+            loop46:
+            do {
+                int alt46=2;
+                switch ( input.LA(1) ) {
+                case 18:
+                    {
+                    int LA46_1 = input.LA(2);
+
+                    if ( (LA46_1==EOF||(LA46_1>=RULE_SP && LA46_1<=RULE_INT)||(LA46_1>=14 && LA46_1<=18)||(LA46_1>=30 && LA46_1<=31)) ) {
+                        alt46=1;
+                    }
+
+
+                    }
+                    break;
+                case 14:
+                    {
+                    int LA46_3 = input.LA(2);
+
+                    if ( ((LA46_3>=RULE_CID && LA46_3<=RULE_ANY_OTHER)) ) {
+                        alt46=1;
+                    }
+
+
+                    }
+                    break;
+                case RULE_SP:
+                case RULE_ML_COMMENT:
+                case RULE_ML2_COMMENT:
+                case RULE_SL_COMMENT:
+                case RULE_MULTIPLEDOT:
+                case RULE_DOUBLEDOT:
+                case RULE_CID:
+                case RULE_ANY_OTHER:
+                case RULE_INT:
+                case 15:
+                case 16:
+                case 17:
+                case 30:
+                    {
+                    alt46=1;
+                    }
+                    break;
+
+                }
+
+                switch (alt46) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3899:3: ruleSOMETHING
+            	    {
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_2__6__Impl8012);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop46;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_2_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__6__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__7"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3909:1: rule__SigConstruct__Group_2__7 : rule__SigConstruct__Group_2__7__Impl ;
+    public final void rule__SigConstruct__Group_2__7() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3913:1: ( rule__SigConstruct__Group_2__7__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3914:2: rule__SigConstruct__Group_2__7__Impl
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_2__7__Impl_in_rule__SigConstruct__Group_2__78043);
+            rule__SigConstruct__Group_2__7__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__7"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_2__7__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3920:1: rule__SigConstruct__Group_2__7__Impl : ( ( rule__SigConstruct__IncOptAssignment_2_7 )? ) ;
+    public final void rule__SigConstruct__Group_2__7__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3924:1: ( ( ( rule__SigConstruct__IncOptAssignment_2_7 )? ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3925:1: ( ( rule__SigConstruct__IncOptAssignment_2_7 )? )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3925:1: ( ( rule__SigConstruct__IncOptAssignment_2_7 )? )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3926:1: ( rule__SigConstruct__IncOptAssignment_2_7 )?
+            {
+             before(grammarAccess.getSigConstructAccess().getIncOptAssignment_2_7()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3927:1: ( rule__SigConstruct__IncOptAssignment_2_7 )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
+
+            if ( (LA47_0==18) ) {
+                alt47=1;
+            }
+            switch (alt47) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3927:2: rule__SigConstruct__IncOptAssignment_2_7
+                    {
+                    pushFollow(FOLLOW_rule__SigConstruct__IncOptAssignment_2_7_in_rule__SigConstruct__Group_2__7__Impl8070);
+                    rule__SigConstruct__IncOptAssignment_2_7();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getIncOptAssignment_2_7()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_2__7__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3953:1: rule__SigConstruct__Group_3__0 : rule__SigConstruct__Group_3__0__Impl rule__SigConstruct__Group_3__1 ;
+    public final void rule__SigConstruct__Group_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3957:1: ( rule__SigConstruct__Group_3__0__Impl rule__SigConstruct__Group_3__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3958:2: rule__SigConstruct__Group_3__0__Impl rule__SigConstruct__Group_3__1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_3__0__Impl_in_rule__SigConstruct__Group_3__08117);
+            rule__SigConstruct__Group_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_3__1_in_rule__SigConstruct__Group_3__08120);
+            rule__SigConstruct__Group_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__0"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__0__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3965:1: rule__SigConstruct__Group_3__0__Impl : ( '%' ) ;
+    public final void rule__SigConstruct__Group_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3969:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3970:1: ( '%' )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3970:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3971:1: '%'
+            {
+             before(grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0()); 
+            match(input,18,FOLLOW_18_in_rule__SigConstruct__Group_3__0__Impl8148); 
+             after(grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3984:1: rule__SigConstruct__Group_3__1 : rule__SigConstruct__Group_3__1__Impl rule__SigConstruct__Group_3__2 ;
+    public final void rule__SigConstruct__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3988:1: ( rule__SigConstruct__Group_3__1__Impl rule__SigConstruct__Group_3__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3989:2: rule__SigConstruct__Group_3__1__Impl rule__SigConstruct__Group_3__2
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_3__1__Impl_in_rule__SigConstruct__Group_3__18179);
+            rule__SigConstruct__Group_3__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SigConstruct__Group_3__2_in_rule__SigConstruct__Group_3__18182);
+            rule__SigConstruct__Group_3__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__1"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__1__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3996:1: rule__SigConstruct__Group_3__1__Impl : ( ( rule__SigConstruct__TmpAssignment_3_1 ) ) ;
+    public final void rule__SigConstruct__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4000:1: ( ( ( rule__SigConstruct__TmpAssignment_3_1 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4001:1: ( ( rule__SigConstruct__TmpAssignment_3_1 ) )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4001:1: ( ( rule__SigConstruct__TmpAssignment_3_1 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4002:1: ( rule__SigConstruct__TmpAssignment_3_1 )
+            {
+             before(grammarAccess.getSigConstructAccess().getTmpAssignment_3_1()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4003:1: ( rule__SigConstruct__TmpAssignment_3_1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4003:2: rule__SigConstruct__TmpAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__TmpAssignment_3_1_in_rule__SigConstruct__Group_3__1__Impl8209);
+            rule__SigConstruct__TmpAssignment_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSigConstructAccess().getTmpAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__1__Impl"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4013:1: rule__SigConstruct__Group_3__2 : rule__SigConstruct__Group_3__2__Impl ;
+    public final void rule__SigConstruct__Group_3__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4017:1: ( rule__SigConstruct__Group_3__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4018:2: rule__SigConstruct__Group_3__2__Impl
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__Group_3__2__Impl_in_rule__SigConstruct__Group_3__28239);
+            rule__SigConstruct__Group_3__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__2"
+
+
+    // $ANTLR start "rule__SigConstruct__Group_3__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4024:1: rule__SigConstruct__Group_3__2__Impl : ( ( ruleSOMETHING )* ) ;
+    public final void rule__SigConstruct__Group_3__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4028:1: ( ( ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4029:1: ( ( ruleSOMETHING )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4029:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4030:1: ( ruleSOMETHING )*
+            {
+             before(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_3_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4031:1: ( ruleSOMETHING )*
+            loop48:
+            do {
+                int alt48=2;
+                int LA48_0 = input.LA(1);
+
+                if ( (LA48_0==14) ) {
+                    int LA48_2 = input.LA(2);
+
+                    if ( ((LA48_2>=RULE_CID && LA48_2<=RULE_ANY_OTHER)) ) {
+                        alt48=1;
+                    }
+
+
+                }
+                else if ( ((LA48_0>=RULE_SP && LA48_0<=RULE_INT)||(LA48_0>=15 && LA48_0<=18)||LA48_0==30) ) {
+                    alt48=1;
+                }
+
+
+                switch (alt48) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4031:3: ruleSOMETHING
+            	    {
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_3__2__Impl8267);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop48;
+                }
+            } while (true);
+
+             after(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_3_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__Group_3__2__Impl"
 
 
     // $ANTLR start "rule__IncludeOps__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3247:1: rule__IncludeOps__Group__0 : rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4047:1: rule__IncludeOps__Group__0 : rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1 ;
     public final void rule__IncludeOps__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3251:1: ( rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3252:2: rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4051:1: ( rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4052:2: rule__IncludeOps__Group__0__Impl rule__IncludeOps__Group__1
             {
-            pushFollow(FOLLOW_rule__IncludeOps__Group__0__Impl_in_rule__IncludeOps__Group__06631);
+            pushFollow(FOLLOW_rule__IncludeOps__Group__0__Impl_in_rule__IncludeOps__Group__08304);
             rule__IncludeOps__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IncludeOps__Group__1_in_rule__IncludeOps__Group__06634);
+            pushFollow(FOLLOW_rule__IncludeOps__Group__1_in_rule__IncludeOps__Group__08307);
             rule__IncludeOps__Group__1();
 
             state._fsp--;
@@ -9139,21 +11404,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IncludeOps__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3259:1: rule__IncludeOps__Group__0__Impl : ( '%open' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4059:1: rule__IncludeOps__Group__0__Impl : ( '%' ) ;
     public final void rule__IncludeOps__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3263:1: ( ( '%open' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3264:1: ( '%open' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4063:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4064:1: ( '%' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3264:1: ( '%open' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3265:1: '%open'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4064:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4065:1: '%'
             {
-             before(grammarAccess.getIncludeOpsAccess().getOpenKeyword_0()); 
-            match(input,37,FOLLOW_37_in_rule__IncludeOps__Group__0__Impl6662); 
-             after(grammarAccess.getIncludeOpsAccess().getOpenKeyword_0()); 
+             before(grammarAccess.getIncludeOpsAccess().getPercentSignKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__IncludeOps__Group__0__Impl8335); 
+             after(grammarAccess.getIncludeOpsAccess().getPercentSignKeyword_0()); 
 
             }
 
@@ -9176,17 +11441,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IncludeOps__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3278:1: rule__IncludeOps__Group__1 : rule__IncludeOps__Group__1__Impl ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4078:1: rule__IncludeOps__Group__1 : rule__IncludeOps__Group__1__Impl rule__IncludeOps__Group__2 ;
     public final void rule__IncludeOps__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3282:1: ( rule__IncludeOps__Group__1__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3283:2: rule__IncludeOps__Group__1__Impl
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4082:1: ( rule__IncludeOps__Group__1__Impl rule__IncludeOps__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4083:2: rule__IncludeOps__Group__1__Impl rule__IncludeOps__Group__2
             {
-            pushFollow(FOLLOW_rule__IncludeOps__Group__1__Impl_in_rule__IncludeOps__Group__16693);
+            pushFollow(FOLLOW_rule__IncludeOps__Group__1__Impl_in_rule__IncludeOps__Group__18366);
             rule__IncludeOps__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__IncludeOps__Group__2_in_rule__IncludeOps__Group__18369);
+            rule__IncludeOps__Group__2();
 
             state._fsp--;
 
@@ -9209,58 +11479,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IncludeOps__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3289:1: rule__IncludeOps__Group__1__Impl : ( ( ruleSOMETHING )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4090:1: rule__IncludeOps__Group__1__Impl : ( 'open' ) ;
     public final void rule__IncludeOps__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3293:1: ( ( ( ruleSOMETHING )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3294:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4094:1: ( ( 'open' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4095:1: ( 'open' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3294:1: ( ( ruleSOMETHING )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3295:1: ( ruleSOMETHING )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4095:1: ( 'open' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4096:1: 'open'
             {
-             before(grammarAccess.getIncludeOpsAccess().getSOMETHINGParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3296:1: ( ruleSOMETHING )*
-            loop39:
-            do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
-
-                if ( (LA39_0==12) ) {
-                    int LA39_2 = input.LA(2);
-
-                    if ( (LA39_2==RULE_CID) ) {
-                        alt39=1;
-                    }
-
-
-                }
-                else if ( ((LA39_0>=RULE_SP && LA39_0<=RULE_INT)||(LA39_0>=13 && LA39_0<=18)||LA39_0==31) ) {
-                    alt39=1;
-                }
-
-
-                switch (alt39) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3296:3: ruleSOMETHING
-            	    {
-            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__IncludeOps__Group__1__Impl6721);
-            	    ruleSOMETHING();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop39;
-                }
-            } while (true);
-
-             after(grammarAccess.getIncludeOpsAccess().getSOMETHINGParserRuleCall_1()); 
+             before(grammarAccess.getIncludeOpsAccess().getOpenKeyword_1()); 
+            match(input,35,FOLLOW_35_in_rule__IncludeOps__Group__1__Impl8397); 
+             after(grammarAccess.getIncludeOpsAccess().getOpenKeyword_1()); 
 
             }
 
@@ -9282,22 +11515,129 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__IncludeOps__Group__1__Impl"
 
 
+    // $ANTLR start "rule__IncludeOps__Group__2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4109:1: rule__IncludeOps__Group__2 : rule__IncludeOps__Group__2__Impl ;
+    public final void rule__IncludeOps__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4113:1: ( rule__IncludeOps__Group__2__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4114:2: rule__IncludeOps__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__IncludeOps__Group__2__Impl_in_rule__IncludeOps__Group__28428);
+            rule__IncludeOps__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IncludeOps__Group__2"
+
+
+    // $ANTLR start "rule__IncludeOps__Group__2__Impl"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4120:1: rule__IncludeOps__Group__2__Impl : ( ( ruleSOMETHING )* ) ;
+    public final void rule__IncludeOps__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4124:1: ( ( ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4125:1: ( ( ruleSOMETHING )* )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4125:1: ( ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4126:1: ( ruleSOMETHING )*
+            {
+             before(grammarAccess.getIncludeOpsAccess().getSOMETHINGParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4127:1: ( ruleSOMETHING )*
+            loop49:
+            do {
+                int alt49=2;
+                int LA49_0 = input.LA(1);
+
+                if ( (LA49_0==14) ) {
+                    int LA49_2 = input.LA(2);
+
+                    if ( ((LA49_2>=RULE_CID && LA49_2<=RULE_ANY_OTHER)) ) {
+                        alt49=1;
+                    }
+
+
+                }
+                else if ( ((LA49_0>=RULE_SP && LA49_0<=RULE_INT)||(LA49_0>=15 && LA49_0<=18)||LA49_0==30) ) {
+                    alt49=1;
+                }
+
+
+                switch (alt49) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4127:3: ruleSOMETHING
+            	    {
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_rule__IncludeOps__Group__2__Impl8456);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop49;
+                }
+            } while (true);
+
+             after(grammarAccess.getIncludeOpsAccess().getSOMETHINGParserRuleCall_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IncludeOps__Group__2__Impl"
+
+
     // $ANTLR start "rule__ViewDeclaration__Group__0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3310:1: rule__ViewDeclaration__Group__0 : rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4143:1: rule__ViewDeclaration__Group__0 : rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1 ;
     public final void rule__ViewDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3314:1: ( rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3315:2: rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4147:1: ( rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4148:2: rule__ViewDeclaration__Group__0__Impl rule__ViewDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__0__Impl_in_rule__ViewDeclaration__Group__06756);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__0__Impl_in_rule__ViewDeclaration__Group__08493);
             rule__ViewDeclaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__1_in_rule__ViewDeclaration__Group__06759);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__1_in_rule__ViewDeclaration__Group__08496);
             rule__ViewDeclaration__Group__1();
 
             state._fsp--;
@@ -9321,21 +11661,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__0__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3322:1: rule__ViewDeclaration__Group__0__Impl : ( '%view' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4155:1: rule__ViewDeclaration__Group__0__Impl : ( '%' ) ;
     public final void rule__ViewDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3326:1: ( ( '%view' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3327:1: ( '%view' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4159:1: ( ( '%' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4160:1: ( '%' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3327:1: ( '%view' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3328:1: '%view'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4160:1: ( '%' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4161:1: '%'
             {
-             before(grammarAccess.getViewDeclarationAccess().getViewKeyword_0()); 
-            match(input,38,FOLLOW_38_in_rule__ViewDeclaration__Group__0__Impl6787); 
-             after(grammarAccess.getViewDeclarationAccess().getViewKeyword_0()); 
+             before(grammarAccess.getViewDeclarationAccess().getPercentSignKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__ViewDeclaration__Group__0__Impl8524); 
+             after(grammarAccess.getViewDeclarationAccess().getPercentSignKeyword_0()); 
 
             }
 
@@ -9358,21 +11698,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__1"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3341:1: rule__ViewDeclaration__Group__1 : rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4174:1: rule__ViewDeclaration__Group__1 : rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2 ;
     public final void rule__ViewDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3345:1: ( rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3346:2: rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4178:1: ( rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4179:2: rule__ViewDeclaration__Group__1__Impl rule__ViewDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__1__Impl_in_rule__ViewDeclaration__Group__16818);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__1__Impl_in_rule__ViewDeclaration__Group__18555);
             rule__ViewDeclaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__2_in_rule__ViewDeclaration__Group__16821);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__2_in_rule__ViewDeclaration__Group__18558);
             rule__ViewDeclaration__Group__2();
 
             state._fsp--;
@@ -9396,74 +11736,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__1__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3353:1: rule__ViewDeclaration__Group__1__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4186:1: rule__ViewDeclaration__Group__1__Impl : ( 'view' ) ;
     public final void rule__ViewDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3357:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3358:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4190:1: ( ( 'view' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4191:1: ( 'view' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3358:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3359:1: ( ( ruleWS ) ) ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4191:1: ( 'view' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4192:1: 'view'
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3359:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3360:1: ( ruleWS )
-            {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3361:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3361:3: ruleWS
-            {
-            pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__1__Impl6851);
-            ruleWS();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3364:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3365:1: ( ruleWS )*
-            {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_1()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3366:1: ( ruleWS )*
-            loop40:
-            do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
-
-                if ( ((LA40_0>=RULE_SP && LA40_0<=RULE_SL_COMMENT)) ) {
-                    alt40=1;
-                }
-
-
-                switch (alt40) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3366:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__1__Impl6864);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop40;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_1()); 
-
-            }
-
+             before(grammarAccess.getViewDeclarationAccess().getViewKeyword_1()); 
+            match(input,36,FOLLOW_36_in_rule__ViewDeclaration__Group__1__Impl8586); 
+             after(grammarAccess.getViewDeclarationAccess().getViewKeyword_1()); 
 
             }
 
@@ -9486,21 +11773,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3377:1: rule__ViewDeclaration__Group__2 : rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4205:1: rule__ViewDeclaration__Group__2 : rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3 ;
     public final void rule__ViewDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3381:1: ( rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3382:2: rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4209:1: ( rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4210:2: rule__ViewDeclaration__Group__2__Impl rule__ViewDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__2__Impl_in_rule__ViewDeclaration__Group__26897);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__2__Impl_in_rule__ViewDeclaration__Group__28617);
             rule__ViewDeclaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__3_in_rule__ViewDeclaration__Group__26900);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__3_in_rule__ViewDeclaration__Group__28620);
             rule__ViewDeclaration__Group__3();
 
             state._fsp--;
@@ -9524,31 +11811,74 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__2__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3389:1: rule__ViewDeclaration__Group__2__Impl : ( ( rule__ViewDeclaration__ViewIDAssignment_2 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4217:1: rule__ViewDeclaration__Group__2__Impl : ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) ;
     public final void rule__ViewDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3393:1: ( ( ( rule__ViewDeclaration__ViewIDAssignment_2 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3394:1: ( ( rule__ViewDeclaration__ViewIDAssignment_2 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4221:1: ( ( ( ( ruleWS ) ) ( ( ruleWS )* ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4222:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3394:1: ( ( rule__ViewDeclaration__ViewIDAssignment_2 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3395:1: ( rule__ViewDeclaration__ViewIDAssignment_2 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4222:1: ( ( ( ruleWS ) ) ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4223:1: ( ( ruleWS ) ) ( ( ruleWS )* )
             {
-             before(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_2()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3396:1: ( rule__ViewDeclaration__ViewIDAssignment_2 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3396:2: rule__ViewDeclaration__ViewIDAssignment_2
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4223:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4224:1: ( ruleWS )
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__ViewIDAssignment_2_in_rule__ViewDeclaration__Group__2__Impl6927);
-            rule__ViewDeclaration__ViewIDAssignment_2();
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4225:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4225:3: ruleWS
+            {
+            pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__2__Impl8650);
+            ruleWS();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_2()); 
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4228:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4229:1: ( ruleWS )*
+            {
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4230:1: ( ruleWS )*
+            loop50:
+            do {
+                int alt50=2;
+                int LA50_0 = input.LA(1);
+
+                if ( ((LA50_0>=RULE_SP && LA50_0<=RULE_SL_COMMENT)) ) {
+                    alt50=1;
+                }
+
+
+                switch (alt50) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4230:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__2__Impl8663);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop50;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2()); 
+
+            }
+
 
             }
 
@@ -9571,21 +11901,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3406:1: rule__ViewDeclaration__Group__3 : rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4241:1: rule__ViewDeclaration__Group__3 : rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4 ;
     public final void rule__ViewDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3410:1: ( rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3411:2: rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4245:1: ( rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4246:2: rule__ViewDeclaration__Group__3__Impl rule__ViewDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__3__Impl_in_rule__ViewDeclaration__Group__36957);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__3__Impl_in_rule__ViewDeclaration__Group__38696);
             rule__ViewDeclaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__4_in_rule__ViewDeclaration__Group__36960);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__4_in_rule__ViewDeclaration__Group__38699);
             rule__ViewDeclaration__Group__4();
 
             state._fsp--;
@@ -9609,49 +11939,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__3__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3418:1: rule__ViewDeclaration__Group__3__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4253:1: rule__ViewDeclaration__Group__3__Impl : ( ( rule__ViewDeclaration__ViewIDAssignment_3 ) ) ;
     public final void rule__ViewDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3422:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3423:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4257:1: ( ( ( rule__ViewDeclaration__ViewIDAssignment_3 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4258:1: ( ( rule__ViewDeclaration__ViewIDAssignment_3 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3423:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3424:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4258:1: ( ( rule__ViewDeclaration__ViewIDAssignment_3 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4259:1: ( rule__ViewDeclaration__ViewIDAssignment_3 )
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_3()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3425:1: ( ruleWS )*
-            loop41:
-            do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+             before(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_3()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4260:1: ( rule__ViewDeclaration__ViewIDAssignment_3 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4260:2: rule__ViewDeclaration__ViewIDAssignment_3
+            {
+            pushFollow(FOLLOW_rule__ViewDeclaration__ViewIDAssignment_3_in_rule__ViewDeclaration__Group__3__Impl8726);
+            rule__ViewDeclaration__ViewIDAssignment_3();
 
-                if ( ((LA41_0>=RULE_SP && LA41_0<=RULE_SL_COMMENT)) ) {
-                    alt41=1;
-                }
+            state._fsp--;
 
 
-                switch (alt41) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3425:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__3__Impl6988);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop41;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_3()); 
+             after(grammarAccess.getViewDeclarationAccess().getViewIDAssignment_3()); 
 
             }
 
@@ -9674,21 +11986,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__4"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3435:1: rule__ViewDeclaration__Group__4 : rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4270:1: rule__ViewDeclaration__Group__4 : rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5 ;
     public final void rule__ViewDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3439:1: ( rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3440:2: rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4274:1: ( rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4275:2: rule__ViewDeclaration__Group__4__Impl rule__ViewDeclaration__Group__5
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__4__Impl_in_rule__ViewDeclaration__Group__47019);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__4__Impl_in_rule__ViewDeclaration__Group__48756);
             rule__ViewDeclaration__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__5_in_rule__ViewDeclaration__Group__47022);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__5_in_rule__ViewDeclaration__Group__48759);
             rule__ViewDeclaration__Group__5();
 
             state._fsp--;
@@ -9712,21 +12024,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__4__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3447:1: rule__ViewDeclaration__Group__4__Impl : ( ':' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4282:1: rule__ViewDeclaration__Group__4__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3451:1: ( ( ':' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3452:1: ( ':' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4286:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4287:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3452:1: ( ':' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3453:1: ':'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4287:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4288:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getColonKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__ViewDeclaration__Group__4__Impl7050); 
-             after(grammarAccess.getViewDeclarationAccess().getColonKeyword_4()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_4()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4289:1: ( ruleWS )*
+            loop51:
+            do {
+                int alt51=2;
+                int LA51_0 = input.LA(1);
+
+                if ( ((LA51_0>=RULE_SP && LA51_0<=RULE_SL_COMMENT)) ) {
+                    alt51=1;
+                }
+
+
+                switch (alt51) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4289:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__4__Impl8787);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop51;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_4()); 
 
             }
 
@@ -9749,21 +12089,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__5"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3466:1: rule__ViewDeclaration__Group__5 : rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4299:1: rule__ViewDeclaration__Group__5 : rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6 ;
     public final void rule__ViewDeclaration__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3470:1: ( rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3471:2: rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4303:1: ( rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4304:2: rule__ViewDeclaration__Group__5__Impl rule__ViewDeclaration__Group__6
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__5__Impl_in_rule__ViewDeclaration__Group__57081);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__5__Impl_in_rule__ViewDeclaration__Group__58818);
             rule__ViewDeclaration__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__6_in_rule__ViewDeclaration__Group__57084);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__6_in_rule__ViewDeclaration__Group__58821);
             rule__ViewDeclaration__Group__6();
 
             state._fsp--;
@@ -9787,49 +12127,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__5__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3478:1: rule__ViewDeclaration__Group__5__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4311:1: rule__ViewDeclaration__Group__5__Impl : ( ':' ) ;
     public final void rule__ViewDeclaration__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3482:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3483:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4315:1: ( ( ':' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4316:1: ( ':' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3483:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3484:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4316:1: ( ':' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4317:1: ':'
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_5()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3485:1: ( ruleWS )*
-            loop42:
-            do {
-                int alt42=2;
-                int LA42_0 = input.LA(1);
-
-                if ( ((LA42_0>=RULE_SP && LA42_0<=RULE_SL_COMMENT)) ) {
-                    alt42=1;
-                }
-
-
-                switch (alt42) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3485:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__5__Impl7112);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop42;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_5()); 
+             before(grammarAccess.getViewDeclarationAccess().getColonKeyword_5()); 
+            match(input,15,FOLLOW_15_in_rule__ViewDeclaration__Group__5__Impl8849); 
+             after(grammarAccess.getViewDeclarationAccess().getColonKeyword_5()); 
 
             }
 
@@ -9852,21 +12164,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__6"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3495:1: rule__ViewDeclaration__Group__6 : rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4330:1: rule__ViewDeclaration__Group__6 : rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7 ;
     public final void rule__ViewDeclaration__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3499:1: ( rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3500:2: rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4334:1: ( rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4335:2: rule__ViewDeclaration__Group__6__Impl rule__ViewDeclaration__Group__7
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__6__Impl_in_rule__ViewDeclaration__Group__67143);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__6__Impl_in_rule__ViewDeclaration__Group__68880);
             rule__ViewDeclaration__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__7_in_rule__ViewDeclaration__Group__67146);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__7_in_rule__ViewDeclaration__Group__68883);
             rule__ViewDeclaration__Group__7();
 
             state._fsp--;
@@ -9890,31 +12202,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__6__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3507:1: rule__ViewDeclaration__Group__6__Impl : ( ( rule__ViewDeclaration__FromAssignment_6 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4342:1: rule__ViewDeclaration__Group__6__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3511:1: ( ( ( rule__ViewDeclaration__FromAssignment_6 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3512:1: ( ( rule__ViewDeclaration__FromAssignment_6 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4346:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4347:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3512:1: ( ( rule__ViewDeclaration__FromAssignment_6 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3513:1: ( rule__ViewDeclaration__FromAssignment_6 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4347:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4348:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getFromAssignment_6()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3514:1: ( rule__ViewDeclaration__FromAssignment_6 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3514:2: rule__ViewDeclaration__FromAssignment_6
-            {
-            pushFollow(FOLLOW_rule__ViewDeclaration__FromAssignment_6_in_rule__ViewDeclaration__Group__6__Impl7173);
-            rule__ViewDeclaration__FromAssignment_6();
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_6()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4349:1: ( ruleWS )*
+            loop52:
+            do {
+                int alt52=2;
+                int LA52_0 = input.LA(1);
 
-            state._fsp--;
+                if ( ((LA52_0>=RULE_SP && LA52_0<=RULE_SL_COMMENT)) ) {
+                    alt52=1;
+                }
 
 
-            }
+                switch (alt52) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4349:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__6__Impl8911);
+            	    ruleWS();
 
-             after(grammarAccess.getViewDeclarationAccess().getFromAssignment_6()); 
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop52;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_6()); 
 
             }
 
@@ -9937,21 +12267,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__7"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3524:1: rule__ViewDeclaration__Group__7 : rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4359:1: rule__ViewDeclaration__Group__7 : rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8 ;
     public final void rule__ViewDeclaration__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3528:1: ( rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3529:2: rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4363:1: ( rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4364:2: rule__ViewDeclaration__Group__7__Impl rule__ViewDeclaration__Group__8
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__7__Impl_in_rule__ViewDeclaration__Group__77203);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__7__Impl_in_rule__ViewDeclaration__Group__78942);
             rule__ViewDeclaration__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__8_in_rule__ViewDeclaration__Group__77206);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__8_in_rule__ViewDeclaration__Group__78945);
             rule__ViewDeclaration__Group__8();
 
             state._fsp--;
@@ -9975,49 +12305,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__7__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3536:1: rule__ViewDeclaration__Group__7__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4371:1: rule__ViewDeclaration__Group__7__Impl : ( ( rule__ViewDeclaration__FromAssignment_7 ) ) ;
     public final void rule__ViewDeclaration__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3540:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3541:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4375:1: ( ( ( rule__ViewDeclaration__FromAssignment_7 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4376:1: ( ( rule__ViewDeclaration__FromAssignment_7 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3541:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3542:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4376:1: ( ( rule__ViewDeclaration__FromAssignment_7 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4377:1: ( rule__ViewDeclaration__FromAssignment_7 )
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_7()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3543:1: ( ruleWS )*
-            loop43:
-            do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+             before(grammarAccess.getViewDeclarationAccess().getFromAssignment_7()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4378:1: ( rule__ViewDeclaration__FromAssignment_7 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4378:2: rule__ViewDeclaration__FromAssignment_7
+            {
+            pushFollow(FOLLOW_rule__ViewDeclaration__FromAssignment_7_in_rule__ViewDeclaration__Group__7__Impl8972);
+            rule__ViewDeclaration__FromAssignment_7();
 
-                if ( ((LA43_0>=RULE_SP && LA43_0<=RULE_SL_COMMENT)) ) {
-                    alt43=1;
-                }
+            state._fsp--;
 
 
-                switch (alt43) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3543:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__7__Impl7234);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop43;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_7()); 
+             after(grammarAccess.getViewDeclarationAccess().getFromAssignment_7()); 
 
             }
 
@@ -10040,21 +12352,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__8"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3553:1: rule__ViewDeclaration__Group__8 : rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4388:1: rule__ViewDeclaration__Group__8 : rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9 ;
     public final void rule__ViewDeclaration__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3557:1: ( rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3558:2: rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4392:1: ( rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4393:2: rule__ViewDeclaration__Group__8__Impl rule__ViewDeclaration__Group__9
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__8__Impl_in_rule__ViewDeclaration__Group__87265);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__8__Impl_in_rule__ViewDeclaration__Group__89002);
             rule__ViewDeclaration__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__9_in_rule__ViewDeclaration__Group__87268);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__9_in_rule__ViewDeclaration__Group__89005);
             rule__ViewDeclaration__Group__9();
 
             state._fsp--;
@@ -10078,21 +12390,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__8__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3565:1: rule__ViewDeclaration__Group__8__Impl : ( '->' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4400:1: rule__ViewDeclaration__Group__8__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3569:1: ( ( '->' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3570:1: ( '->' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4404:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4405:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3570:1: ( '->' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3571:1: '->'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4405:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4406:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_8()); 
-            match(input,16,FOLLOW_16_in_rule__ViewDeclaration__Group__8__Impl7296); 
-             after(grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_8()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_8()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4407:1: ( ruleWS )*
+            loop53:
+            do {
+                int alt53=2;
+                int LA53_0 = input.LA(1);
+
+                if ( ((LA53_0>=RULE_SP && LA53_0<=RULE_SL_COMMENT)) ) {
+                    alt53=1;
+                }
+
+
+                switch (alt53) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4407:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__8__Impl9033);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop53;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_8()); 
 
             }
 
@@ -10115,21 +12455,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__9"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3584:1: rule__ViewDeclaration__Group__9 : rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4417:1: rule__ViewDeclaration__Group__9 : rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10 ;
     public final void rule__ViewDeclaration__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3588:1: ( rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3589:2: rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4421:1: ( rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4422:2: rule__ViewDeclaration__Group__9__Impl rule__ViewDeclaration__Group__10
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__9__Impl_in_rule__ViewDeclaration__Group__97327);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__9__Impl_in_rule__ViewDeclaration__Group__99064);
             rule__ViewDeclaration__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__10_in_rule__ViewDeclaration__Group__97330);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__10_in_rule__ViewDeclaration__Group__99067);
             rule__ViewDeclaration__Group__10();
 
             state._fsp--;
@@ -10153,49 +12493,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__9__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3596:1: rule__ViewDeclaration__Group__9__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4429:1: rule__ViewDeclaration__Group__9__Impl : ( '->' ) ;
     public final void rule__ViewDeclaration__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3600:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3601:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4433:1: ( ( '->' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4434:1: ( '->' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3601:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3602:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4434:1: ( '->' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4435:1: '->'
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_9()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3603:1: ( ruleWS )*
-            loop44:
-            do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
-
-                if ( ((LA44_0>=RULE_SP && LA44_0<=RULE_SL_COMMENT)) ) {
-                    alt44=1;
-                }
-
-
-                switch (alt44) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3603:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__9__Impl7358);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop44;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_9()); 
+             before(grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_9()); 
+            match(input,17,FOLLOW_17_in_rule__ViewDeclaration__Group__9__Impl9095); 
+             after(grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_9()); 
 
             }
 
@@ -10218,21 +12530,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__10"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3613:1: rule__ViewDeclaration__Group__10 : rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4448:1: rule__ViewDeclaration__Group__10 : rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11 ;
     public final void rule__ViewDeclaration__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3617:1: ( rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3618:2: rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4452:1: ( rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4453:2: rule__ViewDeclaration__Group__10__Impl rule__ViewDeclaration__Group__11
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__10__Impl_in_rule__ViewDeclaration__Group__107389);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__10__Impl_in_rule__ViewDeclaration__Group__109126);
             rule__ViewDeclaration__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__11_in_rule__ViewDeclaration__Group__107392);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__11_in_rule__ViewDeclaration__Group__109129);
             rule__ViewDeclaration__Group__11();
 
             state._fsp--;
@@ -10256,31 +12568,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__10__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3625:1: rule__ViewDeclaration__Group__10__Impl : ( ( rule__ViewDeclaration__ToAssignment_10 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4460:1: rule__ViewDeclaration__Group__10__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3629:1: ( ( ( rule__ViewDeclaration__ToAssignment_10 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3630:1: ( ( rule__ViewDeclaration__ToAssignment_10 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4464:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4465:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3630:1: ( ( rule__ViewDeclaration__ToAssignment_10 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3631:1: ( rule__ViewDeclaration__ToAssignment_10 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4465:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4466:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getToAssignment_10()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3632:1: ( rule__ViewDeclaration__ToAssignment_10 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3632:2: rule__ViewDeclaration__ToAssignment_10
-            {
-            pushFollow(FOLLOW_rule__ViewDeclaration__ToAssignment_10_in_rule__ViewDeclaration__Group__10__Impl7419);
-            rule__ViewDeclaration__ToAssignment_10();
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_10()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4467:1: ( ruleWS )*
+            loop54:
+            do {
+                int alt54=2;
+                int LA54_0 = input.LA(1);
 
-            state._fsp--;
+                if ( ((LA54_0>=RULE_SP && LA54_0<=RULE_SL_COMMENT)) ) {
+                    alt54=1;
+                }
 
 
-            }
+                switch (alt54) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4467:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__10__Impl9157);
+            	    ruleWS();
 
-             after(grammarAccess.getViewDeclarationAccess().getToAssignment_10()); 
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop54;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_10()); 
 
             }
 
@@ -10303,21 +12633,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__11"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3642:1: rule__ViewDeclaration__Group__11 : rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4477:1: rule__ViewDeclaration__Group__11 : rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12 ;
     public final void rule__ViewDeclaration__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3646:1: ( rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3647:2: rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4481:1: ( rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4482:2: rule__ViewDeclaration__Group__11__Impl rule__ViewDeclaration__Group__12
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__11__Impl_in_rule__ViewDeclaration__Group__117449);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__11__Impl_in_rule__ViewDeclaration__Group__119188);
             rule__ViewDeclaration__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__12_in_rule__ViewDeclaration__Group__117452);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__12_in_rule__ViewDeclaration__Group__119191);
             rule__ViewDeclaration__Group__12();
 
             state._fsp--;
@@ -10341,49 +12671,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__11__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3654:1: rule__ViewDeclaration__Group__11__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4489:1: rule__ViewDeclaration__Group__11__Impl : ( ( rule__ViewDeclaration__ToAssignment_11 ) ) ;
     public final void rule__ViewDeclaration__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3658:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3659:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4493:1: ( ( ( rule__ViewDeclaration__ToAssignment_11 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4494:1: ( ( rule__ViewDeclaration__ToAssignment_11 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3659:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3660:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4494:1: ( ( rule__ViewDeclaration__ToAssignment_11 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4495:1: ( rule__ViewDeclaration__ToAssignment_11 )
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_11()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3661:1: ( ruleWS )*
-            loop45:
-            do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+             before(grammarAccess.getViewDeclarationAccess().getToAssignment_11()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4496:1: ( rule__ViewDeclaration__ToAssignment_11 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4496:2: rule__ViewDeclaration__ToAssignment_11
+            {
+            pushFollow(FOLLOW_rule__ViewDeclaration__ToAssignment_11_in_rule__ViewDeclaration__Group__11__Impl9218);
+            rule__ViewDeclaration__ToAssignment_11();
 
-                if ( ((LA45_0>=RULE_SP && LA45_0<=RULE_SL_COMMENT)) ) {
-                    alt45=1;
-                }
+            state._fsp--;
 
 
-                switch (alt45) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3661:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__11__Impl7480);
-            	    ruleWS();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop45;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_11()); 
+             after(grammarAccess.getViewDeclarationAccess().getToAssignment_11()); 
 
             }
 
@@ -10406,21 +12718,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__12"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3671:1: rule__ViewDeclaration__Group__12 : rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4506:1: rule__ViewDeclaration__Group__12 : rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13 ;
     public final void rule__ViewDeclaration__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3675:1: ( rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3676:2: rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4510:1: ( rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4511:2: rule__ViewDeclaration__Group__12__Impl rule__ViewDeclaration__Group__13
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__12__Impl_in_rule__ViewDeclaration__Group__127511);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__12__Impl_in_rule__ViewDeclaration__Group__129248);
             rule__ViewDeclaration__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__13_in_rule__ViewDeclaration__Group__127514);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__13_in_rule__ViewDeclaration__Group__129251);
             rule__ViewDeclaration__Group__13();
 
             state._fsp--;
@@ -10444,21 +12756,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__12__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3683:1: rule__ViewDeclaration__Group__12__Impl : ( '=' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4518:1: rule__ViewDeclaration__Group__12__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3687:1: ( ( '=' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3688:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4522:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4523:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3688:1: ( '=' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3689:1: '='
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4523:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4524:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_12()); 
-            match(input,14,FOLLOW_14_in_rule__ViewDeclaration__Group__12__Impl7542); 
-             after(grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_12()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4525:1: ( ruleWS )*
+            loop55:
+            do {
+                int alt55=2;
+                int LA55_0 = input.LA(1);
+
+                if ( ((LA55_0>=RULE_SP && LA55_0<=RULE_SL_COMMENT)) ) {
+                    alt55=1;
+                }
+
+
+                switch (alt55) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4525:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__12__Impl9279);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop55;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12()); 
 
             }
 
@@ -10481,21 +12821,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__13"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3702:1: rule__ViewDeclaration__Group__13 : rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4535:1: rule__ViewDeclaration__Group__13 : rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14 ;
     public final void rule__ViewDeclaration__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3706:1: ( rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3707:2: rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4539:1: ( rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4540:2: rule__ViewDeclaration__Group__13__Impl rule__ViewDeclaration__Group__14
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__13__Impl_in_rule__ViewDeclaration__Group__137573);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__13__Impl_in_rule__ViewDeclaration__Group__139310);
             rule__ViewDeclaration__Group__13__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__14_in_rule__ViewDeclaration__Group__137576);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__14_in_rule__ViewDeclaration__Group__139313);
             rule__ViewDeclaration__Group__14();
 
             state._fsp--;
@@ -10519,49 +12859,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__13__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3714:1: rule__ViewDeclaration__Group__13__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4547:1: rule__ViewDeclaration__Group__13__Impl : ( '=' ) ;
     public final void rule__ViewDeclaration__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3718:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3719:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4551:1: ( ( '=' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4552:1: ( '=' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3719:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3720:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4552:1: ( '=' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4553:1: '='
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_13()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3721:1: ( ruleWS )*
-            loop46:
-            do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
-
-                if ( ((LA46_0>=RULE_SP && LA46_0<=RULE_SL_COMMENT)) ) {
-                    alt46=1;
-                }
-
-
-                switch (alt46) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3721:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__13__Impl7604);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop46;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_13()); 
+             before(grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_13()); 
+            match(input,16,FOLLOW_16_in_rule__ViewDeclaration__Group__13__Impl9341); 
+             after(grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_13()); 
 
             }
 
@@ -10584,21 +12896,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__14"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3731:1: rule__ViewDeclaration__Group__14 : rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4566:1: rule__ViewDeclaration__Group__14 : rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15 ;
     public final void rule__ViewDeclaration__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3735:1: ( rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3736:2: rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4570:1: ( rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4571:2: rule__ViewDeclaration__Group__14__Impl rule__ViewDeclaration__Group__15
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__14__Impl_in_rule__ViewDeclaration__Group__147635);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__14__Impl_in_rule__ViewDeclaration__Group__149372);
             rule__ViewDeclaration__Group__14__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__15_in_rule__ViewDeclaration__Group__147638);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__15_in_rule__ViewDeclaration__Group__149375);
             rule__ViewDeclaration__Group__15();
 
             state._fsp--;
@@ -10622,21 +12934,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__14__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3743:1: rule__ViewDeclaration__Group__14__Impl : ( '{' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4578:1: rule__ViewDeclaration__Group__14__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3747:1: ( ( '{' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3748:1: ( '{' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4582:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4583:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3748:1: ( '{' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3749:1: '{'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4583:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4584:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getLeftCurlyBracketKeyword_14()); 
-            match(input,33,FOLLOW_33_in_rule__ViewDeclaration__Group__14__Impl7666); 
-             after(grammarAccess.getViewDeclarationAccess().getLeftCurlyBracketKeyword_14()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_14()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4585:1: ( ruleWS )*
+            loop56:
+            do {
+                int alt56=2;
+                int LA56_0 = input.LA(1);
+
+                if ( ((LA56_0>=RULE_SP && LA56_0<=RULE_SL_COMMENT)) ) {
+                    alt56=1;
+                }
+
+
+                switch (alt56) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4585:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__14__Impl9403);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop56;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_14()); 
 
             }
 
@@ -10659,21 +12999,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__15"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3762:1: rule__ViewDeclaration__Group__15 : rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4595:1: rule__ViewDeclaration__Group__15 : rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16 ;
     public final void rule__ViewDeclaration__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3766:1: ( rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3767:2: rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4599:1: ( rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4600:2: rule__ViewDeclaration__Group__15__Impl rule__ViewDeclaration__Group__16
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__15__Impl_in_rule__ViewDeclaration__Group__157697);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__15__Impl_in_rule__ViewDeclaration__Group__159434);
             rule__ViewDeclaration__Group__15__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__16_in_rule__ViewDeclaration__Group__157700);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__16_in_rule__ViewDeclaration__Group__159437);
             rule__ViewDeclaration__Group__16();
 
             state._fsp--;
@@ -10697,49 +13037,31 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__15__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3774:1: rule__ViewDeclaration__Group__15__Impl : ( ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4607:1: rule__ViewDeclaration__Group__15__Impl : ( ( rule__ViewDeclaration__ViewDefsAssignment_15 ) ) ;
     public final void rule__ViewDeclaration__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3778:1: ( ( ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3779:1: ( ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4611:1: ( ( ( rule__ViewDeclaration__ViewDefsAssignment_15 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4612:1: ( ( rule__ViewDeclaration__ViewDefsAssignment_15 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3779:1: ( ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3780:1: ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4612:1: ( ( rule__ViewDeclaration__ViewDefsAssignment_15 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4613:1: ( rule__ViewDeclaration__ViewDefsAssignment_15 )
             {
-             before(grammarAccess.getViewDeclarationAccess().getViewDefinitionsAssignment_15()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3781:1: ( rule__ViewDeclaration__ViewDefinitionsAssignment_15 )*
-            loop47:
-            do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+             before(grammarAccess.getViewDeclarationAccess().getViewDefsAssignment_15()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4614:1: ( rule__ViewDeclaration__ViewDefsAssignment_15 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4614:2: rule__ViewDeclaration__ViewDefsAssignment_15
+            {
+            pushFollow(FOLLOW_rule__ViewDeclaration__ViewDefsAssignment_15_in_rule__ViewDeclaration__Group__15__Impl9464);
+            rule__ViewDeclaration__ViewDefsAssignment_15();
 
-                if ( ((LA47_0>=RULE_SP && LA47_0<=RULE_INT)||(LA47_0>=20 && LA47_0<=25)||LA47_0==31||(LA47_0>=35 && LA47_0<=36)) ) {
-                    alt47=1;
-                }
+            state._fsp--;
 
 
-                switch (alt47) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3781:2: rule__ViewDeclaration__ViewDefinitionsAssignment_15
-            	    {
-            	    pushFollow(FOLLOW_rule__ViewDeclaration__ViewDefinitionsAssignment_15_in_rule__ViewDeclaration__Group__15__Impl7727);
-            	    rule__ViewDeclaration__ViewDefinitionsAssignment_15();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop47;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getViewDefinitionsAssignment_15()); 
+             after(grammarAccess.getViewDeclarationAccess().getViewDefsAssignment_15()); 
 
             }
 
@@ -10762,21 +13084,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__16"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3791:1: rule__ViewDeclaration__Group__16 : rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4624:1: rule__ViewDeclaration__Group__16 : rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17 ;
     public final void rule__ViewDeclaration__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3795:1: ( rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3796:2: rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4628:1: ( rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4629:2: rule__ViewDeclaration__Group__16__Impl rule__ViewDeclaration__Group__17
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__16__Impl_in_rule__ViewDeclaration__Group__167758);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__16__Impl_in_rule__ViewDeclaration__Group__169494);
             rule__ViewDeclaration__Group__16__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__17_in_rule__ViewDeclaration__Group__167761);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__17_in_rule__ViewDeclaration__Group__169497);
             rule__ViewDeclaration__Group__17();
 
             state._fsp--;
@@ -10800,21 +13122,49 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__16__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3803:1: rule__ViewDeclaration__Group__16__Impl : ( '}' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4636:1: rule__ViewDeclaration__Group__16__Impl : ( ( ruleWS )* ) ;
     public final void rule__ViewDeclaration__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3807:1: ( ( '}' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3808:1: ( '}' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4640:1: ( ( ( ruleWS )* ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4641:1: ( ( ruleWS )* )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3808:1: ( '}' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3809:1: '}'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4641:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4642:1: ( ruleWS )*
             {
-             before(grammarAccess.getViewDeclarationAccess().getRightCurlyBracketKeyword_16()); 
-            match(input,34,FOLLOW_34_in_rule__ViewDeclaration__Group__16__Impl7789); 
-             after(grammarAccess.getViewDeclarationAccess().getRightCurlyBracketKeyword_16()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_16()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4643:1: ( ruleWS )*
+            loop57:
+            do {
+                int alt57=2;
+                int LA57_0 = input.LA(1);
+
+                if ( ((LA57_0>=RULE_SP && LA57_0<=RULE_SL_COMMENT)) ) {
+                    alt57=1;
+                }
+
+
+                switch (alt57) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4643:3: ruleWS
+            	    {
+            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__16__Impl9525);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop57;
+                }
+            } while (true);
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_16()); 
 
             }
 
@@ -10837,21 +13187,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__17"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3822:1: rule__ViewDeclaration__Group__17 : rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4653:1: rule__ViewDeclaration__Group__17 : rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18 ;
     public final void rule__ViewDeclaration__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3826:1: ( rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3827:2: rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4657:1: ( rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4658:2: rule__ViewDeclaration__Group__17__Impl rule__ViewDeclaration__Group__18
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__17__Impl_in_rule__ViewDeclaration__Group__177820);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__17__Impl_in_rule__ViewDeclaration__Group__179556);
             rule__ViewDeclaration__Group__17__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__18_in_rule__ViewDeclaration__Group__177823);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__18_in_rule__ViewDeclaration__Group__179559);
             rule__ViewDeclaration__Group__18();
 
             state._fsp--;
@@ -10875,49 +13225,21 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__17__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3834:1: rule__ViewDeclaration__Group__17__Impl : ( ( ruleWS )* ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4665:1: rule__ViewDeclaration__Group__17__Impl : ( '.' ) ;
     public final void rule__ViewDeclaration__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3838:1: ( ( ( ruleWS )* ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3839:1: ( ( ruleWS )* )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4669:1: ( ( '.' ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4670:1: ( '.' )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3839:1: ( ( ruleWS )* )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3840:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4670:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4671:1: '.'
             {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_17()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3841:1: ( ruleWS )*
-            loop48:
-            do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
-
-                if ( ((LA48_0>=RULE_SP && LA48_0<=RULE_SL_COMMENT)) ) {
-                    alt48=1;
-                }
-
-
-                switch (alt48) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3841:3: ruleWS
-            	    {
-            	    pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__17__Impl7851);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop48;
-                }
-            } while (true);
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_17()); 
+             before(grammarAccess.getViewDeclarationAccess().getFullStopKeyword_17()); 
+            match(input,14,FOLLOW_14_in_rule__ViewDeclaration__Group__17__Impl9587); 
+             after(grammarAccess.getViewDeclarationAccess().getFullStopKeyword_17()); 
 
             }
 
@@ -10940,22 +13262,17 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__18"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3851:1: rule__ViewDeclaration__Group__18 : rule__ViewDeclaration__Group__18__Impl rule__ViewDeclaration__Group__19 ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4684:1: rule__ViewDeclaration__Group__18 : rule__ViewDeclaration__Group__18__Impl ;
     public final void rule__ViewDeclaration__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3855:1: ( rule__ViewDeclaration__Group__18__Impl rule__ViewDeclaration__Group__19 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3856:2: rule__ViewDeclaration__Group__18__Impl rule__ViewDeclaration__Group__19
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4688:1: ( rule__ViewDeclaration__Group__18__Impl )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4689:2: rule__ViewDeclaration__Group__18__Impl
             {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__18__Impl_in_rule__ViewDeclaration__Group__187882);
+            pushFollow(FOLLOW_rule__ViewDeclaration__Group__18__Impl_in_rule__ViewDeclaration__Group__189618);
             rule__ViewDeclaration__Group__18__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__19_in_rule__ViewDeclaration__Group__187885);
-            rule__ViewDeclaration__Group__19();
 
             state._fsp--;
 
@@ -10978,21 +13295,25 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ViewDeclaration__Group__18__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3863:1: rule__ViewDeclaration__Group__18__Impl : ( '.' ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4695:1: rule__ViewDeclaration__Group__18__Impl : ( ruleWS ) ;
     public final void rule__ViewDeclaration__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3867:1: ( ( '.' ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3868:1: ( '.' )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4699:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4700:1: ( ruleWS )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3868:1: ( '.' )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3869:1: '.'
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4700:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4701:1: ruleWS
             {
-             before(grammarAccess.getViewDeclarationAccess().getFullStopKeyword_18()); 
-            match(input,12,FOLLOW_12_in_rule__ViewDeclaration__Group__18__Impl7913); 
-             after(grammarAccess.getViewDeclarationAccess().getFullStopKeyword_18()); 
+             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_18()); 
+            pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__18__Impl9645);
+            ruleWS();
+
+            state._fsp--;
+
+             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_18()); 
 
             }
 
@@ -11014,98 +13335,24 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ViewDeclaration__Group__18__Impl"
 
 
-    // $ANTLR start "rule__ViewDeclaration__Group__19"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3882:1: rule__ViewDeclaration__Group__19 : rule__ViewDeclaration__Group__19__Impl ;
-    public final void rule__ViewDeclaration__Group__19() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3886:1: ( rule__ViewDeclaration__Group__19__Impl )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3887:2: rule__ViewDeclaration__Group__19__Impl
-            {
-            pushFollow(FOLLOW_rule__ViewDeclaration__Group__19__Impl_in_rule__ViewDeclaration__Group__197944);
-            rule__ViewDeclaration__Group__19__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ViewDeclaration__Group__19"
-
-
-    // $ANTLR start "rule__ViewDeclaration__Group__19__Impl"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3893:1: rule__ViewDeclaration__Group__19__Impl : ( ruleWS ) ;
-    public final void rule__ViewDeclaration__Group__19__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3897:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3898:1: ( ruleWS )
-            {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3898:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3899:1: ruleWS
-            {
-             before(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_19()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__19__Impl7971);
-            ruleWS();
-
-            state._fsp--;
-
-             after(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_19()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ViewDeclaration__Group__19__Impl"
-
-
     // $ANTLR start "rule__Model__DeclarationsAssignment"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3951:1: rule__Model__DeclarationsAssignment : ( ( rule__Model__DeclarationsAlternatives_0 ) ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4751:1: rule__Model__DeclarationsAssignment : ( ( rule__Model__DeclarationsAlternatives_0 ) ) ;
     public final void rule__Model__DeclarationsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3955:1: ( ( ( rule__Model__DeclarationsAlternatives_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3956:1: ( ( rule__Model__DeclarationsAlternatives_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4755:1: ( ( ( rule__Model__DeclarationsAlternatives_0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4756:1: ( ( rule__Model__DeclarationsAlternatives_0 ) )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3956:1: ( ( rule__Model__DeclarationsAlternatives_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3957:1: ( rule__Model__DeclarationsAlternatives_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4756:1: ( ( rule__Model__DeclarationsAlternatives_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4757:1: ( rule__Model__DeclarationsAlternatives_0 )
             {
              before(grammarAccess.getModelAccess().getDeclarationsAlternatives_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3958:1: ( rule__Model__DeclarationsAlternatives_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3958:2: rule__Model__DeclarationsAlternatives_0
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4758:1: ( rule__Model__DeclarationsAlternatives_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4758:2: rule__Model__DeclarationsAlternatives_0
             {
-            pushFollow(FOLLOW_rule__Model__DeclarationsAlternatives_0_in_rule__Model__DeclarationsAssignment8045);
+            pushFollow(FOLLOW_rule__Model__DeclarationsAlternatives_0_in_rule__Model__DeclarationsAssignment9717);
             rule__Model__DeclarationsAlternatives_0();
 
             state._fsp--;
@@ -11136,20 +13383,20 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__JUSTSPACE__JAssignment"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3967:1: rule__JUSTSPACE__JAssignment : ( ruleWS ) ;
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4767:1: rule__JUSTSPACE__JAssignment : ( ruleWS ) ;
     public final void rule__JUSTSPACE__JAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3971:1: ( ( ruleWS ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3972:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4771:1: ( ( ruleWS ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4772:1: ( ruleWS )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3972:1: ( ruleWS )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3973:1: ruleWS
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4772:1: ( ruleWS )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4773:1: ruleWS
             {
              before(grammarAccess.getJUSTSPACEAccess().getJWSParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleWS_in_rule__JUSTSPACE__JAssignment8078);
+            pushFollow(FOLLOW_ruleWS_in_rule__JUSTSPACE__JAssignment9750);
             ruleWS();
 
             state._fsp--;
@@ -11176,22 +13423,22 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__JUSTSPACE__JAssignment"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__NameAssignment_2_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3982:1: rule__NamespaceDeclaration__NameAssignment_2_0 : ( RULE_CID ) ;
-    public final void rule__NamespaceDeclaration__NameAssignment_2_0() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__NameAssignment_3_0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4782:1: rule__NamespaceDeclaration__NameAssignment_3_0 : ( RULE_CID ) ;
+    public final void rule__NamespaceDeclaration__NameAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3986:1: ( ( RULE_CID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3987:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4786:1: ( ( RULE_CID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4787:1: ( RULE_CID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3987:1: ( RULE_CID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3988:1: RULE_CID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4787:1: ( RULE_CID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4788:1: RULE_CID
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getNameCIDTerminalRuleCall_2_0_0()); 
-            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NamespaceDeclaration__NameAssignment_2_08109); 
-             after(grammarAccess.getNamespaceDeclarationAccess().getNameCIDTerminalRuleCall_2_0_0()); 
+             before(grammarAccess.getNamespaceDeclarationAccess().getNameCIDTerminalRuleCall_3_0_0()); 
+            match(input,RULE_CID,FOLLOW_RULE_CID_in_rule__NamespaceDeclaration__NameAssignment_3_09781); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getNameCIDTerminalRuleCall_3_0_0()); 
 
             }
 
@@ -11210,29 +13457,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__NameAssignment_2_0"
+    // $ANTLR end "rule__NamespaceDeclaration__NameAssignment_3_0"
 
 
-    // $ANTLR start "rule__NamespaceDeclaration__UriAssignment_3"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:3997:1: rule__NamespaceDeclaration__UriAssignment_3 : ( ruleURISTRING ) ;
-    public final void rule__NamespaceDeclaration__UriAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__NamespaceDeclaration__UriAssignment_4"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4797:1: rule__NamespaceDeclaration__UriAssignment_4 : ( ruleURISTRING ) ;
+    public final void rule__NamespaceDeclaration__UriAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4001:1: ( ( ruleURISTRING ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4002:1: ( ruleURISTRING )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4801:1: ( ( ruleURISTRING ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4802:1: ( ruleURISTRING )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4002:1: ( ruleURISTRING )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4003:1: ruleURISTRING
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4802:1: ( ruleURISTRING )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4803:1: ruleURISTRING
             {
-             before(grammarAccess.getNamespaceDeclarationAccess().getUriURISTRINGParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleURISTRING_in_rule__NamespaceDeclaration__UriAssignment_38140);
+             before(grammarAccess.getNamespaceDeclarationAccess().getUriURISTRINGParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleURISTRING_in_rule__NamespaceDeclaration__UriAssignment_49812);
             ruleURISTRING();
 
             state._fsp--;
 
-             after(grammarAccess.getNamespaceDeclarationAccess().getUriURISTRINGParserRuleCall_3_0()); 
+             after(grammarAccess.getNamespaceDeclarationAccess().getUriURISTRINGParserRuleCall_4_0()); 
 
             }
 
@@ -11251,29 +13498,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NamespaceDeclaration__UriAssignment_3"
+    // $ANTLR end "rule__NamespaceDeclaration__UriAssignment_4"
 
 
-    // $ANTLR start "rule__ReadDeclaration__FileAssignment_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4012:1: rule__ReadDeclaration__FileAssignment_2 : ( ruleURISTRING ) ;
-    public final void rule__ReadDeclaration__FileAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ReadDeclaration__FileAssignment_3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4812:1: rule__ReadDeclaration__FileAssignment_3 : ( ruleURISTRING ) ;
+    public final void rule__ReadDeclaration__FileAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4016:1: ( ( ruleURISTRING ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4017:1: ( ruleURISTRING )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4816:1: ( ( ruleURISTRING ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4817:1: ( ruleURISTRING )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4017:1: ( ruleURISTRING )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4018:1: ruleURISTRING
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4817:1: ( ruleURISTRING )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4818:1: ruleURISTRING
             {
-             before(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleURISTRING_in_rule__ReadDeclaration__FileAssignment_28171);
+             before(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleURISTRING_in_rule__ReadDeclaration__FileAssignment_39843);
             ruleURISTRING();
 
             state._fsp--;
 
-             after(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_2_0()); 
+             after(grammarAccess.getReadDeclarationAccess().getFileURISTRINGParserRuleCall_3_0()); 
 
             }
 
@@ -11292,29 +13539,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ReadDeclaration__FileAssignment_2"
+    // $ANTLR end "rule__ReadDeclaration__FileAssignment_3"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__SigNameAssignment_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4027:1: rule__SignatureDeclaration__SigNameAssignment_2 : ( ruleGID ) ;
-    public final void rule__SignatureDeclaration__SigNameAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__SignatureDeclaration__SigNameAssignment_3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4827:1: rule__SignatureDeclaration__SigNameAssignment_3 : ( ruleGID ) ;
+    public final void rule__SignatureDeclaration__SigNameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4031:1: ( ( ruleGID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4032:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4831:1: ( ( ruleGID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4832:1: ( ruleGID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4032:1: ( ruleGID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4033:1: ruleGID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4832:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4833:1: ruleGID
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleGID_in_rule__SignatureDeclaration__SigNameAssignment_28202);
+             before(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleGID_in_rule__SignatureDeclaration__SigNameAssignment_39874);
             ruleGID();
 
             state._fsp--;
 
-             after(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_2_0()); 
+             after(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_3_0()); 
 
             }
 
@@ -11333,29 +13580,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SignatureDeclaration__SigNameAssignment_2"
+    // $ANTLR end "rule__SignatureDeclaration__SigNameAssignment_3"
 
 
-    // $ANTLR start "rule__SignatureDeclaration__SigDefinitionsAssignment_7"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4042:1: rule__SignatureDeclaration__SigDefinitionsAssignment_7 : ( rulesigDefinitions ) ;
-    public final void rule__SignatureDeclaration__SigDefinitionsAssignment_7() throws RecognitionException {
+    // $ANTLR start "rule__SignatureDeclaration__DefsAssignment_7"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4842:1: rule__SignatureDeclaration__DefsAssignment_7 : ( rulesigDefinitions ) ;
+    public final void rule__SignatureDeclaration__DefsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4046:1: ( ( rulesigDefinitions ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4047:1: ( rulesigDefinitions )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4846:1: ( ( rulesigDefinitions ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4847:1: ( rulesigDefinitions )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4047:1: ( rulesigDefinitions )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4048:1: rulesigDefinitions
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4847:1: ( rulesigDefinitions )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4848:1: rulesigDefinitions
             {
-             before(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsSigDefinitionsParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_rulesigDefinitions_in_rule__SignatureDeclaration__SigDefinitionsAssignment_78233);
+             before(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_7_0()); 
+            pushFollow(FOLLOW_rulesigDefinitions_in_rule__SignatureDeclaration__DefsAssignment_79905);
             rulesigDefinitions();
 
             state._fsp--;
 
-             after(grammarAccess.getSignatureDeclarationAccess().getSigDefinitionsSigDefinitionsParserRuleCall_7_0()); 
+             after(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_7_0()); 
 
             }
 
@@ -11374,29 +13621,111 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SignatureDeclaration__SigDefinitionsAssignment_7"
+    // $ANTLR end "rule__SignatureDeclaration__DefsAssignment_7"
 
 
-    // $ANTLR start "rule__SigDefinitions__SymbNameAssignment_0_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4057:1: rule__SigDefinitions__SymbNameAssignment_0_0 : ( ruleGID ) ;
-    public final void rule__SigDefinitions__SymbNameAssignment_0_0() throws RecognitionException {
+    // $ANTLR start "rule__SigDefinitions__ConsAssignment_2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4857:1: rule__SigDefinitions__ConsAssignment_2 : ( rulesigConstruct ) ;
+    public final void rule__SigDefinitions__ConsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4061:1: ( ( ruleGID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4062:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4861:1: ( ( rulesigConstruct ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4862:1: ( rulesigConstruct )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4062:1: ( ruleGID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4063:1: ruleGID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4862:1: ( rulesigConstruct )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4863:1: rulesigConstruct
             {
-             before(grammarAccess.getSigDefinitionsAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
-            pushFollow(FOLLOW_ruleGID_in_rule__SigDefinitions__SymbNameAssignment_0_08264);
+             before(grammarAccess.getSigDefinitionsAccess().getConsSigConstructParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_rulesigConstruct_in_rule__SigDefinitions__ConsAssignment_29936);
+            rulesigConstruct();
+
+            state._fsp--;
+
+             after(grammarAccess.getSigDefinitionsAccess().getConsSigConstructParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__ConsAssignment_2"
+
+
+    // $ANTLR start "rule__SigDefinitions__FconsAssignment_3_2"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4872:1: rule__SigDefinitions__FconsAssignment_3_2 : ( rulesigConstruct ) ;
+    public final void rule__SigDefinitions__FconsAssignment_3_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4876:1: ( ( rulesigConstruct ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4877:1: ( rulesigConstruct )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4877:1: ( rulesigConstruct )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4878:1: rulesigConstruct
+            {
+             before(grammarAccess.getSigDefinitionsAccess().getFconsSigConstructParserRuleCall_3_2_0()); 
+            pushFollow(FOLLOW_rulesigConstruct_in_rule__SigDefinitions__FconsAssignment_3_29967);
+            rulesigConstruct();
+
+            state._fsp--;
+
+             after(grammarAccess.getSigDefinitionsAccess().getFconsSigConstructParserRuleCall_3_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigDefinitions__FconsAssignment_3_2"
+
+
+    // $ANTLR start "rule__SigConstruct__SymbNameAssignment_0_0"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4887:1: rule__SigConstruct__SymbNameAssignment_0_0 : ( ruleGID ) ;
+    public final void rule__SigConstruct__SymbNameAssignment_0_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4891:1: ( ( ruleGID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4892:1: ( ruleGID )
+            {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4892:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4893:1: ruleGID
+            {
+             before(grammarAccess.getSigConstructAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
+            pushFollow(FOLLOW_ruleGID_in_rule__SigConstruct__SymbNameAssignment_0_09998);
             ruleGID();
 
             state._fsp--;
 
-             after(grammarAccess.getSigDefinitionsAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
+             after(grammarAccess.getSigConstructAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
 
             }
 
@@ -11415,29 +13744,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__SymbNameAssignment_0_0"
+    // $ANTLR end "rule__SigConstruct__SymbNameAssignment_0_0"
 
 
-    // $ANTLR start "rule__SigDefinitions__NamespaceAssignment_1_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4072:1: rule__SigDefinitions__NamespaceAssignment_1_2 : ( ruleNAMESPACE ) ;
-    public final void rule__SigDefinitions__NamespaceAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__SigConstruct__NamespaceAssignment_1_3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4902:1: rule__SigConstruct__NamespaceAssignment_1_3 : ( ruleNAMESPACE ) ;
+    public final void rule__SigConstruct__NamespaceAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4076:1: ( ( ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4077:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4906:1: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4907:1: ( ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4077:1: ( ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4078:1: ruleNAMESPACE
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4907:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4908:1: ruleNAMESPACE
             {
-             before(grammarAccess.getSigDefinitionsAccess().getNamespaceNAMESPACEParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__SigDefinitions__NamespaceAssignment_1_28295);
+             before(grammarAccess.getSigConstructAccess().getNamespaceNAMESPACEParserRuleCall_1_3_0()); 
+            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__SigConstruct__NamespaceAssignment_1_310029);
             ruleNAMESPACE();
 
             state._fsp--;
 
-             after(grammarAccess.getSigDefinitionsAccess().getNamespaceNAMESPACEParserRuleCall_1_2_0()); 
+             after(grammarAccess.getSigConstructAccess().getNamespaceNAMESPACEParserRuleCall_1_3_0()); 
 
             }
 
@@ -11456,29 +13785,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__NamespaceAssignment_1_2"
+    // $ANTLR end "rule__SigConstruct__NamespaceAssignment_1_3"
 
 
-    // $ANTLR start "rule__SigDefinitions__StructNameAssignment_2_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4087:1: rule__SigDefinitions__StructNameAssignment_2_2 : ( ruleGID ) ;
-    public final void rule__SigDefinitions__StructNameAssignment_2_2() throws RecognitionException {
+    // $ANTLR start "rule__SigConstruct__StructNameAssignment_2_3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4917:1: rule__SigConstruct__StructNameAssignment_2_3 : ( ruleGID ) ;
+    public final void rule__SigConstruct__StructNameAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4091:1: ( ( ruleGID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4092:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4921:1: ( ( ruleGID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4922:1: ( ruleGID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4092:1: ( ruleGID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4093:1: ruleGID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4922:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4923:1: ruleGID
             {
-             before(grammarAccess.getSigDefinitionsAccess().getStructNameGIDParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleGID_in_rule__SigDefinitions__StructNameAssignment_2_28326);
+             before(grammarAccess.getSigConstructAccess().getStructNameGIDParserRuleCall_2_3_0()); 
+            pushFollow(FOLLOW_ruleGID_in_rule__SigConstruct__StructNameAssignment_2_310060);
             ruleGID();
 
             state._fsp--;
 
-             after(grammarAccess.getSigDefinitionsAccess().getStructNameGIDParserRuleCall_2_2_0()); 
+             after(grammarAccess.getSigConstructAccess().getStructNameGIDParserRuleCall_2_3_0()); 
 
             }
 
@@ -11497,35 +13826,76 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__StructNameAssignment_2_2"
+    // $ANTLR end "rule__SigConstruct__StructNameAssignment_2_3"
 
 
-    // $ANTLR start "rule__SigDefinitions__TmpAssignment_3_0"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4102:1: rule__SigDefinitions__TmpAssignment_3_0 : ( ( rule__SigDefinitions__TmpAlternatives_3_0_0 ) ) ;
-    public final void rule__SigDefinitions__TmpAssignment_3_0() throws RecognitionException {
+    // $ANTLR start "rule__SigConstruct__IncOptAssignment_2_7"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4932:1: rule__SigConstruct__IncOptAssignment_2_7 : ( ruleincludeOps ) ;
+    public final void rule__SigConstruct__IncOptAssignment_2_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4106:1: ( ( ( rule__SigDefinitions__TmpAlternatives_3_0_0 ) ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4107:1: ( ( rule__SigDefinitions__TmpAlternatives_3_0_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4936:1: ( ( ruleincludeOps ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4937:1: ( ruleincludeOps )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4107:1: ( ( rule__SigDefinitions__TmpAlternatives_3_0_0 ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4108:1: ( rule__SigDefinitions__TmpAlternatives_3_0_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4937:1: ( ruleincludeOps )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4938:1: ruleincludeOps
             {
-             before(grammarAccess.getSigDefinitionsAccess().getTmpAlternatives_3_0_0()); 
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4109:1: ( rule__SigDefinitions__TmpAlternatives_3_0_0 )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4109:2: rule__SigDefinitions__TmpAlternatives_3_0_0
+             before(grammarAccess.getSigConstructAccess().getIncOptIncludeOpsParserRuleCall_2_7_0()); 
+            pushFollow(FOLLOW_ruleincludeOps_in_rule__SigConstruct__IncOptAssignment_2_710091);
+            ruleincludeOps();
+
+            state._fsp--;
+
+             after(grammarAccess.getSigConstructAccess().getIncOptIncludeOpsParserRuleCall_2_7_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SigConstruct__IncOptAssignment_2_7"
+
+
+    // $ANTLR start "rule__SigConstruct__TmpAssignment_3_1"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4947:1: rule__SigConstruct__TmpAssignment_3_1 : ( ( rule__SigConstruct__TmpAlternatives_3_1_0 ) ) ;
+    public final void rule__SigConstruct__TmpAssignment_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4951:1: ( ( ( rule__SigConstruct__TmpAlternatives_3_1_0 ) ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4952:1: ( ( rule__SigConstruct__TmpAlternatives_3_1_0 ) )
             {
-            pushFollow(FOLLOW_rule__SigDefinitions__TmpAlternatives_3_0_0_in_rule__SigDefinitions__TmpAssignment_3_08357);
-            rule__SigDefinitions__TmpAlternatives_3_0_0();
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4952:1: ( ( rule__SigConstruct__TmpAlternatives_3_1_0 ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4953:1: ( rule__SigConstruct__TmpAlternatives_3_1_0 )
+            {
+             before(grammarAccess.getSigConstructAccess().getTmpAlternatives_3_1_0()); 
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4954:1: ( rule__SigConstruct__TmpAlternatives_3_1_0 )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4954:2: rule__SigConstruct__TmpAlternatives_3_1_0
+            {
+            pushFollow(FOLLOW_rule__SigConstruct__TmpAlternatives_3_1_0_in_rule__SigConstruct__TmpAssignment_3_110122);
+            rule__SigConstruct__TmpAlternatives_3_1_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSigDefinitionsAccess().getTmpAlternatives_3_0_0()); 
+             after(grammarAccess.getSigConstructAccess().getTmpAlternatives_3_1_0()); 
 
             }
 
@@ -11544,29 +13914,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SigDefinitions__TmpAssignment_3_0"
+    // $ANTLR end "rule__SigConstruct__TmpAssignment_3_1"
 
 
-    // $ANTLR start "rule__ViewDeclaration__ViewIDAssignment_2"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4119:1: rule__ViewDeclaration__ViewIDAssignment_2 : ( ruleGID ) ;
-    public final void rule__ViewDeclaration__ViewIDAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ViewDeclaration__ViewIDAssignment_3"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4964:1: rule__ViewDeclaration__ViewIDAssignment_3 : ( ruleGID ) ;
+    public final void rule__ViewDeclaration__ViewIDAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4123:1: ( ( ruleGID ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4124:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4968:1: ( ( ruleGID ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4969:1: ( ruleGID )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4124:1: ( ruleGID )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4125:1: ruleGID
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4969:1: ( ruleGID )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4970:1: ruleGID
             {
-             before(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleGID_in_rule__ViewDeclaration__ViewIDAssignment_28391);
+             before(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleGID_in_rule__ViewDeclaration__ViewIDAssignment_310156);
             ruleGID();
 
             state._fsp--;
 
-             after(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_2_0()); 
+             after(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_3_0()); 
 
             }
 
@@ -11585,29 +13955,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ViewDeclaration__ViewIDAssignment_2"
+    // $ANTLR end "rule__ViewDeclaration__ViewIDAssignment_3"
 
 
-    // $ANTLR start "rule__ViewDeclaration__FromAssignment_6"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4134:1: rule__ViewDeclaration__FromAssignment_6 : ( ruleNAMESPACE ) ;
-    public final void rule__ViewDeclaration__FromAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__ViewDeclaration__FromAssignment_7"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4979:1: rule__ViewDeclaration__FromAssignment_7 : ( ruleNAMESPACE ) ;
+    public final void rule__ViewDeclaration__FromAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4138:1: ( ( ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4139:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4983:1: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4984:1: ( ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4139:1: ( ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4140:1: ruleNAMESPACE
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4984:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4985:1: ruleNAMESPACE
             {
-             before(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__FromAssignment_68422);
+             before(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_7_0()); 
+            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__FromAssignment_710187);
             ruleNAMESPACE();
 
             state._fsp--;
 
-             after(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_6_0()); 
+             after(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_7_0()); 
 
             }
 
@@ -11626,29 +13996,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ViewDeclaration__FromAssignment_6"
+    // $ANTLR end "rule__ViewDeclaration__FromAssignment_7"
 
 
-    // $ANTLR start "rule__ViewDeclaration__ToAssignment_10"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4149:1: rule__ViewDeclaration__ToAssignment_10 : ( ruleNAMESPACE ) ;
-    public final void rule__ViewDeclaration__ToAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__ViewDeclaration__ToAssignment_11"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4994:1: rule__ViewDeclaration__ToAssignment_11 : ( ruleNAMESPACE ) ;
+    public final void rule__ViewDeclaration__ToAssignment_11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4153:1: ( ( ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4154:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4998:1: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4999:1: ( ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4154:1: ( ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4155:1: ruleNAMESPACE
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4999:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5000:1: ruleNAMESPACE
             {
-             before(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_10_0()); 
-            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__ToAssignment_108453);
+             before(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_11_0()); 
+            pushFollow(FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__ToAssignment_1110218);
             ruleNAMESPACE();
 
             state._fsp--;
 
-             after(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_10_0()); 
+             after(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_11_0()); 
 
             }
 
@@ -11667,29 +14037,29 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ViewDeclaration__ToAssignment_10"
+    // $ANTLR end "rule__ViewDeclaration__ToAssignment_11"
 
 
-    // $ANTLR start "rule__ViewDeclaration__ViewDefinitionsAssignment_15"
-    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4164:1: rule__ViewDeclaration__ViewDefinitionsAssignment_15 : ( rulesigDefinitions ) ;
-    public final void rule__ViewDeclaration__ViewDefinitionsAssignment_15() throws RecognitionException {
+    // $ANTLR start "rule__ViewDeclaration__ViewDefsAssignment_15"
+    // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5009:1: rule__ViewDeclaration__ViewDefsAssignment_15 : ( rulesigDefinitions ) ;
+    public final void rule__ViewDeclaration__ViewDefsAssignment_15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4168:1: ( ( rulesigDefinitions ) )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4169:1: ( rulesigDefinitions )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5013:1: ( ( rulesigDefinitions ) )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5014:1: ( rulesigDefinitions )
             {
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4169:1: ( rulesigDefinitions )
-            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:4170:1: rulesigDefinitions
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5014:1: ( rulesigDefinitions )
+            // ../info.kwarc.mmt.lf.ui/src-gen/info/kwarc/mmt/ui/contentassist/antlr/internal/InternalLF.g:5015:1: rulesigDefinitions
             {
-             before(grammarAccess.getViewDeclarationAccess().getViewDefinitionsSigDefinitionsParserRuleCall_15_0()); 
-            pushFollow(FOLLOW_rulesigDefinitions_in_rule__ViewDeclaration__ViewDefinitionsAssignment_158484);
+             before(grammarAccess.getViewDeclarationAccess().getViewDefsSigDefinitionsParserRuleCall_15_0()); 
+            pushFollow(FOLLOW_rulesigDefinitions_in_rule__ViewDeclaration__ViewDefsAssignment_1510249);
             rulesigDefinitions();
 
             state._fsp--;
 
-             after(grammarAccess.getViewDeclarationAccess().getViewDefinitionsSigDefinitionsParserRuleCall_15_0()); 
+             after(grammarAccess.getViewDeclarationAccess().getViewDefsSigDefinitionsParserRuleCall_15_0()); 
 
             }
 
@@ -11708,16 +14078,174 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ViewDeclaration__ViewDefinitionsAssignment_15"
+    // $ANTLR end "rule__ViewDeclaration__ViewDefsAssignment_15"
 
     // Delegated rules
 
 
+    protected DFA25 dfa25 = new DFA25(this);
+    protected DFA35 dfa35 = new DFA35(this);
+    static final String DFA25_eotS =
+        "\30\uffff";
+    static final String DFA25_eofS =
+        "\2\2\1\uffff\1\2\10\20\4\2\1\27\2\uffff\4\2\1\uffff";
+    static final String DFA25_minS =
+        "\2\4\1\uffff\15\4\1\0\2\uffff\4\4\1\uffff";
+    static final String DFA25_maxS =
+        "\1\23\1\37\1\uffff\15\37\1\0\2\uffff\4\37\1\uffff";
+    static final String DFA25_acceptS =
+        "\2\uffff\1\2\16\uffff\2\1\4\uffff\1\1";
+    static final String DFA25_specialS =
+        "\30\uffff}>";
+    static final String[] DFA25_transitionS = {
+            "\4\2\7\uffff\1\2\1\1\2\uffff\1\2",
+            "\1\4\1\5\1\6\1\7\5\2\1\uffff\2\2\1\3\2\2\13\uffff\2\2",
+            "",
+            "\1\10\1\11\1\12\1\13\5\2\1\uffff\2\2\1\3\2\2\13\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\14\1\15\1\16\1\17\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\uffff",
+            "",
+            "",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            "\1\23\1\24\1\25\1\26\5\2\1\uffff\1\2\1\22\1\21\2\2\1\22\12"+
+            "\uffff\2\2",
+            ""
+    };
+
+    static final short[] DFA25_eot = DFA.unpackEncodedString(DFA25_eotS);
+    static final short[] DFA25_eof = DFA.unpackEncodedString(DFA25_eofS);
+    static final char[] DFA25_min = DFA.unpackEncodedStringToUnsignedChars(DFA25_minS);
+    static final char[] DFA25_max = DFA.unpackEncodedStringToUnsignedChars(DFA25_maxS);
+    static final short[] DFA25_accept = DFA.unpackEncodedString(DFA25_acceptS);
+    static final short[] DFA25_special = DFA.unpackEncodedString(DFA25_specialS);
+    static final short[][] DFA25_transition;
+
+    static {
+        int numStates = DFA25_transitionS.length;
+        DFA25_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA25_transition[i] = DFA.unpackEncodedString(DFA25_transitionS[i]);
+        }
+    }
+
+    class DFA25 extends DFA {
+
+        public DFA25(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 25;
+            this.eot = DFA25_eot;
+            this.eof = DFA25_eof;
+            this.min = DFA25_min;
+            this.max = DFA25_max;
+            this.accept = DFA25_accept;
+            this.special = DFA25_special;
+            this.transition = DFA25_transition;
+        }
+        public String getDescription() {
+            return "2213:1: ( rule__GID__Group_0_1__0 )?";
+        }
+    }
+    static final String DFA35_eotS =
+        "\14\uffff";
+    static final String DFA35_eofS =
+        "\14\uffff";
+    static final String DFA35_minS =
+        "\1\16\1\4\1\uffff\10\4\1\uffff";
+    static final String DFA35_maxS =
+        "\2\37\1\uffff\10\37\1\uffff";
+    static final String DFA35_acceptS =
+        "\2\uffff\1\2\10\uffff\1\1";
+    static final String DFA35_specialS =
+        "\14\uffff}>";
+    static final String[] DFA35_transitionS = {
+            "\1\1\20\uffff\1\2",
+            "\1\3\1\4\1\5\1\6\27\uffff\1\2",
+            "",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            "\1\7\1\10\1\11\1\12\5\13\3\uffff\1\13\1\uffff\1\13\14\uffff"+
+            "\1\2",
+            ""
+    };
+
+    static final short[] DFA35_eot = DFA.unpackEncodedString(DFA35_eotS);
+    static final short[] DFA35_eof = DFA.unpackEncodedString(DFA35_eofS);
+    static final char[] DFA35_min = DFA.unpackEncodedStringToUnsignedChars(DFA35_minS);
+    static final char[] DFA35_max = DFA.unpackEncodedStringToUnsignedChars(DFA35_maxS);
+    static final short[] DFA35_accept = DFA.unpackEncodedString(DFA35_acceptS);
+    static final short[] DFA35_special = DFA.unpackEncodedString(DFA35_specialS);
+    static final short[][] DFA35_transition;
+
+    static {
+        int numStates = DFA35_transitionS.length;
+        DFA35_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA35_transition[i] = DFA.unpackEncodedString(DFA35_transitionS[i]);
+        }
+    }
+
+    class DFA35 extends DFA {
+
+        public DFA35(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 35;
+            this.eot = DFA35_eot;
+            this.eof = DFA35_eof;
+            this.min = DFA35_min;
+            this.max = DFA35_max;
+            this.accept = DFA35_accept;
+            this.special = DFA35_special;
+            this.transition = DFA35_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 3094:1: ( rule__SigDefinitions__Group_3__0 )*";
+        }
+    }
  
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__DeclarationsAssignment_in_ruleModel94 = new BitSet(new long[]{0x00000041600000F2L});
+    public static final BitSet FOLLOW_rule__Model__DeclarationsAssignment_in_ruleModel94 = new BitSet(new long[]{0x00000000000400F2L});
     public static final BitSet FOLLOW_ruleWS_in_entryRuleWS122 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWS129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__WS__Alternatives_in_ruleWS155 = new BitSet(new long[]{0x0000000000000002L});
@@ -11745,354 +14273,431 @@ public class InternalLFParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleSOMETHING_in_entryRuleSOMETHING602 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSOMETHING609 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SOMETHING__Alternatives_in_ruleSOMETHING635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesignatureDeclaration_in_entryRulesignatureDeclaration664 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulesignatureDeclaration671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__0_in_rulesignatureDeclaration697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions724 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulesigDefinitions731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Alternatives_in_rulesigDefinitions757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_entryRuleincludeOps784 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleincludeOps791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IncludeOps__Group__0_in_ruleincludeOps817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration846 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleviewDeclaration853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__0_in_ruleviewDeclaration879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenamespaceDeclaration_in_rule__Model__DeclarationsAlternatives_0915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesignatureDeclaration_in_rule__Model__DeclarationsAlternatives_0932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleviewDeclaration_in_rule__Model__DeclarationsAlternatives_0949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulereadDeclaration_in_rule__Model__DeclarationsAlternatives_0966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJUSTSPACE_in_rule__Model__DeclarationsAlternatives_0983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SP_in_rule__WS__Alternatives1015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ML_COMMENT_in_rule__WS__Alternatives1032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ML2_COMMENT_in_rule__WS__Alternatives1049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SL_COMMENT_in_rule__WS__Alternatives1066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__NAMESPACE__Alternatives_2_01099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__NAMESPACE__Alternatives_2_01119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GID__Alternatives_0_in_rule__GID__Alternatives1155 = new BitSet(new long[]{0x0000000000000702L});
-    public static final BitSet FOLLOW_rule__GID__Alternatives_0_in_rule__GID__Alternatives1167 = new BitSet(new long[]{0x0000000000000702L});
-    public static final BitSet FOLLOW_rule__GID__Group_1__0_in_rule__GID__Alternatives1188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__GID__Alternatives_01221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__GID__Alternatives_01238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__GID__Alternatives_01255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives1287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives1304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__SOMETHING__Alternatives1321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__0_in_rule__SOMETHING__Alternatives1338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SOMETHING__Alternatives1357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SOMETHING__Alternatives1377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SOMETHING__Alternatives1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__SOMETHING__Alternatives1417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__SOMETHING__Alternatives1437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__SOMETHING__Alternatives1457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__0_in_rule__SOMETHING__Alternatives1476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SOMETHING__Alternatives1494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__0_in_rule__SigDefinitions__Alternatives1527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__0_in_rule__SigDefinitions__Alternatives1545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__0_in_rule__SigDefinitions__Alternatives1563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__0_in_rule__SigDefinitions__Alternatives1581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJUSTSPACE_in_rule__SigDefinitions__Alternatives1599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SigDefinitions__Alternatives_0_21632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__SigDefinitions__Alternatives_0_21652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SigDefinitions__Alternatives_0_21672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__SigDefinitions__TmpAlternatives_3_0_01707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__SigDefinitions__TmpAlternatives_3_0_01727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__SigDefinitions__TmpAlternatives_3_0_01747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__SigDefinitions__TmpAlternatives_3_0_01767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__SigDefinitions__TmpAlternatives_3_0_01787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__SigDefinitions__TmpAlternatives_3_0_01807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group__0__Impl_in_rule__NAMESPACE__Group__01840 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group__1_in_rule__NAMESPACE__Group__01843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__NAMESPACE__Group__0__Impl1872 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group__1__Impl_in_rule__NAMESPACE__Group__11905 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group__2_in_rule__NAMESPACE__Group__11908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__NAMESPACE__Group__1__Impl1935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group__2__Impl_in_rule__NAMESPACE__Group__21964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__0_in_rule__NAMESPACE__Group__2__Impl1991 = new BitSet(new long[]{0x0000000000001802L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__0__Impl_in_rule__NAMESPACE__Group_2__02028 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__1_in_rule__NAMESPACE__Group_2__02031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Alternatives_2_0_in_rule__NAMESPACE__Group_2__0__Impl2058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__1__Impl_in_rule__NAMESPACE__Group_2__12088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__NAMESPACE__Group_2__1__Impl2115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URI__Group__0__Impl_in_rule__URI__Group__02148 = new BitSet(new long[]{0x0000000004000100L});
-    public static final BitSet FOLLOW_rule__URI__Group__1_in_rule__URI__Group__02151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URI__Group_0__0_in_rule__URI__Group__0__Impl2178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URI__Group__1__Impl_in_rule__URI__Group__12209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__URI__Group__1__Impl2236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URI__Group_0__0__Impl_in_rule__URI__Group_0__02269 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__URI__Group_0__1_in_rule__URI__Group_0__02272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__URI__Group_0__0__Impl2299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URI__Group_0__1__Impl_in_rule__URI__Group_0__12328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__URI__Group_0__1__Impl2356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URISTRING__Group__0__Impl_in_rule__URISTRING__Group__02391 = new BitSet(new long[]{0x0000000004000100L});
-    public static final BitSet FOLLOW_rule__URISTRING__Group__1_in_rule__URISTRING__Group__02394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__URISTRING__Group__0__Impl2422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URISTRING__Group__1__Impl_in_rule__URISTRING__Group__12453 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__URISTRING__Group__2_in_rule__URISTRING__Group__12456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleURI_in_rule__URISTRING__Group__1__Impl2483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__URISTRING__Group__2__Impl_in_rule__URISTRING__Group__22512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__URISTRING__Group__2__Impl2540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__0__Impl_in_rule__NamespaceDeclaration__Group__02577 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__1_in_rule__NamespaceDeclaration__Group__02580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__NamespaceDeclaration__Group__0__Impl2608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__1__Impl_in_rule__NamespaceDeclaration__Group__12639 = new BitSet(new long[]{0x0000000010000100L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__2_in_rule__NamespaceDeclaration__Group__12642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__1__Impl2672 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__1__Impl2685 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__2__Impl_in_rule__NamespaceDeclaration__Group__22718 = new BitSet(new long[]{0x0000000010000100L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__3_in_rule__NamespaceDeclaration__Group__22721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__0_in_rule__NamespaceDeclaration__Group__2__Impl2748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__3__Impl_in_rule__NamespaceDeclaration__Group__32779 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__4_in_rule__NamespaceDeclaration__Group__32782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__UriAssignment_3_in_rule__NamespaceDeclaration__Group__3__Impl2809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__4__Impl_in_rule__NamespaceDeclaration__Group__42839 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__5_in_rule__NamespaceDeclaration__Group__42842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__4__Impl2870 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__5__Impl_in_rule__NamespaceDeclaration__Group__52901 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__6_in_rule__NamespaceDeclaration__Group__52904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__NamespaceDeclaration__Group__5__Impl2932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__6__Impl_in_rule__NamespaceDeclaration__Group__62963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__6__Impl2990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__0__Impl_in_rule__NamespaceDeclaration__Group_2__03033 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__1_in_rule__NamespaceDeclaration__Group_2__03036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__NameAssignment_2_0_in_rule__NamespaceDeclaration__Group_2__0__Impl3063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__1__Impl_in_rule__NamespaceDeclaration__Group_2__13093 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__2_in_rule__NamespaceDeclaration__Group_2__13096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_2__1__Impl3124 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__2__Impl_in_rule__NamespaceDeclaration__Group_2__23155 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__3_in_rule__NamespaceDeclaration__Group_2__23158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__NamespaceDeclaration__Group_2__2__Impl3186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_2__3__Impl_in_rule__NamespaceDeclaration__Group_2__33217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_2__3__Impl3245 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__0__Impl_in_rule__ReadDeclaration__Group__03284 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__1_in_rule__ReadDeclaration__Group__03287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__ReadDeclaration__Group__0__Impl3315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__1__Impl_in_rule__ReadDeclaration__Group__13346 = new BitSet(new long[]{0x0000000010000100L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__2_in_rule__ReadDeclaration__Group__13349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__1__Impl3379 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__1__Impl3392 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__2__Impl_in_rule__ReadDeclaration__Group__23425 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__3_in_rule__ReadDeclaration__Group__23428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__FileAssignment_2_in_rule__ReadDeclaration__Group__2__Impl3455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__3__Impl_in_rule__ReadDeclaration__Group__33485 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__4_in_rule__ReadDeclaration__Group__33488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__3__Impl3516 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__4__Impl_in_rule__ReadDeclaration__Group__43547 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__5_in_rule__ReadDeclaration__Group__43550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__ReadDeclaration__Group__4__Impl3578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__5__Impl_in_rule__ReadDeclaration__Group__53609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__5__Impl3636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GID__Group_1__0__Impl_in_rule__GID__Group_1__03677 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__GID__Group_1__1_in_rule__GID__Group_1__03680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__GID__Group_1__0__Impl3708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GID__Group_1__1__Impl_in_rule__GID__Group_1__13739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__GID__Group_1__1__Impl3768 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__0__Impl_in_rule__SOMETHING__Group_3__03805 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__1_in_rule__SOMETHING__Group_3__03808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SOMETHING__Group_3__0__Impl3836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__1__Impl_in_rule__SOMETHING__Group_3__13867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__SOMETHING__Group_3__1__Impl3894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__0__Impl_in_rule__SOMETHING__Group_10__03927 = new BitSet(new long[]{0x00000041600010F0L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__1_in_rule__SOMETHING__Group_10__03930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__SOMETHING__Group_10__0__Impl3958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__1__Impl_in_rule__SOMETHING__Group_10__13989 = new BitSet(new long[]{0x00000041600010F0L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__2_in_rule__SOMETHING__Group_10__13992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SOMETHING__Group_10__1__Impl4021 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_rule__SOMETHING__Group_10__2__Impl_in_rule__SOMETHING__Group_10__24054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SOMETHING__Group_10__2__Impl4081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__0__Impl_in_rule__SignatureDeclaration__Group__04117 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__1_in_rule__SignatureDeclaration__Group__04120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__SignatureDeclaration__Group__0__Impl4148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__1__Impl_in_rule__SignatureDeclaration__Group__14179 = new BitSet(new long[]{0x0000000080000700L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__2_in_rule__SignatureDeclaration__Group__14182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__1__Impl4212 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__1__Impl4225 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__2__Impl_in_rule__SignatureDeclaration__Group__24258 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__3_in_rule__SignatureDeclaration__Group__24261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__SigNameAssignment_2_in_rule__SignatureDeclaration__Group__2__Impl4288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__3__Impl_in_rule__SignatureDeclaration__Group__34318 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__4_in_rule__SignatureDeclaration__Group__34321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__3__Impl4349 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__4__Impl_in_rule__SignatureDeclaration__Group__44380 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__5_in_rule__SignatureDeclaration__Group__44383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SignatureDeclaration__Group__4__Impl4411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__5__Impl_in_rule__SignatureDeclaration__Group__54442 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__6_in_rule__SignatureDeclaration__Group__54445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__5__Impl4473 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__6__Impl_in_rule__SignatureDeclaration__Group__64504 = new BitSet(new long[]{0x0000005DE3F007F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__7_in_rule__SignatureDeclaration__Group__64507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__SignatureDeclaration__Group__6__Impl4535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__7__Impl_in_rule__SignatureDeclaration__Group__74566 = new BitSet(new long[]{0x0000005DE3F007F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__8_in_rule__SignatureDeclaration__Group__74569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__SigDefinitionsAssignment_7_in_rule__SignatureDeclaration__Group__7__Impl4596 = new BitSet(new long[]{0x00000059E3F007F2L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__8__Impl_in_rule__SignatureDeclaration__Group__84627 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__9_in_rule__SignatureDeclaration__Group__84630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__SignatureDeclaration__Group__8__Impl4658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__9__Impl_in_rule__SignatureDeclaration__Group__94689 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__10_in_rule__SignatureDeclaration__Group__94692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__9__Impl4720 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__10__Impl_in_rule__SignatureDeclaration__Group__104751 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__11_in_rule__SignatureDeclaration__Group__104754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SignatureDeclaration__Group__10__Impl4782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__11__Impl_in_rule__SignatureDeclaration__Group__114813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__11__Impl4840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__0__Impl_in_rule__SigDefinitions__Group_0__04893 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__1_in_rule__SigDefinitions__Group_0__04896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__SymbNameAssignment_0_0_in_rule__SigDefinitions__Group_0__0__Impl4923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__1__Impl_in_rule__SigDefinitions__Group_0__14953 = new BitSet(new long[]{0x0000000000086000L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__2_in_rule__SigDefinitions__Group_0__14956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_0__1__Impl4984 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__2__Impl_in_rule__SigDefinitions__Group_0__25015 = new BitSet(new long[]{0x00000041E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__3_in_rule__SigDefinitions__Group_0__25018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Alternatives_0_2_in_rule__SigDefinitions__Group_0__2__Impl5045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__3__Impl_in_rule__SigDefinitions__Group_0__35075 = new BitSet(new long[]{0x00000041E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__4_in_rule__SigDefinitions__Group_0__35078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_0__3__Impl5106 = new BitSet(new long[]{0x00000041E007F7F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__4__Impl_in_rule__SigDefinitions__Group_0__45137 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__5_in_rule__SigDefinitions__Group_0__45140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SigDefinitions__Group_0__4__Impl5168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_0__5__Impl_in_rule__SigDefinitions__Group_0__55199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_0__5__Impl5226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__0__Impl_in_rule__SigDefinitions__Group_1__05267 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__1_in_rule__SigDefinitions__Group_1__05270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__SigDefinitions__Group_1__0__Impl5298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__1__Impl_in_rule__SigDefinitions__Group_1__15329 = new BitSet(new long[]{0x0000000004000100L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__2_in_rule__SigDefinitions__Group_1__15332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__1__Impl5362 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__1__Impl5375 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__2__Impl_in_rule__SigDefinitions__Group_1__25408 = new BitSet(new long[]{0x00000041600010F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__3_in_rule__SigDefinitions__Group_1__25411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__NamespaceAssignment_1_2_in_rule__SigDefinitions__Group_1__2__Impl5438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__3__Impl_in_rule__SigDefinitions__Group_1__35468 = new BitSet(new long[]{0x00000041600010F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__4_in_rule__SigDefinitions__Group_1__35471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1_3__0_in_rule__SigDefinitions__Group_1__3__Impl5498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__4__Impl_in_rule__SigDefinitions__Group_1__45529 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__5_in_rule__SigDefinitions__Group_1__45532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SigDefinitions__Group_1__4__Impl5560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1__5__Impl_in_rule__SigDefinitions__Group_1__55591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1__5__Impl5618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1_3__0__Impl_in_rule__SigDefinitions__Group_1_3__05659 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1_3__1_in_rule__SigDefinitions__Group_1_3__05662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1_3__0__Impl5692 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_1_3__0__Impl5705 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_1_3__1__Impl_in_rule__SigDefinitions__Group_1_3__15738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_rule__SigDefinitions__Group_1_3__1__Impl5765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__0__Impl_in_rule__SigDefinitions__Group_2__05798 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__1_in_rule__SigDefinitions__Group_2__05801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__SigDefinitions__Group_2__0__Impl5829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__1__Impl_in_rule__SigDefinitions__Group_2__15860 = new BitSet(new long[]{0x0000000080000700L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__2_in_rule__SigDefinitions__Group_2__15863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__1__Impl5893 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__1__Impl5906 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__2__Impl_in_rule__SigDefinitions__Group_2__25939 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__3_in_rule__SigDefinitions__Group_2__25942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__StructNameAssignment_2_2_in_rule__SigDefinitions__Group_2__2__Impl5969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__3__Impl_in_rule__SigDefinitions__Group_2__35999 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__4_in_rule__SigDefinitions__Group_2__36002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__3__Impl6030 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__4__Impl_in_rule__SigDefinitions__Group_2__46061 = new BitSet(new long[]{0x00000061E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__5_in_rule__SigDefinitions__Group_2__46064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SigDefinitions__Group_2__4__Impl6092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__5__Impl_in_rule__SigDefinitions__Group_2__56123 = new BitSet(new long[]{0x00000061E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__6_in_rule__SigDefinitions__Group_2__56126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_2__5__Impl6154 = new BitSet(new long[]{0x00000041E007F7F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__6__Impl_in_rule__SigDefinitions__Group_2__66185 = new BitSet(new long[]{0x00000061E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__7_in_rule__SigDefinitions__Group_2__66188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_rule__SigDefinitions__Group_2__6__Impl6216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__7__Impl_in_rule__SigDefinitions__Group_2__76247 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__8_in_rule__SigDefinitions__Group_2__76250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SigDefinitions__Group_2__7__Impl6278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_2__8__Impl_in_rule__SigDefinitions__Group_2__86309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_2__8__Impl6336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__0__Impl_in_rule__SigDefinitions__Group_3__06383 = new BitSet(new long[]{0x00000041E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__1_in_rule__SigDefinitions__Group_3__06386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__TmpAssignment_3_0_in_rule__SigDefinitions__Group_3__0__Impl6413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__1__Impl_in_rule__SigDefinitions__Group_3__16443 = new BitSet(new long[]{0x00000041E007F7F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__2_in_rule__SigDefinitions__Group_3__16446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigDefinitions__Group_3__1__Impl6474 = new BitSet(new long[]{0x00000041E007F7F2L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__2__Impl_in_rule__SigDefinitions__Group_3__26505 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__3_in_rule__SigDefinitions__Group_3__26508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SigDefinitions__Group_3__2__Impl6536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__3__Impl_in_rule__SigDefinitions__Group_3__36567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__3__Impl6594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IncludeOps__Group__0__Impl_in_rule__IncludeOps__Group__06631 = new BitSet(new long[]{0x00000041E007F7F0L});
-    public static final BitSet FOLLOW_rule__IncludeOps__Group__1_in_rule__IncludeOps__Group__06634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__IncludeOps__Group__0__Impl6662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IncludeOps__Group__1__Impl_in_rule__IncludeOps__Group__16693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__IncludeOps__Group__1__Impl6721 = new BitSet(new long[]{0x00000041E007F7F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__0__Impl_in_rule__ViewDeclaration__Group__06756 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__1_in_rule__ViewDeclaration__Group__06759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__ViewDeclaration__Group__0__Impl6787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__1__Impl_in_rule__ViewDeclaration__Group__16818 = new BitSet(new long[]{0x0000000080000700L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__2_in_rule__ViewDeclaration__Group__16821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__1__Impl6851 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__1__Impl6864 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__2__Impl_in_rule__ViewDeclaration__Group__26897 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__3_in_rule__ViewDeclaration__Group__26900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__ViewIDAssignment_2_in_rule__ViewDeclaration__Group__2__Impl6927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__3__Impl_in_rule__ViewDeclaration__Group__36957 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__4_in_rule__ViewDeclaration__Group__36960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__3__Impl6988 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__4__Impl_in_rule__ViewDeclaration__Group__47019 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__5_in_rule__ViewDeclaration__Group__47022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__ViewDeclaration__Group__4__Impl7050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__5__Impl_in_rule__ViewDeclaration__Group__57081 = new BitSet(new long[]{0x0000000004000100L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__6_in_rule__ViewDeclaration__Group__57084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__5__Impl7112 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__6__Impl_in_rule__ViewDeclaration__Group__67143 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__7_in_rule__ViewDeclaration__Group__67146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__FromAssignment_6_in_rule__ViewDeclaration__Group__6__Impl7173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__7__Impl_in_rule__ViewDeclaration__Group__77203 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__8_in_rule__ViewDeclaration__Group__77206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__7__Impl7234 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__8__Impl_in_rule__ViewDeclaration__Group__87265 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__9_in_rule__ViewDeclaration__Group__87268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__ViewDeclaration__Group__8__Impl7296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__9__Impl_in_rule__ViewDeclaration__Group__97327 = new BitSet(new long[]{0x0000000004000100L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__10_in_rule__ViewDeclaration__Group__97330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__9__Impl7358 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__10__Impl_in_rule__ViewDeclaration__Group__107389 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__11_in_rule__ViewDeclaration__Group__107392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__ToAssignment_10_in_rule__ViewDeclaration__Group__10__Impl7419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__11__Impl_in_rule__ViewDeclaration__Group__117449 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__12_in_rule__ViewDeclaration__Group__117452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__11__Impl7480 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__12__Impl_in_rule__ViewDeclaration__Group__127511 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__13_in_rule__ViewDeclaration__Group__127514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__ViewDeclaration__Group__12__Impl7542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__13__Impl_in_rule__ViewDeclaration__Group__137573 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__14_in_rule__ViewDeclaration__Group__137576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__13__Impl7604 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__14__Impl_in_rule__ViewDeclaration__Group__147635 = new BitSet(new long[]{0x0000005DE3F007F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__15_in_rule__ViewDeclaration__Group__147638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__ViewDeclaration__Group__14__Impl7666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__15__Impl_in_rule__ViewDeclaration__Group__157697 = new BitSet(new long[]{0x0000005DE3F007F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__16_in_rule__ViewDeclaration__Group__157700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__ViewDefinitionsAssignment_15_in_rule__ViewDeclaration__Group__15__Impl7727 = new BitSet(new long[]{0x00000059E3F007F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__16__Impl_in_rule__ViewDeclaration__Group__167758 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__17_in_rule__ViewDeclaration__Group__167761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__ViewDeclaration__Group__16__Impl7789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__17__Impl_in_rule__ViewDeclaration__Group__177820 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__18_in_rule__ViewDeclaration__Group__177823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__17__Impl7851 = new BitSet(new long[]{0x00000041600000F2L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__18__Impl_in_rule__ViewDeclaration__Group__187882 = new BitSet(new long[]{0x00000041600000F0L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__19_in_rule__ViewDeclaration__Group__187885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__ViewDeclaration__Group__18__Impl7913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__19__Impl_in_rule__ViewDeclaration__Group__197944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__19__Impl7971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__DeclarationsAlternatives_0_in_rule__Model__DeclarationsAssignment8045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWS_in_rule__JUSTSPACE__JAssignment8078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CID_in_rule__NamespaceDeclaration__NameAssignment_2_08109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleURISTRING_in_rule__NamespaceDeclaration__UriAssignment_38140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleURISTRING_in_rule__ReadDeclaration__FileAssignment_28171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGID_in_rule__SignatureDeclaration__SigNameAssignment_28202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_rule__SignatureDeclaration__SigDefinitionsAssignment_78233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGID_in_rule__SigDefinitions__SymbNameAssignment_0_08264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__SigDefinitions__NamespaceAssignment_1_28295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGID_in_rule__SigDefinitions__StructNameAssignment_2_28326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SigDefinitions__TmpAlternatives_3_0_0_in_rule__SigDefinitions__TmpAssignment_3_08357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGID_in_rule__ViewDeclaration__ViewIDAssignment_28391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__FromAssignment_68422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__ToAssignment_108453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_rule__ViewDeclaration__ViewDefinitionsAssignment_158484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING2_in_entryRuleSOMETHING2662 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSOMETHING2669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Alternatives_in_ruleSOMETHING2695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesignatureDeclaration_in_entryRulesignatureDeclaration724 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesignatureDeclaration731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__0_in_rulesignatureDeclaration757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions784 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesigDefinitions791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__0_in_rulesigDefinitions817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_entryRulesigConstruct844 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesigConstruct851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Alternatives_in_rulesigConstruct877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_entryRuleincludeOps904 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleincludeOps911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__0_in_ruleincludeOps937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleviewDeclaration973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__0_in_ruleviewDeclaration999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenamespaceDeclaration_in_rule__Model__DeclarationsAlternatives_01035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesignatureDeclaration_in_rule__Model__DeclarationsAlternatives_01052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleviewDeclaration_in_rule__Model__DeclarationsAlternatives_01069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulereadDeclaration_in_rule__Model__DeclarationsAlternatives_01086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJUSTSPACE_in_rule__Model__DeclarationsAlternatives_01103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SP_in_rule__WS__Alternatives1135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ML_COMMENT_in_rule__WS__Alternatives1152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ML2_COMMENT_in_rule__WS__Alternatives1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SL_COMMENT_in_rule__WS__Alternatives1186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__NAMESPACE__Alternatives_2_01219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__NAMESPACE__Alternatives_2_01239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_0__0_in_rule__GID__Alternatives1273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__0_in_rule__GID__Alternatives1291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_MULTIPLEDOT_in_rule__GID__Alternatives1309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DOUBLEDOT_in_rule__GID__Alternatives1326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__GID__Alternatives_0_01358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__GID__Alternatives_0_01375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__GID__Alternatives_0_01392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives1424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives1441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__SOMETHING__Alternatives1458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__0_in_rule__SOMETHING__Alternatives1475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SOMETHING__Alternatives1494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SOMETHING__Alternatives1514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__SOMETHING__Alternatives1534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SOMETHING__Alternatives1554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__0_in_rule__SOMETHING__Alternatives1573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_MULTIPLEDOT_in_rule__SOMETHING__Alternatives1591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DOUBLEDOT_in_rule__SOMETHING__Alternatives1608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SOMETHING__Alternatives1625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__SOMETHING__Alternatives_3_11657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING__Alternatives_3_11674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SOMETHING2__Alternatives1706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__SOMETHING2__Alternatives1723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__SOMETHING2__Alternatives1740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SOMETHING2__Alternatives1758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SOMETHING2__Alternatives1778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SOMETHING2__Alternatives1798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__SOMETHING2__Alternatives1818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SOMETHING2__Alternatives1838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__0_in_rule__SOMETHING2__Alternatives1857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_MULTIPLEDOT_in_rule__SOMETHING2__Alternatives1875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DOUBLEDOT_in_rule__SOMETHING2__Alternatives1892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SOMETHING2__Alternatives1909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__0_in_rule__SigConstruct__Alternatives1942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__0_in_rule__SigConstruct__Alternatives1960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__0_in_rule__SigConstruct__Alternatives1978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__0_in_rule__SigConstruct__Alternatives1996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SigConstruct__Alternatives_0_22030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__SigConstruct__Alternatives_0_22050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SigConstruct__Alternatives_0_22070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SigConstruct__Alternatives_2_52105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__SigConstruct__Alternatives_2_52125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__SigConstruct__TmpAlternatives_3_1_02160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__SigConstruct__TmpAlternatives_3_1_02180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__SigConstruct__TmpAlternatives_3_1_02200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__SigConstruct__TmpAlternatives_3_1_02220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__SigConstruct__TmpAlternatives_3_1_02240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__SigConstruct__TmpAlternatives_3_1_02260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__SigConstruct__TmpAlternatives_3_1_02280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group__0__Impl_in_rule__NAMESPACE__Group__02313 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group__1_in_rule__NAMESPACE__Group__02316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_0__0_in_rule__NAMESPACE__Group__0__Impl2343 = new BitSet(new long[]{0x0000000000000202L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group__1__Impl_in_rule__NAMESPACE__Group__12374 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group__2_in_rule__NAMESPACE__Group__12377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__NAMESPACE__Group__1__Impl2404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group__2__Impl_in_rule__NAMESPACE__Group__22433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__0_in_rule__NAMESPACE__Group__2__Impl2460 = new BitSet(new long[]{0x0000000000006002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_0__0__Impl_in_rule__NAMESPACE__Group_0__02497 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_0__1_in_rule__NAMESPACE__Group_0__02500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DOUBLEDOT_in_rule__NAMESPACE__Group_0__0__Impl2527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_0__1__Impl_in_rule__NAMESPACE__Group_0__12556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__NAMESPACE__Group_0__1__Impl2584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__0__Impl_in_rule__NAMESPACE__Group_2__02619 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__1_in_rule__NAMESPACE__Group_2__02622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Alternatives_2_0_in_rule__NAMESPACE__Group_2__0__Impl2649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NAMESPACE__Group_2__1__Impl_in_rule__NAMESPACE__Group_2__12679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__NAMESPACE__Group_2__1__Impl2706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group__0__Impl_in_rule__URI__Group__02739 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__URI__Group__1_in_rule__URI__Group__02742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__0_in_rule__URI__Group__0__Impl2769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group__1__Impl_in_rule__URI__Group__12800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__URI__Group__1__Impl2827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__0__Impl_in_rule__URI__Group_0__02860 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__1_in_rule__URI__Group_0__02863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__URI__Group_0__0__Impl2890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__1__Impl_in_rule__URI__Group_0__12919 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__2_in_rule__URI__Group_0__12922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__URI__Group_0__1__Impl2950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__2__Impl_in_rule__URI__Group_0__22981 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__3_in_rule__URI__Group_0__22984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__URI__Group_0__2__Impl3012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URI__Group_0__3__Impl_in_rule__URI__Group_0__33043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__URI__Group_0__3__Impl3071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URISTRING__Group__0__Impl_in_rule__URISTRING__Group__03110 = new BitSet(new long[]{0x0000000000000600L});
+    public static final BitSet FOLLOW_rule__URISTRING__Group__1_in_rule__URISTRING__Group__03113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__URISTRING__Group__0__Impl3141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URISTRING__Group__1__Impl_in_rule__URISTRING__Group__13172 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__URISTRING__Group__2_in_rule__URISTRING__Group__13175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleURI_in_rule__URISTRING__Group__1__Impl3202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__URISTRING__Group__2__Impl_in_rule__URISTRING__Group__23231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__URISTRING__Group__2__Impl3259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__0__Impl_in_rule__NamespaceDeclaration__Group__03296 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__1_in_rule__NamespaceDeclaration__Group__03299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__NamespaceDeclaration__Group__0__Impl3327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__1__Impl_in_rule__NamespaceDeclaration__Group__13358 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__2_in_rule__NamespaceDeclaration__Group__13361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__NamespaceDeclaration__Group__1__Impl3389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__2__Impl_in_rule__NamespaceDeclaration__Group__23420 = new BitSet(new long[]{0x0000000008000400L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__3_in_rule__NamespaceDeclaration__Group__23423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__2__Impl3453 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__2__Impl3466 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__3__Impl_in_rule__NamespaceDeclaration__Group__33499 = new BitSet(new long[]{0x0000000008000400L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__4_in_rule__NamespaceDeclaration__Group__33502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__0_in_rule__NamespaceDeclaration__Group__3__Impl3529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__4__Impl_in_rule__NamespaceDeclaration__Group__43560 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__5_in_rule__NamespaceDeclaration__Group__43563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__UriAssignment_4_in_rule__NamespaceDeclaration__Group__4__Impl3590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__5__Impl_in_rule__NamespaceDeclaration__Group__53620 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__6_in_rule__NamespaceDeclaration__Group__53623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__5__Impl3651 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__6__Impl_in_rule__NamespaceDeclaration__Group__63682 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__7_in_rule__NamespaceDeclaration__Group__63685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__NamespaceDeclaration__Group__6__Impl3713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group__7__Impl_in_rule__NamespaceDeclaration__Group__73744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group__7__Impl3771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__0__Impl_in_rule__NamespaceDeclaration__Group_3__03816 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__1_in_rule__NamespaceDeclaration__Group_3__03819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__NameAssignment_3_0_in_rule__NamespaceDeclaration__Group_3__0__Impl3846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__1__Impl_in_rule__NamespaceDeclaration__Group_3__13876 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__2_in_rule__NamespaceDeclaration__Group_3__13879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_3__1__Impl3907 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__2__Impl_in_rule__NamespaceDeclaration__Group_3__23938 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__3_in_rule__NamespaceDeclaration__Group_3__23941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__NamespaceDeclaration__Group_3__2__Impl3969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespaceDeclaration__Group_3__3__Impl_in_rule__NamespaceDeclaration__Group_3__34000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__NamespaceDeclaration__Group_3__3__Impl4028 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__0__Impl_in_rule__ReadDeclaration__Group__04067 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__1_in_rule__ReadDeclaration__Group__04070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ReadDeclaration__Group__0__Impl4098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__1__Impl_in_rule__ReadDeclaration__Group__14129 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__2_in_rule__ReadDeclaration__Group__14132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__ReadDeclaration__Group__1__Impl4160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__2__Impl_in_rule__ReadDeclaration__Group__24191 = new BitSet(new long[]{0x0000000008000400L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__3_in_rule__ReadDeclaration__Group__24194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__2__Impl4224 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__2__Impl4237 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__3__Impl_in_rule__ReadDeclaration__Group__34270 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__4_in_rule__ReadDeclaration__Group__34273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__FileAssignment_3_in_rule__ReadDeclaration__Group__3__Impl4300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__4__Impl_in_rule__ReadDeclaration__Group__44330 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__5_in_rule__ReadDeclaration__Group__44333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__4__Impl4361 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__5__Impl_in_rule__ReadDeclaration__Group__54392 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__6_in_rule__ReadDeclaration__Group__54395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__ReadDeclaration__Group__5__Impl4423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ReadDeclaration__Group__6__Impl_in_rule__ReadDeclaration__Group__64454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ReadDeclaration__Group__6__Impl4481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_0__0__Impl_in_rule__GID__Group_0__04524 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__GID__Group_0__1_in_rule__GID__Group_0__04527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Alternatives_0_0_in_rule__GID__Group_0__0__Impl4556 = new BitSet(new long[]{0x0000000000001C02L});
+    public static final BitSet FOLLOW_rule__GID__Alternatives_0_0_in_rule__GID__Group_0__0__Impl4568 = new BitSet(new long[]{0x0000000000001C02L});
+    public static final BitSet FOLLOW_rule__GID__Group_0__1__Impl_in_rule__GID__Group_0__14601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_0_1__0_in_rule__GID__Group_0__1__Impl4628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_0_1__0__Impl_in_rule__GID__Group_0_1__04663 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__GID__Group_0_1__1_in_rule__GID__Group_0_1__04666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__GID__Group_0_1__0__Impl4697 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_rule__GID__Group_0_1__0__Impl4713 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__GID__Group_0_1__1__Impl_in_rule__GID__Group_0_1__14748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__GID__Group_0_1__1__Impl4775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__0__Impl_in_rule__GID__Group_1__04808 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__1_in_rule__GID__Group_1__04811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__GID__Group_1__0__Impl4839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__1__Impl_in_rule__GID__Group_1__14870 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__2_in_rule__GID__Group_1__14873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__GID__Group_1__1__Impl4904 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_rule__GID__Group_1__1__Impl4920 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__GID__Group_1__2__Impl_in_rule__GID__Group_1__24955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__GID__Group_1__2__Impl4982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__0__Impl_in_rule__SOMETHING__Group_3__05017 = new BitSet(new long[]{0x0000000000000C00L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__1_in_rule__SOMETHING__Group_3__05020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SOMETHING__Group_3__0__Impl5048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_3__1__Impl_in_rule__SOMETHING__Group_3__15079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Alternatives_3_1_in_rule__SOMETHING__Group_3__1__Impl5106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__0__Impl_in_rule__SOMETHING__Group_8__05140 = new BitSet(new long[]{0x00000000C007DFF0L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__1_in_rule__SOMETHING__Group_8__05143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__SOMETHING__Group_8__0__Impl5171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__1__Impl_in_rule__SOMETHING__Group_8__15202 = new BitSet(new long[]{0x00000000C007DFF0L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__2_in_rule__SOMETHING__Group_8__15205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING2_in_rule__SOMETHING__Group_8__1__Impl5233 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__SOMETHING__Group_8__2__Impl_in_rule__SOMETHING__Group_8__25264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__SOMETHING__Group_8__2__Impl5292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__0__Impl_in_rule__SOMETHING2__Group_8__05329 = new BitSet(new long[]{0x00000000C007DFF0L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__1_in_rule__SOMETHING2__Group_8__05332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__SOMETHING2__Group_8__0__Impl5360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__1__Impl_in_rule__SOMETHING2__Group_8__15391 = new BitSet(new long[]{0x00000000C007DFF0L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__2_in_rule__SOMETHING2__Group_8__15394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING2_in_rule__SOMETHING2__Group_8__1__Impl5422 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__SOMETHING2__Group_8__2__Impl_in_rule__SOMETHING2__Group_8__25453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__SOMETHING2__Group_8__2__Impl5481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__0__Impl_in_rule__SignatureDeclaration__Group__05521 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__1_in_rule__SignatureDeclaration__Group__05524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SignatureDeclaration__Group__0__Impl5552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__1__Impl_in_rule__SignatureDeclaration__Group__15583 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__2_in_rule__SignatureDeclaration__Group__15586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__SignatureDeclaration__Group__1__Impl5614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__2__Impl_in_rule__SignatureDeclaration__Group__25645 = new BitSet(new long[]{0x0000000000011F00L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__3_in_rule__SignatureDeclaration__Group__25648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__2__Impl5678 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__2__Impl5691 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__3__Impl_in_rule__SignatureDeclaration__Group__35724 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__4_in_rule__SignatureDeclaration__Group__35727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__SigNameAssignment_3_in_rule__SignatureDeclaration__Group__3__Impl5754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__4__Impl_in_rule__SignatureDeclaration__Group__45784 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__5_in_rule__SignatureDeclaration__Group__45787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__4__Impl5815 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__5__Impl_in_rule__SignatureDeclaration__Group__55846 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__6_in_rule__SignatureDeclaration__Group__55849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SignatureDeclaration__Group__5__Impl5877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__6__Impl_in_rule__SignatureDeclaration__Group__65908 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__7_in_rule__SignatureDeclaration__Group__65911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__6__Impl5939 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__7__Impl_in_rule__SignatureDeclaration__Group__75970 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__8_in_rule__SignatureDeclaration__Group__75973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__DefsAssignment_7_in_rule__SignatureDeclaration__Group__7__Impl6000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__8__Impl_in_rule__SignatureDeclaration__Group__86030 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__9_in_rule__SignatureDeclaration__Group__86033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SignatureDeclaration__Group__8__Impl6061 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SignatureDeclaration__Group__9__Impl_in_rule__SignatureDeclaration__Group__96092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SignatureDeclaration__Group__9__Impl6120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__0__Impl_in_rule__SigDefinitions__Group__06171 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__1_in_rule__SigDefinitions__Group__06174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__SigDefinitions__Group__0__Impl6202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__1__Impl_in_rule__SigDefinitions__Group__16233 = new BitSet(new long[]{0x0000000000051F00L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__2_in_rule__SigDefinitions__Group__16236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group__1__Impl6264 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__2__Impl_in_rule__SigDefinitions__Group__26295 = new BitSet(new long[]{0x0000000080004000L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__3_in_rule__SigDefinitions__Group__26298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__ConsAssignment_2_in_rule__SigDefinitions__Group__2__Impl6325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__3__Impl_in_rule__SigDefinitions__Group__36355 = new BitSet(new long[]{0x0000000080004000L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__4_in_rule__SigDefinitions__Group__36358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__0_in_rule__SigDefinitions__Group__3__Impl6385 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__4__Impl_in_rule__SigDefinitions__Group__46416 = new BitSet(new long[]{0x0000000080004000L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__5_in_rule__SigDefinitions__Group__46419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_4__0_in_rule__SigDefinitions__Group__4__Impl6446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group__5__Impl_in_rule__SigDefinitions__Group__56477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__SigDefinitions__Group__5__Impl6505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__0__Impl_in_rule__SigDefinitions__Group_3__06548 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__1_in_rule__SigDefinitions__Group_3__06551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SigDefinitions__Group_3__0__Impl6579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__1__Impl_in_rule__SigDefinitions__Group_3__16610 = new BitSet(new long[]{0x0000000000051F00L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__2_in_rule__SigDefinitions__Group_3__16613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__1__Impl6643 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_3__1__Impl6656 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_3__2__Impl_in_rule__SigDefinitions__Group_3__26689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__FconsAssignment_3_2_in_rule__SigDefinitions__Group_3__2__Impl6716 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_4__0__Impl_in_rule__SigDefinitions__Group_4__06752 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_4__1_in_rule__SigDefinitions__Group_4__06755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SigDefinitions__Group_4__0__Impl6783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigDefinitions__Group_4__1__Impl_in_rule__SigDefinitions__Group_4__16814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigDefinitions__Group_4__1__Impl6842 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__0__Impl_in_rule__SigConstruct__Group_0__06877 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__1_in_rule__SigConstruct__Group_0__06880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__SymbNameAssignment_0_0_in_rule__SigConstruct__Group_0__0__Impl6907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__1__Impl_in_rule__SigConstruct__Group_0__16937 = new BitSet(new long[]{0x0000000000098000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__2_in_rule__SigConstruct__Group_0__16940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_0__1__Impl6968 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__2__Impl_in_rule__SigConstruct__Group_0__26999 = new BitSet(new long[]{0x000000004007DFF0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__3_in_rule__SigConstruct__Group_0__27002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Alternatives_0_2_in_rule__SigConstruct__Group_0__2__Impl7029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_0__3__Impl_in_rule__SigConstruct__Group_0__37059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_0__3__Impl7087 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__0__Impl_in_rule__SigConstruct__Group_1__07126 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__1_in_rule__SigConstruct__Group_1__07129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SigConstruct__Group_1__0__Impl7157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__1__Impl_in_rule__SigConstruct__Group_1__17188 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__2_in_rule__SigConstruct__Group_1__17191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__SigConstruct__Group_1__1__Impl7219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__2__Impl_in_rule__SigConstruct__Group_1__27250 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__3_in_rule__SigConstruct__Group_1__27253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_1__2__Impl7283 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_1__2__Impl7296 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__3__Impl_in_rule__SigConstruct__Group_1__37329 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__4_in_rule__SigConstruct__Group_1__37332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__NamespaceAssignment_1_3_in_rule__SigConstruct__Group_1__3__Impl7359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1__4__Impl_in_rule__SigConstruct__Group_1__47389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1_4__0_in_rule__SigConstruct__Group_1__4__Impl7416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1_4__0__Impl_in_rule__SigConstruct__Group_1_4__07457 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1_4__1_in_rule__SigConstruct__Group_1_4__07460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_1_4__0__Impl7490 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_1_4__0__Impl7503 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_1_4__1__Impl_in_rule__SigConstruct__Group_1_4__17536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_rule__SigConstruct__Group_1_4__1__Impl7563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__0__Impl_in_rule__SigConstruct__Group_2__07596 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__1_in_rule__SigConstruct__Group_2__07599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SigConstruct__Group_2__0__Impl7627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__1__Impl_in_rule__SigConstruct__Group_2__17658 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__2_in_rule__SigConstruct__Group_2__17661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__SigConstruct__Group_2__1__Impl7689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__2__Impl_in_rule__SigConstruct__Group_2__27720 = new BitSet(new long[]{0x0000000000011F00L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__3_in_rule__SigConstruct__Group_2__27723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__2__Impl7753 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__2__Impl7766 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__3__Impl_in_rule__SigConstruct__Group_2__37799 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__4_in_rule__SigConstruct__Group_2__37802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__StructNameAssignment_2_3_in_rule__SigConstruct__Group_2__3__Impl7829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__4__Impl_in_rule__SigConstruct__Group_2__47859 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__5_in_rule__SigConstruct__Group_2__47862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__SigConstruct__Group_2__4__Impl7890 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__5__Impl_in_rule__SigConstruct__Group_2__57921 = new BitSet(new long[]{0x000000004007DFF0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__6_in_rule__SigConstruct__Group_2__57924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Alternatives_2_5_in_rule__SigConstruct__Group_2__5__Impl7951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__6__Impl_in_rule__SigConstruct__Group_2__67981 = new BitSet(new long[]{0x000000004007DFF0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__7_in_rule__SigConstruct__Group_2__67984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_2__6__Impl8012 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_2__7__Impl_in_rule__SigConstruct__Group_2__78043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__IncOptAssignment_2_7_in_rule__SigConstruct__Group_2__7__Impl8070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__0__Impl_in_rule__SigConstruct__Group_3__08117 = new BitSet(new long[]{0x0000000007F00000L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__1_in_rule__SigConstruct__Group_3__08120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SigConstruct__Group_3__0__Impl8148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__1__Impl_in_rule__SigConstruct__Group_3__18179 = new BitSet(new long[]{0x000000004007DFF0L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__2_in_rule__SigConstruct__Group_3__18182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__TmpAssignment_3_1_in_rule__SigConstruct__Group_3__1__Impl8209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__Group_3__2__Impl_in_rule__SigConstruct__Group_3__28239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__SigConstruct__Group_3__2__Impl8267 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__0__Impl_in_rule__IncludeOps__Group__08304 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__1_in_rule__IncludeOps__Group__08307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__IncludeOps__Group__0__Impl8335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__1__Impl_in_rule__IncludeOps__Group__18366 = new BitSet(new long[]{0x000000004007DFF0L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__2_in_rule__IncludeOps__Group__18369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__IncludeOps__Group__1__Impl8397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IncludeOps__Group__2__Impl_in_rule__IncludeOps__Group__28428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rule__IncludeOps__Group__2__Impl8456 = new BitSet(new long[]{0x000000004007DFF2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__0__Impl_in_rule__ViewDeclaration__Group__08493 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__1_in_rule__ViewDeclaration__Group__08496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ViewDeclaration__Group__0__Impl8524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__1__Impl_in_rule__ViewDeclaration__Group__18555 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__2_in_rule__ViewDeclaration__Group__18558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__ViewDeclaration__Group__1__Impl8586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__2__Impl_in_rule__ViewDeclaration__Group__28617 = new BitSet(new long[]{0x0000000000011F00L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__3_in_rule__ViewDeclaration__Group__28620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__2__Impl8650 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__2__Impl8663 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__3__Impl_in_rule__ViewDeclaration__Group__38696 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__4_in_rule__ViewDeclaration__Group__38699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__ViewIDAssignment_3_in_rule__ViewDeclaration__Group__3__Impl8726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__4__Impl_in_rule__ViewDeclaration__Group__48756 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__5_in_rule__ViewDeclaration__Group__48759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__4__Impl8787 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__5__Impl_in_rule__ViewDeclaration__Group__58818 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__6_in_rule__ViewDeclaration__Group__58821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__ViewDeclaration__Group__5__Impl8849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__6__Impl_in_rule__ViewDeclaration__Group__68880 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__7_in_rule__ViewDeclaration__Group__68883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__6__Impl8911 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__7__Impl_in_rule__ViewDeclaration__Group__78942 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__8_in_rule__ViewDeclaration__Group__78945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__FromAssignment_7_in_rule__ViewDeclaration__Group__7__Impl8972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__8__Impl_in_rule__ViewDeclaration__Group__89002 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__9_in_rule__ViewDeclaration__Group__89005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__8__Impl9033 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__9__Impl_in_rule__ViewDeclaration__Group__99064 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__10_in_rule__ViewDeclaration__Group__99067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__ViewDeclaration__Group__9__Impl9095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__10__Impl_in_rule__ViewDeclaration__Group__109126 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__11_in_rule__ViewDeclaration__Group__109129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__10__Impl9157 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__11__Impl_in_rule__ViewDeclaration__Group__119188 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__12_in_rule__ViewDeclaration__Group__119191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__ToAssignment_11_in_rule__ViewDeclaration__Group__11__Impl9218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__12__Impl_in_rule__ViewDeclaration__Group__129248 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__13_in_rule__ViewDeclaration__Group__129251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__12__Impl9279 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__13__Impl_in_rule__ViewDeclaration__Group__139310 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__14_in_rule__ViewDeclaration__Group__139313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ViewDeclaration__Group__13__Impl9341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__14__Impl_in_rule__ViewDeclaration__Group__149372 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__15_in_rule__ViewDeclaration__Group__149375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__14__Impl9403 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__15__Impl_in_rule__ViewDeclaration__Group__159434 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__16_in_rule__ViewDeclaration__Group__159437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__ViewDefsAssignment_15_in_rule__ViewDeclaration__Group__15__Impl9464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__16__Impl_in_rule__ViewDeclaration__Group__169494 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__17_in_rule__ViewDeclaration__Group__169497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__16__Impl9525 = new BitSet(new long[]{0x00000000000400F2L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__17__Impl_in_rule__ViewDeclaration__Group__179556 = new BitSet(new long[]{0x00000000000400F0L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__18_in_rule__ViewDeclaration__Group__179559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__ViewDeclaration__Group__17__Impl9587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewDeclaration__Group__18__Impl_in_rule__ViewDeclaration__Group__189618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__ViewDeclaration__Group__18__Impl9645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__DeclarationsAlternatives_0_in_rule__Model__DeclarationsAssignment9717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWS_in_rule__JUSTSPACE__JAssignment9750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CID_in_rule__NamespaceDeclaration__NameAssignment_3_09781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleURISTRING_in_rule__NamespaceDeclaration__UriAssignment_49812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleURISTRING_in_rule__ReadDeclaration__FileAssignment_39843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGID_in_rule__SignatureDeclaration__SigNameAssignment_39874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_rule__SignatureDeclaration__DefsAssignment_79905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_rule__SigDefinitions__ConsAssignment_29936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_rule__SigDefinitions__FconsAssignment_3_29967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGID_in_rule__SigConstruct__SymbNameAssignment_0_09998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__SigConstruct__NamespaceAssignment_1_310029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGID_in_rule__SigConstruct__StructNameAssignment_2_310060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_rule__SigConstruct__IncOptAssignment_2_710091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SigConstruct__TmpAlternatives_3_1_0_in_rule__SigConstruct__TmpAssignment_3_110122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGID_in_rule__ViewDeclaration__ViewIDAssignment_310156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__FromAssignment_710187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_rule__ViewDeclaration__ToAssignment_1110218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_rule__ViewDeclaration__ViewDefsAssignment_1510249 = new BitSet(new long[]{0x0000000000000002L});
 
 }
