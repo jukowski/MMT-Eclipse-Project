@@ -24,23 +24,29 @@ public class ParserTest {
 			"\n" + 
 			"%sig A' = {\n" + 
 			"   %include t.A.\n  " +
-			"%struct types  : Level  %open cl  %as tp \n" + 
+			"%struct types  : Level  %open cl  %as tp .\n" + 
 			"%meta pf.DFOL.\n" + 
 			"\n" + 
 			"%{ extensionality }%\n\n\n" + 
 			"  %struct dom : Category.\n" + 
-			"  %struct cod : Category.\n" +
+			"  %struct cod : Category. \n " +
+			"== : exp A -> exp A -> type.    %infix none 50 ==.\n" + 
+			"\n" +
 			"  # := ded in.\n" + 
 			"\n" +
 			"  forall' := a.\n  " +
 			"forall0 := ... . %% fails  \n" + 
 			"  FO : dom.Obj -> cod.Obj.\n" + 
 			"  FM : A dom.--> B -> (FO A) cod.--> (FO B)." + 
-			"   c': a.\n" + 
+			"   c' : a.\n" +
+			"   cong  : A == B -> {F : exp C -> exp D. } (F A) == (F B).\n" +
+			"  %struct types := types.\n" + 
 			"}.\n" + 
 			"\n" + 
 			"%view v : A -> t.A = {\n" + 
-			"   c := c.\n" + 
+			"   c := c.\n" +
+			"  wff_∧:= a.\n" + 
+			"  And : {A :o} (ded A -> o) -> o.               %infix left 10 And.\n" + 
 			"}.\n" + 
 			""; 
 
@@ -71,8 +77,15 @@ public class ParserTest {
 			}
 		};
 
+		String [] lines = src.split("\n");
 		for (INode t : res.getSyntaxErrors()) {
-			System.out.println("Error "+t.getSyntaxErrorMessage().getMessage());
+			System.out.println("Error "+t.getSyntaxErrorMessage().getMessage()+ " at ");
+			int sl = t.getStartLine();
+			if (sl>0)
+				System.out.println(lines[sl-1]);
+			System.out.println(lines[sl]);
+			if (sl<lines.length-1)
+				System.out.println(lines[sl+1]);
 			System.out.println(t.getText());
 		}
 	}
