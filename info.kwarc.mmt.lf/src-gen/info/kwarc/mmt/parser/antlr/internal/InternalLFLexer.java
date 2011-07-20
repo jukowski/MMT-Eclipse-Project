@@ -309,10 +309,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:7: ( ':=' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:9: ':='
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:7: ( 'meta' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:9: 'meta'
             {
-            match(":="); 
+            match("meta"); 
 
 
             }
@@ -330,10 +330,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:7: ( 'include' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:9: 'include'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:7: ( 'abbrev' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:9: 'abbrev'
             {
-            match("include"); 
+            match("abbrev"); 
 
 
             }
@@ -351,10 +351,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:7: ( 'struct' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:9: 'struct'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:7: ( 'name' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:9: 'name'
             {
-            match("struct"); 
+            match("name"); 
 
 
             }
@@ -372,10 +372,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:7: ( 'meta' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:9: 'meta'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:7: ( 'pattern' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:9: 'pattern'
             {
-            match("meta"); 
+            match("pattern"); 
 
 
             }
@@ -393,10 +393,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:7: ( 'abbrev' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:9: 'abbrev'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:7: ( 'infix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:9: 'infix'
             {
-            match("abbrev"); 
+            match("infix"); 
 
 
             }
@@ -414,10 +414,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:7: ( 'name' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:9: 'name'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:7: ( 'prefix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:9: 'prefix'
             {
-            match("name"); 
+            match("prefix"); 
 
 
             }
@@ -435,10 +435,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:7: ( 'pattern' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:9: 'pattern'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:7: ( 'postfix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:9: 'postfix'
             {
-            match("pattern"); 
+            match("postfix"); 
 
 
             }
@@ -456,10 +456,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:7: ( 'infix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:9: 'infix'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:7: ( ':=' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:9: ':='
             {
-            match("infix"); 
+            match(":="); 
 
 
             }
@@ -477,10 +477,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:7: ( 'prefix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:9: 'prefix'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:7: ( 'include' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:9: 'include'
             {
-            match("prefix"); 
+            match("include"); 
 
 
             }
@@ -498,10 +498,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:7: ( 'postfix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:9: 'postfix'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:7: ( 'struct' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:9: 'struct'
             {
-            match("postfix"); 
+            match("struct"); 
 
 
             }
@@ -561,10 +561,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1727:10: ( ( '0' .. '9' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1727:12: ( '0' .. '9' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:10: ( ( '0' .. '9' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:12: ( '0' .. '9' )+
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1727:12: ( '0' .. '9' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:12: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -578,7 +578,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1727:13: '0' .. '9'
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -610,8 +610,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_SP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1729:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1729:11: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1839:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1839:11: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -638,8 +638,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_DOUBLEDOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1731:16: ( '..' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1731:18: '..'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1841:16: ( '..' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1841:18: '..'
             {
             match(".."); 
 
@@ -659,11 +659,11 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_MULTIPLEDOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1733:18: ( RULE_DOUBLEDOT ( '.' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1733:20: RULE_DOUBLEDOT ( '.' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:18: ( RULE_DOUBLEDOT ( '.' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:20: RULE_DOUBLEDOT ( '.' )+
             {
             mRULE_DOUBLEDOT(); 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1733:35: ( '.' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:35: ( '.' )+
             int cnt2=0;
             loop2:
             do {
@@ -677,7 +677,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1733:35: '.'
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:35: '.'
             	    {
             	    match('.'); 
 
@@ -709,10 +709,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_CID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1735:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1735:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1735:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
             int cnt3=0;
             loop3:
             do {
@@ -766,12 +766,12 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1737:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1737:19: '%{' ( options {greedy=false; } : . )* '}%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:19: '%{' ( options {greedy=false; } : . )* '}%'
             {
             match("%{"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1737:24: ( options {greedy=false; } : . )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:24: ( options {greedy=false; } : . )*
             loop4:
             do {
                 int alt4=2;
@@ -796,7 +796,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1737:52: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:52: .
             	    {
             	    matchAny(); 
 
@@ -826,12 +826,12 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ML2_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1739:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1739:20: '%*' ( options {greedy=false; } : . )* '*%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:20: '%*' ( options {greedy=false; } : . )* '*%'
             {
             match("%*"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1739:25: ( options {greedy=false; } : . )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:25: ( options {greedy=false; } : . )*
             loop5:
             do {
                 int alt5=2;
@@ -856,7 +856,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1739:53: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:53: .
             	    {
             	    matchAny(); 
 
@@ -886,8 +886,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:17: ( '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:19: '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:17: ( '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:19: '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('%'); 
             if ( input.LA(1)==' '||input.LA(1)=='%' ) {
@@ -899,7 +899,7 @@ public class InternalLFLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:33: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:33: (~ ( ( '\\n' | '\\r' ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -912,7 +912,7 @@ public class InternalLFLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:33: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:33: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -932,7 +932,7 @@ public class InternalLFLexer extends Lexer {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:49: ( ( '\\r' )? '\\n' )?
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:49: ( ( '\\r' )? '\\n' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -941,9 +941,9 @@ public class InternalLFLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:50: ( '\\r' )? '\\n'
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: ( '\\r' )? '\\n'
                     {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:50: ( '\\r' )?
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: ( '\\r' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -952,7 +952,7 @@ public class InternalLFLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1741:50: '\\r'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: '\\r'
                             {
                             match('\r'); 
 
@@ -984,8 +984,8 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1743:16: ( . )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1743:18: .
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1853:16: ( . )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1853:18: .
             {
             matchAny(); 
 
@@ -1245,45 +1245,45 @@ public class InternalLFLexer extends Lexer {
     static final String DFA9_eotS =
         "\2\uffff\1\31\1\33\1\uffff\1\40\1\42\1\uffff\2\42\2\uffff\7\42\1"+
         "\62\4\uffff\1\65\10\uffff\1\42\2\uffff\1\42\3\uffff\12\42\1\uffff"+
-        "\1\62\3\uffff\2\42\1\106\12\42\1\122\1\123\1\uffff\3\42\1\127\4"+
-        "\42\1\134\1\135\1\42\2\uffff\2\42\1\141\1\uffff\4\42\2\uffff\1\42"+
-        "\1\147\1\42\1\uffff\1\151\1\42\1\153\2\42\1\uffff\1\156\1\uffff"+
-        "\1\157\1\uffff\1\160\1\42\3\uffff\1\162\1\uffff";
+        "\1\62\3\uffff\2\42\1\106\12\42\1\122\1\123\1\uffff\1\42\1\125\6"+
+        "\42\1\134\1\135\1\42\2\uffff\1\42\1\uffff\4\42\1\144\1\42\2\uffff"+
+        "\1\42\1\147\1\150\1\42\1\152\1\42\1\uffff\2\42\2\uffff\1\156\1\uffff"+
+        "\1\157\1\160\1\42\3\uffff\1\162\1\uffff";
     static final String DFA9_eofS =
         "\163\uffff";
     static final String DFA9_minS =
         "\1\0\1\uffff\1\56\1\75\1\uffff\1\40\1\141\1\uffff\1\145\1\76\2\uffff"+
-        "\1\151\1\156\1\145\1\142\1\141\1\160\1\151\1\43\4\uffff\1\56\10"+
-        "\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\143\1\164\1\142"+
-        "\1\164\1\145\1\163\2\145\1\uffff\1\43\3\uffff\1\145\1\144\1\43\1"+
-        "\165\1\154\1\151\1\141\1\162\1\164\1\146\1\164\1\156\1\167\2\43"+
-        "\1\uffff\1\143\1\165\1\170\1\43\2\145\1\151\1\146\2\43\1\160\2\uffff"+
-        "\1\164\1\144\1\43\1\uffff\1\166\1\162\1\170\1\151\2\uffff\1\141"+
-        "\1\43\1\145\1\uffff\1\43\1\156\1\43\1\170\1\143\1\uffff\1\43\1\uffff"+
-        "\1\43\1\uffff\1\43\1\145\3\uffff\1\43\1\uffff";
+        "\1\151\1\145\1\142\1\141\1\156\1\160\1\151\1\43\4\uffff\1\56\10"+
+        "\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\164\1\142\1\164"+
+        "\1\145\1\163\1\143\2\145\1\uffff\1\43\3\uffff\1\145\1\144\1\43\1"+
+        "\165\1\141\1\162\1\164\1\146\1\164\1\151\1\154\1\156\1\167\2\43"+
+        "\1\uffff\1\143\1\43\2\145\1\151\1\146\1\170\1\165\2\43\1\160\2\uffff"+
+        "\1\164\1\uffff\1\166\1\162\1\170\1\151\1\43\1\144\2\uffff\1\141"+
+        "\2\43\1\156\1\43\1\170\1\uffff\1\145\1\143\2\uffff\1\43\1\uffff"+
+        "\2\43\1\145\3\uffff\1\43\1\uffff";
     static final String DFA9_maxS =
         "\1\uffff\1\uffff\1\56\1\75\1\uffff\1\173\1\141\1\uffff\1\145\1\76"+
-        "\2\uffff\1\164\1\156\1\145\1\142\1\162\1\160\1\151\1\172\4\uffff"+
-        "\1\56\10\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\146\1\164"+
-        "\1\142\1\164\1\145\1\163\2\145\1\uffff\1\172\3\uffff\1\145\1\144"+
-        "\1\172\1\165\1\154\1\151\1\141\1\162\1\164\1\146\1\164\1\156\1\167"+
-        "\2\172\1\uffff\1\143\1\165\1\170\1\172\2\145\1\151\1\146\2\172\1"+
-        "\160\2\uffff\1\164\1\144\1\172\1\uffff\1\166\1\162\1\170\1\151\2"+
-        "\uffff\1\141\1\172\1\145\1\uffff\1\172\1\156\1\172\1\170\1\143\1"+
-        "\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\145\3\uffff\1\172\1\uffff";
+        "\2\uffff\1\164\1\145\1\142\1\162\1\156\1\160\1\151\1\172\4\uffff"+
+        "\1\56\10\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\164\1\142"+
+        "\1\164\1\145\1\163\1\146\2\145\1\uffff\1\172\3\uffff\1\145\1\144"+
+        "\1\172\1\165\1\141\1\162\1\164\1\146\1\164\1\151\1\154\1\156\1\167"+
+        "\2\172\1\uffff\1\143\1\172\2\145\1\151\1\146\1\170\1\165\2\172\1"+
+        "\160\2\uffff\1\164\1\uffff\1\166\1\162\1\170\1\151\1\172\1\144\2"+
+        "\uffff\1\141\2\172\1\156\1\172\1\170\1\uffff\1\145\1\143\2\uffff"+
+        "\1\172\1\uffff\2\172\1\145\3\uffff\1\172\1\uffff";
     static final String DFA9_acceptS =
         "\1\uffff\1\1\2\uffff\1\4\2\uffff\1\7\2\uffff\1\12\1\13\10\uffff"+
-        "\1\32\1\35\1\41\1\1\1\uffff\1\2\1\15\1\3\1\4\1\36\1\37\1\40\1\5"+
+        "\1\32\1\35\1\41\1\1\1\uffff\1\2\1\24\1\3\1\4\1\36\1\37\1\40\1\5"+
         "\1\uffff\1\35\1\7\1\uffff\1\11\1\12\1\13\12\uffff\1\31\1\uffff\1"+
-        "\32\1\33\1\34\17\uffff\1\14\13\uffff\1\22\1\10\3\uffff\1\20\4\uffff"+
-        "\1\27\1\30\3\uffff\1\24\5\uffff\1\17\1\uffff\1\21\1\uffff\1\25\2"+
-        "\uffff\1\16\1\23\1\26\1\uffff\1\6";
+        "\32\1\33\1\34\17\uffff\1\14\13\uffff\1\17\1\10\1\uffff\1\15\6\uffff"+
+        "\1\27\1\30\6\uffff\1\21\2\uffff\1\26\1\16\1\uffff\1\22\3\uffff\1"+
+        "\20\1\23\1\25\1\uffff\1\6";
     static final String DFA9_specialS =
         "\1\0\162\uffff}>";
     static final String[] DFA9_transitionS = {
             "\11\26\2\24\2\26\1\24\22\26\1\24\1\26\1\4\1\25\1\26\1\5\7\26"+
             "\1\11\1\2\1\1\12\23\1\3\2\26\1\7\1\26\1\25\1\26\32\25\4\26\1"+
-            "\25\1\26\1\17\7\25\1\15\3\25\1\16\1\6\1\21\1\20\1\25\1\10\1"+
+            "\25\1\26\1\16\7\25\1\20\3\25\1\15\1\6\1\21\1\17\1\25\1\10\1"+
             "\14\2\25\1\22\4\25\1\12\1\26\1\13\uff82\26",
             "",
             "\1\30",
@@ -1299,8 +1299,8 @@ public class InternalLFLexer extends Lexer {
             "\1\50\12\uffff\1\51",
             "\1\52",
             "\1\53",
-            "\1\54",
-            "\1\55\15\uffff\1\57\2\uffff\1\56",
+            "\1\54\15\uffff\1\56\2\uffff\1\55",
+            "\1\57",
             "\1\60",
             "\1\61",
             "\1\42\11\uffff\1\42\2\uffff\12\63\5\uffff\1\42\1\uffff\32\42"+
@@ -1327,12 +1327,12 @@ public class InternalLFLexer extends Lexer {
             "",
             "\1\71",
             "\1\72",
-            "\1\73\2\uffff\1\74",
+            "\1\73",
+            "\1\74",
             "\1\75",
             "\1\76",
             "\1\77",
-            "\1\100",
-            "\1\101",
+            "\1\101\2\uffff\1\100",
             "\1\102",
             "\1\103",
             "",
@@ -1361,10 +1361,10 @@ public class InternalLFLexer extends Lexer {
             "\4\uffff\1\42\1\uffff\32\42",
             "",
             "\1\124",
-            "\1\125",
-            "\1\126",
             "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
             "\4\uffff\1\42\1\uffff\32\42",
+            "\1\126",
+            "\1\127",
             "\1\130",
             "\1\131",
             "\1\132",
@@ -1377,35 +1377,35 @@ public class InternalLFLexer extends Lexer {
             "",
             "",
             "\1\137",
-            "\1\140",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
             "",
+            "\1\140",
+            "\1\141",
             "\1\142",
             "\1\143",
-            "\1\144",
+            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
+            "\4\uffff\1\42\1\uffff\32\42",
             "\1\145",
             "",
             "",
             "\1\146",
             "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
             "\4\uffff\1\42\1\uffff\32\42",
-            "\1\150",
+            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
+            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\151",
+            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
+            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\153",
             "",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\152",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
             "\1\154",
             "\1\155",
             "",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
             "",
             "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
             "\4\uffff\1\42\1\uffff\32\42",
             "",
+            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
+            "\4\uffff\1\42\1\uffff\32\42",
             "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
             "\4\uffff\1\42\1\uffff\32\42",
             "\1\161",
@@ -1481,13 +1481,13 @@ public class InternalLFLexer extends Lexer {
 
                         else if ( (LA9_0=='s') ) {s = 12;}
 
-                        else if ( (LA9_0=='i') ) {s = 13;}
+                        else if ( (LA9_0=='m') ) {s = 13;}
 
-                        else if ( (LA9_0=='m') ) {s = 14;}
+                        else if ( (LA9_0=='a') ) {s = 14;}
 
-                        else if ( (LA9_0=='a') ) {s = 15;}
+                        else if ( (LA9_0=='p') ) {s = 15;}
 
-                        else if ( (LA9_0=='p') ) {s = 16;}
+                        else if ( (LA9_0=='i') ) {s = 16;}
 
                         else if ( (LA9_0=='o') ) {s = 17;}
 

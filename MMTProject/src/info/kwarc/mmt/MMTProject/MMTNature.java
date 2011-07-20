@@ -5,6 +5,8 @@ import info.kwarc.mmt.api.wrappers.MMTReport;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
 
 import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IFile;
@@ -29,6 +31,24 @@ public class MMTNature implements IProjectNature {
 	
 	public MMTNature() {
 		logForwarder = new NatureLogForwarder();
+	}
+	
+	public List<String> computeAuto(String URI, String prefix) {
+		ArrayList<String> result = new ArrayList<String>();
+		info.kwarc.mmt.api.wrappers.MMTModule mod = getController().getModule(URI);
+		List<info.kwarc.mmt.api.wrappers.MMTCompletion> rr = mod.getSymbols(prefix);
+		for (info.kwarc.mmt.api.wrappers.MMTCompletion c : rr) {
+			if (c.getChildren().size()==0)
+				result.add(c.getTop());
+			else {
+				for (String suffix: c.getChildren()) {
+					if (suffix.startsWith("["))
+						continue;
+					result.add(c.getTop()+"/"+suffix);
+				}
+			}
+		}
+		return result;
 	}
 	
 	class NatureLogForwarder implements MMTReport {
@@ -65,7 +85,7 @@ public class MMTNature implements IProjectNature {
 				controller = null;
 			} else {
 				controller.setCompiler(twelf_compiler);
-				controller.RegisterArchive(project.getLocation().toFile());
+				controller.RegisterArchive(new File(project.getLocation().toOSString()));
 			}
 			IFolder folder = getProject().getFolder("mars/");
 			for (IResource res : folder.members()) {

@@ -5,7 +5,6 @@
  */
 package info.kwarc.mmt.lF;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface viewDeclaration extends EObject
+public interface viewDeclaration extends TempType
 {
   /**
    * Returns the value of the '<em><b>View ID</b></em>' attribute.

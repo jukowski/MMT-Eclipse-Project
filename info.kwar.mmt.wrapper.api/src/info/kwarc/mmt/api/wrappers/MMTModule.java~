@@ -1,0 +1,40 @@
+package info.kwarc.mmt.api.wrappers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import info.kwarc.mmt.api.Content;
+import info.kwarc.mmt.api.LocalName;
+import info.kwarc.mmt.api.frontend.Controller;
+import info.kwarc.mmt.api.libraries.Completion;
+import info.kwarc.mmt.api.libraries.Names$;
+import info.kwarc.mmt.api.objects.OMMOD;
+
+import info.kwarc.mmt.api.wrappers.Utils;
+
+public class MMTModule {
+
+	OMMOD module;
+	Controller controller;
+	List<Completion> comps;
+	
+	public MMTModule(OMMOD module, Controller controller) {
+		this.controller = controller;
+		this.module = module;
+		ArrayList<String> str = new ArrayList<String>();
+		str.add("");
+		comps = Utils.MapScala2Java(Names$.MODULE$.resolve(module, Utils.ListJava2Scala(str), controller.library()));
+		
+	}
+	
+	public List<String> getSymbols() {
+		ArrayList<String> result = new ArrayList<String>();
+		for (Completion c : comps) {
+			List<LocalName> names = Utils.ListScala2Java(c.completions());
+			for (LocalName name: names) {
+				result.add(name.toString());
+			}
+		}
+		return null;
+	}
+}

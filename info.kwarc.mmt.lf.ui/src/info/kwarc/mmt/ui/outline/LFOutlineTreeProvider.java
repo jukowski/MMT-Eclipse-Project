@@ -3,6 +3,11 @@
 */
 package info.kwarc.mmt.ui.outline;
 
+import info.kwarc.mmt.lF.JUSTSPACE;
+import info.kwarc.mmt.lF.sigConstruct;
+import info.kwarc.mmt.lF.sigDefinitions;
+
+import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 
 /**
@@ -11,4 +16,14 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
  */
 public class LFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	
+	public void _createNode(IOutlineNode parentNode, JUSTSPACE jspace) {
+		
+	}
+
+	public void _createNode(IOutlineNode parentNode, sigDefinitions defs) {
+		for (sigConstruct constr : defs.getConstucts()) {
+			createNode(parentNode, constr);
+		} 
+	}
+
 }

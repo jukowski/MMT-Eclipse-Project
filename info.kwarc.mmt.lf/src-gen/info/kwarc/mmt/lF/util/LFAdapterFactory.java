@@ -113,6 +113,21 @@ public class LFAdapterFactory extends AdapterFactoryImpl
         return createsigConstructAdapter();
       }
       @Override
+      public Adapter caseclassicSymbolConstruct(classicSymbolConstruct object)
+      {
+        return createclassicSymbolConstructAdapter();
+      }
+      @Override
+      public Adapter caseincludeConstruct(includeConstruct object)
+      {
+        return createincludeConstructAdapter();
+      }
+      @Override
+      public Adapter casestructConstruct(structConstruct object)
+      {
+        return createstructConstructAdapter();
+      }
+      @Override
       public Adapter caseTempType(TempType object)
       {
         return createTempTypeAdapter();
@@ -245,6 +260,51 @@ public class LFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createsigConstructAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.classicSymbolConstruct <em>classic Symbol Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see info.kwarc.mmt.lF.classicSymbolConstruct
+   * @generated
+   */
+  public Adapter createclassicSymbolConstructAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.includeConstruct <em>include Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see info.kwarc.mmt.lF.includeConstruct
+   * @generated
+   */
+  public Adapter createincludeConstructAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link info.kwarc.mmt.lF.structConstruct <em>struct Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see info.kwarc.mmt.lF.structConstruct
+   * @generated
+   */
+  public Adapter createstructConstructAdapter()
   {
     return null;
   }

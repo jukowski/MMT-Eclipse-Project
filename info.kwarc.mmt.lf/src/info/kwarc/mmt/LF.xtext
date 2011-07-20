@@ -38,22 +38,22 @@ SOMETHING2: ANY_OTHER | CID | INT | '.' | ':' | '=' | '->' | '%' | '{' SOMETHING
 sigOps : ('%' 'meta' | '%' 'abbrev') SOMETHING* '.' WS;
 
 
-signatureDeclaration: '%' 'sig' WS+ sigName=GID WS* '=' WS*  
+signatureDeclaration: ('%' 'sig' WS+ sigName=GID) WS* '=' WS*  
 					defs=sigDefinitions   WS* '.'; 
 
 
-sigDefinitions : '{' WS* cons=sigConstruct ('.' WS+ fcons+=sigConstruct)* ('.' WS*)? '}';
+sigDefinitions : '{' WS* constucts+=sigConstruct ('.' WS+ constucts+=sigConstruct)* ('.' WS*)? '}';
 
-sigConstruct : (symbName=GID WS* (':' | ':=' | '=') SOMETHING*) |
-				 ('%' 'include' WS+ namespace=NAMESPACE (WS+ includeOps)?) |
-				 ('%' 'struct' WS+ structName = GID WS* (':' | ':=') SOMETHING* incOpt=includeOps? ) |
+sigConstruct : classicSymbolConstruct | includeConstruct | structConstruct | 
 				 ('%' tmp=('meta' | 'abbrev' | 'name' | 'pattern' | 'infix' | 'prefix' | 'postfix' )  SOMETHING*) 
 				 ;
 				 
-				 
+classicSymbolConstruct : symbName=GID WS* (':' | ':=' | '=') SOMETHING*;
+includeConstruct : '%' 'include' WS+ namespace=[signatureDeclaration|NAMESPACE] (WS+ includeOps)?;
+structConstruct : '%' 'struct' WS+ structName = GID WS* (':' | ':=') WS* namespace=[signatureDeclaration|NAMESPACE] SOMETHING* incOpt=includeOps? ;
 
 includeOps : ('%' 'open' SOMETHING*);
 
-TempType : {namespaceDeclaration} | {signatureDeclaration} | fullURI = GID;
+TempType : {namespaceDeclaration} | {signatureDeclaration} | {viewDeclaration} | {includeConstruct} | fullURI = GID;
 
 viewDeclaration: '%' 'view' WS+ viewID=GID WS* ':' WS* from=NAMESPACE WS*'->' WS* to=NAMESPACE WS* '=' WS* viewDefs=sigDefinitions WS* '.' WS;

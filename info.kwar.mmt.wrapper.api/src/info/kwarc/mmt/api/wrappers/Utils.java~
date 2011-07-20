@@ -1,0 +1,22 @@
+package info.kwarc.mmt.api.wrappers;
+
+import scala.collection.JavaConverters$;
+import scala.collection.immutable.List;
+import scalaj.collection.j2s.ListWrapper;
+
+
+public class Utils {
+	public static <E> List<E> ListJava2Scala(java.util.List<E> list) {
+		ListWrapper<E> wrapper = new ListWrapper<E>(list);
+		return wrapper.toSeq().toList();
+	}
+	
+	public static <E> java.util.List<E> ListScala2Java(List<E> list) {
+		return JavaConverters$.MODULE$.asJavaMapConverter(arch.properties()).asJava();
+	}
+
+	public static <E> java.util.List<E> MapScala2Java(List<E> list) {
+		return JavaConverters$.MODULE$.asJavaMapConverter(arch.properties()).asJava();
+	}
+
+}

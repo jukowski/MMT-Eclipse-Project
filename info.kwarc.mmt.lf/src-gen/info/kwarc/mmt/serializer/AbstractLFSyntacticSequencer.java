@@ -16,20 +16,22 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected LFGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_includeConstruct_WSParserRuleCall_2_p;
+	protected AbstractElementAlias match_includeConstruct_WSParserRuleCall_4_0_p;
 	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_2_p;
 	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a;
 	protected AbstractElementAlias match_namespaceDeclaration_WSParserRuleCall_5_a;
 	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_2_p;
 	protected AbstractElementAlias match_readDeclaration_WSParserRuleCall_4_a;
 	protected AbstractElementAlias match_sigConstruct_SOMETHINGParserRuleCall_3_2_p;
-	protected AbstractElementAlias match_sigConstruct_WSParserRuleCall_1_2_p;
-	protected AbstractElementAlias match_sigConstruct_WSParserRuleCall_2_2_p;
-	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_1_p;
 	protected AbstractElementAlias match_sigDefinitions_WSParserRuleCall_3_1_p;
 	protected AbstractElementAlias match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_2_p;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p;
-	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_8_a;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_0_2_p;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_1_a_EqualsSignKeyword_2_WSParserRuleCall_3_p;
+	protected AbstractElementAlias match_signatureDeclaration_WSParserRuleCall_5_a;
+	protected AbstractElementAlias match_structConstruct_SOMETHINGParserRuleCall_8_a;
+	protected AbstractElementAlias match_structConstruct_SOMETHINGParserRuleCall_8_p;
+	protected AbstractElementAlias match_structConstruct_WSParserRuleCall_2_p;
 	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_12_a;
 	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_16_a;
 	protected AbstractElementAlias match_viewDeclaration_WSParserRuleCall_2_p;
@@ -39,20 +41,22 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (LFGrammarAccess) access;
+		match_includeConstruct_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_2());
+		match_includeConstruct_WSParserRuleCall_4_0_p = new TokenAlias(false, true, grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_4_0());
 		match_namespaceDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_2());
 		match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_1()), new TokenAlias(false, false, grammarAccess.getNamespaceDeclarationAccess().getEqualsSignKeyword_3_2()), new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_3_3()));
 		match_namespaceDeclaration_WSParserRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getNamespaceDeclarationAccess().getWSParserRuleCall_5());
 		match_readDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_2());
 		match_readDeclaration_WSParserRuleCall_4_a = new TokenAlias(true, true, grammarAccess.getReadDeclarationAccess().getWSParserRuleCall_4());
 		match_sigConstruct_SOMETHINGParserRuleCall_3_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_3_2());
-		match_sigConstruct_WSParserRuleCall_1_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2());
-		match_sigConstruct_WSParserRuleCall_2_2_p = new TokenAlias(false, true, grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2());
-		match_sigDefinitions_WSParserRuleCall_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1());
 		match_sigDefinitions_WSParserRuleCall_3_1_p = new TokenAlias(false, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1());
 		match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_4_0()), new TokenAlias(true, true, grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_4_1()));
-		match_signatureDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2());
-		match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5()), new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()));
-		match_signatureDeclaration_WSParserRuleCall_8_a = new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8());
+		match_signatureDeclaration_WSParserRuleCall_0_2_p = new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_0_2());
+		match_signatureDeclaration_WSParserRuleCall_1_a_EqualsSignKeyword_2_WSParserRuleCall_3_p = new GroupAlias(false, false, new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()), new TokenAlias(false, false, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_2()), new TokenAlias(false, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()));
+		match_signatureDeclaration_WSParserRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5());
+		match_structConstruct_SOMETHINGParserRuleCall_8_a = new TokenAlias(true, true, grammarAccess.getStructConstructAccess().getSOMETHINGParserRuleCall_8());
+		match_structConstruct_SOMETHINGParserRuleCall_8_p = new TokenAlias(false, true, grammarAccess.getStructConstructAccess().getSOMETHINGParserRuleCall_8());
+		match_structConstruct_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getStructConstructAccess().getWSParserRuleCall_2());
 		match_viewDeclaration_WSParserRuleCall_12_a = new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12());
 		match_viewDeclaration_WSParserRuleCall_16_a = new TokenAlias(true, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_16());
 		match_viewDeclaration_WSParserRuleCall_2_p = new TokenAlias(false, true, grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2());
@@ -91,7 +95,11 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (!transition.isSyntacticallyAmbiguous())
 			return;
-		if(match_namespaceDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+		if(match_includeConstruct_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_includeConstruct_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_includeConstruct_WSParserRuleCall_4_0_p.equals(transition.getAmbiguousSyntax()))
+			emit_includeConstruct_WSParserRuleCall_4_0_p(semanticObject, transition, fromNode, toNode);
+		else if(match_namespaceDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
 			emit_namespaceDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
 		else if(match_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a.equals(transition.getAmbiguousSyntax()))
 			emit_namespaceDeclaration_WSParserRuleCall_3_1_a_EqualsSignKeyword_3_2_WSParserRuleCall_3_3_a(semanticObject, transition, fromNode, toNode);
@@ -103,22 +111,22 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 			emit_readDeclaration_WSParserRuleCall_4_a(semanticObject, transition, fromNode, toNode);
 		else if(match_sigConstruct_SOMETHINGParserRuleCall_3_2_p.equals(transition.getAmbiguousSyntax()))
 			emit_sigConstruct_SOMETHINGParserRuleCall_3_2_p(semanticObject, transition, fromNode, toNode);
-		else if(match_sigConstruct_WSParserRuleCall_1_2_p.equals(transition.getAmbiguousSyntax()))
-			emit_sigConstruct_WSParserRuleCall_1_2_p(semanticObject, transition, fromNode, toNode);
-		else if(match_sigConstruct_WSParserRuleCall_2_2_p.equals(transition.getAmbiguousSyntax()))
-			emit_sigConstruct_WSParserRuleCall_2_2_p(semanticObject, transition, fromNode, toNode);
-		else if(match_sigDefinitions_WSParserRuleCall_1_p.equals(transition.getAmbiguousSyntax()))
-			emit_sigDefinitions_WSParserRuleCall_1_p(semanticObject, transition, fromNode, toNode);
 		else if(match_sigDefinitions_WSParserRuleCall_3_1_p.equals(transition.getAmbiguousSyntax()))
 			emit_sigDefinitions_WSParserRuleCall_3_1_p(semanticObject, transition, fromNode, toNode);
 		else if(match_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q.equals(transition.getAmbiguousSyntax()))
 			emit_sigDefinitions___FullStopKeyword_4_0_WSParserRuleCall_4_1_a__q(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p(semanticObject, transition, fromNode, toNode);
-		else if(match_signatureDeclaration_WSParserRuleCall_8_a.equals(transition.getAmbiguousSyntax()))
-			emit_signatureDeclaration_WSParserRuleCall_8_a(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_0_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_0_2_p(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_1_a_EqualsSignKeyword_2_WSParserRuleCall_3_p.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_1_a_EqualsSignKeyword_2_WSParserRuleCall_3_p(semanticObject, transition, fromNode, toNode);
+		else if(match_signatureDeclaration_WSParserRuleCall_5_a.equals(transition.getAmbiguousSyntax()))
+			emit_signatureDeclaration_WSParserRuleCall_5_a(semanticObject, transition, fromNode, toNode);
+		else if(match_structConstruct_SOMETHINGParserRuleCall_8_a.equals(transition.getAmbiguousSyntax()))
+			emit_structConstruct_SOMETHINGParserRuleCall_8_a(semanticObject, transition, fromNode, toNode);
+		else if(match_structConstruct_SOMETHINGParserRuleCall_8_p.equals(transition.getAmbiguousSyntax()))
+			emit_structConstruct_SOMETHINGParserRuleCall_8_p(semanticObject, transition, fromNode, toNode);
+		else if(match_structConstruct_WSParserRuleCall_2_p.equals(transition.getAmbiguousSyntax()))
+			emit_structConstruct_WSParserRuleCall_2_p(semanticObject, transition, fromNode, toNode);
 		else if(match_viewDeclaration_WSParserRuleCall_12_a.equals(transition.getAmbiguousSyntax()))
 			emit_viewDeclaration_WSParserRuleCall_12_a(semanticObject, transition, fromNode, toNode);
 		else if(match_viewDeclaration_WSParserRuleCall_16_a.equals(transition.getAmbiguousSyntax()))
@@ -132,6 +140,22 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 		else acceptNodes(transition, fromNode, toNode);
 	}
 
+	/**
+	 * Syntax:
+	 *     WS+
+	 */
+	protected void emit_includeConstruct_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     WS+
+	 */
+	protected void emit_includeConstruct_WSParserRuleCall_4_0_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
 	/**
 	 * Syntax:
 	 *     WS+
@@ -184,30 +208,6 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_sigConstruct_WSParserRuleCall_1_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS+
-	 */
-	protected void emit_sigConstruct_WSParserRuleCall_2_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS+
-	 */
-	protected void emit_sigDefinitions_WSParserRuleCall_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     WS+
-	 */
 	protected void emit_sigDefinitions_WSParserRuleCall_3_1_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
@@ -224,7 +224,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS+
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_signatureDeclaration_WSParserRuleCall_0_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -232,7 +232,7 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS* '=' WS+
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_4_a_EqualsSignKeyword_5_WSParserRuleCall_6_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_signatureDeclaration_WSParserRuleCall_1_a_EqualsSignKeyword_2_WSParserRuleCall_3_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -240,7 +240,31 @@ public class AbstractLFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     WS*
 	 */
-	protected void emit_signatureDeclaration_WSParserRuleCall_8_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+	protected void emit_signatureDeclaration_WSParserRuleCall_5_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     SOMETHING*
+	 */
+	protected void emit_structConstruct_SOMETHINGParserRuleCall_8_a(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     SOMETHING+
+	 */
+	protected void emit_structConstruct_SOMETHINGParserRuleCall_8_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     WS+
+	 */
+	protected void emit_structConstruct_WSParserRuleCall_2_p(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	

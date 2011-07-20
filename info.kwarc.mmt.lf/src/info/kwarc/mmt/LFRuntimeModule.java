@@ -3,20 +3,25 @@
  */
 package info.kwarc.mmt;
 
+import info.kwarc.mmt.twelfIntegration.LFParseEnricher;
+import info.kwarc.mmt.twelfIntegration.LFResource;
+
+import org.eclipse.xtext.linking.ILinker;
+import org.eclipse.xtext.resource.XtextResource;
+
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class LFRuntimeModule extends info.kwarc.mmt.AbstractLFRuntimeModule {
-/*
+
 	@Override
 	public Class<? extends XtextResource> bindXtextResource() {
-		return APCResource.class;
+		return LFResource.class;
 	}
-	
+
 	@Override
-	public Class<? extends IParser> bindIParser() {
-		return MyAPC.class;
+	public Class<? extends ILinker> bindILinker() {
+		return LFParseEnricher.class;
 	}
-	*/
 }

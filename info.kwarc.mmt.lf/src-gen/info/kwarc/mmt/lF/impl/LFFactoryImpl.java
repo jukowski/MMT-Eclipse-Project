@@ -74,6 +74,9 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
       case LFPackage.SIGNATURE_DECLARATION: return createsignatureDeclaration();
       case LFPackage.SIG_DEFINITIONS: return createsigDefinitions();
       case LFPackage.SIG_CONSTRUCT: return createsigConstruct();
+      case LFPackage.CLASSIC_SYMBOL_CONSTRUCT: return createclassicSymbolConstruct();
+      case LFPackage.INCLUDE_CONSTRUCT: return createincludeConstruct();
+      case LFPackage.STRUCT_CONSTRUCT: return createstructConstruct();
       case LFPackage.TEMP_TYPE: return createTempType();
       case LFPackage.VIEW_DECLARATION: return createviewDeclaration();
       default:
@@ -156,6 +159,39 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
   {
     sigConstructImpl sigConstruct = new sigConstructImpl();
     return sigConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public classicSymbolConstruct createclassicSymbolConstruct()
+  {
+    classicSymbolConstructImpl classicSymbolConstruct = new classicSymbolConstructImpl();
+    return classicSymbolConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public includeConstruct createincludeConstruct()
+  {
+    includeConstructImpl includeConstruct = new includeConstructImpl();
+    return includeConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public structConstruct createstructConstruct()
+  {
+    structConstructImpl structConstruct = new structConstructImpl();
+    return structConstruct;
   }
 
   /**

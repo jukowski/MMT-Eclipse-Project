@@ -123,7 +123,7 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getTempType()
    * @generated
    */
-  int TEMP_TYPE = 7;
+  int TEMP_TYPE = 10;
 
   /**
    * The feature id for the '<em><b>Full URI</b></em>' attribute.
@@ -274,22 +274,13 @@ public interface LFPackage extends EPackage
   int SIG_DEFINITIONS = 5;
 
   /**
-   * The feature id for the '<em><b>Cons</b></em>' containment reference.
+   * The feature id for the '<em><b>Constucts</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIG_DEFINITIONS__CONS = 0;
-
-  /**
-   * The feature id for the '<em><b>Fcons</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_DEFINITIONS__FCONS = 1;
+  int SIG_DEFINITIONS__CONSTUCTS = 0;
 
   /**
    * The number of structural features of the '<em>sig Definitions</em>' class.
@@ -298,7 +289,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIG_DEFINITIONS_FEATURE_COUNT = 2;
+  int SIG_DEFINITIONS_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.sigConstructImpl <em>sig Construct</em>}' class.
@@ -311,49 +302,13 @@ public interface LFPackage extends EPackage
   int SIG_CONSTRUCT = 6;
 
   /**
-   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_CONSTRUCT__SYMB_NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Namespace</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_CONSTRUCT__NAMESPACE = 1;
-
-  /**
-   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_CONSTRUCT__STRUCT_NAME = 2;
-
-  /**
-   * The feature id for the '<em><b>Inc Opt</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIG_CONSTRUCT__INC_OPT = 3;
-
-  /**
    * The feature id for the '<em><b>Tmp</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIG_CONSTRUCT__TMP = 4;
+  int SIG_CONSTRUCT__TMP = 0;
 
   /**
    * The number of structural features of the '<em>sig Construct</em>' class.
@@ -362,7 +317,145 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIG_CONSTRUCT_FEATURE_COUNT = 5;
+  int SIG_CONSTRUCT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.classicSymbolConstructImpl <em>classic Symbol Construct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.classicSymbolConstructImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getclassicSymbolConstruct()
+   * @generated
+   */
+  int CLASSIC_SYMBOL_CONSTRUCT = 7;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASSIC_SYMBOL_CONSTRUCT__TMP = SIG_CONSTRUCT__TMP;
+
+  /**
+   * The feature id for the '<em><b>Symb Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASSIC_SYMBOL_CONSTRUCT__SYMB_NAME = SIG_CONSTRUCT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>classic Symbol Construct</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASSIC_SYMBOL_CONSTRUCT_FEATURE_COUNT = SIG_CONSTRUCT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.includeConstructImpl <em>include Construct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.includeConstructImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getincludeConstruct()
+   * @generated
+   */
+  int INCLUDE_CONSTRUCT = 8;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_CONSTRUCT__TMP = SIG_CONSTRUCT__TMP;
+
+  /**
+   * The feature id for the '<em><b>Full URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_CONSTRUCT__FULL_URI = SIG_CONSTRUCT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Namespace</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_CONSTRUCT__NAMESPACE = SIG_CONSTRUCT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>include Construct</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_CONSTRUCT_FEATURE_COUNT = SIG_CONSTRUCT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link info.kwarc.mmt.lF.impl.structConstructImpl <em>struct Construct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see info.kwarc.mmt.lF.impl.structConstructImpl
+   * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getstructConstruct()
+   * @generated
+   */
+  int STRUCT_CONSTRUCT = 9;
+
+  /**
+   * The feature id for the '<em><b>Tmp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_CONSTRUCT__TMP = SIG_CONSTRUCT__TMP;
+
+  /**
+   * The feature id for the '<em><b>Struct Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_CONSTRUCT__STRUCT_NAME = SIG_CONSTRUCT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Namespace</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_CONSTRUCT__NAMESPACE = SIG_CONSTRUCT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Inc Opt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_CONSTRUCT__INC_OPT = SIG_CONSTRUCT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>struct Construct</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_CONSTRUCT_FEATURE_COUNT = SIG_CONSTRUCT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link info.kwarc.mmt.lF.impl.viewDeclarationImpl <em>view Declaration</em>}' class.
@@ -372,7 +465,16 @@ public interface LFPackage extends EPackage
    * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getviewDeclaration()
    * @generated
    */
-  int VIEW_DECLARATION = 8;
+  int VIEW_DECLARATION = 11;
+
+  /**
+   * The feature id for the '<em><b>Full URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VIEW_DECLARATION__FULL_URI = TEMP_TYPE__FULL_URI;
 
   /**
    * The feature id for the '<em><b>View ID</b></em>' attribute.
@@ -381,7 +483,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION__VIEW_ID = 0;
+  int VIEW_DECLARATION__VIEW_ID = TEMP_TYPE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>From</b></em>' attribute.
@@ -390,7 +492,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION__FROM = 1;
+  int VIEW_DECLARATION__FROM = TEMP_TYPE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>To</b></em>' attribute.
@@ -399,7 +501,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION__TO = 2;
+  int VIEW_DECLARATION__TO = TEMP_TYPE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>View Defs</b></em>' containment reference.
@@ -408,7 +510,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION__VIEW_DEFS = 3;
+  int VIEW_DECLARATION__VIEW_DEFS = TEMP_TYPE_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>view Declaration</em>' class.
@@ -417,7 +519,7 @@ public interface LFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VIEW_DECLARATION_FEATURE_COUNT = 4;
+  int VIEW_DECLARATION_FEATURE_COUNT = TEMP_TYPE_FEATURE_COUNT + 4;
 
 
   /**
@@ -558,26 +660,15 @@ public interface LFPackage extends EPackage
   EClass getsigDefinitions();
 
   /**
-   * Returns the meta object for the containment reference '{@link info.kwarc.mmt.lF.sigDefinitions#getCons <em>Cons</em>}'.
+   * Returns the meta object for the containment reference list '{@link info.kwarc.mmt.lF.sigDefinitions#getConstucts <em>Constucts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Cons</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getCons()
+   * @return the meta object for the containment reference list '<em>Constucts</em>'.
+   * @see info.kwarc.mmt.lF.sigDefinitions#getConstucts()
    * @see #getsigDefinitions()
    * @generated
    */
-  EReference getsigDefinitions_Cons();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link info.kwarc.mmt.lF.sigDefinitions#getFcons <em>Fcons</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Fcons</em>'.
-   * @see info.kwarc.mmt.lF.sigDefinitions#getFcons()
-   * @see #getsigDefinitions()
-   * @generated
-   */
-  EReference getsigDefinitions_Fcons();
+  EReference getsigDefinitions_Constucts();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.sigConstruct <em>sig Construct</em>}'.
@@ -590,50 +681,6 @@ public interface LFPackage extends EPackage
   EClass getsigConstruct();
 
   /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getSymbName <em>Symb Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Symb Name</em>'.
-   * @see info.kwarc.mmt.lF.sigConstruct#getSymbName()
-   * @see #getsigConstruct()
-   * @generated
-   */
-  EAttribute getsigConstruct_SymbName();
-
-  /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getNamespace <em>Namespace</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Namespace</em>'.
-   * @see info.kwarc.mmt.lF.sigConstruct#getNamespace()
-   * @see #getsigConstruct()
-   * @generated
-   */
-  EAttribute getsigConstruct_Namespace();
-
-  /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getStructName <em>Struct Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Struct Name</em>'.
-   * @see info.kwarc.mmt.lF.sigConstruct#getStructName()
-   * @see #getsigConstruct()
-   * @generated
-   */
-  EAttribute getsigConstruct_StructName();
-
-  /**
-   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getIncOpt <em>Inc Opt</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Inc Opt</em>'.
-   * @see info.kwarc.mmt.lF.sigConstruct#getIncOpt()
-   * @see #getsigConstruct()
-   * @generated
-   */
-  EAttribute getsigConstruct_IncOpt();
-
-  /**
    * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.sigConstruct#getTmp <em>Tmp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -643,6 +690,91 @@ public interface LFPackage extends EPackage
    * @generated
    */
   EAttribute getsigConstruct_Tmp();
+
+  /**
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.classicSymbolConstruct <em>classic Symbol Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>classic Symbol Construct</em>'.
+   * @see info.kwarc.mmt.lF.classicSymbolConstruct
+   * @generated
+   */
+  EClass getclassicSymbolConstruct();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.classicSymbolConstruct#getSymbName <em>Symb Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Symb Name</em>'.
+   * @see info.kwarc.mmt.lF.classicSymbolConstruct#getSymbName()
+   * @see #getclassicSymbolConstruct()
+   * @generated
+   */
+  EAttribute getclassicSymbolConstruct_SymbName();
+
+  /**
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.includeConstruct <em>include Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>include Construct</em>'.
+   * @see info.kwarc.mmt.lF.includeConstruct
+   * @generated
+   */
+  EClass getincludeConstruct();
+
+  /**
+   * Returns the meta object for the reference '{@link info.kwarc.mmt.lF.includeConstruct#getNamespace <em>Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Namespace</em>'.
+   * @see info.kwarc.mmt.lF.includeConstruct#getNamespace()
+   * @see #getincludeConstruct()
+   * @generated
+   */
+  EReference getincludeConstruct_Namespace();
+
+  /**
+   * Returns the meta object for class '{@link info.kwarc.mmt.lF.structConstruct <em>struct Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct Construct</em>'.
+   * @see info.kwarc.mmt.lF.structConstruct
+   * @generated
+   */
+  EClass getstructConstruct();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.structConstruct#getStructName <em>Struct Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Struct Name</em>'.
+   * @see info.kwarc.mmt.lF.structConstruct#getStructName()
+   * @see #getstructConstruct()
+   * @generated
+   */
+  EAttribute getstructConstruct_StructName();
+
+  /**
+   * Returns the meta object for the reference '{@link info.kwarc.mmt.lF.structConstruct#getNamespace <em>Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Namespace</em>'.
+   * @see info.kwarc.mmt.lF.structConstruct#getNamespace()
+   * @see #getstructConstruct()
+   * @generated
+   */
+  EReference getstructConstruct_Namespace();
+
+  /**
+   * Returns the meta object for the attribute '{@link info.kwarc.mmt.lF.structConstruct#getIncOpt <em>Inc Opt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Inc Opt</em>'.
+   * @see info.kwarc.mmt.lF.structConstruct#getIncOpt()
+   * @see #getstructConstruct()
+   * @generated
+   */
+  EAttribute getstructConstruct_IncOpt();
 
   /**
    * Returns the meta object for class '{@link info.kwarc.mmt.lF.TempType <em>Temp Type</em>}'.
@@ -859,20 +991,12 @@ public interface LFPackage extends EPackage
     EClass SIG_DEFINITIONS = eINSTANCE.getsigDefinitions();
 
     /**
-     * The meta object literal for the '<em><b>Cons</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Constucts</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SIG_DEFINITIONS__CONS = eINSTANCE.getsigDefinitions_Cons();
-
-    /**
-     * The meta object literal for the '<em><b>Fcons</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SIG_DEFINITIONS__FCONS = eINSTANCE.getsigDefinitions_Fcons();
+    EReference SIG_DEFINITIONS__CONSTUCTS = eINSTANCE.getsigDefinitions_Constucts();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.sigConstructImpl <em>sig Construct</em>}' class.
@@ -885,20 +1009,58 @@ public interface LFPackage extends EPackage
     EClass SIG_CONSTRUCT = eINSTANCE.getsigConstruct();
 
     /**
+     * The meta object literal for the '<em><b>Tmp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIG_CONSTRUCT__TMP = eINSTANCE.getsigConstruct_Tmp();
+
+    /**
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.classicSymbolConstructImpl <em>classic Symbol Construct</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see info.kwarc.mmt.lF.impl.classicSymbolConstructImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getclassicSymbolConstruct()
+     * @generated
+     */
+    EClass CLASSIC_SYMBOL_CONSTRUCT = eINSTANCE.getclassicSymbolConstruct();
+
+    /**
      * The meta object literal for the '<em><b>Symb Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_CONSTRUCT__SYMB_NAME = eINSTANCE.getsigConstruct_SymbName();
+    EAttribute CLASSIC_SYMBOL_CONSTRUCT__SYMB_NAME = eINSTANCE.getclassicSymbolConstruct_SymbName();
 
     /**
-     * The meta object literal for the '<em><b>Namespace</b></em>' attribute feature.
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.includeConstructImpl <em>include Construct</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see info.kwarc.mmt.lF.impl.includeConstructImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getincludeConstruct()
+     * @generated
+     */
+    EClass INCLUDE_CONSTRUCT = eINSTANCE.getincludeConstruct();
+
+    /**
+     * The meta object literal for the '<em><b>Namespace</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_CONSTRUCT__NAMESPACE = eINSTANCE.getsigConstruct_Namespace();
+    EReference INCLUDE_CONSTRUCT__NAMESPACE = eINSTANCE.getincludeConstruct_Namespace();
+
+    /**
+     * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.structConstructImpl <em>struct Construct</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see info.kwarc.mmt.lF.impl.structConstructImpl
+     * @see info.kwarc.mmt.lF.impl.LFPackageImpl#getstructConstruct()
+     * @generated
+     */
+    EClass STRUCT_CONSTRUCT = eINSTANCE.getstructConstruct();
 
     /**
      * The meta object literal for the '<em><b>Struct Name</b></em>' attribute feature.
@@ -906,7 +1068,15 @@ public interface LFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_CONSTRUCT__STRUCT_NAME = eINSTANCE.getsigConstruct_StructName();
+    EAttribute STRUCT_CONSTRUCT__STRUCT_NAME = eINSTANCE.getstructConstruct_StructName();
+
+    /**
+     * The meta object literal for the '<em><b>Namespace</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_CONSTRUCT__NAMESPACE = eINSTANCE.getstructConstruct_Namespace();
 
     /**
      * The meta object literal for the '<em><b>Inc Opt</b></em>' attribute feature.
@@ -914,15 +1084,7 @@ public interface LFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIG_CONSTRUCT__INC_OPT = eINSTANCE.getsigConstruct_IncOpt();
-
-    /**
-     * The meta object literal for the '<em><b>Tmp</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIG_CONSTRUCT__TMP = eINSTANCE.getsigConstruct_Tmp();
+    EAttribute STRUCT_CONSTRUCT__INC_OPT = eINSTANCE.getstructConstruct_IncOpt();
 
     /**
      * The meta object literal for the '{@link info.kwarc.mmt.lF.impl.TempTypeImpl <em>Temp Type</em>}' class.

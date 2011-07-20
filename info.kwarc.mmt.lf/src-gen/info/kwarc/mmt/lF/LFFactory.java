@@ -89,6 +89,33 @@ public interface LFFactory extends EFactory
   sigConstruct createsigConstruct();
 
   /**
+   * Returns a new object of class '<em>classic Symbol Construct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>classic Symbol Construct</em>'.
+   * @generated
+   */
+  classicSymbolConstruct createclassicSymbolConstruct();
+
+  /**
+   * Returns a new object of class '<em>include Construct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>include Construct</em>'.
+   * @generated
+   */
+  includeConstruct createincludeConstruct();
+
+  /**
+   * Returns a new object of class '<em>struct Construct</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>struct Construct</em>'.
+   * @generated
+   */
+  structConstruct createstructConstruct();
+
+  /**
    * Returns a new object of class '<em>Temp Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -126,6 +126,31 @@ public class LFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case LFPackage.CLASSIC_SYMBOL_CONSTRUCT:
+      {
+        classicSymbolConstruct classicSymbolConstruct = (classicSymbolConstruct)theEObject;
+        T result = caseclassicSymbolConstruct(classicSymbolConstruct);
+        if (result == null) result = casesigConstruct(classicSymbolConstruct);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LFPackage.INCLUDE_CONSTRUCT:
+      {
+        includeConstruct includeConstruct = (includeConstruct)theEObject;
+        T result = caseincludeConstruct(includeConstruct);
+        if (result == null) result = casesigConstruct(includeConstruct);
+        if (result == null) result = caseTempType(includeConstruct);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LFPackage.STRUCT_CONSTRUCT:
+      {
+        structConstruct structConstruct = (structConstruct)theEObject;
+        T result = casestructConstruct(structConstruct);
+        if (result == null) result = casesigConstruct(structConstruct);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case LFPackage.TEMP_TYPE:
       {
         TempType tempType = (TempType)theEObject;
@@ -137,6 +162,7 @@ public class LFSwitch<T> extends Switch<T>
       {
         viewDeclaration viewDeclaration = (viewDeclaration)theEObject;
         T result = caseviewDeclaration(viewDeclaration);
+        if (result == null) result = caseTempType(viewDeclaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -252,6 +278,54 @@ public class LFSwitch<T> extends Switch<T>
    * @generated
    */
   public T casesigConstruct(sigConstruct object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>classic Symbol Construct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>classic Symbol Construct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseclassicSymbolConstruct(classicSymbolConstruct object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>include Construct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>include Construct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseincludeConstruct(includeConstruct object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct Construct</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct Construct</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestructConstruct(structConstruct object)
   {
     return null;
   }

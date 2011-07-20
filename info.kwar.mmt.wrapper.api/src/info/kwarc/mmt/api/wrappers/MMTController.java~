@@ -1,0 +1,82 @@
+package info.kwarc.mmt.api.wrappers;
+
+import info.kwarc.mmt.api.MPath;
+import info.kwarc.mmt.api.Path;
+import info.kwarc.mmt.api.Path$;
+import info.kwarc.mmt.api.backend.Archive;
+import info.kwarc.mmt.api.backend.Compiler;
+import info.kwarc.mmt.api.frontend.Controller;
+import info.kwarc.mmt.api.frontend.LoggingOn;
+import info.kwarc.mmt.api.frontend.Report;
+import info.kwarc.mmt.api.lf.Twelf;
+import info.kwarc.mmt.api.libraries.DefaultFoundation$;
+import info.kwarc.mmt.api.libraries.FoundChecker;
+import info.kwarc.mmt.api.libraries.Foundation;
+import info.kwarc.mmt.api.objects.OMMOD;
+import info.kwarc.mmt.api.utils.mmt;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
+import scala.Function0;
+
+public class MMTController {
+	Controller controller;
+	Compiler compiler;
+	Map<String, MMTArchive> archiveMap;
+
+	public void finalize() throws Throwable {
+		controller.cleanup();
+	}
+	
+	public MMTModule getModule(String modulePath) {
+		MPath path = Path$.MODULE$.parseM(modulePath, mmt.mmtbase());
+		OMMOD module = new OMMOD(path);
+		return new MMTModule(module);
+	}
+
+	public MMTArchive RegisterArchive(File path) {
+		Logger.getAnonymousLogger().info(path.getAbsolutePath());
+		Archive arch = controller.backend().openArchive(path);
+		MMTArchive result = new MMTArchive(arch, controller);
+		String id = result.getID();
+		archiveMap.put(id, result);
+		return result;
+	}
+
+	public void setCompiler(String path) {
+		File f = new File(path);
+		compiler = new Twelf(new info.kwarc.mmt.api.utils.File(f));
+		controller.backend().addCompiler(compiler);
+	}
+
+	public MMTArchive getArchive(String id) {
+		return archiveMap.get(id);
+	}
+
+	public MMTController(final MMTReport report) {
+		Foundation foundation = DefaultFoundation$.MODULE$;
+		FoundChecker checker = new FoundChecker(foundation);
+
+		Report reportObj = new Report() {
+			@Override
+			public String handle(Function0<String> arg0, Function0<String> arg1) {
+				if (report != null)
+					report.handle(arg0.apply(), arg1.apply());
+				return null;
+			}
+		};
+
+		controller = new Controller(checker, reportObj);
+		controller.handle(new LoggingOn("archive"));
+		controller.handle(new LoggingOn("error_eclipse"));
+		controller.handle(new LoggingOn("error"));
+		archiveMap = new HashMap<String, MMTArchive>();
+	}
+
+	public String[] getKnownNamespaces() {
+		return null;
+	}
+}

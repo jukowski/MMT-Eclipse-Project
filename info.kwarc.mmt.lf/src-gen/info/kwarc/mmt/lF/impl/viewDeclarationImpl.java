@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class viewDeclarationImpl extends MinimalEObjectImpl.Container implements viewDeclaration
+public class viewDeclarationImpl extends TempTypeImpl implements viewDeclaration
 {
   /**
    * The default value of the '{@link #getViewID() <em>View ID</em>}' attribute.

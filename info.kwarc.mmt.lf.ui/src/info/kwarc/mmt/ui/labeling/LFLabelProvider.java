@@ -3,6 +3,15 @@
 */
 package info.kwarc.mmt.ui.labeling;
 
+import info.kwarc.mmt.lF.JUSTSPACE;
+import info.kwarc.mmt.lF.Model;
+import info.kwarc.mmt.lF.classicSymbolConstruct;
+import info.kwarc.mmt.lF.includeConstruct;
+import info.kwarc.mmt.lF.namespaceDeclaration;
+import info.kwarc.mmt.lF.signatureDeclaration;
+import info.kwarc.mmt.lF.structConstruct;
+import info.kwarc.mmt.lF.viewDeclaration;
+
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 
@@ -20,6 +29,42 @@ public class LFLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 
+	String text(Model m) {
+		return m.eResource().getURI().lastSegment();
+	}
+	
+	String text(JUSTSPACE js) {
+		return null;
+	}
+	
+	String text(signatureDeclaration sd) {
+		return sd.getSigName() + ": " + sd.getFullURI();
+	}
+
+	String text(structConstruct sc) {
+		return "struct: " + sc.getStructName();
+	}
+
+	String text(includeConstruct sc) {
+		return "include: " + sc.getNamespace();
+	}
+
+	String text(classicSymbolConstruct sc) {
+		return sc.getSymbName();
+	} 
+
+	String text(viewDeclaration vd) {
+		return vd.getViewID();
+	} 
+	
+	String text(namespaceDeclaration namespace) {
+		String uri = namespace.getFullURI()!=null?namespace.getFullURI():namespace.getUri();
+		if (namespace.getName() == null)
+			return uri;
+		else
+			return namespace.getName()+": "+uri; 
+	}
+	
 /*
 	//Labels and icons can be computed like this:
 	

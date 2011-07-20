@@ -1000,17 +1000,17 @@ rulesignatureDeclaration returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='%' 
+((	otherlv_0='%' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0_0());
     }
 	otherlv_1='sig' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getSignatureDeclarationAccess().getSigKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getSignatureDeclarationAccess().getSigKeyword_0_1());
     }
 (
     { 
-        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_0_2()); 
     }
 ruleWS
     { 
@@ -1019,7 +1019,7 @@ ruleWS
 )+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_0_3_0()); 
 	    }
 		lv_sigName_3_0=ruleGID		{
 	        if ($current==null) {
@@ -1034,9 +1034,9 @@ ruleWS
 	    }
 
 )
-)(
+))(
     { 
-        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
     }
 ruleWS
     { 
@@ -1044,11 +1044,11 @@ ruleWS
     }
 )*	otherlv_5='=' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_2());
     }
 (
     { 
-        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()); 
+        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()); 
     }
 ruleWS
     { 
@@ -1057,7 +1057,7 @@ ruleWS
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_4_0()); 
 	    }
 		lv_defs_7_0=rulesigDefinitions		{
 	        if ($current==null) {
@@ -1074,7 +1074,7 @@ ruleWS
 )
 )(
     { 
-        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()); 
     }
 ruleWS
     { 
@@ -1082,7 +1082,7 @@ ruleWS
     }
 )*	otherlv_9='.' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_9());
+    	newLeafNode(otherlv_9, grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_6());
     }
 )
 ;
@@ -1120,16 +1120,16 @@ ruleWS
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConsSigConstructParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConstuctsSigConstructParserRuleCall_2_0()); 
 	    }
-		lv_cons_2_0=rulesigConstruct		{
+		lv_constucts_2_0=rulesigConstruct		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSigDefinitionsRule());
 	        }
-       		set(
+       		add(
        			$current, 
-       			"cons",
-        		lv_cons_2_0, 
+       			"constucts",
+        		lv_constucts_2_0, 
         		"sigConstruct");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1150,16 +1150,16 @@ ruleWS
 )+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getFconsSigConstructParserRuleCall_3_2_0()); 
+	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConstuctsSigConstructParserRuleCall_3_2_0()); 
 	    }
-		lv_fcons_5_0=rulesigConstruct		{
+		lv_constucts_5_0=rulesigConstruct		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSigDefinitionsRule());
 	        }
        		add(
        			$current, 
-       			"fcons",
-        		lv_fcons_5_0, 
+       			"constucts",
+        		lv_constucts_5_0, 
         		"sigConstruct");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1202,273 +1202,125 @@ rulesigConstruct returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getSigConstructAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
-	    }
-		lv_symbName_0_0=ruleGID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSigConstructRule());
-	        }
-       		set(
-       			$current, 
-       			"symbName",
-        		lv_symbName_0_0, 
-        		"GID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
     { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_0_1()); 
+        newCompositeNode(grammarAccess.getSigConstructAccess().getClassicSymbolConstructParserRuleCall_0()); 
     }
-ruleWS
+    this_classicSymbolConstruct_0=ruleclassicSymbolConstruct
     { 
+        $current = $this_classicSymbolConstruct_0.current; 
         afterParserOrEnumRuleCall();
-    }
-)*(	otherlv_2=':' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getSigConstructAccess().getColonKeyword_0_2_0());
     }
 
-    |	otherlv_3=':=' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_0_2_1());
+    |
+    { 
+        newCompositeNode(grammarAccess.getSigConstructAccess().getIncludeConstructParserRuleCall_1()); 
+    }
+    this_includeConstruct_1=ruleincludeConstruct
+    { 
+        $current = $this_includeConstruct_1.current; 
+        afterParserOrEnumRuleCall();
     }
 
-    |	otherlv_4='=' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getSigConstructAccess().getEqualsSignKeyword_0_2_2());
-    }
-)(
+    |
     { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_0_3()); 
+        newCompositeNode(grammarAccess.getSigConstructAccess().getStructConstructParserRuleCall_2()); 
     }
-ruleSOMETHING
+    this_structConstruct_2=rulestructConstruct
     { 
+        $current = $this_structConstruct_2.current; 
         afterParserOrEnumRuleCall();
-    }
-)*)
-    |(	otherlv_6='%' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getSigConstructAccess().getPercentSignKeyword_1_0());
-    }
-	otherlv_7='include' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getSigConstructAccess().getIncludeKeyword_1_1());
-    }
-(
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
-    }
-ruleWS
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)+(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getSigConstructAccess().getNamespaceNAMESPACEParserRuleCall_1_3_0()); 
-	    }
-		lv_namespace_9_0=ruleNAMESPACE		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSigConstructRule());
-	        }
-       		set(
-       			$current, 
-       			"namespace",
-        		lv_namespace_9_0, 
-        		"NAMESPACE");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)((
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
-    }
-ruleWS
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)+
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getIncludeOpsParserRuleCall_1_4_1()); 
-    }
-ruleincludeOps
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)?)
-    |(	otherlv_12='%' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getSigConstructAccess().getPercentSignKeyword_2_0());
-    }
-	otherlv_13='struct' 
-    {
-    	newLeafNode(otherlv_13, grammarAccess.getSigConstructAccess().getStructKeyword_2_1());
-    }
-(
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
-    }
-ruleWS
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)+(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getSigConstructAccess().getStructNameGIDParserRuleCall_2_3_0()); 
-	    }
-		lv_structName_15_0=ruleGID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSigConstructRule());
-	        }
-       		set(
-       			$current, 
-       			"structName",
-        		lv_structName_15_0, 
-        		"GID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_4()); 
-    }
-ruleWS
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)*(	otherlv_17=':' 
-    {
-    	newLeafNode(otherlv_17, grammarAccess.getSigConstructAccess().getColonKeyword_2_5_0());
     }
 
-    |	otherlv_18=':=' 
+    |(	otherlv_3='%' 
     {
-    	newLeafNode(otherlv_18, grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_2_5_1());
+    	newLeafNode(otherlv_3, grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0());
     }
-)(
-    { 
-        newCompositeNode(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_2_6()); 
-    }
-ruleSOMETHING
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)*(
 (
-		{ 
-	        newCompositeNode(grammarAccess.getSigConstructAccess().getIncOptIncludeOpsParserRuleCall_2_7_0()); 
-	    }
-		lv_incOpt_20_0=ruleincludeOps		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSigConstructRule());
-	        }
-       		set(
-       			$current, 
-       			"incOpt",
-        		lv_incOpt_20_0, 
-        		"includeOps");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)?)
-    |(	otherlv_21='%' 
+(
+(
+		lv_tmp_4_1=	'meta' 
     {
-    	newLeafNode(otherlv_21, grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0());
-    }
-(
-(
-(
-		lv_tmp_22_1=	'meta' 
-    {
-        newLeafNode(lv_tmp_22_1, grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0());
+        newLeafNode(lv_tmp_4_1, grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_1, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_1, null);
 	    }
 
-    |		lv_tmp_22_2=	'abbrev' 
+    |		lv_tmp_4_2=	'abbrev' 
     {
-        newLeafNode(lv_tmp_22_2, grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1());
+        newLeafNode(lv_tmp_4_2, grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_2, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_2, null);
 	    }
 
-    |		lv_tmp_22_3=	'name' 
+    |		lv_tmp_4_3=	'name' 
     {
-        newLeafNode(lv_tmp_22_3, grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2());
+        newLeafNode(lv_tmp_4_3, grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_3, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_3, null);
 	    }
 
-    |		lv_tmp_22_4=	'pattern' 
+    |		lv_tmp_4_4=	'pattern' 
     {
-        newLeafNode(lv_tmp_22_4, grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3());
+        newLeafNode(lv_tmp_4_4, grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_4, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_4, null);
 	    }
 
-    |		lv_tmp_22_5=	'infix' 
+    |		lv_tmp_4_5=	'infix' 
     {
-        newLeafNode(lv_tmp_22_5, grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4());
+        newLeafNode(lv_tmp_4_5, grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_5, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_5, null);
 	    }
 
-    |		lv_tmp_22_6=	'prefix' 
+    |		lv_tmp_4_6=	'prefix' 
     {
-        newLeafNode(lv_tmp_22_6, grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5());
+        newLeafNode(lv_tmp_4_6, grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_6, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_6, null);
 	    }
 
-    |		lv_tmp_22_7=	'postfix' 
+    |		lv_tmp_4_7=	'postfix' 
     {
-        newLeafNode(lv_tmp_22_7, grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6());
+        newLeafNode(lv_tmp_4_7, grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSigConstructRule());
 	        }
-       		setWithLastConsumed($current, "tmp", lv_tmp_22_7, null);
+       		setWithLastConsumed($current, "tmp", lv_tmp_4_7, null);
 	    }
 
 )
@@ -1483,6 +1335,264 @@ ruleSOMETHING
         afterParserOrEnumRuleCall();
     }
 )*))
+;
+
+
+
+
+
+// Entry rule entryRuleclassicSymbolConstruct
+entryRuleclassicSymbolConstruct returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getClassicSymbolConstructRule()); }
+	 iv_ruleclassicSymbolConstruct=ruleclassicSymbolConstruct 
+	 { $current=$iv_ruleclassicSymbolConstruct.current; } 
+	 EOF 
+;
+
+// Rule classicSymbolConstruct
+ruleclassicSymbolConstruct returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getSymbNameGIDParserRuleCall_0_0()); 
+	    }
+		lv_symbName_0_0=ruleGID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getClassicSymbolConstructRule());
+	        }
+       		set(
+       			$current, 
+       			"symbName",
+        		lv_symbName_0_0, 
+        		"GID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+    { 
+        newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getWSParserRuleCall_1()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*(	otherlv_2=':' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getClassicSymbolConstructAccess().getColonKeyword_2_0());
+    }
+
+    |	otherlv_3=':=' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getClassicSymbolConstructAccess().getColonEqualsSignKeyword_2_1());
+    }
+
+    |	otherlv_4='=' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getClassicSymbolConstructAccess().getEqualsSignKeyword_2_2());
+    }
+)(
+    { 
+        newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getSOMETHINGParserRuleCall_3()); 
+    }
+ruleSOMETHING
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*)
+;
+
+
+
+
+
+// Entry rule entryRuleincludeConstruct
+entryRuleincludeConstruct returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getIncludeConstructRule()); }
+	 iv_ruleincludeConstruct=ruleincludeConstruct 
+	 { $current=$iv_ruleincludeConstruct.current; } 
+	 EOF 
+;
+
+// Rule includeConstruct
+ruleincludeConstruct returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='%' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getIncludeConstructAccess().getPercentSignKeyword_0());
+    }
+	otherlv_1='include' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getIncludeConstructAccess().getIncludeKeyword_1());
+    }
+(
+    { 
+        newCompositeNode(grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_2()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getIncludeConstructRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getIncludeConstructAccess().getNamespaceSignatureDeclarationCrossReference_3_0()); 
+	    }
+		ruleNAMESPACE		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)((
+    { 
+        newCompositeNode(grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_4_0()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)+
+    { 
+        newCompositeNode(grammarAccess.getIncludeConstructAccess().getIncludeOpsParserRuleCall_4_1()); 
+    }
+ruleincludeOps
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRulestructConstruct
+entryRulestructConstruct returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getStructConstructRule()); }
+	 iv_rulestructConstruct=rulestructConstruct 
+	 { $current=$iv_rulestructConstruct.current; } 
+	 EOF 
+;
+
+// Rule structConstruct
+rulestructConstruct returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='%' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getStructConstructAccess().getPercentSignKeyword_0());
+    }
+	otherlv_1='struct' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getStructConstructAccess().getStructKeyword_1());
+    }
+(
+    { 
+        newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_2()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getStructConstructAccess().getStructNameGIDParserRuleCall_3_0()); 
+	    }
+		lv_structName_3_0=ruleGID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getStructConstructRule());
+	        }
+       		set(
+       			$current, 
+       			"structName",
+        		lv_structName_3_0, 
+        		"GID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+    { 
+        newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_4()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*(	otherlv_5=':' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getStructConstructAccess().getColonKeyword_5_0());
+    }
+
+    |	otherlv_6=':=' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getStructConstructAccess().getColonEqualsSignKeyword_5_1());
+    }
+)(
+    { 
+        newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_6()); 
+    }
+ruleWS
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStructConstructRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getStructConstructAccess().getNamespaceSignatureDeclarationCrossReference_7_0()); 
+	    }
+		ruleNAMESPACE		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+    { 
+        newCompositeNode(grammarAccess.getStructConstructAccess().getSOMETHINGParserRuleCall_8()); 
+    }
+ruleSOMETHING
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getStructConstructAccess().getIncOptIncludeOpsParserRuleCall_9_0()); 
+	    }
+		lv_incOpt_10_0=ruleincludeOps		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getStructConstructRule());
+	        }
+       		set(
+       			$current, 
+       			"incOpt",
+        		lv_incOpt_10_0, 
+        		"includeOps");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?)
 ;
 
 

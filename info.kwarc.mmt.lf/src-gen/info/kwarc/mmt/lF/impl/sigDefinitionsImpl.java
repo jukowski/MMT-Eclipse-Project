@@ -11,7 +11,6 @@ import info.kwarc.mmt.lF.sigDefinitions;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -19,7 +18,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,8 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getCons <em>Cons</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getFcons <em>Fcons</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getConstucts <em>Constucts</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,24 +39,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements sigDefinitions
 {
   /**
-   * The cached value of the '{@link #getCons() <em>Cons</em>}' containment reference.
+   * The cached value of the '{@link #getConstucts() <em>Constucts</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCons()
+   * @see #getConstucts()
    * @generated
    * @ordered
    */
-  protected sigConstruct cons;
-
-  /**
-   * The cached value of the '{@link #getFcons() <em>Fcons</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFcons()
-   * @generated
-   * @ordered
-   */
-  protected EList<sigConstruct> fcons;
+  protected EList<sigConstruct> constucts;
 
   /**
    * <!-- begin-user-doc -->
@@ -87,61 +74,13 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public sigConstruct getCons()
+  public EList<sigConstruct> getConstucts()
   {
-    return cons;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCons(sigConstruct newCons, NotificationChain msgs)
-  {
-    sigConstruct oldCons = cons;
-    cons = newCons;
-    if (eNotificationRequired())
+    if (constucts == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__CONS, oldCons, newCons);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      constucts = new EObjectContainmentEList<sigConstruct>(sigConstruct.class, this, LFPackage.SIG_DEFINITIONS__CONSTUCTS);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCons(sigConstruct newCons)
-  {
-    if (newCons != cons)
-    {
-      NotificationChain msgs = null;
-      if (cons != null)
-        msgs = ((InternalEObject)cons).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIG_DEFINITIONS__CONS, null, msgs);
-      if (newCons != null)
-        msgs = ((InternalEObject)newCons).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIG_DEFINITIONS__CONS, null, msgs);
-      msgs = basicSetCons(newCons, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIG_DEFINITIONS__CONS, newCons, newCons));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<sigConstruct> getFcons()
-  {
-    if (fcons == null)
-    {
-      fcons = new EObjectContainmentEList<sigConstruct>(sigConstruct.class, this, LFPackage.SIG_DEFINITIONS__FCONS);
-    }
-    return fcons;
+    return constucts;
   }
 
   /**
@@ -154,10 +93,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONS:
-        return basicSetCons(null, msgs);
-      case LFPackage.SIG_DEFINITIONS__FCONS:
-        return ((InternalEList<?>)getFcons()).basicRemove(otherEnd, msgs);
+      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
+        return ((InternalEList<?>)getConstucts()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -172,10 +109,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONS:
-        return getCons();
-      case LFPackage.SIG_DEFINITIONS__FCONS:
-        return getFcons();
+      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
+        return getConstucts();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -191,12 +126,9 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONS:
-        setCons((sigConstruct)newValue);
-        return;
-      case LFPackage.SIG_DEFINITIONS__FCONS:
-        getFcons().clear();
-        getFcons().addAll((Collection<? extends sigConstruct>)newValue);
+      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
+        getConstucts().clear();
+        getConstucts().addAll((Collection<? extends sigConstruct>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -212,11 +144,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONS:
-        setCons((sigConstruct)null);
-        return;
-      case LFPackage.SIG_DEFINITIONS__FCONS:
-        getFcons().clear();
+      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
+        getConstucts().clear();
         return;
     }
     super.eUnset(featureID);
@@ -232,10 +161,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONS:
-        return cons != null;
-      case LFPackage.SIG_DEFINITIONS__FCONS:
-        return fcons != null && !fcons.isEmpty();
+      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
+        return constucts != null && !constucts.isEmpty();
     }
     return super.eIsSet(featureID);
   }

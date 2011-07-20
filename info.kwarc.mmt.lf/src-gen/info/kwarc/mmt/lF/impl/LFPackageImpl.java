@@ -9,11 +9,14 @@ import info.kwarc.mmt.lF.LFFactory;
 import info.kwarc.mmt.lF.LFPackage;
 import info.kwarc.mmt.lF.Model;
 import info.kwarc.mmt.lF.TempType;
+import info.kwarc.mmt.lF.classicSymbolConstruct;
+import info.kwarc.mmt.lF.includeConstruct;
 import info.kwarc.mmt.lF.namespaceDeclaration;
 import info.kwarc.mmt.lF.readDeclaration;
 import info.kwarc.mmt.lF.sigConstruct;
 import info.kwarc.mmt.lF.sigDefinitions;
 import info.kwarc.mmt.lF.signatureDeclaration;
+import info.kwarc.mmt.lF.structConstruct;
 import info.kwarc.mmt.lF.viewDeclaration;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -79,6 +82,27 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * @generated
    */
   private EClass sigConstructEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass classicSymbolConstructEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass includeConstructEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass structConstructEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -292,19 +316,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getsigDefinitions_Cons()
+  public EReference getsigDefinitions_Constucts()
   {
     return (EReference)sigDefinitionsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getsigDefinitions_Fcons()
-  {
-    return (EReference)sigDefinitionsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -322,7 +336,7 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigConstruct_SymbName()
+  public EAttribute getsigConstruct_Tmp()
   {
     return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(0);
   }
@@ -332,9 +346,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigConstruct_Namespace()
+  public EClass getclassicSymbolConstruct()
   {
-    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(1);
+    return classicSymbolConstructEClass;
   }
 
   /**
@@ -342,9 +356,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigConstruct_StructName()
+  public EAttribute getclassicSymbolConstruct_SymbName()
   {
-    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)classicSymbolConstructEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -352,9 +366,9 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigConstruct_IncOpt()
+  public EClass getincludeConstruct()
   {
-    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(3);
+    return includeConstructEClass;
   }
 
   /**
@@ -362,9 +376,49 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getsigConstruct_Tmp()
+  public EReference getincludeConstruct_Namespace()
   {
-    return (EAttribute)sigConstructEClass.getEStructuralFeatures().get(4);
+    return (EReference)includeConstructEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstructConstruct()
+  {
+    return structConstructEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstructConstruct_StructName()
+  {
+    return (EAttribute)structConstructEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstructConstruct_Namespace()
+  {
+    return (EReference)structConstructEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstructConstruct_IncOpt()
+  {
+    return (EAttribute)structConstructEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -485,15 +539,21 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     createEReference(signatureDeclarationEClass, SIGNATURE_DECLARATION__DEFS);
 
     sigDefinitionsEClass = createEClass(SIG_DEFINITIONS);
-    createEReference(sigDefinitionsEClass, SIG_DEFINITIONS__CONS);
-    createEReference(sigDefinitionsEClass, SIG_DEFINITIONS__FCONS);
+    createEReference(sigDefinitionsEClass, SIG_DEFINITIONS__CONSTUCTS);
 
     sigConstructEClass = createEClass(SIG_CONSTRUCT);
-    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__SYMB_NAME);
-    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__NAMESPACE);
-    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__STRUCT_NAME);
-    createEAttribute(sigConstructEClass, SIG_CONSTRUCT__INC_OPT);
     createEAttribute(sigConstructEClass, SIG_CONSTRUCT__TMP);
+
+    classicSymbolConstructEClass = createEClass(CLASSIC_SYMBOL_CONSTRUCT);
+    createEAttribute(classicSymbolConstructEClass, CLASSIC_SYMBOL_CONSTRUCT__SYMB_NAME);
+
+    includeConstructEClass = createEClass(INCLUDE_CONSTRUCT);
+    createEReference(includeConstructEClass, INCLUDE_CONSTRUCT__NAMESPACE);
+
+    structConstructEClass = createEClass(STRUCT_CONSTRUCT);
+    createEAttribute(structConstructEClass, STRUCT_CONSTRUCT__STRUCT_NAME);
+    createEReference(structConstructEClass, STRUCT_CONSTRUCT__NAMESPACE);
+    createEAttribute(structConstructEClass, STRUCT_CONSTRUCT__INC_OPT);
 
     tempTypeEClass = createEClass(TEMP_TYPE);
     createEAttribute(tempTypeEClass, TEMP_TYPE__FULL_URI);
@@ -536,6 +596,11 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     // Add supertypes to classes
     namespaceDeclarationEClass.getESuperTypes().add(this.getTempType());
     signatureDeclarationEClass.getESuperTypes().add(this.getTempType());
+    classicSymbolConstructEClass.getESuperTypes().add(this.getsigConstruct());
+    includeConstructEClass.getESuperTypes().add(this.getsigConstruct());
+    includeConstructEClass.getESuperTypes().add(this.getTempType());
+    structConstructEClass.getESuperTypes().add(this.getsigConstruct());
+    viewDeclarationEClass.getESuperTypes().add(this.getTempType());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -556,15 +621,21 @@ public class LFPackageImpl extends EPackageImpl implements LFPackage
     initEReference(getsignatureDeclaration_Defs(), this.getsigDefinitions(), null, "defs", null, 0, 1, signatureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sigDefinitionsEClass, sigDefinitions.class, "sigDefinitions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getsigDefinitions_Cons(), this.getsigConstruct(), null, "cons", null, 0, 1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getsigDefinitions_Fcons(), this.getsigConstruct(), null, "fcons", null, 0, -1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getsigDefinitions_Constucts(), this.getsigConstruct(), null, "constucts", null, 0, -1, sigDefinitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sigConstructEClass, sigConstruct.class, "sigConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getsigConstruct_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigConstruct_Namespace(), ecorePackage.getEString(), "namespace", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigConstruct_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getsigConstruct_IncOpt(), ecorePackage.getEString(), "incOpt", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getsigConstruct_Tmp(), ecorePackage.getEString(), "tmp", null, 0, 1, sigConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(classicSymbolConstructEClass, classicSymbolConstruct.class, "classicSymbolConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getclassicSymbolConstruct_SymbName(), ecorePackage.getEString(), "symbName", null, 0, 1, classicSymbolConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(includeConstructEClass, includeConstruct.class, "includeConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getincludeConstruct_Namespace(), this.getsignatureDeclaration(), null, "namespace", null, 0, 1, includeConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(structConstructEClass, structConstruct.class, "structConstruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getstructConstruct_StructName(), ecorePackage.getEString(), "structName", null, 0, 1, structConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstructConstruct_Namespace(), this.getsignatureDeclaration(), null, "namespace", null, 0, 1, structConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getstructConstruct_IncOpt(), ecorePackage.getEString(), "incOpt", null, 0, 1, structConstruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tempTypeEClass, TempType.class, "TempType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTempType_FullURI(), ecorePackage.getEString(), "fullURI", null, 0, 1, TempType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -23,23 +23,28 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="sigDefinitions">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cons" eType="ecore:EClass platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fcons" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constucts" upperBound="-1"
         eType="ecore:EClass platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="sigConstruct">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="structName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incOpt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tmp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="classicSymbolConstruct" eSuperTypes="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="includeConstruct" eSuperTypes="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namespace" eType="ecore:EClass platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="structConstruct" eSuperTypes="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="structName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namespace" eType="ecore:EClass platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incOpt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TempType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="viewDeclaration">
+  <eClassifiers xsi:type="ecore:EClass" name="viewDeclaration" eSuperTypes="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

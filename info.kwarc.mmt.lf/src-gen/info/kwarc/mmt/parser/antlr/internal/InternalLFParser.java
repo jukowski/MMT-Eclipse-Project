@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLFParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SP", "RULE_ML_COMMENT", "RULE_ML2_COMMENT", "RULE_SL_COMMENT", "RULE_DOUBLEDOT", "RULE_CID", "RULE_ANY_OTHER", "RULE_INT", "RULE_MULTIPLEDOT", "'/'", "'.'", "':'", "'\"'", "'%'", "'namespace'", "'='", "'read'", "'->'", "'{'", "'}'", "'sig'", "':='", "'include'", "'struct'", "'meta'", "'abbrev'", "'name'", "'pattern'", "'infix'", "'prefix'", "'postfix'", "'open'", "'view'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SP", "RULE_ML_COMMENT", "RULE_ML2_COMMENT", "RULE_SL_COMMENT", "RULE_DOUBLEDOT", "RULE_CID", "RULE_ANY_OTHER", "RULE_INT", "RULE_MULTIPLEDOT", "'/'", "'.'", "':'", "'\"'", "'%'", "'namespace'", "'='", "'read'", "'->'", "'{'", "'}'", "'sig'", "'meta'", "'abbrev'", "'name'", "'pattern'", "'infix'", "'prefix'", "'postfix'", "':='", "'include'", "'struct'", "'open'", "'view'"
     };
     public static final int RULE_SP=4;
     public static final int T__29=29;
@@ -183,6 +183,11 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	            alt1=3;
             	            }
             	            break;
+            	        case 24:
+            	            {
+            	            alt1=2;
+            	            }
+            	            break;
             	        case 20:
             	            {
             	            alt1=4;
@@ -191,11 +196,6 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	        case 18:
             	            {
             	            alt1=1;
-            	            }
-            	            break;
-            	        case 24:
-            	            {
-            	            alt1=2;
             	            }
             	            break;
             	        default:
@@ -2729,7 +2729,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulesignatureDeclaration"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:999:1: rulesignatureDeclaration returns [EObject current=null] : (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' ) ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:999:1: rulesignatureDeclaration returns [EObject current=null] : ( (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' ) ;
     public final EObject rulesignatureDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -2745,19 +2745,22 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1002:28: ( (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:1: (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1002:28: ( ( (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:1: ( (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:1: (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:3: otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:1: ( (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:2: (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) ) ( ruleWS )* otherlv_5= '=' ( ruleWS )* ( (lv_defs_7_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_9= '.'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_rulesignatureDeclaration2630); 
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:2: (otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1003:4: otherlv_0= '%' otherlv_1= 'sig' ( ruleWS )+ ( (lv_sigName_3_0= ruleGID ) )
+            {
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_rulesignatureDeclaration2631); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getSignatureDeclarationAccess().getPercentSignKeyword_0_0());
                 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_rulesignatureDeclaration2642); 
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_rulesignatureDeclaration2643); 
 
-                	newLeafNode(otherlv_1, grammarAccess.getSignatureDeclarationAccess().getSigKeyword_1());
+                	newLeafNode(otherlv_1, grammarAccess.getSignatureDeclarationAccess().getSigKeyword_0_1());
                 
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1011:1: ( ruleWS )+
             int cnt25=0;
@@ -2776,9 +2779,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1012:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_2()); 
+            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_0_2()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2659);
+            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2660);
             	    ruleWS();
 
             	    state._fsp--;
@@ -2806,9 +2809,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1021:3: lv_sigName_3_0= ruleGID
             {
              
-            	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_3_0()); 
+            	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getSigNameGIDParserRuleCall_0_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleGID_in_rulesignatureDeclaration2681);
+            pushFollow(FOLLOW_ruleGID_in_rulesignatureDeclaration2682);
             lv_sigName_3_0=ruleGID();
 
             state._fsp--;
@@ -2830,7 +2833,10 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1037:2: ( ruleWS )*
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1037:3: ( ruleWS )*
             loop26:
             do {
                 int alt26=2;
@@ -2846,9 +2852,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1038:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_4()); 
+            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2698);
+            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2700);
             	    ruleWS();
 
             	    state._fsp--;
@@ -2865,9 +2871,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,19,FOLLOW_19_in_rulesignatureDeclaration2711); 
+            otherlv_5=(Token)match(input,19,FOLLOW_19_in_rulesignatureDeclaration2713); 
 
-                	newLeafNode(otherlv_5, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_5());
+                	newLeafNode(otherlv_5, grammarAccess.getSignatureDeclarationAccess().getEqualsSignKeyword_2());
                 
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1049:1: ( ruleWS )*
             loop27:
@@ -2885,9 +2891,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1050:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_6()); 
+            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_3()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2728);
+            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2730);
             	    ruleWS();
 
             	    state._fsp--;
@@ -2911,9 +2917,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1059:3: lv_defs_7_0= rulesigDefinitions
             {
              
-            	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_7_0()); 
+            	        newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getDefsSigDefinitionsParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_rulesigDefinitions_in_rulesignatureDeclaration2750);
+            pushFollow(FOLLOW_rulesigDefinitions_in_rulesignatureDeclaration2752);
             lv_defs_7_0=rulesigDefinitions();
 
             state._fsp--;
@@ -2951,9 +2957,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1076:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_8()); 
+            	            newCompositeNode(grammarAccess.getSignatureDeclarationAccess().getWSParserRuleCall_5()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2767);
+            	    pushFollow(FOLLOW_ruleWS_in_rulesignatureDeclaration2769);
             	    ruleWS();
 
             	    state._fsp--;
@@ -2970,9 +2976,9 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,14,FOLLOW_14_in_rulesignatureDeclaration2780); 
+            otherlv_9=(Token)match(input,14,FOLLOW_14_in_rulesignatureDeclaration2782); 
 
-                	newLeafNode(otherlv_9, grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_9());
+                	newLeafNode(otherlv_9, grammarAccess.getSignatureDeclarationAccess().getFullStopKeyword_6());
                 
 
             }
@@ -3007,13 +3013,13 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1097:2: iv_rulesigDefinitions= rulesigDefinitions EOF
             {
              newCompositeNode(grammarAccess.getSigDefinitionsRule()); 
-            pushFollow(FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions2816);
+            pushFollow(FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions2818);
             iv_rulesigDefinitions=rulesigDefinitions();
 
             state._fsp--;
 
              current =iv_rulesigDefinitions; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulesigDefinitions2826); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesigDefinitions2828); 
 
             }
 
@@ -3031,7 +3037,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulesigDefinitions"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1104:1: rulesigDefinitions returns [EObject current=null] : (otherlv_0= '{' ( ruleWS )* ( (lv_cons_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' ) ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1104:1: rulesigDefinitions returns [EObject current=null] : (otherlv_0= '{' ( ruleWS )* ( (lv_constucts_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' ) ;
     public final EObject rulesigDefinitions() throws RecognitionException {
         EObject current = null;
 
@@ -3039,21 +3045,21 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
-        EObject lv_cons_2_0 = null;
+        EObject lv_constucts_2_0 = null;
 
-        EObject lv_fcons_5_0 = null;
+        EObject lv_constucts_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1107:28: ( (otherlv_0= '{' ( ruleWS )* ( (lv_cons_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:1: (otherlv_0= '{' ( ruleWS )* ( (lv_cons_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1107:28: ( (otherlv_0= '{' ( ruleWS )* ( (lv_constucts_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:1: (otherlv_0= '{' ( ruleWS )* ( (lv_constucts_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:1: (otherlv_0= '{' ( ruleWS )* ( (lv_cons_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:3: otherlv_0= '{' ( ruleWS )* ( (lv_cons_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:1: (otherlv_0= '{' ( ruleWS )* ( (lv_constucts_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1108:3: otherlv_0= '{' ( ruleWS )* ( (lv_constucts_2_0= rulesigConstruct ) ) (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )* (otherlv_6= '.' ( ruleWS )* )? otherlv_8= '}'
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_rulesigDefinitions2863); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_rulesigDefinitions2865); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSigDefinitionsAccess().getLeftCurlyBracketKeyword_0());
                 
@@ -3075,7 +3081,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2880);
+            	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2882);
             	    ruleWS();
 
             	    state._fsp--;
@@ -3092,17 +3098,17 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1120:3: ( (lv_cons_2_0= rulesigConstruct ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1121:1: (lv_cons_2_0= rulesigConstruct )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1120:3: ( (lv_constucts_2_0= rulesigConstruct ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1121:1: (lv_constucts_2_0= rulesigConstruct )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1121:1: (lv_cons_2_0= rulesigConstruct )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1122:3: lv_cons_2_0= rulesigConstruct
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1121:1: (lv_constucts_2_0= rulesigConstruct )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1122:3: lv_constucts_2_0= rulesigConstruct
             {
              
-            	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConsSigConstructParserRuleCall_2_0()); 
+            	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConstuctsSigConstructParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_rulesigConstruct_in_rulesigDefinitions2902);
-            lv_cons_2_0=rulesigConstruct();
+            pushFollow(FOLLOW_rulesigConstruct_in_rulesigDefinitions2904);
+            lv_constucts_2_0=rulesigConstruct();
 
             state._fsp--;
 
@@ -3110,10 +3116,10 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	        if (current==null) {
             	            current = createModelElementForParent(grammarAccess.getSigDefinitionsRule());
             	        }
-                   		set(
+                   		add(
                    			current, 
-                   			"cons",
-                    		lv_cons_2_0, 
+                   			"constucts",
+                    		lv_constucts_2_0, 
                     		"sigConstruct");
             	        afterParserOrEnumRuleCall();
             	    
@@ -3123,16 +3129,16 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1138:2: (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1138:2: (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )*
             loop31:
             do {
                 int alt31=2;
                 alt31 = dfa31.predict(input);
                 switch (alt31) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1138:4: otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1138:4: otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) )
             	    {
-            	    otherlv_3=(Token)match(input,14,FOLLOW_14_in_rulesigDefinitions2915); 
+            	    otherlv_3=(Token)match(input,14,FOLLOW_14_in_rulesigDefinitions2917); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_3_0());
             	        
@@ -3155,7 +3161,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    	     
             	    	            newCompositeNode(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_3_1()); 
             	    	        
-            	    	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2932);
+            	    	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2934);
             	    	    ruleWS();
 
             	    	    state._fsp--;
@@ -3176,17 +3182,17 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	        cnt30++;
             	    } while (true);
 
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1150:3: ( (lv_fcons_5_0= rulesigConstruct ) )
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1151:1: (lv_fcons_5_0= rulesigConstruct )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1150:3: ( (lv_constucts_5_0= rulesigConstruct ) )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1151:1: (lv_constucts_5_0= rulesigConstruct )
             	    {
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1151:1: (lv_fcons_5_0= rulesigConstruct )
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1152:3: lv_fcons_5_0= rulesigConstruct
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1151:1: (lv_constucts_5_0= rulesigConstruct )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1152:3: lv_constucts_5_0= rulesigConstruct
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getFconsSigConstructParserRuleCall_3_2_0()); 
+            	    	        newCompositeNode(grammarAccess.getSigDefinitionsAccess().getConstuctsSigConstructParserRuleCall_3_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulesigConstruct_in_rulesigDefinitions2954);
-            	    lv_fcons_5_0=rulesigConstruct();
+            	    pushFollow(FOLLOW_rulesigConstruct_in_rulesigDefinitions2956);
+            	    lv_constucts_5_0=rulesigConstruct();
 
             	    state._fsp--;
 
@@ -3196,8 +3202,8 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    	        }
             	           		add(
             	           			current, 
-            	           			"fcons",
-            	            		lv_fcons_5_0, 
+            	           			"constucts",
+            	            		lv_constucts_5_0, 
             	            		"sigConstruct");
             	    	        afterParserOrEnumRuleCall();
             	    	    
@@ -3227,7 +3233,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1168:6: otherlv_6= '.' ( ruleWS )*
                     {
-                    otherlv_6=(Token)match(input,14,FOLLOW_14_in_rulesigDefinitions2969); 
+                    otherlv_6=(Token)match(input,14,FOLLOW_14_in_rulesigDefinitions2971); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getSigDefinitionsAccess().getFullStopKeyword_4_0());
                         
@@ -3249,7 +3255,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                     	     
                     	            newCompositeNode(grammarAccess.getSigDefinitionsAccess().getWSParserRuleCall_4_1()); 
                     	        
-                    	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2986);
+                    	    pushFollow(FOLLOW_ruleWS_in_rulesigDefinitions2988);
                     	    ruleWS();
 
                     	    state._fsp--;
@@ -3272,7 +3278,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,23,FOLLOW_23_in_rulesigDefinitions3001); 
+            otherlv_8=(Token)match(input,23,FOLLOW_23_in_rulesigDefinitions3003); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getSigDefinitionsAccess().getRightCurlyBracketKeyword_5());
                 
@@ -3309,13 +3315,13 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1194:2: iv_rulesigConstruct= rulesigConstruct EOF
             {
              newCompositeNode(grammarAccess.getSigConstructRule()); 
-            pushFollow(FOLLOW_rulesigConstruct_in_entryRulesigConstruct3037);
+            pushFollow(FOLLOW_rulesigConstruct_in_entryRulesigConstruct3039);
             iv_rulesigConstruct=rulesigConstruct();
 
             state._fsp--;
 
              current =iv_rulesigConstruct; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulesigConstruct3047); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesigConstruct3049); 
 
             }
 
@@ -3333,75 +3339,64 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulesigConstruct"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1201:1: rulesigConstruct returns [EObject current=null] : ( ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) | (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) | (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? ) | (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) ) ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1201:1: rulesigConstruct returns [EObject current=null] : (this_classicSymbolConstruct_0= ruleclassicSymbolConstruct | this_includeConstruct_1= ruleincludeConstruct | this_structConstruct_2= rulestructConstruct | (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) ) ;
     public final EObject rulesigConstruct() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
-        Token otherlv_6=null;
-        Token otherlv_7=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token otherlv_21=null;
-        Token lv_tmp_22_1=null;
-        Token lv_tmp_22_2=null;
-        Token lv_tmp_22_3=null;
-        Token lv_tmp_22_4=null;
-        Token lv_tmp_22_5=null;
-        Token lv_tmp_22_6=null;
-        Token lv_tmp_22_7=null;
-        AntlrDatatypeRuleToken lv_symbName_0_0 = null;
+        Token lv_tmp_4_1=null;
+        Token lv_tmp_4_2=null;
+        Token lv_tmp_4_3=null;
+        Token lv_tmp_4_4=null;
+        Token lv_tmp_4_5=null;
+        Token lv_tmp_4_6=null;
+        Token lv_tmp_4_7=null;
+        EObject this_classicSymbolConstruct_0 = null;
 
-        AntlrDatatypeRuleToken lv_namespace_9_0 = null;
+        EObject this_includeConstruct_1 = null;
 
-        AntlrDatatypeRuleToken lv_structName_15_0 = null;
-
-        AntlrDatatypeRuleToken lv_incOpt_20_0 = null;
+        EObject this_structConstruct_2 = null;
 
 
          enterRule(); 
             
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1204:28: ( ( ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) | (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) | (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? ) | (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:1: ( ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) | (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) | (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? ) | (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1204:28: ( (this_classicSymbolConstruct_0= ruleclassicSymbolConstruct | this_includeConstruct_1= ruleincludeConstruct | this_structConstruct_2= rulestructConstruct | (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:1: (this_classicSymbolConstruct_0= ruleclassicSymbolConstruct | this_includeConstruct_1= ruleincludeConstruct | this_structConstruct_2= rulestructConstruct | (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:1: ( ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) | (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) | (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? ) | (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) )
-            int alt47=4;
-            int LA47_0 = input.LA(1);
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:1: (this_classicSymbolConstruct_0= ruleclassicSymbolConstruct | this_includeConstruct_1= ruleincludeConstruct | this_structConstruct_2= rulestructConstruct | (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* ) )
+            int alt36=4;
+            int LA36_0 = input.LA(1);
 
-            if ( ((LA47_0>=RULE_DOUBLEDOT && LA47_0<=RULE_MULTIPLEDOT)||LA47_0==19) ) {
-                alt47=1;
+            if ( ((LA36_0>=RULE_DOUBLEDOT && LA36_0<=RULE_MULTIPLEDOT)||LA36_0==19) ) {
+                alt36=1;
             }
-            else if ( (LA47_0==17) ) {
+            else if ( (LA36_0==17) ) {
                 switch ( input.LA(2) ) {
-                case 27:
-                    {
-                    alt47=3;
-                    }
-                    break;
+                case 25:
                 case 26:
-                    {
-                    alt47=2;
-                    }
-                    break;
+                case 27:
                 case 28:
                 case 29:
                 case 30:
                 case 31:
-                case 32:
+                    {
+                    alt36=4;
+                    }
+                    break;
                 case 33:
+                    {
+                    alt36=2;
+                    }
+                    break;
                 case 34:
                     {
-                    alt47=4;
+                    alt36=3;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 47, 2, input);
+                        new NoViableAltException("", 36, 2, input);
 
                     throw nvae;
                 }
@@ -3409,800 +3404,235 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 47, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
-            switch (alt47) {
+            switch (alt36) {
                 case 1 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:2: ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:2: ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:3: ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )*
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1205:3: ( (lv_symbName_0_0= ruleGID ) )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1206:1: (lv_symbName_0_0= ruleGID )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1206:1: (lv_symbName_0_0= ruleGID )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1207:3: lv_symbName_0_0= ruleGID
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1206:5: this_classicSymbolConstruct_0= ruleclassicSymbolConstruct
                     {
                      
-                    	        newCompositeNode(grammarAccess.getSigConstructAccess().getSymbNameGIDParserRuleCall_0_0_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleGID_in_rulesigConstruct3094);
-                    lv_symbName_0_0=ruleGID();
+                            newCompositeNode(grammarAccess.getSigConstructAccess().getClassicSymbolConstructParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleclassicSymbolConstruct_in_rulesigConstruct3096);
+                    this_classicSymbolConstruct_0=ruleclassicSymbolConstruct();
 
                     state._fsp--;
 
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getSigConstructRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"symbName",
-                            		lv_symbName_0_0, 
-                            		"GID");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1223:2: ( ruleWS )*
-                    loop34:
-                    do {
-                        int alt34=2;
-                        int LA34_0 = input.LA(1);
-
-                        if ( ((LA34_0>=RULE_SP && LA34_0<=RULE_SL_COMMENT)) ) {
-                            alt34=1;
-                        }
-
-
-                        switch (alt34) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1224:5: ruleWS
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_0_1()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleWS_in_rulesigConstruct3111);
-                    	    ruleWS();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop34;
-                        }
-                    } while (true);
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1231:3: (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' )
-                    int alt35=3;
-                    switch ( input.LA(1) ) {
-                    case 15:
-                        {
-                        alt35=1;
-                        }
-                        break;
-                    case 25:
-                        {
-                        alt35=2;
-                        }
-                        break;
-                    case 19:
-                        {
-                        alt35=3;
-                        }
-                        break;
-                    default:
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 35, 0, input);
-
-                        throw nvae;
-                    }
-
-                    switch (alt35) {
-                        case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1231:5: otherlv_2= ':'
-                            {
-                            otherlv_2=(Token)match(input,15,FOLLOW_15_in_rulesigConstruct3125); 
-
-                                	newLeafNode(otherlv_2, grammarAccess.getSigConstructAccess().getColonKeyword_0_2_0());
-                                
-
-                            }
-                            break;
-                        case 2 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1236:7: otherlv_3= ':='
-                            {
-                            otherlv_3=(Token)match(input,25,FOLLOW_25_in_rulesigConstruct3143); 
-
-                                	newLeafNode(otherlv_3, grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_0_2_1());
-                                
-
-                            }
-                            break;
-                        case 3 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1241:7: otherlv_4= '='
-                            {
-                            otherlv_4=(Token)match(input,19,FOLLOW_19_in_rulesigConstruct3161); 
-
-                                	newLeafNode(otherlv_4, grammarAccess.getSigConstructAccess().getEqualsSignKeyword_0_2_2());
-                                
-
-                            }
-                            break;
-
-                    }
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1245:2: ( ruleSOMETHING )*
-                    loop36:
-                    do {
-                        int alt36=2;
-                        int LA36_0 = input.LA(1);
-
-                        if ( (LA36_0==14) ) {
-                            int LA36_1 = input.LA(2);
-
-                            if ( ((LA36_1>=RULE_CID && LA36_1<=RULE_ANY_OTHER)) ) {
-                                alt36=1;
-                            }
-
-
-                        }
-                        else if ( ((LA36_0>=RULE_SP && LA36_0<=RULE_MULTIPLEDOT)||LA36_0==15||LA36_0==17||LA36_0==19||(LA36_0>=21 && LA36_0<=22)) ) {
-                            alt36=1;
-                        }
-
-
-                        switch (alt36) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1246:5: ruleSOMETHING
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_0_3()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleSOMETHING_in_rulesigConstruct3179);
-                    	    ruleSOMETHING();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop36;
-                        }
-                    } while (true);
-
-
-                    }
-
+                     
+                            current = this_classicSymbolConstruct_0; 
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 2 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1254:6: (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1254:6: (otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1254:8: otherlv_6= '%' otherlv_7= 'include' ( ruleWS )+ ( (lv_namespace_9_0= ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )?
-                    {
-                    otherlv_6=(Token)match(input,17,FOLLOW_17_in_rulesigConstruct3200); 
-
-                        	newLeafNode(otherlv_6, grammarAccess.getSigConstructAccess().getPercentSignKeyword_1_0());
-                        
-                    otherlv_7=(Token)match(input,26,FOLLOW_26_in_rulesigConstruct3212); 
-
-                        	newLeafNode(otherlv_7, grammarAccess.getSigConstructAccess().getIncludeKeyword_1_1());
-                        
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1262:1: ( ruleWS )+
-                    int cnt37=0;
-                    loop37:
-                    do {
-                        int alt37=2;
-                        int LA37_0 = input.LA(1);
-
-                        if ( ((LA37_0>=RULE_SP && LA37_0<=RULE_SL_COMMENT)) ) {
-                            alt37=1;
-                        }
-
-
-                        switch (alt37) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1263:5: ruleWS
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_2()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleWS_in_rulesigConstruct3229);
-                    	    ruleWS();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt37 >= 1 ) break loop37;
-                                EarlyExitException eee =
-                                    new EarlyExitException(37, input);
-                                throw eee;
-                        }
-                        cnt37++;
-                    } while (true);
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1270:3: ( (lv_namespace_9_0= ruleNAMESPACE ) )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1271:1: (lv_namespace_9_0= ruleNAMESPACE )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1271:1: (lv_namespace_9_0= ruleNAMESPACE )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1272:3: lv_namespace_9_0= ruleNAMESPACE
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1216:5: this_includeConstruct_1= ruleincludeConstruct
                     {
                      
-                    	        newCompositeNode(grammarAccess.getSigConstructAccess().getNamespaceNAMESPACEParserRuleCall_1_3_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleNAMESPACE_in_rulesigConstruct3251);
-                    lv_namespace_9_0=ruleNAMESPACE();
+                            newCompositeNode(grammarAccess.getSigConstructAccess().getIncludeConstructParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleincludeConstruct_in_rulesigConstruct3123);
+                    this_includeConstruct_1=ruleincludeConstruct();
 
                     state._fsp--;
 
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getSigConstructRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"namespace",
-                            		lv_namespace_9_0, 
-                            		"NAMESPACE");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1288:2: ( ( ruleWS )+ ruleincludeOps )?
-                    int alt39=2;
-                    int LA39_0 = input.LA(1);
-
-                    if ( ((LA39_0>=RULE_SP && LA39_0<=RULE_SL_COMMENT)) ) {
-                        alt39=1;
-                    }
-                    switch (alt39) {
-                        case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1288:3: ( ruleWS )+ ruleincludeOps
-                            {
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1288:3: ( ruleWS )+
-                            int cnt38=0;
-                            loop38:
-                            do {
-                                int alt38=2;
-                                int LA38_0 = input.LA(1);
-
-                                if ( ((LA38_0>=RULE_SP && LA38_0<=RULE_SL_COMMENT)) ) {
-                                    alt38=1;
-                                }
-
-
-                                switch (alt38) {
-                            	case 1 :
-                            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1289:5: ruleWS
-                            	    {
-                            	     
-                            	            newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_1_4_0()); 
-                            	        
-                            	    pushFollow(FOLLOW_ruleWS_in_rulesigConstruct3269);
-                            	    ruleWS();
-
-                            	    state._fsp--;
-
-                            	     
-                            	            afterParserOrEnumRuleCall();
-                            	        
-
-                            	    }
-                            	    break;
-
-                            	default :
-                            	    if ( cnt38 >= 1 ) break loop38;
-                                        EarlyExitException eee =
-                                            new EarlyExitException(38, input);
-                                        throw eee;
-                                }
-                                cnt38++;
-                            } while (true);
-
-                             
-                                    newCompositeNode(grammarAccess.getSigConstructAccess().getIncludeOpsParserRuleCall_1_4_1()); 
-                                
-                            pushFollow(FOLLOW_ruleincludeOps_in_rulesigConstruct3286);
-                            ruleincludeOps();
-
-                            state._fsp--;
-
-                             
-                                    afterParserOrEnumRuleCall();
-                                
-
-                            }
-                            break;
-
-                    }
-
-
-                    }
-
+                     
+                            current = this_includeConstruct_1; 
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 3 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1305:6: (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1305:6: (otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )? )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1305:8: otherlv_12= '%' otherlv_13= 'struct' ( ruleWS )+ ( (lv_structName_15_0= ruleGID ) ) ( ruleWS )* (otherlv_17= ':' | otherlv_18= ':=' ) ( ruleSOMETHING )* ( (lv_incOpt_20_0= ruleincludeOps ) )?
-                    {
-                    otherlv_12=(Token)match(input,17,FOLLOW_17_in_rulesigConstruct3307); 
-
-                        	newLeafNode(otherlv_12, grammarAccess.getSigConstructAccess().getPercentSignKeyword_2_0());
-                        
-                    otherlv_13=(Token)match(input,27,FOLLOW_27_in_rulesigConstruct3319); 
-
-                        	newLeafNode(otherlv_13, grammarAccess.getSigConstructAccess().getStructKeyword_2_1());
-                        
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1313:1: ( ruleWS )+
-                    int cnt40=0;
-                    loop40:
-                    do {
-                        int alt40=2;
-                        int LA40_0 = input.LA(1);
-
-                        if ( ((LA40_0>=RULE_SP && LA40_0<=RULE_SL_COMMENT)) ) {
-                            alt40=1;
-                        }
-
-
-                        switch (alt40) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1314:5: ruleWS
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_2()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleWS_in_rulesigConstruct3336);
-                    	    ruleWS();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt40 >= 1 ) break loop40;
-                                EarlyExitException eee =
-                                    new EarlyExitException(40, input);
-                                throw eee;
-                        }
-                        cnt40++;
-                    } while (true);
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1321:3: ( (lv_structName_15_0= ruleGID ) )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1322:1: (lv_structName_15_0= ruleGID )
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1322:1: (lv_structName_15_0= ruleGID )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1323:3: lv_structName_15_0= ruleGID
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1226:5: this_structConstruct_2= rulestructConstruct
                     {
                      
-                    	        newCompositeNode(grammarAccess.getSigConstructAccess().getStructNameGIDParserRuleCall_2_3_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleGID_in_rulesigConstruct3358);
-                    lv_structName_15_0=ruleGID();
+                            newCompositeNode(grammarAccess.getSigConstructAccess().getStructConstructParserRuleCall_2()); 
+                        
+                    pushFollow(FOLLOW_rulestructConstruct_in_rulesigConstruct3150);
+                    this_structConstruct_2=rulestructConstruct();
 
                     state._fsp--;
 
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getSigConstructRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"structName",
-                            		lv_structName_15_0, 
-                            		"GID");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1339:2: ( ruleWS )*
-                    loop41:
-                    do {
-                        int alt41=2;
-                        int LA41_0 = input.LA(1);
-
-                        if ( ((LA41_0>=RULE_SP && LA41_0<=RULE_SL_COMMENT)) ) {
-                            alt41=1;
-                        }
-
-
-                        switch (alt41) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1340:5: ruleWS
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getWSParserRuleCall_2_4()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleWS_in_rulesigConstruct3375);
-                    	    ruleWS();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop41;
-                        }
-                    } while (true);
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1347:3: (otherlv_17= ':' | otherlv_18= ':=' )
-                    int alt42=2;
-                    int LA42_0 = input.LA(1);
-
-                    if ( (LA42_0==15) ) {
-                        alt42=1;
-                    }
-                    else if ( (LA42_0==25) ) {
-                        alt42=2;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 42, 0, input);
-
-                        throw nvae;
-                    }
-                    switch (alt42) {
-                        case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1347:5: otherlv_17= ':'
-                            {
-                            otherlv_17=(Token)match(input,15,FOLLOW_15_in_rulesigConstruct3389); 
-
-                                	newLeafNode(otherlv_17, grammarAccess.getSigConstructAccess().getColonKeyword_2_5_0());
-                                
-
-                            }
-                            break;
-                        case 2 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1352:7: otherlv_18= ':='
-                            {
-                            otherlv_18=(Token)match(input,25,FOLLOW_25_in_rulesigConstruct3407); 
-
-                                	newLeafNode(otherlv_18, grammarAccess.getSigConstructAccess().getColonEqualsSignKeyword_2_5_1());
-                                
-
-                            }
-                            break;
-
-                    }
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1356:2: ( ruleSOMETHING )*
-                    loop43:
-                    do {
-                        int alt43=2;
-                        switch ( input.LA(1) ) {
-                        case 17:
-                            {
-                            int LA43_1 = input.LA(2);
-
-                            if ( (LA43_1==EOF||(LA43_1>=RULE_SP && LA43_1<=RULE_MULTIPLEDOT)||(LA43_1>=14 && LA43_1<=15)||LA43_1==17||LA43_1==19||(LA43_1>=21 && LA43_1<=23)) ) {
-                                alt43=1;
-                            }
-
-
-                            }
-                            break;
-                        case 14:
-                            {
-                            int LA43_2 = input.LA(2);
-
-                            if ( ((LA43_2>=RULE_CID && LA43_2<=RULE_ANY_OTHER)) ) {
-                                alt43=1;
-                            }
-
-
-                            }
-                            break;
-                        case RULE_SP:
-                        case RULE_ML_COMMENT:
-                        case RULE_ML2_COMMENT:
-                        case RULE_SL_COMMENT:
-                        case RULE_DOUBLEDOT:
-                        case RULE_CID:
-                        case RULE_ANY_OTHER:
-                        case RULE_INT:
-                        case RULE_MULTIPLEDOT:
-                        case 15:
-                        case 19:
-                        case 21:
-                        case 22:
-                            {
-                            alt43=1;
-                            }
-                            break;
-
-                        }
-
-                        switch (alt43) {
-                    	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1357:5: ruleSOMETHING
-                    	    {
-                    	     
-                    	            newCompositeNode(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_2_6()); 
-                    	        
-                    	    pushFollow(FOLLOW_ruleSOMETHING_in_rulesigConstruct3425);
-                    	    ruleSOMETHING();
-
-                    	    state._fsp--;
-
-                    	     
-                    	            afterParserOrEnumRuleCall();
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop43;
-                        }
-                    } while (true);
-
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1364:3: ( (lv_incOpt_20_0= ruleincludeOps ) )?
-                    int alt44=2;
-                    int LA44_0 = input.LA(1);
-
-                    if ( (LA44_0==17) ) {
-                        alt44=1;
-                    }
-                    switch (alt44) {
-                        case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1365:1: (lv_incOpt_20_0= ruleincludeOps )
-                            {
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1365:1: (lv_incOpt_20_0= ruleincludeOps )
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1366:3: lv_incOpt_20_0= ruleincludeOps
-                            {
-                             
-                            	        newCompositeNode(grammarAccess.getSigConstructAccess().getIncOptIncludeOpsParserRuleCall_2_7_0()); 
-                            	    
-                            pushFollow(FOLLOW_ruleincludeOps_in_rulesigConstruct3447);
-                            lv_incOpt_20_0=ruleincludeOps();
-
-                            state._fsp--;
-
-
-                            	        if (current==null) {
-                            	            current = createModelElementForParent(grammarAccess.getSigConstructRule());
-                            	        }
-                                   		set(
-                                   			current, 
-                                   			"incOpt",
-                                    		lv_incOpt_20_0, 
-                                    		"includeOps");
-                            	        afterParserOrEnumRuleCall();
-                            	    
-
-                            }
-
-
-                            }
-                            break;
-
-                    }
-
-
-                    }
-
+                     
+                            current = this_structConstruct_2; 
+                            afterParserOrEnumRuleCall();
+                        
 
                     }
                     break;
                 case 4 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1383:6: (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1235:6: (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* )
                     {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1383:6: (otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )* )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1383:8: otherlv_21= '%' ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) ) ( ruleSOMETHING )*
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1235:6: (otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )* )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1235:8: otherlv_3= '%' ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) ) ( ruleSOMETHING )*
                     {
-                    otherlv_21=(Token)match(input,17,FOLLOW_17_in_rulesigConstruct3468); 
+                    otherlv_3=(Token)match(input,17,FOLLOW_17_in_rulesigConstruct3168); 
 
-                        	newLeafNode(otherlv_21, grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0());
+                        	newLeafNode(otherlv_3, grammarAccess.getSigConstructAccess().getPercentSignKeyword_3_0());
                         
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1387:1: ( ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) ) )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1388:1: ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1239:1: ( ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) ) )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1240:1: ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) )
                     {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1388:1: ( (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' ) )
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1389:1: (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1240:1: ( (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' ) )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1241:1: (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' )
                     {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1389:1: (lv_tmp_22_1= 'meta' | lv_tmp_22_2= 'abbrev' | lv_tmp_22_3= 'name' | lv_tmp_22_4= 'pattern' | lv_tmp_22_5= 'infix' | lv_tmp_22_6= 'prefix' | lv_tmp_22_7= 'postfix' )
-                    int alt45=7;
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1241:1: (lv_tmp_4_1= 'meta' | lv_tmp_4_2= 'abbrev' | lv_tmp_4_3= 'name' | lv_tmp_4_4= 'pattern' | lv_tmp_4_5= 'infix' | lv_tmp_4_6= 'prefix' | lv_tmp_4_7= 'postfix' )
+                    int alt34=7;
                     switch ( input.LA(1) ) {
+                    case 25:
+                        {
+                        alt34=1;
+                        }
+                        break;
+                    case 26:
+                        {
+                        alt34=2;
+                        }
+                        break;
+                    case 27:
+                        {
+                        alt34=3;
+                        }
+                        break;
                     case 28:
                         {
-                        alt45=1;
+                        alt34=4;
                         }
                         break;
                     case 29:
                         {
-                        alt45=2;
+                        alt34=5;
                         }
                         break;
                     case 30:
                         {
-                        alt45=3;
+                        alt34=6;
                         }
                         break;
                     case 31:
                         {
-                        alt45=4;
-                        }
-                        break;
-                    case 32:
-                        {
-                        alt45=5;
-                        }
-                        break;
-                    case 33:
-                        {
-                        alt45=6;
-                        }
-                        break;
-                    case 34:
-                        {
-                        alt45=7;
+                        alt34=7;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 45, 0, input);
+                            new NoViableAltException("", 34, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt45) {
+                    switch (alt34) {
                         case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1390:3: lv_tmp_22_1= 'meta'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1242:3: lv_tmp_4_1= 'meta'
                             {
-                            lv_tmp_22_1=(Token)match(input,28,FOLLOW_28_in_rulesigConstruct3488); 
+                            lv_tmp_4_1=(Token)match(input,25,FOLLOW_25_in_rulesigConstruct3188); 
 
-                                    newLeafNode(lv_tmp_22_1, grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0());
+                                    newLeafNode(lv_tmp_4_1, grammarAccess.getSigConstructAccess().getTmpMetaKeyword_3_1_0_0());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_1, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_1, null);
                             	    
 
                             }
                             break;
                         case 2 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1402:8: lv_tmp_22_2= 'abbrev'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1254:8: lv_tmp_4_2= 'abbrev'
                             {
-                            lv_tmp_22_2=(Token)match(input,29,FOLLOW_29_in_rulesigConstruct3517); 
+                            lv_tmp_4_2=(Token)match(input,26,FOLLOW_26_in_rulesigConstruct3217); 
 
-                                    newLeafNode(lv_tmp_22_2, grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1());
+                                    newLeafNode(lv_tmp_4_2, grammarAccess.getSigConstructAccess().getTmpAbbrevKeyword_3_1_0_1());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_2, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_2, null);
                             	    
 
                             }
                             break;
                         case 3 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1414:8: lv_tmp_22_3= 'name'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1266:8: lv_tmp_4_3= 'name'
                             {
-                            lv_tmp_22_3=(Token)match(input,30,FOLLOW_30_in_rulesigConstruct3546); 
+                            lv_tmp_4_3=(Token)match(input,27,FOLLOW_27_in_rulesigConstruct3246); 
 
-                                    newLeafNode(lv_tmp_22_3, grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2());
+                                    newLeafNode(lv_tmp_4_3, grammarAccess.getSigConstructAccess().getTmpNameKeyword_3_1_0_2());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_3, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_3, null);
                             	    
 
                             }
                             break;
                         case 4 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1426:8: lv_tmp_22_4= 'pattern'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1278:8: lv_tmp_4_4= 'pattern'
                             {
-                            lv_tmp_22_4=(Token)match(input,31,FOLLOW_31_in_rulesigConstruct3575); 
+                            lv_tmp_4_4=(Token)match(input,28,FOLLOW_28_in_rulesigConstruct3275); 
 
-                                    newLeafNode(lv_tmp_22_4, grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3());
+                                    newLeafNode(lv_tmp_4_4, grammarAccess.getSigConstructAccess().getTmpPatternKeyword_3_1_0_3());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_4, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_4, null);
                             	    
 
                             }
                             break;
                         case 5 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1438:8: lv_tmp_22_5= 'infix'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1290:8: lv_tmp_4_5= 'infix'
                             {
-                            lv_tmp_22_5=(Token)match(input,32,FOLLOW_32_in_rulesigConstruct3604); 
+                            lv_tmp_4_5=(Token)match(input,29,FOLLOW_29_in_rulesigConstruct3304); 
 
-                                    newLeafNode(lv_tmp_22_5, grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4());
+                                    newLeafNode(lv_tmp_4_5, grammarAccess.getSigConstructAccess().getTmpInfixKeyword_3_1_0_4());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_5, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_5, null);
                             	    
 
                             }
                             break;
                         case 6 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1450:8: lv_tmp_22_6= 'prefix'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1302:8: lv_tmp_4_6= 'prefix'
                             {
-                            lv_tmp_22_6=(Token)match(input,33,FOLLOW_33_in_rulesigConstruct3633); 
+                            lv_tmp_4_6=(Token)match(input,30,FOLLOW_30_in_rulesigConstruct3333); 
 
-                                    newLeafNode(lv_tmp_22_6, grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5());
+                                    newLeafNode(lv_tmp_4_6, grammarAccess.getSigConstructAccess().getTmpPrefixKeyword_3_1_0_5());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_6, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_6, null);
                             	    
 
                             }
                             break;
                         case 7 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1462:8: lv_tmp_22_7= 'postfix'
+                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1314:8: lv_tmp_4_7= 'postfix'
                             {
-                            lv_tmp_22_7=(Token)match(input,34,FOLLOW_34_in_rulesigConstruct3662); 
+                            lv_tmp_4_7=(Token)match(input,31,FOLLOW_31_in_rulesigConstruct3362); 
 
-                                    newLeafNode(lv_tmp_22_7, grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6());
+                                    newLeafNode(lv_tmp_4_7, grammarAccess.getSigConstructAccess().getTmpPostfixKeyword_3_1_0_6());
                                 
 
                             	        if (current==null) {
                             	            current = createModelElement(grammarAccess.getSigConstructRule());
                             	        }
-                                   		setWithLastConsumed(current, "tmp", lv_tmp_22_7, null);
+                                   		setWithLastConsumed(current, "tmp", lv_tmp_4_7, null);
                             	    
 
                             }
@@ -4216,34 +3646,34 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1477:2: ( ruleSOMETHING )*
-                    loop46:
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1329:2: ( ruleSOMETHING )*
+                    loop35:
                     do {
-                        int alt46=2;
-                        int LA46_0 = input.LA(1);
+                        int alt35=2;
+                        int LA35_0 = input.LA(1);
 
-                        if ( (LA46_0==14) ) {
-                            int LA46_1 = input.LA(2);
+                        if ( (LA35_0==14) ) {
+                            int LA35_1 = input.LA(2);
 
-                            if ( ((LA46_1>=RULE_CID && LA46_1<=RULE_ANY_OTHER)) ) {
-                                alt46=1;
+                            if ( ((LA35_1>=RULE_CID && LA35_1<=RULE_ANY_OTHER)) ) {
+                                alt35=1;
                             }
 
 
                         }
-                        else if ( ((LA46_0>=RULE_SP && LA46_0<=RULE_MULTIPLEDOT)||LA46_0==15||LA46_0==17||LA46_0==19||(LA46_0>=21 && LA46_0<=22)) ) {
-                            alt46=1;
+                        else if ( ((LA35_0>=RULE_SP && LA35_0<=RULE_MULTIPLEDOT)||LA35_0==15||LA35_0==17||LA35_0==19||(LA35_0>=21 && LA35_0<=22)) ) {
+                            alt35=1;
                         }
 
 
-                        switch (alt46) {
+                        switch (alt35) {
                     	case 1 :
-                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1478:5: ruleSOMETHING
+                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1330:5: ruleSOMETHING
                     	    {
                     	     
                     	            newCompositeNode(grammarAccess.getSigConstructAccess().getSOMETHINGParserRuleCall_3_2()); 
                     	        
-                    	    pushFollow(FOLLOW_ruleSOMETHING_in_rulesigConstruct3695);
+                    	    pushFollow(FOLLOW_ruleSOMETHING_in_rulesigConstruct3395);
                     	    ruleSOMETHING();
 
                     	    state._fsp--;
@@ -4256,7 +3686,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop46;
+                    	    break loop35;
                         }
                     } while (true);
 
@@ -4286,8 +3716,879 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
     // $ANTLR end "rulesigConstruct"
 
 
+    // $ANTLR start "entryRuleclassicSymbolConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1345:1: entryRuleclassicSymbolConstruct returns [EObject current=null] : iv_ruleclassicSymbolConstruct= ruleclassicSymbolConstruct EOF ;
+    public final EObject entryRuleclassicSymbolConstruct() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleclassicSymbolConstruct = null;
+
+
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1346:2: (iv_ruleclassicSymbolConstruct= ruleclassicSymbolConstruct EOF )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1347:2: iv_ruleclassicSymbolConstruct= ruleclassicSymbolConstruct EOF
+            {
+             newCompositeNode(grammarAccess.getClassicSymbolConstructRule()); 
+            pushFollow(FOLLOW_ruleclassicSymbolConstruct_in_entryRuleclassicSymbolConstruct3433);
+            iv_ruleclassicSymbolConstruct=ruleclassicSymbolConstruct();
+
+            state._fsp--;
+
+             current =iv_ruleclassicSymbolConstruct; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleclassicSymbolConstruct3443); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleclassicSymbolConstruct"
+
+
+    // $ANTLR start "ruleclassicSymbolConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1354:1: ruleclassicSymbolConstruct returns [EObject current=null] : ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) ;
+    public final EObject ruleclassicSymbolConstruct() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        AntlrDatatypeRuleToken lv_symbName_0_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1357:28: ( ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1358:1: ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1358:1: ( ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1358:2: ( (lv_symbName_0_0= ruleGID ) ) ( ruleWS )* (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' ) ( ruleSOMETHING )*
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1358:2: ( (lv_symbName_0_0= ruleGID ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1359:1: (lv_symbName_0_0= ruleGID )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1359:1: (lv_symbName_0_0= ruleGID )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1360:3: lv_symbName_0_0= ruleGID
+            {
+             
+            	        newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getSymbNameGIDParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleGID_in_ruleclassicSymbolConstruct3489);
+            lv_symbName_0_0=ruleGID();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getClassicSymbolConstructRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"symbName",
+                    		lv_symbName_0_0, 
+                    		"GID");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1376:2: ( ruleWS )*
+            loop37:
+            do {
+                int alt37=2;
+                int LA37_0 = input.LA(1);
+
+                if ( ((LA37_0>=RULE_SP && LA37_0<=RULE_SL_COMMENT)) ) {
+                    alt37=1;
+                }
+
+
+                switch (alt37) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1377:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getWSParserRuleCall_1()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_ruleclassicSymbolConstruct3506);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop37;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1384:3: (otherlv_2= ':' | otherlv_3= ':=' | otherlv_4= '=' )
+            int alt38=3;
+            switch ( input.LA(1) ) {
+            case 15:
+                {
+                alt38=1;
+                }
+                break;
+            case 32:
+                {
+                alt38=2;
+                }
+                break;
+            case 19:
+                {
+                alt38=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 38, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt38) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1384:5: otherlv_2= ':'
+                    {
+                    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleclassicSymbolConstruct3520); 
+
+                        	newLeafNode(otherlv_2, grammarAccess.getClassicSymbolConstructAccess().getColonKeyword_2_0());
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1389:7: otherlv_3= ':='
+                    {
+                    otherlv_3=(Token)match(input,32,FOLLOW_32_in_ruleclassicSymbolConstruct3538); 
+
+                        	newLeafNode(otherlv_3, grammarAccess.getClassicSymbolConstructAccess().getColonEqualsSignKeyword_2_1());
+                        
+
+                    }
+                    break;
+                case 3 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1394:7: otherlv_4= '='
+                    {
+                    otherlv_4=(Token)match(input,19,FOLLOW_19_in_ruleclassicSymbolConstruct3556); 
+
+                        	newLeafNode(otherlv_4, grammarAccess.getClassicSymbolConstructAccess().getEqualsSignKeyword_2_2());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1398:2: ( ruleSOMETHING )*
+            loop39:
+            do {
+                int alt39=2;
+                int LA39_0 = input.LA(1);
+
+                if ( (LA39_0==14) ) {
+                    int LA39_1 = input.LA(2);
+
+                    if ( ((LA39_1>=RULE_CID && LA39_1<=RULE_ANY_OTHER)) ) {
+                        alt39=1;
+                    }
+
+
+                }
+                else if ( ((LA39_0>=RULE_SP && LA39_0<=RULE_MULTIPLEDOT)||LA39_0==15||LA39_0==17||LA39_0==19||(LA39_0>=21 && LA39_0<=22)) ) {
+                    alt39=1;
+                }
+
+
+                switch (alt39) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1399:5: ruleSOMETHING
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getClassicSymbolConstructAccess().getSOMETHINGParserRuleCall_3()); 
+            	        
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_ruleclassicSymbolConstruct3574);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop39;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleclassicSymbolConstruct"
+
+
+    // $ANTLR start "entryRuleincludeConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1414:1: entryRuleincludeConstruct returns [EObject current=null] : iv_ruleincludeConstruct= ruleincludeConstruct EOF ;
+    public final EObject entryRuleincludeConstruct() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleincludeConstruct = null;
+
+
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1415:2: (iv_ruleincludeConstruct= ruleincludeConstruct EOF )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1416:2: iv_ruleincludeConstruct= ruleincludeConstruct EOF
+            {
+             newCompositeNode(grammarAccess.getIncludeConstructRule()); 
+            pushFollow(FOLLOW_ruleincludeConstruct_in_entryRuleincludeConstruct3611);
+            iv_ruleincludeConstruct=ruleincludeConstruct();
+
+            state._fsp--;
+
+             current =iv_ruleincludeConstruct; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleincludeConstruct3621); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleincludeConstruct"
+
+
+    // $ANTLR start "ruleincludeConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1423:1: ruleincludeConstruct returns [EObject current=null] : (otherlv_0= '%' otherlv_1= 'include' ( ruleWS )+ ( ( ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) ;
+    public final EObject ruleincludeConstruct() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+
+         enterRule(); 
+            
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1426:28: ( (otherlv_0= '%' otherlv_1= 'include' ( ruleWS )+ ( ( ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1427:1: (otherlv_0= '%' otherlv_1= 'include' ( ruleWS )+ ( ( ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1427:1: (otherlv_0= '%' otherlv_1= 'include' ( ruleWS )+ ( ( ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )? )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1427:3: otherlv_0= '%' otherlv_1= 'include' ( ruleWS )+ ( ( ruleNAMESPACE ) ) ( ( ruleWS )+ ruleincludeOps )?
+            {
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleincludeConstruct3658); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getIncludeConstructAccess().getPercentSignKeyword_0());
+                
+            otherlv_1=(Token)match(input,33,FOLLOW_33_in_ruleincludeConstruct3670); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getIncludeConstructAccess().getIncludeKeyword_1());
+                
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1435:1: ( ruleWS )+
+            int cnt40=0;
+            loop40:
+            do {
+                int alt40=2;
+                int LA40_0 = input.LA(1);
+
+                if ( ((LA40_0>=RULE_SP && LA40_0<=RULE_SL_COMMENT)) ) {
+                    alt40=1;
+                }
+
+
+                switch (alt40) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1436:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_2()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_ruleincludeConstruct3687);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt40 >= 1 ) break loop40;
+                        EarlyExitException eee =
+                            new EarlyExitException(40, input);
+                        throw eee;
+                }
+                cnt40++;
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1443:3: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1444:1: ( ruleNAMESPACE )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1444:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1445:3: ruleNAMESPACE
+            {
+
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getIncludeConstructRule());
+            	        }
+                    
+             
+            	        newCompositeNode(grammarAccess.getIncludeConstructAccess().getNamespaceSignatureDeclarationCrossReference_3_0()); 
+            	    
+            pushFollow(FOLLOW_ruleNAMESPACE_in_ruleincludeConstruct3711);
+            ruleNAMESPACE();
+
+            state._fsp--;
+
+             
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1458:2: ( ( ruleWS )+ ruleincludeOps )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
+
+            if ( ((LA42_0>=RULE_SP && LA42_0<=RULE_SL_COMMENT)) ) {
+                alt42=1;
+            }
+            switch (alt42) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1458:3: ( ruleWS )+ ruleincludeOps
+                    {
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1458:3: ( ruleWS )+
+                    int cnt41=0;
+                    loop41:
+                    do {
+                        int alt41=2;
+                        int LA41_0 = input.LA(1);
+
+                        if ( ((LA41_0>=RULE_SP && LA41_0<=RULE_SL_COMMENT)) ) {
+                            alt41=1;
+                        }
+
+
+                        switch (alt41) {
+                    	case 1 :
+                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1459:5: ruleWS
+                    	    {
+                    	     
+                    	            newCompositeNode(grammarAccess.getIncludeConstructAccess().getWSParserRuleCall_4_0()); 
+                    	        
+                    	    pushFollow(FOLLOW_ruleWS_in_ruleincludeConstruct3729);
+                    	    ruleWS();
+
+                    	    state._fsp--;
+
+                    	     
+                    	            afterParserOrEnumRuleCall();
+                    	        
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt41 >= 1 ) break loop41;
+                                EarlyExitException eee =
+                                    new EarlyExitException(41, input);
+                                throw eee;
+                        }
+                        cnt41++;
+                    } while (true);
+
+                     
+                            newCompositeNode(grammarAccess.getIncludeConstructAccess().getIncludeOpsParserRuleCall_4_1()); 
+                        
+                    pushFollow(FOLLOW_ruleincludeOps_in_ruleincludeConstruct3746);
+                    ruleincludeOps();
+
+                    state._fsp--;
+
+                     
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleincludeConstruct"
+
+
+    // $ANTLR start "entryRulestructConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1482:1: entryRulestructConstruct returns [EObject current=null] : iv_rulestructConstruct= rulestructConstruct EOF ;
+    public final EObject entryRulestructConstruct() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulestructConstruct = null;
+
+
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1483:2: (iv_rulestructConstruct= rulestructConstruct EOF )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1484:2: iv_rulestructConstruct= rulestructConstruct EOF
+            {
+             newCompositeNode(grammarAccess.getStructConstructRule()); 
+            pushFollow(FOLLOW_rulestructConstruct_in_entryRulestructConstruct3783);
+            iv_rulestructConstruct=rulestructConstruct();
+
+            state._fsp--;
+
+             current =iv_rulestructConstruct; 
+            match(input,EOF,FOLLOW_EOF_in_entryRulestructConstruct3793); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulestructConstruct"
+
+
+    // $ANTLR start "rulestructConstruct"
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1491:1: rulestructConstruct returns [EObject current=null] : (otherlv_0= '%' otherlv_1= 'struct' ( ruleWS )+ ( (lv_structName_3_0= ruleGID ) ) ( ruleWS )* (otherlv_5= ':' | otherlv_6= ':=' ) ( ruleWS )* ( ( ruleNAMESPACE ) ) ( ruleSOMETHING )* ( (lv_incOpt_10_0= ruleincludeOps ) )? ) ;
+    public final EObject rulestructConstruct() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        AntlrDatatypeRuleToken lv_structName_3_0 = null;
+
+        AntlrDatatypeRuleToken lv_incOpt_10_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1494:28: ( (otherlv_0= '%' otherlv_1= 'struct' ( ruleWS )+ ( (lv_structName_3_0= ruleGID ) ) ( ruleWS )* (otherlv_5= ':' | otherlv_6= ':=' ) ( ruleWS )* ( ( ruleNAMESPACE ) ) ( ruleSOMETHING )* ( (lv_incOpt_10_0= ruleincludeOps ) )? ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1495:1: (otherlv_0= '%' otherlv_1= 'struct' ( ruleWS )+ ( (lv_structName_3_0= ruleGID ) ) ( ruleWS )* (otherlv_5= ':' | otherlv_6= ':=' ) ( ruleWS )* ( ( ruleNAMESPACE ) ) ( ruleSOMETHING )* ( (lv_incOpt_10_0= ruleincludeOps ) )? )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1495:1: (otherlv_0= '%' otherlv_1= 'struct' ( ruleWS )+ ( (lv_structName_3_0= ruleGID ) ) ( ruleWS )* (otherlv_5= ':' | otherlv_6= ':=' ) ( ruleWS )* ( ( ruleNAMESPACE ) ) ( ruleSOMETHING )* ( (lv_incOpt_10_0= ruleincludeOps ) )? )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1495:3: otherlv_0= '%' otherlv_1= 'struct' ( ruleWS )+ ( (lv_structName_3_0= ruleGID ) ) ( ruleWS )* (otherlv_5= ':' | otherlv_6= ':=' ) ( ruleWS )* ( ( ruleNAMESPACE ) ) ( ruleSOMETHING )* ( (lv_incOpt_10_0= ruleincludeOps ) )?
+            {
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_rulestructConstruct3830); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getStructConstructAccess().getPercentSignKeyword_0());
+                
+            otherlv_1=(Token)match(input,34,FOLLOW_34_in_rulestructConstruct3842); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getStructConstructAccess().getStructKeyword_1());
+                
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1503:1: ( ruleWS )+
+            int cnt43=0;
+            loop43:
+            do {
+                int alt43=2;
+                int LA43_0 = input.LA(1);
+
+                if ( ((LA43_0>=RULE_SP && LA43_0<=RULE_SL_COMMENT)) ) {
+                    alt43=1;
+                }
+
+
+                switch (alt43) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1504:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_2()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_rulestructConstruct3859);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt43 >= 1 ) break loop43;
+                        EarlyExitException eee =
+                            new EarlyExitException(43, input);
+                        throw eee;
+                }
+                cnt43++;
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1511:3: ( (lv_structName_3_0= ruleGID ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1512:1: (lv_structName_3_0= ruleGID )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1512:1: (lv_structName_3_0= ruleGID )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1513:3: lv_structName_3_0= ruleGID
+            {
+             
+            	        newCompositeNode(grammarAccess.getStructConstructAccess().getStructNameGIDParserRuleCall_3_0()); 
+            	    
+            pushFollow(FOLLOW_ruleGID_in_rulestructConstruct3881);
+            lv_structName_3_0=ruleGID();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getStructConstructRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"structName",
+                    		lv_structName_3_0, 
+                    		"GID");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1529:2: ( ruleWS )*
+            loop44:
+            do {
+                int alt44=2;
+                int LA44_0 = input.LA(1);
+
+                if ( ((LA44_0>=RULE_SP && LA44_0<=RULE_SL_COMMENT)) ) {
+                    alt44=1;
+                }
+
+
+                switch (alt44) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1530:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_4()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_rulestructConstruct3898);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop44;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1537:3: (otherlv_5= ':' | otherlv_6= ':=' )
+            int alt45=2;
+            int LA45_0 = input.LA(1);
+
+            if ( (LA45_0==15) ) {
+                alt45=1;
+            }
+            else if ( (LA45_0==32) ) {
+                alt45=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 45, 0, input);
+
+                throw nvae;
+            }
+            switch (alt45) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1537:5: otherlv_5= ':'
+                    {
+                    otherlv_5=(Token)match(input,15,FOLLOW_15_in_rulestructConstruct3912); 
+
+                        	newLeafNode(otherlv_5, grammarAccess.getStructConstructAccess().getColonKeyword_5_0());
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1542:7: otherlv_6= ':='
+                    {
+                    otherlv_6=(Token)match(input,32,FOLLOW_32_in_rulestructConstruct3930); 
+
+                        	newLeafNode(otherlv_6, grammarAccess.getStructConstructAccess().getColonEqualsSignKeyword_5_1());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1546:2: ( ruleWS )*
+            loop46:
+            do {
+                int alt46=2;
+                int LA46_0 = input.LA(1);
+
+                if ( ((LA46_0>=RULE_SP && LA46_0<=RULE_SL_COMMENT)) ) {
+                    alt46=1;
+                }
+
+
+                switch (alt46) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1547:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getStructConstructAccess().getWSParserRuleCall_6()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_rulestructConstruct3948);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop46;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1554:3: ( ( ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1555:1: ( ruleNAMESPACE )
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1555:1: ( ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1556:3: ruleNAMESPACE
+            {
+
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getStructConstructRule());
+            	        }
+                    
+             
+            	        newCompositeNode(grammarAccess.getStructConstructAccess().getNamespaceSignatureDeclarationCrossReference_7_0()); 
+            	    
+            pushFollow(FOLLOW_ruleNAMESPACE_in_rulestructConstruct3972);
+            ruleNAMESPACE();
+
+            state._fsp--;
+
+             
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1569:2: ( ruleSOMETHING )*
+            loop47:
+            do {
+                int alt47=2;
+                switch ( input.LA(1) ) {
+                case 17:
+                    {
+                    int LA47_1 = input.LA(2);
+
+                    if ( (LA47_1==EOF||(LA47_1>=RULE_SP && LA47_1<=RULE_MULTIPLEDOT)||(LA47_1>=14 && LA47_1<=15)||LA47_1==17||LA47_1==19||(LA47_1>=21 && LA47_1<=23)) ) {
+                        alt47=1;
+                    }
+
+
+                    }
+                    break;
+                case 14:
+                    {
+                    int LA47_2 = input.LA(2);
+
+                    if ( ((LA47_2>=RULE_CID && LA47_2<=RULE_ANY_OTHER)) ) {
+                        alt47=1;
+                    }
+
+
+                    }
+                    break;
+                case RULE_SP:
+                case RULE_ML_COMMENT:
+                case RULE_ML2_COMMENT:
+                case RULE_SL_COMMENT:
+                case RULE_DOUBLEDOT:
+                case RULE_CID:
+                case RULE_ANY_OTHER:
+                case RULE_INT:
+                case RULE_MULTIPLEDOT:
+                case 15:
+                case 19:
+                case 21:
+                case 22:
+                    {
+                    alt47=1;
+                    }
+                    break;
+
+                }
+
+                switch (alt47) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1570:5: ruleSOMETHING
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getStructConstructAccess().getSOMETHINGParserRuleCall_8()); 
+            	        
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_rulestructConstruct3989);
+            	    ruleSOMETHING();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop47;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1577:3: ( (lv_incOpt_10_0= ruleincludeOps ) )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
+
+            if ( (LA48_0==17) ) {
+                alt48=1;
+            }
+            switch (alt48) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1578:1: (lv_incOpt_10_0= ruleincludeOps )
+                    {
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1578:1: (lv_incOpt_10_0= ruleincludeOps )
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1579:3: lv_incOpt_10_0= ruleincludeOps
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getStructConstructAccess().getIncOptIncludeOpsParserRuleCall_9_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleincludeOps_in_rulestructConstruct4011);
+                    lv_incOpt_10_0=ruleincludeOps();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getStructConstructRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"incOpt",
+                            		lv_incOpt_10_0, 
+                            		"includeOps");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulestructConstruct"
+
+
     // $ANTLR start "entryRuleincludeOps"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1493:1: entryRuleincludeOps returns [String current=null] : iv_ruleincludeOps= ruleincludeOps EOF ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1603:1: entryRuleincludeOps returns [String current=null] : iv_ruleincludeOps= ruleincludeOps EOF ;
     public final String entryRuleincludeOps() throws RecognitionException {
         String current = null;
 
@@ -4295,17 +4596,17 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1494:2: (iv_ruleincludeOps= ruleincludeOps EOF )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1495:2: iv_ruleincludeOps= ruleincludeOps EOF
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1604:2: (iv_ruleincludeOps= ruleincludeOps EOF )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1605:2: iv_ruleincludeOps= ruleincludeOps EOF
             {
              newCompositeNode(grammarAccess.getIncludeOpsRule()); 
-            pushFollow(FOLLOW_ruleincludeOps_in_entryRuleincludeOps3734);
+            pushFollow(FOLLOW_ruleincludeOps_in_entryRuleincludeOps4049);
             iv_ruleincludeOps=ruleincludeOps();
 
             state._fsp--;
 
              current =iv_ruleincludeOps.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleincludeOps3745); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleincludeOps4060); 
 
             }
 
@@ -4323,7 +4624,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleincludeOps"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1502:1: ruleincludeOps returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* ) ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1612:1: ruleincludeOps returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* ) ;
     public final AntlrDatatypeRuleToken ruleincludeOps() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4334,50 +4635,50 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1505:28: ( (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1506:1: (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1615:28: ( (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1616:1: (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1506:1: (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1507:2: kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1616:1: (kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )* )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1617:2: kw= '%' kw= 'open' (this_SOMETHING_2= ruleSOMETHING )*
             {
-            kw=(Token)match(input,17,FOLLOW_17_in_ruleincludeOps3783); 
+            kw=(Token)match(input,17,FOLLOW_17_in_ruleincludeOps4098); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getIncludeOpsAccess().getPercentSignKeyword_0()); 
                 
-            kw=(Token)match(input,35,FOLLOW_35_in_ruleincludeOps3796); 
+            kw=(Token)match(input,35,FOLLOW_35_in_ruleincludeOps4111); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getIncludeOpsAccess().getOpenKeyword_1()); 
                 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1518:1: (this_SOMETHING_2= ruleSOMETHING )*
-            loop48:
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1628:1: (this_SOMETHING_2= ruleSOMETHING )*
+            loop49:
             do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA48_0==14) ) {
-                    int LA48_1 = input.LA(2);
+                if ( (LA49_0==14) ) {
+                    int LA49_1 = input.LA(2);
 
-                    if ( ((LA48_1>=RULE_CID && LA48_1<=RULE_ANY_OTHER)) ) {
-                        alt48=1;
+                    if ( ((LA49_1>=RULE_CID && LA49_1<=RULE_ANY_OTHER)) ) {
+                        alt49=1;
                     }
 
 
                 }
-                else if ( ((LA48_0>=RULE_SP && LA48_0<=RULE_MULTIPLEDOT)||LA48_0==15||LA48_0==17||LA48_0==19||(LA48_0>=21 && LA48_0<=22)) ) {
-                    alt48=1;
+                else if ( ((LA49_0>=RULE_SP && LA49_0<=RULE_MULTIPLEDOT)||LA49_0==15||LA49_0==17||LA49_0==19||(LA49_0>=21 && LA49_0<=22)) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt49) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1519:5: this_SOMETHING_2= ruleSOMETHING
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1629:5: this_SOMETHING_2= ruleSOMETHING
             	    {
             	     
             	            newCompositeNode(grammarAccess.getIncludeOpsAccess().getSOMETHINGParserRuleCall_2()); 
             	        
-            	    pushFollow(FOLLOW_ruleSOMETHING_in_ruleincludeOps3819);
+            	    pushFollow(FOLLOW_ruleSOMETHING_in_ruleincludeOps4134);
             	    this_SOMETHING_2=ruleSOMETHING();
 
             	    state._fsp--;
@@ -4393,7 +4694,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop49;
                 }
             } while (true);
 
@@ -4418,7 +4719,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleviewDeclaration"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1539:1: entryRuleviewDeclaration returns [EObject current=null] : iv_ruleviewDeclaration= ruleviewDeclaration EOF ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1649:1: entryRuleviewDeclaration returns [EObject current=null] : iv_ruleviewDeclaration= ruleviewDeclaration EOF ;
     public final EObject entryRuleviewDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4426,17 +4727,17 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1540:2: (iv_ruleviewDeclaration= ruleviewDeclaration EOF )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1541:2: iv_ruleviewDeclaration= ruleviewDeclaration EOF
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1650:2: (iv_ruleviewDeclaration= ruleviewDeclaration EOF )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1651:2: iv_ruleviewDeclaration= ruleviewDeclaration EOF
             {
              newCompositeNode(grammarAccess.getViewDeclarationRule()); 
-            pushFollow(FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration3868);
+            pushFollow(FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration4183);
             iv_ruleviewDeclaration=ruleviewDeclaration();
 
             state._fsp--;
 
              current =iv_ruleviewDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleviewDeclaration3878); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleviewDeclaration4193); 
 
             }
 
@@ -4454,7 +4755,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleviewDeclaration"
-    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1548:1: ruleviewDeclaration returns [EObject current=null] : (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS ) ;
+    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1658:1: ruleviewDeclaration returns [EObject current=null] : (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS ) ;
     public final EObject ruleviewDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4476,40 +4777,40 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1551:28: ( (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1552:1: (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1661:28: ( (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1662:1: (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1552:1: (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1552:3: otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1662:1: (otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1662:3: otherlv_0= '%' otherlv_1= 'view' ( ruleWS )+ ( (lv_viewID_3_0= ruleGID ) ) ( ruleWS )* otherlv_5= ':' ( ruleWS )* ( (lv_from_7_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_9= '->' ( ruleWS )* ( (lv_to_11_0= ruleNAMESPACE ) ) ( ruleWS )* otherlv_13= '=' ( ruleWS )* ( (lv_viewDefs_15_0= rulesigDefinitions ) ) ( ruleWS )* otherlv_17= '.' ruleWS
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleviewDeclaration3915); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleviewDeclaration4230); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getViewDeclarationAccess().getPercentSignKeyword_0());
                 
-            otherlv_1=(Token)match(input,36,FOLLOW_36_in_ruleviewDeclaration3927); 
+            otherlv_1=(Token)match(input,36,FOLLOW_36_in_ruleviewDeclaration4242); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getViewDeclarationAccess().getViewKeyword_1());
                 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1560:1: ( ruleWS )+
-            int cnt49=0;
-            loop49:
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1670:1: ( ruleWS )+
+            int cnt50=0;
+            loop50:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt50=2;
+                int LA50_0 = input.LA(1);
 
-                if ( ((LA49_0>=RULE_SP && LA49_0<=RULE_SL_COMMENT)) ) {
-                    alt49=1;
+                if ( ((LA50_0>=RULE_SP && LA50_0<=RULE_SL_COMMENT)) ) {
+                    alt50=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt50) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1561:5: ruleWS
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1671:5: ruleWS
             	    {
             	     
             	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_2()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration3944);
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4259);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4522,24 +4823,24 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt49 >= 1 ) break loop49;
+            	    if ( cnt50 >= 1 ) break loop50;
                         EarlyExitException eee =
-                            new EarlyExitException(49, input);
+                            new EarlyExitException(50, input);
                         throw eee;
                 }
-                cnt49++;
+                cnt50++;
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1568:3: ( (lv_viewID_3_0= ruleGID ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1569:1: (lv_viewID_3_0= ruleGID )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1678:3: ( (lv_viewID_3_0= ruleGID ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1679:1: (lv_viewID_3_0= ruleGID )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1569:1: (lv_viewID_3_0= ruleGID )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1570:3: lv_viewID_3_0= ruleGID
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1679:1: (lv_viewID_3_0= ruleGID )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1680:3: lv_viewID_3_0= ruleGID
             {
              
             	        newCompositeNode(grammarAccess.getViewDeclarationAccess().getViewIDGIDParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleGID_in_ruleviewDeclaration3966);
+            pushFollow(FOLLOW_ruleGID_in_ruleviewDeclaration4281);
             lv_viewID_3_0=ruleGID();
 
             state._fsp--;
@@ -4561,46 +4862,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1586:2: ( ruleWS )*
-            loop50:
-            do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
-
-                if ( ((LA50_0>=RULE_SP && LA50_0<=RULE_SL_COMMENT)) ) {
-                    alt50=1;
-                }
-
-
-                switch (alt50) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1587:5: ruleWS
-            	    {
-            	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_4()); 
-            	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration3983);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop50;
-                }
-            } while (true);
-
-            otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleviewDeclaration3996); 
-
-                	newLeafNode(otherlv_5, grammarAccess.getViewDeclarationAccess().getColonKeyword_5());
-                
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1598:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1696:2: ( ruleWS )*
             loop51:
             do {
                 int alt51=2;
@@ -4613,12 +4875,12 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1599:5: ruleWS
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1697:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_6()); 
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_4()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4013);
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4298);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4635,16 +4897,55 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1606:3: ( (lv_from_7_0= ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1607:1: (lv_from_7_0= ruleNAMESPACE )
+            otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleviewDeclaration4311); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getViewDeclarationAccess().getColonKeyword_5());
+                
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1708:1: ( ruleWS )*
+            loop52:
+            do {
+                int alt52=2;
+                int LA52_0 = input.LA(1);
+
+                if ( ((LA52_0>=RULE_SP && LA52_0<=RULE_SL_COMMENT)) ) {
+                    alt52=1;
+                }
+
+
+                switch (alt52) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1709:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_6()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4328);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop52;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1716:3: ( (lv_from_7_0= ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1717:1: (lv_from_7_0= ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1607:1: (lv_from_7_0= ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1608:3: lv_from_7_0= ruleNAMESPACE
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1717:1: (lv_from_7_0= ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1718:3: lv_from_7_0= ruleNAMESPACE
             {
              
             	        newCompositeNode(grammarAccess.getViewDeclarationAccess().getFromNAMESPACEParserRuleCall_7_0()); 
             	    
-            pushFollow(FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4035);
+            pushFollow(FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4350);
             lv_from_7_0=ruleNAMESPACE();
 
             state._fsp--;
@@ -4666,46 +4967,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1624:2: ( ruleWS )*
-            loop52:
-            do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
-
-                if ( ((LA52_0>=RULE_SP && LA52_0<=RULE_SL_COMMENT)) ) {
-                    alt52=1;
-                }
-
-
-                switch (alt52) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1625:5: ruleWS
-            	    {
-            	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_8()); 
-            	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4052);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop52;
-                }
-            } while (true);
-
-            otherlv_9=(Token)match(input,21,FOLLOW_21_in_ruleviewDeclaration4065); 
-
-                	newLeafNode(otherlv_9, grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_9());
-                
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1636:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1734:2: ( ruleWS )*
             loop53:
             do {
                 int alt53=2;
@@ -4718,12 +4980,12 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
                 switch (alt53) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1637:5: ruleWS
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1735:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_10()); 
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_8()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4082);
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4367);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4740,16 +5002,55 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1644:3: ( (lv_to_11_0= ruleNAMESPACE ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1645:1: (lv_to_11_0= ruleNAMESPACE )
+            otherlv_9=(Token)match(input,21,FOLLOW_21_in_ruleviewDeclaration4380); 
+
+                	newLeafNode(otherlv_9, grammarAccess.getViewDeclarationAccess().getHyphenMinusGreaterThanSignKeyword_9());
+                
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1746:1: ( ruleWS )*
+            loop54:
+            do {
+                int alt54=2;
+                int LA54_0 = input.LA(1);
+
+                if ( ((LA54_0>=RULE_SP && LA54_0<=RULE_SL_COMMENT)) ) {
+                    alt54=1;
+                }
+
+
+                switch (alt54) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1747:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_10()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4397);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop54;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1754:3: ( (lv_to_11_0= ruleNAMESPACE ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1755:1: (lv_to_11_0= ruleNAMESPACE )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1645:1: (lv_to_11_0= ruleNAMESPACE )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1646:3: lv_to_11_0= ruleNAMESPACE
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1755:1: (lv_to_11_0= ruleNAMESPACE )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1756:3: lv_to_11_0= ruleNAMESPACE
             {
              
             	        newCompositeNode(grammarAccess.getViewDeclarationAccess().getToNAMESPACEParserRuleCall_11_0()); 
             	    
-            pushFollow(FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4104);
+            pushFollow(FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4419);
             lv_to_11_0=ruleNAMESPACE();
 
             state._fsp--;
@@ -4771,46 +5072,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1662:2: ( ruleWS )*
-            loop54:
-            do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
-
-                if ( ((LA54_0>=RULE_SP && LA54_0<=RULE_SL_COMMENT)) ) {
-                    alt54=1;
-                }
-
-
-                switch (alt54) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1663:5: ruleWS
-            	    {
-            	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12()); 
-            	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4121);
-            	    ruleWS();
-
-            	    state._fsp--;
-
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop54;
-                }
-            } while (true);
-
-            otherlv_13=(Token)match(input,19,FOLLOW_19_in_ruleviewDeclaration4134); 
-
-                	newLeafNode(otherlv_13, grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_13());
-                
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1674:1: ( ruleWS )*
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1772:2: ( ruleWS )*
             loop55:
             do {
                 int alt55=2;
@@ -4823,12 +5085,12 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
                 switch (alt55) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1675:5: ruleWS
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1773:5: ruleWS
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_14()); 
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_12()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4151);
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4436);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4845,16 +5107,55 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1682:3: ( (lv_viewDefs_15_0= rulesigDefinitions ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1683:1: (lv_viewDefs_15_0= rulesigDefinitions )
+            otherlv_13=(Token)match(input,19,FOLLOW_19_in_ruleviewDeclaration4449); 
+
+                	newLeafNode(otherlv_13, grammarAccess.getViewDeclarationAccess().getEqualsSignKeyword_13());
+                
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1784:1: ( ruleWS )*
+            loop56:
+            do {
+                int alt56=2;
+                int LA56_0 = input.LA(1);
+
+                if ( ((LA56_0>=RULE_SP && LA56_0<=RULE_SL_COMMENT)) ) {
+                    alt56=1;
+                }
+
+
+                switch (alt56) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1785:5: ruleWS
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_14()); 
+            	        
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4466);
+            	    ruleWS();
+
+            	    state._fsp--;
+
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop56;
+                }
+            } while (true);
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1792:3: ( (lv_viewDefs_15_0= rulesigDefinitions ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1793:1: (lv_viewDefs_15_0= rulesigDefinitions )
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1683:1: (lv_viewDefs_15_0= rulesigDefinitions )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1684:3: lv_viewDefs_15_0= rulesigDefinitions
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1793:1: (lv_viewDefs_15_0= rulesigDefinitions )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1794:3: lv_viewDefs_15_0= rulesigDefinitions
             {
              
             	        newCompositeNode(grammarAccess.getViewDeclarationAccess().getViewDefsSigDefinitionsParserRuleCall_15_0()); 
             	    
-            pushFollow(FOLLOW_rulesigDefinitions_in_ruleviewDeclaration4173);
+            pushFollow(FOLLOW_rulesigDefinitions_in_ruleviewDeclaration4488);
             lv_viewDefs_15_0=rulesigDefinitions();
 
             state._fsp--;
@@ -4876,25 +5177,25 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1700:2: ( ruleWS )*
-            loop56:
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1810:2: ( ruleWS )*
+            loop57:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt57=2;
+                int LA57_0 = input.LA(1);
 
-                if ( ((LA56_0>=RULE_SP && LA56_0<=RULE_SL_COMMENT)) ) {
-                    alt56=1;
+                if ( ((LA57_0>=RULE_SP && LA57_0<=RULE_SL_COMMENT)) ) {
+                    alt57=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt57) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1701:5: ruleWS
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1811:5: ruleWS
             	    {
             	     
             	            newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_16()); 
             	        
-            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4190);
+            	    pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4505);
             	    ruleWS();
 
             	    state._fsp--;
@@ -4907,18 +5208,18 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop57;
                 }
             } while (true);
 
-            otherlv_17=(Token)match(input,14,FOLLOW_14_in_ruleviewDeclaration4203); 
+            otherlv_17=(Token)match(input,14,FOLLOW_14_in_ruleviewDeclaration4518); 
 
                 	newLeafNode(otherlv_17, grammarAccess.getViewDeclarationAccess().getFullStopKeyword_17());
                 
              
                     newCompositeNode(grammarAccess.getViewDeclarationAccess().getWSParserRuleCall_18()); 
                 
-            pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4219);
+            pushFollow(FOLLOW_ruleWS_in_ruleviewDeclaration4534);
             ruleWS();
 
             state._fsp--;
@@ -4953,58 +5254,58 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
     static final String DFA17_eotS =
         "\30\uffff";
     static final String DFA17_eofS =
-        "\2\2\1\uffff\4\14\5\2\1\23\2\uffff\4\14\1\uffff\4\2";
+        "\2\2\1\uffff\4\10\1\2\1\23\2\uffff\4\2\4\10\1\uffff\4\2";
     static final String DFA17_minS =
-        "\2\4\1\uffff\11\4\1\0\2\uffff\4\4\1\uffff\4\4";
+        "\2\4\1\uffff\5\4\1\0\2\uffff\10\4\1\uffff\4\4";
     static final String DFA17_maxS =
-        "\1\31\1\27\1\uffff\4\31\1\27\4\31\1\0\2\uffff\4\31\1\uffff\4\31";
+        "\1\40\1\27\1\uffff\4\40\1\27\1\0\2\uffff\10\40\1\uffff\4\40";
     static final String DFA17_acceptS =
-        "\2\uffff\1\2\12\uffff\2\1\4\uffff\1\1\4\uffff";
+        "\2\uffff\1\2\6\uffff\2\1\10\uffff\1\1\4\uffff";
     static final String DFA17_specialS =
         "\30\uffff}>";
     static final String[] DFA17_transitionS = {
-            "\4\2\7\uffff\1\2\3\uffff\1\1\5\uffff\1\2",
+            "\4\2\7\uffff\1\2\3\uffff\1\1\14\uffff\1\2",
             "\1\3\1\4\1\5\1\6\5\2\1\uffff\2\2\1\uffff\1\2\1\uffff\1\7\1"+
             "\uffff\3\2",
             "",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
             "\1\17\1\20\1\21\1\22\5\2\1\uffff\2\2\1\uffff\1\2\1\uffff\1"+
             "\7\1\uffff\3\2",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\10\1\11\1\12\1\13\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
             "\1\uffff",
             "",
             "",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\16",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\13\1\14\1\15\1\16\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\12",
             "",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\23",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\23",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\23",
-            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\15\1\uffff\1\2\1\uffff"+
-            "\1\16\1\uffff\3\2\1\uffff\1\23"
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\23",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\23",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\23",
+            "\1\24\1\25\1\26\1\27\5\2\1\uffff\1\2\1\11\1\uffff\1\2\1\uffff"+
+            "\1\12\1\uffff\3\2\10\uffff\1\23"
     };
 
     static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
@@ -5093,7 +5394,7 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
             this.transition = DFA31_transition;
         }
         public String getDescription() {
-            return "()* loopback of 1138:2: (otherlv_3= '.' ( ruleWS )+ ( (lv_fcons_5_0= rulesigConstruct ) ) )*";
+            return "()* loopback of 1138:2: (otherlv_3= '.' ( ruleWS )+ ( (lv_constucts_5_0= rulesigConstruct ) ) )*";
         }
     }
  
@@ -5204,84 +5505,95 @@ public class InternalLFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleWS_in_ruleSOMETHING22536 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulesignatureDeclaration_in_entryRulesignatureDeclaration2583 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulesignatureDeclaration2593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rulesignatureDeclaration2630 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_rulesignatureDeclaration2642 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2659 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleGID_in_rulesignatureDeclaration2681 = new BitSet(new long[]{0x00000000000A00F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2698 = new BitSet(new long[]{0x00000000000A00F0L});
-    public static final BitSet FOLLOW_19_in_rulesignatureDeclaration2711 = new BitSet(new long[]{0x00000000004200F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2728 = new BitSet(new long[]{0x00000000004200F0L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_rulesignatureDeclaration2750 = new BitSet(new long[]{0x00000000000240F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2767 = new BitSet(new long[]{0x00000000000240F0L});
-    public static final BitSet FOLLOW_14_in_rulesignatureDeclaration2780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions2816 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulesigDefinitions2826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rulesigDefinitions2863 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2880 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_rulesigConstruct_in_rulesigDefinitions2902 = new BitSet(new long[]{0x0000000000804000L});
-    public static final BitSet FOLLOW_14_in_rulesigDefinitions2915 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2932 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_rulesigConstruct_in_rulesigDefinitions2954 = new BitSet(new long[]{0x0000000000804000L});
-    public static final BitSet FOLLOW_14_in_rulesigDefinitions2969 = new BitSet(new long[]{0x00000000008200F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2986 = new BitSet(new long[]{0x00000000008200F0L});
-    public static final BitSet FOLLOW_23_in_rulesigDefinitions3001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesigConstruct_in_entryRulesigConstruct3037 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulesigConstruct3047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGID_in_rulesigConstruct3094 = new BitSet(new long[]{0x00000000020A80F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigConstruct3111 = new BitSet(new long[]{0x00000000020A80F0L});
-    public static final BitSet FOLLOW_15_in_rulesigConstruct3125 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_25_in_rulesigConstruct3143 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_19_in_rulesigConstruct3161 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rulesigConstruct3179 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_17_in_rulesigConstruct3200 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_rulesigConstruct3212 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigConstruct3229 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_rulesigConstruct3251 = new BitSet(new long[]{0x00000000000200F2L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigConstruct3269 = new BitSet(new long[]{0x00000000000200F0L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_rulesigConstruct3286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rulesigConstruct3307 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_rulesigConstruct3319 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigConstruct3336 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleGID_in_rulesigConstruct3358 = new BitSet(new long[]{0x00000000020280F0L});
-    public static final BitSet FOLLOW_ruleWS_in_rulesigConstruct3375 = new BitSet(new long[]{0x00000000020280F0L});
-    public static final BitSet FOLLOW_15_in_rulesigConstruct3389 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_25_in_rulesigConstruct3407 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rulesigConstruct3425 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_rulesigConstruct3447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rulesigConstruct3468 = new BitSet(new long[]{0x00000007F0000000L});
-    public static final BitSet FOLLOW_28_in_rulesigConstruct3488 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_29_in_rulesigConstruct3517 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_30_in_rulesigConstruct3546 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_31_in_rulesigConstruct3575 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_32_in_rulesigConstruct3604 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_33_in_rulesigConstruct3633 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_34_in_rulesigConstruct3662 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_rulesigConstruct3695 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleincludeOps_in_entryRuleincludeOps3734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleincludeOps3745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleincludeOps3783 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleincludeOps3796 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleSOMETHING_in_ruleincludeOps3819 = new BitSet(new long[]{0x00000000006ADFF2L});
-    public static final BitSet FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration3868 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleviewDeclaration3878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleviewDeclaration3915 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleviewDeclaration3927 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration3944 = new BitSet(new long[]{0x00000000000A1FF0L});
-    public static final BitSet FOLLOW_ruleGID_in_ruleviewDeclaration3966 = new BitSet(new long[]{0x00000000000280F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration3983 = new BitSet(new long[]{0x00000000000280F0L});
-    public static final BitSet FOLLOW_15_in_ruleviewDeclaration3996 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4013 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4035 = new BitSet(new long[]{0x00000000002200F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4052 = new BitSet(new long[]{0x00000000002200F0L});
-    public static final BitSet FOLLOW_21_in_ruleviewDeclaration4065 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4082 = new BitSet(new long[]{0x00000000000203F0L});
-    public static final BitSet FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4104 = new BitSet(new long[]{0x00000000000A00F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4121 = new BitSet(new long[]{0x00000000000A00F0L});
-    public static final BitSet FOLLOW_19_in_ruleviewDeclaration4134 = new BitSet(new long[]{0x00000000004200F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4151 = new BitSet(new long[]{0x00000000004200F0L});
-    public static final BitSet FOLLOW_rulesigDefinitions_in_ruleviewDeclaration4173 = new BitSet(new long[]{0x00000000000240F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4190 = new BitSet(new long[]{0x00000000000240F0L});
-    public static final BitSet FOLLOW_14_in_ruleviewDeclaration4203 = new BitSet(new long[]{0x00000000000200F0L});
-    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rulesignatureDeclaration2631 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_rulesignatureDeclaration2643 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2660 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleGID_in_rulesignatureDeclaration2682 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2700 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_19_in_rulesignatureDeclaration2713 = new BitSet(new long[]{0x00000000004200F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2730 = new BitSet(new long[]{0x00000000004200F0L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_rulesignatureDeclaration2752 = new BitSet(new long[]{0x00000000000240F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesignatureDeclaration2769 = new BitSet(new long[]{0x00000000000240F0L});
+    public static final BitSet FOLLOW_14_in_rulesignatureDeclaration2782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_entryRulesigDefinitions2818 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesigDefinitions2828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rulesigDefinitions2865 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2882 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_rulesigDefinitions2904 = new BitSet(new long[]{0x0000000000804000L});
+    public static final BitSet FOLLOW_14_in_rulesigDefinitions2917 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2934 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_rulesigDefinitions2956 = new BitSet(new long[]{0x0000000000804000L});
+    public static final BitSet FOLLOW_14_in_rulesigDefinitions2971 = new BitSet(new long[]{0x00000000008200F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulesigDefinitions2988 = new BitSet(new long[]{0x00000000008200F0L});
+    public static final BitSet FOLLOW_23_in_rulesigDefinitions3003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesigConstruct_in_entryRulesigConstruct3039 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesigConstruct3049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleclassicSymbolConstruct_in_rulesigConstruct3096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleincludeConstruct_in_rulesigConstruct3123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestructConstruct_in_rulesigConstruct3150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rulesigConstruct3168 = new BitSet(new long[]{0x00000000FE000000L});
+    public static final BitSet FOLLOW_25_in_rulesigConstruct3188 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_26_in_rulesigConstruct3217 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_27_in_rulesigConstruct3246 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_28_in_rulesigConstruct3275 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_29_in_rulesigConstruct3304 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_30_in_rulesigConstruct3333 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_31_in_rulesigConstruct3362 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rulesigConstruct3395 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleclassicSymbolConstruct_in_entryRuleclassicSymbolConstruct3433 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleclassicSymbolConstruct3443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGID_in_ruleclassicSymbolConstruct3489 = new BitSet(new long[]{0x00000001000A80F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleclassicSymbolConstruct3506 = new BitSet(new long[]{0x00000001000A80F0L});
+    public static final BitSet FOLLOW_15_in_ruleclassicSymbolConstruct3520 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_32_in_ruleclassicSymbolConstruct3538 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_19_in_ruleclassicSymbolConstruct3556 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_ruleclassicSymbolConstruct3574 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleincludeConstruct_in_entryRuleincludeConstruct3611 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleincludeConstruct3621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleincludeConstruct3658 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleincludeConstruct3670 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleincludeConstruct3687 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_ruleincludeConstruct3711 = new BitSet(new long[]{0x00000000000200F2L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleincludeConstruct3729 = new BitSet(new long[]{0x00000000000200F0L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_ruleincludeConstruct3746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestructConstruct_in_entryRulestructConstruct3783 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulestructConstruct3793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rulestructConstruct3830 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_rulestructConstruct3842 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulestructConstruct3859 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleGID_in_rulestructConstruct3881 = new BitSet(new long[]{0x00000001000280F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulestructConstruct3898 = new BitSet(new long[]{0x00000001000280F0L});
+    public static final BitSet FOLLOW_15_in_rulestructConstruct3912 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_32_in_rulestructConstruct3930 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleWS_in_rulestructConstruct3948 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_rulestructConstruct3972 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_rulestructConstruct3989 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_rulestructConstruct4011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleincludeOps_in_entryRuleincludeOps4049 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleincludeOps4060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleincludeOps4098 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleincludeOps4111 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleSOMETHING_in_ruleincludeOps4134 = new BitSet(new long[]{0x00000000006ADFF2L});
+    public static final BitSet FOLLOW_ruleviewDeclaration_in_entryRuleviewDeclaration4183 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleviewDeclaration4193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleviewDeclaration4230 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleviewDeclaration4242 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4259 = new BitSet(new long[]{0x00000000000A1FF0L});
+    public static final BitSet FOLLOW_ruleGID_in_ruleviewDeclaration4281 = new BitSet(new long[]{0x00000000000280F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4298 = new BitSet(new long[]{0x00000000000280F0L});
+    public static final BitSet FOLLOW_15_in_ruleviewDeclaration4311 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4328 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4350 = new BitSet(new long[]{0x00000000002200F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4367 = new BitSet(new long[]{0x00000000002200F0L});
+    public static final BitSet FOLLOW_21_in_ruleviewDeclaration4380 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4397 = new BitSet(new long[]{0x00000000000203F0L});
+    public static final BitSet FOLLOW_ruleNAMESPACE_in_ruleviewDeclaration4419 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4436 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_19_in_ruleviewDeclaration4449 = new BitSet(new long[]{0x00000000004200F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4466 = new BitSet(new long[]{0x00000000004200F0L});
+    public static final BitSet FOLLOW_rulesigDefinitions_in_ruleviewDeclaration4488 = new BitSet(new long[]{0x00000000000240F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4505 = new BitSet(new long[]{0x00000000000240F0L});
+    public static final BitSet FOLLOW_14_in_ruleviewDeclaration4518 = new BitSet(new long[]{0x00000000000200F0L});
+    public static final BitSet FOLLOW_ruleWS_in_ruleviewDeclaration4534 = new BitSet(new long[]{0x0000000000000002L});
 
 }

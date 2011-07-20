@@ -26,15 +26,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//signatureDeclaration/defs"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/cons"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/fcons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigDefinitions/constucts"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/symbName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/namespace"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/structName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/incOpt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//sigConstruct/tmp"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//classicSymbolConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//classicSymbolConstruct/symbName"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//includeConstruct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//includeConstruct/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//structConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//structConstruct/structName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//structConstruct/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//structConstruct/incOpt"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/LF.ecore#//TempType/fullURI"/>
