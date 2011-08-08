@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.RuleCall;
-import org.eclipse.xtext.ui.editor.contentassist.ConfigurableCompletionProposal;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 
@@ -32,7 +31,7 @@ public class LFProposalProvider extends AbstractLFProposalProvider {
 		String prefix = context.getPrefix();
 		
 	}
-	
+	/*
 	@Override
 	public void completeSigDefinitions_Constucts(EObject model,
 			Assignment assignment, ContentAssistContext context,
@@ -63,5 +62,5 @@ public class LFProposalProvider extends AbstractLFProposalProvider {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+	} */
 }

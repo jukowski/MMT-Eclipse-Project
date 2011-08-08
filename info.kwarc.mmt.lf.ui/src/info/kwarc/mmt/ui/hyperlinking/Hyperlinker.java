@@ -1,7 +1,5 @@
 package info.kwarc.mmt.ui.hyperlinking;
 
-import info.kwarc.mmt.lF.signatureDeclaration;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.URIConverter;
@@ -23,14 +21,14 @@ public class Hyperlinker extends HyperlinkHelper {
 		final URI uri = EcoreUtil.getURI(to);
 		final URI normalized = uriConverter.normalize(uri);
 
-		if (to instanceof signatureDeclaration) {
+		/*if (to instanceof signatureDeclaration) {
 			XtextHyperlink result = getHyperlinkProvider().get();
 			result.setHyperlinkRegion(region);
 			result.setURI(normalized);
 			result.setHyperlinkText("lala");
 			acceptor.accept(result);
 		} else
-			super.createHyperlinksTo(from, region, to, acceptor);
+			super.createHyperlinksTo(from, region, to, acceptor); */
 	}
 	
 	@Override

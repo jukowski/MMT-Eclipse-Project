@@ -15,7 +15,7 @@ public class LFParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParser
 	
 	@Override
 	protected void setInitialHiddenTokens(XtextTokenStream tokenStream) {
-		tokenStream.setInitialHiddenTokens();
+		tokenStream.setInitialHiddenTokens("RULE_LINE_COMMENT");
 	}
 	
 	@Override

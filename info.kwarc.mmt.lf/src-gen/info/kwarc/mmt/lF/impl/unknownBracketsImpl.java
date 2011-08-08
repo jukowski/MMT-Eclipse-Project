@@ -5,57 +5,55 @@
  */
 package info.kwarc.mmt.lF.impl;
 
-import info.kwarc.mmt.lF.JUSTSPACE;
 import info.kwarc.mmt.lF.LFPackage;
+import info.kwarc.mmt.lF.anyConstruct;
+import info.kwarc.mmt.lF.unknownBrackets;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>JUSTSPACE</b></em>'.
+ * An implementation of the model object '<em><b>unknown Brackets</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.impl.JUSTSPACEImpl#getJ <em>J</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.unknownBracketsImpl#getT <em>T</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTSPACE
+public class unknownBracketsImpl extends MinimalEObjectImpl.Container implements unknownBrackets
 {
   /**
-   * The default value of the '{@link #getJ() <em>J</em>}' attribute.
+   * The cached value of the '{@link #getT() <em>T</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getJ()
+   * @see #getT()
    * @generated
    * @ordered
    */
-  protected static final String J_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getJ() <em>J</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getJ()
-   * @generated
-   * @ordered
-   */
-  protected String j = J_EDEFAULT;
+  protected EList<anyConstruct> t;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected JUSTSPACEImpl()
+  protected unknownBracketsImpl()
   {
     super();
   }
@@ -68,7 +66,7 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
   @Override
   protected EClass eStaticClass()
   {
-    return LFPackage.Literals.JUSTSPACE;
+    return LFPackage.Literals.UNKNOWN_BRACKETS;
   }
 
   /**
@@ -76,9 +74,13 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getJ()
+  public EList<anyConstruct> getT()
   {
-    return j;
+    if (t == null)
+    {
+      t = new EObjectContainmentEList<anyConstruct>(anyConstruct.class, this, LFPackage.UNKNOWN_BRACKETS__T);
+    }
+    return t;
   }
 
   /**
@@ -86,12 +88,15 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setJ(String newJ)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldJ = j;
-    j = newJ;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.JUSTSPACE__J, oldJ, j));
+    switch (featureID)
+    {
+      case LFPackage.UNKNOWN_BRACKETS__T:
+        return ((InternalEList<?>)getT()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,8 +109,8 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
   {
     switch (featureID)
     {
-      case LFPackage.JUSTSPACE__J:
-        return getJ();
+      case LFPackage.UNKNOWN_BRACKETS__T:
+        return getT();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,13 +120,15 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case LFPackage.JUSTSPACE__J:
-        setJ((String)newValue);
+      case LFPackage.UNKNOWN_BRACKETS__T:
+        getT().clear();
+        getT().addAll((Collection<? extends anyConstruct>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +144,8 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
   {
     switch (featureID)
     {
-      case LFPackage.JUSTSPACE__J:
-        setJ(J_EDEFAULT);
+      case LFPackage.UNKNOWN_BRACKETS__T:
+        getT().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,27 +161,10 @@ public class JUSTSPACEImpl extends MinimalEObjectImpl.Container implements JUSTS
   {
     switch (featureID)
     {
-      case LFPackage.JUSTSPACE__J:
-        return J_EDEFAULT == null ? j != null : !J_EDEFAULT.equals(j);
+      case LFPackage.UNKNOWN_BRACKETS__T:
+        return t != null && !t.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (J: ");
-    result.append(j);
-    result.append(')');
-    return result.toString();
-  }
-
-} //JUSTSPACEImpl
+} //unknownBracketsImpl

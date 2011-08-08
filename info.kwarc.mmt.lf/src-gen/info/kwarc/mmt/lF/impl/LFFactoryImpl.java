@@ -68,17 +68,41 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
     switch (eClass.getClassifierID())
     {
       case LFPackage.MODEL: return createModel();
-      case LFPackage.JUSTSPACE: return createJUSTSPACE();
+      case LFPackage.MODEL_CONSTRUCT_NOSP: return createmodelConstructNOSP();
+      case LFPackage.TERM: return createterm();
+      case LFPackage.TERM_PI: return createtermPi();
+      case LFPackage.TERM_LAMBDA: return createtermLambda();
+      case LFPackage.MORPHISM: return createmorphism();
+      case LFPackage.TERM_DECLARATION: return createtermDeclaration();
+      case LFPackage.ABBREV_TERM_DECLARATION: return createabbrevTermDeclaration();
+      case LFPackage.NAME_DECLARATION: return createnameDeclaration();
+      case LFPackage.FIXITY_DECLARATION: return createfixityDeclaration();
+      case LFPackage.SIG_META_DECLARATION: return createsigMetaDeclaration();
+      case LFPackage.SIG_INCLUDE_DECLARATION: return createsigIncludeDeclaration();
+      case LFPackage.STRUCT_DECLARATION: return createstructDeclaration();
+      case LFPackage.INCLUDE_OPS: return createincludeOps();
+      case LFPackage.ALIAS_DECLARATION: return createaliasDeclaration();
+      case LFPackage.CONSTANT_ASSIGNMENT: return createconstantAssignment();
+      case LFPackage.STRUCT_ASSIGNMENT: return createstructAssignment();
+      case LFPackage.VIEW_META_DECLARATION: return createviewMetaDeclaration();
+      case LFPackage.VIEW_INCLUDE_DECLARATION: return createviewIncludeDeclaration();
+      case LFPackage.UNKNOWN_BRACKETS: return createunknownBrackets();
+      case LFPackage.ANY_CONSTRUCT: return createanyConstruct();
+      case LFPackage.UNKNOWN_BODY: return createunknownBody();
+      case LFPackage.UNKNOWN_CONSTRUCT: return createunknownConstruct();
       case LFPackage.NAMESPACE_DECLARATION: return createnamespaceDeclaration();
       case LFPackage.READ_DECLARATION: return createreadDeclaration();
-      case LFPackage.SIGNATURE_DECLARATION: return createsignatureDeclaration();
-      case LFPackage.SIG_DEFINITIONS: return createsigDefinitions();
+      case LFPackage.SIG_CONSTRUCT_NOSP: return createsigConstructNOSP();
       case LFPackage.SIG_CONSTRUCT: return createsigConstruct();
-      case LFPackage.CLASSIC_SYMBOL_CONSTRUCT: return createclassicSymbolConstruct();
-      case LFPackage.INCLUDE_CONSTRUCT: return createincludeConstruct();
-      case LFPackage.STRUCT_CONSTRUCT: return createstructConstruct();
-      case LFPackage.TEMP_TYPE: return createTempType();
+      case LFPackage.SIG_BODY: return createsigBody();
+      case LFPackage.SIG_DECLARATION: return createsigDeclaration();
+      case LFPackage.LINK_CONSTRUCT_NOSP: return createlinkConstructNOSP();
+      case LFPackage.LINK_CONSTRUCT: return createlinkConstruct();
+      case LFPackage.LINK_BODY: return createlinkBody();
       case LFPackage.VIEW_DECLARATION: return createviewDeclaration();
+      case LFPackage.INTERNAL_VIEW_DECLARATION: return createinternalViewDeclaration();
+      case LFPackage.LINK_DECLARATION: return createlinkDeclaration();
+      case LFPackage.TEMP_TYPE: return createTempType();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -100,10 +124,241 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public JUSTSPACE createJUSTSPACE()
+  public modelConstructNOSP createmodelConstructNOSP()
   {
-    JUSTSPACEImpl justspace = new JUSTSPACEImpl();
-    return justspace;
+    modelConstructNOSPImpl modelConstructNOSP = new modelConstructNOSPImpl();
+    return modelConstructNOSP;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public term createterm()
+  {
+    termImpl term = new termImpl();
+    return term;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public termPi createtermPi()
+  {
+    termPiImpl termPi = new termPiImpl();
+    return termPi;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public termLambda createtermLambda()
+  {
+    termLambdaImpl termLambda = new termLambdaImpl();
+    return termLambda;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public morphism createmorphism()
+  {
+    morphismImpl morphism = new morphismImpl();
+    return morphism;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public termDeclaration createtermDeclaration()
+  {
+    termDeclarationImpl termDeclaration = new termDeclarationImpl();
+    return termDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public abbrevTermDeclaration createabbrevTermDeclaration()
+  {
+    abbrevTermDeclarationImpl abbrevTermDeclaration = new abbrevTermDeclarationImpl();
+    return abbrevTermDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public nameDeclaration createnameDeclaration()
+  {
+    nameDeclarationImpl nameDeclaration = new nameDeclarationImpl();
+    return nameDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public fixityDeclaration createfixityDeclaration()
+  {
+    fixityDeclarationImpl fixityDeclaration = new fixityDeclarationImpl();
+    return fixityDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public sigMetaDeclaration createsigMetaDeclaration()
+  {
+    sigMetaDeclarationImpl sigMetaDeclaration = new sigMetaDeclarationImpl();
+    return sigMetaDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public sigIncludeDeclaration createsigIncludeDeclaration()
+  {
+    sigIncludeDeclarationImpl sigIncludeDeclaration = new sigIncludeDeclarationImpl();
+    return sigIncludeDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public structDeclaration createstructDeclaration()
+  {
+    structDeclarationImpl structDeclaration = new structDeclarationImpl();
+    return structDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public includeOps createincludeOps()
+  {
+    includeOpsImpl includeOps = new includeOpsImpl();
+    return includeOps;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public aliasDeclaration createaliasDeclaration()
+  {
+    aliasDeclarationImpl aliasDeclaration = new aliasDeclarationImpl();
+    return aliasDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public constantAssignment createconstantAssignment()
+  {
+    constantAssignmentImpl constantAssignment = new constantAssignmentImpl();
+    return constantAssignment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public structAssignment createstructAssignment()
+  {
+    structAssignmentImpl structAssignment = new structAssignmentImpl();
+    return structAssignment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public viewMetaDeclaration createviewMetaDeclaration()
+  {
+    viewMetaDeclarationImpl viewMetaDeclaration = new viewMetaDeclarationImpl();
+    return viewMetaDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public viewIncludeDeclaration createviewIncludeDeclaration()
+  {
+    viewIncludeDeclarationImpl viewIncludeDeclaration = new viewIncludeDeclarationImpl();
+    return viewIncludeDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public unknownBrackets createunknownBrackets()
+  {
+    unknownBracketsImpl unknownBrackets = new unknownBracketsImpl();
+    return unknownBrackets;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public anyConstruct createanyConstruct()
+  {
+    anyConstructImpl anyConstruct = new anyConstructImpl();
+    return anyConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public unknownBody createunknownBody()
+  {
+    unknownBodyImpl unknownBody = new unknownBodyImpl();
+    return unknownBody;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public unknownConstruct createunknownConstruct()
+  {
+    unknownConstructImpl unknownConstruct = new unknownConstructImpl();
+    return unknownConstruct;
   }
 
   /**
@@ -133,21 +388,10 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public signatureDeclaration createsignatureDeclaration()
+  public sigConstructNOSP createsigConstructNOSP()
   {
-    signatureDeclarationImpl signatureDeclaration = new signatureDeclarationImpl();
-    return signatureDeclaration;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public sigDefinitions createsigDefinitions()
-  {
-    sigDefinitionsImpl sigDefinitions = new sigDefinitionsImpl();
-    return sigDefinitions;
+    sigConstructNOSPImpl sigConstructNOSP = new sigConstructNOSPImpl();
+    return sigConstructNOSP;
   }
 
   /**
@@ -166,10 +410,10 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public classicSymbolConstruct createclassicSymbolConstruct()
+  public sigBody createsigBody()
   {
-    classicSymbolConstructImpl classicSymbolConstruct = new classicSymbolConstructImpl();
-    return classicSymbolConstruct;
+    sigBodyImpl sigBody = new sigBodyImpl();
+    return sigBody;
   }
 
   /**
@@ -177,10 +421,10 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public includeConstruct createincludeConstruct()
+  public sigDeclaration createsigDeclaration()
   {
-    includeConstructImpl includeConstruct = new includeConstructImpl();
-    return includeConstruct;
+    sigDeclarationImpl sigDeclaration = new sigDeclarationImpl();
+    return sigDeclaration;
   }
 
   /**
@@ -188,10 +432,10 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public structConstruct createstructConstruct()
+  public linkConstructNOSP createlinkConstructNOSP()
   {
-    structConstructImpl structConstruct = new structConstructImpl();
-    return structConstruct;
+    linkConstructNOSPImpl linkConstructNOSP = new linkConstructNOSPImpl();
+    return linkConstructNOSP;
   }
 
   /**
@@ -199,10 +443,21 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TempType createTempType()
+  public linkConstruct createlinkConstruct()
   {
-    TempTypeImpl tempType = new TempTypeImpl();
-    return tempType;
+    linkConstructImpl linkConstruct = new linkConstructImpl();
+    return linkConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public linkBody createlinkBody()
+  {
+    linkBodyImpl linkBody = new linkBodyImpl();
+    return linkBody;
   }
 
   /**
@@ -214,6 +469,39 @@ public class LFFactoryImpl extends EFactoryImpl implements LFFactory
   {
     viewDeclarationImpl viewDeclaration = new viewDeclarationImpl();
     return viewDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public internalViewDeclaration createinternalViewDeclaration()
+  {
+    internalViewDeclarationImpl internalViewDeclaration = new internalViewDeclarationImpl();
+    return internalViewDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public linkDeclaration createlinkDeclaration()
+  {
+    linkDeclarationImpl linkDeclaration = new linkDeclarationImpl();
+    return linkDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TempType createTempType()
+  {
+    TempTypeImpl tempType = new TempTypeImpl();
+    return tempType;
   }
 
   /**

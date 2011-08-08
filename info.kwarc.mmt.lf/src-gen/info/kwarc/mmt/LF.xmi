@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xtext:Grammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext" name="info.kwarc.mmt.LF">
+<xtext:Grammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext" name="info.kwarc.mmt.LF" definesHiddenTokens="true" hiddenTokens="//@rules.5">
   <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="lF">
     <ePackage href="http://www.kwarc.info/mmt/LF#/"/>
   </metamodelDeclarations>
@@ -10,72 +10,98 @@
     <type metamodel="//@metamodelDeclarations.0">
       <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//Model"/>
     </type>
-    <alternatives xsi:type="xtext:Assignment" cardinality="*" feature="declarations" operator="+=">
-      <terminal xsi:type="xtext:Alternatives">
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//Model"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.1"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.44"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.1"/>
+            </elements>
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+              <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.44"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
         <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.21"/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.29"/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.16"/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.14"/>
-      </terminal>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="notInDocument" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.2"/>
+        </elements>
+      </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="INT">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <rules xsi:type="xtext:ParserRule" name="modelConstructNOSP">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//modelConstructNOSP"/>
     </type>
-    <alternatives xsi:type="xtext:CharacterRange" cardinality="+">
-      <left value="0"/>
-      <right value="9"/>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:Assignment" feature="namespaceDeclarations" operator="+=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.62"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="readDeclarations" operator="+=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.63"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="sigDeclarations" operator="+=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.67"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="viewDeclarations" operator="+=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.71"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="rawDeclarations" operator="+=">
+        <terminal xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.45"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.46"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.47"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.61"/>
+        </terminal>
+      </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="SP">
+  <rules xsi:type="xtext:ParserRule" name="anyTerminal">
     <type metamodel="//@metamodelDeclarations.1">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
     <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:Keyword" value=" "/>
-      <elements xsi:type="xtext:Keyword" value="&#x9;"/>
-      <elements xsi:type="xtext:Keyword" value="&#xD;"/>
-      <elements xsi:type="xtext:Keyword" value="&#xA;"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:TerminalRule" name="doubleDot">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Keyword" value=".."/>
-  </rules>
-  <rules xsi:type="xtext:TerminalRule" name="multipleDot">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
-      <elements xsi:type="xtext:Keyword" cardinality="+" value="."/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:TerminalRule" name="CID">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Alternatives" cardinality="+">
-      <elements xsi:type="xtext:CharacterRange">
-        <left value="a"/>
-        <right value="z"/>
-      </elements>
-      <elements xsi:type="xtext:CharacterRange">
-        <left value="A"/>
-        <right value="Z"/>
-      </elements>
-      <elements xsi:type="xtext:CharacterRange">
-        <left value="0"/>
-        <right value="9"/>
-      </elements>
-      <elements xsi:type="xtext:Keyword" value="-"/>
-      <elements xsi:type="xtext:Keyword" value="_"/>
-      <elements xsi:type="xtext:Keyword" value="#"/>
-      <elements xsi:type="xtext:Keyword" value="?"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.57"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.8"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.11"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.12"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.13"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.14"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.18"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.19"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.21"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.22"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.23"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.26"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.30"/>
     </alternatives>
   </rules>
   <rules xsi:type="xtext:TerminalRule" name="ML_COMMENT">
@@ -100,29 +126,228 @@
       </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="SL_COMMENT">
+  <rules xsi:type="xtext:TerminalRule" name="Line_COMMENT">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.16"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
+        </elements>
+        <elements xsi:type="xtext:NegatedToken" cardinality="*">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+          </terminal>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+      <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="PERCENT">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="%"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="COLON">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value=":"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="QUOTE">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="&quot;"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LCBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="{"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="RCBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="}"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LSBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="["/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="RSBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="]"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="("/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="RBRACKET">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value=")"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="DOT">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="."/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LINESP">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:Keyword" value=" "/>
+      <elements xsi:type="xtext:Keyword" value="&#x9;"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LINEDELIM">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+      <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="ARROW">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="->"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="LARROW">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="&lt;-"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="EQUALS">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="="/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="ASSIGN">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value=":="/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="TYPE">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="type"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="UNDERSCORE">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Keyword" value="_"/>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="CID">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:NegatedToken" cardinality="+">
+      <terminal xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.16"/>
+        <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.13"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.14"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.12"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.8"/>
+      </terminal>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="UNKNOWNDIRECTIVE">
     <type metamodel="//@metamodelDeclarations.1">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
     <alternatives xsi:type="xtext:Group">
       <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value=" "/>
-        <elements xsi:type="xtext:Keyword" value="%"/>
-      </elements>
-      <elements xsi:type="xtext:NegatedToken" cardinality="*">
-        <terminal xsi:type="xtext:Alternatives">
-          <elements xsi:type="xtext:Keyword" value="&#xA;"/>
-          <elements xsi:type="xtext:Keyword" value="&#xD;"/>
-        </terminal>
-      </elements>
-      <elements xsi:type="xtext:Group" cardinality="?">
-        <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
-        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+      <elements xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:CharacterRange">
+          <left value="a"/>
+          <right value="z"/>
+        </elements>
+        <elements xsi:type="xtext:CharacterRange">
+          <left value="A"/>
+          <right value="Z"/>
+        </elements>
+        <elements xsi:type="xtext:CharacterRange">
+          <left value="0"/>
+          <right value="9"/>
+        </elements>
       </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="ANY_OTHER">
+  <rules xsi:type="xtext:TerminalRule" name="URISTRING">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.8"/>
+      <elements xsi:type="xtext:UntilToken">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.8"/>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="INFIXNONE">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%infix"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.16"/>
+      <elements xsi:type="xtext:Keyword" value="none"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="INFIXLEFT">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%infix"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.16"/>
+      <elements xsi:type="xtext:Keyword" value="left"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="INFIXRIGHT">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%infix"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.16"/>
+      <elements xsi:type="xtext:Keyword" value="right"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:TerminalRule" name="ILLEGAL_TOKEN">
     <type metamodel="//@metamodelDeclarations.1">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
@@ -133,61 +358,709 @@
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
     <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.2"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.6"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.8"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.16"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.17"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.4"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="NAMESPACE">
+  <rules xsi:type="xtext:ParserRule" name="ID">
     <type metamodel="//@metamodelDeclarations.1">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
     <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
       <elements xsi:type="xtext:Group" cardinality="*">
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
-        <elements xsi:type="xtext:Keyword" value="/"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-      <elements xsi:type="xtext:Group" cardinality="*">
-        <elements xsi:type="xtext:Alternatives">
-          <elements xsi:type="xtext:Keyword" value="/"/>
-          <elements xsi:type="xtext:Keyword" value="."/>
-        </elements>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
       </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="URI">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Group" cardinality="?">
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-        <elements xsi:type="xtext:Keyword" value=":"/>
-        <elements xsi:type="xtext:Keyword" value="/"/>
-        <elements xsi:type="xtext:Keyword" value="/"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.11"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="URISTRING">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="&quot;"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.12"/>
-      <elements xsi:type="xtext:Keyword" value="&quot;"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="JUSTSPACE">
+  <rules xsi:type="xtext:ParserRule" name="term">
     <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//JUSTSPACE"/>
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
     </type>
-    <alternatives xsi:type="xtext:Assignment" feature="J" operator="=">
-      <terminal xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+    <alternatives xsi:type="xtext:RuleCall" rule="//@rules.36"/>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termPi">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//termPi"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.23"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termLambda">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//termLambda"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.11"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.23"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.12"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termArr">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.37"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Action" feature="left" operator="=">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.18"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.19"/>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.36"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termAppOrLambdaOrPi">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.40"/>
+      <elements xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="left" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.39"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.40"/>
+          </elements>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termAppThenLambdaOrPi">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="left" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.39"/>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.40"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termAppNoLambdaNoPi">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.41"/>
+      <elements xsi:type="xtext:Group" cardinality="*">
+        <elements xsi:type="xtext:Action" feature="left" operator="=">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.41"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termLambdaOrPi">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Group" cardinality="+">
+        <elements xsi:type="xtext:Assignment" feature="quantifiers" operator="+=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.34"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.35"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="right" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.38"/>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termBase">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:Assignment" feature="term" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.42"/>
+      </elements>
+      <elements xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.13"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="term" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+          </elements>
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+            <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+            <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+            </elements>
+            <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.14"/>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termAtomic">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//term"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:Assignment" feature="atom" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.22"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="atom" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.23"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="atom" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="morphism">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//morphism"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="linkRefs" operator="+=">
+        <terminal xsi:type="xtext:CrossReference">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkDeclaration"/>
+          </type>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="*">
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="linkRefs" operator="+=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="//@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkDeclaration"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+          </terminal>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="termDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//termDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:UnorderedGroup">
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+          <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+          </elements>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="abbrevTermDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//abbrevTermDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%abbrev"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.44"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="nameDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//nameDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%name"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="alias" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="fixityDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//fixityDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Assignment" feature="fixity" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.27"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="fixity" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.28"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="fixity" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.29"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="fixity" operator="=">
+          <terminal xsi:type="xtext:Keyword" value="%prefix"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="fixity" operator="=">
+          <terminal xsi:type="xtext:Keyword" value="%postfix"/>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="fixityLevel" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="sigMetaDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigMetaDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%meta"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="ref" operator="=">
+        <terminal xsi:type="xtext:CrossReference">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
+          </type>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="sigIncludeDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigIncludeDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%include"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="ref" operator="=">
+        <terminal xsi:type="xtext:CrossReference">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
+          </type>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="incOpt" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.51"/>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="structDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//structDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%struct"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Keyword" value="%implicit"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:Alternatives" cardinality="?">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+          <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="from" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="//@metamodelDeclarations.0">
+                <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+            <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+            <elements xsi:type="xtext:Alternatives">
+              <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.70"/>
+              </elements>
+              <elements xsi:type="xtext:Group">
+                <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+                <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+                  <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+                </elements>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="incOpt" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.51"/>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="includeOps">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//includeOps"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//includeOps"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Keyword" value="%open"/>
+      <elements xsi:type="xtext:Group" cardinality="*">
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="aliases" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.52"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="aliasDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//aliasDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="old" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" cardinality="*" predicated="true" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Keyword" value="%as"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="new" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="constantAssignment">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//constantAssignment"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.21"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="structAssignment">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//structAssignment"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%struct"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.21"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="viewMetaDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//viewMetaDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%meta"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="viewIncludeDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//viewIncludeDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Keyword" value="%include"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="anyDirective">
+    <type metamodel="//@metamodelDeclarations.1">
+      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.25"/>
+      <elements xsi:type="xtext:Keyword" value="%struct"/>
+      <elements xsi:type="xtext:Keyword" value="%meta"/>
+      <elements xsi:type="xtext:Keyword" value="%include"/>
+      <elements xsi:type="xtext:Keyword" value="%namespace"/>
+      <elements xsi:type="xtext:Keyword" value="%read"/>
+      <elements xsi:type="xtext:Keyword" value="%sig"/>
+      <elements xsi:type="xtext:Keyword" value="%view"/>
+      <elements xsi:type="xtext:Keyword" value="%implicit"/>
+      <elements xsi:type="xtext:Keyword" value="%open"/>
+      <elements xsi:type="xtext:Keyword" value="%as"/>
+      <elements xsi:type="xtext:Keyword" value="%abbrev"/>
+      <elements xsi:type="xtext:Keyword" value="%name"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.27"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.28"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.29"/>
+      <elements xsi:type="xtext:Keyword" value="%prefix"/>
+      <elements xsi:type="xtext:Keyword" value="%postfix"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="unknownBrackets">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//unknownBrackets"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//unknownBrackets"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+      <elements xsi:type="xtext:Group" cardinality="*">
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.59"/>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="anyConstruct">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//anyConstruct"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Assignment" feature="t" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.60"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Assignment" feature="directive" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.57"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+            <elements xsi:type="xtext:Assignment" feature="t" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.60"/>
+            </elements>
+          </elements>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="unknownBody">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//unknownBody"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="*">
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+            <elements xsi:type="xtext:Alternatives">
+              <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.58"/>
+              </elements>
+              <elements xsi:type="xtext:Group">
+                <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+                <elements xsi:type="xtext:Alternatives">
+                  <elements xsi:type="xtext:Assignment" predicated="true" feature="t" operator="+=">
+                    <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+                  </elements>
+                  <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+                    <terminal xsi:type="xtext:RuleCall" rule="//@rules.58"/>
+                  </elements>
+                </elements>
+              </elements>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.21"/>
+            <elements xsi:type="xtext:Alternatives">
+              <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.58"/>
+              </elements>
+              <elements xsi:type="xtext:Group">
+                <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+                <elements xsi:type="xtext:Alternatives">
+                  <elements xsi:type="xtext:Assignment" predicated="true" feature="t" operator="+=">
+                    <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+                  </elements>
+                  <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+                    <terminal xsi:type="xtext:RuleCall" rule="//@rules.58"/>
+                  </elements>
+                </elements>
+              </elements>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+            <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+            <elements xsi:type="xtext:Alternatives">
+              <elements xsi:type="xtext:Assignment" predicated="true" feature="t" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.33"/>
+              </elements>
+              <elements xsi:type="xtext:Assignment" feature="t" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.58"/>
+              </elements>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.57"/>
+        </elements>
+      </elements>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="unknownConstruct">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//unknownConstruct"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Assignment" feature="directive" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.25"/>
+      </elements>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:Assignment" feature="t" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.60"/>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
     </alternatives>
   </rules>
   <rules xsi:type="xtext:ParserRule" name="namespaceDeclaration">
@@ -195,23 +1068,21 @@
       <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//namespaceDeclaration"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="namespace"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
+      <elements xsi:type="xtext:Keyword" value="%namespace"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
       <elements xsi:type="xtext:Group" cardinality="?">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="//@rules.5"/>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
         </elements>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-        <elements xsi:type="xtext:Keyword" value="="/>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+        <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
       </elements>
       <elements xsi:type="xtext:Assignment" feature="uri" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.13"/>
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.26"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
     </alternatives>
   </rules>
   <rules xsi:type="xtext:ParserRule" name="readDeclaration">
@@ -219,159 +1090,29 @@
       <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//readDeclaration"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="read"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
+      <elements xsi:type="xtext:Keyword" value="%read"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
       <elements xsi:type="xtext:Assignment" feature="file" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.13"/>
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.26"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="GID">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Alternatives" cardinality="+">
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.1"/>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" cardinality="+" value="="/>
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
-        </elements>
-      </elements>
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="="/>
-        <elements xsi:type="xtext:Keyword" cardinality="+" value="="/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.4"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="SOMETHING">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.1"/>
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="."/>
-        <elements xsi:type="xtext:Alternatives">
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-          <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
-        </elements>
-      </elements>
-      <elements xsi:type="xtext:Keyword" value=":"/>
-      <elements xsi:type="xtext:Keyword" value="="/>
-      <elements xsi:type="xtext:Keyword" value="->"/>
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.19"/>
-        <elements xsi:type="xtext:Keyword" value="}"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.4"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="SOMETHING2">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.5"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.1"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-      <elements xsi:type="xtext:Keyword" value=":"/>
-      <elements xsi:type="xtext:Keyword" value="="/>
-      <elements xsi:type="xtext:Keyword" value="->"/>
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.19"/>
-        <elements xsi:type="xtext:Keyword" value="}"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.4"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.3"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="sigOps">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="%"/>
-          <elements xsi:type="xtext:Keyword" value="meta"/>
-        </elements>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="%"/>
-          <elements xsi:type="xtext:Keyword" value="abbrev"/>
-        </elements>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.18"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="signatureDeclaration">
+  <rules xsi:type="xtext:ParserRule" name="sigConstructNOSP">
     <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//signatureDeclaration"/>
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigConstructNOSP"/>
     </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="%"/>
-        <elements xsi:type="xtext:Keyword" value="sig"/>
-        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-        <elements xsi:type="xtext:Assignment" feature="sigName" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="//@rules.17"/>
-        </elements>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="="/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="defs" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.22"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="sigDefinitions">
-    <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDefinitions"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="{"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="constucts" operator="+=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.23"/>
-      </elements>
-      <elements xsi:type="xtext:Group" cardinality="*">
-        <elements xsi:type="xtext:Keyword" value="."/>
-        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-        <elements xsi:type="xtext:Assignment" feature="constucts" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="//@rules.23"/>
-        </elements>
-      </elements>
-      <elements xsi:type="xtext:Group" cardinality="?">
-        <elements xsi:type="xtext:Keyword" value="."/>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      </elements>
-      <elements xsi:type="xtext:Keyword" value="}"/>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.45"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.46"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.47"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.61"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.48"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.49"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.50"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.67"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.72"/>
     </alternatives>
   </rules>
   <rules xsi:type="xtext:ParserRule" name="sigConstruct">
@@ -379,104 +1120,236 @@
       <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigConstruct"/>
     </type>
     <alternatives xsi:type="xtext:Alternatives">
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.24"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.25"/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.26"/>
-      <elements xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="%"/>
-        <elements xsi:type="xtext:Assignment" feature="tmp" operator="=">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.64"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.44"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="sigBody">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigBody"/>
+    </type>
+    <alternatives xsi:type="xtext:Group">
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigBody"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
           <terminal xsi:type="xtext:Alternatives">
-            <elements xsi:type="xtext:Keyword" value="meta"/>
-            <elements xsi:type="xtext:Keyword" value="abbrev"/>
-            <elements xsi:type="xtext:Keyword" value="name"/>
-            <elements xsi:type="xtext:Keyword" value="pattern"/>
-            <elements xsi:type="xtext:Keyword" value="infix"/>
-            <elements xsi:type="xtext:Keyword" value="prefix"/>
-            <elements xsi:type="xtext:Keyword" value="postfix"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.64"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.44"/>
           </terminal>
         </elements>
-        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.18"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.64"/>
+            </elements>
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+              <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.44"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
       </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="classicSymbolConstruct">
+  <rules xsi:type="xtext:ParserRule" name="sigDeclaration">
     <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//classicSymbolConstruct"/>
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Assignment" feature="symbName" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.17"/>
+      <elements xsi:type="xtext:Keyword" value="%sig"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value=":"/>
-        <elements xsi:type="xtext:Keyword" value=":="/>
-        <elements xsi:type="xtext:Keyword" value="="/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.66"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.18"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="includeConstruct">
+  <rules xsi:type="xtext:ParserRule" name="linkConstructNOSP">
     <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//includeConstruct"/>
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkConstructNOSP"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.54"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.55"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.56"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.61"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="linkConstruct">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkConstruct"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.68"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.53"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="linkBody">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkBody"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="include"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="namespace" operator="=">
-        <terminal xsi:type="xtext:CrossReference">
-          <type metamodel="//@metamodelDeclarations.0">
-            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//signatureDeclaration"/>
-          </type>
-          <terminal xsi:type="xtext:RuleCall" rule="//@rules.11"/>
-        </terminal>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkBody"/>
+        </type>
       </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.9"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
       <elements xsi:type="xtext:Group" cardinality="?">
-        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-        <elements xsi:type="xtext:RuleCall" rule="//@rules.27"/>
+        <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.68"/>
+            <elements xsi:type="xtext:RuleCall" rule="//@rules.53"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="//@rules.68"/>
+            </elements>
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+              <elements xsi:type="xtext:Assignment" feature="constructs" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="//@rules.53"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
       </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="structConstruct">
+  <rules xsi:type="xtext:ParserRule" name="viewDeclaration">
     <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//structConstruct"/>
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//viewDeclaration"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="struct"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="structName" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.17"/>
+      <elements xsi:type="xtext:Keyword" value="%view"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Keyword" value="%implicit"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value=":"/>
-        <elements xsi:type="xtext:Keyword" value=":="/>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="namespace" operator="=">
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="from" operator="=">
         <terminal xsi:type="xtext:CrossReference">
           <type metamodel="//@metamodelDeclarations.0">
-            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//signatureDeclaration"/>
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
           </type>
-          <terminal xsi:type="xtext:RuleCall" rule="//@rules.11"/>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
         </terminal>
       </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.18"/>
-      <elements xsi:type="xtext:Assignment" cardinality="?" feature="incOpt" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.27"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.18"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="to" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
       </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.70"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+          </elements>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:ParserRule" name="includeOps">
-    <type metamodel="//@metamodelDeclarations.1">
-      <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <rules xsi:type="xtext:ParserRule" name="internalViewDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//internalViewDeclaration"/>
     </type>
     <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="open"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.18"/>
+      <elements xsi:type="xtext:Keyword" value="%view"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Keyword" value="%implicit"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.7"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Assignment" feature="from" operator="=">
+        <terminal xsi:type="xtext:CrossReference">
+          <type metamodel="//@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
+          </type>
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.32"/>
+        </terminal>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.18"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Group" cardinality="?">
+        <elements xsi:type="xtext:Assignment" feature="to" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+        </elements>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.31"/>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.20"/>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="//@rules.70"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:RuleCall" rule="//@rules.31"/>
+          <elements xsi:type="xtext:Assignment" feature="def" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.43"/>
+          </elements>
+        </elements>
+      </elements>
+      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.31"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.15"/>
+    </alternatives>
+  </rules>
+  <rules xsi:type="xtext:ParserRule" name="linkDeclaration">
+    <type metamodel="//@metamodelDeclarations.0">
+      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//linkDeclaration"/>
+    </type>
+    <alternatives xsi:type="xtext:Alternatives">
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.71"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.72"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.50"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.49"/>
+      <elements xsi:type="xtext:RuleCall" rule="//@rules.48"/>
     </alternatives>
   </rules>
   <rules xsi:type="xtext:ParserRule" name="TempType">
@@ -491,7 +1364,7 @@
       </elements>
       <elements xsi:type="xtext:Action">
         <type metamodel="//@metamodelDeclarations.0">
-          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//signatureDeclaration"/>
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigDeclaration"/>
         </type>
       </elements>
       <elements xsi:type="xtext:Action">
@@ -501,46 +1374,42 @@
       </elements>
       <elements xsi:type="xtext:Action">
         <type metamodel="//@metamodelDeclarations.0">
-          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//includeConstruct"/>
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//internalViewDeclaration"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//sigIncludeDeclaration"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//structAssignment"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//constantAssignment"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//termDeclaration"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//abbrevTermDeclaration"/>
+        </type>
+      </elements>
+      <elements xsi:type="xtext:Action">
+        <type metamodel="//@metamodelDeclarations.0">
+          <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//structDeclaration"/>
         </type>
       </elements>
       <elements xsi:type="xtext:Assignment" feature="fullURI" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.17"/>
+        <terminal xsi:type="xtext:RuleCall" rule="//@rules.24"/>
       </elements>
-    </alternatives>
-  </rules>
-  <rules xsi:type="xtext:ParserRule" name="viewDeclaration">
-    <type metamodel="//@metamodelDeclarations.0">
-      <classifier xsi:type="ecore:EClass" href="http://www.kwarc.info/mmt/LF#//viewDeclaration"/>
-    </type>
-    <alternatives xsi:type="xtext:Group">
-      <elements xsi:type="xtext:Keyword" value="%"/>
-      <elements xsi:type="xtext:Keyword" value="view"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="+" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="viewID" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.17"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value=":"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="from" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.11"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="->"/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="to" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.11"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="="/>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Assignment" feature="viewDefs" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="//@rules.22"/>
-      </elements>
-      <elements xsi:type="xtext:RuleCall" cardinality="*" rule="//@rules.10"/>
-      <elements xsi:type="xtext:Keyword" value="."/>
-      <elements xsi:type="xtext:RuleCall" rule="//@rules.10"/>
     </alternatives>
   </rules>
 </xtext:Grammar>

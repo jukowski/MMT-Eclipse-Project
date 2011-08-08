@@ -1,59 +1,188 @@
-grammar info.kwarc.mmt.LF //with org.eclipse.xtext.common.Terminals
+grammar info.kwarc.mmt.LF hidden (Line_COMMENT) //with org.eclipse.xtext.common.Terminals
 
 generate lF "http://www.kwarc.info/mmt/LF"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 
-Model:
-	declarations+=(namespaceDeclaration | signatureDeclaration  | viewDeclaration | readDeclaration | JUSTSPACE )*; 
+Model                : {Model}
+					   WS* (constructs+=(modelConstructNOSP | termDeclaration) 
+					        (WS* (constructs+=modelConstructNOSP | WS constructs+=termDeclaration))* WS*)?
+					   (PERCENT DOT notInDocument+=anyTerminal*)?;
 
-terminal INT returns ecore::EInt: ('0'..'9')+;
-terminal SP			 : ' '|'\t'|'\r'|'\n';
-terminal doubleDot   : '..';
-terminal multipleDot : doubleDot '.'+;
-terminal CID  		 : ('a'..'z'|'A'..'Z'|'0'..'9'|'-'|'_'|'#'|'?')+;
+modelConstructNOSP   : namespaceDeclarations+=namespaceDeclaration | 
+		  			   readDeclarations+=readDeclaration | 
+		  			   sigDeclarations+=sigDeclaration | 
+		  			   viewDeclarations+=viewDeclaration |
+		  			   rawDeclarations+=(abbrevTermDeclaration | nameDeclaration | fixityDeclaration | unknownConstruct);
+
+anyTerminal          : anyDirective|WS|PERCENT|COLON|QUOTE|LCBRACKET|RCBRACKET|LSBRACKET|RSBRACKET|LBRACKET|RBRACKET|
+						 DOT|ARROW|LARROW|EQUALS|ASSIGN|TYPE|UNDERSCORE|CID|URISTRING|ILLEGAL_TOKEN;
+
 terminal ML_COMMENT	 : '%{' -> '}%';
 terminal ML2_COMMENT : '%*' -> '*%';
-terminal SL_COMMENT  : '%' (' ' | '%') !('\n'|'\r')* ('\r'? '\n')?;
-terminal ANY_OTHER: .;
+terminal Line_COMMENT  : PERCENT ((LINESP | PERCENT) !('\r'|'\n')*)?  '\r'? '\n';
 
-WS : (SP | ML_COMMENT | ML2_COMMENT | SL_COMMENT);
+// Reserved characters (can't be part of an identifier)
+terminal PERCENT     : '%';
+terminal COLON       : ':';
+terminal QUOTE       : '"';
+terminal LCBRACKET   : '{';
+terminal RCBRACKET   : '}';
+terminal LSBRACKET   : '[';
+terminal RSBRACKET   : ']';
+terminal LBRACKET    : '(';
+terminal RBRACKET    : ')';
+terminal DOT         : '.';
+terminal LINESP      : ' '|'\t';
+terminal LINEDELIM   : '\r'? '\n';
 
-NAMESPACE : (doubleDot '/')* CID ( ('/'|'.') CID)*;
-URI : (CID ':' '/' '/')? NAMESPACE;
-URISTRING : '"' URI '"' ;
-JUSTSPACE: J=WS;
+// Keywords (can't constitute an identifier)
+terminal ARROW       : '->';
+terminal LARROW      : '<-';
+terminal EQUALS      : '=';
+terminal ASSIGN      : ':=';
+terminal TYPE        : 'type';
+terminal UNDERSCORE  : '_';
 
-namespaceDeclaration: '%' 'namespace' WS+ (name=CID WS* '=' WS*)? uri=URISTRING WS* '.' WS;
+terminal CID  		 : !(LINESP|'\r'|'\n'|DOT|COLON|LBRACKET|RBRACKET|LSBRACKET|RSBRACKET|LCBRACKET|RCBRACKET|PERCENT|QUOTE)+;
+terminal UNKNOWNDIRECTIVE : '%' ('a'..'z'|'A'..'Z'|'0'..'9')+;
+terminal URISTRING   : QUOTE -> QUOTE;
 
-readDeclaration: '%' 'read' WS+ file=URISTRING WS* '.' WS;
+// Can't write these directly in rules because 'none' would become a token and would shadow CID
+terminal INFIXNONE   : '%infix' LINESP+ 'none';
+terminal INFIXLEFT   : '%infix' LINESP+ 'left';
+terminal INFIXRIGHT  : '%infix' LINESP+ 'right';
 
-GID : (CID | ANY_OTHER | INT)+ ('='+ WS)? | '=' '='+ WS| multipleDot | doubleDot;
-
-
-SOMETHING: ANY_OTHER | CID | INT | '.' (CID  | ANY_OTHER) | ':' | '=' | '->' | '%' | '{' SOMETHING2* '}'|  multipleDot | doubleDot | WS;
-SOMETHING2: ANY_OTHER | CID | INT | '.' | ':' | '=' | '->' | '%' | '{' SOMETHING2* '}'|  multipleDot | doubleDot | WS;
-
-sigOps : ('%' 'meta' | '%' 'abbrev') SOMETHING* '.' WS;
-
-
-signatureDeclaration: ('%' 'sig' WS+ sigName=GID) WS* '=' WS*  
-					defs=sigDefinitions   WS* '.'; 
+// To avoid lexer errors
+terminal ILLEGAL_TOKEN : .;
 
 
-sigDefinitions : '{' WS* constucts+=sigConstruct ('.' WS+ constucts+=sigConstruct)* ('.' WS*)? '}';
+// Object level
 
-sigConstruct : classicSymbolConstruct | includeConstruct | structConstruct | 
-				 ('%' tmp=('meta' | 'abbrev' | 'name' | 'pattern' | 'infix' | 'prefix' | 'postfix' )  SOMETHING*) 
-				 ;
-				 
-classicSymbolConstruct : symbName=GID WS* (':' | ':=' | '=') SOMETHING*;
-includeConstruct : '%' 'include' WS+ namespace=[signatureDeclaration|NAMESPACE] (WS+ includeOps)?;
-structConstruct : '%' 'struct' WS+ structName = GID WS* (':' | ':=') WS* namespace=[signatureDeclaration|NAMESPACE] SOMETHING* incOpt=includeOps? ;
+WS             : LINESP | LINEDELIM | ML_COMMENT | ML2_COMMENT;// | SL_COMMENT;
+ID             : CID (DOT CID)*;
 
-includeOps : ('%' 'open' SOMETHING*);
+term           : termArr;
+termPi         : LCBRACKET WS* name=(CID|UNDERSCORE) WS* (COLON WS* type=term WS*)? RCBRACKET;
+termLambda     : LSBRACKET WS* name=(CID|UNDERSCORE) WS* (COLON WS* type=term WS*)? RSBRACKET;
+termArr returns term:
+			     termAppOrLambdaOrPi ({term.left=current} WS+ (ARROW|LARROW) WS+ right=termArr)?;
+// non-empty term application intermixed with Lambda and Pi quantifiers (possibly in the first position)
+termAppOrLambdaOrPi returns term:
+				 termLambdaOrPi |
+				 left=termAppNoLambdaNoPi (WS* right=termLambdaOrPi)?;
+// non-empty term application intermixed with Lambda and Pi quantifiers (but NOT in the first position)
+termAppThenLambdaOrPi returns term:
+				 left=termAppNoLambdaNoPi (WS* right=termLambdaOrPi)?;
+// non-empty sequence of non-quantified terms
+termAppNoLambdaNoPi returns term:
+				 termBase ({term.left=current} WS+ right=termBase)*;
+// [..] {..} .. [..] termApp
+termLambdaOrPi returns term:
+				 (quantifiers+=(termPi | termLambda) WS*)+ right=termAppThenLambdaOrPi;
+// (..) ---or--- TYPE ---or--- UNDERSCORE ---or--- ID
+termBase returns term :
+				 term=termAtomic |
+				 {term} LBRACKET WS* (term=term WS* (COLON WS* type=term WS*)?)? RBRACKET;
+termAtomic returns term:   // typing hack, since UNDERSCORE can't return a term
+				 atom=TYPE | atom=UNDERSCORE | atom=ID;
 
-TempType : {namespaceDeclaration} | {signatureDeclaration} | {viewDeclaration} | {includeConstruct} | fullURI = GID;
+morphism       : linkRefs+=[linkDeclaration|ID] (WS+ linkRefs+=[linkDeclaration|ID])*;
 
-viewDeclaration: '%' 'view' WS+ viewID=GID WS* ':' WS* from=NAMESPACE WS*'->' WS* to=NAMESPACE WS* '=' WS* viewDefs=sigDefinitions WS* '.' WS;
+
+
+// Symbol level - signatures
+
+termDeclaration        : (name=ID) ((WS* COLON WS* type=term)? & (WS+ EQUALS WS+ def=term)?) WS* DOT;
+abbrevTermDeclaration  : 
+						 '%abbrev' WS+ termDeclaration;
+nameDeclaration        : '%name' WS+ name=ID WS+ alias=CID WS* DOT;
+fixityDeclaration      : (fixity=INFIXNONE | fixity=INFIXLEFT | fixity=INFIXRIGHT | fixity='%prefix' | fixity='%postfix')
+					     WS+ fixityLevel=CID WS+ name=ID WS* DOT;
+
+sigMetaDeclaration     : '%meta' WS+ ref=[sigDeclaration|ID] WS* DOT;
+sigIncludeDeclaration  : '%include' WS+ ref=[sigDeclaration|ID] (WS* incOpt=includeOps)? WS* DOT;
+structDeclaration      : '%struct' WS+ ('%implicit' WS+)? name=ID
+						  (WS+ EQUALS WS+ def=morphism |  // defined via morphism, no domain
+						   WS* COLON WS* from=[sigDeclaration|ID]   // domain is given
+						    (WS+ EQUALS WS* (def=linkBody | WS def=morphism))?
+						  )?
+						  (WS* incOpt=includeOps)? WS* DOT;
+
+includeOps             : {includeOps} '%open' (WS+ aliases+=aliasDeclaration)*;
+aliasDeclaration       : old=ID (=> WS* '%as' WS+ new=CID)?;
+
+
+
+// Symbol level - links (views and structures)
+
+constantAssignment     : name=ID WS* ASSIGN WS+ def=term WS* DOT;
+structAssignment       : '%struct' WS+ name=ID WS* ASSIGN WS+ def=morphism WS* DOT;
+viewMetaDeclaration    : '%meta' WS+ def=morphism WS* DOT;
+viewIncludeDeclaration : '%include' WS+ def=morphism WS* DOT;
+
+
+
+// Symbol/module level - unknown constructs
+
+anyDirective           : UNKNOWNDIRECTIVE | '%struct' | '%meta' | '%include' | '%namespace' |
+						 '%read' | '%sig' | '%view' | '%implicit' | '%open' | '%as' |
+						 '%abbrev' | '%name' | INFIXNONE | INFIXLEFT | INFIXRIGHT | '%prefix' | '%postfix';
+
+// { list of unknown or known constructs }
+unknownBrackets        : {unknownBrackets} LCBRACKET (WS+ t+=anyConstruct)* WS* RCBRACKET;
+// an unknown construct, optionally starting with a known or unknown directive 
+anyConstruct 		   : (t=unknownBody | directive=anyDirective (WS+ t=unknownBody)?) WS* DOT;
+// the part of the construct between the directive and the final dot, without surrounding WS
+unknownBody            : t+=term
+					     (WS* (WS EQUALS (t+=unknownBrackets | WS+ (=> t+=term | t+=unknownBrackets)) |
+					     	   ASSIGN (t+=unknownBrackets | WS+ (=> t+=term | t+=unknownBrackets)) | 
+					     	   COLON WS* (=> t+=term | t+=unknownBrackets) | 
+					     	   anyDirective
+					     ))*;
+unknownConstruct       : directive=UNKNOWNDIRECTIVE (WS+ t=unknownBody)? WS* DOT;
+
+
+
+// Module level - %namespace and %read declarations
+
+namespaceDeclaration   : '%namespace' WS+ (name=CID WS+ EQUALS WS*)? uri=URISTRING WS* DOT;
+readDeclaration        : '%read' WS* file=URISTRING WS* DOT;
+
+
+
+// Module level - signatures
+
+sigConstructNOSP  : abbrevTermDeclaration | nameDeclaration | fixityDeclaration | unknownConstruct |
+					sigMetaDeclaration | sigIncludeDeclaration | structDeclaration |
+					sigDeclaration | internalViewDeclaration;
+sigConstruct      : sigConstructNOSP | termDeclaration;
+sigBody           : {sigBody} LCBRACKET WS* (constructs+=(sigConstructNOSP | termDeclaration)
+					    (WS* (constructs+=sigConstructNOSP | WS constructs+=termDeclaration))* WS*)? RCBRACKET;
+sigDeclaration    : '%sig' WS+ name=CID WS+ EQUALS WS* def=sigBody WS* DOT;
+
+
+// Module level - views
+
+linkConstructNOSP :	structAssignment | viewMetaDeclaration | viewIncludeDeclaration | unknownConstruct;
+linkConstruct     : linkConstructNOSP | constantAssignment;
+linkBody          : {linkBody} LCBRACKET WS* (constructs+=(linkConstructNOSP | constantAssignment) 
+					    (WS* (constructs+=linkConstructNOSP | WS constructs+=constantAssignment))* WS*)? RCBRACKET;
+viewDeclaration   : '%view' WS+ ('%implicit' WS+)? name=CID 
+				 	WS* COLON WS* from=[sigDeclaration|ID] WS+ ARROW WS+ to=morphism
+				 	WS+ EQUALS WS*
+				 	(def=linkBody | WS def=morphism)
+				 	WS* DOT;
+// view inside signature. Codomain is optional
+internalViewDeclaration :
+					'%view' WS+ ('%implicit' WS+)? name=CID 
+				 	WS* COLON WS* from=[sigDeclaration|ID] WS+ ARROW WS+ (to=morphism WS+)?
+				 	EQUALS WS*
+				 	(def=linkBody | WS def=morphism)
+				 	WS* DOT;
+linkDeclaration   : viewDeclaration | internalViewDeclaration | structDeclaration | sigIncludeDeclaration | sigMetaDeclaration;
+
+// hack for adding an absoluteURI field to all these types
+TempType : {namespaceDeclaration} | {sigDeclaration} | {viewDeclaration} | {internalViewDeclaration} | {sigIncludeDeclaration} | 
+		   {structAssignment} | {constantAssignment} | {termDeclaration} | {abbrevTermDeclaration} | {structDeclaration} | fullURI = CID;

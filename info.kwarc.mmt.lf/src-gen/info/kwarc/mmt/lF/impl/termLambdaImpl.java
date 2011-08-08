@@ -6,8 +6,8 @@
 package info.kwarc.mmt.lF.impl;
 
 import info.kwarc.mmt.lF.LFPackage;
-import info.kwarc.mmt.lF.sigDefinitions;
-import info.kwarc.mmt.lF.signatureDeclaration;
+import info.kwarc.mmt.lF.term;
+import info.kwarc.mmt.lF.termLambda;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -16,59 +16,60 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>signature Declaration</b></em>'.
+ * An implementation of the model object '<em><b>term Lambda</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl#getSigName <em>Sig Name</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.impl.signatureDeclarationImpl#getDefs <em>Defs</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.termLambdaImpl#getName <em>Name</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.termLambdaImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class signatureDeclarationImpl extends TempTypeImpl implements signatureDeclaration
+public class termLambdaImpl extends MinimalEObjectImpl.Container implements termLambda
 {
   /**
-   * The default value of the '{@link #getSigName() <em>Sig Name</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSigName()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String SIG_NAME_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSigName() <em>Sig Name</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSigName()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String sigName = SIG_NAME_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getDefs() <em>Defs</em>}' containment reference.
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDefs()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected sigDefinitions defs;
+  protected term type;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected signatureDeclarationImpl()
+  protected termLambdaImpl()
   {
     super();
   }
@@ -81,7 +82,7 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   @Override
   protected EClass eStaticClass()
   {
-    return LFPackage.Literals.SIGNATURE_DECLARATION;
+    return LFPackage.Literals.TERM_LAMBDA;
   }
 
   /**
@@ -89,9 +90,9 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSigName()
+  public String getName()
   {
-    return sigName;
+    return name;
   }
 
   /**
@@ -99,12 +100,12 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSigName(String newSigName)
+  public void setName(String newName)
   {
-    String oldSigName = sigName;
-    sigName = newSigName;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIGNATURE_DECLARATION__SIG_NAME, oldSigName, sigName));
+      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.TERM_LAMBDA__NAME, oldName, name));
   }
 
   /**
@@ -112,9 +113,9 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public sigDefinitions getDefs()
+  public term getType()
   {
-    return defs;
+    return type;
   }
 
   /**
@@ -122,13 +123,13 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDefs(sigDefinitions newDefs, NotificationChain msgs)
+  public NotificationChain basicSetType(term newType, NotificationChain msgs)
   {
-    sigDefinitions oldDefs = defs;
-    defs = newDefs;
+    term oldType = type;
+    type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.SIGNATURE_DECLARATION__DEFS, oldDefs, newDefs);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LFPackage.TERM_LAMBDA__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -139,20 +140,20 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDefs(sigDefinitions newDefs)
+  public void setType(term newType)
   {
-    if (newDefs != defs)
+    if (newType != type)
     {
       NotificationChain msgs = null;
-      if (defs != null)
-        msgs = ((InternalEObject)defs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIGNATURE_DECLARATION__DEFS, null, msgs);
-      if (newDefs != null)
-        msgs = ((InternalEObject)newDefs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.SIGNATURE_DECLARATION__DEFS, null, msgs);
-      msgs = basicSetDefs(newDefs, msgs);
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LFPackage.TERM_LAMBDA__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LFPackage.TERM_LAMBDA__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.SIGNATURE_DECLARATION__DEFS, newDefs, newDefs));
+      eNotify(new ENotificationImpl(this, Notification.SET, LFPackage.TERM_LAMBDA__TYPE, newType, newType));
   }
 
   /**
@@ -165,8 +166,8 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__DEFS:
-        return basicSetDefs(null, msgs);
+      case LFPackage.TERM_LAMBDA__TYPE:
+        return basicSetType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,10 +182,10 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
-        return getSigName();
-      case LFPackage.SIGNATURE_DECLARATION__DEFS:
-        return getDefs();
+      case LFPackage.TERM_LAMBDA__NAME:
+        return getName();
+      case LFPackage.TERM_LAMBDA__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -199,11 +200,11 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
-        setSigName((String)newValue);
+      case LFPackage.TERM_LAMBDA__NAME:
+        setName((String)newValue);
         return;
-      case LFPackage.SIGNATURE_DECLARATION__DEFS:
-        setDefs((sigDefinitions)newValue);
+      case LFPackage.TERM_LAMBDA__TYPE:
+        setType((term)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -219,11 +220,11 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
-        setSigName(SIG_NAME_EDEFAULT);
+      case LFPackage.TERM_LAMBDA__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case LFPackage.SIGNATURE_DECLARATION__DEFS:
-        setDefs((sigDefinitions)null);
+      case LFPackage.TERM_LAMBDA__TYPE:
+        setType((term)null);
         return;
     }
     super.eUnset(featureID);
@@ -239,10 +240,10 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
   {
     switch (featureID)
     {
-      case LFPackage.SIGNATURE_DECLARATION__SIG_NAME:
-        return SIG_NAME_EDEFAULT == null ? sigName != null : !SIG_NAME_EDEFAULT.equals(sigName);
-      case LFPackage.SIGNATURE_DECLARATION__DEFS:
-        return defs != null;
+      case LFPackage.TERM_LAMBDA__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case LFPackage.TERM_LAMBDA__TYPE:
+        return type != null;
     }
     return super.eIsSet(featureID);
   }
@@ -258,10 +259,10 @@ public class signatureDeclarationImpl extends TempTypeImpl implements signatureD
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (sigName: ");
-    result.append(sigName);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }
 
-} //signatureDeclarationImpl
+} //termLambdaImpl

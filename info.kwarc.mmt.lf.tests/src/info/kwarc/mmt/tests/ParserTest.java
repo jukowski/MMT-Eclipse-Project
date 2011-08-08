@@ -20,7 +20,8 @@ public class ParserTest {
 			"\n" + 
 			"%namespace \"http://cds.omdoc.org/test2\". \n" + 
 			"\n" + 
-			"%namespace ats = \"test\".\n" + 
+			"%namespace ats = \"test\".\n" +
+			"%% lalaa\n" + 
 			"\n" + 
 			"%sig A' = {\n" + 
 			"   %include t.A.\n  " +
@@ -31,8 +32,6 @@ public class ParserTest {
 			"  %struct dom : Category.\n" + 
 			"  %struct cod : Category. \n " +
 			"== : exp A -> exp A -> type.    %infix none 50 ==.\n" + 
-			"\n" +
-			"  # := ded in.\n" + 
 			"\n" +
 			"  forall' := a.\n  " +
 			"forall0 := ... . %% fails  \n" + 
@@ -67,10 +66,10 @@ public class ParserTest {
 				break;
 			System.out.print(t.getText()+" ");
 			switch (t.getType()) {
-				case InternalLFLexer.RULE_ANY_OTHER: System.out.println("ANYOTHER");	break;
+//				case InternalLFLexer.RULE_ANY_OTHER: System.out.println("ANYOTHER");	break;
 				case InternalLFLexer.RULE_CID: System.out.println("CID");	break;
-				case InternalLFLexer.RULE_SP: System.out.println("WS");	break;
-				case InternalLFLexer.RULE_INT: System.out.println("INT");	break;
+//				case InternalLFLexer.RULE_SP: System.out.println("WS");	break;
+//				case InternalLFLexer.RULE_INT: System.out.println("INT");	break;
 				case InternalLFLexer.RULE_ML2_COMMENT: System.out.println("M2 Comment");	break;
 				case InternalLFLexer.RULE_ML_COMMENT: System.out.println("M1 Comment");	break;
 				default: System.out.println(t.getType()); 

@@ -157,17 +157,22 @@ public class LFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 	
+//	  org.eclipse.xtext.ui.editor.toggleComments.SLCommentPrefixCalculator.caseGroup(SLCommentPrefixCalculator.java:43)
+	  
+
+	
 	protected void fullBuild(final IProgressMonitor monitor)
 			throws CoreException {
 		try {
-			MMTNature nature = (MMTNature) getProject().getNature(MMTNature.NATURE_ID);
+			IProject project = getProject();
+			MMTNature nature = (MMTNature) project.getNature(MMTNature.NATURE_ID);
 			initLogger(nature);
 			MMTController controller = nature.getController();
 			if (controller != null) {
 				ArrayList<String> paths = new ArrayList<String>();
 				paths.add("/");
 				MMTArchive arch = controller.getArchive(getProject().getName()); 
-				arch.compile(paths);
+ 				arch.compile(paths);
 			}
 		} catch (CoreException e) {
 		}

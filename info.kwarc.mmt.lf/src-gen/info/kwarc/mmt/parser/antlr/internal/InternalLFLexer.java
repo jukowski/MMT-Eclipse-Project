@@ -12,40 +12,49 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalLFLexer extends Lexer {
-    public static final int RULE_SP=4;
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_CID=9;
+    public static final int RULE_QUOTE=7;
+    public static final int RULE_PERCENT=4;
+    public static final int RULE_LBRACKET=12;
+    public static final int RULE_LSBRACKET=10;
     public static final int EOF=-1;
-    public static final int RULE_SL_COMMENT=7;
-    public static final int RULE_ML_COMMENT=5;
-    public static final int T__19=19;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int RULE_MULTIPLEDOT=12;
+    public static final int RULE_INFIXRIGHT=29;
+    public static final int RULE_ILLEGAL_TOKEN=22;
+    public static final int RULE_ASSIGN=17;
+    public static final int RULE_LARROW=15;
+    public static final int RULE_UNKNOWNDIRECTIVE=30;
+    public static final int RULE_DOT=5;
+    public static final int RULE_ML2_COMMENT=26;
+    public static final int RULE_INFIXNONE=27;
+    public static final int RULE_RBRACKET=13;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__44=44;
+    public static final int RULE_RCBRACKET=9;
+    public static final int T__45=45;
+    public static final int RULE_LCBRACKET=8;
+    public static final int RULE_RSBRACKET=11;
+    public static final int RULE_UNDERSCORE=19;
+    public static final int RULE_URISTRING=21;
+    public static final int RULE_CID=20;
+    public static final int RULE_LINESP=23;
+    public static final int RULE_ML_COMMENT=25;
+    public static final int RULE_COLON=6;
     public static final int T__32=32;
-    public static final int T__16=16;
+    public static final int RULE_TYPE=18;
     public static final int T__33=33;
-    public static final int T__15=15;
     public static final int T__34=34;
-    public static final int T__18=18;
     public static final int T__35=35;
-    public static final int T__17=17;
     public static final int T__36=36;
-    public static final int T__14=14;
-    public static final int T__13=13;
-    public static final int RULE_ML2_COMMENT=6;
-    public static final int RULE_INT=11;
-    public static final int RULE_DOUBLEDOT=8;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int RULE_ARROW=14;
+    public static final int RULE_INFIXLEFT=28;
+    public static final int RULE_LINE_COMMENT=31;
+    public static final int RULE_LINEDELIM=24;
+    public static final int RULE_EQUALS=16;
 
     // delegates
     // delegators
@@ -60,406 +69,15 @@ public class InternalLFLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g"; }
 
-    // $ANTLR start "T__13"
-    public final void mT__13() throws RecognitionException {
-        try {
-            int _type = T__13;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:11:7: ( '/' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:11:9: '/'
-            {
-            match('/'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__13"
-
-    // $ANTLR start "T__14"
-    public final void mT__14() throws RecognitionException {
-        try {
-            int _type = T__14;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:12:7: ( '.' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:12:9: '.'
-            {
-            match('.'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__14"
-
-    // $ANTLR start "T__15"
-    public final void mT__15() throws RecognitionException {
-        try {
-            int _type = T__15;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:13:7: ( ':' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:13:9: ':'
-            {
-            match(':'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__15"
-
-    // $ANTLR start "T__16"
-    public final void mT__16() throws RecognitionException {
-        try {
-            int _type = T__16;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:14:7: ( '\"' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:14:9: '\"'
-            {
-            match('\"'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__16"
-
-    // $ANTLR start "T__17"
-    public final void mT__17() throws RecognitionException {
-        try {
-            int _type = T__17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:15:7: ( '%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:15:9: '%'
-            {
-            match('%'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__17"
-
-    // $ANTLR start "T__18"
-    public final void mT__18() throws RecognitionException {
-        try {
-            int _type = T__18;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:16:7: ( 'namespace' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:16:9: 'namespace'
-            {
-            match("namespace"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__18"
-
-    // $ANTLR start "T__19"
-    public final void mT__19() throws RecognitionException {
-        try {
-            int _type = T__19;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:17:7: ( '=' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:17:9: '='
-            {
-            match('='); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__19"
-
-    // $ANTLR start "T__20"
-    public final void mT__20() throws RecognitionException {
-        try {
-            int _type = T__20;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:7: ( 'read' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:9: 'read'
-            {
-            match("read"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__20"
-
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
-        try {
-            int _type = T__21;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:7: ( '->' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:9: '->'
-            {
-            match("->"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__21"
-
-    // $ANTLR start "T__22"
-    public final void mT__22() throws RecognitionException {
-        try {
-            int _type = T__22;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:7: ( '{' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:9: '{'
-            {
-            match('{'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__22"
-
-    // $ANTLR start "T__23"
-    public final void mT__23() throws RecognitionException {
-        try {
-            int _type = T__23;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:21:7: ( '}' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:21:9: '}'
-            {
-            match('}'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__23"
-
-    // $ANTLR start "T__24"
-    public final void mT__24() throws RecognitionException {
-        try {
-            int _type = T__24;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:22:7: ( 'sig' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:22:9: 'sig'
-            {
-            match("sig"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__24"
-
-    // $ANTLR start "T__25"
-    public final void mT__25() throws RecognitionException {
-        try {
-            int _type = T__25;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:7: ( 'meta' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:9: 'meta'
-            {
-            match("meta"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__25"
-
-    // $ANTLR start "T__26"
-    public final void mT__26() throws RecognitionException {
-        try {
-            int _type = T__26;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:7: ( 'abbrev' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:9: 'abbrev'
-            {
-            match("abbrev"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__26"
-
-    // $ANTLR start "T__27"
-    public final void mT__27() throws RecognitionException {
-        try {
-            int _type = T__27;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:7: ( 'name' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:25:9: 'name'
-            {
-            match("name"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__27"
-
-    // $ANTLR start "T__28"
-    public final void mT__28() throws RecognitionException {
-        try {
-            int _type = T__28;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:7: ( 'pattern' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:26:9: 'pattern'
-            {
-            match("pattern"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__28"
-
-    // $ANTLR start "T__29"
-    public final void mT__29() throws RecognitionException {
-        try {
-            int _type = T__29;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:7: ( 'infix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:27:9: 'infix'
-            {
-            match("infix"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__29"
-
-    // $ANTLR start "T__30"
-    public final void mT__30() throws RecognitionException {
-        try {
-            int _type = T__30;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:7: ( 'prefix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:28:9: 'prefix'
-            {
-            match("prefix"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__30"
-
-    // $ANTLR start "T__31"
-    public final void mT__31() throws RecognitionException {
-        try {
-            int _type = T__31;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:7: ( 'postfix' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:29:9: 'postfix'
-            {
-            match("postfix"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__31"
-
     // $ANTLR start "T__32"
     public final void mT__32() throws RecognitionException {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:7: ( ':=' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:30:9: ':='
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:11:7: ( '%abbrev' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:11:9: '%abbrev'
             {
-            match(":="); 
+            match("%abbrev"); 
 
 
             }
@@ -477,10 +95,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:7: ( 'include' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:31:9: 'include'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:12:7: ( '%name' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:12:9: '%name'
             {
-            match("include"); 
+            match("%name"); 
 
 
             }
@@ -498,10 +116,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:7: ( 'struct' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:32:9: 'struct'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:13:7: ( '%prefix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:13:9: '%prefix'
             {
-            match("struct"); 
+            match("%prefix"); 
 
 
             }
@@ -519,10 +137,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:7: ( 'open' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:33:9: 'open'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:14:7: ( '%postfix' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:14:9: '%postfix'
             {
-            match("open"); 
+            match("%postfix"); 
 
 
             }
@@ -540,10 +158,10 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:7: ( 'view' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:34:9: 'view'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:15:7: ( '%meta' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:15:9: '%meta'
             {
-            match("view"); 
+            match("%meta"); 
 
 
             }
@@ -556,43 +174,15 @@ public class InternalLFLexer extends Lexer {
     }
     // $ANTLR end "T__36"
 
-    // $ANTLR start "RULE_INT"
-    public final void mRULE_INT() throws RecognitionException {
+    // $ANTLR start "T__37"
+    public final void mT__37() throws RecognitionException {
         try {
-            int _type = RULE_INT;
+            int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:10: ( ( '0' .. '9' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:12: ( '0' .. '9' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:16:7: ( '%include' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:16:9: '%include'
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:12: ( '0' .. '9' )+
-            int cnt1=0;
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
-
-                if ( ((LA1_0>='0' && LA1_0<='9')) ) {
-                    alt1=1;
-                }
-
-
-                switch (alt1) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1837:13: '0' .. '9'
-            	    {
-            	    matchRange('0','9'); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt1 >= 1 ) break loop1;
-                        EarlyExitException eee =
-                            new EarlyExitException(1, input);
-                        throw eee;
-                }
-                cnt1++;
-            } while (true);
+            match("%include"); 
 
 
             }
@@ -603,24 +193,17 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_INT"
+    // $ANTLR end "T__37"
 
-    // $ANTLR start "RULE_SP"
-    public final void mRULE_SP() throws RecognitionException {
+    // $ANTLR start "T__38"
+    public final void mT__38() throws RecognitionException {
         try {
-            int _type = RULE_SP;
+            int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1839:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1839:11: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:17:7: ( '%struct' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:17:9: '%struct'
             {
-            if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
+            match("%struct"); 
 
 
             }
@@ -631,17 +214,17 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_SP"
+    // $ANTLR end "T__38"
 
-    // $ANTLR start "RULE_DOUBLEDOT"
-    public final void mRULE_DOUBLEDOT() throws RecognitionException {
+    // $ANTLR start "T__39"
+    public final void mT__39() throws RecognitionException {
         try {
-            int _type = RULE_DOUBLEDOT;
+            int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1841:16: ( '..' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1841:18: '..'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:7: ( '%implicit' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:18:9: '%implicit'
             {
-            match(".."); 
+            match("%implicit"); 
 
 
             }
@@ -652,46 +235,17 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_DOUBLEDOT"
+    // $ANTLR end "T__39"
 
-    // $ANTLR start "RULE_MULTIPLEDOT"
-    public final void mRULE_MULTIPLEDOT() throws RecognitionException {
+    // $ANTLR start "T__40"
+    public final void mT__40() throws RecognitionException {
         try {
-            int _type = RULE_MULTIPLEDOT;
+            int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:18: ( RULE_DOUBLEDOT ( '.' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:20: RULE_DOUBLEDOT ( '.' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:7: ( '%open' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:19:9: '%open'
             {
-            mRULE_DOUBLEDOT(); 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:35: ( '.' )+
-            int cnt2=0;
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
-
-                if ( (LA2_0=='.') ) {
-                    alt2=1;
-                }
-
-
-                switch (alt2) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1843:35: '.'
-            	    {
-            	    match('.'); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt2 >= 1 ) break loop2;
-                        EarlyExitException eee =
-                            new EarlyExitException(2, input);
-                        throw eee;
-                }
-                cnt2++;
-            } while (true);
+            match("%open"); 
 
 
             }
@@ -702,53 +256,17 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_MULTIPLEDOT"
+    // $ANTLR end "T__40"
 
-    // $ANTLR start "RULE_CID"
-    public final void mRULE_CID() throws RecognitionException {
+    // $ANTLR start "T__41"
+    public final void mT__41() throws RecognitionException {
         try {
-            int _type = RULE_CID;
+            int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+ )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:7: ( '%as' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:20:9: '%as'
             {
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1845:12: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '#' | '?' )+
-            int cnt3=0;
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( (LA3_0=='#'||LA3_0=='-'||(LA3_0>='0' && LA3_0<='9')||LA3_0=='?'||(LA3_0>='A' && LA3_0<='Z')||LA3_0=='_'||(LA3_0>='a' && LA3_0<='z')) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:
-            	    {
-            	    if ( input.LA(1)=='#'||input.LA(1)=='-'||(input.LA(1)>='0' && input.LA(1)<='9')||input.LA(1)=='?'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt3 >= 1 ) break loop3;
-                        EarlyExitException eee =
-                            new EarlyExitException(3, input);
-                        throw eee;
-                }
-                cnt3++;
-            } while (true);
+            match("%as"); 
 
 
             }
@@ -759,44 +277,128 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_CID"
+    // $ANTLR end "T__41"
+
+    // $ANTLR start "T__42"
+    public final void mT__42() throws RecognitionException {
+        try {
+            int _type = T__42;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:21:7: ( '%namespace' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:21:9: '%namespace'
+            {
+            match("%namespace"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__42"
+
+    // $ANTLR start "T__43"
+    public final void mT__43() throws RecognitionException {
+        try {
+            int _type = T__43;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:22:7: ( '%read' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:22:9: '%read'
+            {
+            match("%read"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__43"
+
+    // $ANTLR start "T__44"
+    public final void mT__44() throws RecognitionException {
+        try {
+            int _type = T__44;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:7: ( '%sig' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:23:9: '%sig'
+            {
+            match("%sig"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__44"
+
+    // $ANTLR start "T__45"
+    public final void mT__45() throws RecognitionException {
+        try {
+            int _type = T__45;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:7: ( '%view' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:24:9: '%view'
+            {
+            match("%view"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__45"
 
     // $ANTLR start "RULE_ML_COMMENT"
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:19: '%{' ( options {greedy=false; } : . )* '}%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4682:17: ( '%{' ( options {greedy=false; } : . )* '}%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4682:19: '%{' ( options {greedy=false; } : . )* '}%'
             {
             match("%{"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:24: ( options {greedy=false; } : . )*
-            loop4:
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4682:24: ( options {greedy=false; } : . )*
+            loop1:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt1=2;
+                int LA1_0 = input.LA(1);
 
-                if ( (LA4_0=='}') ) {
-                    int LA4_1 = input.LA(2);
+                if ( (LA1_0=='}') ) {
+                    int LA1_1 = input.LA(2);
 
-                    if ( (LA4_1=='%') ) {
-                        alt4=2;
+                    if ( (LA1_1=='%') ) {
+                        alt1=2;
                     }
-                    else if ( ((LA4_1>='\u0000' && LA4_1<='$')||(LA4_1>='&' && LA4_1<='\uFFFF')) ) {
-                        alt4=1;
+                    else if ( ((LA1_1>='\u0000' && LA1_1<='$')||(LA1_1>='&' && LA1_1<='\uFFFF')) ) {
+                        alt1=1;
                     }
 
 
                 }
-                else if ( ((LA4_0>='\u0000' && LA4_0<='|')||(LA4_0>='~' && LA4_0<='\uFFFF')) ) {
-                    alt4=1;
+                else if ( ((LA1_0>='\u0000' && LA1_0<='|')||(LA1_0>='~' && LA1_0<='\uFFFF')) ) {
+                    alt1=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt1) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1847:52: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4682:52: .
             	    {
             	    matchAny(); 
 
@@ -804,7 +406,7 @@ public class InternalLFLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop1;
                 }
             } while (true);
 
@@ -826,37 +428,37 @@ public class InternalLFLexer extends Lexer {
         try {
             int _type = RULE_ML2_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:20: '%*' ( options {greedy=false; } : . )* '*%'
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4684:18: ( '%*' ( options {greedy=false; } : . )* '*%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4684:20: '%*' ( options {greedy=false; } : . )* '*%'
             {
             match("%*"); 
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:25: ( options {greedy=false; } : . )*
-            loop5:
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4684:25: ( options {greedy=false; } : . )*
+            loop2:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( (LA5_0=='*') ) {
-                    int LA5_1 = input.LA(2);
+                if ( (LA2_0=='*') ) {
+                    int LA2_1 = input.LA(2);
 
-                    if ( (LA5_1=='%') ) {
-                        alt5=2;
+                    if ( (LA2_1=='%') ) {
+                        alt2=2;
                     }
-                    else if ( ((LA5_1>='\u0000' && LA5_1<='$')||(LA5_1>='&' && LA5_1<='\uFFFF')) ) {
-                        alt5=1;
+                    else if ( ((LA2_1>='\u0000' && LA2_1<='$')||(LA2_1>='&' && LA2_1<='\uFFFF')) ) {
+                        alt2=1;
                     }
 
 
                 }
-                else if ( ((LA5_0>='\u0000' && LA5_0<=')')||(LA5_0>='+' && LA5_0<='\uFFFF')) ) {
-                    alt5=1;
+                else if ( ((LA2_0>='\u0000' && LA2_0<=')')||(LA2_0>='+' && LA2_0<='\uFFFF')) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt2) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1849:53: .
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4684:53: .
             	    {
             	    matchAny(); 
 
@@ -864,7 +466,7 @@ public class InternalLFLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop2;
                 }
             } while (true);
 
@@ -881,16 +483,313 @@ public class InternalLFLexer extends Lexer {
     }
     // $ANTLR end "RULE_ML2_COMMENT"
 
-    // $ANTLR start "RULE_SL_COMMENT"
-    public final void mRULE_SL_COMMENT() throws RecognitionException {
+    // $ANTLR start "RULE_LINE_COMMENT"
+    public final void mRULE_LINE_COMMENT() throws RecognitionException {
         try {
-            int _type = RULE_SL_COMMENT;
+            int _type = RULE_LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:17: ( '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:19: '%' ( ' ' | '%' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:19: ( RULE_PERCENT ( ( RULE_LINESP | RULE_PERCENT ) (~ ( ( '\\r' | '\\n' ) ) )* )? ( '\\r' )? '\\n' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:21: RULE_PERCENT ( ( RULE_LINESP | RULE_PERCENT ) (~ ( ( '\\r' | '\\n' ) ) )* )? ( '\\r' )? '\\n'
+            {
+            mRULE_PERCENT(); 
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:34: ( ( RULE_LINESP | RULE_PERCENT ) (~ ( ( '\\r' | '\\n' ) ) )* )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0=='\t'||LA4_0==' '||LA4_0=='%') ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:35: ( RULE_LINESP | RULE_PERCENT ) (~ ( ( '\\r' | '\\n' ) ) )*
+                    {
+                    if ( input.LA(1)=='\t'||input.LA(1)==' '||input.LA(1)=='%' ) {
+                        input.consume();
+
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;}
+
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:62: (~ ( ( '\\r' | '\\n' ) ) )*
+                    loop3:
+                    do {
+                        int alt3=2;
+                        int LA3_0 = input.LA(1);
+
+                        if ( ((LA3_0>='\u0000' && LA3_0<='\t')||(LA3_0>='\u000B' && LA3_0<='\f')||(LA3_0>='\u000E' && LA3_0<='\uFFFF')) ) {
+                            alt3=1;
+                        }
+
+
+                        switch (alt3) {
+                    	case 1 :
+                    	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:62: ~ ( ( '\\r' | '\\n' ) )
+                    	    {
+                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop3;
+                        }
+                    } while (true);
+
+
+                    }
+                    break;
+
+            }
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:80: ( '\\r' )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0=='\r') ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4686:80: '\\r'
+                    {
+                    match('\r'); 
+
+                    }
+                    break;
+
+            }
+
+            match('\n'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LINE_COMMENT"
+
+    // $ANTLR start "RULE_PERCENT"
+    public final void mRULE_PERCENT() throws RecognitionException {
+        try {
+            int _type = RULE_PERCENT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4688:14: ( '%' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4688:16: '%'
             {
             match('%'); 
-            if ( input.LA(1)==' '||input.LA(1)=='%' ) {
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_PERCENT"
+
+    // $ANTLR start "RULE_COLON"
+    public final void mRULE_COLON() throws RecognitionException {
+        try {
+            int _type = RULE_COLON;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4690:12: ( ':' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4690:14: ':'
+            {
+            match(':'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_COLON"
+
+    // $ANTLR start "RULE_QUOTE"
+    public final void mRULE_QUOTE() throws RecognitionException {
+        try {
+            int _type = RULE_QUOTE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4692:12: ( '\"' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4692:14: '\"'
+            {
+            match('\"'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_QUOTE"
+
+    // $ANTLR start "RULE_LCBRACKET"
+    public final void mRULE_LCBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_LCBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4694:16: ( '{' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4694:18: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LCBRACKET"
+
+    // $ANTLR start "RULE_RCBRACKET"
+    public final void mRULE_RCBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_RCBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4696:16: ( '}' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4696:18: '}'
+            {
+            match('}'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_RCBRACKET"
+
+    // $ANTLR start "RULE_LSBRACKET"
+    public final void mRULE_LSBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_LSBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4698:16: ( '[' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4698:18: '['
+            {
+            match('['); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LSBRACKET"
+
+    // $ANTLR start "RULE_RSBRACKET"
+    public final void mRULE_RSBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_RSBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4700:16: ( ']' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4700:18: ']'
+            {
+            match(']'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_RSBRACKET"
+
+    // $ANTLR start "RULE_LBRACKET"
+    public final void mRULE_LBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_LBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4702:15: ( '(' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4702:17: '('
+            {
+            match('('); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LBRACKET"
+
+    // $ANTLR start "RULE_RBRACKET"
+    public final void mRULE_RBRACKET() throws RecognitionException {
+        try {
+            int _type = RULE_RBRACKET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4704:15: ( ')' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4704:17: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_RBRACKET"
+
+    // $ANTLR start "RULE_DOT"
+    public final void mRULE_DOT() throws RecognitionException {
+        try {
+            int _type = RULE_DOT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4706:10: ( '.' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4706:12: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_DOT"
+
+    // $ANTLR start "RULE_LINESP"
+    public final void mRULE_LINESP() throws RecognitionException {
+        try {
+            int _type = RULE_LINESP;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4708:13: ( ( ' ' | '\\t' ) )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4708:15: ( ' ' | '\\t' )
+            {
+            if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
                 input.consume();
 
             }
@@ -899,22 +798,204 @@ public class InternalLFLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:33: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
 
-                if ( ((LA6_0>='\u0000' && LA6_0<='\t')||(LA6_0>='\u000B' && LA6_0<='\f')||(LA6_0>='\u000E' && LA6_0<='\uFFFF')) ) {
-                    alt6=1;
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LINESP"
+
+    // $ANTLR start "RULE_LINEDELIM"
+    public final void mRULE_LINEDELIM() throws RecognitionException {
+        try {
+            int _type = RULE_LINEDELIM;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4710:16: ( ( '\\r' )? '\\n' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4710:18: ( '\\r' )? '\\n'
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4710:18: ( '\\r' )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0=='\r') ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4710:18: '\\r'
+                    {
+                    match('\r'); 
+
+                    }
+                    break;
+
+            }
+
+            match('\n'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LINEDELIM"
+
+    // $ANTLR start "RULE_ARROW"
+    public final void mRULE_ARROW() throws RecognitionException {
+        try {
+            int _type = RULE_ARROW;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4712:12: ( '->' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4712:14: '->'
+            {
+            match("->"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ARROW"
+
+    // $ANTLR start "RULE_LARROW"
+    public final void mRULE_LARROW() throws RecognitionException {
+        try {
+            int _type = RULE_LARROW;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4714:13: ( '<-' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4714:15: '<-'
+            {
+            match("<-"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_LARROW"
+
+    // $ANTLR start "RULE_EQUALS"
+    public final void mRULE_EQUALS() throws RecognitionException {
+        try {
+            int _type = RULE_EQUALS;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4716:13: ( '=' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4716:15: '='
+            {
+            match('='); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_EQUALS"
+
+    // $ANTLR start "RULE_ASSIGN"
+    public final void mRULE_ASSIGN() throws RecognitionException {
+        try {
+            int _type = RULE_ASSIGN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4718:13: ( ':=' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4718:15: ':='
+            {
+            match(":="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ASSIGN"
+
+    // $ANTLR start "RULE_TYPE"
+    public final void mRULE_TYPE() throws RecognitionException {
+        try {
+            int _type = RULE_TYPE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4720:11: ( 'type' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4720:13: 'type'
+            {
+            match("type"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_TYPE"
+
+    // $ANTLR start "RULE_UNDERSCORE"
+    public final void mRULE_UNDERSCORE() throws RecognitionException {
+        try {
+            int _type = RULE_UNDERSCORE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4722:17: ( '_' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4722:19: '_'
+            {
+            match('_'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_UNDERSCORE"
+
+    // $ANTLR start "RULE_CID"
+    public final void mRULE_CID() throws RecognitionException {
+        try {
+            int _type = RULE_CID;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4724:10: ( (~ ( ( RULE_LINESP | '\\r' | '\\n' | RULE_DOT | RULE_COLON | RULE_LBRACKET | RULE_RBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LCBRACKET | RULE_RCBRACKET | RULE_PERCENT | RULE_QUOTE ) ) )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4724:12: (~ ( ( RULE_LINESP | '\\r' | '\\n' | RULE_DOT | RULE_COLON | RULE_LBRACKET | RULE_RBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LCBRACKET | RULE_RCBRACKET | RULE_PERCENT | RULE_QUOTE ) ) )+
+            {
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4724:12: (~ ( ( RULE_LINESP | '\\r' | '\\n' | RULE_DOT | RULE_COLON | RULE_LBRACKET | RULE_RBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LCBRACKET | RULE_RCBRACKET | RULE_PERCENT | RULE_QUOTE ) ) )+
+            int cnt7=0;
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( ((LA7_0>='\u0000' && LA7_0<='\b')||(LA7_0>='\u000B' && LA7_0<='\f')||(LA7_0>='\u000E' && LA7_0<='\u001F')||LA7_0=='!'||(LA7_0>='#' && LA7_0<='$')||(LA7_0>='&' && LA7_0<='\'')||(LA7_0>='*' && LA7_0<='-')||(LA7_0>='/' && LA7_0<='9')||(LA7_0>=';' && LA7_0<='Z')||LA7_0=='\\'||(LA7_0>='^' && LA7_0<='z')||LA7_0=='|'||(LA7_0>='~' && LA7_0<='\uFFFF')) ) {
+                    alt7=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt7) {
             	case 1 :
-            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:33: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4724:12: ~ ( ( RULE_LINESP | '\\r' | '\\n' | RULE_DOT | RULE_COLON | RULE_LBRACKET | RULE_RBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LCBRACKET | RULE_RCBRACKET | RULE_PERCENT | RULE_QUOTE ) )
             	    {
-            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
+            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\b')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\u001F')||input.LA(1)=='!'||(input.LA(1)>='#' && input.LA(1)<='$')||(input.LA(1)>='&' && input.LA(1)<='\'')||(input.LA(1)>='*' && input.LA(1)<='-')||(input.LA(1)>='/' && input.LA(1)<='9')||(input.LA(1)>=';' && input.LA(1)<='Z')||input.LA(1)=='\\'||(input.LA(1)>='^' && input.LA(1)<='z')||input.LA(1)=='|'||(input.LA(1)>='~' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
 
             	    }
@@ -928,45 +1009,13 @@ public class InternalLFLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop6;
+            	    if ( cnt7 >= 1 ) break loop7;
+                        EarlyExitException eee =
+                            new EarlyExitException(7, input);
+                        throw eee;
                 }
+                cnt7++;
             } while (true);
-
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:49: ( ( '\\r' )? '\\n' )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0=='\n'||LA8_0=='\r') ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: ( '\\r' )? '\\n'
-                    {
-                    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: ( '\\r' )?
-                    int alt7=2;
-                    int LA7_0 = input.LA(1);
-
-                    if ( (LA7_0=='\r') ) {
-                        alt7=1;
-                    }
-                    switch (alt7) {
-                        case 1 :
-                            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1851:50: '\\r'
-                            {
-                            match('\r'); 
-
-                            }
-                            break;
-
-                    }
-
-                    match('\n'); 
-
-                    }
-                    break;
-
-            }
 
 
             }
@@ -977,15 +1026,281 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_SL_COMMENT"
+    // $ANTLR end "RULE_CID"
 
-    // $ANTLR start "RULE_ANY_OTHER"
-    public final void mRULE_ANY_OTHER() throws RecognitionException {
+    // $ANTLR start "RULE_UNKNOWNDIRECTIVE"
+    public final void mRULE_UNKNOWNDIRECTIVE() throws RecognitionException {
         try {
-            int _type = RULE_ANY_OTHER;
+            int _type = RULE_UNKNOWNDIRECTIVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1853:16: ( . )
-            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1853:18: .
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4726:23: ( '%' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4726:25: '%' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            {
+            match('%'); 
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4726:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            int cnt8=0;
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( ((LA8_0>='0' && LA8_0<='9')||(LA8_0>='A' && LA8_0<='Z')||(LA8_0>='a' && LA8_0<='z')) ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:
+            	    {
+            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt8 >= 1 ) break loop8;
+                        EarlyExitException eee =
+                            new EarlyExitException(8, input);
+                        throw eee;
+                }
+                cnt8++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_UNKNOWNDIRECTIVE"
+
+    // $ANTLR start "RULE_URISTRING"
+    public final void mRULE_URISTRING() throws RecognitionException {
+        try {
+            int _type = RULE_URISTRING;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4728:16: ( RULE_QUOTE ( options {greedy=false; } : . )* RULE_QUOTE )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4728:18: RULE_QUOTE ( options {greedy=false; } : . )* RULE_QUOTE
+            {
+            mRULE_QUOTE(); 
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4728:29: ( options {greedy=false; } : . )*
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( (LA9_0=='\"') ) {
+                    alt9=2;
+                }
+                else if ( ((LA9_0>='\u0000' && LA9_0<='!')||(LA9_0>='#' && LA9_0<='\uFFFF')) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4728:57: .
+            	    {
+            	    matchAny(); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop9;
+                }
+            } while (true);
+
+            mRULE_QUOTE(); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_URISTRING"
+
+    // $ANTLR start "RULE_INFIXNONE"
+    public final void mRULE_INFIXNONE() throws RecognitionException {
+        try {
+            int _type = RULE_INFIXNONE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4730:16: ( '%infix' ( RULE_LINESP )+ 'none' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4730:18: '%infix' ( RULE_LINESP )+ 'none'
+            {
+            match("%infix"); 
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4730:27: ( RULE_LINESP )+
+            int cnt10=0;
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0=='\t'||LA10_0==' ') ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4730:27: RULE_LINESP
+            	    {
+            	    mRULE_LINESP(); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt10 >= 1 ) break loop10;
+                        EarlyExitException eee =
+                            new EarlyExitException(10, input);
+                        throw eee;
+                }
+                cnt10++;
+            } while (true);
+
+            match("none"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_INFIXNONE"
+
+    // $ANTLR start "RULE_INFIXLEFT"
+    public final void mRULE_INFIXLEFT() throws RecognitionException {
+        try {
+            int _type = RULE_INFIXLEFT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4732:16: ( '%infix' ( RULE_LINESP )+ 'left' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4732:18: '%infix' ( RULE_LINESP )+ 'left'
+            {
+            match("%infix"); 
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4732:27: ( RULE_LINESP )+
+            int cnt11=0;
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( (LA11_0=='\t'||LA11_0==' ') ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4732:27: RULE_LINESP
+            	    {
+            	    mRULE_LINESP(); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt11 >= 1 ) break loop11;
+                        EarlyExitException eee =
+                            new EarlyExitException(11, input);
+                        throw eee;
+                }
+                cnt11++;
+            } while (true);
+
+            match("left"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_INFIXLEFT"
+
+    // $ANTLR start "RULE_INFIXRIGHT"
+    public final void mRULE_INFIXRIGHT() throws RecognitionException {
+        try {
+            int _type = RULE_INFIXRIGHT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4734:17: ( '%infix' ( RULE_LINESP )+ 'right' )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4734:19: '%infix' ( RULE_LINESP )+ 'right'
+            {
+            match("%infix"); 
+
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4734:28: ( RULE_LINESP )+
+            int cnt12=0;
+            loop12:
+            do {
+                int alt12=2;
+                int LA12_0 = input.LA(1);
+
+                if ( (LA12_0=='\t'||LA12_0==' ') ) {
+                    alt12=1;
+                }
+
+
+                switch (alt12) {
+            	case 1 :
+            	    // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4734:28: RULE_LINESP
+            	    {
+            	    mRULE_LINESP(); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt12 >= 1 ) break loop12;
+                        EarlyExitException eee =
+                            new EarlyExitException(12, input);
+                        throw eee;
+                }
+                cnt12++;
+            } while (true);
+
+            match("right"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_INFIXRIGHT"
+
+    // $ANTLR start "RULE_ILLEGAL_TOKEN"
+    public final void mRULE_ILLEGAL_TOKEN() throws RecognitionException {
+        try {
+            int _type = RULE_ILLEGAL_TOKEN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4736:20: ( . )
+            // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:4736:22: .
             {
             matchAny(); 
 
@@ -997,241 +1312,304 @@ public class InternalLFLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_ANY_OTHER"
+    // $ANTLR end "RULE_ILLEGAL_TOKEN"
 
     public void mTokens() throws RecognitionException {
-        // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_INT | RULE_SP | RULE_DOUBLEDOT | RULE_MULTIPLEDOT | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt9=33;
-        alt9 = dfa9.predict(input);
-        switch (alt9) {
+        // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:8: ( T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_LINE_COMMENT | RULE_PERCENT | RULE_COLON | RULE_QUOTE | RULE_LCBRACKET | RULE_RCBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LBRACKET | RULE_RBRACKET | RULE_DOT | RULE_LINESP | RULE_LINEDELIM | RULE_ARROW | RULE_LARROW | RULE_EQUALS | RULE_ASSIGN | RULE_TYPE | RULE_UNDERSCORE | RULE_CID | RULE_UNKNOWNDIRECTIVE | RULE_URISTRING | RULE_INFIXNONE | RULE_INFIXLEFT | RULE_INFIXRIGHT | RULE_ILLEGAL_TOKEN )
+        int alt13=42;
+        alt13 = dfa13.predict(input);
+        switch (alt13) {
             case 1 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:10: T__13
-                {
-                mT__13(); 
-
-                }
-                break;
-            case 2 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:16: T__14
-                {
-                mT__14(); 
-
-                }
-                break;
-            case 3 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:22: T__15
-                {
-                mT__15(); 
-
-                }
-                break;
-            case 4 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:28: T__16
-                {
-                mT__16(); 
-
-                }
-                break;
-            case 5 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:34: T__17
-                {
-                mT__17(); 
-
-                }
-                break;
-            case 6 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:40: T__18
-                {
-                mT__18(); 
-
-                }
-                break;
-            case 7 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:46: T__19
-                {
-                mT__19(); 
-
-                }
-                break;
-            case 8 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:52: T__20
-                {
-                mT__20(); 
-
-                }
-                break;
-            case 9 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:58: T__21
-                {
-                mT__21(); 
-
-                }
-                break;
-            case 10 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:64: T__22
-                {
-                mT__22(); 
-
-                }
-                break;
-            case 11 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:70: T__23
-                {
-                mT__23(); 
-
-                }
-                break;
-            case 12 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:76: T__24
-                {
-                mT__24(); 
-
-                }
-                break;
-            case 13 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:82: T__25
-                {
-                mT__25(); 
-
-                }
-                break;
-            case 14 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:88: T__26
-                {
-                mT__26(); 
-
-                }
-                break;
-            case 15 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:94: T__27
-                {
-                mT__27(); 
-
-                }
-                break;
-            case 16 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:100: T__28
-                {
-                mT__28(); 
-
-                }
-                break;
-            case 17 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:106: T__29
-                {
-                mT__29(); 
-
-                }
-                break;
-            case 18 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:112: T__30
-                {
-                mT__30(); 
-
-                }
-                break;
-            case 19 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:118: T__31
-                {
-                mT__31(); 
-
-                }
-                break;
-            case 20 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:124: T__32
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:10: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 21 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:130: T__33
+            case 2 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:16: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 22 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:136: T__34
+            case 3 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:22: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 23 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:142: T__35
+            case 4 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:28: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 24 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:148: T__36
+            case 5 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:34: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 25 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:154: RULE_INT
+            case 6 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:40: T__37
                 {
-                mRULE_INT(); 
+                mT__37(); 
 
                 }
                 break;
-            case 26 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:163: RULE_SP
+            case 7 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:46: T__38
                 {
-                mRULE_SP(); 
+                mT__38(); 
 
                 }
                 break;
-            case 27 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:171: RULE_DOUBLEDOT
+            case 8 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:52: T__39
                 {
-                mRULE_DOUBLEDOT(); 
+                mT__39(); 
 
                 }
                 break;
-            case 28 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:186: RULE_MULTIPLEDOT
+            case 9 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:58: T__40
                 {
-                mRULE_MULTIPLEDOT(); 
+                mT__40(); 
 
                 }
                 break;
-            case 29 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:203: RULE_CID
+            case 10 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:64: T__41
                 {
-                mRULE_CID(); 
+                mT__41(); 
 
                 }
                 break;
-            case 30 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:212: RULE_ML_COMMENT
+            case 11 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:70: T__42
+                {
+                mT__42(); 
+
+                }
+                break;
+            case 12 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:76: T__43
+                {
+                mT__43(); 
+
+                }
+                break;
+            case 13 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:82: T__44
+                {
+                mT__44(); 
+
+                }
+                break;
+            case 14 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:88: T__45
+                {
+                mT__45(); 
+
+                }
+                break;
+            case 15 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:94: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 31 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:228: RULE_ML2_COMMENT
+            case 16 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:110: RULE_ML2_COMMENT
                 {
                 mRULE_ML2_COMMENT(); 
 
                 }
                 break;
-            case 32 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:245: RULE_SL_COMMENT
+            case 17 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:127: RULE_LINE_COMMENT
                 {
-                mRULE_SL_COMMENT(); 
+                mRULE_LINE_COMMENT(); 
+
+                }
+                break;
+            case 18 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:145: RULE_PERCENT
+                {
+                mRULE_PERCENT(); 
+
+                }
+                break;
+            case 19 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:158: RULE_COLON
+                {
+                mRULE_COLON(); 
+
+                }
+                break;
+            case 20 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:169: RULE_QUOTE
+                {
+                mRULE_QUOTE(); 
+
+                }
+                break;
+            case 21 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:180: RULE_LCBRACKET
+                {
+                mRULE_LCBRACKET(); 
+
+                }
+                break;
+            case 22 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:195: RULE_RCBRACKET
+                {
+                mRULE_RCBRACKET(); 
+
+                }
+                break;
+            case 23 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:210: RULE_LSBRACKET
+                {
+                mRULE_LSBRACKET(); 
+
+                }
+                break;
+            case 24 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:225: RULE_RSBRACKET
+                {
+                mRULE_RSBRACKET(); 
+
+                }
+                break;
+            case 25 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:240: RULE_LBRACKET
+                {
+                mRULE_LBRACKET(); 
+
+                }
+                break;
+            case 26 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:254: RULE_RBRACKET
+                {
+                mRULE_RBRACKET(); 
+
+                }
+                break;
+            case 27 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:268: RULE_DOT
+                {
+                mRULE_DOT(); 
+
+                }
+                break;
+            case 28 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:277: RULE_LINESP
+                {
+                mRULE_LINESP(); 
+
+                }
+                break;
+            case 29 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:289: RULE_LINEDELIM
+                {
+                mRULE_LINEDELIM(); 
+
+                }
+                break;
+            case 30 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:304: RULE_ARROW
+                {
+                mRULE_ARROW(); 
+
+                }
+                break;
+            case 31 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:315: RULE_LARROW
+                {
+                mRULE_LARROW(); 
+
+                }
+                break;
+            case 32 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:327: RULE_EQUALS
+                {
+                mRULE_EQUALS(); 
 
                 }
                 break;
             case 33 :
-                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:261: RULE_ANY_OTHER
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:339: RULE_ASSIGN
                 {
-                mRULE_ANY_OTHER(); 
+                mRULE_ASSIGN(); 
+
+                }
+                break;
+            case 34 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:351: RULE_TYPE
+                {
+                mRULE_TYPE(); 
+
+                }
+                break;
+            case 35 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:361: RULE_UNDERSCORE
+                {
+                mRULE_UNDERSCORE(); 
+
+                }
+                break;
+            case 36 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:377: RULE_CID
+                {
+                mRULE_CID(); 
+
+                }
+                break;
+            case 37 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:386: RULE_UNKNOWNDIRECTIVE
+                {
+                mRULE_UNKNOWNDIRECTIVE(); 
+
+                }
+                break;
+            case 38 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:408: RULE_URISTRING
+                {
+                mRULE_URISTRING(); 
+
+                }
+                break;
+            case 39 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:423: RULE_INFIXNONE
+                {
+                mRULE_INFIXNONE(); 
+
+                }
+                break;
+            case 40 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:438: RULE_INFIXLEFT
+                {
+                mRULE_INFIXLEFT(); 
+
+                }
+                break;
+            case 41 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:453: RULE_INFIXRIGHT
+                {
+                mRULE_INFIXRIGHT(); 
+
+                }
+                break;
+            case 42 :
+                // ../info.kwarc.mmt.lf/src-gen/info/kwarc/mmt/parser/antlr/internal/InternalLF.g:1:469: RULE_ILLEGAL_TOKEN
+                {
+                mRULE_ILLEGAL_TOKEN(); 
 
                 }
                 break;
@@ -1241,271 +1619,349 @@ public class InternalLFLexer extends Lexer {
     }
 
 
-    protected DFA9 dfa9 = new DFA9(this);
-    static final String DFA9_eotS =
-        "\2\uffff\1\31\1\33\1\uffff\1\40\1\42\1\uffff\2\42\2\uffff\7\42\1"+
-        "\62\4\uffff\1\65\10\uffff\1\42\2\uffff\1\42\3\uffff\12\42\1\uffff"+
-        "\1\62\3\uffff\2\42\1\106\12\42\1\122\1\123\1\uffff\1\42\1\125\6"+
-        "\42\1\134\1\135\1\42\2\uffff\1\42\1\uffff\4\42\1\144\1\42\2\uffff"+
-        "\1\42\1\147\1\150\1\42\1\152\1\42\1\uffff\2\42\2\uffff\1\156\1\uffff"+
-        "\1\157\1\160\1\42\3\uffff\1\162\1\uffff";
-    static final String DFA9_eofS =
-        "\163\uffff";
-    static final String DFA9_minS =
-        "\1\0\1\uffff\1\56\1\75\1\uffff\1\40\1\141\1\uffff\1\145\1\76\2\uffff"+
-        "\1\151\1\145\1\142\1\141\1\156\1\160\1\151\1\43\4\uffff\1\56\10"+
-        "\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\164\1\142\1\164"+
-        "\1\145\1\163\1\143\2\145\1\uffff\1\43\3\uffff\1\145\1\144\1\43\1"+
-        "\165\1\141\1\162\1\164\1\146\1\164\1\151\1\154\1\156\1\167\2\43"+
-        "\1\uffff\1\143\1\43\2\145\1\151\1\146\1\170\1\165\2\43\1\160\2\uffff"+
-        "\1\164\1\uffff\1\166\1\162\1\170\1\151\1\43\1\144\2\uffff\1\141"+
-        "\2\43\1\156\1\43\1\170\1\uffff\1\145\1\143\2\uffff\1\43\1\uffff"+
-        "\2\43\1\145\3\uffff\1\43\1\uffff";
-    static final String DFA9_maxS =
-        "\1\uffff\1\uffff\1\56\1\75\1\uffff\1\173\1\141\1\uffff\1\145\1\76"+
-        "\2\uffff\1\164\1\145\1\142\1\162\1\156\1\160\1\151\1\172\4\uffff"+
-        "\1\56\10\uffff\1\155\2\uffff\1\141\3\uffff\1\147\1\162\1\164\1\142"+
-        "\1\164\1\145\1\163\1\146\2\145\1\uffff\1\172\3\uffff\1\145\1\144"+
-        "\1\172\1\165\1\141\1\162\1\164\1\146\1\164\1\151\1\154\1\156\1\167"+
-        "\2\172\1\uffff\1\143\1\172\2\145\1\151\1\146\1\170\1\165\2\172\1"+
-        "\160\2\uffff\1\164\1\uffff\1\166\1\162\1\170\1\151\1\172\1\144\2"+
-        "\uffff\1\141\2\172\1\156\1\172\1\170\1\uffff\1\145\1\143\2\uffff"+
-        "\1\172\1\uffff\2\172\1\145\3\uffff\1\172\1\uffff";
-    static final String DFA9_acceptS =
-        "\1\uffff\1\1\2\uffff\1\4\2\uffff\1\7\2\uffff\1\12\1\13\10\uffff"+
-        "\1\32\1\35\1\41\1\1\1\uffff\1\2\1\24\1\3\1\4\1\36\1\37\1\40\1\5"+
-        "\1\uffff\1\35\1\7\1\uffff\1\11\1\12\1\13\12\uffff\1\31\1\uffff\1"+
-        "\32\1\33\1\34\17\uffff\1\14\13\uffff\1\17\1\10\1\uffff\1\15\6\uffff"+
-        "\1\27\1\30\6\uffff\1\21\2\uffff\1\26\1\16\1\uffff\1\22\3\uffff\1"+
-        "\20\1\23\1\25\1\uffff\1\6";
-    static final String DFA9_specialS =
-        "\1\0\162\uffff}>";
-    static final String[] DFA9_transitionS = {
-            "\11\26\2\24\2\26\1\24\22\26\1\24\1\26\1\4\1\25\1\26\1\5\7\26"+
-            "\1\11\1\2\1\1\12\23\1\3\2\26\1\7\1\26\1\25\1\26\32\25\4\26\1"+
-            "\25\1\26\1\16\7\25\1\20\3\25\1\15\1\6\1\21\1\17\1\25\1\10\1"+
-            "\14\2\25\1\22\4\25\1\12\1\26\1\13\uff82\26",
+    protected DFA13 dfa13 = new DFA13(this);
+    static final String DFA13_eotS =
+        "\1\uffff\1\40\1\43\1\44\10\uffff\1\56\1\uffff\2\61\1\63\1\61\1\65"+
+        "\1\uffff\11\37\23\uffff\1\103\1\uffff\1\104\1\uffff\1\61\1\uffff"+
+        "\1\37\1\107\13\37\2\uffff\1\61\1\37\1\uffff\10\37\1\136\3\37\1\142"+
+        "\1\37\1\145\2\37\1\150\4\37\1\uffff\1\155\1\156\1\157\1\uffff\2"+
+        "\37\1\uffff\2\37\1\uffff\4\37\3\uffff\1\170\1\37\1\172\2\37\1\uffff"+
+        "\1\37\1\u0081\1\uffff\1\37\1\uffff\1\u0083\1\u0084\3\uffff\1\37"+
+        "\1\uffff\1\37\2\uffff\1\u0087\1\u0088\2\uffff";
+    static final String DFA13_eofS =
+        "\u0089\uffff";
+    static final String DFA13_minS =
+        "\1\0\1\11\1\75\1\0\10\uffff\1\12\1\uffff\1\76\1\55\1\0\1\171\1\0"+
+        "\1\uffff\1\142\1\141\1\157\1\145\1\155\1\151\1\160\1\145\1\151\23"+
+        "\uffff\1\0\1\uffff\1\0\1\uffff\1\160\1\uffff\1\142\1\60\1\155\1"+
+        "\145\1\163\1\164\1\143\1\160\1\162\1\147\1\145\1\141\1\145\2\uffff"+
+        "\1\145\1\162\1\uffff\1\145\1\146\1\164\1\141\1\154\1\151\1\154\1"+
+        "\165\1\60\1\156\1\144\1\167\1\0\1\145\1\60\1\151\1\146\1\60\1\165"+
+        "\1\170\1\151\1\143\1\uffff\3\60\1\uffff\1\166\1\160\1\uffff\1\170"+
+        "\1\151\1\uffff\1\144\1\11\1\143\1\164\3\uffff\1\60\1\141\1\60\1"+
+        "\170\1\145\1\11\1\151\1\60\1\uffff\1\143\1\uffff\2\60\3\uffff\1"+
+        "\164\1\uffff\1\145\2\uffff\2\60\2\uffff";
+    static final String DFA13_maxS =
+        "\1\uffff\1\173\1\75\1\uffff\10\uffff\1\12\1\uffff\1\76\1\55\1\uffff"+
+        "\1\171\1\uffff\1\uffff\1\163\1\141\1\162\1\145\1\156\1\164\1\160"+
+        "\1\145\1\151\23\uffff\1\uffff\1\uffff\1\uffff\1\uffff\1\160\1\uffff"+
+        "\1\142\1\172\1\155\1\145\1\163\1\164\1\146\1\160\1\162\1\147\1\145"+
+        "\1\141\1\145\2\uffff\1\145\1\162\1\uffff\1\145\1\146\1\164\1\141"+
+        "\1\154\1\151\1\154\1\165\1\172\1\156\1\144\1\167\1\uffff\1\145\1"+
+        "\172\1\151\1\146\1\172\1\165\1\170\1\151\1\143\1\uffff\3\172\1\uffff"+
+        "\1\166\1\160\1\uffff\1\170\1\151\1\uffff\1\144\1\40\1\143\1\164"+
+        "\3\uffff\1\172\1\141\1\172\1\170\1\145\1\162\1\151\1\172\1\uffff"+
+        "\1\143\1\uffff\2\172\3\uffff\1\164\1\uffff\1\145\2\uffff\2\172\2"+
+        "\uffff";
+    static final String DFA13_acceptS =
+        "\4\uffff\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\uffff\1\35\5"+
+        "\uffff\1\44\11\uffff\1\17\1\20\1\45\1\22\1\21\1\41\1\23\1\24\1\46"+
+        "\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\52\1\35\1\uffff\1\44"+
+        "\1\uffff\1\40\1\uffff\1\43\15\uffff\1\36\1\37\2\uffff\1\12\26\uffff"+
+        "\1\15\3\uffff\1\42\2\uffff\1\2\2\uffff\1\5\4\uffff\1\11\1\14\1\16"+
+        "\10\uffff\1\1\1\uffff\1\3\2\uffff\1\47\1\50\1\51\1\uffff\1\7\1\uffff"+
+        "\1\4\1\6\2\uffff\1\10\1\13";
+    static final String DFA13_specialS =
+        "\1\1\2\uffff\1\0\14\uffff\1\5\1\uffff\1\3\35\uffff\1\2\1\uffff\1"+
+        "\6\41\uffff\1\4\64\uffff}>";
+    static final String[] DFA13_transitionS = {
+            "\11\23\1\13\1\15\2\23\1\14\22\23\1\13\1\23\1\3\2\23\1\1\2\23"+
+            "\1\10\1\11\3\23\1\16\1\12\13\23\1\2\1\23\1\17\1\20\35\23\1\6"+
+            "\1\23\1\7\1\23\1\22\24\23\1\21\6\23\1\4\1\23\1\5\uff82\23",
+            "\2\41\2\uffff\1\41\22\uffff\1\41\4\uffff\1\41\4\uffff\1\36"+
+            "\5\uffff\12\37\7\uffff\32\37\6\uffff\1\24\7\37\1\30\3\37\1\27"+
+            "\1\25\1\32\1\26\1\37\1\33\1\31\2\37\1\34\4\37\1\35",
+            "\1\42",
+            "\0\45",
             "",
-            "\1\30",
-            "\1\32",
-            "",
-            "\1\37\4\uffff\1\37\4\uffff\1\36\120\uffff\1\35",
-            "\1\41",
-            "",
-            "\1\44",
-            "\1\45",
             "",
             "",
-            "\1\50\12\uffff\1\51",
-            "\1\52",
-            "\1\53",
-            "\1\54\15\uffff\1\56\2\uffff\1\55",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\57",
+            "",
             "\1\60",
-            "\1\61",
-            "\1\42\11\uffff\1\42\2\uffff\12\63\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\62",
+            "\11\61\2\uffff\2\61\1\uffff\22\61\1\uffff\1\61\1\uffff\2\61"+
+            "\1\uffff\2\61\2\uffff\4\61\1\uffff\13\61\1\uffff\40\61\1\uffff"+
+            "\1\61\1\uffff\35\61\1\uffff\1\61\1\uffff\uff82\61",
+            "\1\64",
+            "\11\61\2\uffff\2\61\1\uffff\22\61\1\uffff\1\61\1\uffff\2\61"+
+            "\1\uffff\2\61\2\uffff\4\61\1\uffff\13\61\1\uffff\40\61\1\uffff"+
+            "\1\61\1\uffff\35\61\1\uffff\1\61\1\uffff\uff82\61",
             "",
-            "",
-            "",
-            "",
-            "\1\66",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\67",
-            "",
-            "",
+            "\1\66\20\uffff\1\67",
             "\1\70",
-            "",
-            "",
-            "",
-            "\1\71",
-            "\1\72",
+            "\1\72\2\uffff\1\71",
             "\1\73",
-            "\1\74",
-            "\1\75",
-            "\1\76",
-            "\1\77",
-            "\1\101\2\uffff\1\100",
+            "\1\75\1\74",
+            "\1\77\12\uffff\1\76",
+            "\1\100",
+            "\1\101",
             "\1\102",
-            "\1\103",
-            "",
-            "\1\42\11\uffff\1\42\2\uffff\12\63\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
             "",
             "",
             "",
-            "\1\104",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\11\61\2\uffff\2\61\1\uffff\22\61\1\uffff\1\61\1\uffff\2\61"+
+            "\1\uffff\2\61\2\uffff\4\61\1\uffff\13\61\1\uffff\40\61\1\uffff"+
+            "\1\61\1\uffff\35\61\1\uffff\1\61\1\uffff\uff82\61",
+            "",
+            "\11\61\2\uffff\2\61\1\uffff\22\61\1\uffff\1\61\1\uffff\2\61"+
+            "\1\uffff\2\61\2\uffff\4\61\1\uffff\13\61\1\uffff\40\61\1\uffff"+
+            "\1\61\1\uffff\35\61\1\uffff\1\61\1\uffff\uff82\61",
+            "",
             "\1\105",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\107",
+            "",
+            "\1\106",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
             "\1\110",
             "\1\111",
             "\1\112",
             "\1\113",
-            "\1\114",
-            "\1\115",
+            "\1\114\2\uffff\1\115",
             "\1\116",
             "\1\117",
             "\1\120",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\22\42\1\121\7\42",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\121",
+            "\1\122",
+            "\1\123",
+            "",
             "",
             "\1\124",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\125",
+            "",
             "\1\126",
             "\1\127",
             "\1\130",
             "\1\131",
             "\1\132",
             "\1\133",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\136",
-            "",
-            "",
+            "\1\134",
+            "\1\135",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
             "\1\137",
-            "",
             "\1\140",
             "\1\141",
-            "\1\142",
+            "\11\61\2\uffff\2\61\1\uffff\22\61\1\uffff\1\61\1\uffff\2\61"+
+            "\1\uffff\2\61\2\uffff\4\61\1\uffff\13\61\1\uffff\40\61\1\uffff"+
+            "\1\61\1\uffff\35\61\1\uffff\1\61\1\uffff\uff82\61",
             "\1\143",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\145",
-            "",
-            "",
+            "\12\37\7\uffff\32\37\6\uffff\22\37\1\144\7\37",
             "\1\146",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\147",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
             "\1\151",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\152",
             "\1\153",
-            "",
             "\1\154",
-            "\1\155",
             "",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
             "",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "\1\160",
             "\1\161",
             "",
+            "\1\162",
+            "\1\163",
+            "",
+            "\1\164",
+            "\1\165\26\uffff\1\165",
+            "\1\166",
+            "\1\167",
             "",
             "",
-            "\1\42\11\uffff\1\42\2\uffff\12\42\5\uffff\1\42\1\uffff\32\42"+
-            "\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\1\171",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\1\173",
+            "\1\174",
+            "\1\165\26\uffff\1\165\113\uffff\1\176\1\uffff\1\175\3\uffff"+
+            "\1\177",
+            "\1\u0080",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "",
+            "\1\u0082",
+            "",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "",
+            "",
+            "",
+            "\1\u0085",
+            "",
+            "\1\u0086",
+            "",
+            "",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "\12\37\7\uffff\32\37\6\uffff\32\37",
+            "",
             ""
     };
 
-    static final short[] DFA9_eot = DFA.unpackEncodedString(DFA9_eotS);
-    static final short[] DFA9_eof = DFA.unpackEncodedString(DFA9_eofS);
-    static final char[] DFA9_min = DFA.unpackEncodedStringToUnsignedChars(DFA9_minS);
-    static final char[] DFA9_max = DFA.unpackEncodedStringToUnsignedChars(DFA9_maxS);
-    static final short[] DFA9_accept = DFA.unpackEncodedString(DFA9_acceptS);
-    static final short[] DFA9_special = DFA.unpackEncodedString(DFA9_specialS);
-    static final short[][] DFA9_transition;
+    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
+    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
+    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
+    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
+    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
+    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
+    static final short[][] DFA13_transition;
 
     static {
-        int numStates = DFA9_transitionS.length;
-        DFA9_transition = new short[numStates][];
+        int numStates = DFA13_transitionS.length;
+        DFA13_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA9_transition[i] = DFA.unpackEncodedString(DFA9_transitionS[i]);
+            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
         }
     }
 
-    class DFA9 extends DFA {
+    class DFA13 extends DFA {
 
-        public DFA9(BaseRecognizer recognizer) {
+        public DFA13(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 9;
-            this.eot = DFA9_eot;
-            this.eof = DFA9_eof;
-            this.min = DFA9_min;
-            this.max = DFA9_max;
-            this.accept = DFA9_accept;
-            this.special = DFA9_special;
-            this.transition = DFA9_transition;
+            this.decisionNumber = 13;
+            this.eot = DFA13_eot;
+            this.eof = DFA13_eof;
+            this.min = DFA13_min;
+            this.max = DFA13_max;
+            this.accept = DFA13_accept;
+            this.special = DFA13_special;
+            this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_INT | RULE_SP | RULE_DOUBLEDOT | RULE_MULTIPLEDOT | RULE_CID | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ML_COMMENT | RULE_ML2_COMMENT | RULE_LINE_COMMENT | RULE_PERCENT | RULE_COLON | RULE_QUOTE | RULE_LCBRACKET | RULE_RCBRACKET | RULE_LSBRACKET | RULE_RSBRACKET | RULE_LBRACKET | RULE_RBRACKET | RULE_DOT | RULE_LINESP | RULE_LINEDELIM | RULE_ARROW | RULE_LARROW | RULE_EQUALS | RULE_ASSIGN | RULE_TYPE | RULE_UNDERSCORE | RULE_CID | RULE_UNKNOWNDIRECTIVE | RULE_URISTRING | RULE_INFIXNONE | RULE_INFIXLEFT | RULE_INFIXRIGHT | RULE_ILLEGAL_TOKEN );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA9_0 = input.LA(1);
+                        int LA13_3 = input.LA(1);
 
                         s = -1;
-                        if ( (LA9_0=='/') ) {s = 1;}
+                        if ( ((LA13_3>='\u0000' && LA13_3<='\uFFFF')) ) {s = 37;}
 
-                        else if ( (LA9_0=='.') ) {s = 2;}
+                        else s = 36;
 
-                        else if ( (LA9_0==':') ) {s = 3;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA13_0 = input.LA(1);
 
-                        else if ( (LA9_0=='\"') ) {s = 4;}
+                        s = -1;
+                        if ( (LA13_0=='%') ) {s = 1;}
 
-                        else if ( (LA9_0=='%') ) {s = 5;}
+                        else if ( (LA13_0==':') ) {s = 2;}
 
-                        else if ( (LA9_0=='n') ) {s = 6;}
+                        else if ( (LA13_0=='\"') ) {s = 3;}
 
-                        else if ( (LA9_0=='=') ) {s = 7;}
+                        else if ( (LA13_0=='{') ) {s = 4;}
 
-                        else if ( (LA9_0=='r') ) {s = 8;}
+                        else if ( (LA13_0=='}') ) {s = 5;}
 
-                        else if ( (LA9_0=='-') ) {s = 9;}
+                        else if ( (LA13_0=='[') ) {s = 6;}
 
-                        else if ( (LA9_0=='{') ) {s = 10;}
+                        else if ( (LA13_0==']') ) {s = 7;}
 
-                        else if ( (LA9_0=='}') ) {s = 11;}
+                        else if ( (LA13_0=='(') ) {s = 8;}
 
-                        else if ( (LA9_0=='s') ) {s = 12;}
+                        else if ( (LA13_0==')') ) {s = 9;}
 
-                        else if ( (LA9_0=='m') ) {s = 13;}
+                        else if ( (LA13_0=='.') ) {s = 10;}
 
-                        else if ( (LA9_0=='a') ) {s = 14;}
+                        else if ( (LA13_0=='\t'||LA13_0==' ') ) {s = 11;}
 
-                        else if ( (LA9_0=='p') ) {s = 15;}
+                        else if ( (LA13_0=='\r') ) {s = 12;}
 
-                        else if ( (LA9_0=='i') ) {s = 16;}
+                        else if ( (LA13_0=='\n') ) {s = 13;}
 
-                        else if ( (LA9_0=='o') ) {s = 17;}
+                        else if ( (LA13_0=='-') ) {s = 14;}
 
-                        else if ( (LA9_0=='v') ) {s = 18;}
+                        else if ( (LA13_0=='<') ) {s = 15;}
 
-                        else if ( ((LA9_0>='0' && LA9_0<='9')) ) {s = 19;}
+                        else if ( (LA13_0=='=') ) {s = 16;}
 
-                        else if ( ((LA9_0>='\t' && LA9_0<='\n')||LA9_0=='\r'||LA9_0==' ') ) {s = 20;}
+                        else if ( (LA13_0=='t') ) {s = 17;}
 
-                        else if ( (LA9_0=='#'||LA9_0=='?'||(LA9_0>='A' && LA9_0<='Z')||LA9_0=='_'||(LA9_0>='b' && LA9_0<='h')||(LA9_0>='j' && LA9_0<='l')||LA9_0=='q'||(LA9_0>='t' && LA9_0<='u')||(LA9_0>='w' && LA9_0<='z')) ) {s = 21;}
+                        else if ( (LA13_0=='_') ) {s = 18;}
 
-                        else if ( ((LA9_0>='\u0000' && LA9_0<='\b')||(LA9_0>='\u000B' && LA9_0<='\f')||(LA9_0>='\u000E' && LA9_0<='\u001F')||LA9_0=='!'||LA9_0=='$'||(LA9_0>='&' && LA9_0<=',')||(LA9_0>=';' && LA9_0<='<')||LA9_0=='>'||LA9_0=='@'||(LA9_0>='[' && LA9_0<='^')||LA9_0=='`'||LA9_0=='|'||(LA9_0>='~' && LA9_0<='\uFFFF')) ) {s = 22;}
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='$')||(LA13_0>='&' && LA13_0<='\'')||(LA13_0>='*' && LA13_0<=',')||(LA13_0>='/' && LA13_0<='9')||LA13_0==';'||(LA13_0>='>' && LA13_0<='Z')||LA13_0=='\\'||LA13_0=='^'||(LA13_0>='`' && LA13_0<='s')||(LA13_0>='u' && LA13_0<='z')||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 19;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA13_48 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_48>='\u0000' && LA13_48<='\b')||(LA13_48>='\u000B' && LA13_48<='\f')||(LA13_48>='\u000E' && LA13_48<='\u001F')||LA13_48=='!'||(LA13_48>='#' && LA13_48<='$')||(LA13_48>='&' && LA13_48<='\'')||(LA13_48>='*' && LA13_48<='-')||(LA13_48>='/' && LA13_48<='9')||(LA13_48>=';' && LA13_48<='Z')||LA13_48=='\\'||(LA13_48>='^' && LA13_48<='z')||LA13_48=='|'||(LA13_48>='~' && LA13_48<='\uFFFF')) ) {s = 49;}
+
+                        else s = 67;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA13_18 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_18>='\u0000' && LA13_18<='\b')||(LA13_18>='\u000B' && LA13_18<='\f')||(LA13_18>='\u000E' && LA13_18<='\u001F')||LA13_18=='!'||(LA13_18>='#' && LA13_18<='$')||(LA13_18>='&' && LA13_18<='\'')||(LA13_18>='*' && LA13_18<='-')||(LA13_18>='/' && LA13_18<='9')||(LA13_18>=';' && LA13_18<='Z')||LA13_18=='\\'||(LA13_18>='^' && LA13_18<='z')||LA13_18=='|'||(LA13_18>='~' && LA13_18<='\uFFFF')) ) {s = 49;}
+
+                        else s = 53;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA13_84 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_84>='\u0000' && LA13_84<='\b')||(LA13_84>='\u000B' && LA13_84<='\f')||(LA13_84>='\u000E' && LA13_84<='\u001F')||LA13_84=='!'||(LA13_84>='#' && LA13_84<='$')||(LA13_84>='&' && LA13_84<='\'')||(LA13_84>='*' && LA13_84<='-')||(LA13_84>='/' && LA13_84<='9')||(LA13_84>=';' && LA13_84<='Z')||LA13_84=='\\'||(LA13_84>='^' && LA13_84<='z')||LA13_84=='|'||(LA13_84>='~' && LA13_84<='\uFFFF')) ) {s = 49;}
+
+                        else s = 98;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA13_16 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_16>='\u0000' && LA13_16<='\b')||(LA13_16>='\u000B' && LA13_16<='\f')||(LA13_16>='\u000E' && LA13_16<='\u001F')||LA13_16=='!'||(LA13_16>='#' && LA13_16<='$')||(LA13_16>='&' && LA13_16<='\'')||(LA13_16>='*' && LA13_16<='-')||(LA13_16>='/' && LA13_16<='9')||(LA13_16>=';' && LA13_16<='Z')||LA13_16=='\\'||(LA13_16>='^' && LA13_16<='z')||LA13_16=='|'||(LA13_16>='~' && LA13_16<='\uFFFF')) ) {s = 49;}
+
+                        else s = 51;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA13_50 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_50>='\u0000' && LA13_50<='\b')||(LA13_50>='\u000B' && LA13_50<='\f')||(LA13_50>='\u000E' && LA13_50<='\u001F')||LA13_50=='!'||(LA13_50>='#' && LA13_50<='$')||(LA13_50>='&' && LA13_50<='\'')||(LA13_50>='*' && LA13_50<='-')||(LA13_50>='/' && LA13_50<='9')||(LA13_50>=';' && LA13_50<='Z')||LA13_50=='\\'||(LA13_50>='^' && LA13_50<='z')||LA13_50=='|'||(LA13_50>='~' && LA13_50<='\uFFFF')) ) {s = 49;}
+
+                        else s = 68;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 9, _s, input);
+                new NoViableAltException(getDescription(), 13, _s, input);
             error(nvae);
             throw nvae;
         }

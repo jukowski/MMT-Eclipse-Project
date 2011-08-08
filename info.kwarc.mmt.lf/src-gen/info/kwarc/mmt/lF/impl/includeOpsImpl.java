@@ -6,8 +6,8 @@
 package info.kwarc.mmt.lF.impl;
 
 import info.kwarc.mmt.lF.LFPackage;
-import info.kwarc.mmt.lF.sigConstruct;
-import info.kwarc.mmt.lF.sigDefinitions;
+import info.kwarc.mmt.lF.aliasDeclaration;
+import info.kwarc.mmt.lF.includeOps;
 
 import java.util.Collection;
 
@@ -25,35 +25,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>sig Definitions</b></em>'.
+ * An implementation of the model object '<em><b>include Ops</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.impl.sigDefinitionsImpl#getConstucts <em>Constucts</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.impl.includeOpsImpl#getAliases <em>Aliases</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements sigDefinitions
+public class includeOpsImpl extends MinimalEObjectImpl.Container implements includeOps
 {
   /**
-   * The cached value of the '{@link #getConstucts() <em>Constucts</em>}' containment reference list.
+   * The cached value of the '{@link #getAliases() <em>Aliases</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConstucts()
+   * @see #getAliases()
    * @generated
    * @ordered
    */
-  protected EList<sigConstruct> constucts;
+  protected EList<aliasDeclaration> aliases;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected sigDefinitionsImpl()
+  protected includeOpsImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LFPackage.Literals.SIG_DEFINITIONS;
+    return LFPackage.Literals.INCLUDE_OPS;
   }
 
   /**
@@ -74,13 +74,13 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<sigConstruct> getConstucts()
+  public EList<aliasDeclaration> getAliases()
   {
-    if (constucts == null)
+    if (aliases == null)
     {
-      constucts = new EObjectContainmentEList<sigConstruct>(sigConstruct.class, this, LFPackage.SIG_DEFINITIONS__CONSTUCTS);
+      aliases = new EObjectContainmentEList<aliasDeclaration>(aliasDeclaration.class, this, LFPackage.INCLUDE_OPS__ALIASES);
     }
-    return constucts;
+    return aliases;
   }
 
   /**
@@ -93,8 +93,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
-        return ((InternalEList<?>)getConstucts()).basicRemove(otherEnd, msgs);
+      case LFPackage.INCLUDE_OPS__ALIASES:
+        return ((InternalEList<?>)getAliases()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -109,8 +109,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
-        return getConstucts();
+      case LFPackage.INCLUDE_OPS__ALIASES:
+        return getAliases();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -126,9 +126,9 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
-        getConstucts().clear();
-        getConstucts().addAll((Collection<? extends sigConstruct>)newValue);
+      case LFPackage.INCLUDE_OPS__ALIASES:
+        getAliases().clear();
+        getAliases().addAll((Collection<? extends aliasDeclaration>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
-        getConstucts().clear();
+      case LFPackage.INCLUDE_OPS__ALIASES:
+        getAliases().clear();
         return;
     }
     super.eUnset(featureID);
@@ -161,10 +161,10 @@ public class sigDefinitionsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case LFPackage.SIG_DEFINITIONS__CONSTUCTS:
-        return constucts != null && !constucts.isEmpty();
+      case LFPackage.INCLUDE_OPS__ALIASES:
+        return aliases != null && !aliases.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //sigDefinitionsImpl
+} //includeOpsImpl

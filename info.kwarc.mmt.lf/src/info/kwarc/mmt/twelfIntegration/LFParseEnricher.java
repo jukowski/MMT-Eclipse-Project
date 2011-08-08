@@ -1,9 +1,6 @@
 package info.kwarc.mmt.twelfIntegration;
 
-import info.kwarc.mmt.lF.includeConstruct;
 import info.kwarc.mmt.lF.sigConstruct;
-import info.kwarc.mmt.lF.signatureDeclaration;
-import info.kwarc.mmt.lF.structConstruct;
 import info.kwarc.mmt.lF.viewDeclaration;
 
 import java.io.File;
@@ -92,7 +89,7 @@ public class LFParseEnricher implements ILinker {
 	
 	public void syncConstructs(EList<sigConstruct> model, Element e) {
 		sigConstruct ll;
-		for (sigConstruct contr : model) {
+/*		for (sigConstruct contr : model) {
 			if (contr instanceof includeConstruct) {
 				includeConstruct inc = (includeConstruct) contr;
 				String importName = NodeModelUtils.getNode(inc).getText().substring(9);
@@ -134,8 +131,8 @@ public class LFParseEnricher implements ILinker {
 						continue; 
 					}
 				}
-			} */
-		}
+			} 
+		}*/
 	}
 	
 	public void enrich(EObject model, Element e) {
@@ -145,7 +142,7 @@ public class LFParseEnricher implements ILinker {
 		sigObjMap = new HashMap<String, EObject>();
 		viewObjMap = new HashMap<String, EObject>();		
 			
-		TreeIterator<EObject> iter = model.eAllContents();
+/*		TreeIterator<EObject> iter = model.eAllContents();
 		while (iter.hasNext()) {
 			EObject obj = iter.next();
 			if (obj instanceof signatureDeclaration) {
@@ -172,7 +169,7 @@ public class LFParseEnricher implements ILinker {
 					syncConstructs(view.getViewDefs().getConstucts(), elem);
 				}				
 			}
-		}
+		} */
 	}
 
 	@Override

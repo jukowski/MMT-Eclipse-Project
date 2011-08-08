@@ -24,6 +24,7 @@ Workflow {
     }
 
     component = Generator {
+    	encoding = "UTF-8"
         pathRtProject = runtimeProject
         pathUiProject = "${runtimeProject}.ui"
         pathTestProject = "${runtimeProject}.tests"
@@ -65,7 +66,7 @@ Workflow {
             // java-based API for validation
             fragment = validation.JavaValidatorFragment {
                 composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
-                composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+                //composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
             }
 
             // scoping and exporting API

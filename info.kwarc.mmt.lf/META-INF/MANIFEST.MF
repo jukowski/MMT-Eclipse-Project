@@ -32,5 +32,4 @@ Export-Package: info.kwarc.mmt,
  info.kwarc.mmt.parser.antlr,
  info.kwarc.mmt.parser.antlr.internal,
  info.kwarc.mmt.validation
-Bundle-ClassPath: lib/mmtapi-wrapper.jar,
- .
+Bundle-ClassPath: lib/mmtapi-wrapper.jar,.

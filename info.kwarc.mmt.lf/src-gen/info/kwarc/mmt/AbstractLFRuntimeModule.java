@@ -89,6 +89,11 @@ public abstract class AbstractLFRuntimeModule extends DefaultRuntimeModule {
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
+	// contributed by org.eclipse.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment
+	public Class<? extends org.eclipse.xtext.parser.antlr.IUnorderedGroupHelper> bindIUnorderedGroupHelper() {
+		return org.eclipse.xtext.parser.antlr.UnorderedGroupHelper.class;
+	}
+
 	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
 	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends info.kwarc.mmt.validation.LFJavaValidator> bindLFJavaValidator() {
 		return info.kwarc.mmt.validation.LFJavaValidator.class;

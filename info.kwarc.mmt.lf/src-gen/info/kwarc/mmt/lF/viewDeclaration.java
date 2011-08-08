@@ -5,6 +5,7 @@
  */
 package info.kwarc.mmt.lF;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +15,10 @@ package info.kwarc.mmt.lF;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getViewID <em>View ID</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getFrom <em>From</em>}</li>
  *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getTo <em>To</em>}</li>
- *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefs <em>View Defs</em>}</li>
+ *   <li>{@link info.kwarc.mmt.lF.viewDeclaration#getDef <em>Def</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,110 +26,110 @@ package info.kwarc.mmt.lF;
  * @model
  * @generated
  */
-public interface viewDeclaration extends TempType
+public interface viewDeclaration extends linkDeclaration, TempType
 {
   /**
-   * Returns the value of the '<em><b>View ID</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>View ID</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>View ID</em>' attribute.
-   * @see #setViewID(String)
-   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_ViewID()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_Name()
    * @model
    * @generated
    */
-  String getViewID();
+  String getName();
 
   /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getViewID <em>View ID</em>}' attribute.
+   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>View ID</em>' attribute.
-   * @see #getViewID()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setViewID(String value);
+  void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>From</b></em>' attribute.
+   * Returns the value of the '<em><b>From</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>From</em>' attribute isn't clear,
+   * If the meaning of the '<em>From</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>From</em>' attribute.
-   * @see #setFrom(String)
+   * @return the value of the '<em>From</em>' reference.
+   * @see #setFrom(sigDeclaration)
    * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_From()
    * @model
    * @generated
    */
-  String getFrom();
+  sigDeclaration getFrom();
 
   /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getFrom <em>From</em>}' attribute.
+   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getFrom <em>From</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>From</em>' attribute.
+   * @param value the new value of the '<em>From</em>' reference.
    * @see #getFrom()
    * @generated
    */
-  void setFrom(String value);
+  void setFrom(sigDeclaration value);
 
   /**
-   * Returns the value of the '<em><b>To</b></em>' attribute.
+   * Returns the value of the '<em><b>To</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>To</em>' attribute isn't clear,
+   * If the meaning of the '<em>To</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>To</em>' attribute.
-   * @see #setTo(String)
+   * @return the value of the '<em>To</em>' containment reference.
+   * @see #setTo(morphism)
    * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_To()
-   * @model
-   * @generated
-   */
-  String getTo();
-
-  /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getTo <em>To</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>To</em>' attribute.
-   * @see #getTo()
-   * @generated
-   */
-  void setTo(String value);
-
-  /**
-   * Returns the value of the '<em><b>View Defs</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>View Defs</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>View Defs</em>' containment reference.
-   * @see #setViewDefs(sigDefinitions)
-   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_ViewDefs()
    * @model containment="true"
    * @generated
    */
-  sigDefinitions getViewDefs();
+  morphism getTo();
 
   /**
-   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getViewDefs <em>View Defs</em>}' containment reference.
+   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getTo <em>To</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>View Defs</em>' containment reference.
-   * @see #getViewDefs()
+   * @param value the new value of the '<em>To</em>' containment reference.
+   * @see #getTo()
    * @generated
    */
-  void setViewDefs(sigDefinitions value);
+  void setTo(morphism value);
+
+  /**
+   * Returns the value of the '<em><b>Def</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Def</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Def</em>' containment reference.
+   * @see #setDef(EObject)
+   * @see info.kwarc.mmt.lF.LFPackage#getviewDeclaration_Def()
+   * @model containment="true"
+   * @generated
+   */
+  EObject getDef();
+
+  /**
+   * Sets the value of the '{@link info.kwarc.mmt.lF.viewDeclaration#getDef <em>Def</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Def</em>' containment reference.
+   * @see #getDef()
+   * @generated
+   */
+  void setDef(EObject value);
 
 } // viewDeclaration

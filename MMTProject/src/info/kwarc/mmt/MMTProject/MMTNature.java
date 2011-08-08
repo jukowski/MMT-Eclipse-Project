@@ -77,6 +77,7 @@ public class MMTNature implements IProjectNature {
 	
 	void initController() {
 		try {
+			Logger.getAnonymousLogger().info("Init Controller for Project "+project.getName());
 			controller = new MMTController(logForwarder);
 			String twelf_compiler = Activator.getDefault().getPreferenceStore().getString("TWELF_BIN");
 			File f = new File(twelf_compiler);
@@ -87,7 +88,8 @@ public class MMTNature implements IProjectNature {
 				controller.setCompiler(twelf_compiler);
 				controller.RegisterArchive(new File(project.getLocation().toOSString()));
 			}
-			IFolder folder = getProject().getFolder("mars/");
+			IProject project = getProject();
+			IFolder folder = project.getFolder("mars");
 			for (IResource res : folder.members()) {
 				String name = res.getName();
 				if (res instanceof IFile) {
