@@ -13,7 +13,6 @@ import org.eclipse.xtext.parser.IParseResult;
 
 import com.google.inject.Injector;
 
-
 public class ParserTest {
 
 	static String src="%read \"test.elf\". \n" + 

@@ -62,6 +62,10 @@ public class MMTController {
 	public MMTArchive getArchive(String id) {
 		return archiveMap.get(id);
 	}
+	
+	public void addCatalogFile(String catalogPath) {
+		controller.handle(new AddCatalog(new File(catalogPath)));			
+	}
 
 	public MMTController(final MMTReport report) {
 		Foundation foundation = DefaultFoundation$.MODULE$;
@@ -77,9 +81,6 @@ public class MMTController {
 		};
 		
 		controller = new Controller(checker, reportObj);
-
-		//Storage store = new LocalCopy("http", "cds.omdoc.org", "foundations/lf", );
-		controller.handle(new AddCatalog(new File("/home/costea/kwarc/runtime-EclipseApplication/catalog.xml")));	
 		controller.handle(new LoggingOn("archive"));
 		controller.handle(new LoggingOn("library"));
 		controller.handle(new LoggingOn("error_eclipse"));

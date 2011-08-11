@@ -26,6 +26,8 @@ public class TWELF extends FieldEditorPreferencePage implements IWorkbenchPrefer
 	protected void createFieldEditors() {
 		addField(new FileFieldEditor("TWELF_BIN", "&TWELF compiler (twelf-server):", true,
 		getFieldEditorParent()));
+		addField(new FileFieldEditor("CATALOG_FILE", "&MMT Catalog file (catalog.xml):", true,
+		getFieldEditorParent()));
 	}
 
 

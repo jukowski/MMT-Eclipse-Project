@@ -24,12 +24,13 @@ public class MMTArchiveTest {
 			}
 		};
 		cont = new MMTController(report);
-		cont.setCompiler("/home/costea/kwarc/twelf-mod/bin/twelf-server");
+		cont.addCatalogFile("/home/costea/kwarc/runtime-EclipseApplication/catalog.xml");
+		cont.setCompiler("/home/costea/kwarc/twelf/twelf-mod/bin/twelf-server");
 	}
 	
 	@Test
 	public void test() {
-		arch = cont.RegisterArchive(new File("/home/costea/kwarc/runtime-EclipseApplication/TT"));
+		arch = cont.RegisterArchive(new File("/home/costea/kwarc/runtime-EclipseApplication/lala"));
 		ArrayList<String> paths = new ArrayList<String>();
 		paths.add("");
 		arch.compile(paths);
@@ -37,7 +38,7 @@ public class MMTArchiveTest {
 
 	@Test
 	public void modtest() {
-		MMTModule mod = cont.getModule("http://cds.omdoc.org/test?T");
+		MMTModule mod = cont.getModule("http://cds.omdoc.org/test?A");
 		System.out.println("writing symbols ");
 		for (MMTCompletion a : mod.getSymbols("s")) {
 			System.out.println(a.top);

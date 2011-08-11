@@ -4,8 +4,10 @@ import info.kwarc.mmt.api.wrappers.MMTController;
 import info.kwarc.mmt.api.wrappers.MMTReport;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import org.eclipse.core.resources.ICommand;
@@ -16,6 +18,7 @@ import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 
 public class MMTNature implements IProjectNature {
 
@@ -26,16 +29,19 @@ public class MMTNature implements IProjectNature {
 
 	private IProject project;
 
+	Set<String> registeredProjects;
+	
 	MMTController controller = null;
 	NatureLogForwarder logForwarder;
 	
 	public MMTNature() {
 		logForwarder = new NatureLogForwarder();
+		registeredProjects = new java.util.HashSet<String>();
 	}
 	
 	public List<String> computeAuto(String URI, String prefix) {
 		ArrayList<String> result = new ArrayList<String>();
-		info.kwarc.mmt.api.wrappers.MMTModule mod = getController().getModule(URI);
+		info.kwarc.mmt.api.wrappers.MMTModule mod = controller.getModule(URI);
 		List<info.kwarc.mmt.api.wrappers.MMTCompletion> rr = mod.getSymbols(prefix);
 		for (info.kwarc.mmt.api.wrappers.MMTCompletion c : rr) {
 			if (c.getChildren().size()==0)
@@ -80,16 +86,48 @@ public class MMTNature implements IProjectNature {
 			Logger.getAnonymousLogger().info("Init Controller for Project "+project.getName());
 			controller = new MMTController(logForwarder);
 			String twelf_compiler = Activator.getDefault().getPreferenceStore().getString("TWELF_BIN");
-			File f = new File(twelf_compiler);
+			String catalogFile = Activator.getDefault().getPreferenceStore().getString("CATALOG_FILE");
+			File f = new File(catalogFile);
+			if (!f.exists()) {
+				logForwarder.handle("eclipse_warning", "No catalog file was set! To set one please go to Windows->Preferences->LF->TWELF");				
+			} else {
+				controller.addCatalogFile(f.getAbsolutePath());
+			}
+			
+			f = new File(twelf_compiler);
 			if (!f.exists()) {
 				logForwarder.handle("eclipse_error", "TWELF compiler not found! Please change the path by going to Windows->Preferences->LF->TWELF");
 				controller = null;
 			} else {
+				Logger.getAnonymousLogger().info("Setting compiler to "+twelf_compiler);
 				controller.setCompiler(twelf_compiler);
-				controller.RegisterArchive(new File(project.getLocation().toOSString()));
 			}
-			IProject project = getProject();
-			IFolder folder = project.getFolder("mars");
+		} catch (Exception E) {
+			logForwarder.handle("eclipse_error", E.getMessage());
+			E.printStackTrace();
+			controller = null;
+		}
+	}
+
+	
+	
+	public MMTController getController(IProject project) {
+		if (controller == null)
+			initController();
+
+		if (controller == null)
+			return null;
+		
+		if (registeredProjects.contains(project.getName())) 
+			return controller;
+		
+		IPath path = project.getLocation();
+		if (path == null)
+			return controller;
+		controller.RegisterArchive(new File(project.getLocation().toOSString()));
+		registeredProjects.add(project.getName());
+		IFolder folder = project.getFolder("mars");
+		try {
 			for (IResource res : folder.members()) {
 				String name = res.getName();
 				if (res instanceof IFile) {
@@ -105,14 +143,14 @@ public class MMTNature implements IProjectNature {
 					}
 				}
 			}
-		} catch (Exception E) {
-			controller = null;
+		} catch (CoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-	}
-	
-	public MMTController getController() {
-		if (project != null && controller == null)
-			initController();
+		
 		return controller;
 	}
 	

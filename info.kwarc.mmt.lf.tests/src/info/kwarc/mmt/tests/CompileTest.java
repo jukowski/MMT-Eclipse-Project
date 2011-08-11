@@ -1,14 +1,9 @@
 package info.kwarc.mmt.tests;
 
-import info.kwarc.mmt.api.wrappers.MMTArchive;
-import info.kwarc.mmt.api.wrappers.MMTController;
-import info.kwarc.mmt.api.wrappers.MMTReport;
-
-import java.io.File;
-import java.util.ArrayList;
 
 public class CompileTest {
 	
+	/*
 	static class rep implements MMTReport {
 
 		@Override
@@ -29,5 +24,5 @@ public class CompileTest {
 		ArrayList<String> test = new ArrayList<String>();
 		test.add("/");
 		arch.compile(test);
-	}
+	} */
 }

@@ -4,6 +4,7 @@ import info.kwarc.mmt.api.wrappers.MMTArchive;
 import info.kwarc.mmt.api.wrappers.MMTController;
 import info.kwarc.mmt.api.wrappers.MMTReport;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -133,12 +134,15 @@ public class LFBuilder extends IncrementalProjectBuilder {
 				} else
 				Logger.getAnonymousLogger().info(arg1);
 			}
-			if (arg0.equals("eclipse_error")) {
+			if (arg0.equals("eclipse_error") || arg0.equals("eclipse_warning")) {
 				IMarker err;
 				try {
 					err = getProject().getFolder("source").createMarker(MARKER_TYPE);
 					err.setAttribute(IMarker.MESSAGE, arg1);
-					err.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+					if (arg0.equals("eclipse_error"))
+						err.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+					else
+						err.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 				} catch (CoreException e) {
 					e.printStackTrace();
 				}
@@ -163,19 +167,20 @@ public class LFBuilder extends IncrementalProjectBuilder {
 	
 	protected void fullBuild(final IProgressMonitor monitor)
 			throws CoreException {
+		IProject project = getProject();
+		MMTNature nature = (MMTNature) project.getNature(MMTNature.NATURE_ID);
+		initLogger(nature);
 		try {
-			IProject project = getProject();
-			MMTNature nature = (MMTNature) project.getNature(MMTNature.NATURE_ID);
-			initLogger(nature);
-			MMTController controller = nature.getController();
+			MMTController controller = nature.getController(project);
 			if (controller != null) {
 				ArrayList<String> paths = new ArrayList<String>();
 				paths.add("/");
 				MMTArchive arch = controller.getArchive(getProject().getName()); 
  				arch.compile(paths);
 			}
-		} catch (CoreException e) {
-		}
+		} catch (Exception e) {
+			nature.logForwarder.handle("eclipse_error", e.getMessage());
+		} 
 	}
 
 	protected void incrementalBuild(IResourceDelta delta,
