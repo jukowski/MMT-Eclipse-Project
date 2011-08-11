@@ -1,6 +1,11 @@
 package info.kwarc.mmt.twelfIntegration;
 
+import info.kwarc.mmt.lF.linkBody;
+import info.kwarc.mmt.lF.namespaceDeclaration;
 import info.kwarc.mmt.lF.sigConstruct;
+import info.kwarc.mmt.lF.sigConstructNOSP;
+import info.kwarc.mmt.lF.sigDeclaration;
+import info.kwarc.mmt.lF.sigIncludeDeclaration;
 import info.kwarc.mmt.lF.viewDeclaration;
 
 import java.io.File;
@@ -41,6 +46,7 @@ public class LFParseEnricher implements ILinker {
 	XPathExpression includeXPath;
 	Map<String, Element> viewNodeMap, sigNodeMap; 
 	Map<String, EObject> viewObjMap, sigObjMap; 
+	Map<String, String> nmap; 
 
 	public LFParseEnricher() {
 		XPathFactory factory = XPathFactory.newInstance();
@@ -87,12 +93,28 @@ public class LFParseEnricher implements ILinker {
 		return null;
 	}
 	
-	public void syncConstructs(EList<sigConstruct> model, Element e) {
+	public void syncConstructs(EObject model, Element e) {
 		sigConstruct ll;
-/*		for (sigConstruct contr : model) {
-			if (contr instanceof includeConstruct) {
-				includeConstruct inc = (includeConstruct) contr;
-				String importName = NodeModelUtils.getNode(inc).getText().substring(9);
+		TreeIterator<EObject> mainIter = model.eAllContents();
+		while (mainIter.hasNext()) {
+			EObject contr = mainIter.next();
+						
+			if (contr instanceof sigIncludeDeclaration) {
+				sigIncludeDeclaration inc = (sigIncludeDeclaration) contr;
+				String importName = NodeModelUtils.getNode(inc).getText();
+				Boolean found = false;
+				for (String namespace : nmap.keySet()) {
+					if (importName.startsWith(namespace+".")) {
+						String realURI = nmap.get(namespace);
+						inc.setFullURI(realURI+importName.substring(namespace.length()));
+						found = true;
+						break;
+					}
+				}
+				if (!found)
+					inc.setFullURI(importName);
+
+				/*
 				if (importName.startsWith("t.")) {
 					String proj = contr.eResource().getURI().segment(1);
 					URI ol = contr.eResource().getURI();
@@ -110,8 +132,9 @@ public class LFParseEnricher implements ILinker {
 				}
 				if (sigObjMap.containsKey(importName)) {
 					((includeConstruct) contr).setNamespace((signatureDeclaration)sigObjMap.get(importName));
-				}
+				}*/
 			}
+			/*
 			if (contr instanceof structConstruct) {
 				structConstruct inc = (structConstruct) contr;
 				String totalText = NodeModelUtils.getNode(inc).getText();
@@ -120,7 +143,7 @@ public class LFParseEnricher implements ILinker {
 					((structConstruct) contr).setNamespace((signatureDeclaration)sigObjMap.get(importName));
 				}				
 			}
-			/*	String namespace = ((includeConstruct) contr).getNamespace();
+				String namespace = ((includeConstruct) contr).getNamespace();
 				if (namespace.indexOf('.')==-1) { // local link
 					if (sigObjMap.containsKey(namespace)) {
 						((includeConstruct) contr).setHyper(((signatureDeclaration) sigObjMap.get(namespace)).getDefs());
@@ -132,7 +155,9 @@ public class LFParseEnricher implements ILinker {
 					}
 				}
 			} 
-		}*/
+			
+		} */
+		}
 	}
 	
 	public void enrich(EObject model, Element e) {
@@ -141,35 +166,44 @@ public class LFParseEnricher implements ILinker {
 		viewNodeMap = createMapping(viewXPath, e, "name");
 		sigObjMap = new HashMap<String, EObject>();
 		viewObjMap = new HashMap<String, EObject>();		
-			
-/*		TreeIterator<EObject> iter = model.eAllContents();
+		nmap = new HashMap<String, String>();
+		
+		TreeIterator<EObject> iter = model.eAllContents();
 		while (iter.hasNext()) {
 			EObject obj = iter.next();
-			if (obj instanceof signatureDeclaration) {
-				signatureDeclaration sig = (signatureDeclaration) obj;
-				if (sigNodeMap.containsKey(sig.getSigName())) {
-					sigObjMap.put(sig.getSigName(), obj);
-					Element elem = sigNodeMap.get(sig.getSigName());
+			if (obj instanceof namespaceDeclaration) {
+				namespaceDeclaration d = (namespaceDeclaration) obj;
+				if (d.getName()!=null) {
+					nmap.put(d.getName(), d.getFullURI());
+				} else {
+					nmap.put("BASE", d.getFullURI());
+				}
+			}
+			if (obj instanceof sigDeclaration) {
+				sigDeclaration sig = (sigDeclaration) obj;
+				if (sigNodeMap.containsKey(sig.getName())) {
+					sigObjMap.put(sig.getName(), obj);
+					Element elem = sigNodeMap.get(sig.getName());
 					String bs = defaultNamespace;
 					if (elem.hasAttribute("base"))
 						bs = elem.getAttribute("base");
-					sig.setFullURI(bs + "?" + sig.getSigName());
-					syncConstructs(sig.getDefs().getConstucts(), elem);
+					sig.setFullURI(bs + "?" + sig.getName());
+					syncConstructs(sig.getDef(), elem);
 				}
 			}
 			if (obj instanceof viewDeclaration) {
 				viewDeclaration view = (viewDeclaration) obj;
-				if (viewNodeMap.containsKey(view.getViewID())) {
-					Element elem = sigNodeMap.get(view.getViewID());
-					viewObjMap.put(view.getViewID(), obj);
+				if (viewNodeMap.containsKey(view.getName())) {
+					Element elem = sigNodeMap.get(view.getName());
+					viewObjMap.put(view.getName(), obj);
 					String bs = defaultNamespace;
 					if (elem.hasAttribute("base"))
 						bs = elem.getAttribute("base");
-					view.setFullURI(bs + "?" + view.getViewID());
-					syncConstructs(view.getViewDefs().getConstucts(), elem);
+					view.setFullURI(bs + "?" + view.getName());
+					syncConstructs(view.getDef(), elem);
 				}				
 			}
-		} */
+		} 
 	}
 
 	@Override

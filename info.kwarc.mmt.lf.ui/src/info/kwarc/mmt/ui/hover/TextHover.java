@@ -40,6 +40,9 @@ public class TextHover implements ITextHover /*, ITextHoverExtension2 */{
 			if (semObject instanceof TempType && ((TempType) semObject).getFullURI()!= null) {
 				return ((TempType) semObject).getFullURI();
 			}
+			if (semObject instanceof TempType) {
+				return "Some suggestion will be here ";
+			}
 		}
 		return null;
 	}
